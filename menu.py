@@ -55,6 +55,7 @@ def handle_message(event):
             QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
             QuickReplyButton(action=MessageAction(label="排序", text="排序")),
             QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊"))
+            #5/28
         ])
 
         message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
