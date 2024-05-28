@@ -5,6 +5,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage, QuickRepl
 from pymongo import MongoClient
 import random
 import json
+import redis
 
 app = Flask(__name__)
 
@@ -18,10 +19,18 @@ secret = config['LINE_SECRET']
 line_bot_api = LineBotApi(access_token)
 handler = WebhookHandler(secret)
 
-
-# MongoDB設定
+# 連MongoDB
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
+mongo_collection = mongo_db["user_data"]
+
+# 連Redis
+redis_host = 'localhost'
+redis_port = 6379
+redis_db = 0
+redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
+
+# MongoDB設定
 unit_collections = {
     "其他": mongo_db["other"],
     "指標": mongo_db["pointer"],
@@ -31,46 +40,129 @@ unit_collections = {
     "堆疊": mongo_db["stack"]
 }
 
-@app.route("/", methods=['POST'])
-def callback():
-    body = request.get_data(as_text=True)
-    signature = request.headers['X-Line-Signature']
-    try:
-        handler.handle(body, signature)
-    except InvalidSignatureError:
-        abort(400)
-    return 'OK'
+def is_valid_student_id(student_id):
+    return student_id.isdigit() and len(student_id) == 8
 
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    user_id = event.source.user_id
-    user_profile = line_bot_api.get_profile(user_id)
-    user_name = user_profile.display_name
+def handle_student_id(user_id, user_name, msg):
+    if is_valid_student_id(msg):
+        # 學號格式正確，儲存到Redis和MongoDB
+        if not redis_client.hexists(user_id, 'student_id'):
+            redis_client.hset(user_id, mapping={'name': user_name, 'student_id': msg})
+            mongo_collection.insert_one({"user_id": user_id, "name": user_name, "student_id": msg})
+            reply = f"學號已紀錄成功！{user_name}"
+        else:
+            reply = f"{user_name}，您的學號已經登錄過了。"
+    else:
+        reply = "學號格式不正確，請輸入8位數字的學號。"
+    return reply
 
-    if event.message.text == "我要作答":
-        quick_reply = QuickReply(items=[
-            QuickReplyButton(action=MessageAction(label="其他", text="其他")),
-            QuickReplyButton(action=MessageAction(label="指標", text="指標")),
-            QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
-            QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
-            QuickReplyButton(action=MessageAction(label="排序", text="排序")),
-            QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊"))
-            #5/28
-        ])
+def handle_question_reply(user_id, user_name, msg):
+    if redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
+        student_id = redis_client.hget(user_id, 'student_id')
+        redis_client.rpush(f"{student_id}_questions", msg)
+        redis_client.expire(f"{student_id}_questions", 600)
+        reply = f"登入成功！{user_name}，您的學號是 {student_id}"
+    else:
+        reply = f"{user_name}，請問您的學號是多少呢？"
+    return reply
 
-        message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
-        line_bot_api.reply_message(event.reply_token, message)
+def handle_unit_selection(event):
+    quick_reply = QuickReply(items=[
+        QuickReplyButton(action=MessageAction(label="其他", text="其他")),
+        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
+        QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
+        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
+        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊"))
+    ])
 
-    elif event.message.text in unit_collections:
-        unit = event.message.text
-        collection = unit_collections[unit]
+    message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
+    line_bot_api.reply_message(event.reply_token, message)
 
-        questions = list(collection.find())
-        random_questions = random.sample(questions, 5) if len(questions) >= 5 else questions
+def handle_question_display(event, unit):
+    collection = unit_collections[unit]
 
-        bubbles = []
-        for question in random_questions:
-            bubble = {
+    questions = list(collection.find())
+    random_questions = random.sample(questions, 5) if len(questions) >= 5 else questions
+
+    bubbles = []
+    for question in random_questions:
+        bubble = {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "題目",
+                        "weight": "bold",
+                        "size": "xl",
+                        "wrap": True,
+                        "align": "center",
+                        "gravity": "center",
+                        "color": "#FFFFFF"
+                    }
+                ]
+                #"backgroundColor": "#EBA281"
+            },
+            #"separator": True,  # 分割線 
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": question["Question"],
+                        "wrap": True,
+                        "size": "lg"
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "color": "#EBA281",
+                        "action": {
+                            "type": "message",
+                            "label": f"回答",
+                            "text": f"回答{question['Question']}"
+                        }
+                    }
+                ]
+            },
+            "styles": {
+                "header": {
+                    "backgroundColor": "#668166" #header底色
+                }
+            }
+        }
+        bubbles.append(bubble)
+
+    flex_message = FlexSendMessage(
+        alt_text="選擇題目",
+        contents={
+            "type": "carousel",
+            "contents": bubbles
+        }
+    )
+    line_bot_api.reply_message(event.reply_token, flex_message)
+
+def handle_question_answer(event, question_title):
+    question = None
+    for unit, collection in unit_collections.items():
+        question = collection.find_one({"Question": question_title})
+        if question:
+            break
+
+    if question:
+        flex_message = FlexSendMessage(
+            alt_text="題目詳情",
+            contents={
                 "type": "bubble",
                 "header": {
                     "type": "box",
@@ -81,12 +173,17 @@ def handle_message(event):
                             "text": "題目",
                             "weight": "bold",
                             "size": "xl",
-                            "wrap": True,  # 確保標題文字換行
-                            "align": "center",  # 水平居中
-                            "gravity": "center"  # 垂直居中
+                            "wrap": True,
+                            "align": "center",
+                            "gravity": "center",
+                            "color": "#FFFFFF"
                         }
                     ]
+
+                    #"backgroundColor": "#EBA281"
                 },
+
+                #"separator": True,  # 分割線                
                 "body": {
                     "type": "box",
                     "layout": "vertical",
@@ -94,94 +191,71 @@ def handle_message(event):
                         {
                             "type": "text",
                             "text": question["Question"],
-                            "wrap": True,  # 確保內容文字換行
-                            "size": "lg"  # 可根據需要調整文字大小
-                        }
+                            "wrap": True,
+                            "size": "lg",
+                            "fontFamily": "標楷體" # 標楷體
+
+                        },
+                        #{
+                            #"type": "button",
+                            #"style": "primary",
+                            #"color": "#EBA281",
+                            #"action": {
+                                #"type": "message",
+                                #"label": "開始作答",
+                                #"text": f"開始作答{question['Question']}"
+                            #}
+                        #}
                     ]
                 },
-                "footer": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [
-                        {
-                            "type": "button",
-                            "style": "primary",
-                            "color": "#EBA281",  # 設置按鈕顏色，例如橙色
-                            "action": {
-                                "type": "message",
-                                "label": f"回答",
-                                "text": f"回答{question['Question']}"
-                            }
-                        }
-                    ]
+                "styles": {
+                    "header": {
+                        "backgroundColor": "#668166" #header底色
+                    }
                 }
-            }
-            bubbles.append(bubble)
-
-        flex_message = FlexSendMessage(
-            alt_text="選擇題目",
-            contents={
-                "type": "carousel",
-                "contents": bubbles
             }
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
+    else:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
 
-    elif event.message.text.startswith("回答"):
-        question_title = event.message.text[2:]
-        question = None
-        for unit, collection in unit_collections.items():
-            question = collection.find_one({"Question": question_title})
-            if question:
-                break
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    user_id = event.source.user_id
+    user_profile = line_bot_api.get_profile(user_id)
+    user_name = user_profile.display_name
 
-        if question:
-            flex_message = FlexSendMessage(
-                alt_text="題目詳情",
-                contents={
-                    "type": "bubble",
-                    "header": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "題目",
-                                "weight": "bold",
-                                "size": "xl",
-                                "wrap": True,  # 確保標題文字換行
-                                "align": "center",  # 水平居中
-                                "gravity": "center"  # 垂直居中
-                            }
-                        ]
-                    },
-                    "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": question["Question"],
-                                "wrap": True,  # 確保內容文字換行
-                                "size": "lg"  # 可根據需要調整文字大小
-                            },
-                            {
-                                "type": "button",
-                                "style": "primary",
-                                "color": "#EBA281",  # 設置按鈕顏色，例如橙色
-                                "action": {
-                                    "type": "message",
-                                    "label": "開始作答",
-                                    "text": f"開始作答{question['Question']}"
-                                }
-                            }
-                        ]
-                    }
-                }
-            )
-            line_bot_api.reply_message(event.reply_token, flex_message)
+    msg = event.message.text
+
+    if '學號' in msg or is_valid_student_id(msg):
+        reply = handle_student_id(user_id, user_name, msg)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
+    elif msg == "我要作答":
+        if redis_client.hexists(user_id, 'student_id') or mongo_collection.find_one({"user_id": user_id}):
+            handle_unit_selection(event)
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
+    elif msg in unit_collections:
+        handle_question_display(event, msg)
+    elif msg.startswith("回答"):
+        if redis_client.hexists(user_id, 'student_id') or mongo_collection.find_one({"user_id": user_id}):
+            question_title = msg[2:]
+            handle_question_answer(event, question_title)
+        else:
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
+    else:
+        reply = handle_question_reply(user_id, user_name, msg)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
+
+@app.route("/", methods=['POST'])
+def callback():
+    body = request.get_data(as_text=True)
+    signature = request.headers['X-Line-Signature']
+    try:
+        handler.handle(body, signature)
+    except InvalidSignatureError:
+        abort(400)
+    return 'OK'
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

@@ -8,7 +8,7 @@ db_name = 'testdb'
 db = client[db_name]
 
 # 指定要刪除的 collection 名稱
-collection_name = 'other'
+collection_name = 'user_data'
 
 # 刪除 collection
 try:
