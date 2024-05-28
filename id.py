@@ -20,12 +20,12 @@ secret = config['LINE_SECRET']
 line_bot_api = LineBotApi(access_token)
 handler = WebhookHandler(secret)
 
-# 連MongoDB
+# 連接到MongoDB數據庫
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
 mongo_collection = mongo_db["user_data"]
 
-# 連Redis
+# 連接到Redis數據庫
 redis_host = 'localhost'
 redis_port = 6379
 redis_db = 0
@@ -41,7 +41,7 @@ unit_collections = {
     "堆疊": mongo_db["stack"]
 }
 
-# LLaMA3 server API URL
+# LLaMA3伺服器的API地址
 llama3_server_url = "http://llama3-server:5000/evaluate"
 
 def is_valid_student_id(student_id):
@@ -175,7 +175,6 @@ def handle_question_answer(event, question_title):
                         }
                     ]
                 },
-                "separator": True,  # zp ek vu04
                 "body": {
                     "type": "box",
                     "layout": "vertical",
@@ -199,11 +198,12 @@ def evaluate_answer(question, answer):
         "question": question,
         "answer": answer
     }
-    response = requests.post(llama3_server_url, json=payload)
-    if response.status_code == 200:
+    try:
+        response = requests.post(llama3_server_url, json=payload)
+        response.raise_for_status()
         return response.json().get('feedback', '無法取得評估結果')
-    else:
-        return '評估答案時發生錯誤，請稍後再試。'
+    except requests.exceptions.RequestException as e:
+        return f'評估答案時發生錯誤，請稍後再試。錯誤信息: {str(e)}'
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -230,16 +230,20 @@ def handle_message(event):
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
     elif msg.startswith("開始作答"):
-        # 提取問題和答案
         question_title = msg[4:]
+        answer = msg[len(question_title) + 4:]
         question = None
         for unit, collection in unit_collections.items():
             question = collection.find_one({"Question": question_title})
             if question:
                 break
         if question:
-            # 使用者回答問題後回覆
-            answer = msg[len(question_title) + 4:]
+            # Save question and answer to Redis in JSON format
+            student_id = redis_client.hget(user_id, 'student_id')
+            qa_data = json.dumps({"question": question["Question"], "answer": answer})
+            redis_client.rpush(f"{student_id}_qa", qa_data)
+            redis_client.expire(f"{student_id}_qa", 600)
+            
             feedback = evaluate_answer(question["Question"], answer)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=feedback))
         else:

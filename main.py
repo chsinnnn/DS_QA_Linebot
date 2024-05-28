@@ -1,7 +1,8 @@
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, QuickReply, QuickReplyButton, MessageAction, FlexSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import QuickReply, QuickReplyButton, MessageAction, FlexSendMessage
 from pymongo import MongoClient
 import random
 import json
@@ -159,6 +160,8 @@ def handle_question_answer(event, question_title):
             break
 
     if question:
+        # 這裡新增了將問題丟給 Llama3 伺服器並回傳答案的部分
+        llama3_answer = send_question_to_llama3(question["Question"])
         flex_message = FlexSendMessage(
             alt_text="題目詳情",
             contents={
@@ -185,6 +188,12 @@ def handle_question_answer(event, question_title):
                         {
                             "type": "text",
                             "text": question["Question"],
+                            "wrap": True,
+                            "size": "lg"
+                        },
+                        {
+                            "type": "text",
+                            "text": f"Llama3 回答: {llama3_answer}",
                             "wrap": True,
                             "size": "lg"
                         },
@@ -233,7 +242,6 @@ def handle_message(event):
         question_title = msg[2:]
         handle_question_answer(event, question_title)
     else:
-        # 這裡新增了將問題發送給 Llama3 伺服器的部分
         llama3_answer = send_question_to_llama3(msg)
         reply = handle_question_reply(user_id, user_name, msg)
         full_reply = f"{reply}\nLlama3 回答: {llama3_answer}"
