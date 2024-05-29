@@ -79,7 +79,7 @@ def handle_unit_selection(event):
     message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
     line_bot_api.reply_message(event.reply_token, message)
 
-def handle_question_display(event, unit):
+def handle_question_display(event, unit):  # 多個題目挑選
     collection = unit_collections[unit]
 
     questions = list(collection.find())
@@ -152,7 +152,7 @@ def handle_question_display(event, unit):
     )
     line_bot_api.reply_message(event.reply_token, flex_message)
 
-def handle_question_answer(event, question_title):
+def handle_question_answer(event, question_title):  # 已選好題目
     question = None
     for unit, collection in unit_collections.items():
         question = collection.find_one({"Question": question_title})
@@ -160,6 +160,9 @@ def handle_question_answer(event, question_title):
             break
 
     if question:
+        # 將問題和回答存储为 JSON 格式
+        question_json = json.dumps({"question": question["Question"], "answer": "使用者的回答"})
+        
         flex_message = FlexSendMessage(
             alt_text="題目詳情",
             contents={
@@ -193,7 +196,6 @@ def handle_question_answer(event, question_title):
                             "text": question["Question"],
                             "wrap": True,
                             "size": "lg",
-                            "fontFamily": "標楷體" # 標楷體
 
                         },
                         #{
