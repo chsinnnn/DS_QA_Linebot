@@ -6,11 +6,10 @@ from pymongo import MongoClient
 import random
 import json
 import redis
-import requests
 
 app = Flask(__name__)
 
-# Line Bot設定
+# Line Bot设置
 with open('config.json') as config_file:
     config = json.load(config_file)
 
@@ -20,18 +19,18 @@ secret = config['LINE_SECRET']
 line_bot_api = LineBotApi(access_token)
 handler = WebhookHandler(secret)
 
-# 連接到MongoDB數據庫
+# 连接MongoDB
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
 mongo_collection = mongo_db["user_data"]
 
-# 連接到Redis數據庫
+# 连接Redis
 redis_host = 'localhost'
 redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-# MongoDB設定
+# MongoDB设置
 unit_collections = {
     "其他": mongo_db["other"],
     "指標": mongo_db["pointer"],
@@ -41,23 +40,20 @@ unit_collections = {
     "堆疊": mongo_db["stack"]
 }
 
-# LLaMA3伺服器的API地址
-llama3_server_url = "http://llama3-server:5000/evaluate"
-
 def is_valid_student_id(student_id):
     return student_id.isdigit() and len(student_id) == 8
 
 def handle_student_id(user_id, user_name, msg):
     if is_valid_student_id(msg):
-        # 學號格式正確，儲存到Redis和MongoDB
+        # 学号格式正确，存储到Redis和MongoDB
         if not redis_client.hexists(user_id, 'student_id'):
             redis_client.hset(user_id, mapping={'name': user_name, 'student_id': msg})
             mongo_collection.insert_one({"user_id": user_id, "name": user_name, "student_id": msg})
-            reply = f"學號已紀錄成功！{user_name}"
+            reply = f"学号已记录成功！{user_name}"
         else:
-            reply = f"{user_name}，您的學號已經登錄過了。"
+            reply = f"{user_name}，您的学号已经登陆过了。"
     else:
-        reply = "學號格式不正確，請輸入8位數字的學號。"
+        reply = "学号格式不正确，请输入8位数字的学号。"
     return reply
 
 def handle_question_reply(user_id, user_name, msg):
@@ -65,9 +61,9 @@ def handle_question_reply(user_id, user_name, msg):
         student_id = redis_client.hget(user_id, 'student_id')
         redis_client.rpush(f"{student_id}_questions", msg)
         redis_client.expire(f"{student_id}_questions", 600)
-        reply = f"登入成功！{user_name}，您的學號是 {student_id}"
+        reply = f"登陆成功！{user_name}，您的学号是 {student_id}"
     else:
-        reply = f"{user_name}，請問您的學號是多少呢？"
+        reply = f"{user_name}，请问您的学号是多少呢？"
     return reply
 
 def handle_unit_selection(event):
@@ -80,7 +76,7 @@ def handle_unit_selection(event):
         QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊"))
     ])
 
-    message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
+    message = TextSendMessage(text="请选择一个单元", quick_reply=quick_reply)
     line_bot_api.reply_message(event.reply_token, message)
 
 def handle_question_display(event, unit):
@@ -99,12 +95,13 @@ def handle_question_display(event, unit):
                 "contents": [
                     {
                         "type": "text",
-                        "text": "題目",
+                        "text": "题目",
                         "weight": "bold",
                         "size": "xl",
                         "wrap": True,
                         "align": "center",
-                        "gravity": "center"
+                        "gravity": "center",
+                        "color": "#FFFFFF"
                     }
                 ]
             },
@@ -135,12 +132,17 @@ def handle_question_display(event, unit):
                         }
                     }
                 ]
+            },
+            "styles": {
+                "header": {
+                    "backgroundColor": "#668166"
+                }
             }
         }
         bubbles.append(bubble)
 
     flex_message = FlexSendMessage(
-        alt_text="選擇題目",
+        alt_text="选择题目",
         contents={
             "type": "carousel",
             "contents": bubbles
@@ -156,8 +158,12 @@ def handle_question_answer(event, question_title):
             break
 
     if question:
+        # 将问题和回答存储为 JSON 格式
+        question_json = json.dumps({"question": question["Question"], "answer": "用户的回答"})
+        redis_client.set(question_title, question_json)
+        
         flex_message = FlexSendMessage(
-            alt_text="題目詳情",
+            alt_text="题目详情",
             contents={
                 "type": "bubble",
                 "header": {
@@ -166,12 +172,13 @@ def handle_question_answer(event, question_title):
                     "contents": [
                         {
                             "type": "text",
-                            "text": "題目",
+                            "text": "题目",
                             "weight": "bold",
                             "size": "xl",
                             "wrap": True,
                             "align": "center",
-                            "gravity": "center"
+                            "gravity": "center",
+                            "color": "#FFFFFF"
                         }
                     ]
                 },
@@ -186,24 +193,17 @@ def handle_question_answer(event, question_title):
                             "size": "lg"
                         }
                     ]
+                },
+                "styles": {
+                    "header": {
+                        "backgroundColor": "#668166"
+                    }
                 }
             }
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
-
-def evaluate_answer(question, answer):
-    payload = {
-        "question": question,
-        "answer": answer
-    }
-    try:
-        response = requests.post(llama3_server_url, json=payload)
-        response.raise_for_status()
-        return response.json().get('feedback', '無法取得評估結果')
-    except requests.exceptions.RequestException as e:
-        return f'評估答案時發生錯誤，請稍後再試。錯誤信息: {str(e)}'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到题目"))
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -213,14 +213,14 @@ def handle_message(event):
 
     msg = event.message.text
 
-    if '學號' in msg or is_valid_student_id(msg):
+    if '学号' in msg or is_valid_student_id(msg):
         reply = handle_student_id(user_id, user_name, msg)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
     elif msg == "我要作答":
         if redis_client.hexists(user_id, 'student_id') or mongo_collection.find_one({"user_id": user_id}):
             handle_unit_selection(event)
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="请先输入学号！"))
     elif msg in unit_collections:
         handle_question_display(event, msg)
     elif msg.startswith("回答"):
@@ -228,29 +228,11 @@ def handle_message(event):
             question_title = msg[2:]
             handle_question_answer(event, question_title)
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
-    elif msg.startswith("開始作答"):
-        question_title = msg[4:]
-        answer = msg[len(question_title) + 4:]
-        question = None
-        for unit, collection in unit_collections.items():
-            question = collection.find_one({"Question": question_title})
-            if question:
-                break
-        if question:
-            # Save question and answer to Redis in JSON format
-            student_id = redis_client.hget(user_id, 'student_id')
-            qa_data = json.dumps({"question": question["Question"], "answer": answer})
-            redis_client.rpush(f"{student_id}_qa", qa_data)
-            redis_client.expire(f"{student_id}_qa", 600)
-            
-            feedback = evaluate_answer(question["Question"], answer)
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=feedback))
-        else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到問題。"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="请先输入学号！"))
     else:
         reply = handle_question_reply(user_id, user_name, msg)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
+
 
 @app.route("/", methods=['POST'])
 def callback():

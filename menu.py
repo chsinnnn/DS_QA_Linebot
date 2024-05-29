@@ -6,6 +6,7 @@ from pymongo import MongoClient
 import random
 import json
 import redis
+import requests
 
 app = Flask(__name__)
 
@@ -115,7 +116,7 @@ def handle_question_display(event, unit):  # 多個題目挑選
                         "type": "text",
                         "text": question["Question"],
                         "wrap": True,
-                        "size": "lg"
+                        "size": "md"
                     }
                 ]
             },
@@ -160,66 +161,61 @@ def handle_question_answer(event, question_title):  # 已選好題目
             break
 
     if question:
-        # 將問題和回答存储为 JSON 格式
-        question_json = json.dumps({"question": question["Question"], "answer": "使用者的回答"})
-        
-        flex_message = FlexSendMessage(
-            alt_text="題目詳情",
-            contents={
-                "type": "bubble",
-                "header": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [
-                        {
-                            "type": "text",
-                            "text": "題目",
-                            "weight": "bold",
-                            "size": "xl",
-                            "wrap": True,
-                            "align": "center",
-                            "gravity": "center",
-                            "color": "#FFFFFF"
-                        }
-                    ]
-
-                    #"backgroundColor": "#EBA281"
-                },
-
-                #"separator": True,  # 分割線                
-                "body": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [
-                        {
-                            "type": "text",
-                            "text": question["Question"],
-                            "wrap": True,
-                            "size": "lg",
-
-                        },
-                        #{
-                            #"type": "button",
-                            #"style": "primary",
-                            #"color": "#EBA281",
-                            #"action": {
-                                #"type": "message",
-                                #"label": "開始作答",
-                                #"text": f"開始作答{question['Question']}"
-                            #}
-                        #}
-                    ]
-                },
-                "styles": {
-                    "header": {
-                        "backgroundColor": "#668166" #header底色
-                    }
-                }
-            }
-        )
-        line_bot_api.reply_message(event.reply_token, flex_message)
+        user_id = event.source.user_id
+        redis_client.hset(user_id, "current_question", question_title)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以下問題：\n\n{question_title}"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
+
+def handle_user_answer(event, user_answer):
+    user_id = event.source.user_id
+    question_title = redis_client.hget(user_id, "current_question")
+
+    if question_title:
+        # 存儲用戶的答案
+        redis_client.hset(user_id, "user_answer", user_answer)
+
+        # 從 Redis 中讀取學號
+        student_id = redis_client.hget(user_id, "student_id")
+
+        if student_id:
+            # 確保題目和答案的鍵存在於 Redis 中
+            qa_key = f"{student_id}_qa:{question_title}"
+
+            # 將用戶的答案存儲在列表中
+            redis_client.rpush(qa_key, user_answer)
+        else:
+            # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
+            print("無法找到學號，無法存儲題目和用戶答案")
+
+        # 將題目發送給 Llama3 伺服器並回傳答案
+        llama3_answer = send_question_to_llama3(question_title)
+
+        # 組合要回覆的文字訊息，包括用戶的回答和 Llama3 的回答
+        reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\nLlama3 回答：{llama3_answer}"
+
+        # 使用 TextSendMessage 回覆文字訊息
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
+
+        # 清除當前題目和用戶回答
+        redis_client.hdel(user_id, "current_question")
+        redis_client.hdel(user_id, "user_answer")
+    else:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="未找到對應的問題，請重新選擇題目。"))
+
+def send_question_to_llama3(question):
+    llama3_server_url = 'http://192.168.100.137:5000/ask'
+
+    try:
+        print(f"Sending question to Llama3 server: {llama3_server_url}")
+        response = requests.post(llama3_server_url, json={'question': question})
+        response.raise_for_status()
+        answer = response.json().get('answer', '無法獲取回答')
+        print(f"Received answer from Llama3 server: {answer}")
+        return answer
+    except requests.exceptions.RequestException as e:
+        print(f"Error sending question to Llama3: {e}")
+        return '無法獲取回答'
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -245,9 +241,10 @@ def handle_message(event):
             handle_question_answer(event, question_title)
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
+    elif redis_client.hget(user_id, "current_question"):
+        handle_user_answer(event, msg)
     else:
-        reply = handle_question_reply(user_id, user_name, msg)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請選擇一個單元或題目來開始作答。"))
 
 @app.route("/", methods=['POST'])
 def callback():

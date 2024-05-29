@@ -216,12 +216,19 @@ def handle_question_answer(event, question_title):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
 
 def send_question_to_llama3(question):
-    llama3_server_url = 'http://192.168.100.137:5000/ask'  # 修改為 Llama3 伺服器的 IP 和端口
-    response = requests.post(llama3_server_url, json={'question': question})
-    if response.status_code == 200:
-        return response.json().get('answer', '無法獲取回答')
-    else:
+    llama3_server_url = 'http://192.168.100.137:5000/ask'
+    try:
+        print(f"Sending question to Llama3 server: {llama3_server_url}")
+        response = requests.post(llama3_server_url, json={'question': question})
+        response.raise_for_status()
+        answer = response.json().get('answer', '無法獲取回答')
+        print(f"Received answer from Llama3 server: {answer}")
+        return answer
+    except requests.exceptions.RequestException as e:
+        print(f"Error sending question to Llama3: {e}")
         return '無法獲取回答'
+
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -242,9 +249,11 @@ def handle_message(event):
         question_title = msg[2:]
         handle_question_answer(event, question_title)
     else:
+        # 這裡新增了將用戶問題發送給 Llama3 伺服器的部分
         llama3_answer = send_question_to_llama3(msg)
         reply = handle_question_reply(user_id, user_name, msg)
         full_reply = f"{reply}\nLlama3 回答: {llama3_answer}"
+        print(f"Sending reply to user: {full_reply}")
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=full_reply))
 
 @app.route("/", methods=['POST'])
