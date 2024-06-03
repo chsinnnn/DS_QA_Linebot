@@ -7,6 +7,7 @@ import random
 import json
 import redis
 import requests
+from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
@@ -46,16 +47,21 @@ def is_valid_student_id(student_id):
 
 def handle_student_id(user_id, user_name, msg):
     if is_valid_student_id(msg):
-        # 學號格式正確，儲存到Redis和MongoDB
-        if not redis_client.hexists(user_id, 'student_id'):
-            redis_client.hset(user_id, mapping={'name': user_name, 'student_id': msg})
-            mongo_collection.insert_one({"user_id": user_id, "name": user_name, "student_id": msg})
-            reply = f"學號已紀錄成功！{user_name}"
-        else:
+        # 學號格式正確，檢查學號是否已經存在於 MongoDB 中
+        existing_user = mongo_collection.find_one({"user_id": user_id})
+        if existing_user:
             reply = f"{user_name}，您的學號已經登錄過了。"
+        else:
+            # 將學號存入 Redis 中
+            redis_client.hset(user_id, 'student_id', msg)
+            # 同時將學號存入 MongoDB 中
+            student_data = {"user_id": user_id, "name": user_name, "student_id": msg}
+            mongo_collection.insert_one(student_data)
+            reply = f"{user_name}，學號已紀錄成功！請點選表單的我要做答並選題目!!"
     else:
         reply = "學號格式不正確，請輸入8位數字的學號。"
     return reply
+
 
 def handle_question_reply(user_id, user_name, msg):
     if redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
@@ -224,19 +230,18 @@ def handle_message(event):
     user_name = user_profile.display_name
 
     msg = event.message.text
-
-    if '學號' in msg or is_valid_student_id(msg):
+    if is_valid_student_id(msg):
         reply = handle_student_id(user_id, user_name, msg)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
     elif msg == "我要作答":
-        if redis_client.hexists(user_id, 'student_id') or mongo_collection.find_one({"user_id": user_id}):
+        if redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
             handle_unit_selection(event)
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入學號ㄛ!"))
     elif msg in unit_collections:
         handle_question_display(event, msg)
     elif msg.startswith("回答"):
-        if redis_client.hexists(user_id, 'student_id') or mongo_collection.find_one({"user_id": user_id}):
+        if redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
             question_title = msg[2:]
             handle_question_answer(event, question_title)
         else:
@@ -244,7 +249,7 @@ def handle_message(event):
     elif redis_client.hget(user_id, "current_question"):
         handle_user_answer(event, msg)
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請選擇一個單元或題目來開始作答。"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="學號格式不正確，請輸入8位數字的學號。"))
 
 @app.route("/", methods=['POST'])
 def callback():
