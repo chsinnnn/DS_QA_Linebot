@@ -1,4 +1,6 @@
 # DS_QA_Linebot
+[期末簡報](https://www.canva.com/design/DAGGh_7bI-k/K-OOOq3fkNiP_Xhdv0ubJQ/edit?utm_content=DAGGh_7bI-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## 暑假進度
 ## 6/26~7/2
      ① 使用者可以看到自己的作答紀錄
