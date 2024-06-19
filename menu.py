@@ -111,9 +111,7 @@ def handle_question_display(event, unit):  # 多個題目挑選
                         "color": "#FFFFFF"
                     }
                 ]
-                #"backgroundColor": "#EBA281"
             },
-            #"separator": True,  # 分割線 
             "body": {
                 "type": "box",
                 "layout": "vertical",
