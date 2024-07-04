@@ -207,7 +207,6 @@ def handle_suggestion(event):
             "suggestion": suggestion
         }
         suggestion_collection.insert_one(suggestion_data)
-        redis_client.hdel(user_id, 'awaiting_suggestion')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="謝謝您的建議！我們會努力改進。"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
@@ -233,15 +232,10 @@ def handle_message(event):
     user_name = user_profile.display_name
 
     msg = event.message.text
-    awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-
-    if awaiting_suggestion:
-        handle_suggestion(event)
-    elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
+    if redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
         if msg == "我要作答":
             handle_unit_selection(event)
         elif msg == "歡迎留下您寶貴的建議:D":
-            redis_client.hset(user_id, 'awaiting_suggestion', 'true')
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
         elif msg in unit_collections:
             handle_question_display(event, msg)
@@ -251,7 +245,7 @@ def handle_message(event):
         elif redis_client.hget(user_id, "current_question"):
             handle_user_answer(event, msg)
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
+            handle_suggestion(event)
     else:
         if is_valid_student_id(msg):
             reply = handle_student_id(user_id, user_name, msg)

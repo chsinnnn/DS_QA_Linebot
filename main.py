@@ -8,6 +8,9 @@ import json
 import redis
 import requests
 from bson.objectid import ObjectId
+import os
+
+os.chdir('/home/hsin/linebot')
 
 app = Flask(__name__)
 
@@ -50,7 +53,8 @@ def handle_student_id(user_id, user_name, msg):
     if is_valid_student_id(msg):
         # 學號格式正確，檢查學號是否已經存在於 MongoDB 中
         existing_user = mongo_collection.find_one({"user_id": user_id})
-        if existing_user:
+        existing = redis_client.hexists(user_id, 'student_id')
+        if existing_user and existing:
             reply = f"{user_name}，您的學號已經登錄過了。"
         else:
             # 將學號存入 Redis 中
