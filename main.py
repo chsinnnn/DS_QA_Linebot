@@ -9,8 +9,9 @@ import redis
 import requests
 from bson.objectid import ObjectId
 import os
+import datetime
 
-os.chdir('/home/hsin/linebot')
+os.chdir('/home/hsin/DS_QA_Linebot')
 
 app = Flask(__name__)
 
@@ -46,15 +47,15 @@ unit_collections = {
     "堆疊": mongo_db["stack"]
 }
 
-def is_valid_student_id(student_id):
+def is_valid_student_id(student_id): 
     return student_id.isdigit() and len(student_id) == 8
 
 def handle_student_id(user_id, user_name, msg):
     if is_valid_student_id(msg):
         # 學號格式正確，檢查學號是否已經存在於 MongoDB 中
-        existing_user = mongo_collection.find_one({"user_id": user_id})
-        existing = redis_client.hexists(user_id, 'student_id')
-        if existing_user and existing:
+        db_existing = mongo_collection.find_one({"user_id": user_id})
+        red_existing = redis_client.hexists(user_id, 'student_id')
+        if db_existing and red_existing:
             reply = f"{user_name}，您的學號已經登錄過了。"
         else:
             # 將學號存入 Redis 中
@@ -160,7 +161,9 @@ def handle_question_answer(event, question_title):  # 已選好題目
 
     if question:
         user_id = event.source.user_id
+        question_clicked_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         redis_client.hset(user_id, "current_question", question_title)
+        redis_client.hset(user_id, "question_clicked_time", question_clicked_time)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以下問題：\n\n{question_title}"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
@@ -170,6 +173,10 @@ def handle_user_answer(event, user_answer):
     question_title = redis_client.hget(user_id, "current_question")
 
     if question_title:
+        # 紀錄回答題目的時間
+        answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        redis_client.hset(user_id, "answer_submitted_time", answer_submitted_time)
+        
         # 存儲用戶的答案
         redis_client.hset(user_id, "user_answer", user_answer)
 
@@ -182,6 +189,7 @@ def handle_user_answer(event, user_answer):
 
             # 將用戶的答案存儲在列表中
             redis_client.rpush(qa_key, user_answer)
+            
         else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
             print("無法找到學號，無法存儲題目和用戶答案")
@@ -215,6 +223,16 @@ def handle_suggestion(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="謝謝您的建議！我們會努力改進。"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+
+def show_answer_record(event, user_id):
+    # 從 Redis 中讀取點選題目的時間和回答題目的時間
+    question_clicked_time = redis_client.hget(user_id, "question_clicked_time")
+    answer_submitted_time = redis_client.hget(user_id, "answer_submitted_time")
+
+    # 構造回覆訊息
+    reply_message = f"你在 {question_clicked_time} 點選了題目，並在 {answer_submitted_time} 提交了答案。"
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_message))
+
 
 def send_question_to_llama3(question):
     llama3_server_url = 'http://192.168.100.137:5000/ask'
@@ -254,6 +272,8 @@ def handle_message(event):
             handle_question_answer(event, question_title)
         elif redis_client.hget(user_id, "current_question"):
             handle_user_answer(event, msg)
+        elif msg == "顯示作答紀錄":
+            show_answer_record(event, user_id)
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
     else:

@@ -33,3 +33,4 @@ if __name__ == "__main__":
     db = connect_to_database()
     if db is not None:
         create_new_data(db)
+    
