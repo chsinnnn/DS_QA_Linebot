@@ -10,6 +10,7 @@ import requests
 from bson.objectid import ObjectId
 import os
 import datetime
+from linebot.models import PostbackAction, CarouselColumn, TemplateSendMessage, CarouselTemplate, TextSendMessage
 
 os.chdir('/home/hsin/DS_QA_Linebot')
 
@@ -30,12 +31,15 @@ mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
 mongo_collection = mongo_db["user_data"]
 suggestion_collection = mongo_db["suggestions"]
+warn_collection = mongo_db['WARN']
 
 # 連Redis
 redis_host = 'localhost'
 redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
+
+special_student_ids = [ '11027149','11027104', '11027133']
 
 # MongoDB設定
 unit_collections = {
@@ -209,6 +213,7 @@ def handle_user_answer(event, user_answer):
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="未找到對應的問題，請重新選擇題目。"))
 
+
 def handle_suggestion(event):
     user_id = event.source.user_id
     suggestion = event.message.text
@@ -253,10 +258,22 @@ def handle_message(event):
     user_id = event.source.user_id
     user_profile = line_bot_api.get_profile(user_id)
     user_name = user_profile.display_name
-
+    user_document = mongo_collection.find_one({"user_id": user_id})
+    student_id = user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-
+    if student_id in special_student_ids:
+        if msg == "小提醒":
+            send_quick_reply(event.reply_token)
+        elif msg in ["刪除原有提醒", "保留原有提醒"]:
+            handle_warning_message_decision(msg, event.reply_token)
+        else:
+            # 假設其他訊息為用戶想要儲存的提醒訊息
+            save_warning_message(msg, event.reply_token)
+    else:
+        # 對於非特定學號的處理
+        send_warning_message(event.reply_token)
+    
     if awaiting_suggestion:
         handle_suggestion(event)
     elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
@@ -282,6 +299,38 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入符合格式的學號（8位數字）。"))
+def send_quick_reply(reply_token):
+    quick_reply_buttons = QuickReply(
+        items=[
+            QuickReplyButton(action=MessageAction(label="是", text="刪除原有提醒")),
+            QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
+        ]
+    )
+    line_bot_api.reply_message(
+        reply_token,
+        TextSendMessage(text="要刪除原有的提醒再加入新的提醒嗎？", quick_reply=quick_reply_buttons)
+    )
+
+def handle_warning_message_decision(decision, reply_token):
+    if decision == "刪除原有提醒":
+        warn_collection.delete_many({})
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="原有提醒已刪除。請輸入新的提醒訊息。"))
+        
+    else:
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="請輸入新的提醒訊息。"))
+
+def save_warning_message(message, reply_token):
+    warn_collection.insert_one({"message": message})
+    line_bot_api.reply_message(reply_token, TextSendMessage(text="您的提醒訊息已儲存。"))
+
+def send_warning_message(reply_token):
+    all_warnings = list(warn_collection.find({}))
+    if len(all_warnings) > 0:
+        messages = [TextSendMessage(text=warning['message']) for warning in all_warnings]  # 示例中僅發送前5條消息
+        line_bot_api.reply_message(reply_token, messages)
+        
+    else:
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。"))
 
 @app.route("/", methods=['POST'])
 def callback():
