@@ -7,10 +7,9 @@ import random
 import json
 import redis
 import requests
-from bson.objectid import ObjectId
 import os
 import datetime
-from linebot.models import PostbackAction, CarouselColumn, TemplateSendMessage, CarouselTemplate, TextSendMessage
+from linebot.models import CarouselColumn, TemplateSendMessage, CarouselTemplate
 
 os.chdir('/home/hsin/DS_QA_Linebot')
 
@@ -51,7 +50,7 @@ unit_collections = {
     "堆疊": mongo_db["stack"]
 }
 
-def is_valid_student_id(student_id): 
+def is_valid_student_id(student_id):
     return student_id.isdigit() and len(student_id) == 8
 
 def handle_student_id(user_id, user_name, msg):
@@ -141,7 +140,7 @@ def handle_question_display(event, unit):  # 多個題目挑選
             },
             "styles": {
                 "header": {
-                    "backgroundColor": "#668166" #header底色
+                    "backgroundColor": "#668166"  # header底色
                 }
             }
         }
@@ -180,7 +179,7 @@ def handle_user_answer(event, user_answer):
         # 紀錄回答題目的時間
         answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         redis_client.hset(user_id, "answer_submitted_time", answer_submitted_time)
-        
+
         # 存儲用戶的答案
         redis_client.hset(user_id, "user_answer", user_answer)
 
@@ -193,7 +192,7 @@ def handle_user_answer(event, user_answer):
 
             # 將用戶的答案存儲在列表中
             redis_client.rpush(qa_key, user_answer)
-            
+
         else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
             print("無法找到學號，無法存儲題目和用戶答案")
@@ -212,7 +211,6 @@ def handle_user_answer(event, user_answer):
         redis_client.hdel(user_id, "user_answer")
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="未找到對應的問題，請重新選擇題目。"))
-
 
 def handle_suggestion(event):
     user_id = event.source.user_id
@@ -262,18 +260,8 @@ def handle_message(event):
     student_id = user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-    if student_id in special_student_ids:
-        if msg == "小提醒":
-            send_quick_reply(event.reply_token)
-        elif msg in ["刪除原有提醒", "保留原有提醒"]:
-            handle_warning_message_decision(msg, event.reply_token)
-        else:
-            # 假設其他訊息為用戶想要儲存的提醒訊息
-            save_warning_message(msg, event.reply_token)
-    else:
-        # 對於非特定學號的處理
-        send_warning_message(event.reply_token)
     
+
     if awaiting_suggestion:
         handle_suggestion(event)
     elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
@@ -291,18 +279,44 @@ def handle_message(event):
             handle_user_answer(event, msg)
         elif msg == "顯示作答紀錄":
             show_answer_record(event, user_id)
+        elif student_id in special_student_ids:
+            if msg == "小提醒":
+                send_quick_reply(event.reply_token)
+                # 設置標誌以表示用戶現在可以輸入提醒訊息
+                redis_client.hset(user_id, 'awaiting_warning_message', 'true')
+            elif msg.startswith("刪除提醒"):
+                show_warning_messages(event.reply_token)
+            elif msg.startswith("刪除選定提醒:"):
+                warning_message = msg.split(':')[1]
+                delete_warning_message(warning_message, event.reply_token)
+            elif msg == "保留原有提醒":
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入新的提醒訊息。"))
+                # 重新設置標誌以表示用戶現在可以輸入提醒訊息
+                redis_client.hset(user_id, 'awaiting_warning_message', 'true')
+            else:
+                # 在儲存提醒訊息之前檢查是否真的在等待提醒訊息的輸入
+                if redis_client.hget(user_id, 'awaiting_warning_message') == 'true':
+                    save_warning_message(msg, event.reply_token)
+                    # 清除標誌
+                    redis_client.hdel(user_id, 'awaiting_warning_message')
+                else:
+                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
+        elif student_id not in special_student_ids and msg == "小提醒":
+            send_warning_message(event.reply_token)
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
+    
     else:
         if is_valid_student_id(msg):
             reply = handle_student_id(user_id, user_name, msg)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入符合格式的學號（8位數字）。"))
+
 def send_quick_reply(reply_token):
     quick_reply_buttons = QuickReply(
         items=[
-            QuickReplyButton(action=MessageAction(label="是", text="刪除原有提醒")),
+            QuickReplyButton(action=MessageAction(label="是", text="刪除提醒")),
             QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
         ]
     )
@@ -311,24 +325,160 @@ def send_quick_reply(reply_token):
         TextSendMessage(text="要刪除原有的提醒再加入新的提醒嗎？", quick_reply=quick_reply_buttons)
     )
 
-def handle_warning_message_decision(decision, reply_token):
-    if decision == "刪除原有提醒":
-        warn_collection.delete_many({})
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="原有提醒已刪除。請輸入新的提醒訊息。"))
-        
+def show_warning_messages(reply_token):
+    warnings = list(warn_collection.find({}))
+    if warnings:
+        contents = []
+        for warning in warnings:
+            contents.append({
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": warning['message'],
+                        "wrap": True,
+                        "color": "#000000",
+                        "size": "md",
+                        "flex": 4
+                    },
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "color": "#EBA281",
+                        "action": {
+                            "type": "message",
+                            "label": f"x",
+                            "text": f"刪除選定提醒:{warning['message']}"
+                        },
+                    }
+                ]
+            })
+            # 加間隔
+            contents.append({
+                "type": "separator",
+                "margin": "md"
+            })
+
+        bubble = {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "小提醒",
+                        "weight": "bold",
+                        "size": "xl",
+                        "wrap": True,
+                        "align": "center",
+                        "gravity": "center",
+                        "color": "#FFFFFF"
+                    }
+                ]
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": contents
+            },
+            "styles": {
+                "header": {
+                    "backgroundColor": "#668166" #header底色
+                }
+            }
+        }
+
+        flex_message = FlexSendMessage(
+            alt_text="管理提醒",
+            contents=bubble
+        )
+        line_bot_api.reply_message(reply_token, flex_message)
     else:
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="請輸入新的提醒訊息。"))
+        # 如果沒有提醒可以刪除，提示用戶輸入新的提醒
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。請輸入新的提醒訊息。"))
+
+def delete_warning_message(warning_message, reply_token):
+    warn_collection.delete_one({'message': warning_message})
+    remaining_warnings = list(warn_collection.find({}))
+    if remaining_warnings:
+        quick_reply_buttons = QuickReply(
+            items=[
+                QuickReplyButton(action=MessageAction(label="是", text="刪除提醒")),
+                QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
+            ]
+        )
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。您還要刪除其他提醒嗎？如果不刪除，請輸入新的提醒訊息。", quick_reply=quick_reply_buttons))
+    else:
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。請輸入新的提醒訊息。"))
 
 def save_warning_message(message, reply_token):
     warn_collection.insert_one({"message": message})
-    line_bot_api.reply_message(reply_token, TextSendMessage(text="您的提醒訊息已儲存。"))
+    line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒訊息已儲存。"))
 
 def send_warning_message(reply_token):
     all_warnings = list(warn_collection.find({}))
     if len(all_warnings) > 0:
-        messages = [TextSendMessage(text=warning['message']) for warning in all_warnings]  # 示例中僅發送前5條消息
-        line_bot_api.reply_message(reply_token, messages)
-        
+        warnings = list(warn_collection.find({}))
+    if warnings:
+        contents = []
+        for warning in warnings:
+            contents.append({
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": warning['message'],
+                        "wrap": True,
+                        "color": "#000000",
+                        "size": "md",
+                        "flex": 4
+                    }
+                ]
+            })
+            # 加間隔
+            contents.append({
+                "type": "separator",
+                "margin": "md"
+            })
+
+        bubble = {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "小提醒",
+                        "weight": "bold",
+                        "size": "xl",
+                        "wrap": True,
+                        "align": "center",
+                        "gravity": "center",
+                        "color": "#FFFFFF"
+                    }
+                ]
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": contents
+            },
+            "styles": {
+                "header": {
+                    "backgroundColor": "#668166" #header底色
+                }
+            }
+        }
+
+        flex_message = FlexSendMessage(
+            alt_text="管理提醒",
+            contents=bubble
+        )
+        line_bot_api.reply_message(reply_token, flex_message)
     else:
         line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。"))
 
