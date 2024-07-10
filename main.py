@@ -229,12 +229,13 @@ def handle_suggestion(event):
 def send_quick_ans_records_reply(reply_token):
     quick_reply = QuickReply(
         items=[
-        QuickReplyButton(action=MessageAction(label="其他", text="單元「其他\"的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="指標", text="單元:指標的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="佇列", text="單元:佇列的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="遞迴", text="單元:遞迴的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="排序", text="單元:排序的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="堆疊", text="單元:堆疊的作答紀錄"))
+        QuickReplyButton(action=MessageAction(label="全部", text="查看「全部」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="其他", text="查看單元「其他」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="指標", text="查看單元「指標」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="查看單元「佇列」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="遞迴", text="查看單元「遞迴」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="排序", text="查看單元「排序」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="堆疊", text="查看單元「堆疊」的作答紀錄"))
         ]
     )
     line_bot_api.reply_message(
@@ -242,7 +243,7 @@ def send_quick_ans_records_reply(reply_token):
         TextSendMessage(text="選擇要查看作答紀錄的單元", quick_reply=quick_reply)
     )
 
-def show_all_answer_records(event,student_id):
+def show_unit_answer_records(event, student_id, selected_unit):
     # 使用 keys 函數獲取所有與該 student_id 相關的答題時間的 keys
     pattern = f"{student_id}_answer_time:*"
     answer_time_keys = redis_client.keys(pattern)
@@ -258,26 +259,42 @@ def show_all_answer_records(event,student_id):
             answer_times = redis_client.lrange(key, 0, -1)
             question_title = key.split("_answer_time:")[1]
 
-        for question_title in question_titles:
+            # 直接使用 question_title_key 查詢，避免不必要的內層循環
             for unit, collection in unit_collections.items():
                 if collection.find_one({"Question": question_title}):
                     unit_name = unit
                     if unit_name not in unit_answer_counts:
                         unit_answer_counts[unit_name] = {"count": 0, "times": {}}
-                    unit_answer_counts[unit_name]["count"] += 1
+                    unit_answer_counts[unit_name]["count"] += len(answer_times)  # 直接增加回答次數
                     for time in answer_times:
                         if time not in unit_answer_counts[unit_name]["times"]:
                             unit_answer_counts[unit_name]["times"][time] = 0
                         unit_answer_counts[unit_name]["times"][time] += 1
-                    break
+                    break  # 找到對應單元後跳出循環
 
-        units = [
-            f"單元: {unit}, 回答次數: {details['count']}, \n答題時間及次數:\n" + 
-            ", ".join([f"{time}: {count}題" for time, count in details['times'].items()])
-            for unit, details in unit_answer_counts.items()
-        ]
-        units_reply_message = "\n".join(units)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text= units_reply_message))
+        if selected_unit in unit_answer_counts:
+            details = unit_answer_counts[selected_unit]
+            units_reply_message = (
+                f"單元: {selected_unit} 回答次數: {details['count']} \n答題時間及題數:\n" +
+                "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
+            )
+        elif selected_unit == "全部":
+            all_units_reply_message = ""
+            for unit, details in unit_answer_counts.items():
+                times_and_num = "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
+                # 決定是否在新的單元信息前添加換行符
+                if all_units_reply_message == "":  # 如果不是第一個單元，添加換行符
+                    unit_message = f"單元: {unit} 回答次數: {details['count']} \n答題時間及題數:\n{times_and_num}"
+                else:  # 如果是第一個單元，不在開頭加換行符
+                    unit_message = f"\n\n單元: {unit} 回答次數: {details['count']} \n答題時間及題數:\n{times_and_num}"
+                
+                all_units_reply_message += unit_message
+
+            units_reply_message = all_units_reply_message
+        else:
+            units_reply_message = f"單元: {selected_unit}\n沒有找到任何答題記錄。"
+
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=units_reply_message))
 
 def send_question_to_llama3(question):
     llama3_server_url = 'http://192.168.100.137:5000/ask'
@@ -321,7 +338,11 @@ def handle_message(event):
             handle_user_answer(event, msg)
         elif msg == "顯示作答紀錄":
             send_quick_ans_records_reply(event.reply_token)
-            #show_all_answer_records(event,student_id)
+        elif msg.startswith("查看") and msg.endswith("的作答紀錄"):
+            # 從消息文本中提取單元名稱
+            selected_unit = msg.split("「")[1].split("」")[0]
+            # 調用函數顯示該單元的作答紀錄
+            show_unit_answer_records(event, student_id, selected_unit)
         elif student_id in special_student_ids:
             if msg == "小提醒":
                 send_quick_reply(event.reply_token)
@@ -329,11 +350,11 @@ def handle_message(event):
                 redis_client.hset(user_id, 'awaiting_warning_message', 'true')
             elif msg.startswith("刪除提醒"):
                 show_warning_messages(event.reply_token)
-            elif msg.startswith("刪除選定提醒:"):
+            elif msg.startswith("刪除:"):
                 warning_message = msg.split(':')[1]
                 delete_warning_message(warning_message, event.reply_token)
             elif msg == "保留原有提醒":
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入新的提醒訊息。"))
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入新的提醒"))
                 # 重新設置標誌以表示用戶現在可以輸入提醒訊息
                 redis_client.hset(user_id, 'awaiting_warning_message', 'true')
             else:
@@ -392,7 +413,7 @@ def show_warning_messages(reply_token):
                         "action": {
                             "type": "message",
                             "label": f"x",
-                            "text": f"刪除選定提醒:{warning['message']}"
+                            "text": f"刪除:{warning['message']}"
                         },
                     }
                 ]
@@ -434,13 +455,13 @@ def show_warning_messages(reply_token):
         }
 
         flex_message = FlexSendMessage(
-            alt_text="管理提醒",
+            alt_text="小提醒",
             contents=bubble
         )
         line_bot_api.reply_message(reply_token, flex_message)
     else:
         # 如果沒有提醒可以刪除，提示用戶輸入新的提醒
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。請輸入新的提醒訊息。"))
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。請輸入新的提醒"))
 
 def delete_warning_message(warning_message, reply_token):
     warn_collection.delete_one({'message': warning_message})
@@ -452,13 +473,14 @@ def delete_warning_message(warning_message, reply_token):
                 QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
             ]
         )
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。您還要刪除其他提醒嗎？如果不刪除，請輸入新的提醒訊息。", quick_reply=quick_reply_buttons))
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。您還要刪除其他提醒嗎？如果不刪除，請輸入新的提醒", quick_reply=quick_reply_buttons))
     else:
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。請輸入新的提醒訊息。"))
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。請輸入新的提醒。"))
 
 def save_warning_message(message, reply_token):
     warn_collection.insert_one({"message": message})
-    line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒訊息已儲存。"))
+    send_warning_message(reply_token)
+    ##line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒訊息已儲存。"))
 
 def send_warning_message(reply_token):
     all_warnings = list(warn_collection.find({}))
@@ -518,7 +540,7 @@ def send_warning_message(reply_token):
         }
 
         flex_message = FlexSendMessage(
-            alt_text="管理提醒",
+            alt_text="小提醒",
             contents=bubble
         )
         line_bot_api.reply_message(reply_token, flex_message)
