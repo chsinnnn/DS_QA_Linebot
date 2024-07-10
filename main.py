@@ -164,9 +164,7 @@ def handle_question_answer(event, question_title):  # 已選好題目
 
     if question:
         user_id = event.source.user_id
-        question_clicked_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         redis_client.hset(user_id, "current_question", question_title)
-        redis_client.hset(user_id, "question_clicked_time", question_clicked_time)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以下問題：\n\n{question_title}"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
@@ -177,8 +175,7 @@ def handle_user_answer(event, user_answer):
 
     if question_title:
         # 紀錄回答題目的時間
-        answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        redis_client.hset(user_id, "answer_submitted_time", answer_submitted_time)
+        answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d")
 
         # 存儲用戶的答案
         redis_client.hset(user_id, "user_answer", user_answer)
@@ -189,9 +186,11 @@ def handle_user_answer(event, user_answer):
         if student_id:
             # 確保題目和答案的鍵存在於 Redis 中
             qa_key = f"{student_id}_qa:{question_title}"
+            answer_time_key = f"{student_id}_answer_time:{question_title}"
 
             # 將用戶的答案存儲在列表中
             redis_client.rpush(qa_key, user_answer)
+            redis_client.rpush(answer_time_key, answer_submitted_time)
 
         else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
@@ -227,15 +226,58 @@ def handle_suggestion(event):
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
 
-def show_answer_record(event, user_id):
-    # 從 Redis 中讀取點選題目的時間和回答題目的時間
-    question_clicked_time = redis_client.hget(user_id, "question_clicked_time")
-    answer_submitted_time = redis_client.hget(user_id, "answer_submitted_time")
+def send_quick_ans_records_reply(reply_token):
+    quick_reply = QuickReply(
+        items=[
+        QuickReplyButton(action=MessageAction(label="其他", text="單元「其他\"的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="指標", text="單元:指標的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="單元:佇列的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="遞迴", text="單元:遞迴的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="排序", text="單元:排序的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="堆疊", text="單元:堆疊的作答紀錄"))
+        ]
+    )
+    line_bot_api.reply_message(
+        reply_token,
+        TextSendMessage(text="選擇要查看作答紀錄的單元", quick_reply=quick_reply)
+    )
 
-    # 構造回覆訊息
-    reply_message = f"你在 {question_clicked_time} 點選了題目，並在 {answer_submitted_time} 提交了答案。"
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_message))
+def show_all_answer_records(event,student_id):
+    # 使用 keys 函數獲取所有與該 student_id 相關的答題時間的 keys
+    pattern = f"{student_id}_answer_time:*"
+    answer_time_keys = redis_client.keys(pattern)
+    question_titles = [key.split(':')[1] for key in redis_client.keys(pattern)]
 
+    # 檢查是否獲取到 keys
+    if not answer_time_keys:
+        line_bot_api.reply_message(event.reply_token, "沒有找到任何答題記錄。")
+    else:
+    # 遍歷 keys，獲取並格式化答題時間
+        unit_answer_counts = {}
+        for key in answer_time_keys:
+            answer_times = redis_client.lrange(key, 0, -1)
+            question_title = key.split("_answer_time:")[1]
+
+        for question_title in question_titles:
+            for unit, collection in unit_collections.items():
+                if collection.find_one({"Question": question_title}):
+                    unit_name = unit
+                    if unit_name not in unit_answer_counts:
+                        unit_answer_counts[unit_name] = {"count": 0, "times": {}}
+                    unit_answer_counts[unit_name]["count"] += 1
+                    for time in answer_times:
+                        if time not in unit_answer_counts[unit_name]["times"]:
+                            unit_answer_counts[unit_name]["times"][time] = 0
+                        unit_answer_counts[unit_name]["times"][time] += 1
+                    break
+
+        units = [
+            f"單元: {unit}, 回答次數: {details['count']}, \n答題時間及次數:\n" + 
+            ", ".join([f"{time}: {count}題" for time, count in details['times'].items()])
+            for unit, details in unit_answer_counts.items()
+        ]
+        units_reply_message = "\n".join(units)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text= units_reply_message))
 
 def send_question_to_llama3(question):
     llama3_server_url = 'http://192.168.100.137:5000/ask'
@@ -278,7 +320,8 @@ def handle_message(event):
         elif redis_client.hget(user_id, "current_question"):
             handle_user_answer(event, msg)
         elif msg == "顯示作答紀錄":
-            show_answer_record(event, user_id)
+            send_quick_ans_records_reply(event.reply_token)
+            #show_all_answer_records(event,student_id)
         elif student_id in special_student_ids:
             if msg == "小提醒":
                 send_quick_reply(event.reply_token)
