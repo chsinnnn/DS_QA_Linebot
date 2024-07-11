@@ -38,7 +38,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ '11027149','11027104', '11027133']
+special_student_ids = [ '11027149','11027104', '11027133' ]
 
 # MongoDB設定
 unit_collections = {
@@ -350,6 +350,9 @@ def handle_message(event):
                 redis_client.hset(user_id, 'awaiting_warning_message', 'true')
             elif msg.startswith("刪除提醒"):
                 show_warning_messages(event.reply_token)
+            elif msg.startswith("查看提醒"):
+                send_warning_message(event.reply_token)
+                redis_client.hdel(user_id, 'awaiting_warning_message')  
             elif msg.startswith("刪除:"):
                 warning_message = msg.split(':')[1]
                 delete_warning_message(warning_message, event.reply_token)
@@ -382,6 +385,7 @@ def send_quick_reply(reply_token):
         items=[
             QuickReplyButton(action=MessageAction(label="是", text="刪除提醒")),
             QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
+            QuickReplyButton(action=MessageAction(label="查看提醒", text="查看提醒"))
         ]
     )
     line_bot_api.reply_message(
@@ -471,6 +475,7 @@ def delete_warning_message(warning_message, reply_token):
             items=[
                 QuickReplyButton(action=MessageAction(label="是", text="刪除提醒")),
                 QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
+                QuickReplyButton(action=MessageAction(label="查看提醒", text="查看提醒"))
             ]
         )
         line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。您還要刪除其他提醒嗎？如果不刪除，請輸入新的提醒", quick_reply=quick_reply_buttons))
