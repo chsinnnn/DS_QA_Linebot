@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:46",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174275",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2022-10-25 23:57:32",
+        "poster": "10727120",
+        "realname": "洪錦彤",
+        "email": "m27972729@gmail.com",
+        "homepage": null,
+        "subject": "124. 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。",
+        "content": "<p>張元翔老師的演算法分析有教到，這是卡塔蘭數列<br />\r\n此題題目的括弧變化為五種，算式及其他舉例如下方兩張圖</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10727120/images/%E6%88%AA%E5%9C%96%202022-10-25%20%E4%B8%8B%E5%8D%8811.55.09.png\" style=\"height:1206px; width:1716px\" /><img alt=\"\" src=\"/user/1/0/10727120/images/%E6%88%AA%E5%9C%96%202022-10-25%20%E4%B8%8B%E5%8D%8811.55.20.png\" style=\"height:1256px; width:1792px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "6",
+        "lang": "1"
+    }
+}

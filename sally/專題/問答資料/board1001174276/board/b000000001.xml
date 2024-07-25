@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:51" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174276</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-10-21 20:16:06</pt>
+  <poster>11027229</poster>
+  <realname>&#x5353;&#x69AE;&#x6689;  </realname>
+  <email>intercoursedr@gmail.com</email>
+  <homepage> </homepage>
+  <subject>128. &#x5F8C;&#x5E8F;&#x5F0F;2 4 6 * + 7 5 - *&#x8981;&#x5982;&#x4F55;&#x900F;&#x904E;&#x5806;&#x758A;&#x6C42;&#x89E3;&#xFF1F;&#x8981;&#x5217;&#x51FA;&#x904E;&#x7A0B;&#x3002; </subject>
+  <content>&lt;p&gt;&#x7B97;&#x5F0F; : 2 4 6 * + 7 5 - *&lt;br /&gt;&#xD;
+&#x5148;&#x5C07; 2 4 6 &#x653E;&#x5165; Stack&lt;br /&gt;&#xD;
+&#x8B80;&#x5230; * &#xFF0C;&#x5C07; 4 &#x8DDF; 6 &#x5F9E; Stack &#x4E2D;&#x62D4;&#x6389;&#xFF0C;&#x8A08;&#x7B97;&#x51FA; 4 * 6 = 24 &#x5F8C; &#x5C07; 24 &#x4E1F;&#x56DE;&#x53BB; Stack&lt;br /&gt;&#xD;
+&#x518D;&#x8B80; + &#xFF0C; &#x5C07;2&#x8DDF;24&#x5F9E;Stack&#x4E2D;&#x62D4;&#x6389;&#xFF0C;&#x8A08;&#x7B97;&#x51FA; 2 + 24 = 26 &#x5F8C; &#x5C07; 26 &#x4E1F;&#x56DE;&#x53BB; Stack&lt;br /&gt;&#xD;
+&#x7136;&#x5F8C;&#x518D;&#x5C07; 7 &#x8DDF; 5 &#x4E1F;&#x5165; Stack ( Stack &#x88E1;&#x9762;&#x6709; 26 7 5 )&lt;br /&gt;&#xD;
+&#x8B80;&#x5230; - &#xFF0C;&#x5C07; 7 &#x8DDF; 5 &#x53D6;&#x51FA;&#xFF0C;&#x8A08;&#x7B97;&#x51FA; 7 - 5 = 2 &#x5F8C; &#x4E1F;&#x56DE;&#x53BB; Stack&lt;br /&gt;&#xD;
+&#x8B80;&#x5230; *&#xFF0C; &#x5C07; 26 &#x8DDF; 2 &#x53D6;&#x51FA; &#x8A08;&#x7B97;&#x51FA; 26 * 2 = 52&#x5F8C; &#x4E1F;&#x56DE;&#x53BB; Stack&lt;br /&gt;&#xD;
+&#x8B80;&#x5B8C;&#x4E86;&#xFF0C;&#x5C07;Stack&#x6700;&#x4E0A;&#x5C64;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7B54;&#x6848;&#xFF0C;&#x9001;&#x51FA;&#x53BB;&lt;br /&gt;&#xD;
+Ans. = 52&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027229/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-21%20201423.png" style="height:117px; width:465px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53C3;&#x8003;&#x8CC7;&#x6E90; : &#x8001;&#x5E2B;&#x7684;&#x5F71;&#x7247;&lt;br /&gt;&#xD;
+&#x60F3;&#x6E2C;&#x8A66;&#x81EA;&#x5DF1;&#x5BEB;&#x7684;&#x7A0B;&#x5F0F;&#x78BC; :&amp;nbsp;https://leetcode.com/problems/evaluate-reverse-polish-notation/&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>55</hit>
+  <lang>1</lang>
+</data>

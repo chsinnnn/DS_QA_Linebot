@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-10 16:14:36",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答113",
+        "content": "<p>113. 將此後序式postfix轉中序式infix，並詳述步驟。&nbsp; a b + c * d e + f * + w z + *</p>\r\n\r\n<p>Step1:(a b +) c * (d e +)&nbsp; f&nbsp; *&nbsp;&nbsp; +&nbsp;&nbsp; (w z +)&nbsp;&nbsp; *</p>\r\n\r\n<p>Step2: [(a+b)c *] [(d+e) f&nbsp; *] + [(w+z)] *</p>\r\n\r\n<p>Step3:{[(a+b)*c ] [(d+e)*f] +} [(w+z)*]</p>\r\n\r\n<p>Step4:[(a+b)*c ]+[(d+e)*f] [(w+z) *]</p>\r\n\r\n<p>Step5:[(a+b)*c ]+[(d+e)*f] * [(w+z)]</p>\r\n\r\n<p>=&gt;(((a+b)*c)+((d+e)*f)*(w+z)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "18",
+        "lang": "1"
+    }
+}

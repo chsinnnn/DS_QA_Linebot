@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:44" type="post" filename="b000000018.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278685</board_id>
+  <node>000000018</node>
+  <site>1000110001</site>
+  <pt>2023-07-24 15:02:53</pt>
+  <poster>06005836</poster>
+  <realname>&#x9673;&#x4E88;&#x7487;  </realname>
+  <email>jason40125520@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;216 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x5E0C;&#x723E;&#x6392;&#x5E8F;shell sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x3002;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#xFF08;Shell Sort&#xFF09;&#x662F;&#x4E00;&#x7A2E;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x6539;&#x9032;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x662F;&#x975E;&#x7A69;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;&#x5728;&#x7A69;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x4E2D;&#xFF0C;&#x5C0D;&#x65BC;&#x5177;&#x6709;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6392;&#x5E8F;&#x524D;&#x5F8C;&#x5B83;&#x5011;&#x7684;&#x76F8;&#x5C0D;&#x4F4D;&#x7F6E;&#x4E0D;&#x6703;&#x6539;&#x8B8A;&#x3002;&#x63DB;&#x53E5;&#x8A71;&#x8AAA;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x500B;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x662F;&#x7A69;&#x5B9A;&#x7684;&#xFF0C;&#x7576;&#x5169;&#x500B;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x5143;&#x7D20;a&#x548C;b&#xFF0C;&#x6392;&#x5E8F;&#x524D;a&#x4F4D;&#x65BC;b&#x7684;&#x524D;&#x9762;&#xFF0C;&#x5247;&#x6392;&#x5E8F;&#x5F8C;a&#x4ECD;&#x7136;&#x6703;&#x4F4D;&#x65BC;b&#x7684;&#x524D;&#x9762;&#x3002;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#x5728;&#x6392;&#x5E8F;&#x7684;&#x904E;&#x7A0B;&#x4E2D;&#x6703;&#x6D89;&#x53CA;&#x5230;&#x8DF3;&#x8E8D;&#x5F0F;&#x7684;&#x4EA4;&#x63DB;&#xFF0C;&#x9019;&#x5C0E;&#x81F4;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x5143;&#x7D20;&#x53EF;&#x80FD;&#x6703;&#x5728;&#x6392;&#x5E8F;&#x5F8C;&#x767C;&#x751F;&#x4F4D;&#x7F6E;&#x7684;&#x8B8A;&#x5316;&#x3002;&#x9019;&#x5C31;&#x662F;&#x70BA;&#x4EC0;&#x9EBC;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#x662F;&#x975E;&#x7A69;&#x5B9A;&#x7684;&#x539F;&#x56E0;&#x3002;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x8209;&#x4F8B;&#x4F86;&#x8AAA;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x5047;&#x8A2D;&#x6211;&#x5011;&#x6709;&#x4EE5;&#x4E0B;&#x6578;&#x7D44;&#x9700;&#x8981;&#x6392;&#x5E8F;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&#x7D22;&#x5F15;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&#x503C;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;8&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;9&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x4F7F;&#x7528;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#xFF0C;&#x4E00;&#x7A2E;&#x53EF;&#x80FD;&#x7684;&#x6392;&#x5E8F;&#x904E;&#x7A0B;&#x662F;&#x9019;&#x6A23;&#x7684;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x7B2C;&#x4E00;&#x6B21;&#x6392;&#x5E8F;&#xFF08;gap = 2&#xFF09;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&#x7D22;&#x5F15;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&#x503C;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;9&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;8&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x7B2C;&#x4E8C;&#x6B21;&#x6392;&#x5E8F;&#xFF08;gap = 1&#xFF09;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x539F;&#x672C;&#x4F4D;&#x65BC;&#x7D22;&#x5F15;0&#x548C;3&#x7684;&#x5169;&#x500B;&#x76F8;&#x540C;&#x503C;&amp;quot;5&amp;quot;&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x5F8C;&#x5B83;&#x5011;&#x7684;&#x76F8;&#x5C0D;&#x4F4D;&#x7F6E;&#x6539;&#x8B8A;&#x4E86;&#xFF0C;&#x9019;&#x5C31;&#x8868;&#x660E;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#x662F;&#x975E;&#x7A69;&#x5B9A;&#x7684;&#x3002;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#x662F;&#x4E00;&#x7A2E;&#x9AD8;&#x6548;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x4F46;&#x4E0D;&#x4FDD;&#x8B49;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5C0D;&#x4F4D;&#x7F6E;&#x4E0D;&#x8B8A;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x662F;&#x975E;&#x7A69;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;&lt;/strong&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>11</hit>
+  <lang>1</lang>
+</data>

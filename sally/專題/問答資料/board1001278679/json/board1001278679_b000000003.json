@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-07-09 10:12:31",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答118",
+        "content": "<ol>\r\n\t<li>\r\n\t<p>ptrX = ptrX-&gt;next 是將指標 ptrX 指向 ptrX 目前指向節點的下一個節點，它將 ptrX 移動到鏈表的下一個節點。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>ptrX-&gt;next = ptrX 是將 ptrX 指向節點的下一個指標為指向 ptrX 自己。這樣做會創建一個cycle鏈表，當前節點與後節點連接起來，形成一個cycle。</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p>這兩個操作的結果不同。</p>\r\n\r\n<p>ptrX = ptrX-&gt;next 用於訪問每個節點，</p>\r\n\r\n<p>ptrX-&gt;next = ptrX 用於創建cycle鏈表或重新連接節點</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

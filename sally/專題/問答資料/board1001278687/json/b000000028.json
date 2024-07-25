@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000028.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000028",
+        "site": "1000110001",
+        "pt": "2023-07-25 23:01:40",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答221",
+        "content": "<p>舉例解說中序走訪二元搜尋樹是否穩定排序。</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 5<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;/ \\<br />\r\n&nbsp; &nbsp; &nbsp; 3 &nbsp; 7<br />\r\n&nbsp; &nbsp; &nbsp;/ \\ / \\<br />\r\n&nbsp; &nbsp; 2 &nbsp;4 6 &nbsp;8<br />\r\n以這例子來做中序走訪判斷是否穩定，首先要看排序順序是否按照大小去排序，如果照大小依次排序的話，則可判定中序走訪為穩定排序</p>\r\n\r\n<p>中序走訪是左-&gt;中-&gt;右:</p>\r\n\r\n<p>所以會先從2開始，然後-&gt;3-&gt;4-&gt;5-&gt;6-&gt;7-&gt;8，走訪完畢後會發現，其走訪次序會由小到大，所以中序走訪是穩定排序。</p>\r\n\r\n<p>而且在BST中做插入、刪除、搜尋等操作，都會保持BST的有序性質，所以在進行中序走訪的時候，不論樹有無改變，得到的結果都會是穩定排序。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

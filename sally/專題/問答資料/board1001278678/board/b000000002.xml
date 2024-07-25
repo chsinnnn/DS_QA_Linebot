@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 02:16:41</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage> </homepage>
+  <subject>&#x6436;&#x7B54;111 </subject>
+  <content>&lt;p&gt;111. &#x50B3;&#x5165;&#x9663;&#x5217;A&#x548C;&#x6574;&#x6578;S&#xFF0C;&#x5BEB;&#x51FA;C++&#x51FD;&#x6578;&#x5F9E;A&#x627E;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA;S&#x7684;&#x7D44;&#x5408;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;//&#x672C;&#x7A0B;&#x5F0F;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6536;&#x5230;&#x4E00;&#x500B;&#x6574;&#x6578;&#x9663;&#x5217;&lt;/span&gt; A &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x548C;&#x4E00;&#x500B;&#x6574;&#x6578;&lt;/span&gt; S&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF0C;&#x7136;&#x5F8C;&#x627E;&#x51FA;&#x9663;&#x5217;&lt;/span&gt; A &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E2D;&#x7684;&#x4E09;&#x500B;&#x6578;&#xFF0C;&#x4F7F;&#x5B83;&#x5011;&#x7684;&#x548C;&#x7B49;&#x65BC;&lt;/span&gt; S&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;vector&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;algorithm&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; findCombination(vector&amp;lt;int&amp;gt;&amp;amp; A, int S) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; result;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int n = A.size();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; sort(A.begin(), A.end());&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6392;&#x5E8F;&#x9663;&#x5217;&lt;/span&gt; A&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x5F8C;&#x7E8C;&#x67E5;&#x627E;&#x4E2D;&#x4F7F;&#x7528;&#x96D9;&#x6307;&#x91DD;&#x6CD5;&lt;/span&gt;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; for (int i = 0; i &amp;lt; n - 2; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (i &amp;gt; 0 &amp;amp;&amp;amp; A[i] == A[i - 1])&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; continue;&amp;nbsp; //&lt;span style="font-size:12px"&gt; &lt;span style="font-family:&amp;quot;&#x65B0;&#x7D30;&#x660E;&#x9AD4;&amp;quot;,serif"&gt;&#x907F;&#x514D;&#x91CD;&#x8907;&#x7684;&#x7D44;&#x5408;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; int left = i + 1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; int right = n - 1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; while (left &amp;lt; right) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; int sum = A[i] + A[left] + A[right];&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (sum == S) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; result.push_back({A[i], A[left], A[right]});&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; left++;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; right--;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; while (left &amp;lt; right &amp;amp;&amp;amp; A[left] == A[left - 1])&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; left++;&amp;nbsp; // &lt;span style="font-size:12px"&gt;&lt;span style="font-family:&amp;quot;&#x65B0;&#x7D30;&#x660E;&#x9AD4;&amp;quot;,serif"&gt;&#x907F;&#x514D;&#x91CD;&#x8907;&#x7684;&#x7D44;&#x5408;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; while (left &amp;lt; right &amp;amp;&amp;amp; A[right] == A[right + 1])&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; right--;&amp;nbsp; //&lt;span style="font-size:12px"&gt;&lt;span style="font-family:&amp;quot;&#x65B0;&#x7D30;&#x660E;&#x9AD4;&amp;quot;,serif"&gt; &#x907F;&#x514D;&#x91CD;&#x8907;&#x7684;&#x7D44;&#x5408;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else if (sum &amp;lt; S) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; left++;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; right--;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return result;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;int&amp;gt; A = {1, 2, 3, 4, 5, 6, 7, 8, 9};&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int S = 15;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; combinations = findCombination(A, S);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (combinations.empty()) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;No combination found.&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Combinations found:&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (const auto&amp;amp; combination : combinations) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; combination[0] &amp;lt;&amp;lt; &amp;quot; + &amp;quot; &amp;lt;&amp;lt; combination[1] &amp;lt;&amp;lt; &amp;quot; + &amp;quot; &amp;lt;&amp;lt; combination[2] &amp;lt;&amp;lt; &amp;quot; = &amp;quot; &amp;lt;&amp;lt; S &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1. &#x70BA;&#x4F55;&#x8981;&#x6392;&#x5E8F;&#xFF1F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6392;&#x5E8F;&#x662F;&#x70BA;&#x4E86;&#x5728;&#x5F8C;&#x7E8C;&#x67E5;&#x627E;&#x4E2D;&#x4F7F;&#x7528;&#x96D9;&#x6307;&#x91DD;&#x6CD5;&#xFF0C;&#x6211;&#x5011;&#x9700;&#x8981;&#x627E;&#x5230;&#x9663;&#x5217; A &#x4E2D;&#x7684;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA; S &#x7684;&#x7D44;&#x5408;&#x3002;&#x6392;&#x5E8F;&#x5F8C;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5169;&#x500B;&#x6307;&#x91DD;&#xFF08;left &#x548C; right&#xFF09;&#x4F86;&#x9032;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x5F9E;&#x800C;&#x6709;&#x6548;&#x5730;&#x907F;&#x514D;&#x91CD;&#x8907;&#x8A08;&#x7B97;&#x548C;&#x8655;&#x7406;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2. &#x5982;&#x4F55;&#x6539;&#x5BEB;&#x6210;&#x905E;&#x8FF4;&#xFF1F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x82E5;&#x8981;&#x6539;&#x5BEB;&#x6210;&#x905E;&#x8FF4;&#xFF0C;&#x53EF;&#x4EE5;&#x5C07;&#x51FD;&#x6578;&#x6539;&#x70BA;&#x905E;&#x8FF4;&#x5F62;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D;&#x905E;&#x8FF4;&#x7684;&#x7D42;&#x6B62;&#x689D;&#x4EF6;&#x662F;&#x627E;&#x5230;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA; S &#x7684;&#x7D44;&#x5408;&#x6216;&#x8005;&#x9663;&#x5217; A &#x4E2D;&#x7684;&#x6578;&#x5B57;&#x4E0D;&#x8DB3;&#x4E09;&#x500B;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; findCombination(vector&amp;lt;int&amp;gt;&amp;amp; A, int S, int startIndex, int count) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; result;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (count == 3) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (S == 0) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; result.push_back({});&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return result;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int n = A.size();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; for (int i = startIndex; i &amp;lt; n; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (i &amp;gt; startIndex &amp;amp;&amp;amp; A[i] == A[i - 1]) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; continue;&amp;nbsp; // &#x907F;&#x514D;&#x91CD;&#x8907;&#x7684;&#x7D44;&#x5408;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (A[i] &amp;gt; S) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; break;&amp;nbsp; // A &#x5DF2;&#x6392;&#x5E8F;&#xFF0C;&#x5F8C;&#x7E8C;&#x6578;&#x5B57;&#x7686;&#x5927;&#x65BC; S&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x6709;&#x7D44;&#x5408;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; int num = A[i];&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; subCombinations = findCombination(A, S - num, i + 1, count + 1);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (auto&amp;amp; combination : subCombinations) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; combination.insert(combination.begin(), num);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; result.push_back(combination);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return result;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;int&amp;gt; A = {1, 2, 3, 4, 5, 6, 7, 8, 9};&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int S = 15;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; combinations = findCombination(A, S, 0, 0);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (combinations.empty()) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;No combination found.&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Combinations found:&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (const auto&amp;amp; combination : combinations) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; combination[0] &amp;lt;&amp;lt; &amp;quot; + &amp;quot; &amp;lt;&amp;lt; combination[1] &amp;lt;&amp;lt; &amp;quot; + &amp;quot; &amp;lt;&amp;lt; combination[2] &amp;lt;&amp;lt; &amp;quot; = &amp;quot; &amp;lt;&amp;lt; S &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>38</hit>
+  <lang>1</lang>
+</data>

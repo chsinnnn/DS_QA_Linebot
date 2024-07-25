@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:36",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305432",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-10-11 13:59:40",
+        "poster": "11127254",
+        "realname": "陳岳崇",
+        "email": "yoyo930311yoyo@gmail.com",
+        "homepage": null,
+        "subject": "113. 將此後序式postfix轉中序式infix，並詳述步驟。* a b + c * d e + f * + w z + *",
+        "content": "<p>題目 : 將後序式 a b + c * d e + f * + w z + * ，轉換為中序式 infix。</p>\r\n\r\n<p>後序式 postfix ( 左 -&gt; 右 -&gt;&nbsp;中&nbsp;)&nbsp;</p>\r\n\r\n<p>中序式 infix ( 左 -&gt;&nbsp;中&nbsp;-&gt; 右 )</p>\r\n\r\n<p><br />\r\n我會先將後序式寫成樹狀圖(如下圖)，再對照此圖寫出中序式</p>\r\n\r\n<p>=&gt; ( ( a + b ) * c + ( d + e ) * f ) * (w + z )</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127254/images/%E5%BE%8C%E5%BA%8F%E8%BD%89%E4%B8%AD%E5%BA%8F.jpg\" style=\"height:623px; width:511px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

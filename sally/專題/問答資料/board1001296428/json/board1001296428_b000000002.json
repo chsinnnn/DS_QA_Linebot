@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:25",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296428",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-12-24 22:35:24",
+        "poster": "11127110",
+        "realname": "許至昀",
+        "email": "alberthsu919@gmail.com",
+        "homepage": null,
+        "subject": "225",
+        "content": "<p><span style=\"font-family:新細明體,serif\">已排序資料如何建立一棵平衡的二元搜尋樹？</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">已排序的資料，可以利用中序走訪建立平衡樹。將已排序資料最中間那筆資料作為樹根，並對左子樹與右子樹也取最中間那筆資料作為樹根，以此方式遞迴建立二元搜尋樹。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">假設資料為［</span>1, 2, 3, 4, 5, 6, 7<span style=\"font-family:新細明體,serif\">］</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">取</span>4<span style=\"font-family:新細明體,serif\">為樹根，再取</span>2<span style=\"font-family:新細明體,serif\">為左子樹樹根，</span>6<span style=\"font-family:新細明體,serif\">為右子樹樹根，可建立平衡之二元樹。</span></p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;&nbsp;4</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;/ \\</p>\r\n\r\n<p>&nbsp; &nbsp;2&nbsp; &nbsp; &nbsp;6</p>\r\n\r\n<p>&nbsp;/ \\&nbsp; &nbsp; &nbsp;/ \\</p>\r\n\r\n<p>1&nbsp; 3&nbsp; &nbsp;5&nbsp; 7</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

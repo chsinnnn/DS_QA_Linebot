@@ -1,0 +1,27 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 當沒有再進行任何交換時 代表已經交換完成了 就沒有必要繼續進行。\n\n// 已經宣告過的:\nvector&lt;string&gt; data;\nvoid compare(int index1, int index2);\n\nvoid bubbleSort() {\n            bool flag = false;\n            for(int i = 0 ; i &lt; data.size() - 1; i++) {\n                for(int j = 0 ; j &lt; data.size()-i-1; j++) {\n                    if(compare(data[j],data[j+1])) {\n                        swap(j,j+1);\n                        flag = true;\n                    }\n                }\n                if(!flag) return;\n                else flag = false;\n            }\n            \n        }\n\n\n\nvoid swap(int a, int  b){\n            string temp = data[a];\n            data[a] = data[b];\n            data[b] = temp;\n        }\n&lt;參考資料 :　https://hackmd.io/@Aquamay/HyyCFRj9d　＞",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: *穩定排序法(Stable Sorting)：具相同鍵值(key-value)的資料，經排序後依然保持排序前的順序。\n\n為何選擇排序(selection sort)是非穩定(unstable)的排序方法：\n\n 如果要將以下資料用selection sort排序\n\n(1,2 代表班級；a,b,c代表學生姓名的英文字母；)\n\n排序前為 {2a,2b,1c} (key-value為姓名字母)\n\n其後若依班級代號(key-value為數字)排序結果為：\n\n{1c,2b,2a}\n\n排序結果造成具有兩個相同(數字key-value)的2a、2b\n\n跟原來排序前的順序不同，因此為不穩定排序法。\n\n*參考資料：\n\nhttps://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/",
+        "output": "Good!\n\nFurther reading: Timsort"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include&lt;iostream&gt;\n\nusing namespace std;\n\n#define MAX 10\n\nvoid BubbleSort(int array[MAX], int n) {\n\n    for(int p=1 ; p&lt;n ; ++p) {\n\n        for(int index=0 ; index&lt; (n-p) ; index++) {\n\n            if(array[index] &gt; array[index+1]) {\n\n                swap(array[index], array[index+1]);\n\n            }\n\n        }\n\n    }\n\n}\n\nvoid swap(int &amp;a, int &amp;b) {\n\n    int temp = a;\n\n    a = b;\n\n    b = temp;\n\n}\n\n影響氣泡排序是否穩定stable的關鍵指令:  if(array[index] &gt; array[index+1])\n\n如果將&gt;換成&gt;=，就可能造成同樣大小的資料之先後順序不同",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: ",
+        "output": "Exactly!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n共4位同學參與問答。",
+        "output": ""
+    }
+]

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000003000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000003000000001</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 15:26:47</pt>
+  <poster>11813</poster>
+  <realname>&#x5433;&#x5B9C;&#x9D3B;  </realname>
+  <email>yhwu@cycu.edu.tw</email>
+  <homepage>https://www.researchgate.net/profile/Yi-Hung-Wu-2  </homepage>
+  <subject>Re: &#x6436;&#x7B54;115  </subject>
+  <content>&lt;p&gt;&lt;span style="color:#b22222"&gt;&amp;quot;&#x89E3;&#x53C3;&#x8003;&#x6307;&#x6A19;&amp;quot; &#x662F;&#x4EC0;&#x9EBC;&#xFF1F;&#x8ACB;&#x9644;&#x4E0A;&#x539F;&#x59CB;&#x7684;&#x82F1;&#x6587;&#x5C08;&#x6709;&#x540D;&#x8A5E;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void incrementByOne(int* num)&amp;nbsp; // num&#x662F;&#x50B3;&#x905E;&#x6307;&#x6A19;&#x7684;&#x53C3;&#x6578;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;incrementByOne(&amp;amp;number);&amp;nbsp; &amp;nbsp;// &amp;amp;&#x7A31;&#x70BA;&#x53D6;&#x5740;&#x904B;&#x7B97;&#x5B50;&#xFF0C;&#x6307;&#x5411;number&#x8B8A;&#x6578;&#x4F4D;&#x5740;&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>1</hit>
+  <lang>1</lang>
+</data>

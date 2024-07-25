@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2022-09-23 14:22:30",
+        "poster": "11027233",
+        "realname": "曾品元",
+        "email": "daniel29348679@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>#include &lt;bits/stdc++.h&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>int main()<br />\r\n{<br />\r\n&nbsp; &nbsp; int arr[]={100,2,3,4};<br />\r\n&nbsp; &nbsp; for(auto i=arr;i&lt;arr+(sizeof(arr)/sizeof(int));i++)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout&lt;&lt;*i&lt;&lt;&quot; &quot;;<br />\r\n}</p>\r\n\r\n<p>另一種寫法</p>\r\n\r\n<p>#include &lt;bits/stdc++.h&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p><br />\r\nint main()<br />\r\n{<br />\r\n&nbsp; &nbsp; array&lt;int,4&gt; arr({100,2,3,4});<br />\r\n&nbsp; &nbsp; for(auto i:arr)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout&lt;&lt;i&lt;&lt;&quot; &quot;;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "84",
+        "lang": "1"
+    }
+}

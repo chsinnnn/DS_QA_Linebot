@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:53:45" type="board" filename="list.xml" id="1001296419">
+  <board_id>1001296419</board_id>
+  <bname>a:5:{s:4:"Big5";s:35:"&#x9650;&#x6642;&#x6436;&#x7B54; 111-115(20240719_copy)";s:6:"GB2312";s:25:"QA 111-115(20240719_copy)";s:2:"en";s:25:"QA 111-115(20240719_copy)";s:6:"EUC-JP";s:15:"(20240719_copy)";s:11:"user_define";s:15:"(20240719_copy)";}</bname>
+  <manager>11813</manager>
+  <title>&#x64C7;&#x4E00;&#x56DE;&#x7B54;&#xFF0C;&#x9EDE;&#x8B9A;15&#x6B21;&#x6216;3&#x4EBA;&#x7559;&#x597D;&#x8A55;&#x7D66;&#x4E88;QA&#x8A55;&#x5206;&#xFF01;&#xD;
+&#x6A19;&#x984C;&#x8A3B;&#x660E;&#x984C;&#x865F;&#xFF0C;&#x5167;&#x5BB9;&#x4E0D;&#x5B9C;&#x5C07;&#x7121;&#x9810;&#x8B66;&#x522A;&#x6587;&#xFF01;&#xD;
+111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002;&#xD;
+112. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5169;&#x500B;&#x985E;&#x5225;&#x9593;&#x7684;&#x7E7C;&#x627F;inheritance&#x3002;&#xD;
+113. &#x5C07;&#x6B64;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x4E2D;&#x5E8F;&#x5F0F;infix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002;*&#xD;
+a b + c * d e + f * + w z + *&#xD;
+114. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x540C;&#x985E;&#x5225;&#x5169;&#x500B;&#x65B9;&#x6CD5;&#x5982;&#x4F55;&#x5BE6;&#x73FE;&#x591A;&#x8F09;overloading&#x3002;&#xD;
+115. &#x50B3;&#x5165;&#x9663;&#x5217;A&#x548C;&#x6574;&#x6578;S&#xFF0C;&#x5BEB;&#x51FA;C++&#x51FD;&#x6578;&#x5F9E;A&#x627E;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA;S&#x7684;&#x7D44;&#x5408;&#x3002;</title>
+  <owner_id>10139144</owner_id>
+  <open_time>2023-09-27 00:00:00</open_time>
+  <close_time>2023-10-11 23:59:00</close_time>
+  <share_time>2023-10-18 12:00:00</share_time>
+  <switch></switch>
+  <with_attach>no</with_attach>
+  <vpost>0</vpost>
+  <default_order>pt</default_order>
+  <post_times>0</post_times>
+  <extras></extras>
+  <poster>student,assistant,teacher</poster>
+  <after_finish></after_finish>
+  <fb_comment>N</fb_comment>
+  <board>
+    <node id="000000001" type="F" data="b000000001.xml"/>
+    <node id="000000001000000001" type="F" data="b000000001000000001.xml"/>
+    <node id="000000001000000002" type="F" data="b000000001000000002.xml"/>
+    <node id="000000002" type="F" data="b000000002.xml"/>
+    <node id="000000002000000001" type="F" data="b000000002000000001.xml"/>
+    <node id="000000002000000002" type="F" data="b000000002000000002.xml"/>
+    <node id="000000003" type="F" data="b000000003.xml"/>
+    <node id="000000003000000001" type="F" data="b000000003000000001.xml"/>
+    <node id="000000003000000002" type="F" data="b000000003000000002.xml"/>
+    <node id="000000004" type="F" data="b000000004.xml"/>
+    <node id="000000004000000001" type="F" data="b000000004000000001.xml"/>
+    <node id="000000005" type="F" data="b000000005.xml"/>
+    <node id="000000005000000001" type="F" data="b000000005000000001.xml"/>
+    <node id="000000005000000002" type="F" data="b000000005000000002.xml"/>
+    <node id="000000006" type="F" data="b000000006.xml"/>
+    <node id="000000006000000001" type="F" data="b000000006000000001.xml"/>
+    <node id="000000006000000002" type="F" data="b000000006000000002.xml"/>
+    <node id="000000007" type="F" data="b000000007.xml"/>
+    <node id="000000007000000001" type="F" data="b000000007000000001.xml"/>
+    <node id="000000007000000002" type="F" data="b000000007000000002.xml"/>
+    <node id="000000008" type="F" data="b000000008.xml"/>
+    <node id="000000008000000001" type="F" data="b000000008000000001.xml"/>
+    <node id="000000008000000002" type="F" data="b000000008000000002.xml"/>
+    <node id="000000009" type="F" data="b000000009.xml"/>
+    <node id="000000009000000001" type="F" data="b000000009000000001.xml"/>
+    <node id="000000010" type="F" data="b000000010.xml"/>
+    <node id="000000010000000001" type="F" data="b000000010000000001.xml"/>
+    <node id="000000011" type="F" data="b000000011.xml"/>
+  </board>
+  <quint/>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-12 13:04:19",
+        "poster": "06005645",
+        "realname": "林品瑄",
+        "email": "hank61061007@gmail.com",
+        "homepage": null,
+        "subject": "問答119",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>struct Node {</p>\r\n\r\n<p>int data;</p>\r\n\r\n<p>Node* next;</p>\r\n\r\n<p>};</p>\r\n\r\n<p>void deleteNode(Node*&amp; head, int position) {</p>\r\n\r\n<p>if (head == nullptr)</p>\r\n\r\n<p>return;</p>\r\n\r\n<p>Node* current = head;</p>\r\n\r\n<p>Node* previous = nullptr;</p>\r\n\r\n<p>int count = 1; // 找到要刪除節點的位置</p>\r\n\r\n<p>while (current != nullptr &amp;&amp; count &lt; position) {</p>\r\n\r\n<p>previous = current; current = current-&gt;next;</p>\r\n\r\n<p>count++;</p>\r\n\r\n<p>} // 如果 position 超過了節點的數量，則不執行刪除</p>\r\n\r\n<p>if (current == nullptr)</p>\r\n\r\n<p>return; // 刪除第3個節點</p>\r\n\r\n<p>if (previous == nullptr) {</p>\r\n\r\n<p>head = current-&gt;next;</p>\r\n\r\n<p>delete current;</p>\r\n\r\n<p>} else {</p>\r\n\r\n<p>previous-&gt;next = current-&gt;next;</p>\r\n\r\n<p>delete current;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>}</p>\r\n\r\n<p>void printList(Node* node) {</p>\r\n\r\n<p>while (node != nullptr) {</p>\r\n\r\n<p>std::cout &lt;&lt; node-&gt;data &lt;&lt; &quot; &quot;;</p>\r\n\r\n<p>node = node-&gt;next;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>std::cout &lt;&lt; std::endl;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>// 建立鏈結串列: 1-&gt;2-&gt;3-&gt;4-&gt;5</p>\r\n\r\n<p>Node* head = new Node();</p>\r\n\r\n<p>Node* second = new Node();</p>\r\n\r\n<p>Node* third = new Node();</p>\r\n\r\n<p>Node* fourth = new Node();</p>\r\n\r\n<p>Node* fifth = new Node();</p>\r\n\r\n<p>head-&gt;data = 1;</p>\r\n\r\n<p>head-&gt;next = second;</p>\r\n\r\n<p>second-&gt;data = 2;</p>\r\n\r\n<p>second-&gt;next = third;</p>\r\n\r\n<p>third-&gt;data = 3;</p>\r\n\r\n<p>third-&gt;next = fourth;</p>\r\n\r\n<p>fourth-&gt;data = 4;</p>\r\n\r\n<p>fourth-&gt;next = fifth;</p>\r\n\r\n<p>fifth-&gt;data = 5;</p>\r\n\r\n<p>fifth-&gt;next = nullptr;</p>\r\n\r\n<p>std::cout &lt;&lt; &quot;原始鏈結串列: &quot;;</p>\r\n\r\n<p>printList(head); // 刪除第3個節點</p>\r\n\r\n<p>int position = 3;</p>\r\n\r\n<p>deleteNode(head, position);</p>\r\n\r\n<p>std::cout &lt;&lt; &quot;刪除第&quot; &lt;&lt; position &lt;&lt; &quot;個節點後的鏈結串列: &quot;;</p>\r\n\r\n<p>printList(head); // 釋放鏈結串列的記憶體</p>\r\n\r\n<p>Node* current = head;</p>\r\n\r\n<p>while (current != nullptr) {</p>\r\n\r\n<p>Node* next = current-&gt;next;</p>\r\n\r\n<p>delete current;</p>\r\n\r\n<p>current = next;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>return 0;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>我使用了一個指標 previous 來追蹤前一個節點，並在找到要刪除的節點時進行刪除操作。如果要刪除的節點是頭節點，我們直接更新 head 指標。否則，我們更新前一個節點的 next 指標來跳過要刪除的節點。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "26",
+        "lang": "1"
+    }
+}

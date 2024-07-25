@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:44" type="post" filename="b000000011.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278685</board_id>
+  <node>000000011</node>
+  <site>1000110001</site>
+  <pt>2023-07-22 02:51:51</pt>
+  <poster>06005732</poster>
+  <realname>&#x738B;&#x6631;&#x9032;  </realname>
+  <email>louis21501@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;216 </subject>
+  <content>&lt;p&gt;Shell Sort &#x5B83;&#x901A;&#x904E;&#x5C07;&#x539F;&#x59CB;&#x6578;&#x5217;&#x5206;&#x7D44;&#x9032;&#x884C;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF0C;&#x4F86;&#x63D0;&#x9AD8;&#x6392;&#x5E8F;&#x6548;&#x7387;(&#x6700;&#x5F8C;&#x70BA;1)&#x3002;&#x4EE5;&#x4E0B;&#x8209;&#x4F8B; A[]={5,3,0a,0b} (&#x7528;a,b&#x5340;&#x5206;&#x5169;&#x500B;0) &#x9032;&#x884C;&#x5BE6;&#x4F5C;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E00;&#x6B21;: (4/2=2)&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+1. 0a,3,50b&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2. 0a,0b,5,3&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&#x7B2C;&#x4E8C;&#x6B21;:(2/2=1)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1.0a,0b,3,5&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&#x4F46;&#x82E5;&#x662F;&#x5C07;A[]={5,3,0a,0b}&#x6253;&#x4E82;&#x6210;A[]={5,3,0b,0a} &#x7D50;&#x679C;&#x6703;&#x8B8A;&#x6210;0b,0a,3,5 &#xFF0C;&#x6240;&#x4EE5;&#x7531;&#x6B64;&#x53EF;&#x8B49;sellsort&#x4E0D;&#x662F;&#x4E00;&#x500B;&#x7A69;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x6CD5;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>19</hit>
+  <lang>1</lang>
+</data>

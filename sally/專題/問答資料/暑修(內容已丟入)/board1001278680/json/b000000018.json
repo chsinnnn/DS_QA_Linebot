@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-15 20:26:19",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答122",
+        "content": "<p>122. + * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>把式子推回中序-&gt;會變成2*4+6<span style=\"background-color:#ff0000\">(*)</span>7-5</p>\r\n\r\n<p>從中會發現多出一個*號無法轉換排序，所以此式並非是前序式</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

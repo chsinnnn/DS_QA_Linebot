@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000027.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000027",
+        "site": "1000110001",
+        "pt": "2023-07-24 23:08:26",
+        "poster": "06005914",
+        "realname": "陳彥中",
+        "email": "jackson89911@gmail.com",
+        "homepage": null,
+        "subject": "搶答219",
+        "content": "<p>219. 舉例區別完全full、完整complete及平衡balanced二元樹的差異。</p>\r\n\r\n<p>A:</p>\r\n\r\n<p>完全full二元樹:一個完全二元樹是指在樹的每一層都被填滿，除了最後一層可以不用，但最後一層上的節點必須靠左排列，不能留空。</p>\r\n\r\n<p>例如:&nbsp;</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp;1<br />\r\n&nbsp; &nbsp; / &nbsp; \\<br />\r\n&nbsp; &nbsp;2 &nbsp; &nbsp; 3<br />\r\n&nbsp; / \\ &nbsp; /<br />\r\n&nbsp;4 &nbsp; 5 6</p>\r\n\r\n<p>2.完整complete二元樹:一個完整二元樹是指每個節點都有0或2個子節點，不能出現1個子節點的。</p>\r\n\r\n<p>例如:</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp; / &nbsp; \\<br />\r\n&nbsp; &nbsp;2 &nbsp; &nbsp; 3<br />\r\n&nbsp; / \\ &nbsp; / \\<br />\r\n&nbsp;4 &nbsp; 5 6 &nbsp; 7<br />\r\n<br />\r\n3.平衡balanced二元樹:一個平衡二元樹是指在樹中的每個節點的兩個子節點的高度差最多為1。此樹可以確保樹的高度較小，提高查找、插入和刪除操作的效率。</p>\r\n\r\n<p>例如:</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;4<br />\r\n&nbsp; &nbsp; &nbsp;/ &nbsp; \\<br />\r\n&nbsp; &nbsp; 2 &nbsp; &nbsp; 6<br />\r\n&nbsp; &nbsp;/ \\ &nbsp; / \\<br />\r\n&nbsp; 1 &nbsp; 3 5 &nbsp; 7<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

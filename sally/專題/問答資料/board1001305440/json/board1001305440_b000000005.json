@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:38",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305440",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2024-01-03 02:30:18",
+        "poster": "11120427",
+        "realname": "蔡絜茵",
+        "email": "anna0809123@gmail.com",
+        "homepage": null,
+        "subject": "226. 舉例說明如何為二元搜尋樹刪除節點。",
+        "content": "<ul>\r\n\t<li>\r\n\t<p><strong>節點是葉子節點（沒有子節點）</strong></p>\r\n\t直接刪除該葉子節點。</li>\r\n\t<li><strong>節點有一個子節點</strong>&nbsp;</li>\r\n</ul>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;將該節點的父節點指向該節點的子節點，刪除該節點。</p>\r\n\r\n<ul>\r\n\t<li><strong>節點有兩個子節點</strong></li>\r\n</ul>\r\n\r\n<p>1.找到該節點的右子樹的最小值（或左子樹的最大值），即右子樹一直往左走（或左子樹一直往右走）找到的最左（或最右）的葉子節點。</p>\r\n\r\n<p>2.將該最小值（或最大值）複製到欲刪除的節點。</p>\r\n\r\n<p>3.現在有兩個擁有相同值的節點，但是右子樹的最小值（或左子樹的最大值）節點一定是葉子節點，所以可以直接刪除該葉子節點，將這個節點刪除。</p>\r\n\r\n<p>以下假設有該二元樹，現在要刪除30</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;50<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp;\\<br />\r\n&nbsp; &nbsp; &nbsp; 30&nbsp; &nbsp; 70<br />\r\n&nbsp; &nbsp; &nbsp; / \\&nbsp; &nbsp; &nbsp;/ \\<br />\r\n&nbsp; &nbsp; 20 40 60 80</p>\r\n\r\n<ol>\r\n\t<li>找到右子樹的最小值，也就是 40 的左子樹中的最左葉子節點，即 40。</li>\r\n\t<li>複製 40 的值到欲刪除的節點 30。</li>\r\n\t<li>刪除右子樹的最小值節點，即刪除 40。</li>\r\n</ol>\r\n\r\n<p>最後會變成這樣</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 50<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp;\\<br />\r\n&nbsp; &nbsp; &nbsp; 40 &nbsp; 70<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ \\<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 60 &nbsp;80<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "7",
+        "lang": "1"
+    }
+}

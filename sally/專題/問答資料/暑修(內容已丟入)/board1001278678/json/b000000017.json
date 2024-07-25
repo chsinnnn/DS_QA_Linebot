@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-07-11 15:22:56",
+        "poster": "10827146",
+        "realname": "李姵霓",
+        "email": "p96178@gmail.com",
+        "homepage": null,
+        "subject": "搶答114",
+        "content": "<p>C++的多載 Overloading 可以透過調整 相同名稱&nbsp;Funtion 的參數數量或是參數型別來實現。<br />\r\n<br />\r\nCODE :</p>\r\n\r\n<p># include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>class Calculate {</p>\r\n\r\n<p>public:</p>\r\n\r\n<p>&nbsp; &nbsp; // 兩個型別為 int 參數加總</p>\r\n\r\n<p>&nbsp; &nbsp; int GetSum( int a, int b ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return a + b;</p>\r\n\r\n<p>&nbsp; &nbsp; } // GetSum()</p>\r\n\r\n<p>&nbsp; &nbsp; // 三個型別為 int 參數加總</p>\r\n\r\n<p>&nbsp; &nbsp; int GetSum( int a, int b, int c ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return a + b + c;</p>\r\n\r\n<p>&nbsp; &nbsp; } // GetSum()</p>\r\n\r\n<p>&nbsp; &nbsp; // 兩個型別為 float 參數加總</p>\r\n\r\n<p>&nbsp; &nbsp; float GetSum( float a, float b ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return a + b;</p>\r\n\r\n<p>&nbsp; &nbsp; } // GetSum()</p>\r\n\r\n<p>} ; // class Calculate</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; &nbsp; int num1 = 10;</p>\r\n\r\n<p>&nbsp; &nbsp; int num2 = 20;</p>\r\n\r\n<p>&nbsp; &nbsp; int num3 = 30;</p>\r\n\r\n<p>&nbsp; &nbsp; float float1 = 2.5;</p>\r\n\r\n<p>&nbsp; &nbsp; float float2 = 10.5;</p>\r\n\r\n<p>&nbsp; &nbsp; Calculate cal;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; cal.GetSum( num1, num2 ) &lt;&lt; endl; &nbsp; &nbsp; &nbsp; // 輸出30</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; cal.GetSum( num1, num2, num3 ) &lt;&lt; endl; // 輸出60</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; cal.GetSum( float1, float2 ) &lt;&lt; endl; &nbsp; // 輸出13</p>\r\n\r\n<p>&nbsp; &nbsp; system(&quot;pause&quot;);</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;</p>\r\n\r\n<p>} // main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

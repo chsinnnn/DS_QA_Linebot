@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2022-10-31 22:05:46",
+        "poster": "11027161",
+        "realname": "麥加楷",
+        "email": "a0909661385@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p><span style=\"font-family:新細明體,serif\">不是</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">我們可以簡單運算後得知</span> <span style=\"font-family:新細明體,serif\">先從右邊往左邊找連續兩個運算元和一個運算子</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">得到</span><span style=\"font-family:Calibri Light,sans-serif\">- 7 5 </span></p>\r\n\r\n<p><span style=\"font-family:Calibri Light,sans-serif\">&nbsp;- 7 5</span><span style=\"font-family:新細明體,serif\">做運算後&nbsp;&nbsp;</span><span style=\"font-family:Calibri Light,sans-serif\">7 - 5=2 </span><span style=\"font-family:新細明體,serif\">原式變</span><span style=\"font-family:Calibri Light,sans-serif\">+ * 2 4 6 * 2 </span><span style=\"font-family:新細明體,serif\">這裡就可以得知不是</span> <span style=\"font-family:新細明體,serif\">因為當我們想要繼續做運算時</span> <span style=\"font-family:新細明體,serif\">最右邊的</span><span style=\"font-family:Calibri Light,sans-serif\">2</span><span style=\"font-family:新細明體,serif\">將無法找到另一個運算元與之配對形成前序式的表法</span> <span style=\"font-family:新細明體,serif\">運算子</span> <span style=\"font-family:新細明體,serif\">運算元</span> <span style=\"font-family:新細明體,serif\">運算元</span> <span style=\"font-family:新細明體,serif\">所以此式不是前序式</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "28",
+        "lang": "1"
+    }
+}

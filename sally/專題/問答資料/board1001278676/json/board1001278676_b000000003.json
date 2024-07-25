@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-07-03 21:11:00",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答104",
+        "content": "<p>104. 什麼情況下適合使用遞迴？為什麼？<br />\r\n一個問題如果可以拆解成較小但是性質和原本問題完全一樣的問題的時候， 就可以用遞迴函式。<br />\r\n可以把複雜的問題分解成單純的子問題，簡單又有效率。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

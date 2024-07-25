@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:30",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296424",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-11-28 11:25:43",
+        "poster": "11127144",
+        "realname": "馬于朝",
+        "email": "marumax0922@gmail.com",
+        "homepage": null,
+        "subject": "206",
+        "content": "<p>我們可以在bubbleSort的loop裡面用一個布林值(變數&#39;swapped&#39;)來追蹤在每一輪的掃描中是否有進行元素的交換。如果一輪掃描結束後swapped仍然是False，表示數列已經排序完成，就可以提前結束整個排序過程。這種就可以避免之後排序已完成卻重複掃描的情況。</p>\r\n\r\n<p>void bubbleSort(int arr[], int n) {<br />\r\n&nbsp; &nbsp; for (int i = 0; i &lt; n-1; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; bool swapped = false; &nbsp; // 標記是否發生交換或重置狀態<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; n-i-1; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &gt; arr[j+1]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(arr[j], arr[j+1]);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swapped = true; &nbsp; // 標記發生交換<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (!swapped) &nbsp; // 如果沒有發生交換，則提早結束排序<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

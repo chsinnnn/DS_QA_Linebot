@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:00:16" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174277</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-11-15 03:28:34</pt>
+  <poster>11027209</poster>
+  <realname>&#x5DEB;&#x5E74;&#x5DE8;  </realname>
+  <email>yy911123@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>201. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;waiting time&#x3002; </subject>
+  <content>&lt;p&gt;&#x7528;&#x4E0A;&#x8AB2;&#x8B1B;&#x7FA9;&#x7684;&#x5167;&#x5BB9;&#x7576;&#x4F5C;&#x4F8B;&#x5B50;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E00;&#x9805;&#x7528;Arrival + duration&#x7B97;&#x51FA;Departure &#x7531;&#x65BC;&#x662F;&#x7B2C;&#x4E00;&#x9805;&#x6240;&#x4EE5;waiting time = 0(&#x4E0D;&#x7528;&#x7B49;&#x5F85;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5F8C;&#x9762;&#x958B;&#x59CB;&#x7528;Departure - Arrival &#x7B97;&#x51FA;&#x7684;&#x5DEE;&#x503C;&#x5C31;&#x662F;waiting time&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7576;Departure - Arrival &#x7684;&#x503C; &amp;gt;=0 &#x6642;&#xFF0C;&#x5F8C;&#x7E8C;&#x7684;Departure &#x5C31;&#x7B49;&#x65BC;&amp;nbsp;Departure + duration&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7279;&#x4F8B;&#x5C31;&#x662F;&#x7576;waiting time &amp;lt; 0 &#x7684;&#x6642;&#x5019;&#xFF0C;&#x8981;&#x628A;waiting&#x7576;&#x4F5C;0&#x4F86;&#x770B;&#x5F85;&#xFF0C;&#x56E0;&#x70BA;&#x662F;&#x5F9E;Arrival&#x7684;&#x6642;&#x5019;&#x624D;&#x958B;&#x59CB;&#x52D5;&#x4F5C;&#xFF0C;&#x4E0D;&#x6703;&#x63D0;&#x524D;&#x77E5;&#x9053;&#x904B;&#x884C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5C31;&#x50CF;&#x4F8B;&#x5B50;&#x7684;&#x7B2C;4&#x9805;Departure - Arrival &#x662F;24 - 30 = -6 &#x9019;&#x6642;&#x5C31;&#x8981;&#x7576;&#x4F5C;0&#x4F86;&#x770B;&#x5F85;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x540C;&#x6642;Departure&#x7684;&#x8A08;&#x7B97;&#x56DE;&#x5230;&#x5F9E;Departure + duration &#x4E00;&#x958B;&#x59CB;&#x7684; Arrival + duration&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6700;&#x5F8C;&#x628A;&#x7B97;&#x51FA;&#x7684;waiting time&#x7684;&#x5168;&#x90E8;&#x52A0;&#x8D77;&#x4F86;&#x505A;&#x51FA;&#x7E3D;&#x548C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7136;&#x5F8C;&amp;nbsp; &#x7E3D;&#x548C; / waiting time&#x7684;&#x6578;&#x91CF; = &#x5C31;&#x662F;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;Average Waiting Time(AWT)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8B1B;&#x7FA9;&#x7684;&#x9019;&#x984C;&#x5C31;&#x662F; &#x7E3D;&#x548C;&#x70BA;28 , waiting time = 7 &#x6545; 28/7 = 4 (AWT)&#x5E73;&#x5747;&#x7B49;&#x5F85;&#x6642;&#x9593;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027209/images/IMG_1937.jpg" style="height:375px; width:500px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>46</hit>
+  <lang>1</lang>
+</data>

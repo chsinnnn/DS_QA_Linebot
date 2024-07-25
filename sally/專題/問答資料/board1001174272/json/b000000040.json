@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000040.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000040",
+        "site": "1000110001",
+        "pt": "2022-10-04 23:40:53",
+        "poster": "11027209",
+        "realname": "巫年巨",
+        "email": "yy911123@gmail.com",
+        "homepage": null,
+        "subject": "107. 作業二採用什麼資料結構儲存讀入資料，須說明原因。*",
+        "content": "<p>這次的作業2是用vector來儲存大量的資料，vector算資料結構的陣列的改造版，也就是所謂的動態陣列，它的好處是不需設定大小，但缺點也是隨之而來的因為沒有像靜態先分配好記憶體所以function(其他funciton可用)結束時也不會被自動釋放，需要手動去才行。<br />\r\n雖然他有push back 和pop 這兩個用起來像stack(堆)的觀念先進後出的概念。</p>\r\n\r\n<p>但我覺得這次的作業的來講是用我覺得vector比較算是佇列(quene)先進先出的概念，因為我們是把資料全部存在vector後，再到output那邊從我們第一個存的資料一個一個得下去到最後一個。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

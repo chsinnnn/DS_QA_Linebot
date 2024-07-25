@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-23 14:27:40",
+        "poster": "06005771",
+        "realname": "莊明鴻",
+        "email": "mattsonc204@gmail.com",
+        "homepage": null,
+        "subject": "搶答221",
+        "content": "<p>中序遍歷二元搜尋樹(BST)可以得到一個穩定的排序結果，這是因為BST的特性保證了中序遍歷的結果是按照節點的值大小順序遞增排序的。</p>\r\n\r\n<p>BST是一種特殊的二元樹，對於每個節點，其左子樹中的所有節點的值都小於該節點的值，而其右子樹中的所有節點的值都大於該節點的值。這個特性確保了在中序遍歷時，所有左子樹中的節點會在根節點之前被訪問，而所有右子樹中的節點會在根節點之後被訪問。下列為示範例子：</p>\r\n\r\n<p>設有一個BST如下：</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/&nbsp; &nbsp; &nbsp; &nbsp;\\</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/&nbsp; &nbsp; \\&nbsp; &nbsp; &nbsp;/&nbsp; &nbsp; \\</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;4&nbsp; &nbsp;6&nbsp; &nbsp; &nbsp;8</p>\r\n\r\n<p>中序走訪順序：2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 -&gt; 8</p>\r\n\r\n<p>可以看得出中序遍歷得到的結果是按照<strong>節點的值大小順序遞增</strong>排序的，這證明了中序遍歷BST的結果是一個穩定的排序序列。</p>\r\n\r\n<p>在實際應用中，中序遍歷BST的穩定排序特性是非常有用的，如我們可以使用中序遍歷來獲得BST中的有序序列，這樣可以方便地進行搜索、範圍查詢、排名等操作。同時，中序遍歷也可以用於對BST進行中序插入，使得插入的元素保持有序。這些特性使得BST在很多情況下都是一種非常實用的數據結構。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

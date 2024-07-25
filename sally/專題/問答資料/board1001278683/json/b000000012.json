@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-22 15:55:06",
+        "poster": "06005760",
+        "realname": "林奕宏",
+        "email": "guai900726@gmail.com",
+        "homepage": null,
+        "subject": "搶答206",
+        "content": "<p>void bubbleSort(int arr[], int n) {</p>\r\n\r\n<p>for (int i = 0; i &lt; n - 1; i++) {</p>\r\n\r\n<p>bool swapped = false; // 用來標記在一輪遍歷中是否有交換發生</p>\r\n\r\n<p>// 在每輪遍歷中，將最大元素浮到數列末端</p>\r\n\r\n<p>for (int j = 0; j &lt; n - i - 1; j++) {</p>\r\n\r\n<p>if (arr[j] &gt; arr[j + 1]) { // 交換相鄰元素</p>\r\n\r\n<p>swap(arr[j], arr[j + 1]);</p>\r\n\r\n<p>swapped = true; // 有交換發生，標記為 true</p>\r\n\r\n<p>}</p>\r\n\r\n<p>} // 如果在一輪遍歷中沒有進行任何交換，表示數列已排序完成，提早結束排序</p>\r\n\r\n<p>if (!swapped) { break; }</p>\r\n\r\n<p>}</p>\r\n\r\n<p>}</p>\r\n\r\n<p>程式碼中的 swapped 變數用來標記在一輪遍歷中是否有交換發生，如果在一輪遍歷結束後，swapped 的值仍然為 false，則表示數列已經排序完成，這時會使用 break 跳出外層的迴圈，提早結束氣泡排序的執行。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

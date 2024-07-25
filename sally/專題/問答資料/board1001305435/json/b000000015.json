@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-10-28 17:24:34",
+        "poster": "11120406",
+        "realname": "謝宸恩",
+        "email": "allen24004828@gmail.com",
+        "homepage": null,
+        "subject": "126.+ * 2 4 6 * - 7 5是前序式嗎?為什麼?",
+        "content": "<p>+ * 2 4 6 * - 7 5不是前序式,前序式必須將運算子放在前方。</p>\r\n\r\n<p>例如: 2+5此中序式若轉為前序式應為</p>\r\n\r\n<p>+ 2 5</p>\r\n\r\n<p>上方的算式到了&nbsp;+ * 2 4 6 * 2 就卡住了</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000023000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000023000000001",
+        "site": "1000110001",
+        "pt": "2023-07-26 19:39:35",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 218. 為快速排序提出選擇基準pivot的方法，並舉例說明優點。",
+        "content": "<p><span style=\"color:#ff0000\">前文已有人搶答，甚至只是前文的一小部分？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

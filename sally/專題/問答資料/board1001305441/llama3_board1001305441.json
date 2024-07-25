@@ -1,0 +1,37 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: # include &lt;stdio.h&gt;\n\n struct Node {\n\n    int number ;\n\n    Node * left ;\n\n    Node * right ;\n\n};\n\ntypedef Node * NodePtr ;\n\nvoid Add( NodePtr &amp; head, int num ) {  // insert new node\n\n    if ( head == NULL ) {\n\n        head = new Node ;\n\n        head -&gt; left = NULL ;\n\n        head -&gt; right = NULL ;\n\n        head -&gt; number = num ;\n\n        return ;\n\n    }\n\n    else if ( num &lt; head -&gt; number ) {\n\n        Add( head -&gt; left, num ) ;\n\n    }\n\n    else if ( num &gt;= head -&gt; number ) { \n\n        Add( head -&gt; right, num ) ;\n\n    }\n\n    return ;\n\n}\n\nvoid Inorder( NodePtr head ) {  // print inorder of tree\n\n    if ( head == NULL ) {\n\n        return ;\n\n    }\n\n    Inorder( head -&gt; left ) ;\n\n    printf(  %d  , head -&gt; number ) ;\n\n    Inorder( head -&gt; right ) ;\n\n}\n\nint main( ) {\n\n    int num = 0, order = 0 ;\n\n    NodePtr head = NULL ;\n\n    do {\n\n        printf(  ******************\\n  ) ;\n\n        printf(  Order 0: quit\\n  ) ;\n\n        printf(  Order 1: insert\\n  ) ;\n\n        printf(  ******************\\n  ) ;\n\n        printf(  Input an order:   ) ;\n\n        scanf(  %d , &amp;order ) ;\n\n        if ( order == 0 ) break ;  // end\n\n        else if ( order == 1 ) {  // insert node\n\n            printf(  Input a number:   ) ;\n\n            scanf(  %d , &amp;num ) ;\n\n            Add( head, num ) ;  // insert\n\n            printf(  Inorder:   ) ;\n\n            Inorder( head ) ;  // check the tree\n\n        }\n\n        else {\n\n            printf(  Not the order!  ) ;\n\n        }\n\n        printf(  \\n\\n  ) ;\n\n    } while( order != 0 ) ;\n\n    return 0 ;\n\n}",
+        "output": "No comment?"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 在中序走訪二元搜尋樹的過程中，訪問和輸出節點的順序會是一個遞增或遞減序列，因為BST的特性就是左子樹所有節點的值都小於該節點的值，而右子樹所有節點的值都大於該節點的值。\n\n這種走訪本質上是穩定的排序，因為它不會改變具有相同值節點的相對順序。但二元搜索樹本身在插入具有相同值的節點時可能不是穩定的，這取決於具體的插入策略。如果BST的實現允許重複值並且在保持這些值的插入順序上是一致的，那麼中序走訪就會是穩定的。\n\n舉個例子：\n\n假設我們按照下列順序向BST插入一系列值：5, 3, 7, 3, 8 (這裏有兩個3)。\n\n如果在我們的BST實現中，對於相同的值，新插入的節點總是作為重複節點的右子節點，我們的樹可能長這樣：\n\n\n\n    5\n   / \\\n  3   7\n   \\   \\\n    3   8\n\n\n當進行中序走訪時，節點的訪問順序是：3, 3, 5, 7, 8。第一個插入的3在遍歷過程中會首先被訪問，接著是第二個插入的3，保存了其原始的插入順序，因此在這個情況下，中序走訪是穩定的。\n\n但是，如果BST實現中沒有針對相同節點值進行特定的操作，而是將新的節點隨意插入到左子樹或右子樹，那麼原始插入順序就可能不會得到保留，進而在中序走訪時不能保證是穩定的。\n\n所以，中序走訪二元搜尋樹在遵循特定的插入策略時是能夠保證穩定排序的，但這要看樹的插入和構建方式是否保持相同值節點的相對順序不變。",
+        "output": "如果BST實現中沒有針對相同節點值進行特定的操作，而是將新的節點隨意插入到左子樹或右子樹... \n\n論點沒錯，只是補充另一種觀點：也可以解釋為何新的同值資料要在右子樹下新增節點，而不是左子樹。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 在建立二元搜索樹時存儲具有相同搜索鍵的多個數據項，可以將二元搜尋樹的每個節點設計成允許存儲多個數據項的結構。這可以通過在每個節點上使用一個數組、鏈表或其他數據結構來實現。\n\n像是用這樣\n\ntypedef struct treeNode {\n\nstring schoolName ;\n\nstring studentName ;\n\ntreeNode *left ;\n\ntreeNode *right ;\n\nTreeNode() : left(NULL), right(NULL) {} \n\n} ;\n\n這樣就可以在二元樹中存入兩筆相同搜尋值的二筆資料了",
+        "output": "string schoolName ; // 搜尋值\n\nstring studentName ;  // 不知為何有學生姓名？\n\ntreeNode *left ; // 另一個節點\n\ntreeNode *right ; // 另一個節點\n\n看不出相同搜尋值的二筆資料要如何存入同一個節點？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 最有效的方式是以中位數作為根節點，然後遞迴地將左半部分和右半部分的資料分別作為左子樹和右子樹。\n\n以下為範例:\n\nTreeNode* rebuild(const vector&lt;int&gt;&amp; nodeList, int start, int end) {\n\n    // 如果起始索引大於結束索引，表示當前區間為空，返回空指針\n\n    if (start &gt; end) {\n\n        return nullptr;\n\n    }\n\n    int mid = (start + end) / 2; // 計算當前區間的中位數\n\n    TreeNode* node = new TreeNode(nodeList[mid]);  // 以中間節點值創建一個新的節點\n\n    node-&gt;left = rebuild(nodeList, start, mid - 1); // 遞迴處理左半部分，將左子樹設置為左半部分的重建結果\n\n    node-&gt;right = rebuild(nodeList, mid + 1, end); // 遞迴處理右半部分，將右子樹設置為右半部分的重建結果\n\n    return node;  // 返回樹的根節點\n\n}",
+        "output": "Excellent!\n\nFurther issue: what if a series of data with identical keys, wich lead to right skewed tree?"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 只要將樹的兩種排序方式紀錄下來即可還原樹原本的樣子。\n\n例如說存樹的前序式跟中序式\n\n前序: A B D E C\n\n中序: D B E A C\n\n \n\n可以從前序的第一個找到樹根（A），再從中序看到前序的下一個節點（B）在樹的左邊還是右邊。\n\n以上述例子來看的話就可以看到前序A的下一個是B，那他可能長：\n\n  A                      A\n\n /         或              \\\n\nB                            B\n\n \n\n但如果有中序的話就可以看到節點B在節點A的左邊，就可以推知B的位置是在A的左邊，像這樣：\n\n    A\n\n   /\n\nB\n\n \n\n以此類推就可以知道整棵樹的樣子長\n\n \n\n                      A\n\n                    /     \\\n\n                  B      C\n\n                /     \\\n             D       E",
+        "output": "誤解題意，題目是問 二元搜尋樹 。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: class BinaryTree {\n\nprivate:\n\n    struct Node {\n\n        int data;       // 節點中存儲的資料\n\n            Node* left;     // 指向左子節點的指標\n\n            Node* right;    // 指向右子節點的指標\n\n    };\n\n    Node* root;    // 指向樹根的指標\n\n    Node* createNode(int data)    //NODE節點 \n\n    {\n\n        Node* newNode = new Node;    //新增一個Node\n\n        newNode-&gt;data = data;    //新增節點的值設為data\n\n        newNode-&gt;left = nullptr;    //並把它的左、右子樹設為空的\n\n        newNode-&gt;right = nullptr;\n\n        return newNode;    //回傳新節點的位址\n\n    }\n\n    \n\n    Node* insertNode(Node* currentNode, int data) { //新增資料節點\n\n        if (currentNode == nullptr)        //如果當前節點為空\n\n        {\n\n            return createNode(data);    //創建節點、放資料\n\n        }\n\n        if (data &lt; currentNode-&gt;data) {    //資料比較小，遞迴呼叫左子樹\n\n            currentNode-&gt;left = insertNode(currentNode-&gt;left, data);\n\n        }\n\n        else if (data &gt;= currentNode-&gt;data) { //資料大於等於，遞迴呼叫右子數\n\n            currentNode-&gt;right = insertNode(currentNode-&gt;right, data);\n\n        }\n\n        return currentNode; //返回修改後的目前位置\n\n    }\n\n};",
+        "output": "else if (data &gt;= currentNode-&gt;data) // 後面的if敘述明顯是多餘的"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 得分已達14位同學。",
+        "output": ""
+    }
+]

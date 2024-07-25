@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 03:19:46</pt>
+  <poster>06005732</poster>
+  <realname>&#x738B;&#x6631;&#x9032;  </realname>
+  <email>louis21501@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;112 </subject>
+  <content>&lt;p&gt;&#x4E00;&#x500B;&#x985E;&#x5225;(&#x5B50;&#x985E;&#x5225;)&#x53EF;&#x4EE5;&#x7E7C;&#x627F;&#x53E6;&#x4E00;&#x500B;&#x985E;&#x5225;&#xFF08;&#x7236;&#x985E;&#x5225;)&lt;br /&gt;&#xD;
+&#x5B50;&#x985E;&#x5225;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7236;&#x985E;&#x5225;&#x7684;&#x8B8A;&#x6578;&#x548C;&#x51FD;&#x6578;&#xFF0C;&#x540C;&#x6642;&#x4E5F;&#x53EF;&#x4EE5;&#x65B0;&#x589E;&#x6216;&#x91CD;&#x5BEB;&#x9019;&#x4E9B;&#x6210;&#x54E1;&#x4F86;&#x64F4;&#x5C55;&#x6216;&#x4FEE;&#x6539;&#x5176;&#x884C;&#x70BA;&#x3002;&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+CODE:&lt;br /&gt;&#xD;
+#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5B9A;&#x7FA9;&#x7236;&#x985E;&#x5225;&lt;br /&gt;&#xD;
+class Shape {&lt;br /&gt;&#xD;
+protected:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int width;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int height;&lt;br /&gt;&#xD;
+public:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; void setWidth(int w) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; width = w;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; void setHeight(int h) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; height = h;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5B9A;&#x7FA9;&#x5B50;&#x985E;&#x5225;&lt;br /&gt;&#xD;
+class Rectangle : public Shape { //&#x7E7C;&#x627F;&lt;br /&gt;&#xD;
+public:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int getArea() {&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return width * height;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Rectangle rect;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; rect.setWidth(5); //&#x7528;&#x7236;&#x985E;&#x7684;&#x5B9A;&#x7FA9;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; rect.setHeight(3);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int area = rect.getArea();&amp;nbsp; //&#x7528;&#x7236;&#x985E;&#x5225;&#x7D66;&#x7684;&#x8B8A;&#x6578;&#x9032;&#x5230;&#x5B50;&#x985E;&#x5225;&#xFF0C;&#x4E26;&#x4F7F;&#x7528;&#x5B50;&#x985E;&#x5225;&#x7684;&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x77E9;&#x5F62;&#x7684;&#x9762;&#x7A4D;: &amp;quot; &amp;lt;&amp;lt; area &amp;lt;&amp;lt; std::endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>28</hit>
+  <lang>1</lang>
+</data>

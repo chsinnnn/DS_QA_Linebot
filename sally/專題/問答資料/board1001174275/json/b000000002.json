@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:46",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174275",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-10-21 21:59:37",
+        "poster": "11027229",
+        "realname": "卓榮暉",
+        "email": "intercoursedr@gmail.com",
+        "homepage": null,
+        "subject": "122. 寫C++程式碼說明傳參考呼叫call by reference。",
+        "content": "<p>call by reference 跟 call by value 不同的是，call by value 是將值複製到 function 裡面再執行該 function，因此不會引想到帶入的引數。<br />\r\n而 call by value 是將「記憶體位置」帶入 function，因此如果在 funcion 裡面改動到參數的值，在呼叫 function 時帶入的引數會隨之改動。</p>\r\n\r\n<p>以下是程式碼 :<br />\r\n#include&lt;iostream&gt;<br />\r\n#include&lt;string&gt;<br />\r\n// 簡單的 enum 存可以喝的飲料，其中 NOTHING 是指沒有飲料&nbsp;<br />\r\nenum BeverageType { COFFEE, TEA, WATER, CYANIDE, BEER, PARAQUAT, NOTHING };&nbsp;<br />\r\nclass Cup{<br />\r\n&nbsp;&nbsp; &nbsp;// 公開的&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;public:<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Cup(){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;isEmpty = true;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;type = NOTHING;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 為了呈現 call by reference跟call by value的差別，因此我用了static<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 加了 &amp; 字號就是將地址傳到這個function&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;static Fill(Cup &amp; cup, BeverageType type){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cup.type = type;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cup.isEmpty = false;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// call by value<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;static AnotherFill(Cup cup, BeverageType type){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cup.type = type;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cup.isEmpty = false;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 裡面是啥&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BeverageType whatIsInside(){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if(!isEmpty) return type;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else return NOTHING;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 是否為空&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;bool isItEmpty(){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return isEmpty;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;// 非公開的&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;private:<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;bool isEmpty; // 是否為空&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BeverageType type; // 種類&nbsp;<br />\r\n};</p>\r\n\r\n<p>int main(){<br />\r\n&nbsp;&nbsp; &nbsp;BeverageType coffee = COFFEE;<br />\r\n&nbsp;&nbsp; &nbsp;// Two ordinary cups<br />\r\n&nbsp;&nbsp; &nbsp;Cup cup1, cup2;<br />\r\n&nbsp;&nbsp; &nbsp;// fill cup1<br />\r\n&nbsp;&nbsp; &nbsp;Cup::Fill(cup1,coffee);<br />\r\n&nbsp;&nbsp; &nbsp;// fill cup2<br />\r\n&nbsp;&nbsp; &nbsp;Cup::AnotherFill(cup2,coffee);<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;if(cup1.isItEmpty()) printf(&quot;cup1 is empty\\n&quot;);<br />\r\n&nbsp;&nbsp; &nbsp;else printf(&quot;cup1 is not empty\\n&quot;); // 會印出這個&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;if(cup2.isItEmpty()) printf(&quot;cup2 is empty\\n&quot;); // 會印出這個&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;else printf(&quot;cup2 is not empty\\n&quot;);<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n}</p>\r\n\r\n<p>下面是上面程式碼的圖</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027229/images/IMG_0694_Original.gif\" style=\"height:270px; width:500px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "41",
+        "lang": "1"
+    }
+}

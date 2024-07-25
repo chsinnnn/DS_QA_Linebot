@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:22" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174273</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-09-29 22:18:20</pt>
+  <poster>10911101</poster>
+  <realname>&#x912D;&#x7693;&#x5143;  </realname>
+  <email>xpoi5020@gmail.com</email>
+  <homepage> </homepage>
+  <subject>113. &#x5C07;&#x6B64;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x4E2D;&#x5E8F;&#x5F0F;infix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002;* </subject>
+  <content>&lt;p&gt;&#x6211;&#x7684;&#x4F5C;&#x6CD5;&#x662F;&#x5148;&#x628A;&#x9019;&#x500B;&#x4EE5;&#x5F8C;&#x5E8F;&#x8868;&#x793A;&#x6CD5;&#x8868;&#x793A;&#x7684;&#x5F0F;&#x5B50;&#x4EE5;&#x4E8C;&#x5143;&#x6A39;&#x7684;&#x65B9;&#x5F0F;&#x5132;&#x5B58;(&#x9019;&#x500B;&#x4E8C;&#x5143;&#x6A39;&#x7D93;Postorder traversal&#x5F8C;&#x6703;&#x5F97;&#x5230;&#x539F;&#x672C;&#x5F8C;&#x7E8C;&#x5F8C;&#x5E8F;&#x8868;&#x793A;&#x6CD5;&#x7684;&#x5F0F;&#x5B50;)&lt;br /&gt;&#xD;
+&#x56E0;&#x70BA;&#x5728;&#x4E2D;&#x5E8F;&#x8868;&#x793A;&#x6CD5;&#x4E2D;&#xFF0C;&#x4E58;&#x6CD5;&#x53CA;&#x9664;&#x6CD5;&#x7684;&#x904B;&#x7B97;&#x512A;&#x5148;&#x9806;&#x5E8F;&#x9AD8;&#x65BC;&#x52A0;&#x6CD5;&#x53CA;&#x6E1B;&#x6CD5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8AAA;&#x4E2D;&#x5E8F;&#x8868;&#x793A;&#x6CD5;&#x9700;&#x8003;&#x616E;&#x904B;&#x7B97;&#x5143;&#x7684;&#x512A;&#x5148;&#x9806;&#x5E8F;&#x3002;&lt;br /&gt;&#xD;
+&#x6240;&#x4EE5;&#x7576;&#x904B;&#x7B97;&#x512A;&#x5148;&#x9806;&#x5E8F;&#x8F03;&#x9AD8;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x5176;&#x5DE6;&#x7BC0;&#x9EDE;&#x6216;&#x53F3;&#x7BC0;&#x9EDE;&#x7684;&#x904B;&#x7B97;&#x512A;&#x5148;&#x9806;&#x5E8F;&#x4F4E;&#x65BC;&#x6B64;&#x7BC0;&#x9EDE;&#xFF0C;&lt;br /&gt;&#xD;
+&#x8868;&#x793A;&#x5728;&#x4E2D;&#x5E8F;&#x8868;&#x793A;&#x6CD5;&#x4E2D;&#xFF0C;&#x9700;&#x5C07;&#x5DE6;&#x7BC0;&#x9EDE;&#x6216;&#x53F3;&#x7BC0;&#x9EDE;&#x8868;&#x793A;&#x6210;&#x4E2D;&#x5E8F;&#x8868;&#x793A;&#x6CD5;&#x5F8C;&#xFF0C;&#x5728;&#x5176;&#x5DE6;&#x53F3;&#x5169;&#x908A;&#x52A0;&#x4E0A;&#x62EC;&#x865F;&#xFF0C;&#x624D;&#x80FD;&#x8B93;&#x5DE6;&#x7BC0;&#x9EDE;&#x6216;&#x53F3;&#x7BC0;&#x9EDE;&#x80FD;&#x5920;&#x5148;&#x88AB;&#x8A08;&#x7B97;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x904E;&#x7A0B;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/0/10911101/images/13326%282%29.png" style="height:603px; width:915px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&amp;quot;a b + c * d e + f * + w z + *&amp;quot;&#x5EFA;&#x51FA;&#x4F86;&#x7684;&#x4E8C;&#x5143;&#x6A39;&#x9577;&#x7684;&#x50CF;&#x662F;&#x9019;&#x6A23;&#xFF0C;&#x5176;&#x4E2D;&#x9ED1;&#x5E95;&#x5B57;&#x8868;&#x793A;&#x7684;&#x662F;&#x6B64;&#x7AEF;&#x9EDE;&#x8F49;&#x6210;&#x4E2D;&#x5E8F;&#x8868;&#x793A;&#x5F0F;&#x7684;&#x7D50;&#x679C;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/0/10911101/images/13326.png" style="height:698px; width:640px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;C++&#x5BE6;&#x4F5C;&#x5927;&#x6982;&#x662F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/0/10911101/images/13326%283%29.png" style="height:280px; width:954px" /&gt;&lt;/p&gt;</content>
+  <attach>postfix_to_infix.cpp	WM6336b960e997e.cpp</attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>65</hit>
+  <lang>1</lang>
+</data>

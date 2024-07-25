@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-10-25 15:02:23",
+        "poster": "11127254",
+        "realname": "陳岳崇",
+        "email": "yoyo930311yoyo@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p>運算式: + * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>原式: +(<u>* 2 4</u>) 6 * - 7 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>* 2 4</u>) 為前序式將他視為一個變數a</p>\r\n\r\n<p>=&gt; (<u>+ a 6</u>) * - 7 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>+ a 6</u>) 為前序式將他視為一個變數b</p>\r\n\r\n<p>=&gt; b * (<u>- 7 5</u>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<u>- 7 5</u>)&nbsp;為前序式將他視為一個變數c</p>\r\n\r\n<p>=&gt; b * c&nbsp;&nbsp;不為前序式</p>\r\n\r\n<p>因此:&nbsp;<strong>+ * 2 4 6 * - 7 5 不為前序式</strong></p>\r\n\r\n<p>原式: + * 2 4 6 * - 7 5 ，若將中間的&nbsp;*&nbsp;提到最前面改成=&gt; * + * 2 4 6&nbsp;- 7 5 則為合法前序式</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

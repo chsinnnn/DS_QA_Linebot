@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-06 01:52:29",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答107",
+        "content": "<p>107.若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？</p>\r\n\r\n<p>在遞迴函式中使用條件判斷來檢查是否達到異常終止的條件，如果條件滿足，您可以在該情況下跳過異常終止，繼續執行到下一層。這可以使用 if 條件判斷和 return 陳述式來實現 。</p>\r\n\r\n<p>想遞迴進入某層就是造成異常終止的原因，如何跳過異常還同時可以繼續執行到那一層？</p>\r\n\r\n<p>可使用 try-catch 塊，在遞迴函式的適當位置使用 try-catch 塊，以捕獲異常。在 try 塊中放置可能引發異常的程式碼，並在 catch 塊中處理異常情況</p>\r\n\r\n<p>function recursiveFunction(level) {<br />\r\n&nbsp; try {<br />\r\n&nbsp;&nbsp;&nbsp; // 可能引發異常的程式碼<br />\r\n&nbsp;&nbsp;&nbsp; if (level === 5) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw new Error(&#39;達到層級 5&#39;);<br />\r\n&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 遞迴調用<br />\r\n&nbsp;&nbsp;&nbsp; recursiveFunction(level + 1);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 在異常之後的程式碼<br />\r\n&nbsp;&nbsp;&nbsp; console.log(&#39;完成異常處理後的操作&#39;);<br />\r\n&nbsp; } catch (error) {<br />\r\n&nbsp;&nbsp;&nbsp; // 處理異常<br />\r\n&nbsp;&nbsp;&nbsp; console.log(&#39;捕獲到異常:&#39;, error.message);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 可選：進行適當的異常處理操作</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 可選：選擇是否繼續執行到該層<br />\r\n&nbsp;&nbsp;&nbsp; console.log(&#39;繼續執行到該層&#39;);<br />\r\n&nbsp; }<br />\r\n}</p>\r\n\r\n<p>recursiveFunction(1);</p>\r\n\r\n<p>try 塊中的程式碼可能引發異常。如果異常發生，catch 塊將捕獲到異常並處理它，然後繼續執行到該層的後續程式碼。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

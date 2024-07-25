@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:00" type="post" filename="b000000016.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278679</board_id>
+  <node>000000016</node>
+  <site>1000110001</site>
+  <pt>2023-07-13 23:17:09</pt>
+  <poster>06005931</poster>
+  <realname>&#x4F58;&#x4EF2;&#x5091;  </realname>
+  <email>szj891226@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x554F;&#x7B54;118 </subject>
+  <content>&lt;p&gt;&#x984C;&#x76EE; : &#x4EE4;ptrX&#x6307;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x6BD4;&#x8F03;ptrX = ptrX-&amp;gt;next&#x548C;ptrX-&amp;gt;next = ptrX&#x7684;&#x5DEE;&#x7570;&#x3002;&lt;br /&gt;&#xD;
+Ans:&lt;br /&gt;&#xD;
+ptrX = ptrX-&amp;gt;next &#x9019;&#x6BB5;&#x7A0B;&#x5F0F;&#x7684;&#x610F;&#x601D;&#x662F;&#x628A;ptrX&#x6307;&#x5411;ptrX&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x3002;&lt;br /&gt;&#xD;
+ptrX-&amp;gt;next = ptrX &#x9019;&#x500B;&#x5247;&#x662F;&#x628A;ptrX&#x6307;&#x5411;&#x81EA;&#x5DF1;&#xFF0C;&#x81EA;&#x6210;&#x5FAA;&#x74B0;&#x3002;&lt;img alt="" src="/user/0/6/06005931/images/ptr.png" style="height:653px; width:859px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>15</hit>
+  <lang>1</lang>
+</data>

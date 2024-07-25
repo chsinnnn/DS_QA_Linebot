@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000007000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000007000000001",
+        "site": "1000110001",
+        "pt": "2023-09-18 23:01:26",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 105",
+        "content": "<p>有符號<span style=\"color:#ff0000\">整型</span>溢位&nbsp; <span style=\"color:#b22222\">不太理想的英翻中，別照單全收！</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">既然任何整數型態都有上限，可以突破限制的終極方法是什麼？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

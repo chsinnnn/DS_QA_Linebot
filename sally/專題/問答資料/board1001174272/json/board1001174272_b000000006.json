@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-09-21 17:37:00",
+        "poster": "03108153",
+        "realname": "李立群",
+        "email": "espoir520@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p><span style=\"color:#0000ff\"><strong>1.遞迴呼叫階層數太多&nbsp; or</strong></span></p>\r\n\r\n<p><span style=\"color:#0000ff\"><strong>2.遞迴未正確設定終止條件&nbsp; or</strong></span></p>\r\n\r\n<p><span style=\"color:#0000ff\"><strong>3.遞迴未如預期達到終止條件&nbsp; then</strong></span></p>\r\n\r\n<p><strong><span style=\"color:#ff0000\">-&gt;&nbsp;Stack Overflow -&gt;</span></strong><strong><span style=\"color:#ff0000\">試圖存取 無權限/不合法/不存在 的記憶體區段 -&gt;</span></strong><em><strong><span style=\"color:#ff0000\">Memory Segment Fault</span></strong></em></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "105",
+        "lang": "1"
+    }
+}

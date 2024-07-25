@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000034.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000034",
+        "site": "1000110001",
+        "pt": "2022-09-21 13:51:20",
+        "poster": "11027133",
+        "realname": "李若菱",
+        "email": "sally.mimi0909@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？*",
+        "content": "<p>當問題可拆成一個個小問題重複處理，且每個小問題性質相似的時候，適合使用遞迴函式來處理，因為它會一直呼叫自己來處理問題，能有效避免相似繁雜的程式碼並提高效率</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "49",
+        "lang": "1"
+    }
+}

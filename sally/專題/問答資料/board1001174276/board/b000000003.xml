@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:51" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174276</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2022-10-23 23:28:34</pt>
+  <poster>10920119</poster>
+  <realname>&#x9673;&#x5F65;&#x4E1E;  </realname>
+  <email>brian33550706@gmail.com</email>
+  <homepage> </homepage>
+  <subject>129. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8A2D;&#x8A08;&#x905E;&#x8FF4;&#x51FD;&#x6578;&#x7522;&#x751F;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&#x4E14;&#x52A0;&#x7E3D;&#x7B49;&#x65BC;M&#x7684;&#x6240;&#x6709;3&#x4F4D;&#x6578;&#xFF0C;M&#x662F;&#x8F38;&#x5165;&#x7684;&#x6574;&#x6578;&#xFF0C;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;&#x96F6;&#x3002; </subject>
+  <content>&lt;p&gt;&#x82E5;&#x60F3;&#x7522;&#x751F;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&#x4E14;&#x52A0;&#x7E3D;&#x7B49;&#x65BC;M&#x7684;&#x6240;&#x6709;3&#x4F4D;&#x6578;&#xFF0C;&#x4E14;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;0&#xFF0C;&#x5247;&#x9019;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x5FC5;&#x7686;&#x70BA;&#x500B;&#x4F4D;&#x6578;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;=&amp;gt; &#x5FC5;&#x9808;&#x6CE8;&#x610F;&#x6700;&#x5927;&#x7684;M&#x662F;24 = 9 + 8 +&amp;nbsp;7&#xFF0C;&#x800C;&#x6700;&#x5C0F;&#x7684;M&#x662F;3&amp;nbsp;= 2&amp;nbsp;+ 1&amp;nbsp;+ 0&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7E3D;&#x5171;&#x586B;3&#x6B21;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x586B;1~limit&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x586B;0~limit(&#x82E5;&#x7B2C;&#x4E00;&#x6B21;&#x586B;&#x7684;&#x6578;&#x5B57;&#x5728;&#x5167;&#xFF0C;&#x9700;&#x8DF3;&#x904E;&#x5176;)&#xFF0C;&#x7B2C;&#x4E09;&#x6B21;&#x53EA;&#x586B;&#x4E00;&#x500B;(M&#x6E1B;&#x6389;&#x524D;&#x5169;&#x6B21;&#x586B;&#x7684;&#x6578;&#x5B57;)&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;limit&#x662F;&#x586B;&#x5165;&#x5F8C;&#x4E0D;&#x6703;&#x4F7F;&#x5F8C;&#x9762;&#x7684;&#x6578;&#x5B57;&#x586B;&#x4E0D;&#x4E86;&#x7684;&#x6700;&#x5927;&#x6578;&#x5B57;&#xFF0C;&#x5982;M = 9&#x6642;&#xFF0C;limit = 8&#xFF0C;&#x56E0;&#x70BA;8&#x5F8C;&#x9762;&#x5C1A;&#x53EF;&#x586B;1&amp;amp;0&#xFF1B;&#x6216;&#x662F;&#x5982;M = 9&#x4E14;&#x7B2C;&#x4E00;&#x500B;&#x6578;&#x662F;7&#x6642;&#xFF0C;limit = 2&#xFF0C;&#x56E0;&#x70BA;7&#x3001;2&#x5F8C;&#x9762;&#x5C1A;&#x53EF;&#x586B;0&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x662F;&#x7A0B;&#x5F0F;&#x78BC;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;vector&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;algorithm&amp;gt;&lt;br /&gt;&#xD;
+using namespace std ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int permuCount = 0 ; &amp;nbsp; &amp;nbsp; &amp;nbsp;// to record the total amounts of permutation in a case.&lt;br /&gt;&#xD;
+vector&amp;lt;int&amp;gt; empty ; &amp;nbsp; &amp;nbsp; &amp;nbsp; // an empty array.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bool isRecur = false ;&amp;nbsp; &amp;nbsp; &amp;nbsp;// indicates if the recurive function is on its first time or recursing.&lt;br /&gt;&#xD;
+void permuPrinter( vector&amp;lt;int&amp;gt; arr ) ;&lt;br /&gt;&#xD;
+void allThreeNumSumUpAsM( vector&amp;lt;int&amp;gt;&amp;amp; arr, vector&amp;lt;int&amp;gt;&amp;amp; recur, int target, int currentItem ) ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int m = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;vector&amp;lt;int&amp;gt; arr ;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;\nPlease insert a positive number M: &amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for( ; m &amp;lt; 1 ; ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;cin &amp;gt;&amp;gt; m &amp;nbsp;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if( m &amp;lt; 1 || cin.fail() ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;Invalid input, please try again.\n&amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cin.clear() ; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// if cin failed, reset its flag ( fail: invalid type. &amp;nbsp;e.g. cin &amp;#39;a&amp;#39; to an int variable).&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cin.sync() ; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // and clear its temp. &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ( without this, next cin will change its flag to fail and stop cin immediately.)&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;\n\nResult: \n&amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// make arr = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;arr.clear() ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for( int first = 0 ; first &amp;lt;= 9 ; first++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;arr.push_back(first) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;empty.resize(3) ; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Rest empty to a n items array full of 0.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;permuCount = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;allThreeNumSumUpAsM( arr, empty, m, 0 ) ;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+void allThreeNumSumUpAsM( vector&amp;lt;int&amp;gt;&amp;amp; arr, vector&amp;lt;int&amp;gt;&amp;amp; recur, int target, int currentItem ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;vector&amp;lt; vector&amp;lt;int&amp;gt; &amp;gt; result( 9, vector&amp;lt;int&amp;gt;(3) ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int idxArr = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int idx1 = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int idx2 = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int limit = 9 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int addTimes = 9 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// if target is less than 3 or larger than 24, for example = 2, then we wouldn&amp;#39;t be able to find the 3 numbers.&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;if( target &amp;gt;= 3 &amp;amp;&amp;amp; target &amp;lt;= 24 ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( currentItem == 0 ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;idxArr = 1 ; // result can&amp;#39;t be something like &amp;quot;031&amp;quot; or &amp;quot;049&amp;quot;, so possible number for first are 1~9.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;while( target - limit &amp;lt;= 0 ) { // e.g. if m = 9, then first number&amp;#39;s max is 8 for &amp;quot;810&amp;quot; and &amp;quot;801&amp;quot;.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; limit = limit - 1 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;} // end of while&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;addTimes = limit - idxArr + 1 ; // first time, possible numbers are from 1&amp;nbsp;to limit.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else if( currentItem == 1 ) { // e.g. if m = 9 and first number = 8, then second number&amp;#39;s max is 1 for &amp;quot;810&amp;quot; and &amp;quot;801&amp;quot;.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;while( target - recur[0] - limit &amp;lt; 0 ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;limit = limit - 1 ;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;} // end of while&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;addTimes = limit - idxArr + 1 ; // second&amp;nbsp;time, possible numbers are from 0 to limit, except the first number.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if( recur[0] &amp;lt;= limit &amp;amp;&amp;amp; recur[0] &amp;gt;= idxArr ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;addTimes = addTimes - 1 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of else if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else if( currentItem == 2 ) { // third or the last number will be target - recur[0] - recur[1].&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;idxArr = target - recur[0] - recur[1] ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;limit = target - recur[0] - recur[1] ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( limit &amp;gt; 9 ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;currentItem = 100 ; // if limit is bigger than 9, then this combination is impossible.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;addTimes = 1 ; // only 1 possible number for third time.&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of else if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for( idx1 = 0 ; idx1 &amp;lt; addTimes &amp;amp;&amp;amp; currentItem &amp;lt; 3 ; idx1++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for( idx2 = 0 ; idx2 &amp;lt; 3 &amp;amp;&amp;amp; isRecur ; idx2++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;result[idx1].at(idx2) = recur[idx2] ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for( bool isAdded = false ; idxArr &amp;lt;= limit &amp;amp;&amp;amp; !isAdded ; idxArr++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( find( result[idx1].begin(), result[idx1].end(), arr[idxArr] ) == result[idx1].end() ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;result[idx1].at(currentItem) = arr[idxArr] ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;isAdded = true ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( currentItem == 3 ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;for( idx2 = 0 ; idx2 &amp;lt; 3 &amp;amp;&amp;amp; isRecur ; idx2++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;result[0].at(idx2) = recur[idx2] ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( result[0][0] + result[0][1] + result[0][2] == target ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;permuPrinter( result[0] ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;else if( currentItem &amp;lt; 3 ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;isRecur = true ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for( idx1 = 0 ; idx1 &amp;lt; addTimes ; idx1++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;allThreeNumSumUpAsM( arr, result[idx1], target, currentItem + 1 ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of else if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of if&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;Unable to find 3 number which sum up as &amp;quot; &amp;lt;&amp;lt; target &amp;lt;&amp;lt; &amp;quot;\n&amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;} // end of else&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+} // allThreeNumSumUpAsM()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void permuPrinter( vector&amp;lt;int&amp;gt; arr ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;permuCount = permuCount + 1 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;&#x3010;&amp;quot; &amp;lt;&amp;lt; permuCount &amp;lt;&amp;lt; &amp;quot;&#x3011; &amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for( int idx = 0 ; idx &amp;lt; 3 ; idx++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; arr[idx] &amp;lt;&amp;lt; &amp;quot; &amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end of for&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;\n&amp;quot; ;&lt;br /&gt;&#xD;
+} // permuPriter()&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>32</hit>
+  <lang>1</lang>
+</data>

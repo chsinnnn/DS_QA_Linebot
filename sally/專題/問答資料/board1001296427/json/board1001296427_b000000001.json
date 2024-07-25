@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:32",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296427",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2024-01-01 23:42:35",
+        "poster": "11127110",
+        "realname": "許至昀",
+        "email": "alberthsu919@gmail.com",
+        "homepage": null,
+        "subject": "230",
+        "content": "<p><span style=\"font-family:新細明體,serif\">比較以陣列或指標實作堆積結構的優缺點。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">［陣列］</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">優點：不需要處理指標鏈結關係，用索引值操作較簡便。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">缺點：靜態陣列無法確定所需配置的大小，容易造成空間不夠或浪費，重新分配會造成耗時間。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">［指標］</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">優點：動態調整堆積大小。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">缺點：需要處理複雜指標鏈結，像是雙向指標系統。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

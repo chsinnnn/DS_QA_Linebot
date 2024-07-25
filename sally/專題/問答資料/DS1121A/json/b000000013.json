@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2022-09-16 16:21:25",
+        "poster": "11027143",
+        "realname": "許拓宸",
+        "email": "hnes0311@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">中學時期，在資訊課上遇到<em><strong>求公因數(GCD)</strong></em>的問題。<br />\r\n當時使用「輾轉相除法」來解決問題，透過兩數不斷的相除，最終巧妙地得到答案。<br />\r\n然而，這種做法會產生很多while、if、else的迴圈，導致程式碼最後看起來很長。<br />\r\n學到了遞迴法之後，所需要做的就只是<em><strong>自我呼叫 (self-calling)。</strong></em><br />\r\n利用遞迴讓<strong>被除數</strong>、<strong>除數</strong>互換。<br />\r\n用精簡的程式碼便能輕鬆地得到答案。<br />\r\n<br />\r\n若是在程式碼當中出現大量的迴圈，可以適當的將之轉為遞迴式<br />\r\n一來能夠把一個大問題拆解成小問題來解決，<br />\r\n二來也能讓整支程式看起來更簡潔清晰、可讀性更高<br />\r\n然而<strong>與之相對</strong>的是，需要較多的儲存空間、程式 run&nbsp;</span></span><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">起來需要花費比較多的時間<br />\r\n在使用遞迴時需要好好斟酌</span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "45",
+        "lang": "1"
+    }
+}

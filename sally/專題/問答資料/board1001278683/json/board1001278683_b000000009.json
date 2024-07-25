@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-07-21 19:38:05",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答209",
+        "content": "<p>撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。</p>\r\n\r\n<p>def insertion_sort(arr):</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;for i in range(1, len(arr)):</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;key = arr[i]</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j = i - 1</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color:#ff0000\">while j &gt;= 0 and key &lt; arr[j]: </span></p>\r\n\r\n<p><span style=\"color:#ff0000\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;arr[j + 1] = arr[j]</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j -= 1</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">&nbsp; &nbsp; &nbsp; &nbsp; #這個指令確保了插入過程中的穩定性。</span></p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; arr[j + 1] = key</p>\r\n\r\n<p>這個while循環會將所有比當前元素key大（對於升序排序）的元素往後移動一位，以便為key找到正確的位置插入。而且當key和相等元素進行比較時，使用key &lt; arr[j]的條件。這樣在相等元素的情況下，插入排序將key插入到相等元素的前面，確保相等元素的相對順序保持不變。</p>\r\n\r\n<p>因此，這個while循環是影響插入排序是否穩定的關鍵指令。保持這個while循環的穩定性將確保插入排序的穩定性，即相等元素的相對順序在排序前後保持不變。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

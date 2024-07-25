@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-10-06 16:15:05",
+        "poster": "10924148",
+        "realname": "陳黃揚",
+        "email": "conary0917@gmail.com",
+        "homepage": null,
+        "subject": "118",
+        "content": "<p>題目:</p>\r\n\r\n<p>118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。</p>\r\n\r\n<p>解說:</p>\r\n\r\n<p>假設一串結陣列為 ptrX -&gt; 1 -&gt; 2 -&gt; 3 -&gt; NULL</p>\r\n\r\n<p>首先 ptrX = ptrX -&gt; next 會將這個資料列變成</p>\r\n\r\n<p>ptrX -&gt; 2 -&gt; 3 -&gt; NULL ( 若沒其他指標指向1，除了會找不到1外，也釋放不掉記憶體 )</p>\r\n\r\n<p>再來 若是 ptrX -&gt; next = ptrX 則會變成</p>\r\n\r\n<p>ptrX -&gt; 1 - - |</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^&nbsp; &nbsp; &nbsp; |</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| - -&nbsp;|</p>\r\n\r\n<p>即為ptrX的next指回ptrX目前指著的地方( 後面的2、3會找不到 )</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "26",
+        "lang": "1"
+    }
+}

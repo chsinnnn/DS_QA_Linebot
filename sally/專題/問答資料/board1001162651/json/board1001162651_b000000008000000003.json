@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000008000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000008000000003",
+        "site": "1000110001",
+        "pt": "2022-10-31 13:31:58",
+        "poster": "11027111",
+        "realname": "顏邑岑",
+        "email": "22692amy@gmail.com",
+        "homepage": null,
+        "subject": "Re: 128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p>推導的好清楚 好讚!</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

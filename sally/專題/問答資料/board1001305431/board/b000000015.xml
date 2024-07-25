@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:13" type="post" filename="b000000015.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305431</board_id>
+  <node>000000015</node>
+  <site>1000110001</site>
+  <pt>2023-10-01 19:09:45</pt>
+  <poster>11127213</poster>
+  <realname>&#x51CC;&#x9F0E;&#x8ED2;  </realname>
+  <email>benson920925@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>109. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002; </subject>
+  <content>&lt;p&gt;&#x4E00;&#x3001;&#x7528;&#x8FF4;&#x5708;&#x6BCF;&#x500B;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;# include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+# define ARRAY_SIZE 20&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int i, init_value = 20;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int array[ARRAY_SIZE];&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for ( i = 0 ; i &amp;lt; ARRAY_SIZE ; i++ )&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;array[i] = init_value;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E8C;&#x3001;&#x5927;&#x62EC;&#x865F;&#x8A2D;&#x5B9A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&amp;nbsp; {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int array[5] = { 1, 2, 3, 4, 5&amp;nbsp;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E09;&#x3001;&#x53EF;&#x4EE5;&#x7528;&#x6F14;&#x7B97;&#x6CD5;&#x7684;std::fill&#x65B9;&#x6CD5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;# include &amp;lt;algorithm&amp;gt;&lt;br /&gt;&#xD;
+# define ARRAY_SIZE 20&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int array[ARRAY_SIZE];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::fill( array, array + ARRAY_SIZE, 20 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56DB;&#x3001;&#x7528;std::array&#x5167;&#x7684;fill&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;# include &amp;lt;array&amp;gt;&lt;br /&gt;&#xD;
+# define ARRAY_SIZE 20&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int i = 0;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::array&amp;lt;int, ARRAY_SIZE&amp;gt; array;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; array.fill( 43 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>25</hit>
+  <lang>1</lang>
+</data>

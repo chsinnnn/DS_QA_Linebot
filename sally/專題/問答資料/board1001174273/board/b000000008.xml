@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:22" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174273</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2022-10-10 13:46:39</pt>
+  <poster>11027251</poster>
+  <realname>&#x9673;&#x51A0;&#x860B;  </realname>
+  <email>tanya0920617@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;call by value&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F15;&#x7528;&#x8B8A;&#x6578;&#x6578;&#x503C;&#x800C;&lt;/span&gt;call by reference&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F15;&#x7528;&#x8B8A;&#x6578;&#x672C;&#x8EAB;&#xFF0C;&#x7576;&#x542B;&#x6709;&lt;/span&gt;call by value&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x53C3;&#x6578;&#x7684;&#x51FD;&#x6578;&#x88AB;&#x547C;&#x53EB;&#x6642;&#xFF0C;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8A72;&#x8B8A;&#x6578;&#x6578;&#x503C;&#x6703;&#x88AB;&#x8907;&#x88FD;&#xFF0C;&#x51FD;&#x6578;&#x53EA;&#x80FD;&#x6539;&#x52D5;&#x8907;&#x88FD;&#x5F8C;&#x7684;&#x503C;&#x3002;&#x800C;&lt;/span&gt;call by reference&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5247;&#x4E0D;&#x8907;&#x88FD;&#xFF0C;&#x8207;&#x4E3B;&#x7A0B;&#x5F0F;&#x8B8A;&#x6578;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;call by value &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x56E0;&#x70BA;&#x8981;&#x8907;&#x88FD;&#x53C3;&#x6578;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x547C;&#x53EB;&#x4E0A;&#x6703;&#x82B1;&#x8F03;&#x591A;&#x6642;&#x9593;&#xFF0C;&#x5F71;&#x97FF;&#x6548;&#x80FD;&#xFF0C;&#x4F46;&#x53EF;&#x4FDD;&#x8B77;&#x4E3B;&#x7A0B;&#x5F0F;&#x7684;&#x503C;&#x4E0D;&#x88AB;&#x4EFB;&#x610F;&#x66F4;&#x6539;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;call by reference -&amp;gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8207;&lt;/span&gt;call by value &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x76F8;&#x6BD4;&#x8F03;&#x4E0D;&#x5F71;&#x97FF;&#x6548;&#x80FD;&#xFF0C;&#x4F46;&#x6709;&#x6642;&#x4E26;&#x4E0D;&#x5E0C;&#x671B;&#x4E3B;&#x7A0B;&#x5F0F;&#x7684;&#x503C;&#x88AB;&#x66F4;&#x52D5;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;# include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void RefAndVal( int &amp;amp; ref, int val ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;ref = ref * 2;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;val = val * 2;&lt;br /&gt;&#xD;
+} // ByReference&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int ref = 5 , val = 5;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;Before : &amp;quot; &amp;lt;&amp;lt; ref &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;After call by reference : &amp;quot; &amp;lt;&amp;lt; ref &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;After call by value : &amp;quot; &amp;lt;&amp;lt; val &amp;lt;&amp;lt; endl;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return 0;&lt;br /&gt;&#xD;
+} // main&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&lt;img alt="" src="/user/1/1/11027251/images/%E5%9C%96%E7%89%871.png" style="height:96px; width:371px" /&gt;&lt;/span&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>40</hit>
+  <lang>1</lang>
+</data>

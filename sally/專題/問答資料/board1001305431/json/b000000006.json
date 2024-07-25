@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-09-27 15:24:34",
+        "poster": "11127203",
+        "realname": "郭力嫚",
+        "email": "mandy20030907@gmail.com",
+        "homepage": null,
+        "subject": "108. 若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？",
+        "content": "<p>如果要解決在遞迴到某層就異常終止，並繼續執行下去的話，可以使用以下方法：</p>\r\n\r\n<p>使用try和catch區塊來捕捉異常，然後在catch的區塊內進行處理。</p>\r\n\r\n<p>例如：在catch的區塊內函數（條件-1）重新呼叫遞迴函式，強制進入下一層。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

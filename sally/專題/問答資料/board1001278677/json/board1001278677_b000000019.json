@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000019.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000019",
+        "site": "1000110001",
+        "pt": "2023-07-08 15:11:17",
+        "poster": "06005645",
+        "realname": "林品瑄",
+        "email": "hank61061007@gmail.com",
+        "homepage": null,
+        "subject": "搶答106",
+        "content": "<p>遞迴呼叫為何會造成記憶體區段錯誤?</p>\r\n\r\n<p>像是無限遞迴(Infinite Recursion)，當沒有正確的終止條件或是遞迴停止條件不符合，遞迴函式將永遠遞迴下去，不斷地呼叫自己。這將消耗系統的記憶體和資源，最後導致記憶體區段錯誤。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

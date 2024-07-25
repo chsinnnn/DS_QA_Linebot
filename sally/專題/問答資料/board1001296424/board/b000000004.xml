@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:30" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296424</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2023-11-25 15:34:20</pt>
+  <poster>11127116</poster>
+  <realname>&#x66FE;&#x8A6E;&#x6DF3;  </realname>
+  <email>kevin47338647@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>209 </subject>
+  <content>&lt;p&gt;209.&#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5F71;&#x97FF;&#x63D2;&#x5165;&#x6392;&#x5E8F;insertion sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x82E5;&#x6BD4;&#x8F03;&#x689D;&#x4EF6;arr[j] &amp;gt; key,&#x5982;&#x679C;&#x6539;&#x6210;arr[j] &amp;gt;= key&#x5247;unstable&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;vector&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void insertionSort(std::vector&amp;lt;int&amp;gt;&amp;amp; arr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int n = arr.size();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 1; i &amp;lt; n; ++i) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int key = arr[i];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int j = i - 1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x95DC;&#x9375;&#x6307;&#x4EE4;&#x70BA;arr[j] &amp;gt; key,&#x5982;&#x679C;&#x6539;&#x6210;arr[j] &amp;gt;= key&#x5247;unstable&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while (j &amp;gt;= 0 &amp;amp;&amp;amp; arr[j] &amp;gt; key) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j + 1] = arr[j];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; --j;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j + 1] = key;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::vector&amp;lt;int&amp;gt; arr = {12, 11, 13, 5, 6};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;Original array: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int num : arr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; num &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; insertionSort(arr);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;\nSorted array: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int num : arr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; num &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>20</hit>
+  <lang>1</lang>
+</data>

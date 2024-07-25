@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000019.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000019",
+        "site": "1000110001",
+        "pt": "2022-10-18 19:41:10",
+        "poster": "11027110",
+        "realname": "鄭又銨",
+        "email": "andy20030602@gmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p>ptrX = ptrX-&gt;next是指讓ptrX指向next指向的資料。</p>\r\n\r\n<p>ptrX-&gt;next = ptrX是指將ptrX指向自己，這種寫法可能會導致程式錯誤。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

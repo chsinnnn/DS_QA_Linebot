@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000009000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000009000000001",
+        "site": "1000110001",
+        "pt": "2023-07-19 16:48:28",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答203",
+        "content": "<p><span style=\"color:#ff0000\">答非所問，誤解題意嗎？</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">雙重佇列是指二個佇列，如何設計選擇佇列的策略以便執行？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

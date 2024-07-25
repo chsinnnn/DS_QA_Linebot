@@ -1,0 +1,22 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: struct Node {\n    int num;\n    Node * left;\n    Node * right;\n}; // Node\n\nvoid insertnode ( Node * &amp;root, int N ) {\n    if ( root == NULL ) {\n        root = new Node;\n        root -&gt; num = N;\n        root -&gt; left = NULL;\n        root -&gt; right = NULL;\n    } // if\n    else if ( N &gt; root -&gt; num ) \n        insertnode ( root -&gt; right, N );\n    else if ( N &lt; root -&gt; num )\n        insertnode ( root -&gt; left, N );    \n} // insertnode\n\n因題目只問如何新增節點，若傳進來值相同的話，會無視。\n\n若N比當前節點的num大時，往右傳\n\n若N比當前節點的num小時，往左傳\n\n若root == NULL ，則new一個節點，並傳值進去。",
+        "output": "Exactly! 精闢講解，讓我種出聖誕樹"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: struct Bst{\n        int key ;\n        vector&lt;int&gt; no ;\n        Bst *left ;\n        Bst *right ;\n    };\n\n    Bst *Insert_Bst( Bst *node, int num ){\n    // 把資料放入樹 \n        if( node != NULL ){\n\n        // 還未找到最下面，選擇往左還是往右\n            if( num  &gt; node-&gt;key ){\n            // 比目前的大，往右邊遞迴 \n                node-&gt;right = Insert_Bst( node-&gt;right, num  ) ;\n            }\n        \n            else if( num  &lt; node-&gt;key ){\n            // 比目前的小，往左邊遞迴\n                node-&gt;left = Insert_Bst( node-&gt;left, num  ) ;\n            }\n            \n            else{\n\n            // 值一樣\n\n                node-&gt;no.push_back( num  ) ;\n            }\n        }\n\n        else{\n\n        // 新增一個節點\n            node = new Bst ;\n            node-&gt;key =num  ;\n            node-&gt;no.push_back(num ) ;\n            node-&gt;left = NULL;\n            node-&gt;right = NULL;\n        }\n        \n        return node ;\n    }\n\n透過遞迴找到要新增的位置，\n\n如果要新增的值比較大就往右遞迴，\n\n如果要新增的值比較小就往左遞迴，\n\n如果一樣就把所需的資料存在同一個點上",
+        "output": "Glad to see an answer different from the previous one."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 穩定排序:如果排序相同資料，在排序後相對位置與排序前相同時。\n\n例如:\n\n排序前：3,5,19,1,3,10\n\n排序後：1,3,3,5,10,19  (因為兩個3, 3的相對位置在排序前與後皆相同)\n\n不穩定排序:如果排序相同之資料，在排序後相對位置與排序前位置補相同。\n\n例如:\n\n排序前：3,5,19,1,3,10\n\n排序後：1,4,3,3,10,19  (因為兩個3, 3的相對位置在排序前與後不相同)\n\n當二元搜尋樹遇到相同的資料時，我們會將它視為同一個節點然後push_back那筆資料的編號到vector，所以由此可知在排序前跟排序後相同資料編號的相對位置是沒有改變的，因此二元搜尋樹為穩定排序。\n\n程式範例:\n\ntypedef struct BST{\n    int key;                                              // search key\n    vector&lt;int&gt; idx;                               // store no of the same key\n    struct BST *lchild;                            // left child\n    struct BST *rchild;                            // right child\n\n} nodeType;   \n\nvoid insertNode(nodeType *&amp;root, int key, int no) {  \n    if (root == NULL) { // 還沒有東西，建立節點\n        root = new nodeType;\n        root -&gt; key = key;\n        root -&gt; idx.push_back(no);\n        root -&gt; lchild = NULL;\n        root -&gt; rchild = NULL;\n    } else {\n        if (hp &lt; root-&gt;key)  // 比該節點小，往左節點\n            insertNode(root-&gt;lchild,key, no);\n        else if(key == root-&gt;key)  // 一樣大，存到同一節點\n            root -&gt; idx.push_back(no);\n        else// 比該節點大，往右節點\n            insertNode(root-&gt;rchild, key, no);\n    }\n\n}",
+        "output": "看來有人hp沒改成key呦 相同的資料時，我們會將它視為同一個節點  這是作業題目的特殊規定，上述解答是沒問題。\n\n不過，題意是指一般處理同值資料是新增節點且放入右子樹的二元搜尋樹，其中序走訪得到的是否為穩定排序？。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n\n共3位同學作答。",
+        "output": ""
+    }
+]

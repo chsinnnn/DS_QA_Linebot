@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-09-20 18:29:54",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>無限制遞迴就像是提著購物籃買東西，隨著東西越拿越多，購物籃愈來愈滿，最後就再也沒有空間塞了。</p>\r\n\r\n<p>每一次遞迴中，在進入下次遞迴前會將未完成的運算資料(包含 區域變數 、執行列數等資訊)放進<strong>堆棧(stack)</strong>，等到遞迴完成後才會將資料取出並釋放記憶體，若遞迴層數超出記憶體所能，最終就會導致使用到不該使用的記憶體，編譯器就會警告此問題。</p>\r\n\r\n<p>所以，<strong>當您&nbsp;&nbsp;</strong><s>有無限記憶體&nbsp;</s>&nbsp;or 用更聰明的寫法<strong>時就可避免此情況發生</strong></p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027154/images/OIP.jfif\" style=\"height:140px; width:200px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "82",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2022-10-31 23:55:07",
+        "poster": "11027108",
+        "realname": "呂庭瑋",
+        "email": "vivian.lu1011@gmail.com",
+        "homepage": null,
+        "subject": "130. 寫Python程式碼實現近似C++ class隱藏資料的效果，並指出差異。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027108/images/%E9%99%90%E6%99%82%E6%90%B6%E7%AD%94.jpg\" style=\"height:872px; width:787px\" /></p>\r\n\r\n<p>補充說明 : Python 類別中的def __init__(self) 為類別宣告時會自動執行的函式，類似於constructor的作用；函數的第一個參數為實例對象本身，通常寫為self。</p>\r\n\r\n<p>Python v.s. C++ :&nbsp;</p>\r\n\r\n<p>Python中private的寫法為&quot;雙底線命名&quot; : __studentID</p>\r\n\r\n<p>由於Python沒有嚴謹定義private的機制，所以可以利用以下方法拿到private member : st._Student__studentID ( 宣告名稱+.+_+類別名稱+private member名稱&nbsp;)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

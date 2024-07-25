@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2022-10-15 16:39:33",
+        "poster": "11027243",
+        "realname": "陳冠妤",
+        "email": "hiroto104360@gmail.com",
+        "homepage": null,
+        "subject": "117. 寫C++程式碼說明傳址呼叫call by address。",
+        "content": "<p>Call by address(傳址)：簡單來說就是直接呼叫他的記憶體位置進行修改。</p>\r\n\r\n<p>將參數以記憶體位置的方式傳到呼叫此參數的function，此function需要有一個指標來指到這個參數的記憶體位置，所以也有人把Call by address稱作Call by value of pointer。<br />\r\n因為主程式和被呼叫的function是使用相同記憶體位置的內容，所以當function的內容更改時，同時也會影響到主程式的數值，傳指標仍然是call by value 只是那個value是指標本身，複製的內容也是指標本身，只不過那個value剛好就是address而已。</p>\r\n\r\n<p>-</p>\r\n\r\n<p><br />\r\nCall by value(傳值)：參數以數值方式傳遞。</p>\r\n\r\n<p>-</p>\r\n\r\n<p>Call by reference(傳參考)：因為call by address的內容為指向的位置，所以傳址的指標本身然仍然有記憶體位置，但是傳參考是不會有的。也因此C++的Call by reference本質上不是call by value，這也是和call by address之間的差別。</p>\r\n\r\n<p>#############</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027243/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-15%20162639.jpg\" style=\"height:843px; width:681px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "44",
+        "lang": "1"
+    }
+}

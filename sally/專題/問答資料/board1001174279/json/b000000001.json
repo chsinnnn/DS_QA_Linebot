@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:03:39",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174279",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-12-10 14:14:59",
+        "poster": "11027204",
+        "realname": "鄭宇傑",
+        "email": "11027204@O365st.cycu.edu.tw",
+        "homepage": null,
+        "subject": "211. 舉例比較氣泡排序和選擇排序的資料交換swap次數，何者較多？",
+        "content": "<p>bubble sort 的swap次數一定會<span style=\"color:#ff0000\">大於</span>等於 selection sort 的次數</p>\r\n\r\n<p>bubble sort 的swap時機是在<span style=\"color:#ff0000\">發現相鄰的數值比較大</span>時進行一次<span style=\"color:#ff0000\">位置交換的swap</span></p>\r\n\r\n<p>而selection sort的swap時機是在<span style=\"color:#ff0000\">目前尚未sorted的數值</span>中找到最小值數值<span style=\"color:#ff0000\">&nbsp;直接swap到已經sort好的的數值的最右側&nbsp;</span></p>\r\n\r\n<p>因此selection sort 的swap次數一定會<span style=\"color:#ff0000\">少於</span>等於bubble sort的次數&nbsp;</p>\r\n\r\n<p>但是因selection sort是直接swap數值，跳過中間尚未sorted好的數值，因此無法維持好相同值的順序</p>\r\n\r\n<p>所以selection sort 是<span style=\"color:#ff0000\">unstable</span> 的排序方式，bubble sort 反之。</p>\r\n\r\n<p>範例：</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027204/images/Temporary-30.jpg\" style=\"height:800px; width:619px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

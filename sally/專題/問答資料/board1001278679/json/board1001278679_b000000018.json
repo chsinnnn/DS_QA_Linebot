@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-13 23:51:22",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "問答120",
+        "content": "<p>題目:舉例說明使用雙向鏈結串列doubly linked list的情境。</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>雙向鏈結串列的特色是一個節點包含資料及兩個指標(一個指向前端，一個指向後端)</p>\r\n\r\n<p>Google翻譯的情境也是一個雙向鏈結的情況，可以選擇一種語言轉換成另一種語言，像是從中文翻譯成英文，同時也能變成英文翻譯中文。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

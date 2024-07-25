@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:02",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162648",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2022-10-11 12:10:35",
+        "poster": "11027144",
+        "realname": "陳佳音",
+        "email": "crechessiissii@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>以下是我的程式碼</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027144/images/code%282%29.jpg\" style=\"height:295px; width:500px\" /></p>\r\n\r\n<p>此為call by value的結果</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027144/images/v.jpg\" style=\"height:52px; width:400px\" /></p>\r\n\r\n<p>此為call by reference的結果</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027144/images/R.jpg\" style=\"height:51px; width:400px\" /></p>\r\n\r\n<p>call by value 就是向函式傳遞參數的值，也就是把參數的值複製給函式，在這種情況下，修改函式內的形式參數並不會影響到函式外的實際參數，所以由上面程式的結果可以看出main裡面的值沒有被影響。</p>\r\n\r\n<p>call by reference就是向函式傳遞參數的引用，也就是說他把引用的地址複製給函式。在函式裡面該引用會訪問要用到的實際參數，所以在函式內修改參數會影響實際參數，從上面程式結果可看出x的值被改變了。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "39",
+        "lang": "1"
+    }
+}

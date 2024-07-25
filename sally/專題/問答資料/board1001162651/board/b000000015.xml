@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:19" type="post" filename="b000000015.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162651</board_id>
+  <node>000000015</node>
+  <site>1000110001</site>
+  <pt>2022-10-31 23:55:07</pt>
+  <poster>11027108</poster>
+  <realname>&#x5442;&#x5EAD;&#x744B;  </realname>
+  <email>vivian.lu1011@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>130. &#x5BEB;Python&#x7A0B;&#x5F0F;&#x78BC;&#x5BE6;&#x73FE;&#x8FD1;&#x4F3C;C++ class&#x96B1;&#x85CF;&#x8CC7;&#x6599;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4E26;&#x6307;&#x51FA;&#x5DEE;&#x7570;&#x3002; </subject>
+  <content>&lt;p&gt;&lt;img alt="" src="/user/1/1/11027108/images/%E9%99%90%E6%99%82%E6%90%B6%E7%AD%94.jpg" style="height:872px; width:787px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x88DC;&#x5145;&#x8AAA;&#x660E; : Python &#x985E;&#x5225;&#x4E2D;&#x7684;def __init__(self) &#x70BA;&#x985E;&#x5225;&#x5BA3;&#x544A;&#x6642;&#x6703;&#x81EA;&#x52D5;&#x57F7;&#x884C;&#x7684;&#x51FD;&#x5F0F;&#xFF0C;&#x985E;&#x4F3C;&#x65BC;constructor&#x7684;&#x4F5C;&#x7528;&#xFF1B;&#x51FD;&#x6578;&#x7684;&#x7B2C;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x70BA;&#x5BE6;&#x4F8B;&#x5C0D;&#x8C61;&#x672C;&#x8EAB;&#xFF0C;&#x901A;&#x5E38;&#x5BEB;&#x70BA;self&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Python v.s. C++ :&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Python&#x4E2D;private&#x7684;&#x5BEB;&#x6CD5;&#x70BA;&amp;quot;&#x96D9;&#x5E95;&#x7DDA;&#x547D;&#x540D;&amp;quot; : __studentID&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7531;&#x65BC;Python&#x6C92;&#x6709;&#x56B4;&#x8B39;&#x5B9A;&#x7FA9;private&#x7684;&#x6A5F;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x62FF;&#x5230;private member : st._Student__studentID ( &#x5BA3;&#x544A;&#x540D;&#x7A31;+.+_+&#x985E;&#x5225;&#x540D;&#x7A31;+private member&#x540D;&#x7A31;&amp;nbsp;)&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>17</hit>
+  <lang>1</lang>
+</data>

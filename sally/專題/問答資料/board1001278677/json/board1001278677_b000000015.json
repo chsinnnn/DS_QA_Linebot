@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-07-07 09:51:50",
+        "poster": "10927230",
+        "realname": "劉又誠",
+        "email": "peter082323@gmail.com",
+        "homepage": null,
+        "subject": "搶答110",
+        "content": "<p>#include &lt;iostream&gt;<br />\r\nusing namespace std ;<br />\r\nint sum( int a, int b ) {<br />\r\n&nbsp;&nbsp; &nbsp;a = 7 ;<br />\r\n&nbsp;&nbsp; &nbsp;return a + b ;<br />\r\n}</p>\r\n\r\n<p>int main()<br />\r\n{<br />\r\n&nbsp; &nbsp;int a = 2 ;<br />\r\n&nbsp; &nbsp;int b = 3 ;<br />\r\n&nbsp; &nbsp;cout &lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; endl ;<br />\r\n&nbsp; &nbsp;cout &lt;&lt; sum( a, b ) &lt;&lt; endl ;&nbsp;<br />\r\n&nbsp; &nbsp;cout &lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; endl ;<br />\r\n}</p>\r\n\r\n<p>輸出</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10927230/images/image77\" style=\"height:91px; width:125px\" /></p>\r\n\r\n<p>可以看到就算sum中更改a的值，執行function後a的值還是不變，因為call by value只傳值進去function</p>\r\n\r\n<p>不會動到a記憶體位址裡面的東西</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

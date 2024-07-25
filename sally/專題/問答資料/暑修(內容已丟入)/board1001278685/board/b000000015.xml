@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:44" type="post" filename="b000000015.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278685</board_id>
+  <node>000000015</node>
+  <site>1000110001</site>
+  <pt>2023-07-23 14:20:25</pt>
+  <poster>06005771</poster>
+  <realname>&#x838A;&#x660E;&#x9D3B;  </realname>
+  <email>mattsonc204@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;220 </subject>
+  <content>&lt;p&gt;&#x5047;&#x8A2D;&#x6709;&#x4E00;&#x500B;&#x4E8C;&#x5143;&#x6A39;&#xFF0C;&#x5176;&#x7BC0;&#x9EDE;&#x7D50;&#x69CB;&#x5982;&#x4E0B;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; /&amp;nbsp; &amp;nbsp; &amp;nbsp;\&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; 2&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; /&amp;nbsp; &amp;nbsp;\&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;4&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;5&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 6&lt;/p&gt;&#xD;
+&#xD;
+&lt;ol&gt;&#xD;
+	&lt;li&gt;&#x524D;&#x5E8F;&#x904D;&#x6B77;&#xFF08;preorder traversal&#xFF09;&#xFF1A; &#x524D;&#x5E8F;&#x904D;&#x6B77;&#x5148;&#x8A2A;&#x554F;&#x6839;&#x7BC0;&#x9EDE;&#xFF0C;&#x7136;&#x5F8C;&#x6309;&#x7167;&#x5DE6;&#x5B50;&#x6A39;&#x548C;&#x53F3;&#x5B50;&#x6A39;&#x7684;&#x9806;&#x5E8F;&#x905E;&#x8FF4;&#x8A2A;&#x554F;&#x5B50;&#x6A39;&#x3002;&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x904D;&#x6B77;&#x9806;&#x5E8F;&#xFF1A;1 -&amp;gt; 2 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 3 -&amp;gt; 6&lt;/p&gt;&#xD;
+&#xD;
+&lt;ol start="2"&gt;&#xD;
+	&lt;li&gt;&#x4E2D;&#x5E8F;&#x904D;&#x6B77;&#xFF08;inorder traversal&#xFF09;&#xFF1A; &#x4E2D;&#x5E8F;&#x904D;&#x6B77;&#x5148;&#x905E;&#x8FF4;&#x8A2A;&#x554F;&#x5DE6;&#x5B50;&#x6A39;&#xFF0C;&#x7136;&#x5F8C;&#x8A2A;&#x554F;&#x6839;&#x7BC0;&#x9EDE;&#xFF0C;&#x6700;&#x5F8C;&#x905E;&#x8FF4;&#x8A2A;&#x554F;&#x53F3;&#x5B50;&#x6A39;&#x3002;&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x904D;&#x6B77;&#x9806;&#x5E8F;&#xFF1A;4 -&amp;gt; 2 -&amp;gt; 5 -&amp;gt; 1 -&amp;gt; 3 -&amp;gt; 6&lt;/p&gt;&#xD;
+&#xD;
+&lt;ol start="3"&gt;&#xD;
+	&lt;li&gt;&#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#xFF08;postorder traversal&#xFF09;&#xFF1A; &#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#x5148;&#x905E;&#x8FF4;&#x8A2A;&#x554F;&#x5DE6;&#x5B50;&#x6A39;&#xFF0C;&#x7136;&#x5F8C;&#x905E;&#x8FF4;&#x8A2A;&#x554F;&#x53F3;&#x5B50;&#x6A39;&#xFF0C;&#x6700;&#x5F8C;&#x8A2A;&#x554F;&#x6839;&#x7BC0;&#x9EDE;&#x3002;&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x904D;&#x6B77;&#x9806;&#x5E8F;&#xFF1A;4 -&amp;gt; 5 -&amp;gt; 2 -&amp;gt; 6 -&amp;gt; 3 -&amp;gt; 1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x4E09;&#x7A2E;&#x4E0D;&#x540C;&#x7684;&#x904D;&#x6B77;&#x9806;&#x5E8F;&#x6703;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x8F38;&#x51FA;&#x7D50;&#x679C;&#xFF0C;&#x56E0;&#x70BA;&#x5B83;&#x5011;&#x5728;&#x8A2A;&#x554F;&#x7BC0;&#x9EDE;&#x7684;&#x9806;&#x5E8F;&#x4E0A;&#x6709;&#x6240;&#x5340;&#x5225;&#x3002;&#x5728;&#x5BE6;&#x969B;&#x61C9;&#x7528;&#x4E2D;&#xFF0C;&#x9078;&#x64C7;&#x4F7F;&#x7528;&#x54EA;&#x7A2E;&#x904D;&#x6B77;&#x9806;&#x5E8F;&#x53D6;&#x6C7A;&#x65BC;&#x7279;&#x5B9A;&#x7684;&#x9700;&#x6C42;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;ul&gt;&#xD;
+	&lt;li&gt;&#x524D;&#x5E8F;&#x904D;&#x6B77;&#x901A;&#x5E38;&#x7528;&#x65BC;&#x8907;&#x88FD;&#x4E00;&#x500B;&#x4E8C;&#x5143;&#x6A39;&#x3002;&lt;/li&gt;&#xD;
+	&lt;li&gt;&#x4E2D;&#x5E8F;&#x904D;&#x6B77;&#x5728;&#x4E8C;&#x5143;&#x6A39;&#x662F;&#x300C;&#x4E8C;&#x5143;&#x641C;&#x7D22;&#x6A39;&#x300D;&#xFF08;Binary Search Tree&#xFF09;&#x6642;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&#x5927;&#x5C0F;&#x9806;&#x5E8F;&#x7372;&#x5F97;&#x4E00;&#x500B;&#x6709;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#x3002;&lt;/li&gt;&#xD;
+	&lt;li&gt;&#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#x5E38;&#x7528;&#x65BC;&#x91CB;&#x653E;&#x4E8C;&#x5143;&#x6A39;&#x7684;&#x5167;&#x5B58;&#x3002;&lt;/li&gt;&#xD;
+&lt;/ul&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>20</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:53",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305437",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-11-28 20:24:17",
+        "poster": "11127223",
+        "realname": "陳郁豊",
+        "email": "chenyuli921021@icloud.com",
+        "homepage": null,
+        "subject": "209. 撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。",
+        "content": "<p>//撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; int n;</p>\r\n\r\n<p>&nbsp; // input</p>\r\n\r\n<p>&nbsp; cin &gt;&gt; n;</p>\r\n\r\n<p>&nbsp; int *arr = new int[ n ];</p>\r\n\r\n<p>&nbsp; for ( int i = 0 ; i &lt; n ; i++ ) {</p>\r\n\r\n<p>&nbsp; &nbsp; cin &gt;&gt; arr[ i ];</p>\r\n\r\n<p>&nbsp; } // for</p>\r\n\r\n<p>&nbsp; // insertion sort</p>\r\n\r\n<p>&nbsp; // n is the length of arr</p>\r\n\r\n<p>&nbsp; for ( int i = 1 ; i &lt; n ; i++ ) {</p>\r\n\r\n<p>&nbsp; &nbsp; int key = arr[ i ];</p>\r\n\r\n<p>&nbsp; &nbsp; int j = i - 1;</p>\r\n\r\n<p>&nbsp; &nbsp; while ( j &gt;= 0 &amp;&amp; arr[ j ] &gt; key ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; /*</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; 關鍵在while的條件，用 arr[ j ] &gt; key 來判斷是否要將 arr[ j ] 往後移</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; 在遇到相同的數字時，會結束迴圈，把自己放在已經被排序過的數字（相同且位置在自己前面的數字）的後面</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; 這樣就不會改變相同數字的相對位置</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; */</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; arr[ j + 1 ] = arr[ j ];</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; j--;</p>\r\n\r\n<p>&nbsp; &nbsp; } // while</p>\r\n\r\n<p>&nbsp; &nbsp; arr[ j + 1 ] = key; //&nbsp;把自己放在已經被排序過的數字（相同且位置在自己前面的數字）的後面</p>\r\n\r\n<p>&nbsp; } // for</p>\r\n\r\n<p>&nbsp; // output</p>\r\n\r\n<p>&nbsp; for ( int i = 0 ; i &lt; n ; i++ ) {</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; arr[ i ] &lt;&lt; &quot; &quot;;</p>\r\n\r\n<p>&nbsp; } // for</p>\r\n\r\n<p>&nbsp; cout &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; return 0;</p>\r\n\r\n<p>} // main</p>",
+        "attach": "209.cpp\tWM6565dbec8f0fa.cpp",
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

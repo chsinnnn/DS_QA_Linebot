@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:51:38" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305440</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-12-20 08:27:46</pt>
+  <poster>11127246</poster>
+  <realname>&#x9673;&#x67CF;&#x52AD;  </realname>
+  <email>imagirlfukk@gmail.com</email>
+  <homepage> </homepage>
+  <subject>226. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;&#x518D;&#x522A;&#x9664;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x6642;&#x61C9;&#x8003;&#x616E;&#x5230;&#x4EE5;&#x4E0B;&#x5E7E;&#x7A2E;&#x60C5;&#x6CC1;&#xFF0C;1.&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x70BA;&#x8449;&#x7BC0;&#x9EDE;&#xFF0C;2.&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x64C1;&#x6709;&#x5DE6;&#x6216;&#x53F3;&#x7684;&#x5B50;&#x7BC0;&#x9EDE;&#xFF0C;3. &#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x540C;&#x6642;&#x64C1;&#x6709;&#x5DE6;&#x8207;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node* deleteNode(struct Node* root, int k)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;// &#x57FA;&#x672C;&#x689D;&#x4EF6;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if (root == NULL)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return root;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;// &#x905E;&#x8FF4;&#x547C;&#x53EB;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if (root-&amp;gt;key &amp;gt; k) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&#x67E5;&#x627E;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;root-&amp;gt;left = deleteNode(root-&amp;gt;left, k);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return root;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;else if (root-&amp;gt;key &amp;lt; k) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp;&#x67E5;&#x627E;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;root-&amp;gt;right = deleteNode(root-&amp;gt;right, k);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return root;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x60C5;&#x6CC1;node&#x4E0D;&#x70BA;&#x7A7A;&#x4E14;&#x4EE5;&#x70BA;&#x8981;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;// case1 &amp;amp; case2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if (root-&amp;gt;left == NULL) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;struct Node* temp = root-&amp;gt;right;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;free(root);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return temp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;else if (root-&amp;gt;right == NULL) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;struct Node* temp = root-&amp;gt;left;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;free(root);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return temp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;// case3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;else {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#x5B9A;&#x7FA9;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x7684;&#x6700;&#x5DE6;&#x7BC0;&#x9EDE;(succ) &#x53CA;&#x5B83;&#x7684;&#x7236;&#x7BC0;&#x9EDE;(succParent )&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;struct Node* succParent = root;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;struct Node* succ = root-&amp;gt;right;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //&#x7528;&#x8FF4;&#x5708;&#x627E;&#x5230;&#x9019;&#x5169;&#x7BC0;&#x9EDE;&#x7684;&#x4F4D;&#x7F6E;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;while (succ-&amp;gt;left != NULL) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;succParent = succ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;succ = succ-&amp;gt;left;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// &#x5982;&#x679C;succParent &#x662F;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE; &#x5C07; succ&#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x7D66;succParent&amp;nbsp; &#x5DE6;&#x5B50;&#x7BC0;&#x9EDE; &#x56E0;&#x70BA;succParent &#x5728;&#x66F4;&#x65B0;&#x5F8C;&#x6703;&#x6BD4;succ&#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x5927;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// &#x5982;&#x679C;&#x4E0D;&#x662F;&#x7684;&#x8A71;&#x5C31;&#x7C21;&#x55AE;&#x628A;succ&#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x7D66;succParent &#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if (succParent != root)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;succParent-&amp;gt;left = succ-&amp;gt;right;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;else&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;succParent-&amp;gt;right = succ-&amp;gt;right;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;// &#x8986;&#x84CB;&#x8CC7;&#x6599;&#x7D66;&#x8981;&#x88AB;&#x522A;&#x6389;&#x7684;node&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;root-&amp;gt;key = succ-&amp;gt;key;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;// &#x91CB;&#x653E;succ&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;free(succ);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return root;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+&#x5229;&#x7528;&#x4EE5;&#x4E0B;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x7576;&#x7BC4;&#x4F8B;&#xFF0C;&lt;br /&gt;&#xD;
+&lt;img alt="" src="/user/1/1/11127246/images/TYWEE00.png" style="height:398px; width:450px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F9D;&#x7167;&#x4E0A;&#x8FF0;&#x60C5;&#x5F62;&#x5206;&#x985E;&#xFF0C;case1: 2, 5, 9, 12&amp;nbsp; case2:&amp;nbsp;1 , case3: 7, 3, 10&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5148;&#x53D6;case1 &#x88E1;&#x7684;2 &#x7576;&#x7BC4;&#x4F8B;&#xFF0C;&#x82E5;&#x8981;&#x522A;&#x9664;&#x7BC0;&#x9EDE;2&#x90A3;&#x6211;&#x5011;&#x5C31;&#x9700;&#x8981;&#x627E;&#x5230;&#x7BC0;&#x9EDE;2 &#x7684;&#x7236;&#x7BC0;&#x9EDE;&#x7136;&#x5F8C;&#x5C07;&#x7236;&#x7BC0;&#x9EDE;&#x7684;&#x53F3;&#x7BC0;&#x9EDE;&#x6307;&#x5411;NULL &#xFF0C;&#x6700;&#x5F8C;&#x628A;&#x7BC0;&#x9EDE;2 &#x7684;&#x8CC7;&#x6599;&#x505A;&#x91CB;&#x653E;&#x3002;&#x6A39;&#x5728;&#x522A;&#x9664;&#x7BC0;&#x9EDE;2&#x5F8C;&#x7684;&#x60C5;&#x6CC1;&lt;br /&gt;&#xD;
+&lt;img alt="" src="/user/1/1/11127246/images/tw001.png" style="height:530px; width:908px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5982;&#x679C;&#x8981;&#x522A;&#x9664;1&#x7684;&#x8A71;(case2): &#x7BC0;&#x9EDE;&#x4E09;&#x7684;&#x5DE6;&#x7BC0;&#x9EDE;&#x5411;&#x4E0B;&#x63A5;&#x63A5;&#x5230;&#x7BC0;&#x9EDE;2&amp;nbsp;&#x5F8C;&#x91CB;&#x653E;&#x7BC0;&#x9EDE;1&#x7684;&#x8CC7;&#x6599;&#x3002;&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&lt;img alt="" src="/user/1/1/11127246/images/tw001(1).png" style="height:530px; width:908px" /&gt;&#x5982;&#x679C;&#x8981;&#x522A;&#x9664;&#x7BC0;&#x9EDE;10&#xFF0C;&#x9700;&#x8981;&#x5148;&#x627E;&#x5230;&#x7BC0;&#x9EDE;10&#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x7684;&#x6700;&#x5DE6;&#x5B50;&#x7BC0;&#x9EDE;(suc)&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x7236;&#x7BC0;&#x9EDE;(Parsuc)&#xFF0C;&#x6AA2;&#x67E5;&#x7BC0;&#x9EDE;(Parsuc)&#x662F;&#x5426;&#x8207;&#x7BC0;&#x9EDE;10&#x4E00;&#x81F4;&#xFF0C;&#x5047;&#x8A2D;&#x4E00;&#x81F4;&#x7684;&#x8A71;(Parsuc)&#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x6307;&#x5411;succ &#x7684;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x3002;&#x5C07;succ&#x7684;&#x8CC7;&#x6599;copy&#x5230;&#x7BC0;&#x9EDE;10&#xFF0C;&#x6700;&#x5F8C;&#x91CB;&#x653E;succ&#x7684;&#x8CC7;&#x6599;&#x3002;&#x522A;&#x9664;&#x7BC0;&#x9EDE;10&#x5F8C;&#x6A39;&#x7684;&#x72C0;&#x6CC1;&#x3002;&lt;img alt="" src="/user/1/1/11127246/images/Untitled(1).png" style="height:446px; width:594px" /&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>33</hit>
+  <lang>1</lang>
+</data>

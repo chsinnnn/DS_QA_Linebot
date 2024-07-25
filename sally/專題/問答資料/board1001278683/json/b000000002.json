@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-07-19 13:49:16",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答206",
+        "content": "<p>206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。</p>\r\n\r\n<p>要實現氣泡排序並提早結束執行時，嚼條件是序列已經完成排序，沒有發生任何元素的交換，就可以提早結束排序過程。</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>void bubbleSort(int arr[], int n) {<br />\r\n&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; n; i++) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 提早結束的標誌<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool isSorted = true;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int j = 0; j &lt; n - i - 1; j++) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (arr[j] &gt; arr[j + 1]) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 交換元素<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap(arr[j], arr[j + 1]);<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isSorted = false;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 如果一次遍歷中沒有發生交換，表示序列已經完成排序<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (isSorted) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp; int arr[] = {64, 34, 25, 12, 22, 11, 90};<br />\r\n&nbsp;&nbsp;&nbsp; int n = sizeof(arr) / sizeof(arr[0]);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; bubbleSort(arr, n);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; cout &lt;&lt; &quot;Sorted array: &quot;;<br />\r\n&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; n; i++) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

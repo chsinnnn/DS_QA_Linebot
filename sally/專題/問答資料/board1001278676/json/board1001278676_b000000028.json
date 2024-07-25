@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000028.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000028",
+        "site": "1000110001",
+        "pt": "2023-07-07 23:45:11",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "限時搶答 101、103-105",
+        "content": "<p><span style=\"font-size:14px\"><strong>101. 以自己的話描述遞迴recursion是什麼。*</strong></span></p>\r\n\r\n<p><span style=\"font-size:14px\">遞迴是透過將一個問題分解成更小的、相同結構的子問題，<br />\r\n然後再運用相同的過程來解決這些子問題。<br />\r\n將每個子問題的解答回傳給上層，就可以貢獻給原始問題來解答，最終得到原始問題的解決結果。<br />\r\n在網路上看到一段與遞迴有關話&quot;To Iterate is Human, to Recurse, Divine&quot;<br />\r\n遞迴相較迴圈程式較精簡且一目瞭然。給我的感覺像是玄學，雖然不像迴圈直覺，但當我們真的理解了就能將它運用的很自如</span></p>\r\n\r\n<p><span style=\"font-size:14px\"><strong>103. 簡介Acker函數，並列出Acker(2,3)的求解過程。</strong></span></p>\r\n\r\n<p><span style=\"font-size:14px\">根據維基百科阿克曼函數是非原始遞迴函數的例子；<br />\r\n它需要兩個自然數作為輸入值，輸出一個自然數。<br />\r\n它的輸出值增長速度非常快即使輸入參數很小，<br />\r\n函數的回傳值也會迅速增長。</span></p>\r\n\r\n<p><span style=\"font-size:14px\">以下是Acker函數的公式</span></p>\r\n\r\n<p><span style=\"font-size:14px\"><img alt=\"\" src=\"/user/0/6/06005952/images/AckermannFunction.png\" style=\"height:91px; width:388px\" /></span></p>\r\n\r\n<p><span style=\"font-size:14px\">圖片來源為:http://notepad.yehyeh.net/Content/DS/CH02/7.php</span></p>\r\n\r\n<p><span style=\"font-size:14px\">&nbsp;1 A(2,3)<br />\r\n&nbsp;2 A(1, A(2,2))<br />\r\n&nbsp;3 A(1, A(1, A(2, 1)))<br />\r\n&nbsp;4 A(1, A(1, A(1, A(2, 0))))<br />\r\n&nbsp;5 A(1, A(1, A(1, A(1, 1))))<br />\r\n&nbsp;6 A(1, A(1, A(1, A(0, A(1, 0)))))<br />\r\n&nbsp;7 A(1, A(1, A(1, A(0, A(0, 1)))))<br />\r\n&nbsp;8 A(1, A(1, A(1, A(0, 2))))<br />\r\n&nbsp;9 A(1, A(1, A(1, 3)))<br />\r\n10 A(1, A(1, A(0, A(1,2))))<br />\r\n11 A(1, A(1, A(0, A(0, A(1, 1)))))<br />\r\n12 A(1, A(1, A(0, A(0, A(0, A(1, 0)))))<br />\r\n13 A(1, A(1, A(0, A(0, A(0, A(0, 1)))))<br />\r\n14 A(1, A(1, A(0, A(0, A(0, 2)))))<br />\r\n15 A(1, A(1, A(0, A(0, 3)))))<br />\r\n16 A(1, A(1, A(0, 4)))))<br />\r\n17 A(1,A(1,5))<br />\r\n18 A(1, A(0, A(1, 4))))<br />\r\n19 A(1, A(0, A(0, A(1, 3))))<br />\r\n.....<br />\r\n21 A(0, A(0,7))<br />\r\n22 A(0, 8)<br />\r\n23 9&nbsp;</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:14px\"><strong>104. 什麼情況下適合使用遞迴？為什麼？*</strong></span></p>\r\n\r\n<p><span style=\"font-size:14px\">當我們在解決問題時遇到無法輕鬆使用迴圈處理時，<br />\r\n最理想的解決方法就是使用遞迴或是當問題具有遞迴性質，<br />\r\n可以透過分解成相同或相似結構的子問題來獲得結果<br />\r\n例如費氏數列:1,1,2,3,5,8,13...</span></p>\r\n\r\n<p><span style=\"font-size:14px\">a<sub>1</sub>= a<sub>2</sub>=1</span></p>\r\n\r\n<p><span style=\"font-size:14px\">a<sub>n=</sub>a<sub>n-1</sub>+a<sub>n-2</sub>(n&gt;=3)<br />\r\n可以使用前後項之間的關係互相描述，這些都適合使用遞迴</span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:14px\"><strong>105. 試描述整數溢位integer overflow的避免方法，並寫出C++程式碼。</strong></span></p>\r\n\r\n<p><span style=\"font-size:14px\">整數溢位是指一個整數變量的值超出了它所能表示的範圍，<br />\r\n導致結果無法正確地表示或被截斷，而避免溢位的方法，是預期變數值會很大的時候，<br />\r\n可以採用 long long 代替 int 或使用 Double 的變數型別，來避免這些情況。<br />\r\n老師助教不好意思，程式的部分有在網路上找到範例但自己寫不出來，所以就沒PO程式碼了</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

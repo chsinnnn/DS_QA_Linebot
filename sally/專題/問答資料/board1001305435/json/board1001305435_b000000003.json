@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-10-22 16:04:04",
+        "poster": "11020126",
+        "realname": "鄭祐昀",
+        "email": "carry0987@gmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<blockquote>\r\n<p>#include &lt;stack&gt;<br />\r\n#include &lt;vector&gt;<br />\r\n#include &lt;cstdlib&gt;<br />\r\n#include &lt;string&gt;</p>\r\n\r\n<p>int evalRPN(std::vector&lt;std::string&gt;&amp; tokens) {<br />\r\n&nbsp; &nbsp; std::stack&lt;int&gt; stack;<br />\r\n&nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; for (std::string&amp; token : tokens) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (token == &quot;+&quot; || token == &quot;-&quot; || token == &quot;*&quot; || token == &quot;/&quot;) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int op2 = stack.top();<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack.pop();<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int op1 = stack.top();<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack.pop();<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (token == &quot;+&quot;)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack.push(op1 + op2);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (token == &quot;-&quot;)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack.push(op1 - op2);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (token == &quot;*&quot;)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack.push(op1 * op2);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } else {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack.push(atoi(token.c_str()));<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; }<br />\r\n&nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; return stack.top();<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; std::vector&lt;std::string&gt; tokens = {&quot;2&quot;, &quot;4&quot;, &quot;6&quot;, &quot;*&quot;, &quot;+&quot;, &quot;7&quot;, &quot;5&quot;, &quot;-&quot;, &quot;*&quot;};<br />\r\n&nbsp; &nbsp; std::cout &lt;&lt; evalRPN(tokens); // Output: -12<br />\r\n&nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n</blockquote>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

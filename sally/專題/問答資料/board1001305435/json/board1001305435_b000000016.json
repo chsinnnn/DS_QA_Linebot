@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-10-30 18:42:00",
+        "poster": "11120427",
+        "realname": "蔡絜茵",
+        "email": "anna0809123@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p>+ * 2 4 6 * - 7 5 不是前序式</p>\r\n\r\n<p>因為（7-5)=2</p>\r\n\r\n<p>下一步就沒有數字與2相乘</p>\r\n\r\n<p>所以並不正確。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

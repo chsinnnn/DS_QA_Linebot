@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:08",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305434",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-10-20 12:25:25",
+        "poster": "11020126",
+        "realname": "鄭祐昀",
+        "email": "carry0987@gmail.com",
+        "homepage": null,
+        "subject": "122. 寫C++程式碼說明傳參考呼叫call by reference。",
+        "content": "<blockquote>\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>// 函數定義<br />\r\nvoid swap(int &amp;x, int &amp;y) {<br />\r\n&nbsp; &nbsp; int temp;<br />\r\n&nbsp; &nbsp; temp = x; //將x的值儲存至臨時變數<br />\r\n&nbsp; &nbsp; x = y; &nbsp; &nbsp;//將y的值傳給x<br />\r\n&nbsp; &nbsp; y = temp; //將臨時變數的值傳給y<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int a = 100;<br />\r\n&nbsp; &nbsp; int b = 200;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;在交換前，a的值 ：&quot; &lt;&lt; a &lt;&lt; &quot;, b的值 :&quot; &lt;&lt; b &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; /* 用swap將值交換 */<br />\r\n&nbsp; &nbsp; swap(a, b);</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;在交換後，a的值 ：&quot; &lt;&lt; a &lt;&lt; &quot;, b的值 :&quot; &lt;&lt; b &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n</blockquote>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

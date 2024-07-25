@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-03 01:43:54",
+        "poster": "10942208",
+        "realname": "陳洺安",
+        "email": "asd0389wsx0216@gmail.com",
+        "homepage": null,
+        "subject": "110",
+        "content": "<p>Static Array : 靜態</p>\r\n\r\n<p>1.大小固定(記憶體空間在編譯時進行分配)</p>\r\n\r\n<p>2.存取速度較快</p>\r\n\r\n<p>Dynamic Array : 動態</p>\r\n\r\n<p>1.大小可變(記憶體空間在執行時根據需求進行分配)</p>\r\n\r\n<p>2.速度較慢</p>\r\n\r\n<p>我在作業一使用 new&nbsp;</p>\r\n\r\n<p>graph = new char*[row];&nbsp; &nbsp;// graph是一個指標陣列，每個元素都是一個指向char型態的指標<br />\r\nfor (int i = 0; i &lt; row; i++) {<br />\r\n&nbsp; &nbsp; graph[i] = new char[column]; // 每次創建長度column的字元陣列，指標附值給graph<br />\r\n&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; c; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graph[i][j] = &#39;0&#39;;&nbsp; // 初始化為&#39;0&#39;<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp;}</p>\r\n\r\n<p>&nbsp;}</p>\r\n\r\n<p>// 其他: malloc 分配</p>\r\n\r\n<p>char** graph = (char**)malloc(row * sizeof(char*));</p>\r\n\r\n<p>for (int i = 0; i &lt; row; ++i) {</p>\r\n\r\n<p>&nbsp; &nbsp;graph[i] = (char*)malloc(column * sizeof(char));</p>\r\n\r\n<p>} // for</p>\r\n\r\n<p>graph是一個指向指標的指標，指向一個指標陣列，每個指標都指向一個字元陣列</p>\r\n\r\n<p>★ 最後不需要使用時 釋放free ，不然會memory leak&nbsp;</p>\r\n\r\n<p>new/malloc 不同</p>\r\n\r\n<p>回傳型別： new return分配的記憶體的指標，而且不需要顯式轉換類型。</p>\r\n\r\n<p>類型安全： 會自動計算需要分配的記憶體空間的大小，不需要手動指定類型的大小，new int 會自動分配足夠大小的整數（int）記憶體。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

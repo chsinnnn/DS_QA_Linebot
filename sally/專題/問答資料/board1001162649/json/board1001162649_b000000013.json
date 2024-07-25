@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2022-10-16 00:50:06",
+        "poster": "11027135",
+        "realname": "李宗諺",
+        "email": "mouth0203lk@gmail.com",
+        "homepage": null,
+        "subject": "116. 將後序式postfix轉前序式prefix，並詳述步驟。",
+        "content": "<p>題目:a b + c * d e + f * + w z + *</p>\r\n\r\n<p>Postfix to Infix :</p>\r\n\r\n<p>1.&nbsp;a + b</p>\r\n\r\n<p>2. ( a + b ) * c</p>\r\n\r\n<p>3. d + e</p>\r\n\r\n<p>4. ( d + e ) * f</p>\r\n\r\n<p>5.&nbsp;&nbsp;( a + b ) * c +&nbsp;( d + e ) * f</p>\r\n\r\n<p>6. w + z</p>\r\n\r\n<p>7. { [ ( a + b ) * c ] + [ ( d + e ) * f&nbsp;&nbsp;] } * ( w + z )</p>\r\n\r\n<p>tips : 將運算子的前面兩個運算元去做運算</p>\r\n\r\n<p>Infix to Prefix:</p>\r\n\r\n<p>1. * { [ ( a + b ) * c ] + [ ( d + e ) * f&nbsp;&nbsp;] }( w + z )</p>\r\n\r\n<p>2. * + [ ( a + b ) * c ] [ ( d + e ) * f&nbsp;&nbsp;] ( w + z )</p>\r\n\r\n<p>3. * + * ( a + b ) c * ( d + e ) f ( w + z )</p>\r\n\r\n<p>4. * + * + a b c * + d e f + w z</p>\r\n\r\n<p>tips : 一個括號一個括號拆掉</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "40",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:02",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162648",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-09-28 22:15:34",
+        "poster": "11027129",
+        "realname": "劉宗崴",
+        "email": "wilson41587@gmail.com",
+        "homepage": null,
+        "subject": "113. 將此後序式postfix轉中序式infix，並詳述步驟。* a b + c * d e + f * + w z + *",
+        "content": "<p>後序表示法: &lt;運算元1&gt; &lt;運算元2&gt; &lt;運算子&gt;</p>\r\n\r\n<p>中序表示法:&lt;運算元1&gt; &lt;運算子&gt; &lt;運算元2&gt;</p>\r\n\r\n<p>後序轉中序:兩個運算子+一個運算為即可轉成中序</p>\r\n\r\n<p><img alt=\"開啟相片\" src=\"https://scontent.xx.fbcdn.net/v/t1.15752-9/308015003_5530003467083383_4373640924627570706_n.jpg?stp=dst-jpg_s320x320&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=aee45a&amp;_nc_ohc=gR-uEdwMrYsAX_8O_t5&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_ht=scontent.xx&amp;oh=03_AVKb5iYUG1EB-1u-HbrmYErxv6ldmVPeE-ry4rWo19FJwg&amp;oe=635B84F5\" /></p>\r\n\r\n<p>P.S.題目原為 * a b + c * d e + f * + w z + *&nbsp;</p>\r\n\r\n<p>因不符合後序，第一個*認定為「註記」</p>\r\n\r\n<p>如有錯誤隨時都可以提出糾正，謝謝</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "57",
+        "lang": "1"
+    }
+}

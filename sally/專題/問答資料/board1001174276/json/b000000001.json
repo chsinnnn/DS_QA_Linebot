@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:51",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174276",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-10-21 20:16:06",
+        "poster": "11027229",
+        "realname": "卓榮暉",
+        "email": "intercoursedr@gmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p>算式 : 2 4 6 * + 7 5 - *<br />\r\n先將 2 4 6 放入 Stack<br />\r\n讀到 * ，將 4 跟 6 從 Stack 中拔掉，計算出 4 * 6 = 24 後 將 24 丟回去 Stack<br />\r\n再讀 + ， 將2跟24從Stack中拔掉，計算出 2 + 24 = 26 後 將 26 丟回去 Stack<br />\r\n然後再將 7 跟 5 丟入 Stack ( Stack 裡面有 26 7 5 )<br />\r\n讀到 - ，將 7 跟 5 取出，計算出 7 - 5 = 2 後 丟回去 Stack<br />\r\n讀到 *， 將 26 跟 2 取出 計算出 26 * 2 = 52後 丟回去 Stack<br />\r\n讀完了，將Stack最上層的元素，也就是答案，送出去<br />\r\nAns. = 52</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027229/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-21%20201423.png\" style=\"height:117px; width:465px\" /></p>\r\n\r\n<p>參考資源 : 老師的影片<br />\r\n想測試自己寫的程式碼 :&nbsp;https://leetcode.com/problems/evaluate-reverse-polish-notation/</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "55",
+        "lang": "1"
+    }
+}

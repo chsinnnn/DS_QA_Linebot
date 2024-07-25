@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:17" type="post" filename="b000000011.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174272</board_id>
+  <node>000000011</node>
+  <site>1000110001</site>
+  <pt>2022-09-26 00:02:15</pt>
+  <poster>11020107</poster>
+  <realname>&#x8607;&#x4F2F;&#x52F3;  </realname>
+  <email>pohsun.su@gmail.com</email>
+  <homepage> </homepage>
+  <subject>109. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x591A;&#x7DAD;&#x9663;&#x5217;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x500B;&#x4EE5;&#x5916;&#xFF0C;&#x5176;&#x9918;&#x90FD;&#x5FC5;&#x9808;&#x6307;&#x5B9A;&#xFF0C;&#x5426;&#x5247;&#x6703;&#x62CB;&#x51FA;&#x932F;&#x8AA4;(&#x4EE5;arr2&#x70BA;&#x4F8B;)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr1[][4] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 } };&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr2[][][] = { { { 1, 2, 3, 4 } } };&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;arr1 :\n&amp;quot;; // &#x5370;&#x51FA;arr1&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for ( auto &amp;amp;a: arr1 ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;{ &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for ( auto &amp;amp;b: a ) cout &amp;lt;&amp;lt; b &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;}\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // foreach&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // error: declaration of &amp;lsquo;arr2&amp;rsquo; as multidimensional array must have bounds for all dimensions except the first&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x4E00;&#x7DAD;&#x9663;&#x5217;&#x521D;&#x59CB;&#x503C;&#x70BA;&#x4E0D;&#x540C;&#x975E;&#x96F6;&#x6574;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr3[] = { 1, 2, 3, 4 }; // &#x7B2C;&#x4E00;&#x7A2E;&#x4F5C;&#x6CD5;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr4[4] = { [0] = 1, [1] = 2, [2] = 3, [3] = 4 }; // &#x7B2C;&#x4E8C;&#x7A2E;&#x4F5C;&#x6CD5;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr5[4] = { 1, 2, 3, 4 }; // &#x7B2C;&#x4E09;&#x7A2E;&#x4F5C;&#x6CD5;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;arr3 :\n&amp;quot;; // &#x5370;&#x51FA;arr3&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;{ &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for ( auto &amp;amp;c: arr3 ) cout &amp;lt;&amp;lt; c &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;}\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;arr4 :\n&amp;quot;; // &#x5370;&#x51FA;arr4&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;{ &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for ( auto &amp;amp;d: arr4 ) cout &amp;lt;&amp;lt; d &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;}\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;arr5 :\n&amp;quot;; // &#x5370;&#x51FA;arr5&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;{ &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for ( auto &amp;amp;e: arr5 ) cout &amp;lt;&amp;lt; e &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;}\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x4E00;&#x7DAD;&#x9663;&#x5217;&#x521D;&#x59CB;&#x503C;&#x70BA;&#x540C;&#x4E00;&#x975E;&#x96F6;&#x6574;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr6[] = { 1, 1, 1, 1 }; // &#x5176;&#x5BE6;&#x5C31;&#x662F;&#x628A;arr3&#x3001;arr4&#x3001;arr5&#x7684;&#x6240;&#x6709;&#x503C;&#x8A2D;&#x70BA;&#x540C;&#x4E00;&#x500B;&#xFF0C;&#x5C31;&#x4E0D;&#x5370;&#x51FA;&#x8D05;&#x8FF0;&#x4E86;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr7[] = { [0 ... 3] = 1 }; // &#x7279;&#x6B8A;&#x5BEB;&#x6CD5;&#xFF0C;&#x50C5;&#x9650;GCC&#x7DE8;&#x8B6F;&#x5668;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53C3;&#x7167;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://www.geeksforgeeks.org/different-ways-to-initialize-all-members-of-an-array-to-the-same-value-in-c/"&gt;https://www.geeksforgeeks.org/different-ways-to-initialize-all-members-of-an-array-to-the-same-value-in-c/&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/12990568/passing-2-d-array-as-argument"&gt;https://stackoverflow.com/questions/12990568/passing-2-d-array-as-argument&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="http://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc/Designated-Inits.html"&gt;http://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc/Designated-Inits.html&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/201101/how-to-initialize-all-members-of-an-array-to-the-same-value"&gt;https://stackoverflow.com/questions/201101/how-to-initialize-all-members-of-an-array-to-the-same-value&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://coherence0815.wordpress.com/2016/07/11/initialize-an-array-in-cc/"&gt;https://coherence0815.wordpress.com/2016/07/11/initialize-an-array-in-cc/&lt;/a&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>46</hit>
+  <lang>1</lang>
+</data>

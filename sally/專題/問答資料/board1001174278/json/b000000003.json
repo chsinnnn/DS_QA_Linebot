@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:28",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174278",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-12-02 10:49:49",
+        "poster": "11027202",
+        "realname": "黃楷傑",
+        "email": "nikiwu90@hotmail.com",
+        "homepage": null,
+        "subject": "208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。",
+        "content": "<p>#include&lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>#define MAX&nbsp;10</p>\r\n\r\n<p>void BubbleSort(int array[MAX], int n) {</p>\r\n\r\n<p>&nbsp; &nbsp; for(int p=1 ; p&lt;n ; ++p) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; for(int index=0 ; index&lt; (n-p) ; index++) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(array[index] &gt; array[index+1]) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(array[index],&nbsp;array[index+1]);</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>}</p>\r\n\r\n<p>void swap(int &amp;a, int &amp;b) {</p>\r\n\r\n<p>&nbsp; &nbsp; int temp = a;</p>\r\n\r\n<p>&nbsp; &nbsp; a = b;</p>\r\n\r\n<p>&nbsp; &nbsp; b = temp;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>影響氣泡排序是否穩定stable的關鍵指令:&nbsp; if(array[index] &gt; array[index+1])</p>\r\n\r\n<p>如果將&gt;換成&gt;=，就可能造成同樣大小的資料之先後順序不同</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

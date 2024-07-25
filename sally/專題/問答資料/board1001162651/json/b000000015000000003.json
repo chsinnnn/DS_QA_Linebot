@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000015000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000015000000003",
+        "site": "1000110001",
+        "pt": "2022-11-01 00:00:16",
+        "poster": "11027109",
+        "realname": "吳昀蔚",
+        "email": "wing222430@gmail.com",
+        "homepage": null,
+        "subject": "Re: 130. 寫Python程式碼實現近似C++ class隱藏資料的效果，並指出差異。",
+        "content": "<p>簡潔且補充說明與比較的部分也淺顯易懂。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

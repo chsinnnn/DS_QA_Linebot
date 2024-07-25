@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:36",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305432",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-10-11 16:45:02",
+        "poster": "11127245",
+        "realname": "薛宏毓",
+        "email": "a0975809594@gmail.com",
+        "homepage": null,
+        "subject": "113. 將此後序式postfix轉中序式infix，並詳述步驟。 a b + c * d e + f * + w z + *",
+        "content": "<p>1. (ab+)c*(de+)f*+(wz+)*</p>\r\n\r\n<p>由於postfix是依照&quot;左-&gt;右-&gt;中&quot;來輸出，所以我們景需要先將其節點最下端的合成就行，寫成式子的postfix會有一個特點，就是當有兩個數字連在一起時，其為該分支的最後兩個節點，故將其進行運算，而運算符號則為他們的右方(左-&gt;右-&gt;中)</p>\r\n\r\n<p>2. [(a+b)c* ][ (d+e)f*]+(w+z)*</p>\r\n\r\n<p>然後我們因為將其代數化，所以只要將括號內的看成一個代數，並繼續我們之前的邏輯進行運算</p>\r\n\r\n<p>3. {[(a+b)*c][(d+e)*f]+}(w+z)*</p>\r\n\r\n<p>4. {[(a+b)*c]+[(d+e)*f]}(w+z)*</p>\r\n\r\n<p>5. { [ (a + b) * c ]+[ ( d + e ) * f ] } * ( w + z )</p>\r\n\r\n<p>即可達成infix排序</p>\r\n\r\n<p>若要將infix回推成postfix則將上面完成的運算符號在該括號內往右推即可(若沒有括號則直接推到最右端)，最後刪除括號即完成</p>\r\n\r\n<p>若要將infix回推成prefix則將上面完成的運算符號在該括號內往左推即可(若沒有括號則直接推到最左端)，最後刪除括號即完成</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

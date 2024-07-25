@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:45",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305433",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-10-07 18:15:06",
+        "poster": "11127239",
+        "realname": "陳映銓",
+        "email": "edan0727@gmail.com",
+        "homepage": null,
+        "subject": "117. 寫C++程式碼說明傳址呼叫call by address。",
+        "content": "<p># include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std ;</p>\r\n\r\n<p>void math( int <span style=\"color:#0000ff\">*</span> x ){</p>\r\n\r\n<p>&nbsp; &nbsp; <span style=\"color:#0000ff\">* </span>x = <span style=\"color:#0000ff\">*</span> x + 1 ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;math_x_location : &quot; &lt;&lt; x &lt;&lt; &quot;\\n&quot; ;&nbsp; &nbsp;// <span style=\"background-color:#afeeee\">印出x所在的記憶體位置(0x...)</span></p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;math_x : &quot; &lt;&lt; <span style=\"color:#0000ff\">*</span> x &lt;&lt; &quot;\\n&quot; ;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// <span style=\"background-color:#afeeee\">印出答案為 1</span></p>\r\n\r\n<p>} // math( int x )</p>\r\n\r\n<p>int main(){</p>\r\n\r\n<p>&nbsp; &nbsp; int x = 0 ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;firse_x : &quot; &lt;&lt; x &lt;&lt; &quot;\\n&quot; ;&nbsp; &nbsp; // <span style=\"background-color:#afeeee\">印出答案為 0</span></p>\r\n\r\n<p>&nbsp; &nbsp; math( <span style=\"color:#0000ff\">&amp;</span> x ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;final_x : &quot; &lt;&lt; x &lt;&lt; &quot;\\n&quot; ;&nbsp; &nbsp; // <span style=\"background-color:#afeeee\">印出答案為 1</span></p>\r\n\r\n<p>} // main</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "66",
+        "lang": "1"
+    }
+}

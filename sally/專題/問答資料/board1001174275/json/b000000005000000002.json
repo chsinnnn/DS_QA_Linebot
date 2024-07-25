@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:46",
+        "@type": "post",
+        "@filename": "b000000005000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174275",
+        "node": "000000005000000002",
+        "site": "1000110001",
+        "pt": "2022-10-25 14:37:43",
+        "poster": "11177010",
+        "realname": "徐海棠",
+        "email": "a0976820176@gmail.com",
+        "homepage": null,
+        "subject": "Re: 121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。",
+        "content": "<p><span style=\"color:#b22222\">Good~清楚明瞭!</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

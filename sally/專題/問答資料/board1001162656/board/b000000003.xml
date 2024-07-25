@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:06:21" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162656</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-01-02 02:07:30</pt>
+  <poster>11027142</poster>
+  <realname>&#x6797;&#x8559;&#x90C1;  </realname>
+  <email>tiffanylin0914@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>226. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;&#x9700;&#x8981;&#x5148;&#x5224;&#x65B7;&#x662F;&#x4E09;&#x7A2E;case&#x7684;&#x54EA;&#x4E00;&#x7A2E;&#x518D;&#x53BB;&#x505A;&#x522A;&#x9664;&#x7684;&#x52D5;&#x4F5C;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Case1: &#x6C92;&#x6709;&#x5B50;&#x7BC0;&#x9EDE;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x522A;&#x6389;&#x9019;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x5047;&#x5982;&#x662F;&#x522A;&#x6389;&#x7236;&#x7BC0;&#x9EDE;&#x7684;&#x53F3;&#x7BC0;&#x9EDE;&#xFF0C;&#x8981;&#x7136;&#x5F8C;&#x5C07;&#x5176;&#x7236;&#x7BC0;&#x9EDE;&#x7684;&#x53F3;&#x7BC0;&#x9EDE;&#x6307;&#x5411;NULL&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027142/images/IMG_0260.jpg" style="height:249px; width:400px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Case2: &#x5982;&#x679C;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x6709;&#x4E00;&#x500B;&#x5B50;&#x7BC0;&#x9EDE;&#xFF0C;&#x90A3;&#x6211;&#x5011;&#x8981;&#x5C07;&#x6B64;&#x7BC0;&#x9EDE;&#x7684;&#x7236;&#x7BC0;&#x9EDE;&#x6307;&#x5411;&#x8981;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&#x7684;&#x5B50;&#x7BC0;&#x9EDE;&#xFF0C;&#x7136;&#x5F8C;&#x518D;&#x522A;&#x9664;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027142/images/IMG_0261.jpg" style="height:259px; width:400px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Case3:&#x7BC0;&#x9EDE;&#x6709;&#x5DE6;&#x53F3;&#x5169;&#x908A;&#x7684;&#x5B50;&#x6A39;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x662F;&#x5728;&#x5DE6;&#x908A;&#xFF0C;&#x5247;&#x53D6;&#x5176;&#x5B50;&#x6A39;&#x7684;&#x6700;&#x53F3;&#x908A;(&#x4E5F;&#x5C31;&#x662F;&#x6700;&#x5927;&#x503C;)&#x4F86;&#x66FF;&#x4EE3;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53CD;&#x4E4B;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x662F;&#x5728;&#x53F3;&#x908A;&#xFF0C;&#x5247;&#x53D6;&#x5176;&#x5B50;&#x6A39;&#x7684;&#x6700;&#x5DE6;&#x908A;(&#x6700;&#x5C0F;&#x503C;)&#x4F86;&#x66FF;&#x4EE3;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027142/images/IMG_0262.jpg" style="height:272px; width:400px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>25</hit>
+  <lang>1</lang>
+</data>

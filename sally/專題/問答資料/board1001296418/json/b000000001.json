@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-09-22 21:48:22",
+        "poster": "11127136",
+        "realname": "彭晨維",
+        "email": "willy921230@gmail.com",
+        "homepage": null,
+        "subject": "106",
+        "content": "<p><span style=\"font-family:新細明體,serif\">一、堆疊溢位：遞迴呼叫通常會在呼叫</span>stack<span style=\"font-family:新細明體,serif\">時建立一個新的函式呼叫偵。呼叫一次遞迴函示，就會向堆疊中傳送一個新的偵，以保存函式的局部變數和返回地址，如果遞迴深度過大，</span>stack<span style=\"font-family:新細明體,serif\">可能會耗盡，導致溢位錯誤。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">二、記憶體洩漏：如果遞迴函式在每次呼叫時分配動態記憶體，但未在遞迴結</span>&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"font-family:新細明體,serif\">束時正確地釋放該記憶體，則可能會導致記憶體洩漏。長時間運行的遞迴可能導致系統的可用記憶體耗盡，最終導致記憶體區段錯誤。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">三、資源不足：某些遞迴問題可能需要大量的遞迴呼叫，這可能會導致系統耗盡其他資源，例如堆疊空間、處理器時間或系統記憶體。當系統資源耗盡時，可能會發生記憶體區段錯誤。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "123",
+        "lang": "1"
+    }
+}

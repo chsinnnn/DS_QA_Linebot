@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:08",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305434",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-10-25 15:16:25",
+        "poster": "11127207",
+        "realname": "楊竣傑",
+        "email": "jacky115526@gmail.com",
+        "homepage": null,
+        "subject": "寫C++程式碼說明傳參考呼叫call by reference",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>void IncrementByReference(int &amp;num);</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; int value = 5;</p>\r\n\r\n<p>&nbsp; std::cout &lt;&lt; &quot;原始值: &quot; &lt;&lt; value &lt;&lt; std::endl; // 呼叫函數並傳參考</p>\r\n\r\n<p>&nbsp; IncrementByReference(value); std::cout &lt;&lt; &quot;函數呼叫後的值: &quot; &lt;&lt; value &lt;&lt; std::endl; return 0;</p>\r\n\r\n<p>}&nbsp;</p>\r\n\r\n<p>IncrementByReference(int &amp;num) {</p>\r\n\r\n<p>&nbsp; &nbsp;num++;</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "5",
+        "lang": "1"
+    }
+}

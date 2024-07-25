@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-07-04 12:06:46",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答102",
+        "content": "<p>102. 試寫出一個遞迴函數找出一群整數的中位數median。</p>\r\n\r\n<p>如果本身有排序好，直接尋找即可，但如果Arr裡為排序，則需要多加排序法先將Arr排序，排序可用Quick sort</p>\r\n\r\n<p>快速排序法來排序</p>\r\n\r\n<p>//本遞迴是利用 Divide and Conquer 來找出中位數。</p>\r\n\r\n<p>int findMedian(int arr[], int start, int end) {</p>\r\n\r\n<p>if (start == end) {</p>\r\n\r\n<p>return arr[start];</p>\r\n\r\n<p>//陣列中只有一個元素，直接當作中位數</p>\r\n\r\n<p>} else if (start + 1 == end) {</p>\r\n\r\n<p>return (arr[start] + arr[end]) / 2; // 當陣列裡有兩個數時，兩個數時的平均值作為平均數。</p>\r\n\r\n<p>}else { //當陣列長度大於二</p>\r\n\r\n<p>int mid = (start + end) / 2;</p>\r\n\r\n<p>int leftMedian = findMedian(arr, start, mid);</p>\r\n\r\n<p>int rightMedian = findMedian(arr, mid + 1, end);</p>\r\n\r\n<p>// 返回左右中位數的平均值當作陣列裡整個數的中位數</p>\r\n\r\n<p>return (leftMedian + rightMedian) / 2;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "40",
+        "lang": "1"
+    }
+}

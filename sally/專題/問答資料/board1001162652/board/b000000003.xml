@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:29" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162652</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2022-11-27 22:26:55</pt>
+  <poster>11027147</poster>
+  <realname>&#x90B1;&#x5CFB;&#x5F65;  </realname>
+  <email>jim97503@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>202. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x4F47;&#x5217;&#x9577;&#x5EA6;queue length&#x3002; </subject>
+  <content>&lt;p&gt;&#x7576;&#x6BCF;&#x4E00;&#x7B46;&#x8CC7;&#x6599;&#x9032;&#x4F47;&#x5217;&#x6642;&#x8A18;&#x9304;&#x6B64;&#x4F47;&#x5217;&#x7684;&#x9577;&#x5EA6;&#xFF0C;&#x4E26;&#x8A2D;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x7D2F;&#x52A0;&#x9019;&#x4E9B;&#x9577;&#x5EA6;&#xFF0C;&#x6700;&#x5F8C;&#x518D;&#x7528;&#x9019;&#x500B;&#x8B8A;&#x6578;&#x9664;&#x4EE5;&#x6709;&#x5E7E;&#x7B46;&#x8CC7;&#x6599;&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4F47;&#x5217;&#x7684;&#x5E73;&#x5747;&#x9577;&#x5EA6;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;totalLen = 0&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x9032;queue&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;totalLen =&amp;nbsp;totalLen + queue.size()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6C92;&#x8CC7;&#x6599;&#x6642;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;averageLen =&amp;nbsp;totalLen / datas.size()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F47;&#x5217;&#x7684;&#x5E73;&#x5747;&#x9577;&#x5EA6;&#x70BA;averageLen&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>18</hit>
+  <lang>1</lang>
+</data>

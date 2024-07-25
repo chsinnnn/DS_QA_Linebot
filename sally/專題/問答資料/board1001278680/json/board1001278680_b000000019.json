@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000019.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000019",
+        "site": "1000110001",
+        "pt": "2023-07-15 20:38:56",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答121",
+        "content": "<p>121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>在播放一系列youtube影片的時候，可以透過循環播放的功能，來把每部影片當作節點，將每部影片串在一起，當整個系列都播放完後，透過指標指向的方式從頭再循環一次，讓這系列影片可以循環播放。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

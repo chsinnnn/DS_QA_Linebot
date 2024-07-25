@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-09-20 20:03:51",
+        "poster": "11127112",
+        "realname": "莊沛儒",
+        "email": "a0922166067@gmail.com",
+        "homepage": null,
+        "subject": "101",
+        "content": "<p><strong><span style=\"font-size:14px\">以自己的話描述遞迴recursion是什麼。</span></strong></p>\r\n\r\n<p>遞迴的目的是為了將一個無法很好直接處理的問題，經過適當的拆解，將它變成一個一個相同的解法，但大小不同的問題，透過進行相同的步驟，最後的到自己想要的到的答案。在遞迴中雖然我們將問題簡化，從而能用更精簡的方式去撰寫程式碼，但不代表遞迴的效率就一定較好，也有可能會發生，回圈跑的效率反而來的比遞迴高。&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "34",
+        "lang": "1"
+    }
+}

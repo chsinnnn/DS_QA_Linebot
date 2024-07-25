@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:22" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174273</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-09-29 00:09:49</pt>
+  <poster>11027229</poster>
+  <realname>&#x5353;&#x69AE;&#x6689;  </realname>
+  <email>intercoursedr@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>114. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x540C;&#x985E;&#x5225;&#x5169;&#x500B;&#x65B9;&#x6CD5;&#x5982;&#x4F55;&#x5BE6;&#x73FE;&#x591A;&#x8F09;overloading </subject>
+  <content>&lt;p&gt;&#x5728;C++&#x4E2D;&#xFF0C;&#x6709; Function Overloading &#x548C; Operator Overloading&#xFF0C;&#x4F46;&#x6B64;&#x984C;&#x662F;&#x8981;&#x8B1B;&#x8FF0; Function Overloading&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x90A3;&#x4EC0;&#x9EBC;&#x662F;Function Overloading&#x5462;?&lt;br /&gt;&#xD;
+1.&#x540C;&#x6A23;&#x540D;&#x7A31;&#x7684;&#x51FD;&#x6578;&#x6709;&#x591A;&#x7A2E;&#x683C;&#x5F0F;&#xFF0C;&#x6216;&#x8AAA;&#x591A;&#x500B;&#x51FD;&#x6578;&#x5171;&#x7528;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x540D;&#x7A31;&lt;br /&gt;&#xD;
+2.&#x53EF;&#x4EE5;&#x5B9A;&#x7FA9;&#x5169;&#x500B;&#x6709;&#x76F8;&#x540C;&#x540D;&#x7A31;&#x7684;&#x51FD;&#x6578;&#xFF0C;&#x4F46;&#x51FD;&#x6578;&#x7C3D;&#x540D; (Signature) &#x5FC5;&#x9808;&#x4E0D;&#x540C;&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x90A3;Function Overloading&#x6709;&#x4EC0;&#x9EBC;&#x597D;&#x8655;&#x5462;?&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1. &#x907F;&#x514D;&#x8A5E;&#x7AAE;&#x7684;&#x597D;&#x8FA6;&#x6CD5;(&#x60F3;&#x60F3;&#x5982;&#x679C;&#x547D;&#x540D;20&#x5E7E;&#x500B;Function&#xFF0C;&#x4F46;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5927;&#x540C;&#x5C0F;&#x7570;)&lt;br /&gt;&#xD;
+2. &#x56E0;&#x70BA;&#x5EFA;&#x69CB;&#x5B50;&#x7684;&#x540D;&#x7A31;&#x5FC5;&#x9808;&#x548C;class name&#x4E00;&#x6A23;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x7522;&#x751F;&#x8A31;&#x591A;&#x5EFA;&#x69CB;&#x5B50;&#x800C;&#x4E0D;&#x6703;&#x767C;&#x751F;&#x932F;&#x8AA4;&lt;br /&gt;&#xD;
+3. &#x8B93;&#x5176;&#x4ED6;&#x958B;&#x767C;&#x8005;&#x80FD;&#x5920;&#x66F4;&#x8F15;&#x9B06;&#x7684;&#x53BB;&#x4F7F;&#x7528;&#x4F60;&#x6240;&#x5BEB;&#x7684;API (&#x4E0D;&#x7528;&#x53BB;&#x80CC;&#x6216;&#x8005;&#x67E5;&#x8A62;&#x5F88;&#x591A;&#x540D;&#x7A31;&#xFF0C;&#x800C;&#x662F;&#x900F;&#x904E;&#x5E36;&#x5165;&#x4E0D;&#x540C;&#x53C3;&#x6578;&#x5F97;&#x51FA;&#x60F3;&#x8981;&#x7684;&#x7D50;&#x679C;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x7528;&#x4F86;&#x793A;&#x7BC4;&#x7684;&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&amp;nbsp;&lt;br /&gt;&#xD;
+#include&amp;lt;bits/stdc++.h&amp;gt; // &#x6211;&#x5F88;&#x62B1;&#x6B49;&amp;nbsp;&lt;br /&gt;&#xD;
+using namespace std; // &#x6211;&#x771F;&#x7684;&#x5F88;&#x62B1;&#x6B49;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x7528;&#x4F86;&#x793A;&#x7BC4;&#x7684;&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&amp;nbsp;&lt;br /&gt;&#xD;
+class Student{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6C92;&#x6709;&#x53C3;&#x6578;&#x7684;&#x5EFA;&#x69CB;&#x5B50;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Student(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; name = &amp;quot;ABC&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; studentID = 0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5177;&#x6709;&#x53C3;&#x6578;&#x7684;&#x5EFA;&#x69CB;&#x5B50;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x81F3;&#x65BC;&#x70BA;&#x4EC0;&#x9EBC;&#x53EF;&#x4EE5;&#x8FA6;&#x5230;&#x548C;&#x524D;&#x9762;&#x7684;method name &#x4E00;&#x6A23; &#x662F;&#x56E0;&#x70BA;&#x6709;overloading&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Student(int ID, string name){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; name = name;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; studentID = ID;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x53D6;&#x5F97;ID&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int getID(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return studentID;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x53D6;&#x5F97;&#x540D;&#x5B57;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;string getName(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return name;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x4E0B;&#x9762;&#x5169;&#x500B;&#x540D;&#x5B57;&#x4E00;&#x6A23;&#x7684;Function&#x53EF;&#x4EE5;&#x540C;&#x6642;&#x5B58;&#x5728; &#x56E0;&#x70BA;&#x53C3;&#x6578;&#x4E0D;&#x540C;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void Change(int id){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; studentID = id;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9019;&#x6A23;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void Change(char c){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;&#x7B11;&#x6B7B;\n&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x4F46;&#x5E95;&#x4E0B;&#x7684;&#x5C31;&#x4E0D;&#x5408;&#x6CD5;&#x4E86; &#x56E0;&#x70BA;&#x8207;&#x4E0A;&#x9762;&#x7684;&#x91CD;&#x8907;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6240;&#x4EE5;&#x5728;&#x4F7F;&#x7528;overloading&#x7684;&#x6642;&#x5019;&#x9084;&#x662F;&#x8981;&#x5C0F;&#x5FC3;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;/*&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void Change(int k){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,k);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;*/&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void Change(int id, string name){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; studentID = id;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; name = name;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6CE8;&#x610F; &#x9019;&#x6A23;&#x662F;&#x6703;&#x51FA;&#x932F;&#x7684;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x96D6;&#x7136;return type&#x4E0D;&#x540C; &#x4F46;&#x5E36;&#x5165;&#x7684;&#x53C3;&#x6578;&#x76F8;&#x540C; &#x56E0;&#x6B64;&#x7121;&#x6CD5;&#x540C;&#x6642;&#x5B58;&#x5728;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;/*&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int Change(int c){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;this -&amp;gt; studentID = id&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return 0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;*/&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9632;&#x6B62;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x7684;&#x7A0B;&#x5F0F;&#x53BB;&#x5B58;&#x53D6;&#x9019;&#x5169;&#x500B;&#x6771;&#x897F;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int studentID;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;string name;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Student a(12,&amp;quot;123&amp;quot;); // Initialize through Constructor with arguments&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Student b; // Initialize through Constructor without arguments&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,a.getID()); // 12&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,b.getID()); // 0&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x540C;&#x6A23;&#x662F;Change&#xFF0C;&#x4F46;&#x96A8;&#x8457;&#x5E36;&#x5165;&#x7684;&#x53C3;&#x6578;&#x4E0D;&#x540C;&#xFF0C;&#x800C;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x679C;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;a.Change(345);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;b.Change(87,&amp;quot;DEF&amp;quot;); &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,a.getID()); // 345&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%s\n&amp;quot;,a.getName().c_str()); // 123&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,b.getID()); // 87&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%s\n&amp;quot;,b.getName().c_str()); // DEF&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9084;&#x6709;&#x4E00;&#x500B;&#x6771;&#x897F;&#x5F88;&#x5E38;&#x88AB;&#x641E;&#x6DF7; &#x90A3;&#x5C31;&#x662F;Override&lt;br /&gt;&#xD;
+&#x81F3;&#x65BC;&#x4EC0;&#x9EBC;&#x662F;Override&#xFF0C;&#x5C31;&#x5148;&#x4E0D;&#x8A0E;&#x8AD6;&#x4E86;&#xFF0C;&#x6709;&#x8208;&#x8DA3;&#x7684;&#x4EBA;&#x53EF;&#x4EE5;Google&#x4E00;&#x4E0B;&lt;br /&gt;&#xD;
+(&#x53C3;&#x8003;&#x8CC7;&#x6E90;:&amp;nbsp;&lt;br /&gt;&#xD;
+http://kaiching.org/pydoing/cpp/cpp-overload.html&lt;br /&gt;&#xD;
+https://openhome.cc/Gossip/CppGossip/OverloadedFunction.html&lt;br /&gt;&#xD;
+https://notfalse.net/58/overload)&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>141</hit>
+  <lang>1</lang>
+</data>

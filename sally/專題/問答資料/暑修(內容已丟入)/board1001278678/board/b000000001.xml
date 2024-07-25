@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 01:05:54</pt>
+  <poster>06005727</poster>
+  <realname>&#x9673;&#x5F65;&#x52F3;  </realname>
+  <email>cys890403@gmail.com</email>
+  <homepage> </homepage>
+  <subject>&#x6436;&#x7B54;113 </subject>
+  <content>&lt;p&gt;&#x554F;113&#xFF1A;&#x5C07;&#x6B64;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x4E2D;&#x5E8F;&#x5F0F;infix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002;a b + c * d e + f * + w z +*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B54;113&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1.(a+b), c, *, (d+e), f, *, +, (w+z), *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2.((a+b)*c), ((d+e)*f), +, (w+z), *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;3. (((a+b)*c)+ ((d+e)*f)), (w+z), *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;4. ((((a+b)*c)+ ((d+e)*f))*&amp;nbsp;(w+z))&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>56</hit>
+  <lang>1</lang>
+</data>

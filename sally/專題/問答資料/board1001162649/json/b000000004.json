@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-10-08 00:24:26",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "120. 舉例說明使用雙向鏈結串列doubly linked list的情境。",
+        "content": "<p>鏈結串列像是一節一節的火車，如果乘客只有一個方向可以走，就代表錯過了只能從頭再開始找，倘若我們使用了雙向鏈結串列，就代表我們可以來去自如，想從第八節車廂找到第四節車廂廁所都不是問題，但缺點是需要的記憶體變多。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "33",
+        "lang": "1"
+    }
+}

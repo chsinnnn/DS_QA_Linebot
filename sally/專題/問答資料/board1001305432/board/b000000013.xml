@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:36" type="post" filename="b000000013.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305432</board_id>
+  <node>000000013</node>
+  <site>1000110001</site>
+  <pt>2023-10-11 20:46:53</pt>
+  <poster>11127232</poster>
+  <realname>&#x6797;&#x923A;&#x5BB8;  </realname>
+  <email>sam179851@gmail.com</email>
+  <homepage> </homepage>
+  <subject>112. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5169;&#x500B;&#x985E;&#x5225;&#x9593;&#x7684;&#x7E7C;&#x627F;inheritance&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class People {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;protected:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int&amp;nbsp;&amp;nbsp; &amp;nbsp;pro = 0;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void dance() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; pro &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int pri = 1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void sing() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; pri &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int pub = 2;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void cry() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; pub &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class Students : public People {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void write() {&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; d &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; pro &amp;lt;&amp;lt; endl; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; pub &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// cout &amp;lt;&amp;lt; pri &amp;lt;&amp;lt; endl; ( &#x7236;&#x985E;&#x5225;private&#x4E2D;&#x7684;&#x8B8A;&#x6578;&#x3001;&#x51FD;&#x5F0F;&#x7121;&#x6CD5;&#x88AB;&#x5176;&#x5B50;&#x985E;&#x5225;&#x4F7F;&#x7528; )&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int d = -1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Students man;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;man.write();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7236;&#x985E;&#x5225;&#x70BA;People&#xFF0C;&#x800C;&#x5176;&#x5B50;&#x985E;&#x5225;&#x70BA;Students&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E00;&#x500B;&#x5B50;&#x985E;&#x5225;( Students )&#x7684;&#x7269;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;/&#x63A7;&#x5236;&#x7236;&#x985E;&#x5225;( People )&#x88E1;&#x5728;public&#x53CA;protected&#x4E2D;&#x6240;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x53CA;&#x51FD;&#x5F0F;&#x3002;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>17</hit>
+  <lang>1</lang>
+</data>

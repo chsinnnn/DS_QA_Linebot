@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000003000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000003000000001",
+        "site": "1000110001",
+        "pt": "2022-09-14 23:38:26",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>講得不錯，這門課在本學期末確實會讓同學實作二元搜尋樹，應該就不用強制規定要使用遞迴了。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

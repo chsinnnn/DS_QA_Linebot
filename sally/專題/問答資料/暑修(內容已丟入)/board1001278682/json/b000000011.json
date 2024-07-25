@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-07-21 02:20:33",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答201",
+        "content": "<p>201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time。</p>\r\n\r\n<p>假設我們有以下資訊：</p>\r\n\r\n<p>1.進入佇列的時間：記錄每個人進入佇列的時間點。</p>\r\n\r\n<p>2. 完成服務的時間：記錄每個人完成服務的時間點。</p>\r\n\r\n<p>計算每個人的Waiting Time&nbsp;的方法是：等候時間 = 完成服務的時間 - 進入佇列的時間</p>\r\n\r\n<p>平均等候時間 (Average Waiting Time) 則是將所有人等候時間的全部相加然後除以佇列中的人數：</p>\r\n\r\n<p>平均等候時間 = &Sigma;(每個人的等候時間) / 佇列中的人數</p>\r\n\r\n<p>一個簡單的範例來說明：</p>\r\n\r\n<p>假設佇列中有5個人進行服務，並已知以下資訊：</p>\r\n\r\n<p>Person 1：進入佇列時間 = 0, 完成服務時間 = 5</p>\r\n\r\n<p>Person 2：進入佇列時間 = 2, 完成服務時間 = 10</p>\r\n\r\n<p>Person 3：進入佇列時間 = 5, 完成服務時間 = 15</p>\r\n\r\n<p>Person 4：進入佇列時間 = 8, 完成服務時間 = 20</p>\r\n\r\n<p>Person 5：進入佇列時間 = 12, 完成服務時間 = 25</p>\r\n\r\n<p>計算每個人的等候時間：</p>\r\n\r\n<p>Person 1：等候時間 = 5 - 0 = 5</p>\r\n\r\n<p>Person 2：等候時間 = 10 - 2 = 8</p>\r\n\r\n<p>Person 3：等候時間 = 15 - 5 = 10</p>\r\n\r\n<p>Person 4：等候時間 = 20 - 8 = 12</p>\r\n\r\n<p>Person 5：等候時間 = 25 - 12 = 13</p>\r\n\r\n<p>再來計算平均等候時間&nbsp;= (5 + 8 + 10 + 12 + 13) / 5 = 9.6</p>\r\n\r\n<p>因此，這個單一佇列模擬的平均等候時間為9.6個時間單位。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

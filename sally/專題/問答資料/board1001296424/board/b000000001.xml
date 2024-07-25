@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:30" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296424</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-11-16 20:54:26</pt>
+  <poster>11127139</poster>
+  <realname>&#x9673;&#x3000;&#x6069;  </realname>
+  <email>a04182596@gmail.com</email>
+  <homepage> </homepage>
+  <subject>208 </subject>
+  <content>&lt;p&gt;208. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5F71;&#x97FF;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002;&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&#x5224;&#x65B7;&#x7684;&#x4EA4;&#x63DB;&#x689D;&#x4EF6;&#xFF1A;arr[j] &amp;gt; arr[j+1]&lt;br /&gt;&#xD;
+&#x82E5;&#x6539;&#x70BA;arr[j] &amp;gt;= arr[j+1]&#x5247;&#x6703;&#x6539;&#x8B8A;&#x76F8;&#x540C;&#x6578;&#x503C;&#x7684;&#x9806;&#x5E8F;&#xFF0C;unstable&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void swap(int &amp;amp;a, int &amp;amp;b) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;int temp = a;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;a = b;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;b = temp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void bubbleSort( int arr[], int n ) {&lt;br /&gt;&#xD;
+&amp;nbsp; for (int i = 1; i &amp;lt; n; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = 0; j &amp;lt; n-i; j++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x95DC;&#x9375;&#x6307;&#x4EE4;&#xFF0C;&#x82E5;&#x6539;&#x70BA;arr[j] &amp;gt;= arr[j+1]&#x5247;&#x975E;stable&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (arr[j] &amp;gt; arr[j+1])&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; swap(arr[j], arr[j+1]);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void printArray(int arr[], int size) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for (int i=0; i &amp;lt; size; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;std::cout &amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;std::cout &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;int arr[] = {64, 34, 25, 12, 22, 11, 90, 12, 25};&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;int n&amp;nbsp;= sizeof(arr) / 4;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;std::cout &amp;lt;&amp;lt; &amp;quot;Unsorted array: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;printArray(arr, n);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; bubbleSort(arr, n);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;std::cout &amp;lt;&amp;lt; &amp;quot;Sorted array: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;printArray(arr, n);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>26</hit>
+  <lang>1</lang>
+</data>

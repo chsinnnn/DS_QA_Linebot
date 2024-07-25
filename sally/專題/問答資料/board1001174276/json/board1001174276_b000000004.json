@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:51",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174276",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-10-23 23:58:44",
+        "poster": "11027202",
+        "realname": "黃楷傑",
+        "email": "nikiwu90@hotmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p>1. 將2,4,6依序放入stack</p>\r\n\r\n<p>2. 讀進*，從stack中取出6和4，做運算4*6=24，將24放入stack</p>\r\n\r\n<p>3. 讀進+，從stack中取出24和2，做運算2+24=26，將26放入stack</p>\r\n\r\n<p>4.&nbsp;將7,5依序放入stack</p>\r\n\r\n<p>5.&nbsp;讀進-，從stack中取出5和7，做運算7-5=2，將2放入stack</p>\r\n\r\n<p>6. 讀進*，從stack中取出26和2，做運算2*26=52，將52放入stack</p>\r\n\r\n<p>7. 沒有東西讀進來，stack中的52即為最終答案</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "34",
+        "lang": "1"
+    }
+}

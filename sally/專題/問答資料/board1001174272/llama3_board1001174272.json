@@ -1,0 +1,212 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\nusing namespace std;\n\nint main(){\n    int nums[5] = {1, 2, 3, 4, 5};\n}",
+        "output": "讚 👍 讚! good good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列 : 長度固定， 優點 :  不需額外連結欄位，較省記憶體    缺點 : 陣列長度無法更改，插入元素較麻煩\n\n動態陣列 : 長度可改變， 優點 : 可以改變陣列長度，中間插入元素相比靜態陣列方便 缺點 :   每筆資料需額外連接，較浪費記憶體",
+        "output": "👍 條列方便對比。 👍 good"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列:在stack上儲存 優點:固定大小，儲存空間由編譯器決定，用完系統會釋放記憶體不占空間。 缺點:資料增減不便。\n\n動態陣列:在heap上儲存 優點:大小可改變，有效利用儲存空間。 缺點:使用完要手動釋放，可能造成記憶體洩漏。",
+        "output": "有效裡用儲存空間\n\n錯字！ 讚 👍 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 當呼叫stack過大，遞迴呼叫會造成記憶體區段錯誤",
+        "output": "呼叫stack 是指什麼？請詳述！ 可惜點讚數和回應數都偏低。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 在一個程式開始時或是一個線程建立時，\n會事先占用一個固定大小(大小取決於編譯器設定)的記憶體空間用來存放呼叫堆疊。\n\n函數呼叫時，會把上一層的函數(呼叫此函數的函數)所使用的子堆疊基底位置放入上一層函數的子堆疊中，\n以及放入函數呼叫結束後下一個執行指令的位置，\n然後才會在呼叫堆疊上放入一個子堆疊(這個子堆疊是疊在上一層函數的子堆疊上面)\n接著把靜態變數放入子堆疊中。\n同時為了防止這個函數執行完後改變上一個函數呼叫前的暫存器數值，導致運算錯誤，\n所以這個子堆疊也會放入會在這個函數用到的暫存器原本的數值，在函數執行完後再把它押出並放回原位，\n所以此時的呼叫堆疊大概會長這樣(視編譯器而定，但大致上應該是長這樣)\n\n\n\n在函數執行結束後，這個子堆疊才會從呼叫堆疊中押出。\n\n而在遞迴的時候，如果遞迴時不斷在呼叫堆疊上放入東西\n導致最後呼叫堆疊沒有空間放入新的子堆疊時，便會導致下一個函數無法順利執行，\n此時便會發生Stack Overflow.",
+        "output": "Excellent!\n\nAdd a citation if the text or figures were borrowed from others. 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 1.遞迴呼叫階層數太多  or\n\n2.遞迴未正確設定終止條件  or\n\n3.遞迴未如預期達到終止條件  then\n\n-&gt; Stack Overflow -&gt;試圖存取 無權限/不合法/不存在 的記憶體區段 -&gt;Memory Segment Fault",
+        "output": "Great!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nint main()\n{\n    int arr[]={100,2,3,4};\n    for(auto i=arr;i&lt;arr+(sizeof(arr)/sizeof(int));i++)\n        cout&lt;&lt;*i&lt;&lt;   ;\n}\n\n另一種寫法\n\n#include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\n\nint main()\n{\n    array&lt;int,4&gt; arr({100,2,3,4});\n    for(auto i:arr)\n        cout&lt;&lt;i&lt;&lt;   ;\n}",
+        "output": "讚 Nice.\n\nRef. https://en.cppreference.com/w/cpp/language/array 讚 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？\n答案: 通常是不太會讓異常的程式繼續執行 不過因為這題是要強制執行\n在下因為開發經驗稍微弱了一點\n絞盡了腦汁想 只想到一種方法 (抱歉我開發經驗稍微不足):\n\nException Handling\n基本上這個東西在很多程式語言都有\n\n使用方式:\n用 try 包住可能會發生例外的程式碼區段，\n用 catch 來處理這個 try 區域所發生的例外\n如果執行中發生Exception 不會直接將程式中止 而是會進入catch那邊\n\n以下是會發生錯誤的程式碼\n\n#include&lt;bits/stdc++.h&gt; // 對不起啦QAQ\nusing namespace std; // 我很抱歉QQ\nvoid A(){\n    cin.exceptions(ios_base::failbit); \n    try{\n        int t; \n        cin &gt;&gt; t; // 輸入t\n        cout &lt;&lt; t &lt;&lt; endl; // 輸出t\n        A(); // 遞迴進下一層\n    }\n    // 當發生錯誤時\n    catch (exception&amp; ba){\n        printf( Error\\n ); // 印出Error\n        cin.clear(); // 先把cin清空\n        cin.ignore(); \n        A(); // 再遞迴XD\n    }\n\n}\nint main(){\n    A(); // infinite loop\n}\n\n(如果是指stack overflow還繼續執行的話 很抱歉我沒找到方法XD)\n\n(參考資源:\nhttps://shengyu7697.github.io/cpp-exception/\nhttps://cplusplus.com/reference/ios/ios/exceptions/\nhttps://learn.microsoft.com/zh-tw/cpp/cpp/errors-and-exception-handling-modern-cpp?view=msvc-170\n)",
+        "output": "這個做法其實很不錯，可惜無法應付stack overflow的限制。\n\n若非增加堆疊大小的設定，可能要先一路退出遞迴，並將最後一層必要的區域變數值傳回，再重啟遞迴。 👍 👍 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include&lt;iostream&gt;\n\nusing namespace std;\n\nint main() {\n\n    char anArray[5] = { &#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39; };\n\n    int num[5] = { 1, 2, 3, 4, 5 };\n\n    for( int i = 0 ; i &lt; 5 ; i++ ) {\n\n        cout &lt;&lt; anArray[i] &lt;&lt;   :   &lt;&lt; num[i];\n\n    } // for\n\n} // main()",
+        "output": "No explanation, no point! 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n    // 多維陣列除了第一個以外，其餘都必須指定，否則會拋出錯誤(以arr2為例)\n    \n    int arr1[][4] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 } };\n    int arr2[][][] = { { { 1, 2, 3, 4 } } };\n    \n    cout &lt;&lt;  arr1 :\\n ; // 印出arr1\n    for ( auto &amp;a: arr1 ) {\n        cout &lt;&lt;  {  ;\n        for ( auto &amp;b: a ) cout &lt;&lt; b &lt;&lt;    ;\n        cout &lt;&lt;  }\\n ;\n    } // foreach\n    \n    // error: declaration of &lsquo;arr2&rsquo; as multidimensional array must have bounds for all dimensions except the first\n    \n    // 一維陣列初始值為不同非零整數\n    int arr3[] = { 1, 2, 3, 4 }; // 第一種作法\n    int arr4[4] = { [0] = 1, [1] = 2, [2] = 3, [3] = 4 }; // 第二種作法\n    int arr5[4] = { 1, 2, 3, 4 }; // 第三種作法\n    \n    cout &lt;&lt;  arr3 :\\n ; // 印出arr3\n    cout &lt;&lt;  {  ;\n    for ( auto &amp;c: arr3 ) cout &lt;&lt; c &lt;&lt;    ;\n    cout &lt;&lt;  }\\n ;\n    \n    cout &lt;&lt;  arr4 :\\n ; // 印出arr4\n    cout &lt;&lt;  {  ;\n    for ( auto &amp;d: arr4 ) cout &lt;&lt; d &lt;&lt;    ;\n    cout &lt;&lt;  }\\n ;\n    \n    cout &lt;&lt;  arr5 :\\n ; // 印出arr5\n    cout &lt;&lt;  {  ;\n    for ( auto &amp;e: arr5 ) cout &lt;&lt; e &lt;&lt;    ;\n    cout &lt;&lt;  }\\n ;\n    \n    // 一維陣列初始值為同一非零整數\n    int arr6[] = { 1, 1, 1, 1 }; // 其實就是把arr3、arr4、arr5的所有值設為同一個，就不印出贅述了\n    int arr7[] = { [0 ... 3] = 1 }; // 特殊寫法，僅限GCC編譯器\n    \n    \n    cout &lt;&lt; endl;\n    return 0;\n} // main()\n\n參照：\n\nhttps://www.geeksforgeeks.org/different-ways-to-initialize-all-members-of-an-array-to-the-same-value-in-c/\n\nhttps://stackoverflow.com/questions/12990568/passing-2-d-array-as-argument\n\nhttp://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc/Designated-Inits.html\n\nhttps://stackoverflow.com/questions/201101/how-to-initialize-all-members-of-an-array-to-the-same-value\n\nhttps://coherence0815.wordpress.com/2016/07/11/initialize-an-array-in-cc/",
+        "output": "Excellent! 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n    int arr1[5] = {0, 1, 2, 3, 4}; // 指定陣列長度 \n    int arr2[] = {0, 1, 2, 3, 4}; // 不指定陣列長度 有初值個數決定陣列長度 \n}",
+        "output": "👍 讚 推 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 在執行遞迴時，尚未被完成的function會被暫放在記憶體中的stack區等待處理。\n\n然而若是出現以下任一情形 :\n\n\n\t傳入資料過多\n\t遞迴為無窮遞迴，無法終止(它就會狂呼叫自己 產生一堆function占用stack空間)\n\n\n就很可能造成stack overflow(堆疊溢位)，而stack overflow則是此情況中導致記憶體區段錯誤的原因。",
+        "output": "OK. 讚 很好很好"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列：大小在定義時就固定   優點：在函式執行完後系統會自動銷毀    缺點：大小固定，無法依照不同需求增減\n\n動態陣酬：大小可在執行時指定   優點：可以需求產生不同大小之陣列       缺點：在使用完後需delete掉，不然可能會造成記憶體洩漏",
+        "output": "大小文陣列\n\ntypo error 👍 👍👍 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 遞迴呼叫的次數太多容易造成記憶體錯亂，可能是因為沒達到終止條件而形成無窮遞迴，造成堆疊溢位。",
+        "output": "請敘述造成堆疊溢位的過程。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列：在宣告陣列時，已經決定了此陣列的尺寸\n\n優點：可節省記憶體空間，用完後不需另外刪除\n\n缺點：在執行程式中無法任意更動此陣列的大小\n\n動態陣列：在執行程式時，仍然能夠更動陣列的尺寸\n\n優點：可以有效利用儲存空間，插入其他陣列時，會比較輕鬆\n\n缺點：每一次的資料要額外連接，用完資料後要另外做刪除動作",
+        "output": "讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列的大小為固定的。優點是記憶體在使用結束後由計算機自動釋放，效率高且不佔記憶體空間。缺點為陣列不可改變大小。\n\n動態陣列的大小可改變。優點是可以根據使用者需要，有效利用儲存空間。缺點是不使用的時候必須釋放空間，否則會造成記憶體洩漏。",
+        "output": "👍 說的真好 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 比較差異\n\t\t\t優點\n\t\t\t          缺點\n\t\t\n\t\t\n\t\t\t靜態陣列\n\t\t\t在宣告時已經確定陣列大小的陣列 (從棧中分配空間)\n\t\t\t 記憶體在使用結束後由計算機自動釋放，效率較高\n\t\t\t自由度小\n\t\t\n\t\t\n\t\t\t動態陣列 \n\t\t\t在宣告時沒有確定陣列大小的陣列 (從堆中分配空間)\n\t\t\t自由度大\n\t\t\t使用結束後由程式設計師進行釋放，效率較低",
+        "output": "讚 利用表格詳細介紹兩者優缺點 推 a concise view to compare them."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: &lt; 靜態陣列 &gt;\n1.宣告時已確定能儲存的空間大小不能更動\n2.從棧中分配空間\n3.記憶體使用結束後會自動釋放\n\n&lt; 動態陣列 &gt;\n1.宣告時無須確定能儲存空間大小，可依據不同條件等有所增減元素，自由度大\n2.從堆中分配空間\n3.記憶體不使用時須自行釋放空間",
+        "output": "👍🏻 讚 👍🏻"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 動態陣列: \n\n\n\t宣告時沒有確定陣列大小\n\t可在執行時重新指出陣列的大小\n\t使用時分配記憶體空間給它，不使用時釋放掉\n\n\n*優點: 可根據使用者需要，有效利用儲存空間\n\n*缺點: 使用結束後需自行釋放，效率較差\n\n靜態陣列: \n\n\n\t宣告時需確定陣列長度\n\t後續使用不能修改其大小\n\n\n*優點: 使用結束自行釋放\n\n*缺點: 可能造成陣列資源浪費，未做最妥善的分配",
+        "output": "👍 👍 讚喔 good 讚 good"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列\n\n    優點-&gt;程式結束後自動釋放記憶體空間\n\n    缺點-&gt;陣列長度固定，無法更動\n\n動態陣列\n\n    優點-&gt;不必預先知道資料長度，在程式中可自由修改陣列長度\n\n    缺點-&gt;  記憶體的釋放需要靠工程師完成",
+        "output": "👍🏻 👍 good good"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\nusing namespace std;\n\nint main(){\n\n\n    int array[5] = {1,2,3,4,5}; // 直接指定陣列長度 \n\n\n    int array2[] = {1,2,3,4,5,6}; // 由初始值個數決定陣列長度 \n\n\n} //main",
+        "output": "天啊 很會欸 👍🏻👍🏻👍🏻 讚 good! 也說得太好了吧"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n    int x[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};    // 將1指定給x[0]，2指定給x[1]，...，最後將10指定給x[9]\n    char y[7] = {&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;};  //char型別也可以以此類推\n    char array_name[7] =  Hello! ;  // 還可簡化為字串\n    return 0;\n} // main()",
+        "output": "good! 👍🏻👍🏻👍🏻 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\nusing namespace std;\n\nint main() {\n\n  int number[5] = {0, 1, 2, 3, 4}; \n\n  int number2[] = {0, 1, 2, 3, 4}; \n\n  return 0;\n\n}  // end main",
+        "output": "No explanation, no point!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: 幫陣列初始化為非0的值時，可使用大括號將想輸入的值框起來\n\n#include&lt;iostream&gt;\nusing namespace std;\nint main(){\n    int k[10] = {1,2,3,4,5,6,7,8,9,10};\n    for( int i = 0; i &lt; 10; i++ ) {\n        cout &lt;&lt; k[i] &lt;&lt;    ;\n    } // for\n    return 0;\n} // main()\n\n此時程式輸出為 1 2 3 4 5 6 7 8 9 10",
+        "output": "棒 👍 good! 👍🏻💯"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 因為在使用遞迴時，未考慮到終止條件或設定不當，造成遞迴式會不斷呼叫自己(無限遞迴)，持續將資料放進記憶體中，直到記憶體不夠用(爆掉)，導致溢位(Overflow)，因此造成記憶體錯誤。",
+        "output": "good 👍 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\nusing namespace std;\n\nint main(){\n\n    int anArray1[ ] = {-1, -1, -1, -1, -1 };\n\n    int anArray2[5] = {-2, -2, -2, -2, -2};\n\n    for( int i = 0; anArray1[i] == -1 ; i++ ) {\n        cout &lt;&lt; anArray1[i] &lt;&lt;    ;\n    } // for\n\n    cout &lt;&lt;  \\n ;\n\n    for( int i = 0; i&lt;5 ; i++ ) {\n        cout &lt;&lt; anArray2[i] &lt;&lt;    ;\n    } // for\n\n\n} // main()\n\n此時的輸出\n\n-1 -1 -1 -1 -1\n\n-2 -2 -2 -2 -2",
+        "output": "👍 good"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列：宣告時要設定陣列長度，待程式結束時記憶體自行釋放\n\n                優點：效率高，不用再釋放記憶體\n\n                缺點： 大小固定，不能彈性運用\n\n動態陣列：宣告時不用設定陣列長度，待程式結束時記憶體不會自行釋放\n\n                優點：可以有效地運用空間\n\n                缺點：效率低，需自行釋放記憶體",
+        "output": "Nice 讚 👍 棒"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 在遞迴的每一步想要回傳，但仍然有沒辦法處理的部份時，就會先把目前的東西，放到記憶體裡叫做 stack (堆棧) 的地方\n\n\n\t若遞迴呼叫過量使堆疊爆了，就會造成 Stack Overflow Error 。\n\t無限遞迴，終止條件未設定好，導致的堆疊溢位",
+        "output": "👍🏻 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列：\n\n          優點：可以快速訪問資料、系統會自主釋放記憶體空間。\n\n          缺點：自由度低，在刪除或加入資料時很麻煩，需要移動大量資料，且使用較無彈性，事先定義固定的長度，空間配置過多會浪費過少會不夠使用。\n\n           \n\n動態陣列：\n\n          優點：自由度高，能簡單新增和刪除元素，且有彈性度，需要時再索取，能有效率的使用空間。\n\n          缺點：需要自行釋放記憶體空間。",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列 : 要先設定固定陣列大小\n\n- 優點 : 效率較高，使用完後系統會自動銷毀\n\n- 缺點 : 固定大小，靈活度低\n\n動態陣列 : 使用 new 配置記憶體儲存陣列，或是使用 vector 資料型別\n\n- 優點 : 可自由配置陣列大小、靈活度高且配置得當可以節省記憶體\n\n- 缺點 : 如儲存空間不使用時，要記得釋放空間，否則可能導致記憶體洩漏",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列:\n\n優點:在使用結束後，會自動釋放記憶體。執行效率高。\n\n缺點:必須在編譯前，就先設定好大小，無法隨時增加減少。\n\n動態陣列:\n\n優點:不須再使用前，先訂好大小，可隨自己而變大變小。\n\n缺點:結束時，須由寫程式者來釋放記憶體，且效率較低。",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 在執行遞迴函數時電腦會先把資料放在記憶體stack的地方,但如果資料太多或是忘記設置終止條件導致在回傳之前把stack塞爆了就會出現stack overflow的狀況",
+        "output": "可惜點讚數和回應數都偏低。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 遞回呼叫在進行完成前，會將資料傳給stack（堆疊）裏面，而如果資料超過stack的空間的話，就會造成堆棧溢位，也稱為stack overflow，這也是造成記憶體區段錯誤的原因之一。\n\n以下是一些導致儲存器段錯誤的一般原因：\n\n試圖訪問不存在的內存空間（進程內存空間以外）\n\n試圖訪問沒有權限的內存空間（例如：訪問操作系統內核的內存地址）\n\n試圖寫入至只讀內存段（例如：代碼段）\n\n以下是一些導致儲存器段錯誤的一般編程錯誤： \n\n引用空指針 引用未初始化的野指針\n\n引用已經被調用free()函數釋放了的懸空指針\n\n緩衝區溢出\n\n堆棧溢出 （本問題的原因）\n\n運行未正確編譯的程序（儘管存在編譯時錯誤，某些編譯器依然會輸出可執行文件）\n\nref.https://zh.wikipedia.org/wiki/%E8%A8%98%E6%86%B6%E9%AB%94%E5%8D%80%E6%AE%B5%E9%8C%AF%E8%AA%A4",
+        "output": "進程？野指針？堆棧溢出？\n\n可以參考網路資源，但是請以自己的文字敘述，那才是屬於自己理解及表達的真實內容！\n\n下次再犯，所有的額外加分歸零！"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\nusing namespace std;\n\nint main(){\n\n    int num[5] = {1, 2, 3, 4, 5}; //給予大小&amp;&amp;數值\n\n    int num2[] = {1, 2, 3, 4, 5}; //由給予幾個數字判斷牠的大小\n\n}",
+        "output": "👍 👍 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列 :\n    優點 : 程式執行速度快、程式結束後自動釋放記憶體\n    缺點 : 需先設定好大小\n動態陣列 :\n    優點 : 不必預先設定好大小\n    缺點 : 程式執行速度較慢、程式設計師需要釋放記憶體",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列， \n\n   優點：效率快，自動釋放記憶體 。缺點： 記憶體空間不能彈性應用，增減資料須移動的資料量龐大 ( 若資料量多 )。\n\n動態陣列，\n\n   優點：能彈性應用記憶體空間。缺點：效率慢，需自行釋放記憶體。",
+        "output": "👍 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二靜態陣列和動態陣列有何差異？指出其優缺點。\n答案: 靜態陣列\n\n優點：會在使用結束後自動釋放記憶體，不用手動釋放\n\n缺點：宣告時就要設定陣列的大小，彈性差\n\n動態陣列\n\n優點：可以隨時增加數值進入動態陣列，大小不受限制，彈性佳，比較靈活也比較省記憶體\n\n缺點：要記得手動釋放記憶體來避免記憶體洩漏",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\n#include &lt;algorithm&gt;\n\nusing namespace std;\n\nint main(){\n\n  int array[100] = {-1}; // error: 這個語法只有第一個值是-1，其他為0\n\n  std::fill_n(array, 100, -1); // correct: 在&lt;algorithm&gt;裡的用法，可以使array裡的元素都為-1\n\n}\n\n\nref: https://www.796t.com/post/MTg2YQ==.html#google_vignette",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 作業二採用什麼資料結構儲存讀入資料，須說明原因。\n答案: 這次的作業2是用vector來儲存大量的資料，vector算資料結構的陣列的改造版，也就是所謂的動態陣列，它的好處是不需設定大小，但缺點也是隨之而來的因為沒有像靜態先分配好記憶體所以function(其他funciton可用)結束時也不會被自動釋放，需要手動去才行。\n雖然他有push back 和pop 這兩個用起來像stack(堆)的觀念先進後出的概念。\n\n但我覺得這次的作業的來講是用我覺得vector比較算是佇列(quene)先進先出的概念，因為我們是把資料全部存在vector後，再到output那邊從我們第一個存的資料一個一個得下去到最後一個。",
+        "output": "結束時也不會被自動釋放，需要手動去才行。 \n\n以上不太正確，vector宣告的變數結束時會自動釋放空間。\n\nRef.\n\nhttps://www.learncpp.com/cpp-tutorial/an-introduction-to-stdvector/\n\nhttps://cplusplus.com/reference/vector/vector/"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 遞迴呼叫為何會造成記憶體區段錯誤？\n答案: 遞迴式沒有停下來的時候，會不斷的呼叫自己(占用stack)，直到記憶體的stack不夠用(也就是造成stack overflow)，\n就會出現記憶體區段錯誤(Segmentation fault)\n\nref: https://hackmd.io/@RusselCK/SJ3rL9BOD#%E5%BE%9E%E9%81%9E%E8%BF%B4%E5%AD%B8%E7%BF%92-function-call",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。\n答案: #include &lt;iostream&gt;\n\nusing namespace std;\n\nint main(){\n\n    int num[3] = {1, 2, 3}; //給予其長度和內容\n\n    int number[] = {1, 2, 3, 4, 5}; //由給予的內容判斷大小\n\n} // main()",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n\n到目前為止，只有50位同學問答已得分。",
+        "output": ""
+    }
+]

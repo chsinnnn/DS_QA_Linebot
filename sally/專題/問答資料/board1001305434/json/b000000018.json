@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:08",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305434",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-10-25 15:24:27",
+        "poster": "11127230",
+        "realname": "鍾帛勳",
+        "email": "jone921216@gmail.com",
+        "homepage": null,
+        "subject": "122. 寫C++程式碼說明傳參考呼叫call by reference。",
+        "content": "<p>void addone(int &amp; a) {</p>\r\n\r\n<p>a+=1;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>int a = 1;</p>\r\n\r\n<p>addone(a);</p>\r\n\r\n<p>cout &lt;&lt; a;</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

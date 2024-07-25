@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:27",
+        "@type": "post",
+        "@filename": "b000000003000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305441",
+        "node": "000000003000000001",
+        "site": "1000110001",
+        "pt": "2023-12-26 15:12:33",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 223相同搜尋鍵的二筆資料如何存入二元搜尋樹？",
+        "content": "<p>string schoolName ; // 搜尋值</p>\r\n\r\n<p>string studentName ;&nbsp; // 不知為何有學生姓名？</p>\r\n\r\n<p>treeNode *left ; // 另一個節點</p>\r\n\r\n<p>treeNode *right ; // 另一個節點</p>\r\n\r\n<p><span style=\"color:#ff0000\">看不出相同搜尋值的二筆資料要如何存入同一個節點？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

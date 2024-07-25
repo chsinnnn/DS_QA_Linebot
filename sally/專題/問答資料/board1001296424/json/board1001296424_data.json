@@ -1,0 +1,82 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  判斷的交換條件：arr[j] &gt; arr[j+1] 若改為arr[j] &gt;= arr[j+1]則會改變相同數值的順序，unstable    #include &lt;iostream&gt;  void swap(int &amp;a, int &amp;b) {     int temp = a;     a = b;     b = temp; }  void bubbleSort( int arr[], int n ) {   for (int i = 1; i &lt; n; i++) {         for (int j = 0; j &lt; n-i; j++) {              // 關鍵指令，若改為arr[j] &gt;= arr[j+1]則非stable             if (arr[j] &gt; arr[j+1])                  swap(arr[j], arr[j+1]);         }     } }  void printArray(int arr[], int size) {     for (int i=0; i &lt; size; i++) {         std::cout &lt;&lt; arr[i] &lt;&lt;    ;     }     std::cout &lt;&lt; std::endl; }  int main() {     int arr[] = {64, 34, 25, 12, 22, 11, 90, 12, 25};     int n = sizeof(arr) / 4;      std::cout &lt;&lt;  Unsorted array:  ;     printArray(arr, n);      bubbleSort(arr, n);      std::cout &lt;&lt;  Sorted array:  ;     printArray(arr, n);      return 0; }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 依據程式碼解說選擇排序的時間複雜度。  選擇排序是在數組中找出極值，以由小到大排序為例，先找出最小的數，放在第一個位置，再找出第二小的數，放在第二個位置，以此類推。  ```cpp  void selectionSort(int arr[], int n) {      for (int i = 0; i &lt; n - 1; i++) {          int min = i;          for (int j = i + 1; j &lt; n; j++) {              if (arr[j] &lt; arr[min]) {                  min = j;              }          }          swap(arr[i], arr[min]);      }  }  ```  先假設arr[0]為極值，接著比較n-1次，如果有更小的就把極值換掉，找到極值後把極值放到最前面(交換)  接著以同樣的思路排序 arr[1:n] 、arr[2:n] 、arr[3:n] ...  最後總比較次數為     複雜度分析原則(根據複雜度定義)：  1.小常數倍數不計    2.低次項不計    3.執行次，總複雜度  比較 O(n-1) 執行 n-1 次，結果仍為原複雜度  因為選擇排序不管初始狀態，比較次數 worst case、best case、average case都一樣，所以比較的複雜度一樣    而交換的複雜度，最好情況是已排好序，，最差是逆序，要交換 n-1 次，  總複雜度為",
+        "output": "Nice."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。  不穩定排序：如果鍵值相同之資料，在排序後相對位置與排序前不相同時，稱不穩定排序。  Selection Sort：遍歷整個陣列，每次選出最小的元素並與陣列的前端交換。交換後逐步縮小需要遍歷的長度，形成陣列前端是已排序的元素；末端是未排序的元素。  若現在有一排數字如 { 6, 7, 5, 4, 6, 3 }，其中有兩個 6 分別在開頭和中間。  當第一次進行選擇排序時，發現 3 是最小的數字，並把 3 和目前排在第一位的 6 交換位置  導致原本排在前面的 6 就被移動到後面。破壞了兩個 6 排序前的相對位置，所以它是不穩定的排序法",
+        "output": "Nice example."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 209.撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  若比較條件arr[j] &gt; key,如果改成arr[j] &gt;= key則unstable  #include &lt;iostream&gt;  #include &lt;vector&gt;  void insertionSort(std::vector&lt;int&gt;&amp; arr) {     int n = arr.size();     for (int i = 1; i &lt; n; ++i) {         int key = arr[i];         int j = i - 1;          // 關鍵指令為arr[j] &gt; key,如果改成arr[j] &gt;= key則unstable         while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {             arr[j + 1] = arr[j];             --j;         }          arr[j + 1] = key;     } }  int main() {     std::vector&lt;int&gt; arr = {12, 11, 13, 5, 6};      std::cout &lt;&lt;  Original array:  ;     for (int num : arr) {         std::cout &lt;&lt; num &lt;&lt;    ;     }          insertionSort(arr);      std::cout &lt;&lt;  \\nSorted array:  ;     for (int num : arr) {         std::cout &lt;&lt; num &lt;&lt;    ;     }      return 0; }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 我們可以在bubbleSort的loop裡面用一個布林值(變數&#39;swapped&#39;)來追蹤在每一輪的掃描中是否有進行元素的交換。如果一輪掃描結束後swapped仍然是False，表示數列已經排序完成，就可以提前結束整個排序過程。這種就可以避免之後排序已完成卻重複掃描的情況。  void bubbleSort(int arr[], int n) {     for (int i = 0; i &lt; n-1; i++) {         bool swapped = false;   // 標記是否發生交換或重置狀態         for (int j = 0; j &lt; n-i-1; j++) {             if (arr[j] &gt; arr[j+1]) {                 swap(arr[j], arr[j+1]);                 swapped = true;   // 標記發生交換             }         }         if (!swapped)   // 如果沒有發生交換，則提早結束排序             break;     } }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例解說選擇排序selection sort並非穩定stable的排序方法。  有一序列如下，由小而大做選擇排序，每次選擇最小者：   \t \t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t \t   第一次，2與8a交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t \t   第二次，5a與28交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t \t   第三次，5b與14交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第四次，6與28交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第五次，8b與自己交換，不變：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第六次，8a與26交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第七次，14與26交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t \t   第八次，14與自己交換，不變：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t \t   第九次，26與28交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t \t   第十次，28與29交換，完成排序：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t \t   由此可知8a與8b的初始位置與排序後位置不同，因此選擇排序並非一種穩定的排序方法。",
+        "output": "OK.  成功舉例之後，可嘗試簡潔地敘述其關鍵理由的邏輯。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。 void bubbleSort(int A[], int n ){      bool sorted = False ;      for(pass = 1; pass &lt;n &amp;&amp; != sorted; ++pass){          sorted = TRUE;          for(int index = 0; index &lt; n-pass; index++){              if(A[index]&gt; A[index+1]){                  swap(A[index], A[index+1]);                  sorted = FALSE;              }          }      }  }  多加一個bool值去判斷是否排好序，只要有一次交換就把bool值改成false。當資料量大時，原時間複雜度O(n2)能變成O(n)。",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  初始條件: A為須排序的物件串列，n為串列中元素的數量  void  swap( int a, int b )  {    temp = A[a] ;    A[a] = A[b]    A[b] = temp ;  } // swap()  for  (  int  pass  =  1  ;  pass  &lt;  n  ;  pass++  )  {         for  (  int  index  =  0  ;  index  &lt;  n  -  pass  ;  index++  )  {                  If  (  A[index]  &gt;  A[index+1]  )  // 此為關鍵指令                      swap(  index,  index+1 ) ;          }  //  for()   }  //  for()    If  (  A[index]  &gt;  A[index+1]  )  為關鍵指令，不用&gt;=而用&gt;，會使得若兩者值相等的時候，並不會進行交換，故原來的順序會被保存。而此時氣泡排序法為stable。",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  判斷的交換條件：arr[j] &gt; arr[j+1] 若改為arr[j] &gt;= arr[j+1]則會改變相同數值的順序，unstable    #include &lt;iostream&gt;  void swap(int &amp;a, int &amp;b) {     int temp = a;     a = b;     b = temp; }  void bubbleSort( int arr[], int n ) {   for (int i = 1; i &lt; n; i++) {         for (int j = 0; j &lt; n-i; j++) {              // 關鍵指令，若改為arr[j] &gt;= arr[j+1]則非stable             if (arr[j] &gt; arr[j+1])                  swap(arr[j], arr[j+1]);         }     } }  void printArray(int arr[], int size) {     for (int i=0; i &lt; size; i++) {         std::cout &lt;&lt; arr[i] &lt;&lt;    ;     }     std::cout &lt;&lt; std::endl; }  int main() {     int arr[] = {64, 34, 25, 12, 22, 11, 90, 12, 25};     int n = sizeof(arr) / 4;      std::cout &lt;&lt;  Unsorted array:  ;     printArray(arr, n);      bubbleSort(arr, n);      std::cout &lt;&lt;  Sorted array:  ;     printArray(arr, n);      return 0; }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 依據程式碼解說選擇排序的時間複雜度。  選擇排序是在數組中找出極值，以由小到大排序為例，先找出最小的數，放在第一個位置，再找出第二小的數，放在第二個位置，以此類推。  ```cpp  void selectionSort(int arr[], int n) {      for (int i = 0; i &lt; n - 1; i++) {          int min = i;          for (int j = i + 1; j &lt; n; j++) {              if (arr[j] &lt; arr[min]) {                  min = j;              }          }          swap(arr[i], arr[min]);      }  }  ```  先假設arr[0]為極值，接著比較n-1次，如果有更小的就把極值換掉，找到極值後把極值放到最前面(交換)  接著以同樣的思路排序 arr[1:n] 、arr[2:n] 、arr[3:n] ...  最後總比較次數為     複雜度分析原則(根據複雜度定義)：  1.小常數倍數不計    2.低次項不計    3.執行次，總複雜度  比較 O(n-1) 執行 n-1 次，結果仍為原複雜度  因為選擇排序不管初始狀態，比較次數 worst case、best case、average case都一樣，所以比較的複雜度一樣    而交換的複雜度，最好情況是已排好序，，最差是逆序，要交換 n-1 次，  總複雜度為",
+        "output": "Nice."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。  不穩定排序：如果鍵值相同之資料，在排序後相對位置與排序前不相同時，稱不穩定排序。  Selection Sort：遍歷整個陣列，每次選出最小的元素並與陣列的前端交換。交換後逐步縮小需要遍歷的長度，形成陣列前端是已排序的元素；末端是未排序的元素。  若現在有一排數字如 { 6, 7, 5, 4, 6, 3 }，其中有兩個 6 分別在開頭和中間。  當第一次進行選擇排序時，發現 3 是最小的數字，並把 3 和目前排在第一位的 6 交換位置  導致原本排在前面的 6 就被移動到後面。破壞了兩個 6 排序前的相對位置，所以它是不穩定的排序法",
+        "output": "Nice example."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 209.撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  若比較條件arr[j] &gt; key,如果改成arr[j] &gt;= key則unstable  #include &lt;iostream&gt;  #include &lt;vector&gt;  void insertionSort(std::vector&lt;int&gt;&amp; arr) {     int n = arr.size();     for (int i = 1; i &lt; n; ++i) {         int key = arr[i];         int j = i - 1;          // 關鍵指令為arr[j] &gt; key,如果改成arr[j] &gt;= key則unstable         while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {             arr[j + 1] = arr[j];             --j;         }          arr[j + 1] = key;     } }  int main() {     std::vector&lt;int&gt; arr = {12, 11, 13, 5, 6};      std::cout &lt;&lt;  Original array:  ;     for (int num : arr) {         std::cout &lt;&lt; num &lt;&lt;    ;     }          insertionSort(arr);      std::cout &lt;&lt;  \\nSorted array:  ;     for (int num : arr) {         std::cout &lt;&lt; num &lt;&lt;    ;     }      return 0; }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 我們可以在bubbleSort的loop裡面用一個布林值(變數&#39;swapped&#39;)來追蹤在每一輪的掃描中是否有進行元素的交換。如果一輪掃描結束後swapped仍然是False，表示數列已經排序完成，就可以提前結束整個排序過程。這種就可以避免之後排序已完成卻重複掃描的情況。  void bubbleSort(int arr[], int n) {     for (int i = 0; i &lt; n-1; i++) {         bool swapped = false;   // 標記是否發生交換或重置狀態         for (int j = 0; j &lt; n-i-1; j++) {             if (arr[j] &gt; arr[j+1]) {                 swap(arr[j], arr[j+1]);                 swapped = true;   // 標記發生交換             }         }         if (!swapped)   // 如果沒有發生交換，則提早結束排序             break;     } }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例解說選擇排序selection sort並非穩定stable的排序方法。  有一序列如下，由小而大做選擇排序，每次選擇最小者：   \t \t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t \t   第一次，2與8a交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t \t   第二次，5a與28交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t \t   第三次，5b與14交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第四次，6與28交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第五次，8b與自己交換，不變：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第六次，8a與26交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t \t   第七次，14與26交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t \t   第八次，14與自己交換，不變：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t \t   第九次，26與28交換：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t \t   第十次，28與29交換，完成排序：   \t \t\t \t\t\t \t\t\t2 \t\t\t \t\t\t \t\t\t5a \t\t\t \t\t\t \t\t\t5b \t\t\t \t\t\t \t\t\t6 \t\t\t \t\t\t \t\t\t8b \t\t\t \t\t\t \t\t\t8a \t\t\t \t\t\t \t\t\t14 \t\t\t \t\t\t \t\t\t26 \t\t\t \t\t\t \t\t\t28 \t\t\t \t\t\t \t\t\t29 \t\t\t \t\t \t   由此可知8a與8b的初始位置與排序後位置不同，因此選擇排序並非一種穩定的排序方法。",
+        "output": "OK.  成功舉例之後，可嘗試簡潔地敘述其關鍵理由的邏輯。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。 void bubbleSort(int A[], int n ){      bool sorted = False ;      for(pass = 1; pass &lt;n &amp;&amp; != sorted; ++pass){          sorted = TRUE;          for(int index = 0; index &lt; n-pass; index++){              if(A[index]&gt; A[index+1]){                  swap(A[index], A[index+1]);                  sorted = FALSE;              }          }      }  }  多加一個bool值去判斷是否排好序，只要有一次交換就把bool值改成false。當資料量大時，原時間複雜度O(n2)能變成O(n)。",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  初始條件: A為須排序的物件串列，n為串列中元素的數量  void  swap( int a, int b )  {    temp = A[a] ;    A[a] = A[b]    A[b] = temp ;  } // swap()  for  (  int  pass  =  1  ;  pass  &lt;  n  ;  pass++  )  {         for  (  int  index  =  0  ;  index  &lt;  n  -  pass  ;  index++  )  {                  If  (  A[index]  &gt;  A[index+1]  )  // 此為關鍵指令                      swap(  index,  index+1 ) ;          }  //  for()   }  //  for()    If  (  A[index]  &gt;  A[index+1]  )  為關鍵指令，不用&gt;=而用&gt;，會使得若兩者值相等的時候，並不會進行交換，故原來的順序會被保存。而此時氣泡排序法為stable。",
+        "output": "OK"
+    }
+]

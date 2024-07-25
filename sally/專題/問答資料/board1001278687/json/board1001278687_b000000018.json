@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:20:53",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答224",
+        "content": "<p><strong>如何將二元搜尋樹存檔後再讀入可恢復原狀？</strong></p>\r\n\r\n<p><strong>將二元搜尋樹存檔後再讀入以恢復原狀，可以使用序列化（Serialization）和反序列化（Deserialization）的方法。序列化是將二元搜尋樹轉換成一個字符串或二進制數據的過程，這個字符串或數據可以寫入檔案或傳輸給其他系統。反序列化是將序列化的數據重新轉換為原始的二元搜尋樹的過程。</strong></p>\r\n\r\n<p><strong>建立的二元搜尋樹序列化為字符串後存入檔案，然後再從檔案中讀取序列化的字符串並反序列化為一棵新的二元搜尋樹。檢查恢復的二元搜尋樹是否與原始樹相同，以確保序列化和反序列化的過程能夠成功並恢復原狀。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-11-29 23:19:05",
+        "poster": "11127122",
+        "realname": "胡沛頎",
+        "email": "123456789paige26@gmail.com",
+        "homepage": null,
+        "subject": "201",
+        "content": "<p>201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time。</p>\r\n\r\n<p>假設一群工作模擬排序如下:</p>\r\n\r\n<p>OID&nbsp;&nbsp; &nbsp;Arrival&nbsp;&nbsp; &nbsp;Duration&nbsp;&nbsp; &nbsp;TimeOut<br />\r\n101&nbsp;&nbsp; &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;12<br />\r\n112&nbsp;&nbsp; &nbsp;5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;13<br />\r\n103&nbsp;&nbsp; &nbsp;6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15<br />\r\n106&nbsp;&nbsp; &nbsp;6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;17<br />\r\n108&nbsp;&nbsp; &nbsp;6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;18<br />\r\n105&nbsp;&nbsp; &nbsp;10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;20<br />\r\n104&nbsp;&nbsp; &nbsp;11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;22</p>\r\n\r\n<p>101 -&gt; 無需等待，並能夠做完&nbsp; -&gt; waiting time = 0</p>\r\n\r\n<p>112&nbsp;-&gt; 出現時，排隊，並等待101做完，此時 t = 12，而112無法完成&nbsp; -&gt; waiting time = 112的 timeout&nbsp;- arrival time = 13 - 5 = 8</p>\r\n\r\n<p>103 -&gt; 出現時，排隊，並等待112結束，此時 t = 13，而103無法完成&nbsp; -&gt; waiting time = 103的 timeout&nbsp;- arrival time = 15&nbsp;- 6&nbsp;= 9</p>\r\n\r\n<p>106&nbsp;-&gt; 出現時，排隊，並等待103結束，此時 t = 15，而106無法完成&nbsp; -&gt; waiting time = 106的 timeout&nbsp;- arrival time = 17&nbsp;- 6&nbsp;= 11</p>\r\n\r\n<p>108&nbsp;-&gt; 出現時，排隊，並等待106結束，此時 t = 17，而108無法完成&nbsp; -&gt; waiting time = 108的 timeout&nbsp;- arrival time = 18&nbsp;- 6&nbsp;= 12</p>\r\n\r\n<p>105&nbsp;-&gt; 出現時，排隊，並等待108結束，此時 t = 18，而105無法完成&nbsp; -&gt; waiting time = 105的 timeout&nbsp;- arrival time = 20 - 10&nbsp;= 10</p>\r\n\r\n<p>104-&gt; 出現時，排隊，並等待103結束，此時 t = 20，而104無法完成&nbsp; -&gt; waiting time = 104的 timeout&nbsp;- arrival time = 22 - 11 = 9</p>\r\n\r\n<p>所以總共的等待時間為 : 59</p>\r\n\r\n<p>平均等待時間為: 59/7 約等於 8.42</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "6",
+        "lang": "1"
+    }
+}

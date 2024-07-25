@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:55",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174282",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-12-26 21:03:55",
+        "poster": "11027246",
+        "realname": "林詰詠",
+        "email": "a78419261@gmail.com",
+        "homepage": null,
+        "subject": "221. 舉例解說中序走訪二元搜尋樹是否穩定排序。",
+        "content": "<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">穩定排序:如果排序相同資料，在排序後相對位置與排序前相同時。</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">例如:</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">排序前：<span style=\"color:#800000\">3</span>,5,19,1,<span style=\"color:#008080\">3</span>,10</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">排序後：1,<span style=\"color:#800000\">3</span>,<span style=\"color:#008080\">3</span>,5,10,19&nbsp;&nbsp;(因為兩個<span style=\"color:#800000\">3</span>, <span style=\"color:#008080\">3</span>的相對位置在排序前與後皆相同)</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">不穩定排序:如果排序相同之資料，在排序後相對位置與排序前位置補相同。</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">例如:</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">排序前：<span style=\"color:#800000\">3</span>,5,19,1,<span style=\"color:#008080\">3</span>,10</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:Arial,Helvetica,sans-serif\">排序後：1,4,<span style=\"color:#008080\">3</span>,<span style=\"color:#800000\">3</span>,10,19&nbsp;&nbsp;(因為兩個<span style=\"color:#800000\">3</span>, <span style=\"color:#008080\">3</span>的相對位置在排序前與後不相同)</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong>當二元搜尋樹遇到相同的資料時，我們會將它視為同一個節點然後push_back那筆資料的編號到vector，所以由此可知在排序前跟排序後相同資料編號的相對位置是沒有改變的，因此二元搜尋樹為穩定排序。</strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong>程式範例:</strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong>typedef struct BST{<br />\r\n&nbsp; &nbsp; int key;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // search key<br />\r\n&nbsp;&nbsp; &nbsp;vector&lt;int&gt; idx; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// store no of the same key<br />\r\n&nbsp;&nbsp; &nbsp;struct BST *lchild; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// left child<br />\r\n&nbsp;&nbsp; &nbsp;struct BST *rchild; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// right child</strong></p>\r\n\r\n<p style=\"text-align:justify\"><strong>} nodeType; &nbsp;&nbsp;</strong></p>\r\n\r\n<p><strong>void insertNode(nodeType *&amp;root, int key, int no) {&nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; if (root == NULL) { // 還沒有東西，建立節點<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root = new nodeType;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root -&gt; key = key;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root -&gt; idx.push_back(no);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root -&gt; lchild = NULL;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root -&gt; rchild = NULL;<br />\r\n&nbsp; &nbsp; } else {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (hp &lt; root-&gt;key) &nbsp;// 比該節點小，往左節點<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; insertNode(root-&gt;lchild,key, no);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; else if(key == root-&gt;key) &nbsp;// 一樣大，存到同一節點<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; root -&gt; idx.push_back(no);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; else// 比該節點大，往右節點<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; insertNode(root-&gt;rchild, key, no);<br />\r\n&nbsp; &nbsp; }</strong></p>\r\n\r\n<p><strong>}</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "56",
+        "lang": "1"
+    }
+}

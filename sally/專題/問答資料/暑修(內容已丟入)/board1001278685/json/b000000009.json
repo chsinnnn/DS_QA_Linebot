@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-07-21 20:01:02",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答219",
+        "content": "<p>219. 舉例區別完全full、完整complete及平衡balanced二元樹的差異。</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>full特色:所有節點都滿足有兩個子節點或都是葉子節點。</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;/ \\<br />\r\n&nbsp; &nbsp; &nbsp; 2 &nbsp; 3<br />\r\n&nbsp; &nbsp; &nbsp;/ \\&nbsp;/ \\<br />\r\n&nbsp;&nbsp;&nbsp; 4&nbsp;5 6 &nbsp;7&nbsp;</p>\r\n\r\n<p>complete特色:所有節點都滿足有兩個子節點或都是葉子節點，葉子節點靠左排列，且最底層不會全滿。</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;1<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;/ \\<br />\r\n&nbsp; &nbsp; &nbsp; 2 &nbsp; 3<br />\r\n&nbsp; &nbsp; &nbsp;/ \\&nbsp;<br />\r\n&nbsp; &nbsp; 4 &nbsp;5 &nbsp;</p>\r\n\r\n<p>balanced特色:每個節點的兩棵子樹的高度差不超過 1，所以查找和插入操作等的時間複雜度相對較低。</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;/ \\<br />\r\n&nbsp; &nbsp; &nbsp; 2 &nbsp; 3<br />\r\n&nbsp; &nbsp; &nbsp;/ \\&nbsp;<br />\r\n&nbsp; &nbsp; 4 &nbsp; 5 &nbsp;<br />\r\n&nbsp; &nbsp;/<br />\r\n&nbsp; 6<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:03",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162655",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-12-19 16:54:56",
+        "poster": "10721221",
+        "realname": "蕭茜文",
+        "email": "wen042118@icloud.com",
+        "homepage": null,
+        "subject": "217. 舉例解說快速排序quick sort是否穩定stable。",
+        "content": "<p>若待排序數組: int a[] ={1, 2, 2, 3, 4, 5, 6};&nbsp;<br />\r\n在快速排序的隨機選擇比較子(即pivot)階段：</p>\r\n\r\n<p>若選擇a[2]（即數組中的第二個2）為比較子，，而把大於等於比較子的數均放置在大數數組中，則a[1]（即數組中的第一個2）會到pivot的右邊， 那麼數組中的兩個2非原序（這就是「不穩定」）。</p>\r\n\r\n<p>若選擇a[1]為比較子，而把 小於等於比較子的數均放置在小數數組中，則數組中的兩個2順序也非原序&nbsp;</p>\r\n\r\n<p><br />\r\n這就說明，quick sort是不穩定的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

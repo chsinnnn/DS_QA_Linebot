@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:27",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305441",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-12-26 18:47:19",
+        "poster": "11111239",
+        "realname": "高于喬",
+        "email": "rita920927@gmail.com",
+        "homepage": null,
+        "subject": "222. 撰寫程式碼指出如何為二元搜尋樹新增節點。",
+        "content": "<p><strong>class</strong> BinaryTree {</p>\r\n\r\n<p><strong>private</strong>:</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;<strong>struct</strong> Node {</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;int data; &nbsp; &nbsp; &nbsp; // 節點中存儲的資料</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Node* left; &nbsp; &nbsp; // 指向左子節點的指標</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Node* right;&nbsp; &nbsp; // 指向右子節點的指標</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;};</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;Node* root;&nbsp;&nbsp; &nbsp;// 指向樹根的指標</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;Node* createNode(<strong>int </strong>data)&nbsp;&nbsp; &nbsp;//NODE節點&nbsp;</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;{</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Node* newNode = <strong>new</strong> Node;&nbsp;&nbsp; &nbsp;//新增一個Node</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;newNode-&gt;data = data;&nbsp;&nbsp; &nbsp;//新增節點的值設為data</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;newNode-&gt;left = <strong>nullptr</strong>;&nbsp;&nbsp; &nbsp;//並把它的左、右子樹設為空的</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;newNode-&gt;right = <strong>nullptr</strong>;</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>return</strong> newNode;&nbsp;&nbsp; &nbsp;//回傳新節點的位址</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;Node* insertNode(Node* currentNode, <strong>int </strong>data) { //新增資料節點</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>if</strong> (currentNode == <strong>nullptr</strong>)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//如果當前節點為空</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>return</strong> createNode(data);&nbsp;&nbsp; &nbsp;//創建節點、放資料</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>if</strong> (data &lt; currentNode-&gt;data) {&nbsp;&nbsp; &nbsp;//資料比較小，遞迴呼叫左子樹</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;currentNode-&gt;left = insertNode(currentNode-&gt;left, data);</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>else</strong> <strong>if</strong> (data &gt;= currentNode-&gt;data) { //資料大於等於，遞迴呼叫右子數</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;currentNode-&gt;right = insertNode(currentNode-&gt;right, data);</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>return</strong> currentNode; //返回修改後的目前位置</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>};</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "4",
+        "lang": "1"
+    }
+}

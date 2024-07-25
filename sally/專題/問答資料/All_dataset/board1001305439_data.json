@@ -1,0 +1,32 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。  答案: 假設二元樹為 A -&gt; B -&gt; C   \t \t前序（Preorder）：  \t \t\t走訪順序：根節點 -&gt; 左子樹 -&gt; 右子樹。 \t\t前序走訪結果為 A -&gt; B -&gt; C。 \t \t \t \t中序（Inorder）：  \t \t\t走訪順序：左子樹 -&gt; 根節點 -&gt; 右子樹。 \t\t中序走訪結果為 B -&gt; A -&gt; C。 \t \t \t \t後序（Postorder）：  \t \t\t走訪順序：左子樹 -&gt; 右子樹 -&gt; 根節點。 \t\t後序走訪結果為 B -&gt; C -&gt; A。",
+        "output": "評論:重複"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 為快速排序提出選擇基準pivot的方法，並舉例說明優點。  答案: 在快速排序中，基準值最好是選擇越靠近平均值或中位數的值越好  最佳 : 第一個基準值的位置剛好是中位數，將資料均分成二等份。  最差：當資料的順序恰好為由大到小或由小到大時，此時有分割跟沒有分割並沒有區別，反而做了多餘的操作。  因此選中位數當基準可以有助於避免最壞情況的出現，提高快速排序的效率",
+        "output": "評論:如何選中位數？比O(n)有效率的方法？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例解說希爾排序shell sort是否穩定stable。  答案: #include &lt;iostream&gt;  #include &lt;vector&gt;  using namespace std ;  void shellSort( vector&lt;int&gt;&amp; arr ) {      int n = arr.size() ;      for ( int gap = n / 2 ; gap &gt; 0 ; gap /= 2 ) {          for ( int i = gap ; i &lt; n ; i++ ) {              int temp = arr[i] ;              int j = i ;              while ( j &gt;= gap &amp;&amp; arr[j - gap] &gt; temp ) {                  arr[j] = arr[j - gap] ;                  j -= gap ;              }              arr[j] = temp ;          }      }  }  int main() {      vector&lt;int&gt; arr = { 5, 2, 9, 1, 5, 6 } ;      cout &lt;&lt;  Original Array:   ;      for ( int num : arr ) {          cout &lt;&lt; num &lt;&lt;     ;      }      cout &lt;&lt; endl ;      shellSort(arr) ;      cout &lt;&lt;  Sorted Array:   ;      for ( int num : arr ) {          cout &lt;&lt; num &lt;&lt;     ;      }      cout &lt;&lt; endl ;      return 0 ;  }  在上面這個例子中，由於存在交換操作，希爾排序可能會破壞相同元素的相對順序，因此是不穩定的。",
+        "output": "評論:舉例說明 != 程式碼  而是演示一個反例說明不保證stable。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例區別完全full、完整complete及平衡balanced二元樹的差異。  答案: full（root&#39;s subtrees are both full binary tree）  除了樹葉以外其他節點都有兩個小孩      1    / \\   2   3  / \\ / \\ 4  5 6  7  complete（full to level h - 1, level h is filled from left to right）  除了最後一層各層節點全滿，最後一層節點全部靠左      1    / \\   2   3  / \\  / 4   5 6  balanced  每個節點的左和右子樹的高度相差不超過1      1    / \\   2   3  / \\ 4   5",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。  答案: 前序遍歷（Preorder）：  定義：首先訪問根節點，然後遞歸地遍歷左子樹，最後遞歸地遍歷右子樹。  範例：假設有一個二元樹，其根節點是A，左子樹是B，右子樹是C，前序遍歷順序是A、B、C。  中序遍歷（Inorder）：  定義：先遞歸地遍歷左子樹，然後訪問根節點，最後遞歸地遍歷右子樹。  範例：假設有一個二元樹，其根節點是A，左子樹是B，右子樹是C，中序遍歷順序是B、A、C。  後序遍歷（Postorder）：  定義：先遞歸地遍歷左子樹，然後遞歸地遍歷右子樹，最後訪問根節點。  範例：假設有一個二元樹，其根節點是A，左子樹是B，右子樹是C，後序遍歷順序是B、C、A。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例解說快速排序quick sort是否穩定stable。  答案: 快速排序不是一個穩定的排序法。  快速排序在選擇一個pivot，並將所有其他元素與這個基準點比較，進行分割的過程中，可能會改變相等元素的相對順序。  以一個簡單的例子來說明：  假設我們有一個包含相等元素的陣列：[5, 3, 7, 3, 8]，其中有兩個相等的元素3。  如果在快速排序過程中，我們選取第一個元素5作為基準點（pivot）進行排序，那麼排序的一次操作可能會導致元素順序如下：  - 第一個3保持位置不動，因為它已經在基準點5的左邊。 - 第二個3也保持位置不動，因為它在陣列中的位置相對於第一個3是靠後的。  此時，兩個3的相對順序保持不變，看起來像是穩定的。  但是，如果分割過程中，選取的pivot是7，下面是一個可能的操作過程：  - 所有小於7的元素移動到左邊，所有大於7的元素移動到右邊，最終陣列可能變成[3, 5, 3, 7, 8]  在上述操作中，第一個3和第二個3的相對位置發生了改變：第二個3移動到了第一個3的前面。  這個例子說明，在快速排序過程中，由於分割操作，相等元素的相對順序可能會改變，因此快速排序是不穩定的。",
+        "output": "評論:選取第一個元素5作為基準點 ... 第二個3也保持位置不動  &lt;== 這是不正確的！  選取的pivot是7 ... 所有小於7的元素移動到左邊 &lt;== 看不出兩個3的相對順序"
+    }
+]

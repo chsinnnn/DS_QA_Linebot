@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:04" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296421</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2023-10-15 15:44:27</pt>
+  <poster>11127139</poster>
+  <realname>&#x9673;&#x3000;&#x6069;  </realname>
+  <email>a04182596@gmail.com</email>
+  <homepage> </homepage>
+  <subject>125 </subject>
+  <content>&lt;p&gt;125. &#x5BEB;&#x51FA;&#x53EF;&#x4EE5;&#x7CBE;&#x6E96;&#x63CF;&#x8FF0;&#x81EA;&#x5DF1;&#x5B78;&#x865F;(&#x5982;&#x5B57;&#x4E32;10927188)&#x7684;&#x6587;&#x6CD5;grammar&#x3002;&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&amp;lt;&#x5B78;&#x865F;&amp;gt;=&amp;lt;&#x5165;&#x5B78;&#x5E74;&#x5EA6;&amp;gt;&amp;lt;&#x5B78;&#x7CFB;&#x7DE8;&#x865F;&amp;gt;&amp;lt;&#x73ED;&#x7D1A;&#x7DE8;&#x865F;&amp;gt;&amp;lt;&#x5EA7;&#x865F;&amp;gt;&lt;br /&gt;&#xD;
+&amp;lt;&#x5165;&#x5B78;&#x5E74;&#x5EA6;&amp;gt;= 1 &amp;lt;digit&amp;gt; &amp;lt;digit&amp;gt; | &amp;lt;digit&amp;gt; &amp;lt;digit&amp;gt;&lt;br /&gt;&#xD;
+&amp;lt;&#x5B78;&#x7CFB;&#x7DE8;&#x865F;&amp;gt; = &amp;lt;digit&amp;gt;&amp;lt;digit&amp;gt;&lt;br /&gt;&#xD;
+&amp;lt;&#x73ED;&#x7D1A;&#x7DE8;&#x865F;&amp;gt; = &amp;lt;digit&amp;gt;&lt;br /&gt;&#xD;
+&amp;lt;&#x5EA7;&#x865F;&amp;gt; =&amp;nbsp; &amp;lt;digit&amp;gt;&amp;lt;digit&amp;gt;&lt;br /&gt;&#xD;
+&#x88DC;&#x5145;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;lt;digit&amp;gt; = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>39</hit>
+  <lang>1</lang>
+</data>

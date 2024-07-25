@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:02",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296425",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-11-29 11:16:18",
+        "poster": "11127116",
+        "realname": "曾詮淳",
+        "email": "kevin47338647@gmail.com",
+        "homepage": null,
+        "subject": "214",
+        "content": "<p>214. 舉例說明合併排序的遞迴深度和資料筆數的關係。</p>\r\n\r\n<p>假設有一個包含8個元素的未排序整數數組：5,3,8,6,2,7,1,4</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>初始階段：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>我們開始時有一個包含8個元素的數組。</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>第一次遞迴：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>數組被分成兩半：5,3,8,6&nbsp;和 2,7,1,4</li>\r\n\t\t<li>每個子數組進行遞迴排序。</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>第二次遞迴：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>第一個子數組5,3,8,6再次被分成兩半：5,3&nbsp;和 8,6</li>\r\n\t\t<li>第二個子數組2,7,1,4被分成兩半：2,7&nbsp;和 1,4</li>\r\n\t\t<li>現在有四個子數組，每個子數組進行遞迴排序。</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>第三次遞迴：：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>接者把四個組依上述步驟分為八個子組。</li>\r\n\t\t<li>最後開始return</li>\r\n\t</ul>\r\n\t</li>\r\n</ol>\r\n\r\n<p>在這個例子中，我們進行了3次遞迴，因為我們將數組拆分成了3層。每一次遞迴都將數組拆分成兩半，所以遞迴深度取決於對數的底數，以2為底。對於包含n個元素的數組，合併排序的遞迴深度為log<sub>2</sub>n。</p>\r\n\r\n<p>因此，這裡的例子中，8個元素的數組，遞迴深度為log⁡<sub>2</sub>8=3。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-21 17:39:52",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答201",
+        "content": "<p><strong>舉例說明單一佇列模擬如何計算平均等候時間waiting time</strong></p>\r\n\r\n<p><strong>在單一佇列模擬中，我們可以使用以下方法來計算平均等候時間（Average Waiting Time）：</strong></p>\r\n\r\n<p><strong>假設我們正在模擬一個顧客進入服務台的情境，顧客到達服務台的間隔時間（Inter-arrival time）是隨機的，而服務時間（Service time）也是隨機的。這裡使用典型的離散事件模擬，當顧客到達服務台時，會進行服務，服務結束後離開佇列。我們可以在模擬過程中記錄每個顧客進入佇列的時間，以及完成服務的時間，這樣就可以計算每個顧客的等候時間，並最後計算平均等候時間。</strong></p>\r\n\r\n<p><strong>以下是一個簡化的Python示例程式碼，用於單一佇列模擬計算平均等候時間：</strong></p>\r\n\r\n<p><strong>import random</strong></p>\r\n\r\n<p><strong>def simulate_single_queue(simulation_time, inter_arrival_time_mean, service_time_mean):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;queue = []</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;current_time = 0</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;total_waiting_time = 0</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;num_customers_served = 0</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;while current_time &lt; simulation_time:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not queue:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# If the queue is empty, set the next arrival time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next_arrival_time = random.expovariate(1 / inter_arrival_time_mean)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_time += next_arrival_time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;queue.append(current_time)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# If the queue is not empty, process the next customer</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next_service_time = random.expovariate(1 / service_time_mean)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_time += next_service_time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Calculate waiting time for the current customer</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waiting_time = current_time - queue[0]</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total_waiting_time += waiting_time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num_customers_served += 1</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;queue.pop(0)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;average_waiting_time = total_waiting_time / num_customers_served</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;return average_waiting_time</strong></p>\r\n\r\n<p><strong># Example usage:</strong></p>\r\n\r\n<p><strong>simulation_time = 10000&nbsp; # Total simulation time</strong></p>\r\n\r\n<p><strong>inter_arrival_time_mean = 5.0&nbsp; # Mean time between customer arrivals</strong></p>\r\n\r\n<p><strong>service_time_mean = 4.0&nbsp; # Mean service time</strong></p>\r\n\r\n<p><strong>result = simulate_single_queue(simulation_time, inter_arrival_time_mean, service_time_mean)</strong></p>\r\n\r\n<p><strong>print(&quot;Average Waiting Time:&quot;, result)</strong></p>\r\n\r\n<p><strong>這個示例程式碼中，我們追蹤了每個顧客的等候時間，並最終計算出平均等候時間。這只是一個簡單的模擬示例，實際應用中可能會考慮更多的因素，例如佇列的容量限制、顧客的優先級等等。同樣地，建議進行多次模擬來獲得更穩定的平均等候時間結果。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

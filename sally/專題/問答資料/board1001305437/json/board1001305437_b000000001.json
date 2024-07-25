@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:53",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305437",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-11-23 17:08:29",
+        "poster": "11127229",
+        "realname": "廖翊崴",
+        "email": "willy.liao921118@gmail.com",
+        "homepage": null,
+        "subject": "206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。",
+        "content": "<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\"># include &lt;iostream&gt;<br />\r\nusing namespace std ;</span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">void bubbleSort( int arr[], int n ) {<br />\r\n&nbsp; &nbsp; for ( int i = 0 ; i &lt; n ; i++ ) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; bool swapped = false ; &nbsp;// 初始化標誌，其表示本輪是否有進行交換</span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; for ( int j = 0 ; j &lt; n - i - 1 ; j++ ) {&nbsp;</span><br />\r\n<span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ( arr[j] &gt; arr[j + 1] ) { &nbsp;// 如果相鄰的元素順序錯誤，進行交換<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap( arr[j], arr[j + 1] ) ;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swapped = true ; &nbsp;// 設置標誌為true，表示有進行交換<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;</span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; if ( !swapped ) break ; &nbsp;// 如果本輪沒有進行交換，表示數列已經有序，提前結束排序<br />\r\n&nbsp; &nbsp; }&nbsp;<br />\r\n}&nbsp;</span></span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">int main() {<br />\r\n&nbsp; &nbsp; int arr[] = { 64, 34, 25, 12, 22, 11, 90 } ; &nbsp;// 例子</span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; bubbleSort( arr, 7 ) ; &nbsp;// 呼叫氣泡排序函數</span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; cout &lt;&lt; &quot;排序後的數列: &quot; ; &nbsp;// 輸出排序後的數列<br />\r\n&nbsp; &nbsp; for ( auto &amp; arr : arr )<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; arr &lt;&lt; &quot; &quot; ;</span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; cout &lt;&lt; endl ;<br />\r\n&nbsp; &nbsp; return 0 ;<br />\r\n} &nbsp;</span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

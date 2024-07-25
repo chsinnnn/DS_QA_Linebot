@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-09-21 20:32:46",
+        "poster": "11027129",
+        "realname": "劉宗崴",
+        "email": "wilson41587@gmail.com",
+        "homepage": null,
+        "subject": "107. 作業二採用什麼資料結構儲存讀入資料，須說明原因。*",
+        "content": "<p>從範例輸入可得知每個學生都有不同的資訊，比如學校、系別等，因此會使用到struct(record)來儲存這種複合型的資料，並且由於事先無法得知學生輸量，因此使用linked list我認為最為妥善</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "78",
+        "lang": "1"
+    }
+}

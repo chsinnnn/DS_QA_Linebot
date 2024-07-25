@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000043.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000043",
+        "site": "1000110001",
+        "pt": "2022-09-26 10:54:51",
+        "poster": "11027102",
+        "realname": "仇瀚慶",
+        "email": "tim1357929@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>若原問題都是同性質的狀況下就適合使用遞迴，使用遞迴可以把規模大的問題轉化成規模較小的問題，讓程式碼看起來比較精簡。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

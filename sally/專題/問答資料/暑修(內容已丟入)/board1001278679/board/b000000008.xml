@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:00" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278679</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2023-07-10 14:25:12</pt>
+  <poster>10927250</poster>
+  <realname>&#x53E4;&#x5BB8;&#x5B87;  </realname>
+  <email>ku0905264478@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;119 </subject>
+  <content>&lt;p&gt;&#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; int data;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x51FD;&#x5F0F;&#xFF1A;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x4E2D;&#x7684;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void deleteNode(Node** head) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (*head == nullptr || (*head)-&amp;gt;next == nullptr || (*head)-&amp;gt;next-&amp;gt;next == nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5982;&#x679C;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x70BA;&#x7A7A;&#x6216;&#x53EA;&#x6709;&lt;/span&gt;1&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x6216;&lt;/span&gt;2&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x7121;&#x6CD5;&#x522A;&#x9664;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* temp = *head;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x79FB;&#x52D5;&#x5230;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&#x4E4B;&#x524D;&#x7684;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (int i = 0; i &amp;lt; 2; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; temp = temp-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (temp == nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5982;&#x679C;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x9577;&#x5EA6;&#x5C0F;&#x65BC;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF0C;&#x7121;&#x6CD5;&#x522A;&#x9664;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5C07;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&#x5F9E;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x4E2D;&#x79FB;&#x9664;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* deleteNode = temp-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; temp-&amp;gt;next = deleteNode-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; delete deleteNode;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x51FD;&#x5F0F;&#xFF1A;&#x5728;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x5C3E;&#x7AEF;&#x65B0;&#x589E;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void appendNode(Node** head, int newData) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* newNode = new Node;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; newNode-&amp;gt;data = newData;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; newNode-&amp;gt;next = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (*head == nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; *head = newNode;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* temp = *head;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; while (temp-&amp;gt;next != nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; temp = temp-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; temp-&amp;gt;next = newNode;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x51FD;&#x5F0F;&#xFF1A;&#x8F38;&#x51FA;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x5167;&#x5BB9;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void printList(Node* head) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* temp = head;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; while (temp != nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; temp-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; temp = temp-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; std::endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node* head = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;/span&gt; 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (int i = 1; i &amp;lt;= 5; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; appendNode(&amp;amp;head, i);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x522A;&#x9664;&#x524D;&#x7684;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#xFF1A;&lt;/span&gt;&amp;quot;;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; printList(head);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x522A;&#x9664;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; deleteNode(&amp;amp;head);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x522A;&#x9664;&#x5F8C;&#x7684;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#xFF1A;&lt;/span&gt;&amp;quot;;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; printList(head);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>20</hit>
+  <lang>1</lang>
+</data>

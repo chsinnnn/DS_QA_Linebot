@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000002000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000002000000001",
+        "site": "1000110001",
+        "pt": "2023-07-18 15:08:00",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答201",
+        "content": "<p>Nice descriptions!</p>\r\n\r\n<p>除了以隨機事件生成器假造資料之外，也可以蒐集真實資料用於模擬，例如電子交易數據、系統操作日誌等。</p>\r\n\r\n<p>舉例計算是真的給一個實際數字的例子並進行計算。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "2",
+        "lang": "1"
+    }
+}

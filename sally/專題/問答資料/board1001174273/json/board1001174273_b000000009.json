@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2022-10-10 14:18:59",
+        "poster": "11027243",
+        "realname": "陳冠妤",
+        "email": "hiroto104360@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>call by value(傳值)：<br />\r\n參數以數值方式傳遞，顧名思義把值傳到另一個記憶體位置的值上<br />\r\n在cal by value的情況下，呼叫函數所傳遞的參數以及參數地址皆不會被改變。</p>\r\n\r\n<p>call by reference(傳參考)：<br />\r\n把記憶體位置傳到移到另一個記憶體位置上 (可看作同一個物件)<br />\r\n在cal by reference的情況下，呼叫函數所傳遞的參數可以被改變，但參數地址並不會被改變。</p>\r\n\r\n<p>#############</p>\r\n\r\n<p># include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>void TestRef(int &amp; ref) {<br />\r\n&nbsp; &nbsp; ref = ref * 10;<br />\r\n&nbsp; &nbsp; return ;<br />\r\n} //TestRef</p>\r\n\r\n<p>void TestVal(int val){<br />\r\n&nbsp;&nbsp; &nbsp;val = val * 10;<br />\r\n&nbsp;&nbsp; &nbsp;return;<br />\r\n}// TestVal</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp; &nbsp; int ref = 10 , val = 10;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;1st ref&amp;val: &quot; &lt;&lt; ref &lt;&lt; &quot; / &quot; &lt;&lt; val &lt;&lt; endl;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; TestRef(ref);<br />\r\n&nbsp; &nbsp; TestVal(val);</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;2nd ref&amp;val: &quot; &lt;&lt; ref &lt;&lt; &quot; / &quot; &lt;&lt; val &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n} // main</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027243/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-10%20140638(1).jpg\" style=\"height:766px; width:779px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "68",
+        "lang": "1"
+    }
+}

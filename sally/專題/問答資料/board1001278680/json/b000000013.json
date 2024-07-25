@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-14 12:03:02",
+        "poster": "06005734",
+        "realname": "宋育致",
+        "email": "asdeax8177616@gmail.com",
+        "homepage": null,
+        "subject": "搶答 122",
+        "content": "<p>+ * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>不是，因為正常的前序運算執行不了，多了一個*號，運算下來會變成+ * 2 4 6 * 2-&gt;+8 6 * 2-&gt;14 * 2。<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

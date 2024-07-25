@@ -1,0 +1,82 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例解說選擇排序selection sort並非穩定stable的排序方法  答:   \t學生A，分數：85 \t學生B，分數：90 \t學生C，分數：80 \t學生D，分數：90   使用selection sort，排序過程：  找到最小的分數，交換第一個分數和最小分數的位置   \t學生C，分數：80 \t學生B，分數：90 \t學生A，分數：85 \t學生D，分數：90   找到第二小的分數，交換第二個分數和第二小分數的位置   \t學生C，分數：80 \t學生A，分數：85 \t學生B，分數：90 \t學生D，分數：90   找到第三小的分數，交換第三個分數和第三小分數的位置   \t學生A，分數：85 \t學生C，分數：80 \t學生B，分數：90 \t學生D，分數：90   學生B和學生D的分數都是90，在原始列表中，學生B出現在學生D的前面。在排序後，學生D卻在學生B的前面。這就是selection sort的不穩定性。",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。  要實現氣泡排序並提早結束執行時，嚼條件是序列已經完成排序，沒有發生任何元素的交換，就可以提早結束排序過程。  #include &lt;iostream&gt; using namespace std;  void bubbleSort(int arr[], int n) {     for (int i = 0; i &lt; n; i++) {         // 提早結束的標誌         bool isSorted = true;         for (int j = 0; j &lt; n - i - 1; j++) {             if (arr[j] &gt; arr[j + 1]) {                 // 交換元素                 swap(arr[j], arr[j + 1]);                 isSorted = false;             }         }         // 如果一次遍歷中沒有發生交換，表示序列已經完成排序         if (isSorted) {             break;         }     } }  int main() {     int arr[] = {64, 34, 25, 12, 22, 11, 90};     int n = sizeof(arr) / sizeof(arr[0]);      bubbleSort(arr, n);      cout &lt;&lt;  Sorted array:  ;     for (int i = 0; i &lt; n; i++) {         cout &lt;&lt; arr[i] &lt;&lt;    ;     }     cout &lt;&lt; endl;      return 0; }",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  在氣泡排序的程式碼中，會影響排序是否穩定的關鍵指令是交換數值的部分。如果在交換的過程中，只有在當前數值大於下一個數值時才進行交換，這樣就能確保相等數值的相對位置不變，實現穩定排序。  #include &lt;iostream&gt; using namespace std;  void bubbleSort(int arr[], int n) {     for (int i = 0; i &lt; n; i++) {         for (int j = 0; j &lt; n - i - 1; j++) {             if (arr[j] &gt; arr[j + 1]) {                 swap(arr[j], arr[j + 1]);// 交換數值             }         }     } }  int main() {     int arr[] = {5, 3, 1, 3, 2};     int n = sizeof(arr) / sizeof(arr[0]);      bubbleSort(arr, n);      cout &lt;&lt;  Sorted array:  ;     for (int i = 0; i &lt; n; i++) {         cout &lt;&lt; arr[i] &lt;&lt;    ;     }     cout &lt;&lt; endl;      return 0; }    這段程式碼中，使用兩個迴圈來實現氣泡排序。在內部的迴圈中，我們比較相鄰的兩個元素，如果前一個元素大於後一個元素，則交換它們的位置。",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  #include &lt;iostream&gt; #include &lt;vector&gt; #include&lt;string&gt; using namespace std;  // Insertion Sort function void insertionSort(vector&lt;pair&lt;int, char&gt;&gt;&amp; arr) {     int n = arr.size();     for (int i = 1; i &lt; n; ++i) {         pair&lt;int, char&gt; key = arr[i];         int j = i - 1;          // Shift elements greater than key to the right         while (j &gt;= 0 &amp;&amp; key.first &lt; arr[j].first) { // Use  &lt;  for stable sort             arr[j + 1] = arr[j];             j--;         }          arr[j + 1] = key;     } }  int main() {     vector&lt;pair&lt;int, char&gt;&gt; arr = { {3, &#39;c&#39;}, {1, &#39;a&#39;}, {2, &#39;b&#39;}, {3, &#39;d&#39;} };     cout &lt;&lt;  原始序列： ;     for (int i = 0; i &lt; size(arr);i++) {         cout &lt;&lt;  (  &lt;&lt; arr[i].first &lt;&lt;  ,   &lt;&lt; arr[i].second &lt;&lt;  )  ;     }     cout &lt;&lt; endl;      insertionSort(arr);      cout &lt;&lt;  排序後： ;     for (int i = 0; i &lt; size(arr); i++) {         cout &lt;&lt;  (  &lt;&lt; arr[i].first &lt;&lt;  ,   &lt;&lt; arr[i].second &lt;&lt;  )  ;     }     cout &lt;&lt; endl;      return 0; }  在這個 C++ 程式碼中，我們使用 vector 來儲存要排序的元素，每個元素是一個 pair，其中第一個元素是排序的關鍵字，第二個元素是標籤。這樣可以模擬多個相等元素的情況。  在 insertionSort 函式中，我們使用插入排序來對 vector 中的元素進行排序。在 while 迴圈中，我們使用 &lt; 來比較關鍵字，這保證了排序的穩定性，即相等元素的相對順序在排序後保持不變。  執行這個程式碼，輸出結果應為：    這證明了插入排序是穩定的，相等元素的相對順序在排序後得到了保留。",
+        "output": "Nice.  Maybe it needs:  #include &lt;utility&gt;"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: //撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。 #include &lt;iostream&gt; using namespace std;   /* run this program using the console pauser or add your own getch, system( pause ) or input loop */  int main(int argc, char** argv) {     int n;     int tp;     bool ischanged;     cout &lt;&lt;  input n: ;     cin &gt;&gt; n;     int ar[n];     cout &lt;&lt;  input array:  &lt;&lt; endl;     for(int i = 0;i&lt;n;i++){         cin &gt;&gt; ar[i];     }     for(int i = n;i&gt;1;i--){         ischanged = false; //預設ischanged為false;          for(int j = 0;j&lt;i-1;j++){             if(ar[j]&gt;ar[j+1]){                 tp = ar[j];                 ar[j] = ar[j+1];                 ar[j+1] = tp;                 ischanged = true; //如果有進行元素交換,ischanged設為true              }         }         if(ischanged == false) //如果ischanged為false,元素沒有交換,代表陣列已經排序好了,跳出迴圈。          break;         for(int i = 0;i&lt;n;i++){         cout &lt;&lt; ar[i] &lt;&lt;    ;         }         cout &lt;&lt; endl;     }     cout &lt;&lt; endl &lt;&lt;  an array has been sorted:  ;     for(int i = 0;i&lt;n;i++){         cout &lt;&lt; ar[i] &lt;&lt;    ;     }     return 0; }  以下為範例 有判別是否進行元素排序:  無判別是否進行元素排序:    有判別是否進行元素排序:  無判別是否進行元素排序:",
+        "output": "內容和前文重複，而且程式碼排版還比較不整齊？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  在氣泡排序中，保證排序的穩定性的主要是因為當兩個元素相等時，我們並不會進行交換。在下面的 C++ 程式碼中，只有當前一個元素大於後一個元素時，我們才進行交換。也就是說，等價元素的相對順序在排序過程中是不會改變的，因此算法是穩定的。  #include&lt;iostream&gt; using namespace std;  void bubbleSort(int arr[], int n) {     bool swapped;      for(int i = 0; i &lt; n-1; i++) {         swapped = false;          for(int j = 0; j &lt; n-i-1; j++) {             // 這裡是關鍵，當兩個元素相等時，我們不進行交換             if(arr[j] &gt; arr[j+1]) {                 // 只有當前一個元素大於後一個元素時，我們才進行交換                 swap(arr[j], arr[j+1]);                 swapped = true;             }         }          // 如果在這輪比較中沒有進行過交換，那麼該陣列已經排序完成，我們可以提前結束         if(swapped == false)             break;     } }  int main() {     int arr[] = {64, 34, 25, 12, 22, 11, 90};     int n = sizeof(arr)/sizeof(arr[0]);      bubbleSort(arr, n);      cout &lt;&lt;  Sorted array is:  ;     for(int i = 0; i &lt; n; i++)         cout &lt;&lt; &#39; &#39; &lt;&lt; arr[i];     cout &lt;&lt; endl;      return 0; }  在這個程序中， if(arr[j] &gt; arr[j+1])  是確保排序穩定性的關鍵語句。由於它不會在兩個元素相等時進行交換，這就確保了等價元素的相對順序在排序過程中不會改變，從而使得排序算法是穩定的。",
+        "output": "OK.  可惜內容和前文重複，閱讀過前文之後才作答。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例解說選擇排序selection sort並非穩定stable的排序方法。  Ans:  選擇排序是從數列找出最大或最小的元素，把它放到排序好的數列尾端，接著以此類推對其他元素重複操作，但要判斷穩定性的條件是當存在兩個相同值的元素時，在排序前後，若原本在前面的元素仍然在後面的元素之前，則視為穩定的排序法。  假設有個數列:5 2 8 2 3，從最小的元素開始:  -&gt;2 5 8 2 3  -&gt;2 2 8 5 3  -&gt;2 2 3 5 8  從過程中可以看到原本在第四個位置的 2 排序後移動到了第一個位置，這證明了選擇排序不是穩定的排序算法，  如果是穩定的排序，那麼第一個 2 應該仍然位於第四個 2 之前，所以可以確定選擇排序不具有穩定性。",
+        "output": "舉的例子和文字敘述並不一致， 原本在第四個位置的 2 排序後移動到了第一個位置 並不正確，從例子可見，原本第四個位置的2只是和第二個位置的5互換，在那之前，第一步就將原本第二個位置的2和原本第一個位置的5互換了！"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  def insertion_sort(arr):         for i in range(1, len(arr)):              key = arr[i]              j = i - 1             while j &gt;= 0 and key &lt; arr[j]:              arr[j + 1] = arr[j]              j -= 1          #這個指令確保了插入過程中的穩定性。          arr[j + 1] = key  這個while循環會將所有比當前元素key大（對於升序排序）的元素往後移動一位，以便為key找到正確的位置插入。而且當key和相等元素進行比較時，使用key &lt; arr[j]的條件。這樣在相等元素的情況下，插入排序將key插入到相等元素的前面，確保相等元素的相對順序保持不變。  因此，這個while循環是影響插入排序是否穩定的關鍵指令。保持這個while循環的穩定性將確保插入排序的穩定性，即相等元素的相對順序在排序前後保持不變。",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。  那我再舉一個例子解釋  原始列表：[(&#39;B&#39;, 2), (&#39;D&#39;, 1), (&#39;C&#39;, 2), (&#39;A&#39;, 1)]  進行選擇排序：  第一步：選擇最小的數值1，與第一個位置的元素交換。  [(&#39;D&#39;, 1), (&#39;B&#39;, 2), (&#39;C&#39;, 2), (&#39;A&#39;, 1)]  第二步：選擇第二小的數值1，與第二個位置的元素交換。  [(&#39;D&#39;, 1), (&#39;A&#39;, 1), (&#39;C&#39;, 2), (&#39;B&#39;, 2)]  第三步：選擇第三小的數值2，與第三個位置的元素交換。  [(&#39;D&#39;, 1), (&#39;A&#39;, 1), (&#39;B&#39;, 2), (&#39;C&#39;, 2)]  第四步：選擇最大的數值2，與最後一個位置的元素交換。  [(&#39;D&#39;, 1), (&#39;A&#39;, 1), (&#39;B&#39;, 2), (&#39;C&#39;, 2)]  現在來看看原始列表中的兩對相同數值元素：(2, &#39;B&#39;)和(2, &#39;C&#39;)。在排序後，這兩對相同數值元素的相對順序被改變了。在原始列表中，&#39;B&#39;在&#39; C&#39;之前，但在排序後，&#39;B&#39;在&#39;C&#39;之後。這說明了選擇排序是不穩定的排序方法。",
+        "output": "第二步：選擇第二小的數值2，與第二個位置的元素交換。  [(&#39;C&#39;, 1), (&#39;E&#39;, 2), (&#39;A&#39;, 3), (&#39;D&#39;, 3), (&#39;B&#39;, 2)]  這一步是錯誤的，第二個位置本來就是2，根本不用交換！  結果仍然維持是第一步的樣子：[(&#39;C&#39;, 1), (&#39;B&#39;, 2), (&#39;A&#39;, 3), (&#39;D&#39;, 3), (&#39;E&#39;, 2)]"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Selection sort 是個很直觀的排列方式，選擇大到小或是小到大排列，以下由大到小舉例:  A{4,2,3,0(a),5,0(b)} ，在A集合中有6個數字資料經過Selection sort 以大到小排列，其中有兩個一樣的數字資料為0，以0a,0b表示  首先找出最大的數字為5，放置第一個 A{5,4,2,3,0a,0b}  接下來下順一位，將剩下的五個數字中找出最大的 4 放置第二個  A{5,4,2,3,0a,0b} 以此類推 最後結果為 A{5,4,3,2,0a,0b}  但是如果將排列再度打亂 將0b排至0a前面 ，所得到的結果則為A{5,4,3,2,0b,0a} 這就是Seletion sort 的不穩定性，一樣的數列打亂後每次的排序都不一定相同。",
+        "output": "兩個0都是最小，何必交換位置？這例子根本看不到選擇排序的不穩定性。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: void bubbleSort(int arr[], int n) {  for (int i = 0; i &lt; n - 1; i++) {  bool swapped = false; // 用來標記在一輪遍歷中是否有交換發生  // 在每輪遍歷中，將最大元素浮到數列末端  for (int j = 0; j &lt; n - i - 1; j++) {  if (arr[j] &gt; arr[j + 1]) { // 交換相鄰元素  swap(arr[j], arr[j + 1]);  swapped = true; // 有交換發生，標記為 true  }  } // 如果在一輪遍歷中沒有進行任何交換，表示數列已排序完成，提早結束排序  if (!swapped) { break; }  }  }  程式碼中的 swapped 變數用來標記在一輪遍歷中是否有交換發生，如果在一輪遍歷結束後，swapped 的值仍然為 false，則表示數列已經排序完成，這時會使用 break 跳出外層的迴圈，提早結束氣泡排序的執行。",
+        "output": "OK  可惜前文有人搶答了。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 問題：依據程式碼解說選擇排序的時間複雜度  以下是選擇排序的程式碼  void selectionSort(int arr[], int n) {     for (int i = 0; i &lt; n - 1; i++) {         int min_idx = i;         for (int j = i + 1; j &lt; n; j++) {             if (arr[j] &lt; arr[min_idx]) {                 min_idx = j;             }         }         // Swap the minimum element with the first unsorted element         int temp = arr[i];         arr[i] = arr[min_idx];         arr[min_idx] = temp;     } }    1.從第一個元素開始，將其視為已排序部分。  2.在未排序部分中找到最小的元素，並將其與已排序部分的末尾進行交換。  3.然後將下一個未排序元素視為已排序部分，重複步驟2，直到所有元素都排序完畢。  選擇排序包含兩個嵌套的循環。外層循環遍歷n-1次（0到n-2，共n-1個元素），內層循環遍歷剩餘未排序部分找到最小值。內層循環每次遍歷剩餘未排序部分，所以其運行次數為n-1、n-2、...，直到1。因此，總的運行次數為(n-1) + (n-2) + ... + 1。  根據數學公式(n-1) + (n-2) + ... + 1 = n * (n-1) / 2。因此，選擇排序的時間複雜度為O(n^2)。",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例如下   \t初始數列如下 :    5, 1, 5, 3, 2 ( 在之後為區別相同數字，會以5a, 1, 5b, 3, 2表示) \t在第一次迭代後: 1, 5a, 5b, 3, 2 \t在第二次迭代後: 1, 2, 5b, 3, 5a \t在第三次迭代後: 1, 2, 3, 5b, 5a       原本在前面的5a 被排到5b後面了，且因都是5不會進行swap的動作，並不能保證排序之後是否能保持先後順序，因此是不穩定的排序法，",
+        "output": "Nice example!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。  A:  #include&lt;stdio.h&gt;   void bubble_sort(int arr[],int n){          int i,j,temp;     int swap; //紀錄是否有交換      for(i=0,i&lt;n-1;i++){         swap=0;//初始化swap          for(j=0;j&lt;n-i-1;j++){             if(arr[j]&gt;arr[j+1]){                 temp=arr[j];                 arr[j]=arr[j+1];                 arr[j+1]=temp;                 swap=1; //標記有交換              }         }         if(swap==0){             break;         } //如果沒有交換，表示順序已經好了，提前結束      } }  在過程中發現swap=0代表沒有交換了，順序已排好，就可提早結束執行",
+        "output": "OK.  可惜前面早已有人作答。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 207. 舉例解說選擇排序selection sort並非穩定stable的排序方法  A:選擇排序是一種簡單但效率較低的排序方法，但它並非穩定的排序方法。在穩定排序中，相同大小的元素在排序後相對位置保持不變，因為他們在原始序列中的順序已經是對的。  假設有一個包含姓名和成績的資料，並希望根據成績進行排序   \t(Eva, 90) \t(Bob, 90) \t(David, 78)   使用選擇排序進行遞增排序：  首先找到最小值，交換它與第一個位置。交換後：   \t(David, 78) &lt;- 最小值 \t(Bob, 90) \t(Eva, 90)   從這個例子中可以看到，成績相同的Bob和 Eva 在排序後的相對位置改變了，這表示選擇排序並非穩定的排序方法。",
+        "output": "Exactly!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 共計12位同學得分。",
+        "output": ""
+    }
+]

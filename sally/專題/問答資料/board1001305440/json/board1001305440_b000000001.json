@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:38",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305440",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-12-20 08:27:46",
+        "poster": "11127246",
+        "realname": "陳柏劭",
+        "email": "imagirlfukk@gmail.com",
+        "homepage": null,
+        "subject": "226. 舉例說明如何為二元搜尋樹刪除節點。",
+        "content": "<p>再刪除二元搜尋樹時應考慮到以下幾種情況，1.刪除的節點為葉節點，2.刪除的節點擁有左或右的子節點，3. 刪除的節點同時擁有左與右子節點。</p>\r\n\r\n<p>範例程式碼</p>\r\n\r\n<p>struct Node* deleteNode(struct Node* root, int k)</p>\r\n\r\n<p>{</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;// 基本條件</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;if (root == NULL)</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return root;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;// 遞迴呼叫</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;if (root-&gt;key &gt; k) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;查找刪除節點</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root-&gt;left = deleteNode(root-&gt;left, k);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return root;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;else if (root-&gt;key &lt; k) {</p>\r\n\r\n<p>&nbsp; &nbsp;查找刪除節點</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root-&gt;right = deleteNode(root-&gt;right, k);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return root;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>\r\n\r\n<p>以下情況node不為空且以為要刪除節點</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;// case1 &amp; case2</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;if (root-&gt;left == NULL) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Node* temp = root-&gt;right;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free(root);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return temp;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;else if (root-&gt;right == NULL) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Node* temp = root-&gt;left;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free(root);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return temp;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;// case3</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;else {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 定義刪除節點的右子節點的最左節點(succ) 及它的父節點(succParent )</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Node* succParent = root;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct Node* succ = root-&gt;right;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; //用迴圈找到這兩節點的位置</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (succ-&gt;left != NULL) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;succParent = succ;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;succ = succ-&gt;left;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;// 如果succParent 是要刪除的節點 將 succ的右子節點給succParent&nbsp; 左子節點 因為succParent 在更新後會比succ的右子節點大</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;// 如果不是的話就簡單把succ的右子節點給succParent 的右子節點</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (succParent != root)</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;succParent-&gt;left = succ-&gt;right;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;succParent-&gt;right = succ-&gt;right;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 覆蓋資料給要被刪掉的node&nbsp;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root-&gt;key = succ-&gt;key;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 釋放succ</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free(succ);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return root;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>\r\n\r\n<p>}</p>\r\n\r\n<p><br />\r\n利用以下二元搜尋樹當範例，<br />\r\n<img alt=\"\" src=\"/user/1/1/11127246/images/TYWEE00.png\" style=\"height:398px; width:450px\" /></p>\r\n\r\n<p>依照上述情形分類，case1: 2, 5, 9, 12&nbsp; case2:&nbsp;1 , case3: 7, 3, 10&nbsp;&nbsp;</p>\r\n\r\n<p>先取case1 裡的2 當範例，若要刪除節點2那我們就需要找到節點2 的父節點然後將父節點的右節點指向NULL ，最後把節點2 的資料做釋放。樹在刪除節點2後的情況<br />\r\n<img alt=\"\" src=\"/user/1/1/11127246/images/tw001.png\" style=\"height:530px; width:908px\" /></p>\r\n\r\n<p>如果要刪除1的話(case2): 節點三的左節點向下接接到節點2&nbsp;後釋放節點1的資料。<br />\r\n<br />\r\n<img alt=\"\" src=\"/user/1/1/11127246/images/tw001(1).png\" style=\"height:530px; width:908px\" />如果要刪除節點10，需要先找到節點10的右子節點的最左子節點(suc)以及它的父節點(Parsuc)，檢查節點(Parsuc)是否與節點10一致，假設一致的話(Parsuc)的右子節點指向succ 的右子節點。將succ的資料copy到節點10，最後釋放succ的資料。刪除節點10後樹的狀況。<img alt=\"\" src=\"/user/1/1/11127246/images/Untitled(1).png\" style=\"height:446px; width:594px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "33",
+        "lang": "1"
+    }
+}

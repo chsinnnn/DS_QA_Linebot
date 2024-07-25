@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:39" type="post" filename="b000000022.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278676</board_id>
+  <node>000000022</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 23:06:40</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;103 </subject>
+  <content>&lt;p&gt;103. &#x7C21;&#x4ECB;Acker&#x51FD;&#x6578;&#xFF0C;&#x4E26;&#x5217;&#x51FA;Acker(2,3)&#x7684;&#x6C42;&#x89E3;&#x904E;&#x7A0B;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker&#x51FD;&#x6578;&#x662F;&#x4E00;&#x500B;&#x5177;&#x6709;&#x5169;&#x500B;&#x6574;&#x6578;&#x53C3;&#x6578;&#x7684;&#x905E;&#x8FF4;&#x51FD;&#x6578;&#xFF0C;&#x7528;&#x65BC;&#x8A08;&#x7B97;&#x5169;&#x500B;&#x975E;&#x8CA0;&#x6574;&#x6578;&#x4E4B;&#x9593;&#x7684;&amp;quot;&#x963F;&#x514B;&#x66FC;&#x6578;&amp;quot;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker&#x51FD;&#x6578;&#x7684;&#x7A0B;&#x5F0F;&#x5B9A;&#x7FA9;&#x5982;&#x4E0B; :&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;if (m == 0) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return n + 1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} else if (n == 0) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return Acker(m - 1, 1);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} else {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return Acker(m - 1, Acker(m, n - 1))&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker(2,3) &#x7684;&#x6C42;&#x89E3;&#x904E;&#x7A0B;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;m &#x548C; n &#x90FD;&#x4E0D;&#x7B49;&#x65BC; 0&#xFF0C;&#x905E;&#x8FF4;&#x8ABF;&#x7528; Acker &#x51FD;&#x6578;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker(1, Acker(2,2)) &#xFF0C; Acker(2,2)&#xFF1A; Acker &#x51FD;&#x6578;&#xFF1A;Acker(1, Acker(2,1)) &#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker(2,1)&#xFF1A; Acker &#x51FD;&#x6578;&#xFF1A;Acker(1, Acker(2,0)) &#xFF0C; Acker(2,0)&#xFF1A;Acker &#x51FD;&#x6578;&#xFF1A;Acker(1,1) &#xFF0C; &#x56DE;&#x50B3;&#x503C;&#x70BA; 1 &#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker(1,1)Acker &#x51FD;&#x6578;&#xFF1A;Acker(0, Acker(1,0)) &#xFF0C; Acker(1,0)&#xFF1A; n &#x7B49;&#x65BC; 0 &#xFF0C;Acker &#x51FD;&#x6578;&#xFF1A;Acker(0,1) &#xFF0C;&#x56DE;&#x50B3;&#x503C;&#x70BA; 2&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker(0,2): m &#x7B49;&#x65BC; 0&#xFF0C;&#x8FD4;&#x56DE; n+1&#xFF0C;&#x56DE;&#x50B3;&#x503C;&#x70BA; 3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Acker(0,3): m &#x7B49;&#x65BC; 0&#xFF0C;&#x8FD4;&#x56DE; n+1&#xFF0C;&#x56DE;&#x50B3;&#x503C;&#x70BA; 4&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6240;&#x4EE5; Acker(2,3) &#x7684;&#x7D50;&#x679C;&#x70BA; 5&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>13</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000024.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000024",
+        "site": "1000110001",
+        "pt": "2023-07-09 20:44:14",
+        "poster": "06004870",
+        "realname": "曾浚楷",
+        "email": "kenneth61215@gmail.com",
+        "homepage": null,
+        "subject": "搶答106",
+        "content": "<p>106.&nbsp;遞迴呼叫為何會造成記憶體區段錯誤？</p>\r\n\r\n<p>答: 因為遞迴在每次call function會將所需的參數輸入stack中，等到函數結束時才會釋放該記憶體空間，</p>\r\n\r\n<p>所以當使用遞迴呼叫函數次數過多且沒有給其適當條件來結束function時，會造成記憶體被佔用空間不斷增加，導致stack overflow，</p>\r\n\r\n<p>覆蓋到其他記憶體所暫存的資料，最終導致記憶體區段錯誤。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

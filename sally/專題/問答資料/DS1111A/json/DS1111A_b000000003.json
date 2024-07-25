@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-09-14 15:25:20",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "104",
+        "content": "<p><span style=\"font-size:18px\">什麼情況下適合使用遞迴？為什麼？* </span></p>\r\n\r\n<ol>\r\n\t<li>若要解的問題可以拆分小規模，且有重複性質的代碼則可以使用遞迴，因為這樣可以簡化代碼。</li>\r\n\t<li>若在解一些類似binary tree的問題，最適合使用遞迴，因為可以使用遞迴的方式去遍歷整個tree的節點。每個節點都有一個左樹和一個右樹，此類重複性的結構就可以利用遞迴的特性使重複性簡化。</li>\r\n\t<li>若無明確的中止條件則無法去使用遞迴解決，因為遞迴需要有確定的中止條件。</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "94",
+        "lang": "1"
+    }
+}

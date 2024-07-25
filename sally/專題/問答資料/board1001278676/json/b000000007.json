@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-07-05 16:49:49",
+        "poster": "06005732",
+        "realname": "王昱進",
+        "email": "louis21501@gmail.com",
+        "homepage": null,
+        "subject": "搶答105",
+        "content": "<p>integer overflow是指在計算或存取過程中，存在變數當中的數值超出該變數儲存的上限所發生的情況。</p>\r\n\r\n<p>我們常用的int為 int32_t，range在-2147483648~2147483647之間。</p>\r\n\r\n<p>避免的方法可以選擇設置上下限(以下為範例):</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>define max 2147483646,min -2147483647</p>\r\n\r\n<p>bool test(int x,int y)</p>\r\n\r\n<p>{</p>\r\n\r\n<p>if(x+y&gt;max || x+y&lt;min || x-y&lt;min)</p>\r\n\r\n<p>return flase;</p>\r\n\r\n<p>else</p>\r\n\r\n<p>return true;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main()</p>\r\n\r\n<p>{</p>\r\n\r\n<p>int&nbsp;a = 2147483646; // max-1</p>\r\n\r\n<p>int b = 3;</p>\r\n\r\n<p>bool ans= test(a,b);</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2022-09-28 21:16:45",
+        "poster": "11027124",
+        "realname": "蔡佑政",
+        "email": "kennytsai0213@icloud.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼",
+        "content": "<p>可直接宣告陣列內的值或利用迴圈來設定初始值</p>\r\n\r\n<p>#include &lt;stdio.h&gt;</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; int iarray[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // 直接設定初始10個數字的值</p>\r\n\r\n<p>&nbsp; char carray[10] = {&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;}; // 直接設定初始10個字元的值</p>\r\n\r\n<p>} //main()</p>\r\n\r\n<p>#include &lt;stdio.h&gt;</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; int array[10]; // 設定空間為10的陣列<br />\r\n&nbsp; int a;<br />\r\n&nbsp; for(int i = 0 ; i &lt; 10 ; i++) {<br />\r\n&nbsp; &nbsp; scanf(&quot;%d\\n&quot;, &amp;a); // 讀入想輸入的數字<br />\r\n&nbsp; &nbsp;&nbsp;array[i] = a; // 將讀入的數放入i中</p>\r\n\r\n<p>&nbsp; }&nbsp; // for&nbsp;<br />\r\n} //main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "26",
+        "lang": "1"
+    }
+}

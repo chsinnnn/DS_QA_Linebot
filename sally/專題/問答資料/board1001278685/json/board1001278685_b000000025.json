@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000025.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000025",
+        "site": "1000110001",
+        "pt": "2023-07-24 22:53:29",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答220",
+        "content": "<p>舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>前序(preorder):前序走訪過程是 中-&gt;左-&gt;右(VLR)</p>\r\n\r\n<p>中序(inorder):中序走訪過程是 左-&gt;中-&gt;右(LVR)</p>\r\n\r\n<p>後序(postorder):後序走訪過程是 左-&gt;右-&gt;中(LRV)</p>\r\n\r\n<p>以這個例子來說:</p>\r\n\r\n<p>&nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp;/ \\<br />\r\n&nbsp; 2 &nbsp; 3<br />\r\n&nbsp;/ \\ / \\<br />\r\n4 &nbsp;5 6 &nbsp;7</p>\r\n\r\n<p>前序:1 -&gt; 2 -&gt; 4 -&gt; 5 -&gt; 3 -&gt; 6 -&gt; 7</p>\r\n\r\n<p>中序:4 -&gt; 2 -&gt; 5 -&gt; 1 -&gt; 6 -&gt; 3 -&gt; 7</p>\r\n\r\n<p>後序:4 -&gt; 5 -&gt; 2 -&gt; 6 -&gt; 7 -&gt; 3 -&gt; 1</p>\r\n\r\n<p>依照三者的走訪順序，會各別運用在不同的情況下，</p>\r\n\r\n<p>前序因為是從節點出發再到左右子樹，比較適用在建立二元樹的情況下。</p>\r\n\r\n<p>中序由於是左子樹到節點再到右子樹，比較適用在二元樹的j遞增排序。</p>\r\n\r\n<p>後序則是先從左右子樹最後再到節點，比較適用於釋放資源的時候。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

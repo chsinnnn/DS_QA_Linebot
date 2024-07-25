@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:04" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296421</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2023-10-23 19:40:47</pt>
+  <poster>11127110</poster>
+  <realname>&#x8A31;&#x81F3;&#x6600;  </realname>
+  <email>alberthsu919@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>125 </subject>
+  <content>&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5BEB;&#x51FA;&#x53EF;&#x4EE5;&#x7CBE;&#x6E96;&#x63CF;&#x8FF0;&#x81EA;&#x5DF1;&#x5B78;&#x865F;&lt;/span&gt;(&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5982;&#x5B57;&#x4E32;&lt;/span&gt;10927188)&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x6587;&#x6CD5;&lt;/span&gt;grammar&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5B78;&#x865F;&lt;/span&gt;&amp;gt; = &amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5165;&#x5B78;&#x5E74;&#x5EA6;&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5B78;&#x9662;&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5B78;&#x7CFB;&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x73ED;&#x7D1A;&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5EA7;&#x865F;&lt;/span&gt;&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5165;&#x5B78;&#x5E74;&#x5EA6;&lt;/span&gt;&amp;gt; = &amp;lt;digit&amp;gt; &amp;lt;digit&amp;gt; &amp;lt;digit&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5B78;&#x9662;&lt;/span&gt;&amp;gt; = &amp;lt;college&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5B78;&#x7CFB;&lt;/span&gt;&amp;gt; = &amp;lt;digit&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x73ED;&#x7D1A;&lt;/span&gt;&amp;gt; = &amp;lt;class&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5EA7;&#x865F;&lt;/span&gt;&amp;gt; = &amp;lt;digit&amp;gt; &amp;lt;digit&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;digit&amp;gt; = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;college&amp;gt; = 1 | 2 | 3 | 4 | 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;class&amp;gt; = 1 | 2 | 3&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>17</hit>
+  <lang>1</lang>
+</data>

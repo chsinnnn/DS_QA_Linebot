@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-09-22 11:14:34",
+        "poster": "11120310",
+        "realname": "賴彥廷",
+        "email": "jeremy10350206@gmail.com",
+        "homepage": null,
+        "subject": "101",
+        "content": "<p>recrusion(遞迴)是將大問題劃分為幾個小問題，再將小問題劃分成更小的問題，形式有點點像線上會議時 分享螢幕卻分享到線上會議的頁面 就會在裡面看到另一個分享畫面 而裡面又有另一個分享畫面 一直延伸下去!</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

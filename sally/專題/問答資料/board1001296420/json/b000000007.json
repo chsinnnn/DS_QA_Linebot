@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-15 23:41:57",
+        "poster": "11127110",
+        "realname": "許至昀",
+        "email": "alberthsu919@gmail.com",
+        "homepage": null,
+        "subject": "118",
+        "content": "<p><span style=\"font-family:新細明體,serif\">令</span>ptrX<span style=\"font-family:新細明體,serif\">指向鏈結串列的節點，比較</span>ptrX = ptrX-&gt;next<span style=\"font-family:新細明體,serif\">和</span>ptrX-&gt;next = ptrX<span style=\"font-family:新細明體,serif\">的差異。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">「</span>ptrX = ptrX-&gt;next<span style=\"font-family:新細明體,serif\">」是將</span>ptrX<span style=\"font-family:新細明體,serif\">指向目前節點的下一個節點。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">「</span>ptrX-&gt;next = ptrX<span style=\"font-family:新細明體,serif\">」是將</span>ptrX<span style=\"font-family:新細明體,serif\">所指向的節點的下一個節點設為指向</span>ptrX<span style=\"font-family:新細明體,serif\">目前所指向的節點。這個操作可能導致循環，以及鏈結串列斷裂，造成記憶體的佔用與資料無法尋找的問題。</span></p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127110/images/%E9%99%90%E6%99%82%E6%90%B6%E7%AD%94%20116-120%281%29.png\" style=\"height:323px; width:400px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

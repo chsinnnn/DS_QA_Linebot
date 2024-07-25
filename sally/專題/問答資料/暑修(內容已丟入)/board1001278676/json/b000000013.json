@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-06 01:39:56",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答104",
+        "content": "<p>104 什麼情況下適合使用遞迴？為什麼？*</p>\r\n\r\n<p>問題可分解成重複的子問題：當問題可以被分解成較小且相似的子問題時，遞迴是一種很好的解決方案。每個子問題的解決方法可以使用相同的遞迴函式來處理。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

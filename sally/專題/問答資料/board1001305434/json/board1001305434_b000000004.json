@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:08",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305434",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-10-16 23:10:13",
+        "poster": "11127258",
+        "realname": "簡珮涵",
+        "email": "phhhh5210@gmail.com",
+        "homepage": null,
+        "subject": "123. 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。",
+        "content": "<p>創建一個新linked list，逐一將資料放入此linked list節點中</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>struct Node {<br />\r\n&nbsp; &nbsp; int data ;<br />\r\n&nbsp; &nbsp; Node* next ;<br />\r\n} ;</p>\r\n\r\n<p>// 複製<br />\r\nNode* copyLinkedList(Node* head) {<br />\r\n&nbsp; &nbsp; if (head == NULL) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; return NULL ;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; // 創建新的linked list<br />\r\n&nbsp; &nbsp; Node* copyList = new Node ;<br />\r\n&nbsp; &nbsp; copyList-&gt;data = head-&gt;data ;<br />\r\n&nbsp; &nbsp; copyList-&gt;next = NULL ;</p>\r\n\r\n<p>&nbsp; &nbsp; // 創建兩指標，一表示串列當前位置，另一表示下一節點<br />\r\n&nbsp; &nbsp; Node* current = copyList ;<br />\r\n&nbsp; &nbsp; Node* original = head-&gt;next ;</p>\r\n\r\n<p><br />\r\n&nbsp; &nbsp; while (original != NULL) { // 判斷是否還有節點&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; // 創建新節點<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; current-&gt;next = new Node ;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; current = current-&gt;next ; // 移動至下一節點&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; current-&gt;data = original-&gt;data ;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; current-&gt;next = NULL ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; // 移動至下一節點<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; original = original-&gt;next ;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return copyList ;<br />\r\n}</p>\r\n\r\n<p>// 印出<br />\r\nvoid printLinkedList(Node* head) {<br />\r\n&nbsp; &nbsp; Node* current = head ;<br />\r\n&nbsp; &nbsp; while (current != NULL) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; current-&gt;data &lt;&lt; &quot; -&gt; &quot; ;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; current = current-&gt;next ;<br />\r\n&nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;NULL&quot; &lt;&lt; endl ;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; // 設置linked list&nbsp;<br />\r\n&nbsp; &nbsp; Node* List = new Node ;<br />\r\n&nbsp; &nbsp; List-&gt;data = 1 ;<br />\r\n&nbsp; &nbsp; List-&gt;next = new Node ;<br />\r\n&nbsp; &nbsp; List-&gt;next-&gt;data = 2 ;<br />\r\n&nbsp; &nbsp; List-&gt;next-&gt;next = new Node ;<br />\r\n&nbsp; &nbsp; List-&gt;next-&gt;next-&gt;data = 3 ;<br />\r\n&nbsp; &nbsp; List-&gt;next-&gt;next-&gt;next = NULL ;</p>\r\n\r\n<p>&nbsp; &nbsp; // 複製linked list&nbsp;<br />\r\n&nbsp; &nbsp; Node* List2 = copyLinkedList(List) ;</p>\r\n\r\n<p>&nbsp; &nbsp; // 印出linked list&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;Original List: &quot; ;<br />\r\n&nbsp; &nbsp; printLinkedList(List) ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;Copy List: &quot; ;<br />\r\n&nbsp; &nbsp; printLinkedList(List2) ;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0 ;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "38",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-10-20 01:46:56",
+        "poster": "11027126",
+        "realname": "鍾昱賢",
+        "email": "lucas920421@gmail.com",
+        "homepage": null,
+        "subject": "127. 寫C++程式碼介紹一組讀檔和寫檔的指令，須能成功編譯執行。",
+        "content": "<p>我所使用的C++讀寫檔指令是在fstream library中的 ifstream 及 ofstream ，前者用作讀入，後者用作輸出。<br />\r\n在程式開始之前，我們先在要讀入的檔案中(input.txt)輸入&quot;Hello world&quot;, &quot;123&quot;兩行文字<br />\r\n<img alt=\"\" src=\"/user/1/1/11027126/images/intxt.png\" style=\"height:336px; width:522px\" /></p>\r\n\r\n<p>接著我們對文件中的資訊讀入並印出，結果如下圖所示<br />\r\n<img alt=\"\" src=\"/user/1/1/11027126/images/outputInCMD.png\" style=\"height:100px; width:368px\" /></p>\r\n\r\n<p>在寫檔的部分，我們需要輸入想要寫入的文件(output.txt)<br />\r\n註：此文件會以新增的方式出現，若是輸入已經存在的檔名會被直接覆蓋<br />\r\n最後輸入我們想要寫入文件的訊息即可，結果如下。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027126/images/outtxt.png\" style=\"height:198px; width:528px\" /></p>\r\n\r\n<p>此程式的程式碼如下：</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027126/images/code.png\" style=\"height:697px; width:1432px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

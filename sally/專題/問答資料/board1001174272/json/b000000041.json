@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000041.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000041",
+        "site": "1000110001",
+        "pt": "2022-10-04 23:42:40",
+        "poster": "10727120",
+        "realname": "洪錦彤",
+        "email": "m27972729@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>遞迴式沒有停下來的時候，會不斷的呼叫自己(占用stack)，直到記憶體的stack不夠用(也就是造成stack overflow)，<br />\r\n就會出現記憶體區段錯誤(Segmentation fault)<br />\r\n<br />\r\nref: <a href=\"https://hackmd.io/@RusselCK/SJ3rL9BOD#%E5%BE%9E%E9%81%9E%E8%BF%B4%E5%AD%B8%E7%BF%92-function-call\">https://hackmd.io/@RusselCK/SJ3rL9BOD#%E5%BE%9E%E9%81%9E%E8%BF%B4%E5%AD%B8%E7%BF%92-function-call</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

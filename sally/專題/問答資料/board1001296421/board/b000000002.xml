@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:04" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296421</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2023-10-15 00:03:30</pt>
+  <poster>11127101</poster>
+  <realname>&#x85CD;&#x81F3;&#x5955;  </realname>
+  <email>jefflan101@gmail.com</email>
+  <homepage> </homepage>
+  <subject>123 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x8907;&#x88FD;&#x4E00;&#x6574;&#x500B;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x3002;&lt;/strong&gt;&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;#&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;include&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7BC0;&#x9EDE;&#x7D50;&#x69CB;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;struct&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;Node&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;{ &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; int&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;data; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* next; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;}; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x8907;&#x88FD;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x51FD;&#x6578;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;Node* &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;copyLinkedList&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;(&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;const&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;Node* original ) &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;{ &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* newHead = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;nullptr&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;; &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x65B0;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x982D;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* newTail = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;nullptr&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;; &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x65B0;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x5C3E;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* current = original; &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x7528;&#x65BC;&#x904D;&#x6B77;&#x539F;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x6307;&#x91DD;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; while&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;( current ) { &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:21.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* newNode = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;new&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;Node&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;( current-&amp;gt;data ); &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x8907;&#x88FD;&#x7BC0;&#x9EDE;&#x8CC7;&#x6599;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:21.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; if&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;( !newHead ) { &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:42.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;newHead = newNode; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:42.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;newTail = newNode; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:21.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; } &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:21.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; else&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;{ &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:42.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;newTail-&amp;gt;next = newNode; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:42.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;newTail = newNode; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:21.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; } &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p style="margin-left:21.0000pt"&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; current = current-&amp;gt;next; &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;// &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x79FB;&#x52D5;&#x5230;&#x4E0B;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; } &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; return&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp;newHead; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;} &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;int&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;main&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;() &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;{ &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x5275;&#x5EFA;&#x539F;&#x59CB;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* originalHead = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;new&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;Node&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;(&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;a&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;); &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; originalHead-&amp;gt;next = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;new&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;Node&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;(&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;b&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;); &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; originalHead-&amp;gt;next-&amp;gt;next = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;new&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;Node&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;(&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;c&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;); &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;"&gt;&#x8907;&#x88FD;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;&amp;nbsp; &amp;nbsp; Node* copiedHead = &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;copyLinkedList&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;( originalHead ); &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:10.5000pt"&gt;&lt;span style="font-family:Calibri"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>44</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:36" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305432</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-10-02 20:36:05</pt>
+  <poster>11127230</poster>
+  <realname>&#x937E;&#x5E1B;&#x52F3;  </realname>
+  <email>jone921216@gmail.com</email>
+  <homepage> </homepage>
+  <subject>115. &#x50B3;&#x5165;&#x9663;&#x5217;A&#x548C;&#x6574;&#x6578;S&#xFF0C;&#x5BEB;&#x51FA;C++&#x51FD;&#x6578;&#x5F9E;A&#x627E;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA;S&#x7684;&#x7D44;&#x5408;&#x3002; </subject>
+  <content>&lt;p&gt;struct Pair {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int idx;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int value;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Pair input[5005];&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void twoPointer() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int i, j, k;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;for (i = 0; i &amp;lt; n-2; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;j = i+1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;k = n-1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;while (j&amp;lt;k) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;if (input[i].value + input[j].value + input[k].value == S) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;cout &amp;lt;&amp;lt; input[i].idx &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; input[j].idx &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; input[k].idx &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;haveans = true;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;break;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;else if (input[i].value + input[j].value + input[k].value &amp;gt; S) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;k--;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;else if (input[i].value + input[j].value + input[k].value &amp;lt; S) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;j++;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x984C;&#x6703;&#x7528;twopointer&#x4F86;&#x89E3;&#xFF0C;&#x8F38;&#x5165;&#x65B9;&#x9762;&#x7D66;&#x5B9A;&#x9577;&#x5EA6;&#x70BA;n&#x7684;&#x9663;&#x5217;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x5408;&#x70BA;S,&#x9663;&#x5217;&#x4EE5;pair&#x7684;&#x578B;&#x614B;&#x8F38;&#x5165;&#x624D;&#x4E0D;&#x6703;&#x6392;&#x5E8F;&#x5F8C;&#x4E82;&#x6389;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9810;&#x8655;&#x7406;&#x90E8;&#x5206;&#x5148;&#x505A;&#x6392;&#x5E8F;&#xFF0C;&#x5916;&#x5C64;&#x8FF4;&#x5708; i &#x6703;&#x7DDA;&#x6027;&#x8DD1;&#x904E;&#x5DF2;&#x6392;&#x5E8F;&#x9663;&#x5217;&#xFF0C;j, k&#x70BA;&#x5DE6;&#x6307;&#x6A19;&#x548C;&#x53F3;&#x6307;&#x6A19;&#xFF0C;&#x4E09;&#x6578;&#x548C;&amp;gt;x, k--, &#x53CD;&#x4E4B;j++&#x76F4;&#x5230;&#x7D50;&#x675F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8907;&#x96DC;&#x5EA6;O(N^2)&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>47</hit>
+  <lang>1</lang>
+</data>

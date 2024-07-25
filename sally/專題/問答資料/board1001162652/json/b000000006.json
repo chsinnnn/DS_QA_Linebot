@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:29",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162652",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-11-29 23:17:51",
+        "poster": "11027140",
+        "realname": "陳芃睿",
+        "email": "fx794486@gmail.com",
+        "homepage": null,
+        "subject": "201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027140/images/%E8%B3%87%E6%96%992.jpg\" style=\"height:1108px; width:1478px\" />如果現在這筆資料抵達的時間比上一筆資料結束的時間小的話等待的時間會等於 上一筆資料結束的時間-現在這筆資料抵達的時間</p>\r\n\r\n<p>反之如果現在這筆資料抵達的時間比上一筆資料結束的時間大禍是第一筆資料等待的時間會等於 零</p>\r\n\r\n<p>平均等待時間是所有資料等待時間的加總並除上資料總數</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

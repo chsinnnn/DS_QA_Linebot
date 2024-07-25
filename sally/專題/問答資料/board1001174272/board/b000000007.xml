@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:17" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174272</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2022-09-23 14:22:30</pt>
+  <poster>11027233</poster>
+  <realname>&#x66FE;&#x54C1;&#x5143;  </realname>
+  <email>daniel29348679@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>109. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr[]={100,2,3,4};&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for(auto i=arr;i&amp;lt;arr+(sizeof(arr)/sizeof(int));i++)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout&amp;lt;&amp;lt;*i&amp;lt;&amp;lt;&amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53E6;&#x4E00;&#x7A2E;&#x5BEB;&#x6CD5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; array&amp;lt;int,4&amp;gt; arr({100,2,3,4});&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for(auto i:arr)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout&amp;lt;&amp;lt;i&amp;lt;&amp;lt;&amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>84</hit>
+  <lang>1</lang>
+</data>

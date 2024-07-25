@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-10-04 19:47:12",
+        "poster": "03109309",
+        "realname": "呂沛霖",
+        "email": "0",
+        "homepage": null,
+        "subject": "109",
+        "content": "<p><strong>如何幫陣列元素設定非零的初始值？</strong></p>\r\n\r\n<p>可以使用C++ 標頭檔&lt;algorithm&gt;內的fill函數，fill函數能將一個區間的元素都賦予一個相同的值<br />\r\nfill函數: fill(vec.begin(),vec.end(),value)<br />\r\n前兩個參數為動態陣列的範圍，第三個參數為想要給的值</p>\r\n\r\n<p>以下是我的測試結果:</p>\r\n\r\n<p><img alt=\"\" src=\"/user/0/3/03109309/images/%E9%99%A3%E5%88%97%E5%80%BC%E5%88%9D%E5%A7%8B%E5%8C%961.png\" style=\"height:466px; width:1000px\" /></p>\r\n\r\n<p><img alt=\"\" src=\"/user/0/3/03109309/images/%E9%99%A3%E5%88%97%E5%80%BC%E5%88%9D%E5%A7%8B%E5%8C%962.png\" style=\"height:466px; width:1000px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

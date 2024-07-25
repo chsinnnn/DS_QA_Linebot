@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:06:21" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162656</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-12-21 16:20:20</pt>
+  <poster>11027154</poster>
+  <realname>&#x5ED6;&#x6893;&#x9038;  </realname>
+  <email>joe3727@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>227. &#x5217;&#x8209;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x548C;&#x5806;&#x7A4D;heap&#x7684;&#x4E09;&#x9805;&#x5DEE;&#x7570;&#x3002; </subject>
+  <content>&lt;table cellpadding="0" cellspacing="0"&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x5DEE;&#x7570;/&#x985E;&#x578B;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x5806;&#x7A4D;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x7D50;&#x69CB;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x4E8C;&#x5143;&#x6A39;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x5B8C;&#x5168;&#x4E8C;&#x5143;&#x6A39;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x503C;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x53F3;&#x7BC0;&#x9EDE;&#x5927;&#x65BC;&#x6839; &#x5DE6;&#x7BC0;&#x9EDE;&#x5C0F;&#x65BC;&#x6839;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x6839;&#x5927;&#x65BC;&#x7B49;&#x65BC;&#x6216;&#x5C0F;&#x65BC;&#x7B49;&#x65BC;&#x5B50;&#x7BC0;&#x9EDE;&#xFF08;&#x6700;&#x5927;&#x5806;&#x6216;&#x6700;&#x5C0F;&#x5806;&#xFF09;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;&#x627E;&#x5C0B;&#x6700;&#x5927;&#x503C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;O(logn)&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td&gt;&#xD;
+			&lt;p&gt;O(1)&#xFF08;&#x6700;&#x5927;&#x5806;&#xFF09;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>37</hit>
+  <lang>1</lang>
+</data>

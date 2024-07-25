@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:45",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296419",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-10-03 16:37:58",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "114",
+        "content": "<p><span style=\"font-size:18px\">寫出C++程式碼說明同類別兩個方法如何實現多載overloading。</span></p>\r\n\r\n<p>在不同參數下去呼叫相同函式，然後做出不同事情。以下為示範程式碼。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127140/images/Screen%20Shot%202023-10-03%20at%204.37.34%20PM.png\" style=\"height:261px; width:300px\" /></p>\r\n\r\n<p>可以看到儘管是相同名稱的function，仍然可以定義兩次，並且做得事情可以不一樣。<br />\r\n但在傳入參數上一定要不一樣。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

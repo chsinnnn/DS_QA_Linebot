@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-07-12 15:02:12",
+        "poster": "06005645",
+        "realname": "林品瑄",
+        "email": "hank61061007@gmail.com",
+        "homepage": null,
+        "subject": "搶答124",
+        "content": "<p>合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。</p>\r\n\r\n<p>可以透過進行Catalan數的計算來解決。Catalan數的定義是：</p>\r\n\r\n<p>給定n對括號，可以形成的有效括號組合的數量是第n個Catalan數。</p>\r\n\r\n<p>這裡我們有3對括號，所以我們要找的是第3個Catalan數。</p>\r\n\r\n<p>Catalan數的一般公式為：</p>\r\n\r\n<p>C_n = (2n choose n) / (n + 1)</p>\r\n\r\n<p>在這個公式中，&quot;choose&quot;表示組合，也就是從2n個元素中選擇n個元素的方式數量。</p>\r\n\r\n<p>對於n = 3，我們可以計算出：</p>\r\n\r\n<p>C_3 = (6 choose 3) / (3 + 1) = 20 / 4 = 5</p>\r\n\r\n<p>所以，有三組括號的合法運算式可以有5種不同的形式。這五種形式分別是：</p>\r\n\r\n<ol>\r\n\t<li>()()()</li>\r\n\t<li>(())()</li>\r\n\t<li>()(())</li>\r\n\t<li>(()())</li>\r\n\t<li>((()))</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "34",
+        "lang": "1"
+    }
+}

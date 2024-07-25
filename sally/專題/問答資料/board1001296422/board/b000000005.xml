@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:13" type="post" filename="b000000005.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296422</board_id>
+  <node>000000005</node>
+  <site>1000110001</site>
+  <pt>2023-10-20 10:47:27</pt>
+  <poster>11127137</poster>
+  <realname>&#x9EC3;&#x4E59;&#x5BB6;  </realname>
+  <email>u810025@gmail.com</email>
+  <homepage>https://ja-errorpro.cf  </homepage>
+  <subject>130 </subject>
+  <content>&lt;p&gt;&#x5BEB;Python&#x7A0B;&#x5F0F;&#x78BC;&#x5BE6;&#x73FE;&#x8FD1;&#x4F3C;C++ class&#x96B1;&#x85CF;&#x8CC7;&#x6599;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4E26;&#x6307;&#x51FA;&#x5DEE;&#x7570;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F7F;&#x7528;&#x524D;&#x55AE;&#x5E95;&#x7DDA;&#xFF1A;&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+class A():&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; def __init__(self):&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;self._x = 48763&lt;br /&gt;&#xD;
+```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x5C07;**&#x63D0;&#x9192;**&#x4F7F;&#x7528;&#x8005;&#x9019;&#x500B;&#x8B8A;&#x6578;&#x4E0D;&#x61C9;&#x8A72;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x4F46;&#x5BE6;&#x969B;&#x4E0A;&#x4E26;&#x6C92;&#x6709;&#x963B;&#x6B62;&#x4F7F;&#x7528;&#x8005;&#x4FEE;&#x6539;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```py&lt;br /&gt;&#xD;
+a = A()&lt;br /&gt;&#xD;
+print(a._x) # 48763&lt;br /&gt;&#xD;
+a._x = 0 #&lt;br /&gt;&#xD;
+print(a._x) # 0&lt;br /&gt;&#xD;
+```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F7F;&#x7528;&#x524D;&#x96D9;&#x5E95;&#x7DDA;&#xFF1A;&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+class B():&lt;br /&gt;&#xD;
+&amp;nbsp; def __init__(self):&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; self.__y = 0xdeadbeef&lt;br /&gt;&#xD;
+```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x5C07;&#x907F;&#x514D;&#x985E;&#x5225;&#x5167;&#x7684;&#x8B8A;&#x6578;&#x6216;&#x51FD;&#x5F0F;&#x88AB;&#x5B50;&#x985E;&#x5225;&#x4FEE;&#x6539;&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+b = B()&lt;br /&gt;&#xD;
+print(b.__y) # AttributeError&lt;br /&gt;&#xD;
+```&lt;br /&gt;&#xD;
+&#x4F46;&#x5BE6;&#x969B;&#x4E0A;&#x5982;&#x679C;&#x67E5;&#x770B;b&#x7684;&#x5C6C;&#x6027;&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+print(dir(b))&lt;br /&gt;&#xD;
+```&lt;br /&gt;&#xD;
+&#x6703;&#x770B;&#x5230;&#x6709;&#x4E00;&#x500B; `_B__y`&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x662F;&#x76F4;&#x8B6F;&#x5668;&#x7D66;&#x8B8A;&#x6578;&#x505A;&#x4E86;&#x540D;&#x5B57;&#x4FEE;&#x98FE;&#x4EE5;&#x4FDD;&#x8B77;&#x985E;&#x5225;&#x8B8A;&#x6578;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4ECD;&#x80FD;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x985E;&#x5225;&#x7684;&#x8B8A;&#x6578;&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+b._B__y = 114514&lt;br /&gt;&#xD;
+print(b._B__y) # 114514&lt;br /&gt;&#xD;
+```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Property decorator:&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+class C():&lt;br /&gt;&#xD;
+&amp;nbsp; def __init__(self):&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; self.a = 0xCAFEBABE&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; self.b = 1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; @property&lt;br /&gt;&#xD;
+&amp;nbsp; def sum(self):&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return a+b&lt;br /&gt;&#xD;
+```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x6A23;&#x53EF;&#x4EE5;&#x907F;&#x514D;sum&#x88AB;&#x96A8;&#x610F;&#x4FEE;&#x6539;&#xFF0C;&#x53EA;&#x80FD;&#x5B58;&#x53D6;&lt;br /&gt;&#xD;
+```py&lt;br /&gt;&#xD;
+c = C()&lt;br /&gt;&#xD;
+print(c.sum) # 0xCAFEBABF&lt;br /&gt;&#xD;
+c.sum = 0xFEEDCODE # AttributeError&lt;br /&gt;&#xD;
+```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Python&#x4E0D;&#x63D0;&#x4F9B;&#x96B1;&#x85CF;&#x8CC7;&#x6599;(private variable)&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x70BA;Python&#x8A8D;&#x70BA;&#x5982;&#x679C;&#x5BEB;class&#x7684;&#x4EBA;&#x4E0D;&#x5E0C;&#x671B;&#x67D0;&#x500B;&#x8CC7;&#x6599;&#x88AB;&#x5B58;&#x53D6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x524D;&#x9762;&#x52A0;&#x5E95;&#x7DDA;&#xFF0C;&#x5BEB;&#x7A0B;&#x5F0F;&#x7684;&#x4EBA;&#x61C9;&#x8A72;&#x9075;&#x5B88;&#x7D04;&#x5B9A;&#x81EA;&#x5DF1;&#x8CA0;&#x8CAC;&#xFF0C;&#x800C;&#x4E0D;&#x50CF;C++&#x90A3;&#x6A23;&#x56B4;&#x683C;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>49</hit>
+  <lang>1</lang>
+</data>

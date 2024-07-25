@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:51",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174276",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2022-10-24 18:34:59",
+        "poster": "11020137",
+        "realname": "關翔謙",
+        "email": "t1175162tw@gmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p>後序式2 4 6 * + 7 5 - *如何透過堆疊求解?</p>\r\n\r\n<p><strong>1.</strong>2, 4, 6直接放入數字堆疊</p>\r\n\r\n<p><strong>2.</strong>4, 6經過*計算得到24放回堆疊(目前的數字堆疊為2, 24)</p>\r\n\r\n<p><strong>3.</strong>2,24經過+計算得到26放回堆疊(目前的數字堆疊為26)</p>\r\n\r\n<p><strong>4.</strong>7, 5放入數字堆疊(目前的數字堆疊為26, 7, 5)</p>\r\n\r\n<p><strong>5.</strong>7,5經過-計算得到2放回堆疊(目前的數字堆疊為26, 2)</p>\r\n\r\n<p><strong>6.</strong>26, 2經過*計算得到52放回堆疊(目前的數字堆疊為52)</p>\r\n\r\n<p><strong>7.</strong>運算式結束，數字堆疊剩下一個元素，也沒有多餘的運算子，為合法的後序式，結束計算，答案52。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "36",
+        "lang": "1"
+    }
+}

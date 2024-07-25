@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000044.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000044",
+        "site": "1000110001",
+        "pt": "2022-09-26 17:43:15",
+        "poster": "11027138",
+        "realname": "陶姳臻",
+        "email": "mingzhentao1019@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>一個問題如果可以拆解成規模較小但是性質和原問題完全一樣的問題的時候就很適合使用遞迴，因為這樣可以降低function的執行難度，一層會比一層簡單。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

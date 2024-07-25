@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000025.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000025",
+        "site": "1000110001",
+        "pt": "2022-10-03 00:40:26",
+        "poster": "10923137",
+        "realname": "顏祥益",
+        "email": "n20111224@yahoo.com.tw",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>我想應該是因為遞迴的base case沒寫好以至於進入永無止盡的遞迴而造成堆疊(stack)溢位。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

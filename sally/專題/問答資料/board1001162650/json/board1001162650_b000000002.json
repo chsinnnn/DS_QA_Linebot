@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:14",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162650",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-10-14 01:11:58",
+        "poster": "11027109",
+        "realname": "吳昀蔚",
+        "email": "wing222430@gmail.com",
+        "homepage": null,
+        "subject": "122. 寫C++程式碼說明傳參考呼叫call by reference。",
+        "content": "<p><strong>call by reference : 呼叫function以後主程式的值會被改變，且記憶體位置相同。</strong></p>\r\n\r\n<p><strong>call by value : 主副程式的變數記憶體位置不同，且呼叫function後不影響原值。</strong></p>\r\n\r\n<p><strong>call by address : 呼叫function以後主程式的值會被改變，但function中變數的記憶體位置仍不同。&nbsp;</strong></p>\r\n\r\n<p><strong><img alt=\"\" src=\"/user/1/1/11027109/images/2022-10-14%20%281%29.png\" style=\"height:846px; width:1004px\" /><img alt=\"\" src=\"/user/1/1/11027109/images/2022-10-14.png\" style=\"height:500px; width:687px\" /></strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

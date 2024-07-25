@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-10-19 04:51:43",
+        "poster": "11120127",
+        "realname": "陳宥任",
+        "email": "laohouy@gmail.com",
+        "homepage": null,
+        "subject": "128",
+        "content": "<p>後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。</p>\r\n\r\n<p>以下為進行步驟 :</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p>初始化一個空的堆疊Stack。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>依次掃入後序表示法的每個元素（數字或運算符）：</p>\r\n\r\n\t<ul>\r\n\t\t<li>如果是數字，將其放入堆疊。</li>\r\n\t\t<li>如果是運算符，則從堆疊中彈出兩個頂部元素operand1 和 operand2 進行運算，然後將結果放回堆疊。</li>\r\n\t</ul>\r\n\t</li>\r\n</ol>\r\n\r\n<p>以下是具體的計算過程：</p>\r\n\r\n<ul>\r\n\t<li>掃入 2，將其放入堆疊; Stack目前狀態: 2</li>\r\n\t<li>掃入 4，將其放入堆疊; Stack目前狀態: 2 4</li>\r\n\t<li>掃入 6，將其放入堆疊; Stack目前狀態: 2 4 6</li>\r\n\t<li>掃入 *，從堆疊中彈出 6 和 4，計算 4 * 6 = 24，然後將結果 24 放回堆疊; Stack目前狀態: 2 24</li>\r\n\t<li>掃入 +，從堆疊中彈出 24 和 2，計算 2 + 24 = 26，然後將結果 26 放回堆疊; Stack目前狀態: 26</li>\r\n\t<li>掃入 7，將其放入堆疊; Stack目前狀態: 26 7</li>\r\n\t<li>掃入 5，將其放入堆疊; Stack目前狀態: 26 7 5</li>\r\n\t<li>掃入 -，從堆疊中彈出 5 和 7，計算 7 - 5 = 2，然後將結果 2 放回堆疊; Stack目前狀態: 26 2</li>\r\n\t<li>掃入 *，從堆疊中彈出 2 和 26，計算 2 * 26 = 52，然後將結果 52 放回堆疊; Stack目前狀態: 52</li>\r\n</ul>\r\n\r\n<p>最後Stack中僅剩下一個元素 52，這就是後序表示法 2 4 6 * + 7 5 - * 的計算結果。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "57",
+        "lang": "1"
+    }
+}

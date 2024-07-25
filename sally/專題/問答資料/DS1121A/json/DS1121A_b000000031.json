@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000031.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000031",
+        "site": "1000110001",
+        "pt": "2022-09-21 12:40:40",
+        "poster": "11027125",
+        "realname": "謝旻軒",
+        "email": "kikikig14@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>當問題很複雜，或者要重複做同一件事就可以使用遞迴，可以使程式更簡短，淺顯易懂，也能使我們打程式的效率提高！</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "44",
+        "lang": "1"
+    }
+}

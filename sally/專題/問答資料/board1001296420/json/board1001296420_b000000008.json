@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-10-17 16:43:57",
+        "poster": "11127121",
+        "realname": "鄧俊揚",
+        "email": "a0988480766@gmail.com",
+        "homepage": null,
+        "subject": "118",
+        "content": "<p>&nbsp;令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。<br />\r\n<br />\r\nptrX = ptrX -&gt; next : 代表ptr這個指標，從原位置移至ptr -&gt; next，簡單講就是移動ptr至鏈結串列的下一個節點。<br />\r\nptrX-&gt;next = ptrX : 代表ptr這個指標的next指向回ptr本身，形成一個循環，也會使原資料的鏈結斷開，從而移失部分的鏈結串列。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

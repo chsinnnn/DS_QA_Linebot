@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2022-10-03 09:42:21",
+        "poster": "11027251",
+        "realname": "陳冠蘋",
+        "email": "tanya0920617@gmail.com",
+        "homepage": null,
+        "subject": "110. 作業二靜態陣列和動態陣列有何差異？指出其優缺點。*",
+        "content": "<p><strong>靜態陣列</strong></p>\r\n\r\n<p><strong>&nbsp; &nbsp;</strong> 優點-&gt;程式結束後自動釋放記憶體空間</p>\r\n\r\n<p><strong>&nbsp; &nbsp; </strong>缺點-&gt;陣列長度固定，無法更動</p>\r\n\r\n<p><strong>動態陣列</strong></p>\r\n\r\n<p>&nbsp; &nbsp; 優點-&gt;不必預先知道資料長度，在程式中可自由修改陣列長度</p>\r\n\r\n<p>&nbsp; &nbsp;&nbsp;缺點-&gt;<strong>&nbsp; </strong>記憶體的釋放需要靠工程師完成&nbsp; <strong>&nbsp;&nbsp;</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "39",
+        "lang": "1"
+    }
+}

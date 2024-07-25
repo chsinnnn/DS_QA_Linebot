@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-09-19 00:25:16",
+        "poster": "11127101",
+        "realname": "藍至奕",
+        "email": "jefflan101@gmail.com",
+        "homepage": null,
+        "subject": "102",
+        "content": "<p><span style=\"font-size:16px\">試寫出一個遞迴函數找出一群整數的中位數median</span></p>\r\n\r\n<blockquote>\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">float findMedian(vector&lt;int&gt; &amp;nums, int low, int high, float k) {</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; // 使用partition函式，取一個基準元素將陣列分為兩半，並回傳基準元素的位置</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; int pivotIndex = partition(nums, low, high);</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; // 陣列元素數量為奇數時，中位數位置</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; if (pivotIndex - low == k - 0.5) {</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; &nbsp; return nums[pivotIndex];</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; }</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; // 陣列元素數量為偶數時，中位數位置</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; else if ( pivotIndex - low == k - 1 ) {</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; &nbsp; // 找出左邊的數後，需再找出比他大一階的數進行除2</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; &nbsp; return (nums[pivotIndex] + findMedian(nums, pivotIndex + 1, high + 1, k - pivotIndex + low - 0.5&nbsp;)) / (float)2;</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; }</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; // 中位數在左半邊</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; else if (pivotIndex - low &gt; k - 1) {</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; &nbsp; return findMedian(nums, low, pivotIndex - 1, k);</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; }</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; // 中位數在右半邊</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; else {</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; &nbsp; return findMedian(nums, pivotIndex + 1, high, k - pivotIndex + low - 1);</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">&nbsp; }</span></span></p>\r\n\r\n<p><span style=\"font-size:10px\"><span style=\"font-family:Times New Roman,Times,serif\">}</span></span></p>\r\n</blockquote>\r\n\r\n<p style=\"margin-left:0.0000pt; margin-right:0.0000pt; text-align:left\">&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">詳情請見下方檔案</span></span></p>\r\n\r\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">※若無法執行或有亂碼的出現，請改用C++17並以GCC作為架構的IDE</span></span></p>",
+        "attach": "102-11127101藍.cpp\tWM650bdb0a29142.cpp",
+        "rcount": null,
+        "rank": null,
+        "hit": "150",
+        "lang": "1"
+    }
+}

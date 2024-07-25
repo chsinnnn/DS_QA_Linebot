@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:02",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296425",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-12-08 09:13:10",
+        "poster": "11127144",
+        "realname": "馬于朝",
+        "email": "marumax0922@gmail.com",
+        "homepage": null,
+        "subject": "212",
+        "content": "<p><span style=\"font-size:18px\"><strong>舉例說明何時插入排序的資料搬動次數比希爾排序shell sort多？</strong></span></p>\r\n\r\n<p>當資料集是完全反序時，例如：[ 5, 4, 3, 2, 1 ]，希爾排序會因為大間隔交換而造成較少的搬動次數，而插入排序在每一步都需要將資料搬動到序列的最前端，造成更多的搬動次數，而且當數據越大，此現象還更加明顯。</p>\r\n\r\n<p>由以下測試圖能發現：數據越大，插入排序的資料搬動次數越多；但是希爾排序卻會因為一些特殊的排序方式，使得搬動次數不是一直加上去。</p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>測試數據：</strong></span></p>\r\n\r\n<p>[5, 4, 3, 2, 1]</p>\r\n\r\n<p>[ 6, 5, 4, 3, 2, 1]</p>\r\n\r\n<p>...</p>\r\n\r\n<p>[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>測試結果：</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127144/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202023-12-08%20090525.png\" style=\"height:800px; width:294px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

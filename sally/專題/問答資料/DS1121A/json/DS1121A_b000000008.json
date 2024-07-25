@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2022-09-15 00:11:17",
+        "poster": "11027136",
+        "realname": "張詠竣",
+        "email": "kye920830@gmail.com",
+        "homepage": null,
+        "subject": "101 以自己的話來描述recursion是甚麼",
+        "content": "<p>當我們需要重複性的處理一件事情時，我們可能有迴圈(或稱非遞迴non-recursion)跟遞迴(recursion)兩種方法，其中遞迴的本質其實可以用「在函式中重複呼叫自己本身直至條件達成」來描述，所以可以以更簡化的程式碼來表示之，但與簡化的程式碼伴隨而來的缺點就是不容易debug，因此他也比較適合解決樹狀的邏輯問題。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "53",
+        "lang": "1"
+    }
+}

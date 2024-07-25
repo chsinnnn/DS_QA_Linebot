@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:00:28" type="board" filename="list.xml" id="1001174278">
+  <board_id>1001174278</board_id>
+  <bname>a:5:{s:4:"Big5";s:35:"&#x9650;&#x6642;&#x6436;&#x7B54; 206-210(20240719_copy)";s:6:"GB2312";s:25:"QA 206-210(20240719_copy)";s:2:"en";s:25:"QA 206-210(20240719_copy)";s:6:"EUC-JP";s:15:"(20240719_copy)";s:11:"user_define";s:15:"(20240719_copy)";}</bname>
+  <manager>11813</manager>
+  <title>&#x64C7;&#x4E00;&#x56DE;&#x7B54;&#xFF0C;&#x9EDE;&#x8B9A;10&#x6B21;&#x6216;3&#x4EBA;&#x7559;&#x597D;&#x8A55;&#x53EF;&#x5F97;QA&#x8A55;&#x5206;&#xFF01;&#x6A19;&#x984C;&#x8A3B;&#x660E;&#x984C;&#x865F;&#x53CA;&#x984C;&#x76EE;&#xFF0C;&#x5167;&#x5BB9;&#x4E0D;&#x5B9C;&#x5C07;&#x76F4;&#x63A5;&#x522A;&#x6587;&#xFF01;&#xD;
+206. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;bubble sort&#x5982;&#x4F55;&#x63D0;&#x65E9;&#x7D50;&#x675F;&#x57F7;&#x884C;&#x3002;&#xD;
+207. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x9078;&#x64C7;&#x6392;&#x5E8F;selection sort&#x4E26;&#x975E;&#x7A69;&#x5B9A;stable&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#x3002;&#xD;
+208. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5F71;&#x97FF;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002;&#xD;
+209. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5F71;&#x97FF;&#x63D2;&#x5165;&#x6392;&#x5E8F;insertion sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002;&#xD;
+210. &#x4F9D;&#x64DA;&#x7A0B;&#x5F0F;&#x78BC;&#x89E3;&#x8AAA;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x7684;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x3002;</title>
+  <owner_id>10131386</owner_id>
+  <open_time>2022-11-22 01:00:00</open_time>
+  <close_time>2022-12-06 23:59:00</close_time>
+  <share_time>2022-12-20 00:00:00</share_time>
+  <switch></switch>
+  <with_attach>no</with_attach>
+  <vpost>0</vpost>
+  <default_order>pt</default_order>
+  <post_times>0</post_times>
+  <extras></extras>
+  <poster>student,assistant,teacher</poster>
+  <after_finish></after_finish>
+  <fb_comment>N</fb_comment>
+  <board>
+    <node id="000000001" type="F" data="b000000001.xml"/>
+    <node id="000000001000000001" type="F" data="b000000001000000001.xml"/>
+    <node id="000000002" type="F" data="b000000002.xml"/>
+    <node id="000000002000000001" type="F" data="b000000002000000001.xml"/>
+    <node id="000000003" type="F" data="b000000003.xml"/>
+    <node id="000000003000000001" type="F" data="b000000003000000001.xml"/>
+    <node id="000000004" type="F" data="b000000004.xml"/>
+    <node id="000000004000000001" type="F" data="b000000004000000001.xml"/>
+    <node id="000000005" type="F" data="b000000005.xml"/>
+  </board>
+  <quint/>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-07-19 09:28:11",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答207",
+        "content": "<p>&nbsp;舉例解說選擇排序selection sort並非穩定stable的排序方法</p>\r\n\r\n<p>答:</p>\r\n\r\n<ol>\r\n\t<li>學生A，分數：85</li>\r\n\t<li>學生B，分數：90</li>\r\n\t<li>學生C，分數：80</li>\r\n\t<li>學生D，分數：90</li>\r\n</ol>\r\n\r\n<p>使用selection sort，排序過程：</p>\r\n\r\n<p>找到最小的分數，交換第一個分數和最小分數的位置</p>\r\n\r\n<ul>\r\n\t<li>學生C，分數：80</li>\r\n\t<li>學生B，分數：90</li>\r\n\t<li>學生A，分數：85</li>\r\n\t<li>學生D，分數：90</li>\r\n</ul>\r\n\r\n<p>找到第二小的分數，交換第二個分數和第二小分數的位置</p>\r\n\r\n<ul>\r\n\t<li>學生C，分數：80</li>\r\n\t<li>學生A，分數：85</li>\r\n\t<li>學生B，分數：90</li>\r\n\t<li>學生D，分數：90</li>\r\n</ul>\r\n\r\n<p>找到第三小的分數，交換第三個分數和第三小分數的位置</p>\r\n\r\n<ul>\r\n\t<li>學生A，分數：85</li>\r\n\t<li>學生C，分數：80</li>\r\n\t<li>學生B，分數：90</li>\r\n\t<li>學生D，分數：90</li>\r\n</ul>\r\n\r\n<p>學生B和學生D的分數都是90，在原始列表中，學生B出現在學生D的前面。在排序後，學生D卻在學生B的前面。這就是selection sort的不穩定性。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

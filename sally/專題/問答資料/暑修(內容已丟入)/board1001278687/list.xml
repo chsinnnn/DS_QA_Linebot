@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:52" type="board" filename="list.xml" id="1001278687">
+  <board_id>1001278687</board_id>
+  <bname>a:5:{s:4:"Big5";s:35:"&#x9650;&#x6642;&#x6436;&#x7B54; 221-225(20240720_copy)";s:6:"GB2312";s:25:"QA 221-225(20240720_copy)";s:2:"en";s:25:"QA 221-225(20240720_copy)";s:6:"EUC-JP";s:15:"(20240720_copy)";s:11:"user_define";s:15:"(20240720_copy)";}</bname>
+  <manager>11813</manager>
+  <title>&#x64C7;&#x4E00;&#x56DE;&#x7B54;&#xFF0C;&#x901A;&#x904E;&#x8001;&#x5E2B;&#x6838;&#x53EF;&#x624D;&#x8A08;&#x5165;QA&#x8A55;&#x5206;&#xFF01;&#x6A19;&#x984C;&#x9808;&#x8A3B;&#x660E;&#x984C;&#x865F;&#xFF0C;&#x5167;&#x5BB9;&#x4E0D;&#x5B9C;&#x5C07;&#x7121;&#x9810;&#x8B66;&#x522A;&#x6587;&#xFF01;&#xD;
+221. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x4E2D;&#x5E8F;&#x8D70;&#x8A2A;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x662F;&#x5426;&#x7A69;&#x5B9A;&#x6392;&#x5E8F;&#x3002;&#xD;
+222. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5982;&#x4F55;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x65B0;&#x589E;&#x7BC0;&#x9EDE;&#x3002;&#xD;
+223. &#x76F8;&#x540C;&#x641C;&#x5C0B;&#x9375;&#x7684;&#x4E8C;&#x7B46;&#x8CC7;&#x6599;&#x5982;&#x4F55;&#x5B58;&#x5165;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#xFF1F;&#xD;
+224. &#x5982;&#x4F55;&#x5C07;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x5B58;&#x6A94;&#x5F8C;&#x518D;&#x8B80;&#x5165;&#x53EF;&#x6062;&#x5FA9;&#x539F;&#x72C0;&#xFF1F;&#xD;
+225. &#x5DF2;&#x6392;&#x5E8F;&#x8CC7;&#x6599;&#x5982;&#x4F55;&#x5EFA;&#x7ACB;&#x4E00;&#x68F5;&#x5E73;&#x8861;&#x7684;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#xFF1F;</title>
+  <owner_id>10137809</owner_id>
+  <open_time>2023-07-22 01:00:00</open_time>
+  <close_time>2023-07-25 23:59:00</close_time>
+  <share_time>2023-07-26 00:00:00</share_time>
+  <switch></switch>
+  <with_attach>no</with_attach>
+  <vpost>0</vpost>
+  <default_order>pt</default_order>
+  <post_times>0</post_times>
+  <extras></extras>
+  <poster>student,assistant,teacher</poster>
+  <after_finish></after_finish>
+  <fb_comment>N</fb_comment>
+  <board>
+    <node id="000000001" type="F" data="b000000001.xml"/>
+    <node id="000000001000000001" type="F" data="b000000001000000001.xml"/>
+    <node id="000000002" type="F" data="b000000002.xml"/>
+    <node id="000000002000000001" type="F" data="b000000002000000001.xml"/>
+    <node id="000000003" type="F" data="b000000003.xml"/>
+    <node id="000000003000000001" type="F" data="b000000003000000001.xml"/>
+    <node id="000000004" type="F" data="b000000004.xml"/>
+    <node id="000000004000000001" type="F" data="b000000004000000001.xml"/>
+    <node id="000000005" type="F" data="b000000005.xml"/>
+    <node id="000000005000000001" type="F" data="b000000005000000001.xml"/>
+    <node id="000000006" type="F" data="b000000006.xml"/>
+    <node id="000000006000000001" type="F" data="b000000006000000001.xml"/>
+    <node id="000000008" type="F" data="b000000008.xml"/>
+    <node id="000000008000000001" type="F" data="b000000008000000001.xml"/>
+    <node id="000000009" type="F" data="b000000009.xml"/>
+    <node id="000000009000000001" type="F" data="b000000009000000001.xml"/>
+    <node id="000000010" type="F" data="b000000010.xml"/>
+    <node id="000000010000000001" type="F" data="b000000010000000001.xml"/>
+    <node id="000000011" type="F" data="b000000011.xml"/>
+    <node id="000000011000000001" type="F" data="b000000011000000001.xml"/>
+    <node id="000000012" type="F" data="b000000012.xml"/>
+    <node id="000000012000000001" type="F" data="b000000012000000001.xml"/>
+    <node id="000000013" type="F" data="b000000013.xml"/>
+    <node id="000000013000000001" type="F" data="b000000013000000001.xml"/>
+    <node id="000000014" type="F" data="b000000014.xml"/>
+    <node id="000000014000000001" type="F" data="b000000014000000001.xml"/>
+    <node id="000000015" type="F" data="b000000015.xml"/>
+    <node id="000000015000000001" type="F" data="b000000015000000001.xml"/>
+    <node id="000000016" type="F" data="b000000016.xml"/>
+    <node id="000000016000000001" type="F" data="b000000016000000001.xml"/>
+    <node id="000000017" type="F" data="b000000017.xml"/>
+    <node id="000000017000000001" type="F" data="b000000017000000001.xml"/>
+    <node id="000000018" type="F" data="b000000018.xml"/>
+    <node id="000000018000000001" type="F" data="b000000018000000001.xml"/>
+    <node id="000000019" type="F" data="b000000019.xml"/>
+    <node id="000000019000000001" type="F" data="b000000019000000001.xml"/>
+    <node id="000000020" type="F" data="b000000020.xml"/>
+    <node id="000000020000000001" type="F" data="b000000020000000001.xml"/>
+    <node id="000000021" type="F" data="b000000021.xml"/>
+    <node id="000000021000000001" type="F" data="b000000021000000001.xml"/>
+    <node id="000000022" type="F" data="b000000022.xml"/>
+    <node id="000000022000000001" type="F" data="b000000022000000001.xml"/>
+    <node id="000000023" type="F" data="b000000023.xml"/>
+    <node id="000000023000000001" type="F" data="b000000023000000001.xml"/>
+    <node id="000000024" type="F" data="b000000024.xml"/>
+    <node id="000000024000000001" type="F" data="b000000024000000001.xml"/>
+    <node id="000000025" type="F" data="b000000025.xml"/>
+    <node id="000000025000000001" type="F" data="b000000025000000001.xml"/>
+    <node id="000000026" type="F" data="b000000026.xml"/>
+    <node id="000000026000000001" type="F" data="b000000026000000001.xml"/>
+    <node id="000000027" type="F" data="b000000027.xml"/>
+    <node id="000000027000000001" type="F" data="b000000027000000001.xml"/>
+    <node id="000000028" type="F" data="b000000028.xml"/>
+    <node id="000000028000000001" type="F" data="b000000028000000001.xml"/>
+    <node id="000000029" type="F" data="b000000029.xml"/>
+    <node id="000000029000000001" type="F" data="b000000029000000001.xml"/>
+    <node id="000000030" type="F" data="b000000030.xml"/>
+    <node id="000000030000000001" type="F" data="b000000030000000001.xml"/>
+    <node id="000000031" type="F" data="b000000031.xml"/>
+  </board>
+  <quint/>
+</data>

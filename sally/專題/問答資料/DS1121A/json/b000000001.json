@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-09-13 11:48:18",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p><strong>分而治之</strong></p>\r\n\r\n<p>如果我們遇到了一個大問題，無法立即推演通式解，不妨試試看將大問題拆解成多個子問題，舉例來說我們無法得知費氏數列 f(50) 數值為何 ，但只要我們有了子問題的解決方法就有機會解出大問題 f(2) = f(1) + f(0) | f(3) = f(2) + f(1) | ...... | f(n) = f(n-1) + f(n-2) when n &gt;= 2 and f(0) = 0 f(1) = 1&nbsp;，像是骨牌一樣。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "132",
+        "lang": "1"
+    }
+}

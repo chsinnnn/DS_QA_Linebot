@@ -1,0 +1,37 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 記錄每一筆資料進入佇列的時間以及出去佇列的時間，將後者減去前者即可得到該筆訂單的 watiting time。\n而將所有資料的 waiting time 做平均就能夠得到平均等候時間。",
+        "output": "OK\n\n可惜未舉例。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Time-driven與Event-driven\n以銀行員辦事為例。\n\nTime-driven需要詳細記錄每一個時間點所發生的事，儘管實作起來較為容易，但是因為系統需要不斷的花費資源去重複執行Polling的動作，因此效率較差。\n\nEvent-driven則是可以讓系統處於待機的狀態，直到有事件發生時再做處理，因此可以節省資源不必要的浪費，以提升效率。",
+        "output": "雖然貼文敘述也不錯，不過，還是誤解了題意： 選擇佇列的策略 是指新訂單面對二個以上的佇列，該如何選擇？\n\n作業#4題目描述了一個SQF策略，嘗試提出第二種，然後比較二者的優劣。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 當每一筆資料進佇列時記錄此佇列的長度，並設一個變數累加這些長度，最後再用這個變數除以有幾筆資料就可以得到佇列的平均長度。\n\ntotalLen = 0\n\n新的資料進queue\n\ntotalLen = totalLen + queue.size()\n\n沒資料時\n\naverageLen = totalLen / datas.size()\n\n佇列的平均長度為averageLen。",
+        "output": "舉例說明"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例Event1(arrival time=1,duration=5), Event2(arrival time =4,duration=3), Event3(arrival time=7,duration=5), Event4(arrival time=20, duration=3)\n\nTotal wating time = 先做Event1=&gt;現在時間會來到1+5=6, 現在時間去減掉下個Event的arrival time就是下個Event的wating time,做完Event2後現在時間會 =(做此Event時的現在時間+此Event duration也就是3)=6+3=9,依此類推到所有Event都執行過,若遇到下個Event的arrival time比現在的時間大,那麼此Event的wating time就是0,而現在時間也就等於此Event的arrival time。\n\n以這個例子做計算 Event2&#39;s wating time = 1+5-4=2, Event3&#39;s wating time = 1+5+3-7=2, Event4&#39;s wating time = 由於現在時間來到1+5+3+5=14,但Event4的arrival time(20) &gt; 現在時間(14) 所以Event4&#39;s wating time = 0。\n\ntotal wating time = 2+2+0=4, average wating time = 4/所有Event的數量=4/4=1。",
+        "output": "Good!\n\nNice colors and descriptions."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 看電影排隊: queue\n\n先進先出\n\n董事長排隊:priority_queue\n\n權重大的優先處理",
+        "output": "選擇佇列的策略？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如果現在這筆資料抵達的時間比上一筆資料結束的時間小的話等待的時間會等於 上一筆資料結束的時間-現在這筆資料抵達的時間\n\n反之如果現在這筆資料抵達的時間比上一筆資料結束的時間大禍是第一筆資料等待的時間會等於 零\n\n平均等待時間是所有資料等待時間的加總並除上資料總數",
+        "output": "Good example and explanation!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n共6位同學參與問答。",
+        "output": ""
+    }
+]

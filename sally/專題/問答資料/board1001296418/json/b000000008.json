@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-10-03 11:33:50",
+        "poster": "11127161",
+        "realname": "劉芷妘",
+        "email": "chihyun161616@gmail.com",
+        "homepage": null,
+        "subject": "107",
+        "content": "<p>題目:&nbsp;作業一採用什麼資料結構儲存讀入資料，須說明原因。</p>\r\n\r\n<p>在一開始設了一個Maze的class，class包含了讀檔、找方向、印出地圖等function，在這其中我宣告了動態陣列vector&lt;string&gt;lines來存讀檔讀到的地圖，因為不能確定地圖會有多大，所以使用動態陣列可以避免存放位置不夠的問題，當需要添加元素時，可以自動調整其大小，不用手動調整內存，這使得程式碼更簡單且不容易出錯，且我將此資料設為private，避免其他function更改到動態陣列導致資料亂掉。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "37",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-09-21 20:20:15",
+        "poster": "11127124",
+        "realname": "何俊霆",
+        "email": "ju482239@gmail.com",
+        "homepage": null,
+        "subject": "104",
+        "content": "<p>在問題可以分解成更小且類似的問題和需要重複操作但操作時輸入不同參數時適合使用遞迴，<br />\r\n因為遞迴可以增加程式可讀性和容易解釋。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "38",
+        "lang": "1"
+    }
+}

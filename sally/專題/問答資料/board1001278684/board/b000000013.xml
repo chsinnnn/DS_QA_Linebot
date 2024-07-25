@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:33" type="post" filename="b000000013.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278684</board_id>
+  <node>000000013</node>
+  <site>1000110001</site>
+  <pt>2023-07-23 21:04:42</pt>
+  <poster>10827128</poster>
+  <realname>&#x6797;&#x946B;&#x5B8F;  </realname>
+  <email>shawn140802@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54; 215. </subject>
+  <content>&lt;p&gt;&#x6703;&#x76F4;&#x63A5;&#x5F71;&#x97FF;&#x5230;&#x905E;&#x8FF4;&#x6DF1;&#x5EA6;&#x7684;&#x5C31;&#x662F;&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x5207;&#x5206;data&#x6642;&#xFF0C;&#x90FD;&#x80FD;&#x525B;&#x597D;&#x5207;&#x6210;&#x5C0D;&#x7B49;&#x7684;2&#x534A;&#xFF0C;&#x90A3;&#x5C31;&#x8D8A;&#x63A5;&#x8FD1;best case&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56E0;&#x70BA;&#x5982;&#x679C;&#x90FD;&#x662F;&#x5206;&#x6210;&#x5F88;&#x6975;&#x7AEF;&#x7684;left part 99&#x500B;&#x5143;&#x7D20; right part &#x53EA;&#x6709;&#x539F;&#x672C;&#x7684;pivot item&#xFF0C;&#x90A3;&#x5C31;&#x6703;&#x8D8A;&#x4E0D;&#x8CBC;&#x8FD1;divide and conquer&#x7684;&#x539F;&#x610F;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x800C;&#x9019;&#x7A2E;&#x72C0;&#x6CC1;&#x53EA;&#x8981;&#x539F;&#x672C;&#x5C31;&#x6392;&#x7684;&#x5F88;&#x4E7E;&#x6DE8;&#xFF0C;&#x6216;&#x662F;&#x525B;&#x597D;data&#x6392;&#x8D77;&#x4F86;pivot&#x5C31;&#x662F;&#x525B;&#x597D;&#x8CC4;&#x9078;&#x5230;&#x6975;&#x7AEF;&#x503C;&#x6642;&#x6703;&#x51FA;&#x73FE;&#xFF0C;&#x53CD;&#x4E4B;&#x5247;&#x662F;sort&#x6642;&#x6548;&#x7387;&#x6700;&#x597D;&#x7684;&#x72C0;&#x6CC1;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>8</hit>
+  <lang>1</lang>
+</data>

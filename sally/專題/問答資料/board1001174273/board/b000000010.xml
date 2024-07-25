@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:22" type="post" filename="b000000010.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174273</board_id>
+  <node>000000010</node>
+  <site>1000110001</site>
+  <pt>2022-10-11 22:14:57</pt>
+  <poster>11027206</poster>
+  <realname>&#x6797;&#x80B2;&#x8431;  </realname>
+  <email>cindylin911105@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;***call by value&#x548C;call by reference&#x7684;&#x5DEE;&#x7570;***&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;call by value: &#x8907;&#x88FD;&#x4E4B;&#x5F8C;&#xFF0C;&#x628A;&amp;quot;&#x503C;&amp;quot;&#x50B3;&#x5230;&#x53E6;&#x4E00;&#x500B;&amp;quot;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x7684;&#x503C;&amp;quot;&#x4E0A;&#xFF0C;&#x56E0;&#x6B64;&#x547C;&#x53EB;&#x8005;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#x503C;&#x3002;&lt;br /&gt;&#xD;
+call by reference: &#x672C;&#x8EAB;&#x8B8A;&#x6578;&#x6C92;&#x6709;&#x4F4D;&#x7F6E;&#xFF0C;&#x503C;&#x88AB;&#x5B58;&#x5728;&#x67D0;&#x500B;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;&#x5B58;&#x5728;&#x9019;&#x500B;&#x8B8A;&#x6578;&#x5167;&#x7684;&#x5C31;&#x662F;&#x9019;&#x500B;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x6539;&#x52D5;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53E6;&#x5916;&#x5728;&#x901F;&#x5EA6;&#x6548;&#x80FD;&#x65B9;&#x9762;call by value&#x7684;&#x901F;&#x5EA6;&#x6703;&#x6BD4;call by reference&#x6162;&#xFF0C;&#x56E0;&#x70BA;call by value&#x8981;&#x5148;&#x8907;&#x88FD;&#x4E00;&#x4EFD;&#x4E4B;&#x5F8C;&#x518D;&#x56DE;&#x50B3;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7A0B;&#x5F0F;&#x78BC;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include&amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;br /&gt;&#xD;
+void callByvalue( int a, int b )&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int temp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; temp = a;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; a = b;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; b = temp;&lt;br /&gt;&#xD;
+} // void callByvalue&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void callByreference( int &amp;amp;a, int &amp;amp;b&amp;nbsp;)&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int temp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; temp = a;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; a = b;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; b = temp;&lt;br /&gt;&#xD;
+} // void callByreference&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int a = 5, b = 3;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;nbsp;&amp;quot;Before a= &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;nbsp;&amp;quot;, b= &amp;quot;&amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; callByvalue( a, b );&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;After&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Call by value: &amp;nbsp;a= &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;nbsp;&amp;quot;, b= &amp;quot;&amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; a = 5, b = 3;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; callByreference( a, b );&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Call by reference: &amp;nbsp;a= &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;nbsp;&amp;quot;, b= &amp;quot;&amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027206/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-11%20185849.png" style="height:92px; width:300px" /&gt;&lt;br /&gt;&#xD;
+---&#x65B9;&#x7A0B;&#x5F0F;&#x5167;&#x9032;&#x884C;a,b&#x4EA4;&#x63DB;&#xFF0C;&#x7531;&#x6B64;&#x8B49;&#x660E;call by value&#x4E0D;&#x6703;&#x56E0;&#x70BA;&#x505A;&#x4EFB;&#x610F;&#x904B;&#x7B97;&#x5C31;&#x66F4;&#x6539;&#x503C;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>16</hit>
+  <lang>1</lang>
+</data>

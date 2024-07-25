@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:30",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296424",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-11-22 13:29:19",
+        "poster": "10727160",
+        "realname": "邱世鑫",
+        "email": "coobazeus@gmail.com",
+        "homepage": null,
+        "subject": "207",
+        "content": "<p><span style=\"font-size:14px\"><strong>207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。</strong></span></p>\r\n\r\n<p>不穩定排序：如果鍵值相同之資料，在排序後相對位置與排序前不相同時，稱不穩定排序。</p>\r\n\r\n<p>Selection Sort：遍歷整個陣列，每次選出最小的元素並與陣列的前端交換。交換後逐步縮小需要遍歷的長度，形成陣列前端是已排序的元素；末端是未排序的元素。</p>\r\n\r\n<p>若現在有一排數字如 { 6, 7, 5, 4, 6, 3 }，其中有兩個 6 分別在開頭和中間。</p>\r\n\r\n<p>當第一次進行選擇排序時，發現 3&nbsp;是最小的數字，並把 3 和目前排在第一位的 6 交換位置</p>\r\n\r\n<p>導致原本排在前面的 6&nbsp;就被移動到後面。破壞了兩個 6 排序前的相對位置，所以它是不穩定的排序法</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2022-09-16 16:22:57",
+        "poster": "11027124",
+        "realname": "蔡佑政",
+        "email": "kennytsai0213@icloud.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>遞迴簡單來說就是將重複性質高的問題(例如:階乘)拆分成較小的問題來解決。因為避免無窮迴圈發生，所以需要設定一個終止條件。</p>\r\n\r\n<p>舉例:</p>\r\n\r\n<p>去抽一番賞，每一抽270元，抽到A賞就停止</p>\r\n\r\n<p>int f(int n) {</p>\r\n\r\n<p>&nbsp; if( n == A )&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; return A;</p>\r\n\r\n<p>&nbsp; else&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; return f(n);</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "72",
+        "lang": "1"
+    }
+}

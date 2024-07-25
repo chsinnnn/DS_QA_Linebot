@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:45" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162653</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-12-06 22:24:00</pt>
+  <poster>10527234</poster>
+  <realname>&#x5ED6;&#x5F65;&#x6674;  </realname>
+  <email>ingrid.liao@hotmail.com</email>
+  <homepage>  </homepage>
+  <subject>207. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x9078;&#x64C7;&#x6392;&#x5E8F;selection sort&#x4E26;&#x975E;&#x7A69;&#x5B9A;stable&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5; </subject>
+  <content>&lt;p&gt;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x7684;&#x5B9A;&#x7FA9;&#x662F;&#xFF0C;&#x9996;&#x5148;&#x5728;&#x672A;&#x6392;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#x4E2D;&#x627E;&#x5230;&#x6700;&#x5C0F;/&#x5927;&#x5143;&#x7D20;&#xFF0C;&#x548C;&#x6574;&#x500B;&#x5E8F;&#x5217;&#x7684;&#x9996;&#x4F4D;&#x4EA4;&#x63DB;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x5F8C;&#xFF0C;&#x518D;&#x5F9E;&#x5269;&#x9918;&#x672A;&#x6392;&#x5E8F;&#x5143;&#x7D20;&#x4E2D;&#x7E7C;&#x7E8C;&#x5C0B;&#x627E;&#x6700;&#x5C0F;/&#x5927;&#x5143;&#x7D20;&#xFF0C;&#x8207;&#x5DF2;&#x7D93;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x7684;&#x672B;&#x5C3E;&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x5143;&#x7D20;&#x4EA4;&#x63DB;&#x3002;&#x4EE5;&#x6B64;&#x985E;&#x63A8;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x5143;&#x7D20;&#x5747;&#x6392;&#x5E8F;&#x5B8C;&#x7562;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x800C;&#x7A69;&#x5B9A;&#x6392;&#x5E8F;&#x7684;&#x5B9A;&#x7FA9;&#x5247;&#x662F;&#xFF0C;&#x7576;&#x672A;&#x6392;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#x4E2D;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;&#x6642;&#xFF0C;&#x6309;&#x9806;&#x5E8F;&#x6392;&#x5E8F;&#x5B8C;&#x5F8C;&#x4E0D;&#x6703;&#x4EA4;&#x63DB;&#x9019;&#x5169;&#x500B;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56E0;&#x6B64;&#xFF0C;&#x7576;A&#xFF1A;20&#xFF0C;B&#xFF1A;20&#xFF0C;C&#xFF1A;10&#x7684;&#x5E8F;&#x5217;&#x505A;&#x7531;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#x6642;&#xFF0C;&#x7B2C;&#x4E00;&#x8F2A;&#x5148;&#x5C0B;&#x627E;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;C&#xFF1A;10&#x548C;&#x7B2C;&#x4E00;&#x4F4D;A&#xFF1A;20&#x4EA4;&#x63DB;&#xFF1B;&#x7B2C;&#x4E8C;&#x8F2A;B&#xFF1A;20&#x548C;A&#xFF1A;20&#x76F8;&#x7B49;&#x4E0D;&#x6703;&#x4EA4;&#x63DB;&#xFF0C;&#x4E4B;&#x5F8C;&#x5C31;&#x6392;&#x5E8F;&#x7D50;&#x675F;&#xFF0C;&#x7B54;&#x6848;&#x662F;C&#xFF0C;B&#xFF0C;A&#x3002;&#x7136;&#x800C;&#x5982;&#x679C;&#x662F;&#x7A69;&#x5B9A;&#x6392;&#x5E8F;&#x7D50;&#x679C;&#x61C9;&#x8A72;&#x6703;&#x662F;C&#xFF0C;A&#xFF0C;B&#xFF0C;&#x56E0;&#x6B64;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x4E26;&#x4E0D;&#x7A69;&#x5B9A;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>9</hit>
+  <lang>1</lang>
+</data>

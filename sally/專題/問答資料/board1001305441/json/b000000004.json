@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:27",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305441",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-12-18 12:21:46",
+        "poster": "10823323",
+        "realname": "王　婕",
+        "email": "jessicawang900318@gmail.com",
+        "homepage": null,
+        "subject": "225. 已排序資料如何建立一棵平衡的二元搜尋樹？",
+        "content": "<p>最有效的方式是以中位數作為根節點，然後遞迴地將左半部分和右半部分的資料分別作為左子樹和右子樹。</p>\r\n\r\n<p>以下為範例:</p>\r\n\r\n<p>TreeNode* rebuild(const vector&lt;int&gt;&amp; nodeList, int start, int end) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">如果起始索引大於結束索引，表示當前區間為空，返回空指針</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; if (start &gt; end) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return nullptr;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; int mid = (start + end) / 2; // <span style=\"font-family:新細明體,serif\">計算當前區間的中位數</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; TreeNode* node = new TreeNode(nodeList[mid]); &nbsp;// <span style=\"font-family:新細明體,serif\">以中間節點值創建一個新的節點</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; node-&gt;left = rebuild(nodeList, start, mid - 1); // <span style=\"font-family:新細明體,serif\">遞迴處理左半部分，將左子樹設置為左半部分的重建結果</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; node-&gt;right = rebuild(nodeList, mid + 1, end); // <span style=\"font-family:新細明體,serif\">遞迴處理右半部分，將右子樹設置為右半部分的重建結果</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return node; &nbsp;// <span style=\"font-family:新細明體,serif\">返回樹的根節點</span></p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

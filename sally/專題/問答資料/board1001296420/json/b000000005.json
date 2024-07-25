@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-10-07 21:03:14",
+        "poster": "10731126",
+        "realname": "陳冠吾",
+        "email": "aa1025489@gmail.com",
+        "homepage": null,
+        "subject": "116",
+        "content": "<p>116. 將後序式postfix轉前序式prefix，並詳述步驟。*<br />\r\na b + c * d e + f * + w z + *<br />\r\n<br />\r\n1.從左至右逐個讀進後序式，根據運算子與運算員不同做相應的處理。</p>\r\n\r\n<p>2-1.若讀進的是運算元，則推進棧中並且以分隔符號例如；或$等字元代表接下來碰到運算子時的左右運算式。</p>\r\n\r\n<p>2-2.若讀進的是運算子，則逐個取出棧中的元素直到取空或是分隔符號已取出兩個，而後將當下讀到的運算子推進棧，並重新將剛才取出的左右運算式推進棧中，要留意的是移除其中的分隔符號。</p>\r\n\r\n<p>3.當讀到後序式最後一個字元時，最後一個字元放進前序式第一個位置。</p>\r\n\r\n<p>4.最後將棧中所有元素取出並清除其中分隔符號，並反向打印即得轉換後的前序式。</p>\r\n\r\n<p>以下為順序:</p>\r\n\r\n<p>a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />\r\na;b&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//中間以;作為分隔符<br />\r\n+ab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//讀到+時取出b並計算一個分隔符號，取出a讀到棧中為空，放進+並重新將左右式的ab放入<br />\r\n+ab;c<br />\r\n*+abc;<br />\r\n*+abc;d<br />\r\n*+abc;d;e<br />\r\n*+abc;+de;<br />\r\n*+abc;+de;f<br />\r\n*+abc;*+def;<br />\r\n+*+abc;*+def;<br />\r\n+*+abc;*+def;w<br />\r\n+*+abc;*+def;w;z<br />\r\n+*+abc;*+def;+wz;<br />\r\n*+*+abc;*+def;+wz;<br />\r\nzw+fed+*cba+*+*&nbsp; &nbsp; &nbsp; // 取出並整理<br />\r\n*+*+abc*+def+wz&nbsp; &nbsp; &nbsp;//反向打印</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "39",
+        "lang": "1"
+    }
+}

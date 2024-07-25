@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000025.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000025",
+        "site": "1000110001",
+        "pt": "2023-07-25 22:21:44",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答225",
+        "content": "<p><span style=\"font-size:14px\">225. 已排序資料如何建立一棵平衡的二元搜尋樹？</span><br />\r\n使用AVL Tree方法，在插入或刪除節點後，對每一個左子樹節點的高度和右子節點的高度，<br />\r\n兩者之間的差異必須在正負1之間。尋找、插入和刪除在平均和最壞情況下的時間複雜度都是O(log n)，<br />\r\n在增加或是刪除節點時可能需要藉由一次或多次的旋轉，來實現樹的重新平衡。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

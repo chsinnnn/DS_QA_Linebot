@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2022-09-18 12:23:58",
+        "poster": "11027156",
+        "realname": "林芷安",
+        "email": "annann9277@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p><span style=\"font-family:新細明體,serif\">遞迴是一種把一個大問題拆解成許多重複小問題，再用函數把這許多小問題解決，加上適當的終止條件，最後將大問題也處理完的一種方法。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">在操作步驟相同，但參數卻不同的情況下就可以使用，可以用來代替超大又容易出錯的</span>while<span style=\"font-family:新細明體,serif\">或</span>for<span style=\"font-family:新細明體,serif\">迴圈。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">我個人對遞迴沒有很擅長，所以就算有要用遞迴寫比較方便的地方，我可能還是會下意識選擇土法煉鋼。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "57",
+        "lang": "1"
+    }
+}

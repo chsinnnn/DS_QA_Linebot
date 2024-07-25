@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000013.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000013</node>
+  <site>1000110001</site>
+  <pt>2022-10-17 13:01:29</pt>
+  <poster>11020107</poster>
+  <realname>&#x8607;&#x4F2F;&#x52F3;  </realname>
+  <email>pohsun.su@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>118. &#x4EE4;ptrX&#x6307;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x6BD4;&#x8F03;ptrX = ptrX-&amp;gt;next&#x548C;ptrX-&amp;gt;next = ptrX&#x7684;&#x5DEE;&#x7570;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;typedef struct Node { // an example linked list&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int val;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node *next;&lt;br /&gt;&#xD;
+} *NodePtr ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(void) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; NodePtr cur = NULL, head = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // initializing, put in 1 ~ 10&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int num = 1;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; do {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (cur == NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; head = cur;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur-&amp;gt;next = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } // end if&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; else {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur-&amp;gt;val = num;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur-&amp;gt;next = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur = cur-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur-&amp;gt;val = 10; // default range&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur-&amp;gt;next = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; num++;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } // end else&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } while(num &amp;lt; 10);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cur = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // print out all nodes&amp;#39; values&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (cur != NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; cur-&amp;gt;val &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur = cur-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end while&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cur = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // comparing ptrX = ptrX-&amp;gt;next and ptrX-&amp;gt;next = ptrX&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; NodePtr ptrX = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // 1. ptrX = ptrX-&amp;gt;next&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Before, ptrX&amp;#39;s value is : &amp;quot; &amp;lt;&amp;lt; ptrX-&amp;gt;val &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; ptrX = ptrX-&amp;gt;next; // &#x6307;&#x5411;&#x4E0B;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;ptrX-&amp;gt;next&#xFF0C;&#x56E0;&#x6B64;&#x80FD;&#x5370;&#x51FA;&#x6240;&#x6709;&#x5167;&#x5BB9;&#x4E26;&#x6B63;&#x5E38;&#x505C;&#x6B62;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After, ptrX&amp;#39;s value is : &amp;quot; &amp;lt;&amp;lt; ptrX-&amp;gt;val &amp;lt;&amp;lt; &amp;quot;, &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;and ptrX-&amp;gt;next&amp;#39;s value is : &amp;quot; &amp;lt;&amp;lt; ptrX-&amp;gt;next-&amp;gt;val &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // print out all nodes&amp;#39; values&#xFF0C;&#x6B63;&#x5E38;&#x505C;&#x6B62;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;All nodes&amp;#39; values are : &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (cur != NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; cur-&amp;gt;val &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur = cur-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end while&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cur = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; ptrX = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // 2. ptrX-&amp;gt;next = ptrX;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Before, ptrX&amp;#39;s value is : &amp;quot; &amp;lt;&amp;lt; ptrX-&amp;gt;val &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; ptrX-&amp;gt;next = ptrX; // &#x6307;&#x5411;&#x81EA;&#x5DF1;ptrX&#xFF0C;&#x56E0;&#x6B64;&#x70BA;&#x4E00;&#x96D9;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#xFF0C;&#x53EA;&#x542B;&#x6709;&#x539F;&#x672C;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7B2C;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x5370;&#x51FA;&#x6240;&#x6709;&#x7BC0;&#x9EDE;&#x6642;&#x56E0;&#x6C92;&#x6709;NULL&#x800C;&#x7522;&#x751F;&#x7121;&#x7AAE;&#x8FF4;&#x5708;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After, ptrX&amp;#39;s value is : &amp;quot; &amp;lt;&amp;lt; ptrX-&amp;gt;val &amp;lt;&amp;lt; &amp;quot;, &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;and ptrX-&amp;gt;next&amp;#39;s value is : &amp;quot; &amp;lt;&amp;lt; ptrX-&amp;gt;next-&amp;gt;val &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // print out all nodes&amp;#39; values&#xFF0C;&#x7121;&#x7AAE;&#x8FF4;&#x5708;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;All nodes&amp;#39; values are : &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (cur != NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; cur-&amp;gt;val &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cur = cur-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end while&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>17</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-10-07 00:59:19",
+        "poster": "11127137",
+        "realname": "黃乙家",
+        "email": "u810025@gmail.com",
+        "homepage": "https://ja-errorpro.cf",
+        "subject": "120",
+        "content": "<p>舉例說明使用雙向鏈結串列doubly linked list的情境。</p>\r\n\r\n<p><br />\r\n1. 編輯器的復原/重做功能</p>\r\n\r\n<p>以文字編輯器為例，當使用者進行了修改，就將當前文本狀態存到doubly linked list尾端，當使用者執行復原指令就將指標往前一個，如果執行重做就往後一個</p>\r\n\r\n<p>2. 瀏覽器的上一頁、下一頁(歷史紀錄)功能</p>\r\n\r\n<p>每瀏覽一個網頁就把URL加到doubly linked list尾端，能更方便向前向後導航</p>\r\n\r\n<p>3. 更方便實作stack、hash table之類的資料結構</p>\r\n\r\n<p>4. Linux kernel的行程(process)管理</p>\r\n\r\n<p>在Linux kernel的原始碼可以找到大量(circular) doubly linked list，最著名的例子就是行程管理，可以高效率進行插入、刪除、搜尋、遍歷</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "34",
+        "lang": "1"
+    }
+}

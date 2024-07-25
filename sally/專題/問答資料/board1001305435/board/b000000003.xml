@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:18" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305435</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-10-22 16:04:04</pt>
+  <poster>11020126</poster>
+  <realname>&#x912D;&#x7950;&#x6600;  </realname>
+  <email>carry0987@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>128. &#x5F8C;&#x5E8F;&#x5F0F;2 4 6 * + 7 5 - *&#x8981;&#x5982;&#x4F55;&#x900F;&#x904E;&#x5806;&#x758A;&#x6C42;&#x89E3;&#xFF1F;&#x8981;&#x5217;&#x51FA;&#x904E;&#x7A0B;&#x3002; </subject>
+  <content>&lt;blockquote&gt;&#xD;
+&lt;p&gt;#include &amp;lt;stack&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;vector&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;cstdlib&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;string&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int evalRPN(std::vector&amp;lt;std::string&amp;gt;&amp;amp; tokens) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::stack&amp;lt;int&amp;gt; stack;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (std::string&amp;amp; token : tokens) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (token == &amp;quot;+&amp;quot; || token == &amp;quot;-&amp;quot; || token == &amp;quot;*&amp;quot; || token == &amp;quot;/&amp;quot;) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int op2 = stack.top();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stack.pop();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int op1 = stack.top();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stack.pop();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (token == &amp;quot;+&amp;quot;)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stack.push(op1 + op2);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; else if (token == &amp;quot;-&amp;quot;)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stack.push(op1 - op2);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; else if (token == &amp;quot;*&amp;quot;)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stack.push(op1 * op2);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stack.push(atoi(token.c_str()));&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return stack.top();&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::vector&amp;lt;std::string&amp;gt; tokens = {&amp;quot;2&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;-&amp;quot;, &amp;quot;*&amp;quot;};&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; evalRPN(tokens); // Output: -12&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&lt;/blockquote&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>25</hit>
+  <lang>1</lang>
+</data>

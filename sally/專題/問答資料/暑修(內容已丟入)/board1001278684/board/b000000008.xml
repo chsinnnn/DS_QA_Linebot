@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:33" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278684</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2023-07-22 02:31:01</pt>
+  <poster>06005732</poster>
+  <realname>&#x738B;&#x6631;&#x9032;  </realname>
+  <email>louis21501@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;211 </subject>
+  <content>&lt;p&gt;&#x9996;&#x5148;&#x8209;&#x4F8B;&#x4E00;&#x9663;&#x5217;&#x53EB;&#x505A;A&#xFF0C;A[]={5,3,1,4,2}&lt;br /&gt;&#xD;
+&#x7528;Bubblesort&#x6392;&#x5217;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E00;&#x6B21;&#x8FF4;&#x5708;&amp;nbsp; &amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E8C;&#x6B21;&#x8FF4;&#x5708;&amp;nbsp; &amp;nbsp; &amp;nbsp;&#x7B2C;&#x4E09;&#x6B21;&#x8FF4;&#x5708;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1. 3,5,1,4,2&amp;nbsp; &amp;nbsp; &amp;nbsp; 1. 1,3,4,2,5&amp;nbsp; &amp;nbsp; &amp;nbsp;1. 1,2,3,4,5&lt;br /&gt;&#xD;
+2. 3,1,5,4,2&amp;nbsp; &amp;nbsp; &amp;nbsp; 2. 1,3,2,4,5&lt;br /&gt;&#xD;
+3. 3,1,4,5,2&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+4. 3,1,4,2,5&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&#x7528;selection sort&#x6392;&#x5217;:&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+A[]={5,3,1,4,2}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E00;&#x6B21;&#x8FF4;&#x5708;&amp;nbsp; &amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E8C;&#x6B21;&#x8FF4;&#x5708;&amp;nbsp; &amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E09;&#x6B21;&#x8FF4;&#x5708;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1. 1,3,5,4,2&amp;nbsp; &amp;nbsp; &amp;nbsp; 1. 1,2,5,4,3&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;1. 1,2,3,4,5&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&#x7531;&#x4EE5;&#x4E0A;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#xFF0C;Bubble sort &#x4E3B;&#x8981;&#x7684;swap&#x6578;&#x5927;&#x591A;&#x6642;&#x9593;&#x4E0A;&#x90FD;&#x662F;&#x5927;&#x65BC;selction&#x7684;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F46;Bubble sort&#x5728;&#x8CC7;&#x6599;&#x591A;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x82E5;&#x662F;&#x8CC7;&#x6599;&#x7684;&#x6392;&#x5E8F;&#x8F03;&#x70BA;&#x6574;&#x9F4A;&#xFF0C;&#x6BD4;&#x5982;&#x8AAA;&#x50CF;&#x662F;&#x6709;&#x4E9B;&#x63A5;&#x8FD1;&#x7684;&#x8CC7;&#x6599;&#x8DDD;&#x96E2;&#x6BD4;&#x8F03;&#x76F8;&#x8FD1;&#x6642;&#x6574;&#x9AD4;&#x6703;&#x6BD4;seletction&#x5FEB;&#xFF0C;&#x7562;&#x7ADF;selection&#x6392;&#x5E8F;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5F9E;&#x982D;&#x4E00;&#x500B;&#x4E00;&#x500B;&#x6392;&#x5E8F;&#x7684;&#xFF0C;&#x9047;&#x5230;&#x7684;&#x8CC7;&#x6599;&#x5206;&#x5E03;&#x8F03;&#x9060;&#x6642;swap&#x6B21;&#x6578;&#x4E5F;&#x6703;&#x6BD4;&#x8F03;&#x591A;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>22</hit>
+  <lang>1</lang>
+</data>

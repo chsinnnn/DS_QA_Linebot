@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:36",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305432",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-10-04 18:14:50",
+        "poster": "11020117",
+        "realname": "林子皓",
+        "email": "ke951736@gmail.com",
+        "homepage": null,
+        "subject": "112. 寫出C++程式碼說明兩個類別間的繼承inheritance。",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p><br />\r\nclass Animal {<br />\r\npublic:<br />\r\n&nbsp; &nbsp;<br />\r\n&nbsp; &nbsp; void eat() {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; &quot;Animal is eating.&quot; &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp; }<br />\r\n};</p>\r\n\r\n<p><br />\r\nclass Dog : public Animal {<br />\r\npublic:<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; void bark() {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; std::cout &lt;&lt; &quot;Dog is barking.&quot; &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp; }<br />\r\n};</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; Dog myDog;</p>\r\n\r\n<p>&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; myDog.eat();</p>\r\n\r\n<p><br />\r\n&nbsp; &nbsp; myDog.bark();</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000002000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000002000000001",
+        "site": "1000110001",
+        "pt": "2022-09-25 00:57:18",
+        "poster": "11027112",
+        "realname": "陳逸駿",
+        "email": "zxc548193c@gmail.com",
+        "homepage": null,
+        "subject": "Re: 109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>非常好理解！不愧是許書維！講的就是正解</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

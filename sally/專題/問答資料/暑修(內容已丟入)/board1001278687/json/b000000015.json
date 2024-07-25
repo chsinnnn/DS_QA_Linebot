@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:11:34",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答221",
+        "content": "<p><strong>舉例解說中序走訪二元搜尋樹是否穩定排序。</strong></p>\r\n\r\n<p><strong>中序走訪二元搜尋樹（Binary Search Tree，BST）可以實現穩定的排序。這是因為中序走訪二元搜尋樹的過程中，每個節點的值都會按照遞增的順序被訪問。</strong></p>\r\n\r\n<p><strong>搜尋樹的特性保證了中序走訪的結果是有序的。在一個合法的二元搜尋樹中，對於每個節點N，其左子樹中的所有節點的值都小於N的值，而其右子樹中的所有節點的值都大於N的值。</strong></p>\r\n\r\n<p><strong>因此，中序走訪的順序是：先走訪左子樹（小於N的值），然後訪問節點N本身，最後走訪右子樹（大於N的值），這就是遞增順序。</strong></p>\r\n\r\n<p><strong>假設有以下二元搜尋樹：</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp; &nbsp; 8</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp; \\&nbsp; &nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;1&nbsp; &nbsp; 4&nbsp; &nbsp; 9</strong></p>\r\n\r\n<p><strong>使用中序走訪，我們得到的排序結果為：</strong></p>\r\n\r\n<p><strong>1 -&gt; 2 -&gt; 4 -&gt; 5 -&gt; 8 -&gt; 9</strong></p>\r\n\r\n<p><strong>這是一個遞增的有序序列，這就說明了中序走訪二元搜尋樹可以實現穩定的排序。對於具有相同鍵值的節點，它們會按照它們在原始樹中的相對順序在排序後保持不變。因此，中序走訪BST提供了一種穩定的排序方法。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "18",
+        "lang": "1"
+    }
+}

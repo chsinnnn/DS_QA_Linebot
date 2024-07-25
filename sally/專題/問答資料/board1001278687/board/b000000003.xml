@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:52" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278687</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-07-22 03:14:45</pt>
+  <poster>06005732</poster>
+  <realname>&#x738B;&#x6631;&#x9032;  </realname>
+  <email>louis21501@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;225 </subject>
+  <content>&lt;p&gt;&#x4F7F;&#x7528;Binary search tree&#x7684;AVL Tree&#x7684;&#x65B9;&#x6CD5; :&amp;nbsp;&#x63D2;&#x5165;&#x65B0;&#x7BC0;&#x9EDE;&#x3001;&#x66F4;&#x65B0;&#x5E73;&#x8861;&#x56E0;&#x5B50;&#x3001;&#x91CD;&#x65B0;&#x5E73;&#x8861;&#x3001;&#x7E7C;&#x7E8C;&#x5411;&#x4E0A;&#x8FFD;&#x6EAF;&#x3002;&#x8209;&#x4F8B;A[]={1,2,3,4,5}&lt;br /&gt;&#xD;
+1.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1&lt;br /&gt;&#xD;
+2.&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;3.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /&amp;nbsp; &amp;nbsp; &amp;nbsp;\&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; 1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;4.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;/&amp;nbsp; &amp;nbsp; &amp;nbsp; \&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 4&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;5.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;/&amp;nbsp; &amp;nbsp; &amp;nbsp; \&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;4&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /&amp;nbsp;\&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 3&amp;nbsp; &amp;nbsp; 5&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>18</hit>
+  <lang>1</lang>
+</data>

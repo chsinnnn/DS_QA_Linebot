@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000027.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000027",
+        "site": "1000110001",
+        "pt": "2023-07-25 22:59:19",
+        "poster": "06005914",
+        "realname": "陳彥中",
+        "email": "jackson89911@gmail.com",
+        "homepage": null,
+        "subject": "搶答224",
+        "content": "<p>224. 如何將二元搜尋樹存檔後再讀入可恢復原狀？</p>\r\n\r\n<p>A:要將二元搜尋樹存檔後再讀入，可以使用下列步驟：</p>\r\n\r\n<p>1.先建立一個二元搜尋樹</p>\r\n\r\n<p>2.使用遞迴函數將二元搜尋樹的節點存檔到一個檔案中</p>\r\n\r\n<p>3.然後關閉檔案</p>\r\n\r\n<p>4.使用遞迴函數從檔案中讀取二元搜尋樹的節點，並建立一個新的二元搜尋樹</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "7",
+        "lang": "1"
+    }
+}

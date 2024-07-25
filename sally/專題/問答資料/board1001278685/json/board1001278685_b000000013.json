@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-22 14:36:47",
+        "poster": "10924326",
+        "realname": "吳英睿",
+        "email": "incaray901228@gmail.com",
+        "homepage": null,
+        "subject": "搶答217",
+        "content": "<p>題目：舉例解說快速排序quick sort是否穩定stable</p>\r\n\r\n<p>假設有一組包含學生成績和名字的資料，並且希望按照成績進行排序。如果兩位學生的成績相同，則按照名字的字母順序進行排序。</p>\r\n\r\n<p>原始資料：</p>\r\n\r\n<p>John, 85</p>\r\n\r\n<p>Mary, 78</p>\r\n\r\n<p>Bob, 85</p>\r\n\r\n<p>Alice, 90</p>\r\n\r\n<p>用快速排序選擇成績為中心元素，假設選擇90。在第一輪分區後，成績為85的學生John和Bob的相對順序可能會被改變，因為快速排序不保證相等元素的相對順序保持不變。導致在這種情況下是不穩定的。</p>\r\n\r\n<p>排序後資料：</p>\r\n\r\n<p>Alice, 90</p>\r\n\r\n<p>Bob, 85</p>\r\n\r\n<p>John, 85</p>\r\n\r\n<p>Mary, 78</p>\r\n\r\n<p>因此快速排序可能改變相等元素的相對順序，它被認為是一個不穩定的排序算法。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

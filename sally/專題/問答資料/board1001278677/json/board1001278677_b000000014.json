@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-06 03:32:52",
+        "poster": "06005727",
+        "realname": "陳彥勳",
+        "email": "cys890403@gmail.com",
+        "homepage": null,
+        "subject": "搶答107",
+        "content": "<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">問107</span>：</span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？</span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">答107</span>：</span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">若在遞迴的某一層異常終止後，希望強制程式繼續執行到下一層，可以使用例外處理的機制來捕捉異常並進行處理。</span></span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:25",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296428",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-12-26 22:40:59",
+        "poster": "11127133",
+        "realname": "陳乙菁",
+        "email": "fiona99107@gmail.com",
+        "homepage": null,
+        "subject": "223",
+        "content": "<p>223. 相同搜尋鍵的二筆資料如何存入二元搜尋樹？</p>\r\n\r\n<ol>\r\n\t<li>將新插入的點插入相同鍵值的點的左子樹或右子樹，並且在建樹的過程中只能選一邊，如作業五任務一，相同鍵值一直插入右子樹。</li>\r\n\t<li>\r\n\t<p>將新插入的點插入到相同鍵值的點的後面，如作業五任務三，利用push_back的方法插入</p>\r\n\t</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

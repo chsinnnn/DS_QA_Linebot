@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-07-18 01:07:40",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答205",
+        "content": "<p>1.FCFS先到先服務:先到達佇列的顧客會優先服務，下一個等待的顧客會成為下一位，但有可能會starvation(客人要等待很長的時間)<br />\r\n2.SJF最短優先:優先處理服務時間最短的顧客。當顧客完成後，下一位waiting time換最短的顧客服務。SJF可以最小平均waiting time，因為較短的服務時間顧客優先處理，讓整個佇列的減少waiting time。</p>\r\n\r\n<p>舉例:如果使用SJF，服務員可以優先處理需要時間最短的客人，快速完成服務，餐廳就可以處理更多客人，不過會讓點了比較多菜的客人等待更久的時間，因為它們所需的時間較長所以排在後面</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "49",
+        "lang": "1"
+    }
+}

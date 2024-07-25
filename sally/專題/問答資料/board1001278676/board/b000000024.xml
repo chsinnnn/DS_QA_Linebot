@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:39" type="post" filename="b000000024.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278676</board_id>
+  <node>000000024</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 23:11:34</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;105. </subject>
+  <content>&lt;p&gt;105. &#x8A66;&#x63CF;&#x8FF0;&#x6574;&#x6578;&#x6EA2;&#x4F4D;integer overflow&#x7684;&#x907F;&#x514D;&#x65B9;&#x6CD5;&#xFF0C;&#x4E26;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6574;&#x6578;&#x6EA2;&#x4F4D;&#xFF08;integer overflow&#xFF09;&#x662F;&#x6307;&#x7576;&#x4E00;&#x500B;&#x6574;&#x6578;&#x503C;&#x8D85;&#x51FA;&#x5176;&#x8CC7;&#x6599;&#x985E;&#x578B;&#x6240;&#x80FD;&#x8868;&#x793A;&#x7684;&#x7BC4;&#x570D;&#x6642;&#x6240;&#x7522;&#x751F;&#x7684;&#x932F;&#x8AA4;&#x60C5;&#x6CC1;&#x3002;&#x9019;&#x53EF;&#x80FD;&#x5C0E;&#x81F4;&#x7D50;&#x679C;&#x7121;&#x6548;&#x6216;&#x672A;&#x5B9A;&#x7FA9;&#x7684;&#x884C;&#x70BA;&#x3002; &#x4E0B;&#x5217;&#x70BA;&#x6574;&#x6578;&#x6EA2;&#x4F4D;integer overflow&#x7684;&#x907F;&#x514D;&#x65B9;&#x6CD5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1. &#x4F7F;&#x7528;&#x9069;&#x7576;&#x7684;&#x8CC7;&#x6599;&#x985E;&#x578B;&amp;nbsp; 2. &#x6AA2;&#x67E5;&#x6EA2;&#x4F4D;&#x689D;&#x4EF6;&amp;nbsp;&amp;nbsp; 3. &#x4F7F;&#x7528;&#x5B89;&#x5168;&#x7684;&#x6578;&#x5B78;&#x51FD;&#x6578;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;limits&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bool isSafeAddition(int a, int b) { // &#x51FD;&#x5F0F;&#x7528;&#x65BC;&#x6AA2;&#x67E5;&#x5169;&#x500B;&#x6574;&#x6578;&#x76F8;&#x52A0;&#x662F;&#x5426;&#x5B89;&#x5168;&#xFF08;&#x6C92;&#x6709;&#x6EA2;&#x4F4D;&#xFF09;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (b &amp;gt; 0 &amp;amp;&amp;amp; a &amp;gt; std::numeric_limits&amp;lt;int&amp;gt;::max() - b) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return false;&amp;nbsp; // &#x6EA2;&#x4F4D;&#x689D;&#x4EF6;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; } else if (b &amp;lt; 0 &amp;amp;&amp;amp; a &amp;lt; std::numeric_limits&amp;lt;int&amp;gt;::min() - b) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return false;&amp;nbsp; // &#x6EA2;&#x4F4D;&#x689D;&#x4EF6;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return true;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int safeAddition(int a, int b) { // safeAddition &#x51FD;&#x5F0F;&#x5728;&#x9032;&#x884C;&#x6574;&#x6578;&#x76F8;&#x52A0;&#x4E4B;&#x524D;&#xFF0C;&#x4F7F;&#x7528; isSafeAddition &#x51FD;&#x5F0F;&#x6AA2;&#x67E5;&#x6EA2;&#x4F4D;&#x689D;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x7D50;&#x679C;&#x662F;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x5247;&#x8FD4;&#x56DE;&#x5169;&#x500B;&#x6578;&#x5B57;&#x7684;&#x548C;&#x3002;&#x5426;&#x5247;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x64DA;&#x9700;&#x6C42;&#x8655;&#x7406;&#x6EA2;&#x4F4D;&#x60C5;&#x6CC1;&#xFF0C;&#x62CB;&#x51FA;&#x7570;&#x5E38;&#x6216;&#x8FD4;&#x56DE;&#x9810;&#x8A2D;&#x503C;&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (isSafeAddition(a, b)) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return a + b;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x8655;&#x7406;&#x6EA2;&#x4F4D;&#x7684;&#x60C5;&#x6CC1;&#xFF0C;&#x4F8B;&#x5982;&#x62CB;&#x51FA;&#x7570;&#x5E38;&#x6216;&#x8FD4;&#x56DE;&#x9810;&#x8A2D;&#x503C;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; throw std::overflow_error(&amp;quot;Integer overflow occurred.&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int num1 = 100000;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int num2 = 200000;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; try {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; int result = safeAddition(num1, num2);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;Result: &amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; } catch (std::overflow_error&amp;amp; e) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;Error: &amp;quot; &amp;lt;&amp;lt; e.what() &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>10</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:01:04",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174281",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-12-29 00:08:56",
+        "poster": "11027256",
+        "realname": "李劼叡",
+        "email": "s11027256@cycu.edu.tw",
+        "homepage": null,
+        "subject": "227. 列舉二元搜尋樹和堆積heap的三項差異。",
+        "content": "<p>1. heap和Binary Search Tree(以下簡稱B.S.T)都為Binary Tree但只有heap為一complete Binary Tree，B.S.T則未必(多為隨意的樹狀結構)</p>\r\n\r\n<p>2. 建樹規則的差別</p>\r\n\r\n<p><strong>heap:</strong></p>\r\n\r\n<p>heap分成兩種樹狀結構，min-heap和Max-heap。</p>\r\n\r\n<p>min-heap的任一節點會小於他的子節點的值，且root為樹中的最小值。</p>\r\n\r\n<p>Max-heap的任一節點則會大於他的子節點的值，且root為樹中的最大值。</p>\r\n\r\n<p><strong>B.S.T:</strong></p>\r\n\r\n<p>B.S.T的每一個節點的值則會大於所有左子樹的值，並小於所有右子樹的值。</p>\r\n\r\n<p>結論：簡言之，heap的排序是從root到leaf，而B.S.T則是從Left subtree到Right subtree</p>\r\n\r\n<p>3. 搜尋時的時間複雜度的差異</p>\r\n\r\n<p>在搜尋時，heap的Big O 為 O(n)，而B.S.T的為O(logn)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

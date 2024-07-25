@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-10-23 19:40:47",
+        "poster": "11127110",
+        "realname": "許至昀",
+        "email": "alberthsu919@gmail.com",
+        "homepage": null,
+        "subject": "125",
+        "content": "<p><span style=\"font-family:新細明體,serif\">寫出可以精準描述自己學號</span>(<span style=\"font-family:新細明體,serif\">如字串</span>10927188)<span style=\"font-family:新細明體,serif\">的文法</span>grammar<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p>&lt;<span style=\"font-family:新細明體,serif\">學號</span>&gt; = &lt;<span style=\"font-family:新細明體,serif\">入學年度</span>&gt; &lt;<span style=\"font-family:新細明體,serif\">學院</span>&gt; &lt;<span style=\"font-family:新細明體,serif\">學系</span>&gt; &lt;<span style=\"font-family:新細明體,serif\">班級</span>&gt; &lt;<span style=\"font-family:新細明體,serif\">座號</span>&gt;</p>\r\n\r\n<p>&lt;<span style=\"font-family:新細明體,serif\">入學年度</span>&gt; = &lt;digit&gt; &lt;digit&gt; &lt;digit&gt;</p>\r\n\r\n<p>&lt;<span style=\"font-family:新細明體,serif\">學院</span>&gt; = &lt;college&gt;</p>\r\n\r\n<p>&lt;<span style=\"font-family:新細明體,serif\">學系</span>&gt; = &lt;digit&gt;</p>\r\n\r\n<p>&lt;<span style=\"font-family:新細明體,serif\">班級</span>&gt; = &lt;class&gt;</p>\r\n\r\n<p>&lt;<span style=\"font-family:新細明體,serif\">座號</span>&gt; = &lt;digit&gt; &lt;digit&gt;</p>\r\n\r\n<p>&lt;digit&gt; = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</p>\r\n\r\n<p>&lt;college&gt; = 1 | 2 | 3 | 4 | 5</p>\r\n\r\n<p>&lt;class&gt; = 1 | 2 | 3</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

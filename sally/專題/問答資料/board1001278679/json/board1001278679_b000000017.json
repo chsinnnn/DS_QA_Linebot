@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-07-13 23:40:27",
+        "poster": "06005984",
+        "realname": "許祖睿",
+        "email": "ray900510@gmail.com",
+        "homepage": null,
+        "subject": "搶答116",
+        "content": "<p>116. 將後序式postfix轉前序式prefix，並詳述步驟。<br />\r\na b + c * d e + f * + w z + *</p>\r\n\r\n<p>先把後序轉回來</p>\r\n\r\n<p>(a+b)c*&nbsp; &nbsp;(d+e)f*+&nbsp; &nbsp; (w+z)*</p>\r\n\r\n<p>((a+b)*c)&nbsp; &nbsp;((d+e)*f)+&nbsp; &nbsp;(w+z)*</p>\r\n\r\n<p>((((a+b)*c)+((d+e)*f))*(w+z))</p>\r\n\r\n<p>轉完之後改成前序</p>\r\n\r\n<p>以最近者為優先,取代所有左括號,將所有右括號去掉</p>\r\n\r\n<p>*+*+abc*+def+wz</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

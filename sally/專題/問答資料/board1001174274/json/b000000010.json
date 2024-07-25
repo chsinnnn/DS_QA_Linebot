@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2022-10-15 18:49:59",
+        "poster": "11027235",
+        "realname": "江庭瑄",
+        "email": "sherrychiang01@gmail.com",
+        "homepage": null,
+        "subject": "119. 寫C++程式碼說明刪除鏈結串列linked list第3個節點。",
+        "content": "<p>#include &lt;bits/stdc++.h&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>struct Happy{<br />\r\n&nbsp;&nbsp; &nbsp;int num = 0;<br />\r\n&nbsp;&nbsp; &nbsp;Happy*next;<br />\r\n};</p>\r\n\r\n<p>int main(){<br />\r\n&nbsp;&nbsp; &nbsp;Happy *head = new Happy;<br />\r\n&nbsp;&nbsp; &nbsp;Happy *current = head;<br />\r\n&nbsp;&nbsp; &nbsp;Happy *tail = head;</p>\r\n\r\n<p>&nbsp; &nbsp; //五個節點index:01234<br />\r\n&nbsp;&nbsp; &nbsp;int i = 0;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;while( i &lt; 5 ){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;tail-&gt;num = i;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;tail = tail-&gt;next;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;i++;<br />\r\n&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;current = current-&gt;next; //讓current指向一號(第二個節點)</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;current-&gt;next = current-&gt;next-&gt;next; // 二號指向的東西給一號指</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;while(head!=tail){ &nbsp;//印出節點index:0134<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout&lt;&lt;head-&gt;num;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;head= head-&gt;next;<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

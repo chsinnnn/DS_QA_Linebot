@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:46",
+        "@type": "post",
+        "@filename": "b000000002000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174275",
+        "node": "000000002000000001",
+        "site": "1000110001",
+        "pt": "2022-10-30 15:48:23",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 122. 寫C++程式碼說明傳參考呼叫call by reference。",
+        "content": "<p>Good example.</p>\r\n\r\n<p>Other comments:</p>\r\n\r\n<p>1. There is one typo in&nbsp;the 2nd line: &quot;而 call by <span style=\"color:#0000cd\">reference&nbsp;</span><s><span style=\"color:#ff0000\">value </span></s>是將「記憶體位置」帶入 function，...&quot;</p>\r\n\r\n<p><strong>2. Explain more about static member functions, e.g., how it still works without using &#39;static&#39;.</strong></p>\r\n\r\n<p>3. Is there any reference like <a href=\"https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/\" target=\"_blank\">this</a>?</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "2",
+        "lang": "1"
+    }
+}

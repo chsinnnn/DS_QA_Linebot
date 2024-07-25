@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:04:57" type="post" filename="b000000012.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162647</board_id>
+  <node>000000012</node>
+  <site>1000110001</site>
+  <pt>2022-09-28 21:16:45</pt>
+  <poster>11027124</poster>
+  <realname>&#x8521;&#x4F51;&#x653F;  </realname>
+  <email>kennytsai0213@icloud.com</email>
+  <homepage>  </homepage>
+  <subject>109. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC; </subject>
+  <content>&lt;p&gt;&#x53EF;&#x76F4;&#x63A5;&#x5BA3;&#x544A;&#x9663;&#x5217;&#x5167;&#x7684;&#x503C;&#x6216;&#x5229;&#x7528;&#x8FF4;&#x5708;&#x4F86;&#x8A2D;&#x5B9A;&#x521D;&#x59CB;&#x503C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; int iarray[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // &#x76F4;&#x63A5;&#x8A2D;&#x5B9A;&#x521D;&#x59CB;10&#x500B;&#x6578;&#x5B57;&#x7684;&#x503C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; char carray[10] = {&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;f&amp;#39;, &amp;#39;g&amp;#39;, &amp;#39;h&amp;#39;, &amp;#39;i&amp;#39;, &amp;#39;j&amp;#39;}; // &#x76F4;&#x63A5;&#x8A2D;&#x5B9A;&#x521D;&#x59CB;10&#x500B;&#x5B57;&#x5143;&#x7684;&#x503C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} //main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; int array[10]; // &#x8A2D;&#x5B9A;&#x7A7A;&#x9593;&#x70BA;10&#x7684;&#x9663;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; int a;&lt;br /&gt;&#xD;
+&amp;nbsp; for(int i = 0 ; i &amp;lt; 10 ; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; scanf(&amp;quot;%d\n&amp;quot;, &amp;amp;a); // &#x8B80;&#x5165;&#x60F3;&#x8F38;&#x5165;&#x7684;&#x6578;&#x5B57;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;array[i] = a; // &#x5C07;&#x8B80;&#x5165;&#x7684;&#x6578;&#x653E;&#x5165;i&#x4E2D;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; }&amp;nbsp; // for&amp;nbsp;&lt;br /&gt;&#xD;
+} //main()&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>26</hit>
+  <lang>1</lang>
+</data>

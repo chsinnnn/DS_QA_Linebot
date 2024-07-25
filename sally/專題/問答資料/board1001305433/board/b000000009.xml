@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:45" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305433</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2023-10-11 16:11:06</pt>
+  <poster>11127245</poster>
+  <realname>&#x859B;&#x5B8F;&#x6BD3;  </realname>
+  <email>a0975809594@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>119. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int &amp;nbsp; num;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *next;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node *deleteNode(int position, Node *head) { &amp;nbsp; // check and delete node&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (head == NULL || position &amp;lt; 1) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// is legal linklist and position&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Invalid position or empty list&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *temp = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (position == 1) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // at first node&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; head = head-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; delete temp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *prevPtr;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for (int i = 1 ; i != position ; i++ ) { &amp;nbsp; // is Over linklist&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if (temp-&amp;gt;next == NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;Over linklist&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;prevPtr = temp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp &amp;nbsp; &amp;nbsp;= temp-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if (temp-&amp;gt;next == NULL) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// at last node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;prevPtr-&amp;gt;next = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;delete temp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // at other side node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;prevPtr-&amp;gt;next = temp-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;delete temp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+} // deleteNode()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node *deleteAllNode(Node *head) { &amp;nbsp; &amp;nbsp; // delete linklist&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (head == NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; deleteAllNode(head-&amp;gt;next);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; delete head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return NULL;&lt;br /&gt;&#xD;
+} // deleteAllNode()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void printLinkList(Node *head) { &amp;nbsp; &amp;nbsp; &amp;nbsp;// print&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *temp = head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;while (temp != NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;The ptr number is: &amp;quot; &amp;lt;&amp;lt; temp-&amp;gt;num &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = temp-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+} // printLinkList()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(void) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *node1 = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *node2 = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *node3 = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *node4 = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *node5 = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node1-&amp;gt;next = node2;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node1-&amp;gt;num &amp;nbsp;= 1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node2-&amp;gt;next = node3;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node2-&amp;gt;num &amp;nbsp;= 2;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node3-&amp;gt;next = node4;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node3-&amp;gt;num &amp;nbsp;= 3;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node4-&amp;gt;next = node5;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node4-&amp;gt;num &amp;nbsp;= 4;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node5-&amp;gt;next = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;node5-&amp;gt;num &amp;nbsp;= 5;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node *head = node1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printLinkList(head);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;head = deleteNode(3, head); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Delete position 3&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printLinkList(head);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;deleteAllNode(head);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;delete head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>28</hit>
+  <lang>1</lang>
+</data>

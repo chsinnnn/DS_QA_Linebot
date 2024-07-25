@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000029.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000029",
+        "site": "1000110001",
+        "pt": "2023-07-09 23:22:32",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答110",
+        "content": "<p><span style=\"font-size:14px\"><strong>110. 寫出C++程式碼說明傳值呼叫call by value。</strong></span><br />\r\n&nbsp;</p>\r\n\r\n<p>Call by value 並不會改變它所引用的變數，<br />\r\n因為它引用的只是該變數當時的值，並不是該變數本身，意思是函數把實際參數的值複製到形式參數中，<br />\r\n然後在函數內部使用這個複本，所以不會原本的值</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;<br />\r\nvoid swap (int,int);<br />\r\nint main()<br />\r\n{<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;int a=100, b=300;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;before: &quot; &lt;&lt; endl;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;a=&quot; &lt;&lt; a &lt;&lt; &quot;, b=&quot; &lt;&lt; b &lt;&lt; endl;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;swap(a,b);<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;after: &quot; &lt;&lt; endl;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;a=&quot; &lt;&lt; a &lt;&lt; &quot;, b=&quot; &lt;&lt; b &lt;&lt; endl;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br />\r\n}<br />\r\nvoid swap (int x, int y)<br />\r\n{<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;int temp;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;temp = x;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;x = y;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;y = temp;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

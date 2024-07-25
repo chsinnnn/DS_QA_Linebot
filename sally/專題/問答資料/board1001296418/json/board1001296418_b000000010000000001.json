@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000010000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000010000000001",
+        "site": "1000110001",
+        "pt": "2023-10-18 16:34:03",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 110",
+        "content": "<p><span style=\"color:#b22222\">左側和右側描述的二個資料結構能儲存的資料根本不一樣？</span></p>\r\n\r\n<p><span style=\"color:#b22222\">右側宣告100個字元的陣列，然後下方卻是8個整數的陣列？</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">答問的內容紊亂不知所云，沒有額外加分，反而會酌予扣分！</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

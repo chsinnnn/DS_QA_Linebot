@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2023-07-15 21:22:23",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答122",
+        "content": "<p>+ * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>A:前序式是由右向左開始運算</p>\r\n\r\n<p>（7-5）再來如果沒有運算子多了一個運算元那就沒辦法做計算他是不符合前序式的</p>\r\n\r\n<p>除非改成&quot;+ * 2 4 * 6 - 7 5&quot;</p>\r\n\r\n<p>這樣7-5後才能跟6做相乘然後再進來4和2再來4*2最後兩個數字再做相加</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

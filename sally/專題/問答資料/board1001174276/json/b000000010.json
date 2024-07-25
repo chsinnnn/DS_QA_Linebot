@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:51",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174276",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2022-10-31 23:13:56",
+        "poster": "11027262",
+        "realname": "鐘聿亭",
+        "email": "shenyao0214@gmail.com",
+        "homepage": null,
+        "subject": "127. 寫C++程式碼介紹一組讀檔和寫檔的指令，須能成功編譯執行。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027262/images/127-1.png\" style=\"height:303px; width:1669px\" /></p>\r\n\r\n<p>9：ios::out是指將檔案以寫入模式開啟</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027262/images/127-2.png\" style=\"height:593px; width:1679px\" /></p>\r\n\r\n<p>20：ios::in是指將檔案以讀取模式開啟</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:22" type="post" filename="b000000006.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174273</board_id>
+  <node>000000006</node>
+  <site>1000110001</site>
+  <pt>2022-10-07 15:21:37</pt>
+  <poster>11027237</poster>
+  <realname>&#x7A0B;&#x6021;&#x6B23;  </realname>
+  <email>ssc5613@gmail.com</email>
+  <homepage> </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:black"&gt;*&#x8207;call by reference&#x76F8;&#x6BD4;&#x53EF;&#x6E05;&#x695A;&#x770B;&#x51FA;&#x5DEE;&#x7570;&#xFF0C;&#x56E0;&#x6B64;&#x4EE5;call by reference&lt;/span&gt;&#x505A;&#x5C0D;&#x7167;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;table border="1" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:none"&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="vertical-align:top; width:123px"&gt;&amp;nbsp;&lt;/td&gt;&#xD;
+			&lt;td style="vertical-align:top; width:217px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;Call by value&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="vertical-align:top; width:213px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;call by reference&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="vertical-align:top; width:123px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x53C3;&#x6578;&#x503C;&#x5F71;&#x97FF;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="vertical-align:top; width:217px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E26;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:red"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E0D;&#x6703;&#x6539;&#x8B8A;&#x6240;&#x547C;&#x53EB;&#x53C3;&#x6578;&#x503C;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF0C;&#x56E0;&#x547C;&#x53EB;&#x7684;&#x53EA;&#x662F;&#x8A72;&#x8B8A;&#x6578;&#x7576;&#x6642;&#x6578;&#x503C;&#xFF0C;&#x4E26;&#x4E0D;&#x662F;&#x8A72;&#x8B8A;&#x6578;&#x672C;&#x8EAB;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="vertical-align:top; width:213px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x51FD;&#x6578;&#x5167;&#x90E8;&#x6240;&#x505A;&#x7684;&#x66F4;&#x52D5;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:red"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6703;&#x5F71;&#x97FF;&#x5BE6;&#x969B;&#x53C3;&#x6578;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="vertical-align:top; width:123px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5132;&#x5B58;&#x4F4D;&#x7F6E;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="vertical-align:top; width:217px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x547C;&#x53EB;&#x7684;&#x51FD;&#x6578;&#x548C;&#x4E3B;&#x7A0B;&#x5F0F;&#x6240;&#x4F7F;&#x7528;&#x53C3;&#x6578;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:red"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E0D;&#x540C;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="vertical-align:top; width:213px"&gt;&#xD;
+			&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x547C;&#x53EB;&#x7684;&#x51FD;&#x6578;&#x548C;&#x4E3B;&#x7A0B;&#x5F0F;&#x6240;&#x4F7F;&#x7528;&#x53C3;&#x6578;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:red"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x76F8;&#x540C;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027237/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20150723.png" style="height:302px; width:350px" /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;img alt="" src="/user/1/1/11027237/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20150551.png" style="height:220px; width:350px" /&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>59</hit>
+  <lang>1</lang>
+</data>

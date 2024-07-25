@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-07-06 00:59:35",
+        "poster": "06005840",
+        "realname": "施伯諭",
+        "email": "u10806215@ms.ttu.edu.tw",
+        "homepage": null,
+        "subject": "搶答101",
+        "content": "<p>將大型問題分解成小型子問題，透過遞迴呼叫來解決子問題</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

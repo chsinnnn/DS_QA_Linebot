@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-07-05 17:02:21",
+        "poster": "06005732",
+        "realname": "王昱進",
+        "email": "louis21501@gmail.com",
+        "homepage": null,
+        "subject": "限時108",
+        "content": "<p>108. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。</p>\r\n\r\n<p>幫陣列寫入非0初始值的方式，就是在設置變數時在變數的後方括號輸入需要的值。<br />\r\n&nbsp;</p>\r\n\r\n<p>Code:</p>\r\n\r\n<p>int X[100]={};//基礎設定為0</p>\r\n\r\n<p>int Y[100]={1,2,3, ... ,99,100};</p>\r\n\r\n<p>或是利用迴圈定義</p>\r\n\r\n<p>int X[100];</p>\r\n\r\n<p>for(int i=0;i&lt;100;i++)</p>\r\n\r\n<p>{</p>\r\n\r\n<p>x[i]=i+1;</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

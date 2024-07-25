@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:45" type="post" filename="b000000012.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305433</board_id>
+  <node>000000012</node>
+  <site>1000110001</site>
+  <pt>2023-10-13 16:00:43</pt>
+  <poster>11020126</poster>
+  <realname>&#x912D;&#x7950;&#x6600;  </realname>
+  <email>carry0987@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>120. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;doubly linked list&#x7684;&#x60C5;&#x5883; </subject>
+  <content>&lt;blockquote&gt;&#xD;
+&lt;p&gt;#include&amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int data;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; struct Node *prev;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; struct Node *next;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void addNode(Node **start, int value) { &amp;nbsp; // &#x5728;&#x4E32;&#x5217;&#x7684;&#x958B;&#x59CB;&#x65B0;&#x589E;&#x5143;&#x7D20;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node *node = new Node;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node-&amp;gt;data = value;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node-&amp;gt;prev = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node-&amp;gt;next = (start != NULL)? *start : NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (*start != NULL) {&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (*start)-&amp;gt;prev = node;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *start = node;&amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void printList(Node *node) { &amp;nbsp; // &#x5370;&#x51FA;&#x4E32;&#x5217;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while(node != NULL){&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; node-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; node = node-&amp;gt;next;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x4E3B;&#x7A0B;&#x5F0F;&lt;br /&gt;&#xD;
+int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* start = NULL;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; addNode(&amp;amp;start, 10);&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; addNode(&amp;amp;start, 20);&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; addNode(&amp;amp;start, 30);&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; printList(start); &amp;nbsp;// &#x5370;&#x51FA;30 20 10&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&lt;/blockquote&gt;&#xD;
+&#xD;
+&lt;p&gt;addNode&#x51FD;&#x5F0F;&#x5728;&#x4E32;&#x5217;&#x7684;&#x958B;&#x59CB;&#x65B0;&#x589E;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x5F8C;printList&#x51FD;&#x5F0F;&#x4F7F;&#x7528;next&#x6307;&#x6A19;&#x4F86;&#x8FED;&#x4EE3;&#x6574;&#x500B;&#x4E32;&#x5217;&#x4E26;&#x5370;&#x51FA;&#x5176;&#x4E2D;&#x7684;&#x503C;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>9</hit>
+  <lang>1</lang>
+</data>

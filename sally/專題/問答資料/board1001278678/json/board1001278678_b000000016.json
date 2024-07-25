@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-07-11 03:24:52",
+        "poster": "11020143",
+        "realname": "吳柏賢",
+        "email": "s25880260@gmail.com",
+        "homepage": null,
+        "subject": "搶答113",
+        "content": "<p><u>a b +</u> c * <u>d e +</u> f * + <u>w z +</u>*</p>\r\n\r\n<p><u>(a+b)c*</u> <u>(d+e)f*</u>+(w+z)*</p>\r\n\r\n<p><u>((a+b)*c)((d+e)*f))+</u>(w+z)*</p>\r\n\r\n<p>((a+b)*c)+<u>((d+e)*f)(w+z)*</u></p>\r\n\r\n<p>(((a+b)*c)+((d+e)*f))*(w+z)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

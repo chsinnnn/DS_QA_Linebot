@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-10-08 08:19:32</pt>
+  <poster>11027229</poster>
+  <realname>&#x5353;&#x69AE;&#x6689;  </realname>
+  <email>intercoursedr@gmail.com</email>
+  <homepage> </homepage>
+  <subject>119. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;&#x9019;&#x984C;&#x4E3B;&#x8981;&#x662F;&#x522A;&#x6389;&#x7B2C;&#x4E09;&#x500B;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&#x81F3;&#x65BC;&#x600E;&#x9EBC;&#x505A;&#x5462;? &#x5C31;&#x662F;&#x5148;&#x53D6;&#x5F97;&#x7B2C;&#x4E8C;&#x500B;&#x7BC0;&#x9EDE; &#x518D;&#x8B93;&#x7B2C;&#x4E8C;&#x500B;&#x7BC0;&#x9EDE;&#x7684;next&#x8A2D;&#x6210;&#x7B2C;&#x56DB;&#x500B;&#x7BC0;&#x9EDE;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include&amp;lt;bits/stdc++.h&amp;gt; // &#x9019;&#x771F;&#x7684;&#x662F;&#x4E0D;&#x597D;&#x7684;&#x793A;&#x7BC4; &#x4E0D;&#x8981;&#x4E82;&#x4F7F;&#x7528;&lt;br /&gt;&#xD;
+using namespace std; // &#x9019;&#x4E5F;&#x662F;&#x500B;&#x975E;&#x5E38;&#x4E0D;&#x597D;&#x7684;&#x793A;&#x7BC4;&lt;br /&gt;&#xD;
+// Node&lt;br /&gt;&#xD;
+// &#x5229;&#x7528;&#x6CDB;&#x578B;&#x5BE6;&#x4F5C;&lt;br /&gt;&#xD;
+template &amp;lt;typename T&amp;gt;&lt;br /&gt;&#xD;
+struct Node {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;T num; // &#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node * next;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5229;&#x7528;&#x6CDB;&#x578B;&#x5BE6;&#x4F5C;LinkedList&lt;br /&gt;&#xD;
+// &#x6B98;&#x7F3A;&#x7684;LinkedList, &#x4E0D;&#x904E;&#x53EF;&#x4EE5;&#x61C9;&#x4ED8;&#x9019;&#x984C;&lt;br /&gt;&#xD;
+template &amp;lt;typename T&amp;gt;&lt;br /&gt;&#xD;
+class LinkedList {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5EFA;&#x69CB;&#x5B50;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x521D;&#x59CB;&#x5316;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size = 0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x628A;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void push(T data) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5982;&#x679C;&#x88E1;&#x9762;&#x7A7A;&#x7A7A;&#x7684;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(size==0) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = new Node&amp;lt;T&amp;gt;; // &#x8B93;head&#x8B8A;&#x6210;&#x65B0;&#x7684;Node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head -&amp;gt; num = data; // &#x628A;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head -&amp;gt; next = NULL; // &#x6307;&#x5B9A;head&#x7684;next&#x662F;null&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size++; // &#x8B93;size++&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail = head;// &#x8B93;tail&#x8B8A;&#x6210;head&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return; // return &#x56DE;&#x53BB; &#x907F;&#x514D;&#x9032;&#x5165;&#x4E0B;&#x4E00;&#x884C;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x8981;&#x662F;&#x4E0D;&#x662F;&#x7A7A;&#x7684;&#x8A71;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail -&amp;gt; next = new Node&amp;lt;T&amp;gt;; // &#x5148;&#x8B93;tail&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x8B8A;&#x6210;&#x65B0;&#x7684;Node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail = tail -&amp;gt; next; // &#x628A;tail &#x79FB;&#x5230;&#x4E0B;&#x4E00;&#x5C64;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail -&amp;gt; num = data;// &#x628A;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail -&amp;gt; next = NULL; // tail&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x6307;&#x5B9A;&#x70BA;NULL&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size++;// size&#x589E;&#x52A0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return;// return &#x56DE;&#x53BB; &#x53EF;&#x52A0;&#x53EF;&#x4E0D;&#x52A0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x55AE;&#x7D14;&#x7684;&#x8907;&#x88FD;LinkedList&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9019;&#x908A;&#x662F;&#x7522;&#x751F;&#x4E00;&#x500B;&#x65B0;&#x7684;LinkedList &#x800C;&#x4E0D;&#x662F;&#x628A;&#x539F;&#x672C;&#x7684;return&#x56DE;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x56E0;&#x70BA;&#x5982;&#x679C;&#x662F;&#x628A;&#x539F;&#x672C;&#x7684;return&#x56DE;&#x53BB;&#xFF0C;&#x6703;&#x5C0E;&#x81F4;&#x8CC7;&#x6599;&#x6703;&#x88AB;&#x4E92;&#x76F8;&#x5F15;&#x97FF;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList copy() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList toReturn; // &#x6E96;&#x5099;&#x56DE;&#x50B3;&#x56DE;&#x53BB;&#x7684;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = head; // &#x6307;&#x6A19; &#x7528;&#x4F86;&#x8D70;&#x8A2A;&#x6574;&#x500B;LinkedList&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;while(temp!=NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;toReturn.push(temp-&amp;gt;num); // &#x900F;&#x904E;&#x65B9;&#x6CD5;&#x4E00;&#x76F4;&#x53BB;push&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = temp -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return toReturn; // return&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x900F;&#x904E; index &#x53BB;&#x53D6;&#x5F97;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;T getDataFromIndex(int k) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = getFromIndex(k);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return temp -&amp;gt; num;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x900F;&#x904E;index &#x79FB;&#x9664;&#x8CC7;&#x6599; &#x4E26;&#x4E14;&#x5C07;&#x8CC7;&#x6599;&#x56DE;&#x50B3;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;T removeFromIndex(int k) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;Node&amp;lt;T&amp;gt; * temp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;if (k&amp;gt;=size||k&amp;lt;0) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (k!=0)&amp;nbsp;temp = getFromIndex(k-1);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; else{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(head==NULL) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; T n = head -&amp;gt; num;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; head = head -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; size--;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return n;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(temp==NULL) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; T n = temp -&amp;gt; next -&amp;gt; num;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp -&amp;gt; next = temp -&amp;gt; next -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size--;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return n;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x53D6;&#x5F97;&#x5927;&#x5C0F;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int getSize() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return size;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x4E0D;&#x516C;&#x958B;&#x7684;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * tail;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int size;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9019;&#x908A;&#x4E4B;&#x6240;&#x4EE5;&#x653E;&#x5728;private &#x662F;&#x70BA;&#x4E86;&#x9632;&#x6B62;&#x6709;&#x4EBA;&#x900F;&#x904E;&#x6B64;&#x65B9;&#x6CD5;&#x7834;&#x58DE;LinkedList&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6B64;&#x65B9;&#x6CD5;&#x55AE;&#x7D14;&#x5C31;&#x662F;&#x5C07;&#x7B2C;i&#x500B;Node&#x56DE;&#x50B3;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * getFromIndex(int i) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(i==0) return head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(i&amp;gt;=size) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for(int j = 0 ; j &amp;lt; i ; j++) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = temp -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return temp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+};&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+int main(){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LinkedList&amp;lt;int&amp;gt; a;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;a.push(12);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;a.push(14);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;a.push(16);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;a.removeFromIndex(2); // &#x522A;&#x9664;&#x7B2C;&#x4E09;&#x500B;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>92</hit>
+  <lang>1</lang>
+</data>

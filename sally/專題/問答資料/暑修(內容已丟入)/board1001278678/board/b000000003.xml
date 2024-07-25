@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 02:43:36</pt>
+  <poster>06005941</poster>
+  <realname>&#x674E;&#x67CF;&#x7A4E;  </realname>
+  <email>lib2300@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;115 </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x50B3;&#x5740;&#x547C;&#x53EB;&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+void incrementByOne(int* num) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (*num)++; &amp;nbsp;// &#x900F;&#x904E;&#x89E3;&#x53C3;&#x8003;&#x6307;&#x6A19;&#x4F86;&#x4FEE;&#x6539;&#x539F;&#x59CB;&#x8B8A;&#x6578;&#x7684;&#x503C;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int number = 10;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x539F;&#x59CB;&#x6578;&#x5B57;: &amp;quot; &amp;lt;&amp;lt; number &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x547C;&#x53EB;&#x50B3;&#x5740;&#x547C;&#x53EB;&#x51FD;&#x5F0F;&#x4E26;&#x50B3;&#x905E;&#x8B8A;&#x6578;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; incrementByOne(&amp;amp;number);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x589E;&#x52A0;&#x5F8C;&#x7684;&#x6578;&#x5B57;: &amp;quot; &amp;lt;&amp;lt; number &amp;lt;&amp;lt; std::endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x500B;&#x7A0B;&#x5F0F;&#x4E2D;&#xFF0C;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;incrementByOne&#x7684;&#x51FD;&#x5F0F;&#xFF0C;&#x9019;&#x500B;&#x51FD;&#x5F0F;&#x63A5;&#x53D7;&#x4E00;&#x500B;&#x6574;&#x6578;&#x6307;&#x6A19;&#x4F5C;&#x70BA;&#x53C3;&#x6578;&#x3002;&#x5728;&#x51FD;&#x5F0F;&#x88E1;&#xFF0C;&#x6211;&#x5011;&#x900F;&#x904E;&#x89E3;&#x53C3;&#x8003;&#x6307;&#x6A19;&#xFF0C;&#x5C07;&#x539F;&#x59CB;&#x8B8A;&#x6578;&#x7684;&#x503C;&#x52A0;&#x4E00;&#x3002;&#x5728;main&#x51FD;&#x5F0F;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x6574;&#x6578;&#x8B8A;&#x6578;number&#x4E26;&#x521D;&#x59CB;&#x5316;&#x70BA;10&#x3002;&#x7136;&#x5F8C;&#xFF0C;&#x6211;&#x5011;&#x547C;&#x53EB;incrementByOne&#x51FD;&#x5F0F;&#xFF0C;&#x4E26;&#x5C07;number&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#x50B3;&#x905E;&#x7D66;&#x8A72;&#x51FD;&#x5F0F;&#x3002;&#x7576;&#x51FD;&#x5F0F;&#x57F7;&#x884C;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;number&#x7684;&#x503C;&#x5DF2;&#x7D93;&#x88AB;&#x4FEE;&#x6539;&#x70BA;11&#x3002;&#x6700;&#x5F8C;&#xFF0C;&#x6211;&#x5011;&#x8F38;&#x51FA;&#x4FEE;&#x6539;&#x5F8C;&#x7684;&#x503C;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>27</hit>
+  <lang>1</lang>
+</data>

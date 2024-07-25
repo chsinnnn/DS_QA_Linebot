@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:55",
+        "@type": "post",
+        "@filename": "b000000001000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162654",
+        "node": "000000001000000001",
+        "site": "1000110001",
+        "pt": "2022-12-01 10:56:57",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 211. 舉例比較氣泡排序和選擇排序的資料交換swap次數，何者較多？",
+        "content": "<p>OK!</p>\r\n\r\n<p><span style=\"color:#b22222\">延伸思考：次數上限的二者差異？swap次數對效率的影響？可否透過程式碼減少影響？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-09-25 16:09:41",
+        "poster": "11027119",
+        "realname": "秦嘉昇",
+        "email": "c20021219@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼",
+        "content": "<p>int array[N] ; // N大小的陣列<br />\r\nfor( int i = 0 ; i &lt; N ; i++ ) {<br />\r\n&nbsp; array[i] = 3 // 3可等於任何非0的數&nbsp;<br />\r\n} // for</p>\r\n\r\n<p>這個方法不會限制N的大小</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-07-09 16:36:24",
+        "poster": "10924326",
+        "realname": "吳英睿",
+        "email": "incaray901228@gmail.com",
+        "homepage": null,
+        "subject": "搶答117",
+        "content": "<p>using namespace std;</p>\r\n\r\n<p>void swap(int &amp;a, int &amp;b) ;</p>\r\n\r\n<p><br />\r\nvoid swap(int &amp;a, int &amp;b) {<br />\r\n&nbsp; &nbsp; int temp ;<br />\r\n&nbsp; &nbsp; temp = a ;<br />\r\n&nbsp; &nbsp; a = b;<br />\r\n&nbsp; &nbsp; b = temp;<br />\r\n}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; &nbsp; int a ;<br />\r\n&nbsp; &nbsp; int b ;</p>\r\n\r\n<p>&nbsp; &nbsp; cin &gt;&gt; a &gt;&gt; b ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout&lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; &quot; b = &quot; &lt;&lt; b &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; swap(a, b);</p>\r\n\r\n<p>&nbsp; &nbsp; cout&lt;&lt;&quot;兩個交換後：a = &quot;&lt;&lt; a &lt;&lt; &quot;b = &quot; &lt;&lt; b &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}<br />\r\n<br />\r\n&nbsp;</p>\r\n\r\n<p>主函示輸入兩個值之後傳入兩個值的址進入swap函式中，可以對其直接修改數值</p>\r\n\r\n<p>附圖執行結果</p>",
+        "attach": "問答2.png\tWM64aa710a0f328.png",
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-10-24 16:18:04",
+        "poster": "11127129",
+        "realname": "張軒偉",
+        "email": "billy.wilai@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p>+ * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>不是，因為照順序由左而右處理的話應為</p>\r\n\r\n<p>1.2*4=&gt;+ 8 6 * - 7 5</p>\r\n\r\n<p>2.8+6=&gt;14 * - 7 5</p>\r\n\r\n<p>到了這就出現了還沒求出結果，但是第一個運算元前沒有運算子，後面卻還有其他運算元和運算子的情況，因此不是前序式</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

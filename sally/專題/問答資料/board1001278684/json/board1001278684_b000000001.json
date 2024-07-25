@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:33",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278684",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-07-20 09:40:30",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答211",
+        "content": "<ul>\r\n\t<li>\r\n\t<p>Bubble sort worst case交換次數是O(n^2)。當資料從大到小排序時，每一次比較都需要交換，交換次數最多。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Selection sort worst case交換次數也是O(n^2)。在每一次排序中，都需要一次交換，Selection sort的交換次數和元素的分布情況有關。</p>\r\n\t</li>\r\n</ul>\r\n\r\n<p>Bubble sort和Selection sort在worst case下的交換次數都是相同的，都是O(n^2)。所以就worst case下的交換次數，兩個是一樣多的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

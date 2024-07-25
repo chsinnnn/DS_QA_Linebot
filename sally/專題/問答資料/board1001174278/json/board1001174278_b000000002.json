@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:28",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174278",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-11-28 16:50:17",
+        "poster": "03108153",
+        "realname": "李立群",
+        "email": "espoir520@gmail.com",
+        "homepage": null,
+        "subject": "207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。",
+        "content": "<p><span style=\"color:#0000cd\"><strong>*穩定排序法(Stable Sorting)：具相同鍵值(key-value)的資料，經排序後依然保持排序前的順序。</strong></span></p>\r\n\r\n<p>為何選擇排序(selection sort)是<span style=\"color:#ff0000\"><strong><span style=\"background-color:#ffff00\">非穩定(unstable)</span></strong></span>的排序方法：</p>\r\n\r\n<p>&nbsp;如果要將以下資料用selection sort排序</p>\r\n\r\n<p>(1,2 代表班級；a,b,c代表學生姓名的英文字母；)</p>\r\n\r\n<p><span style=\"color:#ff0000\"><strong>排序前為&nbsp;{2a,2b,1c}&nbsp;</strong></span>(key-value為姓名字母)</p>\r\n\r\n<p>其後若依班級代號(key-value為數字)排序結果為：</p>\r\n\r\n<p><span style=\"color:#0000cd\"><strong>{1c,2b,2a}</strong></span></p>\r\n\r\n<p>排序結果造成具有兩個相同(數字key-value)的2a、2b</p>\r\n\r\n<p>跟原來排序前的順序不同，因此為不穩定排序法。</p>\r\n\r\n<p>*參考資料：</p>\r\n\r\n<p>https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

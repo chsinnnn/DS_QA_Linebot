@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-07-10 16:33:42",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答116",
+        "content": "<p>116. 將後序式postfix轉前序式prefix，並詳述步驟。 a b + c * d e + f * + w z + *</p>\r\n\r\n<p>[先將後序式轉成中序式，再轉成前序式]</p>\r\n\r\n<p>Step1:(a b +) c * (d e +)&nbsp; f&nbsp; *&nbsp;&nbsp; +&nbsp;&nbsp; (w z +)&nbsp;&nbsp; *</p>\r\n\r\n<p>Step2: [(a+b)c *] [(d+e) f&nbsp; *] + [(w+z)] *</p>\r\n\r\n<p>Step3:{[(a+b)*c ] [(d+e)*f] +} [(w+z)*]</p>\r\n\r\n<p>Step4:[(a+b)*c ]+[(d+e)*f] [(w+z) *]</p>\r\n\r\n<p>Step5:[(a+b)*c ]+[(d+e)*f] * [(w+z)]</p>\r\n\r\n<p>=&gt;(((a+b)*c)+((d+e)*f)*(w+z)[中序式]</p>\r\n\r\n<p>Step1:* ((a+b)*c)+((d+e)*f)(w+z)</p>\r\n\r\n<p>Step2:* + ((a+b)*c) ((d+e)*f)(w+z)</p>\r\n\r\n<p>Step3:* + * (a+b)c (d+e) * f (w+z)</p>\r\n\r\n<p>Step4:* + * + a b c&nbsp; * + d e f (w+z)</p>\r\n\r\n<p>Step5:* + * + a b c&nbsp; * + d e f&nbsp; + w z</p>\r\n\r\n<p>=&gt;* + * + a b c&nbsp; * + d e f&nbsp; + w z</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "28",
+        "lang": "1"
+    }
+}

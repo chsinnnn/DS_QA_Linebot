@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:39" type="post" filename="b000000029.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278676</board_id>
+  <node>000000029</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 23:53:21</pt>
+  <poster>06004870</poster>
+  <realname>&#x66FE;&#x6D5A;&#x6977;  </realname>
+  <email>kenneth61215@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;102 </subject>
+  <content>&lt;p&gt;102. &#x8A66;&#x5BEB;&#x51FA;&#x4E00;&#x500B;&#x905E;&#x8FF4;&#x51FD;&#x6578;&#x627E;&#x51FA;&#x4E00;&#x7FA4;&#x6574;&#x6578;&#x7684;&#x4E2D;&#x4F4D;&#x6578;median&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int findMedium(int nums[]) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int len = sizeof(nums) / sizeof(nums[0]);&amp;nbsp;&amp;nbsp; &amp;nbsp;//&#x6C42;&#x51FA;&#x6578;&#x5217;&#x9577;&#x5EA6;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int mid = 0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;if (len == 1) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return nums[0];&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;//&#x82E5;&#x6578;&#x5217;&#x9577;&#x5EA6;&#x70BA;1&#xFF0C;&#x5247;&#x8F38;&#x51FA;&#x8A72;&#x6578;&#x5B57;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;std::sort(nums, nums + len);&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;//&#x4F7F;&#x7528;sort&#x5C0D;&#x6578;&#x5217;&#x9032;&#x884C;&#x6392;&#x5217;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;if (len % 2 == 0) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;mid = len / 2;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return ((nums[len] + nums[len + 1]) / 2);&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;//&#x82E5;&#x6578;&#x5217;&#x9577;&#x5EA6;&#x70BA;&#x5076;&#x6578;&#xFF0C;&#x5247;&#x8F38;&#x51FA;&#x4E2D;&#x9593;&#x5169;&#x4F4D;&#x6578;&#x5B57;&#x7684;&#x5E73;&#x5747;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;else {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;mid = len / 2 + 1;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return nums[mid];&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;//&#x82E5;&#x6578;&#x5217;&#x9577;&#x5EA6;&#x70BA;&#x5947;&#x6578;&#xFF0C;&#x5247;&#x8F38;&#x51FA;&#x4E2D;&#x9593;&#x4F4D;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>8</hit>
+  <lang>1</lang>
+</data>

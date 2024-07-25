@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000038.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000038",
+        "site": "1000110001",
+        "pt": "2022-09-24 02:24:07",
+        "poster": "11027101",
+        "realname": "李庭妤",
+        "email": "timi920714@gmail.com",
+        "homepage": null,
+        "subject": "101.以自己的話描述遞迴recursion是什麼",
+        "content": "<p>遞迴是指在函式中呼叫自身，而遞迴必須有終止條件，才能被計算。</p>\r\n\r\n<p>遞迴的概念是將一個大的問題分割成許多小問題去解決，執行重複任務使用，可處理較複雜的問題。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "132",
+        "lang": "1"
+    }
+}

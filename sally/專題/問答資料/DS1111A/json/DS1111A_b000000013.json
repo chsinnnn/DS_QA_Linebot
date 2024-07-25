@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-09-19 21:04:31",
+        "poster": "11127129",
+        "realname": "張軒偉",
+        "email": "billy.wilai@gmail.com",
+        "homepage": null,
+        "subject": "101",
+        "content": "<p><span style=\"font-size:14px\">以自己的話描述遞迴recursion是什麼。</span></p>\r\n\r\n<p>遞迴是一種寫程式的技巧，使一個函式可以呼叫自己來縮小並解決問題，通常在問題可以分解成相似但較小的問題時使用，然後逐步解決這些小問題，最後回收小問題的解以獲得原始問題的解答。遞迴通常來處理數據結構（如樹、圖、列表）的遍歷和搜索，以及解決具有重複性結構的問題。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "53",
+        "lang": "1"
+    }
+}

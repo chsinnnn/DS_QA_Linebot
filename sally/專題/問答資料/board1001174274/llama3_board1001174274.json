@@ -1,0 +1,97 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 這題主要是刪掉第三個節點\n至於怎麼做呢? 就是先取得第二個節點 再讓第二個節點的next設成第四個節點 \n\n#include&lt;bits/stdc++.h&gt; // 這真的是不好的示範 不要亂使用\nusing namespace std; // 這也是個非常不好的示範\n// Node\n// 利用泛型實作\ntemplate &lt;typename T&gt;\nstruct Node {\n    T num; // 資料\n    Node * next;\n};\n\n// 利用泛型實作LinkedList\n// 殘缺的LinkedList, 不過可以應付這題\ntemplate &lt;typename T&gt;\nclass LinkedList {\n    public:\n        // 建構子\n        // 初始化資料\n        LinkedList() {\n            head = NULL;\n            tail = NULL;\n            size = 0;\n        }\n\n        // 把資料放進去\n        void push(T data) {\n            // 如果裡面空空的\n            if(size==0) {\n                head = new Node&lt;T&gt;; // 讓head變成新的Node\n                head -&gt; num = data; // 把資料放進去\n                head -&gt; next = NULL; // 指定head的next是null\n                size++; // 讓size++\n                tail = head;// 讓tail變成head\n                return; // return 回去 避免進入下一行\n            }\n\n            // 要是不是空的話\n            tail -&gt; next = new Node&lt;T&gt;; // 先讓tail的下一個變成新的Node\n            tail = tail -&gt; next; // 把tail 移到下一層\n            tail -&gt; num = data;// 把資料放進去\n            tail -&gt; next = NULL; // tail的下一個指定為NULL\n            size++;// size增加\n            return;// return 回去 可加可不加\n        }\n\n        // 單純的複製LinkedList\n        // 這邊是產生一個新的LinkedList 而不是把原本的return回去\n        // 因為如果是把原本的return回去，會導致資料會被互相引響\n        LinkedList copy() {\n            LinkedList toReturn; // 準備回傳回去的資料\n            Node&lt;T&gt; * temp = head; // 指標 用來走訪整個LinkedList\n            while(temp!=NULL) {\n                toReturn.push(temp-&gt;num); // 透過方法一直去push資料\n                temp = temp -&gt; next;\n            }\n            return toReturn; // return\n\n        }\n\n        // 透過 index 去取得資料\n        T getDataFromIndex(int k) {\n            Node&lt;T&gt; * temp = getFromIndex(k);\n            return temp -&gt; num;\n        }\n\n        // 透過index 移除資料 並且將資料回傳 \n        T removeFromIndex(int k) {\n            Node&lt;T&gt; * temp;\n            if (k&gt;=size||k&lt;0) return NULL;\n            if (k!=0) temp = getFromIndex(k-1);\n            else{\n                    if(head==NULL) return NULL;\n                    T n = head -&gt; num;\n                    head = head -&gt; next;\n                    size--;\n                    return n;\n            }\n            if(temp==NULL) return NULL;\n            T n = temp -&gt; next -&gt; num;\n            \n            temp -&gt; next = temp -&gt; next -&gt; next;\n            size--;\n            return n;\n        }\n\n        // 取得大小 \n        int getSize() {\n            return size;\n        }\n\n    // 不公開的 \n    private:\n        Node&lt;T&gt; * head;\n        Node&lt;T&gt; * tail;\n        int size;\n\n        // 這邊之所以放在private 是為了防止有人透過此方法破壞LinkedList \n        // 此方法單純就是將第i個Node回傳 \n        Node&lt;T&gt; * getFromIndex(int i) {\n            if(i==0) return head;\n            if(i&gt;=size) return NULL;\n            Node&lt;T&gt; * temp = head;\n            for(int j = 0 ; j &lt; i ; j++) {\n                temp = temp -&gt; next;\n            }\n\n            return temp;\n        }\n};\n\nint main(){\n        LinkedList&lt;int&gt; a;\n       a.push(12);\n       a.push(14);\n       a.push(16);\n       a.removeFromIndex(2); // 刪除第三個節點\n}",
+        "output": "Did you ever check the correctness of your code?\n\n例如：T n = temp -&gt; next -&gt; num;\n在這之前不用檢測temp-&gt;next!=NULL嗎？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: - 比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。\n\n因為等號的運算優先順序是 由右至左 ，所以右邊做完的值會複製給左邊的變數，因此(看下面說明)\n\n(1) ptrX = ptrX-&gt;next\n\nptrX-&gt;next所指向的位置會複製給ptrX\n\n#註:紅字為運算完的結果\n\n(2) ptrX-&gt;next = ptrX\n\nptrX所指向的位置會複製給ptrX-&gt;next\n\n#註:紅字為運算完的結果\n\n結論: 左式指向第二個節點；右式指向原本的位置(第一個節點)，兩者不同。\n\n(假設ptrX指向第一個節點時)",
+        "output": "👍🏻 Nice. Good. 讚讚 說明得很清楚,讚!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 假設一鏈結串列為下圖所示\n\n\n\n在程式中，一個等號是用來將右邊的值存放到左邊的變數，所以ptrX = ptrX-&gt;next簡單來說就是讓ptrX擁有與ptrX-&gt;next相同的形式，讓ptrX指向與ptrX-&gt;next相同的節點，如下圖所示\n\n\n\n而ptrX-&gt;next = ptrX就是反過來，讓ptrX-&gt;next指向與ptrX相同的節點，但由於ptrX所指向的節點就是ptrX-&gt;next，所以ptrX-&gt;next最後會指向自己，如下圖所示",
+        "output": "OK OK. 👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: ptrX = ptrX -&gt; next\n\n意思是將ptrX的箭頭方向指向ptrX -&gt; next指向的方向\n\nptrX -&gt; next = ptrX\n\n意思是將ptrX -&gt; next的箭頭方向指向ptrX指向的方向",
+        "output": "好棒! 圖畫得蠻清楚的 讚 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: (1) ptrX = ptrX-&gt;next\n\n     ptrX會指向ptrX-&gt;next所指向的位置\n\n\n\n(2) ptrX-&gt;next = ptrX\n\n     ptrX-&gt;next會指向ptrX所指向的位置\n\n\n\n*以上兩張圖的紅色箭頭是後來所指向的方向",
+        "output": "手繪插畫佳~讚 讚 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 1. 單向鏈結串列要找一個節點的上一個節點的話，必須從頭開始找，但雙向鏈結串列有兩個指標節點，在處理加入或刪除節點動作時，速度比較快。\n\n2.若雙向鏈結串列有任一端的指標連結錯誤或脫落，它可以快速進行修補錯誤或脫落的連結節點。\n\n3.可雙向讀取節點",
+        "output": "讚 讚 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: a b + c * d e + f * + w z + *\n\npostfix-&gt;infix\n\n(a+b)c*(d+e)f*+(w+z)*\n\n((a+b)*c)((d+e)*f)+(w+z)*\n\n(((a+b)*c)+ ((d+e)*f))(w+z)*\n\n(((a+b)*c)+ ((d+e)*f))*(w+z)\n\ninfix-&gt;prefixt\n\n(((+ab)*c)+ ((+de)*f))*(+wz)\n\n((*+abc)+(*+def))*(+wz)\n\n(+*+abc*+def)*(+wz)\n\n*+*+abc*+def+wz\n\na b + c * d e + f * + w z + *\n\n(a+b)c*(d+e)f*+(w+z)*\n\n((a+b)*c)((d+e)*f)+(w+z)*\n\n(((a+b)*c)+ ((d+e)*f))(w+z)*\n\n(((a+b)*c)+ ((d+e)*f))*(w+z)\n\n(((+ab)*c)+ ((+de)*f))*(+wz)\n\n((*+abc)+(*+def))*(+wz)\n\n(+*+abc*+def)*(+wz)\n\n*+*+abc*+def+wz",
+        "output": "太會了吧 good! 👍🏻"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異\n\n\n\t\n\t\t\n\t\t\t \n\t\t\t\n\t\t\tptrX = ptrX -&gt; next\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t說明\n\t\t\t\n\t\t\t\n\t\t\t將ptrX -&gt; next此項動作給予ptrX\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t圖片\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\n\n\n\n\t\n\t\t\n\t\t\t \n\t\t\t\n\t\t\tptrX -&gt; next = ptrX\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t說明\n\t\t\t\n\t\t\t\n\t\t\t將ptrX此項動作給予ptrX -&gt; next\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t圖片\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\n\n\n結論:\n\n由於等號運算順序由右至左，因此ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX產生差異。",
+        "output": "讚! nice 棒！"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Call by address(傳址)：簡單來說就是直接呼叫他的記憶體位置進行修改。\n\n將參數以記憶體位置的方式傳到呼叫此參數的function，此function需要有一個指標來指到這個參數的記憶體位置，所以也有人把Call by address稱作Call by value of pointer。\n因為主程式和被呼叫的function是使用相同記憶體位置的內容，所以當function的內容更改時，同時也會影響到主程式的數值，傳指標仍然是call by value 只是那個value是指標本身，複製的內容也是指標本身，只不過那個value剛好就是address而已。\n\n-\n\n\nCall by value(傳值)：參數以數值方式傳遞。\n\n-\n\nCall by reference(傳參考)：因為call by address的內容為指向的位置，所以傳址的指標本身然仍然有記憶體位置，但是傳參考是不會有的。也因此C++的Call by reference本質上不是call by value，這也是和call by address之間的差別。\n\n#############",
+        "output": "👍 讚 Good! 👍🏻"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nstruct Happy{\n    int num = 0;\n    Happy*next;\n};\n\nint main(){\n    Happy *head = new Happy;\n    Happy *current = head;\n    Happy *tail = head;\n\n    //五個節點index:01234\n    int i = 0; \n    while( i &lt; 5 ){\n        tail-&gt;num = i;\n        tail = tail-&gt;next;\n        i++;\n    }\n\n    current = current-&gt;next; //讓current指向一號(第二個節點)\n\n    current-&gt;next = current-&gt;next-&gt;next; // 二號指向的東西給一號指\n\n    while(head!=tail){  //印出節點index:0134\n        cout&lt;&lt;head-&gt;num;\n        head= head-&gt;next;\n    }\n}",
+        "output": "Good! 👍🏻 讚 本課程勿使用#include &lt;bits/stdc++.h&gt;"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nint main()\n{\n    list&lt;int&gt; intlist;\n    for(int i=0;i&lt;5;i++)\n        intlist.push_back(i);\n    for(auto i:intlist) //印出初始陣列\n        cout&lt;&lt;i&lt;&lt;   ;\n    cout&lt;&lt;endl;\n\n    intlist.erase(next(intlist.begin(),2));\n\n    for(auto i:intlist) //印出修改後陣列\n        cout&lt;&lt;i&lt;&lt;   ;\n}\n\n輸出\n\n0 1 2 3 4 \n0 1 3 4",
+        "output": "好棒 本課程勿使用#include &lt;bits/stdc++.h&gt;\n\n本課程勿使用auto\n\n下次見到這類程式碼將逕自刪除！"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nint main()\n{\n    list&lt;int&gt; AList;\n    for(int i=0;i&lt;10;i++)\n        AList.push_back(i);\n    cout &lt;&lt;  Before:  ; //印出初始陣列\n    for(auto i:AList){\n        cout&lt;&lt;i&lt;&lt;   ;\n    }\n    cout&lt;&lt;endl;\n\n    list&lt;int&gt;::iterator it = AList.begin(); // 刪除第三個\n    advance(it,2);\n    AList.erase(it);\n\n    cout &lt;&lt;  After:  ; //印出修改後陣列\n    for(auto i:AList){\n        cout&lt;&lt;i&lt;&lt;   ;\n    }\n}",
+        "output": "本課程勿使用#include &lt;bits/stdc++.h&gt;\n\n本課程勿使用auto\n\n下次見到這類程式碼將逕自刪除！"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;iostream&gt;\nusing namespace std;\n\ntypedef struct Node { // an example linked list\n    int val;\n    Node *next;\n} *NodePtr ;\n\nint main(void) {\n    NodePtr cur = NULL, head = NULL;\n    \n    // initializing, put in 1 ~ 10\n    int num = 1;\n    do {\n        if (cur == NULL) {\n            cur = new Node;\n            head = cur;\n            cur-&gt;next = NULL;\n        } // end if\n        else {\n            cur-&gt;val = num;\n            cur-&gt;next = new Node;\n            cur = cur-&gt;next;\n            cur-&gt;val = 10; // default range\n            cur-&gt;next = NULL;\n            num++;\n        } // end else\n    } while(num &lt; 10);\n    \n    cur = head;\n    \n    // print out all nodes&#39; values\n    while (cur != NULL) {\n        cout &lt;&lt; cur-&gt;val &lt;&lt;    ;\n        cur = cur-&gt;next;\n    } // end while\n    \n    cout &lt;&lt; endl;\n    cur = head;\n    \n    // comparing ptrX = ptrX-&gt;next and ptrX-&gt;next = ptrX\n    NodePtr ptrX = head;\n    \n    // 1. ptrX = ptrX-&gt;next\n    cout &lt;&lt;  Before, ptrX&#39;s value is :   &lt;&lt; ptrX-&gt;val &lt;&lt; endl;\n    ptrX = ptrX-&gt;next; // 指向下一個節點ptrX-&gt;next，因此能印出所有內容並正常停止\n    cout &lt;&lt;  After, ptrX&#39;s value is :   &lt;&lt; ptrX-&gt;val &lt;&lt;  ,  ;\n    cout &lt;&lt;  and ptrX-&gt;next&#39;s value is :   &lt;&lt; ptrX-&gt;next-&gt;val &lt;&lt; endl;\n    \n    // print out all nodes&#39; values，正常停止\n    cout &lt;&lt;  All nodes&#39; values are :  ;\n    while (cur != NULL) {\n        cout &lt;&lt; cur-&gt;val &lt;&lt;    ;\n        cur = cur-&gt;next;\n    } // end while\n    \n    cout &lt;&lt; endl;\n    cur = head;\n    ptrX = head;\n    \n    // 2. ptrX-&gt;next = ptrX;\n    cout &lt;&lt;  Before, ptrX&#39;s value is :   &lt;&lt; ptrX-&gt;val &lt;&lt; endl;\n    ptrX-&gt;next = ptrX; // 指向自己ptrX，因此為一雙向鏈結串列，只含有原本鏈結串列的第一個節點，印出所有節點時因沒有NULL而產生無窮迴圈\n    cout &lt;&lt;  After, ptrX&#39;s value is :   &lt;&lt; ptrX-&gt;val &lt;&lt;  ,  ;\n    cout &lt;&lt;  and ptrX-&gt;next&#39;s value is :   &lt;&lt; ptrX-&gt;next-&gt;val &lt;&lt; endl;\n    \n    // print out all nodes&#39; values，無窮迴圈\n    cout &lt;&lt;  All nodes&#39; values are :  ;\n    while (cur != NULL) {\n        cout &lt;&lt; cur-&gt;val &lt;&lt;    ;\n        cur = cur-&gt;next;\n    } // end while\n\n    return 0;\n} // main()",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: ",
+        "output": "👍"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: ptrX = ptrX -&gt; next  是把ptrX指向原本ptrX的next(往後走)，但原本的ptrX就沒有人去指向他了\n\nptrX -&gt; next = ptrX  是把ptrX的next設為指向ptrX自己，就會變成自己的next還是自己",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: // 黃色為變動後的箭頭\n\n1. ptrX = ptrX-&gt;next\n\n    ptrX會從原本指向的節點指向ptrX-&gt;next指向的節點。\n\n\n\n(2) ptrX-&gt;next = ptrX\n\n     ptrX-&gt;next會從原本指向的節點指向ptrX指向的節點。",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;bits/stdc++.h&gt;\n\nstruct Node{\n\n  int value ;\n\n  Node *next;\n\n} ; \n\ntypedef Node * NodePtr;\n\nint main(){\n\n  int i = 0;\n\n  NodePtr n, temp, cur;\n  \n  n = new Node;\n\n  temp = n ; // temp指向n\n\n  for( i = 1 ; i &lt;= 10 ; i++){  // 假設node有10項\n\n    temp-&gt;value = i ;\n\n    temp-&gt;next = new Node;\n\n    temp = temp-&gt;next;\n\n    temp-&gt;next = NULL ; //後面接null\n\n  } // for\n \n\n  // ******* 這邊是function\n  temp = n;\n  for( i = 1 ; i &lt;= 3 ; i++){\n\n    if ( temp-&gt;next != NULL &amp;&amp; i != 3) {\n\n      cur = temp;\n\n      temp = temp-&gt;next;\n\n     } // if\n\n     else if ( temp -&gt; next == NULL &amp;&amp; i != 3)\n\n        break; // linked list長度小於3\n\n     if ( i == 3 ) {\n\n       if ( temp-&gt;next == NULL ) { // 長度=3 刪除第三項\n\n         cur-&gt;next = NULL ; \n\n         delete temp ;\n\n         temp = NULL ;  \n\n       } // if\n\n       else if ( temp -&gt;next != NULL ) {\n\n         cur-&gt;next = temp-&gt;next; // 第二項移去第四項\n\n         temp-&gt;next = NULL ; // 第三項斷路\n\n         delete temp ;\n\n         temp = NULL ;\n       } // else if\n\n     } // if            \n  } // for\n\n  // ******* 到這邊是function\n} // main()",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: ptrX = ptrX-&gt;next意思是讓ptrX去指向ptrX的next\n\nptrX-&gt;next = ptrX意思是讓ptrX的next（如圖為nodeA) 指向ptrX \n\n兩者意義不同，下圖為演示說明",
+        "output": ""
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n到目前為止，共計51位同學問答已得分。",
+        "output": ""
+    }
+]

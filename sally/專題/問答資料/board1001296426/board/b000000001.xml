@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:57:11" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296426</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-12-13 10:32:42</pt>
+  <poster>11127129</poster>
+  <realname>&#x5F35;&#x8ED2;&#x5049;  </realname>
+  <email>billy.wilai@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>216 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;216. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x5E0C;&#x723E;&#x6392;&#x5E8F;shell sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x3002;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x521D;&#x59CB;&#x72C0;&#x614B;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[(4, &amp;#39;D&amp;#39;), (4, &amp;#39;C&amp;#39;), (1, &amp;#39;A&amp;#39;), (2, &amp;#39;B&amp;#39;), (3, &amp;#39;A&amp;#39;)&amp;nbsp;](&#x4EE5;&#x6578;&#x5B57;&#x505A;&#x70BA;&#x9375;&#x503C;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E00;&#x6B21;&#x6392;&#x5E8F;&#xFF08;gap=2&#xFF09;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[(1, &amp;#39;A&amp;#39;),(2, &amp;#39;B&amp;#39;), (3, &amp;#39;A&amp;#39;), (4, &amp;#39;C&amp;#39;), (4, &amp;#39;D&amp;#39;)]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x4E00;&#x6B65;&#x4E2D;&#xFF0C;&#x9375;&#x503C;&#x76F8;&#x540C;&#x7684;(4, &amp;#39;D&amp;#39;) &#x548C; (4, &amp;#39;C&amp;#39;) &#x7684;&#x76F8;&#x5C0D;&#x4F4D;&#x7F6E;&#x767C;&#x751F;&#x4E86;&#x8B8A;&#x5316;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E8C;&#x6B21;&#x6392;&#x5E8F;&#xFF08;gap=1&#xFF09;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[(1, &amp;#39;A&amp;#39;),(2, &amp;#39;B&amp;#39;), (3, &amp;#39;A&amp;#39;), (4, &amp;#39;C&amp;#39;), (4, &amp;#39;D&amp;#39;)]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6700;&#x7D42;&#x6392;&#x5E8F;&#x7D50;&#x679C;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[(1, &amp;#39;A&amp;#39;),(2, &amp;#39;B&amp;#39;), (3, &amp;#39;A&amp;#39;), (4, &amp;#39;C&amp;#39;), (4, &amp;#39;D&amp;#39;)]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6392;&#x5E8F;&#x904E;&#x7A0B;&#x4E2D;&#x9375;&#x503C;&#x76F8;&#x540C;&#x7684; (4, &amp;#39;D&amp;#39;) &#x548C; (4, &amp;#39;C&amp;#39;) &#x7684;&#x76F8;&#x5C0D;&#x4F4D;&#x7F6E;&#x8B8A;&#x5316;&#x4E86;&#xFF0C;&#x9019;&#x5C31;&#x8AAA;&#x660E;&#x4E86;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#x5728;&#x9019;&#x7A2E;&#x60C5;&#x6CC1;&#x4E0B;&#x662F;&#x4E0D;&#x7A69;&#x5B9A;&#x7684;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>10</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000029.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000029",
+        "site": "1000110001",
+        "pt": "2022-09-21 12:21:39",
+        "poster": "11027149",
+        "realname": "游婕歆",
+        "email": "xin090918@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>把大問題拆成小問題，而且小問題性質跟大問題一樣，是重複執行一樣的程式碼。</p>\r\n\r\n<p>可以處理比較複雜的問題，還可以縮短程式碼。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "49",
+        "lang": "1"
+    }
+}

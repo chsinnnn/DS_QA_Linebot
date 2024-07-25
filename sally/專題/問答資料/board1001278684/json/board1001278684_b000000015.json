@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:33",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278684",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-07-23 22:20:40",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答211",
+        "content": "<p><strong><span style=\"font-family:新細明體,serif\">舉例比較氣泡排序和選擇排序的資料交換</span>swap</strong><strong><span style=\"font-family:新細明體,serif\">次數，何者較多？</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">氣泡排序和選擇排序都是簡單的排序算法，它們的時間複雜度都是</span> O(n^2)<span style=\"font-family:新細明體,serif\">，其中</span> n <span style=\"font-family:新細明體,serif\">是要排序的元素數量。然而，就資料交換（</span>swap<span style=\"font-family:新細明體,serif\">）次數而言，兩者的表現是不同的。</span></p>\r\n\r\n<p><strong>1.</strong><strong><span style=\"font-family:新細明體,serif\">氣泡排序（</span>Bubble Sort</strong><strong><span style=\"font-family:新細明體,serif\">）：</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">氣泡排序是一種交換排序算法，它通過反覆地交換相鄰兩個元素，把最大的元素逐漸</span>&quot;<span style=\"font-family:新細明體,serif\">浮</span>&quot;<span style=\"font-family:新細明體,serif\">到數列的最後。在最壞情況下，氣泡排序需要進行</span> n(n-1)/2 <span style=\"font-family:新細明體,serif\">次比較和交換操作。即便在最佳情況下（當數列已經有序），它的交換次數也不會減少。</span></p>\r\n\r\n<p><strong>2.</strong><strong><span style=\"font-family:新細明體,serif\">選擇排序（</span>Selection Sort</strong><strong><span style=\"font-family:新細明體,serif\">）：</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">選擇排序是一種選擇最小元素的排序算法。它遍歷數列，每次選擇最小的元素，並將其放到已排序部分的末尾。在最壞情況下，選擇排序需要進行</span> n(n-1)/2 <span style=\"font-family:新細明體,serif\">次比較，但是它只需要進行</span> n-1 <span style=\"font-family:新細明體,serif\">次交換操作。這是因為在每次選擇最小元素時，它直接放在正確的位置上，而不像氣泡排序那樣需要逐步交換。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">就資料交換次數而言，選擇排序比氣泡排序少。所以在這個特定指標下，選擇排序較優於氣泡排序。兩者在實際應用中都不是高效的排序算法，特別是在處理大量數據時，應考慮使用更高效的排序算法，如快速排序（</span>Quick Sort<span style=\"font-family:新細明體,serif\">）或合併排序（</span>Merge Sort<span style=\"font-family:新細明體,serif\">）。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

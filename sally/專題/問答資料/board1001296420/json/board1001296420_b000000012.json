@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-10-18 23:48:33",
+        "poster": "11127112",
+        "realname": "莊沛儒",
+        "email": "a0922166067@gmail.com",
+        "homepage": null,
+        "subject": "118",
+        "content": "<p><span style=\"font-size:14px\">令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。</span></p>\r\n\r\n<p><span style=\"font-size:12px\">假設現在有一個list像這樣：6-&gt;5-&gt;4-&gt;3-&gt;2-&gt;1，ptrX指向5。</span></p>\r\n\r\n<p><span style=\"font-size:12px\">若ptrX=ptrX -&gt; next，則ptrX會由指5轉成指向4，但若是ptrX-&gt;next = ptrX的話，他會一直指向同一個點，不變。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

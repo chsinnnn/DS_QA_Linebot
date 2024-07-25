@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000030.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000030",
+        "site": "1000110001",
+        "pt": "2023-07-25 23:30:30",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答225",
+        "content": "<p>已排序資料如何建立一棵平衡的二元搜尋樹？</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>要將有序資料變成Balanced Binary Search Tree，</p>\r\n\r\n<p>首先要找出根節點，由於是有序資料，所以通常會是降序或升序，擇其中間樹為根節點可以盡量平衡左右子樹的高度。</p>\r\n\r\n<p>再來將根節點左邊的資料集合作為左子樹，如果左邊沒有資料，則左子樹為空。</p>\r\n\r\n<p>接著將根節點右邊的數據集合作為右子樹，如果右邊沒有元素，則右子樹為空。</p>\r\n\r\n<p>然後對左子樹和右子樹分別執行上述步驟，繼續遞歸構建左子樹和右子樹。</p>\r\n\r\n<p>最後將子樹連接到根節點，就能建立一個Balanced Binary Search Tree了。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000020000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000020000000001",
+        "site": "1000110001",
+        "pt": "2022-09-19 21:06:04",
+        "poster": "10977001",
+        "realname": "郭維哲",
+        "email": "g10977001@cycu.edu.tw",
+        "homepage": null,
+        "subject": "Re: 101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>不太懂你的意思，遞迴是將大問題分成幾個小問題。你的例子早午晚餐三者之間的關係是什麼呢？</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

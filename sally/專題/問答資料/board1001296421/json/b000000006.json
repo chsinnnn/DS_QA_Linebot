@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-10-19 21:26:05",
+        "poster": "10924148",
+        "realname": "陳黃揚",
+        "email": "conary0917@gmail.com",
+        "homepage": null,
+        "subject": "121",
+        "content": "<p>舉例說明使用環狀鏈結串列Circularly linked list的情境。</p>\r\n\r\n<p>滑鼠連點程式(或是其他需要重複執行有規律的滑鼠點擊or鍵盤輸入的程式):</p>\r\n\r\n<p>以滑鼠連點程式為例，在第一個node存入的指令為按下左鍵，第二個node則存入彈開左鍵的指令，如此便可以一直重複點擊的動作達到連點的功能。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

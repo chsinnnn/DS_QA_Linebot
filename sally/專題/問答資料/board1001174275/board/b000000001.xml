@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:46" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174275</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-10-21 17:48:27</pt>
+  <poster>11027229</poster>
+  <realname>&#x5353;&#x69AE;&#x6689;  </realname>
+  <email>intercoursedr@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>123. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x8907;&#x88FD;&#x4E00;&#x6574;&#x500B;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x3002; </subject>
+  <content>&lt;p&gt;&#x56E0;&#x70BA; LinkedList&#x672C;&#x8EAB;&#x7684;&#x8CC7;&#x6599;&#x8207;&#x6307;&#x6A19;&#x662F;&#x74B0;&#x74B0;&#x76F8;&#x6263;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x7121;&#x6CD5;&#x55AE;&#x7D14;&#x7684;&#x76F4;&#x63A5;&#x8B93;&#x65B0;&#x7684; Head &#x6307;&#x5411;&#x539F;&#x672C;&#x7684; Head &#x7684; Next&lt;br /&gt;&#xD;
+&#x5426;&#x5247;&#x6539;&#x52D5;&#x65B0;&#x7684;LinkedList&#xFF0C;&#x820A;&#x7684;&#x4E5F;&#x6703;&#x8DDF;&#x8457;&#x6539;&#x52D5;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x90A3;&#x65E2;&#x7136;&#x8981;&#x5BE6;&#x73FE;&#x8907;&#x88FD;&#x7684;&#x8A71;&#xFF0C;&#x5C31;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x72E0;&#x66B4;&#x529B;&#x7684;&#x65B9;&#x5F0F; : &#x90A3;&#x5C31;&#x662F;&#x5C07;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x8D70;&#x8A2A;&#xFF0C;&#x4E26;&#x4E14;&#x5C07;&#x5167;&#x5BB9;&#x63A8;&#x5411;&#x65B0;&#x7684; LinkedList&#x3002;&lt;br /&gt;&#xD;
+( &#x53EF;&#x80FD;&#x6709;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x662F;&#x6211;&#x76EE;&#x524D;&#x60F3;&#x5230;&#x7684;&#x662F;&#x9019;&#x500B; )&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x662F;&#x7A0B;&#x5F0F;&#x78BC;&#x7684;&#x90E8;&#x5206;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include&amp;lt;string.h&amp;gt;&lt;br /&gt;&#xD;
+#include&amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include&amp;lt;stdlib.h&amp;gt;&lt;br /&gt;&#xD;
+#include&amp;lt;sstream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std; // &#x6211;&#x5C31;&#x61F6;&amp;nbsp;&lt;br /&gt;&#xD;
+// -*- c++ 11 -*-&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// Node&lt;br /&gt;&#xD;
+// &#x5229;&#x7528;&#x6CDB;&#x578B;&#x5BE6;&#x4F5C;&lt;br /&gt;&#xD;
+template &amp;lt;typename T&amp;gt;&lt;br /&gt;&#xD;
+struct Node {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;T num; // &#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node * next; // &#x4E0B;&#x4E00;&#x500B;&#x9EDE;&amp;nbsp;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5229;&#x7528;&#x6CDB;&#x578B;&#x5BE6;&#x4F5C;LinkedList&lt;br /&gt;&#xD;
+// &#x6B98;&#x7F3A;&#x7684;LinkedList, &#x4E0D;&#x904E;&#x53EF;&#x4EE5;&#x61C9;&#x4ED8;&#x9019;&#x984C;&lt;br /&gt;&#xD;
+template &amp;lt;typename T&amp;gt;&lt;br /&gt;&#xD;
+class LinkedList {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5EFA;&#x69CB;&#x5B50;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x521D;&#x59CB;&#x5316;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = NULL; // &#x982D;&#x5148;&#x8A2D;&#x5B9A;&#x70BA;NULL&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail = NULL; // &#x5C3E;&#x4E5F;&#x5148;&#x8A2D;&#x5B9A;&#x70BA;NULL&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size = 0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x628A;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;void push(T data) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5982;&#x679C;&#x88E1;&#x9762;&#x7A7A;&#x7A7A;&#x7684;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(size==0) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = new Node&amp;lt;T&amp;gt;; // &#x8B93;head&#x8B8A;&#x6210;&#x65B0;&#x7684;Node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head -&amp;gt; num = data; // &#x628A;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head -&amp;gt; next = NULL; // &#x6307;&#x5B9A;head&#x7684;next&#x662F;null&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size++; // &#x8B93;size++&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail = head;// &#x8B93;tail&#x8B8A;&#x6210;head&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return; // return &#x56DE;&#x53BB; &#x907F;&#x514D;&#x9032;&#x5165;&#x4E0B;&#x4E00;&#x884C;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x8981;&#x662F;&#x4E0D;&#x662F;&#x7A7A;&#x7684;&#x8A71;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail -&amp;gt; next = new Node&amp;lt;T&amp;gt;; // &#x5148;&#x8B93;tail&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x8B8A;&#x6210;&#x65B0;&#x7684;Node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail = tail -&amp;gt; next; // &#x628A;tail &#x79FB;&#x5230;&#x4E0B;&#x4E00;&#x5C64;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail -&amp;gt; num = data;// &#x628A;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;tail -&amp;gt; next = NULL; // tail&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x6307;&#x5B9A;&#x70BA;NULL&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size++;// size&#x589E;&#x52A0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return;// return &#x56DE;&#x53BB; &#x53EF;&#x52A0;&#x53EF;&#x4E0D;&#x52A0;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x55AE;&#x7D14;&#x7684;&#x8907;&#x88FD;LinkedList&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9019;&#x908A;&#x662F;&#x7522;&#x751F;&#x4E00;&#x500B;&#x65B0;&#x7684;LinkedList &#x800C;&#x4E0D;&#x662F;&#x628A;&#x539F;&#x672C;&#x7684;return&#x56DE;&#x53BB;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x56E0;&#x70BA;&#x5982;&#x679C;&#x662F;&#x628A;&#x539F;&#x672C;&#x7684;return&#x56DE;&#x53BB;&#xFF0C;&#x6703;&#x5C0E;&#x81F4;&#x8CC7;&#x6599;&#x6703;&#x88AB;&#x4E92;&#x76F8;&#x5F15;&#x97FF;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList copy() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList toReturn; // &#x6E96;&#x5099;&#x56DE;&#x50B3;&#x56DE;&#x53BB;&#x7684;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = head; // &#x6307;&#x6A19; &#x7528;&#x4F86;&#x8D70;&#x8A2A;&#x6574;&#x500B;LinkedList&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;while(temp!=NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;toReturn.push(temp-&amp;gt;num); // &#x900F;&#x904E;&#x65B9;&#x6CD5;&#x4E00;&#x76F4;&#x53BB;push&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = temp -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return toReturn; // return&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x900F;&#x904E; index &#x53BB;&#x53D6;&#x5F97;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;T getDataFromIndex(int k) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = getFromIndex(k);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return temp -&amp;gt; num;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x900F;&#x904E;index &#x79FB;&#x9664;&#x8CC7;&#x6599; &#x4E26;&#x4E14;&#x5C07;&#x8CC7;&#x6599;&#x56DE;&#x50B3;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;T removeFromIndex(int k) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5982;&#x679C;k&#x7684;&#x5927;&#x5C0F;==0 &#x5C31;&#x4EE3;&#x8868;&#x522A;&#x6389;&#x982D;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(k==0){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(head==NULL) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;T n = head -&amp;gt; num;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = head -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size--;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return n;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5982;&#x679C;k&#x5C0F;&#x65BC;0&#x6216;&#x8005;&#x4E0D;&#x5C0F;&#x65BC;size &#x5C31;&#x4EE3;&#x8868;&#x8D8A;&#x754C; &#x56E0;&#x6B64;&#x76F4;&#x63A5;return NULL&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(k&amp;gt;=size || k &amp;lt; 0) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x66AB;&#x6642;&#x7684;&#x7BC0;&#x9EDE; &#x7528;&#x4F86;&#x5132;&#x5B58;&#x5373;&#x5C07;&#x88AB;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x7684;&#x4E0A;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = getFromIndex(k-1);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(temp==NULL) return NULL; // &#x5982;&#x679C;&#x53D6;&#x4E0D;&#x5230; &#x5C31;&#x4EE3;&#x8868;&#x8D8A;&#x754C; &#x76F4;&#x63A5; return NULL&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;T n = temp -&amp;gt; next -&amp;gt; num; // N&#x662F;&#x5373;&#x5C07;&#x88AB;&#x56DE;&#x50B3;&#x7684;&#x503C; &#x4E5F;&#x5C31;&#x4EE3;&#x8868;&#x88AB;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp -&amp;gt; next = temp -&amp;gt; next -&amp;gt; next; // &#x8B93;next&#x6307;&#x5411;&#x66F4;&#x4E0B;&#x4E00;&#x5C64;&#x7684;&#x7BC0;&#x9EDE;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;size--; // size&#x8A18;&#x5F97;&#x8981;-1&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return n; // return value&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x53D6;&#x5F97;&#x5927;&#x5C0F;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int getSize() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return size;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6392;&#x5E8F;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; void sortList(){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; head = mergeSort(head);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x4E0D;&#x516C;&#x958B;&#x7684;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * tail;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int size;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9019;&#x908A;&#x4E4B;&#x6240;&#x4EE5;&#x653E;&#x5728;private &#x662F;&#x70BA;&#x4E86;&#x9632;&#x6B62;&#x6709;&#x4EBA;&#x900F;&#x904E;&#x6B64;&#x65B9;&#x6CD5;&#x7834;&#x58DE; LinkedList&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6B64;&#x65B9;&#x6CD5;&#x55AE;&#x7D14;&#x5C31;&#x662F;&#x5C07;&#x7B2C;i&#x500B;Node&#x56DE;&#x50B3;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * getFromIndex(int i) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(i==0) return head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(i&amp;gt;=size) return NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Node&amp;lt;T&amp;gt; * temp = head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;for(int j = 0 ; j &amp;lt; i ; j++) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = temp -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return temp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5C07;&#x7BC0;&#x9EDE;&#x6392;&#x5E8F;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * mergeSort(Node&amp;lt;T&amp;gt; * h){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x5982;&#x679C; h &#x7684;&#x5927;&#x5C0F;&#x53EA;&#x6709; 1 &#x6216;&#x8005;&#x662F;&#x6839;&#x672C;&#x6C92;&#x6771;&#x897F; &#x76F4;&#x63A5;&#x56DE;&#x50B3; h&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(h==NULL||h -&amp;gt; next == NULL) return h;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x627E;&#x51FA;&#x4E2D;&#x5FC3;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x5229;&#x7528;&#x5FEB;&#x6162;&#x6307;&#x6A19;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * slow = h;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * fast = h -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while(fast!=NULL&amp;amp;&amp;amp;fast-&amp;gt; next!=NULL){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; fast = fast -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; slow = slow -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * mid = slow -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x627E;&#x5230;&#x4E2D;&#x5FC3;&#x9EDE;&#x5F8C; &#x5206;&#x5272;&#x958B;&#x524D;&#x534A;&#x90E8;&#x4EE5;&#x53CA;&#x5F8C;&#x534A;&#x90E8;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; slow -&amp;gt; next = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x518D;&#x5EA6;&#x5206;&#x5272;&#x524D;&#x534A;&#x90E8; &#x4E26;&#x4E14;&#x7B49;&#x5F85;&#x56DE;&#x50B3;&#x7684;&#x7D50;&#x679C;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * left = mergeSort(h);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x518D;&#x5EA6;&#x5206;&#x5272;&#x5F8C;&#x534A;&#x90E8; &#x4E26;&#x4E14;&#x7B49;&#x5F85;&#x56DE;&#x50B3;&#x7684;&#x7D50;&#x679C;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * right = mergeSort(mid);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x958B;&#x982D; Dummy head Node&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * ans = new Node&amp;lt;T&amp;gt;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x7D50;&#x5C3E;&#x5148;&#x6307;&#x5411;ans&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node&amp;lt;T&amp;gt; * last = ans;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x8DD1;&#x56DE;&#x5708; &#x9010;&#x6F38;&#x5408;&#x4F75;&#x5404;&#x500B;&#x7BC0;&#x9EDE; &#x4E26;&#x4E14;&#x56DE;&#x50B3;&#x56DE;&#x53BB;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while(left!=NULL||right!=NULL){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; T n1 = (left != NULL? left -&amp;gt; num : INT_MAX ); // &#x5224;&#x65B7; left &#x662F;&#x4E0D;&#x662F; NULL &#x82E5;&#x4E0D;&#x662F; &#x5C31;&#x6307;&#x5B9A; n1 &#x70BA;&#x5DE6;&#x908A;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x5426;&#x5247;&#x8A2D;&#x70BA; INT_MAX&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; T n2 = (right != NULL? right -&amp;gt; num: INT_MAX ); // &#x5224;&#x65B7; right &#x662F;&#x4E0D;&#x662F; NULL &#x82E5;&#x4E0D;&#x662F; &#x5C31;&#x6307;&#x5B9A; n2 &#x70BA;&#x53F3;&#x908A;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x5426;&#x5247;&#x8A2D;&#x70BA; INT_MAX&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x82E5;&#x5DE6;&#x908A;&#x5C0F;&#x65BC;&#x53F3;&#x908A;&#xFF0C;&#x5C31;&#x8B93; last &#x5F8C;&#x9762;&#x63A5;&#x8457;&#x5DE6;&#x908A;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(n1&amp;lt;n2){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;last -&amp;gt; next = left;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;left = left -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5426;&#x5247;&#x5C31;&#x505A;&#x76F8;&#x53CD;&#x7684;&#x4E8B;&#x60C5;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;last -&amp;gt; next = right;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;right = right -&amp;gt; next;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;last = last -&amp;gt; next; // &#x8A18;&#x5F97; last &#x8981;&#x79FB;&#x52D5;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x8A18;&#x5F97;&#x4E0D;&#x8981;&#x628A;dummy head &#x56DE;&#x50B3;&#xFF0C;&#x800C;&#x662F;&#x5C07;dummy head&#x7684;&#x4E0B;&#x4E00;&#x500B; ( &#x4E5F;&#x5C31;&#x662F;&#x771F;&#x6B63;&#x7684;&#x982D; ) &#x56DE;&#x50B3;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return ans -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } &amp;nbsp; &amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList&amp;lt;int&amp;gt; k; // &#x65B0;&#x589E;&#x4E00;&#x500B; LinkedList&amp;lt;int&amp;gt; k&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for(int i = 100 ; i &amp;gt;= 0 ; i--){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;k.push(i); // &#x5C07; 100 &#x5230; 0 &#x63A8;&#x9032;&#x53BB; k &#x88E1;&#x9762;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;LinkedList&amp;lt;int&amp;gt; t = k.copy(); // &#x5957;copy&#x9019;&#x500B;function&#x53BB;&#x8907;&#x88FD;&#x6574;&#x500B;LinkedList&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;t.sortList(); // &#x6392;&#x5E8F; &#x70BA;&#x4E86;&#x8B49;&#x660E;&#x9019;&#x5169;&#x500B;LinkedList&#x662F;&#x4E0D;&#x4E00;&#x6A23;&#x7684;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5370;&#x51FA;k&#x88E1;&#x9762;&#x7684;&#x5167;&#x5BB9;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5370;&#x51FA;&#x8CC7;&#x6599; 100 &#x5230; 0&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for(int i = 0 ; i &amp;lt; k.getSize() ; i++){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,k.getDataFromIndex(i));&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;==================\n&amp;quot;); // &#x5206;&#x9694;&#x7DDA;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5370;&#x51FA;t&#x7684;&#x5167;&#x5BB9;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5370;&#x51FA;&#x8CC7;&#x6599; &#x6703;&#x5370;&#x51FA; 0 &#x5230; 100&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for(int i = 0 ; i &amp;lt;t.getSize() ;i++){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;%d\n&amp;quot;,t.getDataFromIndex(i));&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53E6;&#x5916;&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x7684;&#x6392;&#x5E8F;&#x662F;&#x7528; Merge Sort &#x6392;&#x7684;&#xFF0C;&#x6BD4;&#x8D77;Bubble Sort&#x4F7F;&#x7528;&#x4E86;O( n ^ 2 )&#xFF0C;Merge Sort&#x53EA;&#x9700;&#x8981; O( nlog( n ) ) &#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x81F3;&#x65BC;&#x600E;&#x9EBC;&#x5BE6;&#x73FE;&#x7684;&#xFF0C;&#x8ACB;&#x53C3;&#x8003; https://www.geeksforgeeks.org/merge-sort-for-linked-list/&lt;br /&gt;&#xD;
+&#x60F3;&#x8A66;&#x8A66;&#x770B;&#x81EA;&#x5DF1;&#x5BEB;&#x7684;&#x662F;&#x5426;&#x70BA;&#x6B63;&#x78BA;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0A;&amp;nbsp;https://leetcode.com/problems/sort-list/ &#x6E2C;&#x8A66;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>67</hit>
+  <lang>1</lang>
+</data>

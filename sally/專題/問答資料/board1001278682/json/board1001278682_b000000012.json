@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-21 02:27:43",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答205",
+        "content": "<p>205. 提出二種選擇佇列的策略，並舉例比較二者。</p>\r\n\r\n<ol>\r\n\t<li>先來先服務 (FCFS)：</li>\r\n</ol>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;根據作業或請求到達佇列的先後順序來進行服務。當一個作業完成後，下一個尚未處理的作業將會被選擇並進入服務。</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;EX：考慮一個排程佇列，有三個作業 A、B 和 C，它們按照先後順序進入佇列。這些作業將按照 A、B、C 的順序進行處理。</p>\r\n\r\n<ol start=\"2\">\r\n\t<li>最短作業優先 (SJF)：</li>\r\n</ol>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 這種佇列會選擇估計執行時間最短的作業進行處理。當一個作業完成後，選擇佇列中估計執行時間最短的下一個作業來處理。</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EX：考慮一個排程佇列，有三個作業 A、B 和 C，它們的估計執行時間分別為 5、2 和 8 單位時間。SJF 策略將按照 B、A、C 的&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 順序來處理這些作業，因為 B 具有最短的估計執行時間。</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;比較兩者：</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p>&nbsp;執行時間：</p>\r\n\r\n\t<ul>\r\n\t\t<li>FCFS：如果前面的作業非常耗時，將導致後續作業等待時間較長。</li>\r\n\t\t<li>SJF：能夠快速處理短作業，減少等待時間，但長作業可能需要等待較長時間才會去做到他。</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p>公平性：</p>\r\n\r\n\t<ul>\r\n\t\t<li>FCFS：遵循公平原則，按照先後順序進行處理。</li>\r\n\t\t<li>SJF：可能會因為長作業的存在而讓其他短作業等待時間增加，公平性較差。</li>\r\n\t</ul>\r\n\t</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

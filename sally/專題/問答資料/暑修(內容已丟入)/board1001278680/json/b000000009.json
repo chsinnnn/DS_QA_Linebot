@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-07-13 01:11:09",
+        "poster": "10924326",
+        "realname": "吳英睿",
+        "email": "incaray901228@gmail.com",
+        "homepage": null,
+        "subject": "搶答122",
+        "content": "<p>+ * 2 4 6 * - 7 5是前序式嗎？為什麼？<br />\r\n<br />\r\n不是，因為前序表示法是將運算子放到所有運算元之前的表示法，格式應該要是(運算子 運算元 運算元)這樣子</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "28",
+        "lang": "1"
+    }
+}

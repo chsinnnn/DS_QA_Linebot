@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000012.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000012</node>
+  <site>1000110001</site>
+  <pt>2022-10-16 17:54:58</pt>
+  <poster>11027238</poster>
+  <realname>&#x738B;&#x7D2B;&#x85B0;  </realname>
+  <email>isawang92@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>119. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; list&amp;lt;int&amp;gt; AList;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for(int i=0;i&amp;lt;10;i++)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AList.push_back(i);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Before: &amp;quot;; //&#x5370;&#x51FA;&#x521D;&#x59CB;&#x9663;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for(auto i:AList){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout&amp;lt;&amp;lt;i&amp;lt;&amp;lt;&amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout&amp;lt;&amp;lt;endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; list&amp;lt;int&amp;gt;::iterator it = AList.begin(); // &#x522A;&#x9664;&#x7B2C;&#x4E09;&#x500B;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; advance(it,2);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; AList.erase(it);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After: &amp;quot;; //&#x5370;&#x51FA;&#x4FEE;&#x6539;&#x5F8C;&#x9663;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for(auto i:AList){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout&amp;lt;&amp;lt;i&amp;lt;&amp;lt;&amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>21</hit>
+  <lang>1</lang>
+</data>

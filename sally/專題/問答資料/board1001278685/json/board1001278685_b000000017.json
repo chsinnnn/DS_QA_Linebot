@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-07-24 11:59:49",
+        "poster": "06005732",
+        "realname": "王昱進",
+        "email": "louis21501@gmail.com",
+        "homepage": null,
+        "subject": "搶答217",
+        "content": "<p><br />\r\n假設有以下 Data 的陣列：</p>\r\n\r\n<p>[Data(&quot;apple&quot;, 3), Data(&quot;orange&quot;, 2), Data(&quot;banana&quot;, 1), Data(&quot;apple&quot;, 2)]<br />\r\n現在我們以 Data 結構的整數欄位作為基準進行快速排序。</p>\r\n\r\n<p>第一次分割後：</p>\r\n\r\n<p>[Data(&quot;banana&quot;, 1), Data(&quot;orange&quot;, 2), Data(&quot;apple&quot;, 3), Data(&quot;apple&quot;, 2)]<br />\r\n在這個分割後的結果中，我們可以看到原本相對位置在兩個 &quot;apple&quot; 鍵值之間的 Data(&quot;apple&quot;, 3) 和 Data(&quot;apple&quot;, 2) 已經被交換了。這表示快速排序是不穩定的，相同鍵值的元素在排序後不保持原有的相對順序。</p>\r\n\r\n<p>因此，這個例子證明了快速排序不是穩定的排序算法。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

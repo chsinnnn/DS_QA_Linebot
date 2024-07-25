@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-07-03 16:41:43",
+        "poster": "06005635",
+        "realname": "黃博元",
+        "email": "maruko1mjw@yahoo.com.tw",
+        "homepage": null,
+        "subject": "限時搶答 101",
+        "content": "<p>101. 以自己的話描述遞迴recursion是什麼。</p>\r\n\r\n<p>遞回函式（recursive function）簡單來說就是在一個函式當中再去呼叫它自己, 並設置一個if條件去停止呼叫, 然後開始回去上一層直到第一層.最後回到第一層便能得到每一層的總和.</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "51",
+        "lang": "1"
+    }
+}

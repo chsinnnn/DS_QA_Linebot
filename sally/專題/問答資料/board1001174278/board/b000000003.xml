@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:00:28" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174278</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2022-12-02 10:49:49</pt>
+  <poster>11027202</poster>
+  <realname>&#x9EC3;&#x6977;&#x5091;  </realname>
+  <email>nikiwu90@hotmail.com</email>
+  <homepage>  </homepage>
+  <subject>208. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5F71;&#x97FF;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002; </subject>
+  <content>&lt;p&gt;#include&amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#define MAX&amp;nbsp;10&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void BubbleSort(int array[MAX], int n) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for(int p=1 ; p&amp;lt;n ; ++p) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for(int index=0 ; index&amp;lt; (n-p) ; index++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(array[index] &amp;gt; array[index+1]) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; swap(array[index],&amp;nbsp;array[index+1]);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void swap(int &amp;amp;a, int &amp;amp;b) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int temp = a;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; a = b;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; b = temp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5F71;&#x97FF;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;:&amp;nbsp; if(array[index] &amp;gt; array[index+1])&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5982;&#x679C;&#x5C07;&amp;gt;&#x63DB;&#x6210;&amp;gt;=&#xFF0C;&#x5C31;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x540C;&#x6A23;&#x5927;&#x5C0F;&#x7684;&#x8CC7;&#x6599;&#x4E4B;&#x5148;&#x5F8C;&#x9806;&#x5E8F;&#x4E0D;&#x540C;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>24</hit>
+  <lang>1</lang>
+</data>

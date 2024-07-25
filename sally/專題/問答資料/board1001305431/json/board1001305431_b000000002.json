@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-09-26 18:09:18",
+        "poster": "11127252",
+        "realname": "雷國裕",
+        "email": "kuoyu73815@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>記憶體區段錯誤 (Segmentation fault)</p>\r\n\r\n<p>Stack overflow屬於記憶體區段錯誤的一種</p>\r\n\r\n<p>記憶體中有一個區段叫做stack，當你每呼叫一個函數出來，stack使用量就會增加；每回傳完一個函數，stack使用量就會減少，如果把stack使用到超過記憶體極限，就會跳出這個錯誤</p>\r\n\r\n<p>遞迴呼叫出現這個錯誤通常是因為函數裡面沒有一個終止條件，然後就會一直呼叫，沒有回傳，stack使用量不斷增加，到一定程度程式就會掛掉並且跳出這個錯誤訊息。但也有可能是因為遞迴要解決的問題過大，明明有設定終止條件但是因為記憶體不夠，導致還沒達成終止條件之前就已經把stack用滿了，也會出現這個錯誤訊息。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "36",
+        "lang": "1"
+    }
+}

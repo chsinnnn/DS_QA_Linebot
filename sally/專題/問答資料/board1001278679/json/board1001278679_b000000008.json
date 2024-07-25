@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-07-10 14:25:12",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答119",
+        "content": "<p>寫C++程式碼說明刪除鏈結串列linked list第3個節點。</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>struct Node {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; int data;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* next;</p>\r\n\r\n<p>};</p>\r\n\r\n<p>// <span style=\"font-family:新細明體,serif\">函式：刪除鏈結串列中的第</span>3<span style=\"font-family:新細明體,serif\">個節點</span></p>\r\n\r\n<p>void deleteNode(Node** head) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; if (*head == nullptr || (*head)-&gt;next == nullptr || (*head)-&gt;next-&gt;next == nullptr) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">如果鏈結串列為空或只有</span>1<span style=\"font-family:新細明體,serif\">個或</span>2<span style=\"font-family:新細明體,serif\">個節點，無法刪除第</span>3<span style=\"font-family:新細明體,serif\">個節點</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* temp = *head;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">移動到第</span>3<span style=\"font-family:新細明體,serif\">個節點之前的節點</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; 2; i++) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; temp = temp-&gt;next;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (temp == nullptr) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">如果鏈結串列的長度小於</span>3<span style=\"font-family:新細明體,serif\">，無法刪除第</span>3<span style=\"font-family:新細明體,serif\">個節點</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">將第</span>3<span style=\"font-family:新細明體,serif\">個節點從鏈結串列中移除</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* deleteNode = temp-&gt;next;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; temp-&gt;next = deleteNode-&gt;next;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; delete deleteNode;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>// <span style=\"font-family:新細明體,serif\">函式：在鏈結串列尾端新增節點</span></p>\r\n\r\n<p>void appendNode(Node** head, int newData) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* newNode = new Node;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; newNode-&gt;data = newData;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; newNode-&gt;next = nullptr;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; if (*head == nullptr) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *head = newNode;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* temp = *head;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; while (temp-&gt;next != nullptr) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; temp = temp-&gt;next;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; temp-&gt;next = newNode;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>// <span style=\"font-family:新細明體,serif\">函式：輸出鏈結串列的內容</span></p>\r\n\r\n<p>void printList(Node* head) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* temp = head;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; while (temp != nullptr) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; temp-&gt;data &lt;&lt; &quot; &quot;;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; temp = temp-&gt;next;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; std::endl;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Node* head = nullptr;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">建立一個鏈結串列</span> 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; for (int i = 1; i &lt;= 5; i++) {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; appendNode(&amp;head, i);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;<span style=\"font-family:新細明體,serif\">刪除前的鏈結串列：</span>&quot;;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; printList(head);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // <span style=\"font-family:新細明體,serif\">刪除第</span>3<span style=\"font-family:新細明體,serif\">個節點</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; deleteNode(&amp;head);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;<span style=\"font-family:新細明體,serif\">刪除後的鏈結串列：</span>&quot;;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; printList(head);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

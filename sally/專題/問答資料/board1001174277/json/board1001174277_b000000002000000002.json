@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:16",
+        "@type": "post",
+        "@filename": "b000000002000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174277",
+        "node": "000000002000000002",
+        "site": "1000110001",
+        "pt": "2022-11-29 14:39:57",
+        "poster": "11027220",
+        "realname": "陳柏禹",
+        "email": "dannychen920529@gmail.com",
+        "homepage": null,
+        "subject": "Re: 203. 舉例說明雙重佇列如何模擬，須指出選擇佇列的策略。",
+        "content": "<p>👍</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

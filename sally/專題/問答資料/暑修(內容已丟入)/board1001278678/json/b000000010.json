@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-07-09 17:31:13",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答115",
+        "content": "<p>115. 寫C++程式碼說明傳址呼叫call by address。 C++ 中使用傳址呼叫（call by address），會傳遞一個變數的記憶體地址給函式，這樣函式就可以直接修改該變數的值。</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>// 傳址呼叫的函式<br />\r\nvoid changeValue(int* ptr) {<br />\r\n&nbsp;&nbsp;&nbsp; // 透過指標修改變數的值<br />\r\n&nbsp;&nbsp;&nbsp; *ptr = 10;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp; int num = 5;//初始值為5<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;原始數值: &quot; &lt;&lt; num &lt;&lt; std::endl;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp;&nbsp; // 傳遞變數的記憶體地址給函式<br />\r\n&nbsp;&nbsp;&nbsp; changeValue(&amp;num);<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;修改後的數值: &quot; &lt;&lt; num &lt;&lt; std::endl;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp;&nbsp; return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

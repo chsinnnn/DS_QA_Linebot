@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-23 15:24:35",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答224",
+        "content": "<p>224. 如何將二元搜尋樹存檔後再讀入可恢復原狀？</p>\r\n\r\n<p>將二元搜尋樹存檔後再讀入可恢復原狀的方法如下，第一步1：序列化，對於二元搜尋樹的序列化，你可以使用前序、中序或後序遍歷，其中前序和中序遍歷是最常用的方法。第二步 2：存檔，將序列化後的資料存檔到檔案或資料庫中。第三步 3：反序列化，現在，從檔案中讀取資料並反序列化為二元搜尋樹。以下是使用前序遍歷來序列化二元搜尋樹的範例程式碼</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\n#include &lt;fstream&gt;<br />\r\n#include &lt;sstream&gt;<br />\r\n#include &lt;vector&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>struct TreeNode {<br />\r\n&nbsp;&nbsp;&nbsp; int val;<br />\r\n&nbsp;&nbsp;&nbsp; TreeNode* left;<br />\r\n&nbsp;&nbsp;&nbsp; TreeNode* right;<br />\r\n&nbsp;&nbsp;&nbsp; TreeNode(int v) : val(v), left(nullptr), right(nullptr) {}<br />\r\n};</p>\r\n\r\n<p>void serialize(TreeNode* root, stringstream&amp; ss) {<br />\r\n&nbsp;&nbsp;&nbsp; if (!root) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss &lt;&lt; &quot;None,&quot;;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp; ss &lt;&lt; root-&gt;val &lt;&lt; &quot;,&quot;;<br />\r\n&nbsp;&nbsp;&nbsp; serialize(root-&gt;left, ss);<br />\r\n&nbsp;&nbsp;&nbsp; serialize(root-&gt;right, ss);<br />\r\n}</p>\r\n\r\n<p>TreeNode* deserialize(stringstream&amp; ss) {<br />\r\n&nbsp;&nbsp;&nbsp; string val;<br />\r\n&nbsp;&nbsp;&nbsp; getline(ss, val, &#39;,&#39;);<br />\r\n&nbsp;&nbsp;&nbsp; if (val == &quot;None&quot;)<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return nullptr;<br />\r\n&nbsp;&nbsp;&nbsp; TreeNode* root = new TreeNode(stoi(val));<br />\r\n&nbsp;&nbsp;&nbsp; root-&gt;left = deserialize(ss);<br />\r\n&nbsp;&nbsp;&nbsp; root-&gt;right = deserialize(ss);<br />\r\n&nbsp;&nbsp;&nbsp; return root;<br />\r\n}</p>\r\n\r\n<p>void saveToFile(TreeNode* root, const string&amp; filename) {<br />\r\n&nbsp;&nbsp;&nbsp; ofstream file(filename);<br />\r\n&nbsp;&nbsp;&nbsp; if (!file) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; &quot;錯誤：無法建立檔案！&quot; &lt;&lt; endl;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp; stringstream ss;<br />\r\n&nbsp;&nbsp;&nbsp; serialize(root, ss);<br />\r\n&nbsp;&nbsp;&nbsp; file &lt;&lt; ss.str();<br />\r\n&nbsp;&nbsp;&nbsp; file.close();<br />\r\n}</p>\r\n\r\n<p>TreeNode* restoreFromFile(const string&amp; filename) {<br />\r\n&nbsp;&nbsp;&nbsp; ifstream file(filename);<br />\r\n&nbsp;&nbsp;&nbsp; if (!file) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; &quot;錯誤：找不到檔案！&quot; &lt;&lt; endl;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return nullptr;<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp; string data;<br />\r\n&nbsp;&nbsp;&nbsp; getline(file, data);<br />\r\n&nbsp;&nbsp;&nbsp; stringstream ss(data);<br />\r\n&nbsp;&nbsp;&nbsp; file.close();<br />\r\n&nbsp;&nbsp;&nbsp; return deserialize(ss);<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp; // 示例：構建一個二叉搜索樹<br />\r\n&nbsp;&nbsp;&nbsp; TreeNode* root = new TreeNode(4);<br />\r\n&nbsp;&nbsp;&nbsp; root-&gt;left = new TreeNode(2);<br />\r\n&nbsp;&nbsp;&nbsp; root-&gt;right = new TreeNode(5);<br />\r\n&nbsp;&nbsp;&nbsp; root-&gt;left-&gt;left = new TreeNode(1);<br />\r\n&nbsp;&nbsp;&nbsp; root-&gt;left-&gt;right = new TreeNode(3);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 將二叉搜索樹存檔到文件<br />\r\n&nbsp;&nbsp;&nbsp; saveToFile(root, &quot;bst_data.txt&quot;);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 從文件中讀取資料並恢復為二叉搜索樹<br />\r\n&nbsp;&nbsp;&nbsp; TreeNode* restored_root = restoreFromFile(&quot;bst_data.txt&quot;);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 現在 restored_root 包含了從存檔資料中恢復原狀的二叉搜索樹</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; // 清理內存（釋放節點）<br />\r\n&nbsp;&nbsp;&nbsp; // 此處省略清理程式碼</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,162 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不是，前序式要由右往左看，步驟為下 :  +  *  2  4  6  *  -  7  5    +  *  2  4  6  *  2  __         到第二步就會發現底線處少一個運算元，因此不是前序式  若把2, 4, 6其中一個數字往後移，就會變為合理的前序式，例如 :  +  *  2  4  *  -  7  5  6     +  *  2  4  *  2  6        +  *  2  4  12     +  8  12   = 20",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: # include &lt;iostream&gt;  # include &lt;fstream&gt;  # include &lt;string&gt;  using namespace std ;      int main( ) {          string file_name ;         cout &lt;&lt;  Enter a file name:   ;         cin &gt;&gt; file_name ;         file_name = file_name +  .txt  ;         ifstream input_file( file_name ) ;         ofstream output_file(  output.txt  ) ;         if ( input_file.is_open( ) &amp;&amp; output_file.is_open( ) ) {                 string line ;                 while ( getline( input_file, line ) ) {                         output_file &lt;&lt; line &lt;&lt; endl ;                 }  // while                     cout &lt;&lt;  File successfully read and written.  &lt;&lt; endl ;                 input_file.close( ) ;                 output_file.close( ) ;         }  // if         else {                 cout &lt;&lt;  Unable to open file.  &lt;&lt; endl ;         }  // else             return 0 ;  }  // main",
+        "output": "介紹？not just code..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;stack&gt; #include &lt;vector&gt; #include &lt;cstdlib&gt; #include &lt;string&gt;  int evalRPN(std::vector&lt;std::string&gt;&amp; tokens) {     std::stack&lt;int&gt; stack;        for (std::string&amp; token : tokens) {         if (token ==  +  || token ==  -  || token ==  *  || token ==  / ) {             int op2 = stack.top();             stack.pop();             int op1 = stack.top();             stack.pop();             if (token ==  + )                 stack.push(op1 + op2);             else if (token ==  - )                 stack.push(op1 - op2);             else if (token ==  * )                 stack.push(op1 * op2);         } else {             stack.push(atoi(token.c_str()));         }     }        return stack.top(); }  int main() {     std::vector&lt;std::string&gt; tokens = { 2 ,  4 ,  6 ,  * ,  + ,  7 ,  5 ,  - ,  * };     std::cout &lt;&lt; evalRPN(tokens); // Output: -12        return 0; }",
+        "output": "過程？ not code..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Python原始碼:    class Myclass:      public_member = 1      __private_member = 2      @classmethod      def private_member(self):          return self.__private_member       try:      print( Accessing public member )      print( The value of public member is ,Myclass.public_member)  except:      print( Can&#39;t access! )  print()  try:      print( Accessing private member directly )      print( The value of private member is ,Myclass.__private_member)  except:      print( Can&#39;t access! )  print()  try:      print( Accessing private member by classmethod )      print( The value of private member is ,Myclass.private_member())  except:      print( Can&#39;t access! )  輸出: Accessing public member The value of public member is 1  Accessing private member directly Can&#39;t access!  Accessing private member by classmethod The value of private member is 2  與C++的差異:  Python本身沒有嚴謹定義的private修飾詞，只能使用name mangling的方法在前面加上雙底線來達成類似的效果  這直接導致了Python中要隱藏資料的話，變數名稱會被限制一定要用雙底線開頭  而C++則只需要在變數宣告前一行加上private:就好",
+        "output": "Excellent!  寫得不錯的參考  其他舉例的參考"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;iostream&gt; using namespace std;  void findNumbers(int M, int currentSum, int currentNum, int position) {     // 如果目前數字已經是三位數     if (position == 3) {         // 檢查加總是否等於M，且百位數不為零         if (currentSum == M &amp;&amp; currentNum / 100 != 0) {             cout &lt;&lt; currentNum &lt;&lt; endl;         }         return;     }      // 遞迴生成數字     for (int i = 1; i &lt;= 9; ++i) {         // 遞迴呼叫，更新加總、數字、位置         findNumbers(M, currentSum + i, currentNum * 10 + i, position + 1);     } }  int main() {     // 輸入整數M     int M;     cout &lt;&lt;  請輸入整數M： ;     cin &gt;&gt; M;      // 呼叫遞迴函數     cout &lt;&lt;  滿足條件的三位數有：  &lt;&lt; endl;     findNumbers(M, 0, 0, 0);      return 0; }",
+        "output": "Nice, especially the use of currentNum * 10 + i; however, 3個數字不同有做到嗎？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 後序式 : 2 4 6 * + 7 5 - *  作法 : 數字與運算子都要進到堆疊做處理。每遇到運算子，pop出兩個堆疊物件，即拿出兩個運算元做該運算 ( 如果是合法的後序式，pop出來的兩物件一定是運算元 ) 。再把運算的結果推回堆疊中。最後的結果就是答案。(第二個pop的物件是被作運算的數字，7 5 -，7 為被減數，5 為減數 )  過程 :   後序式                                                      堆疊內( 最右邊為top )  2                                                              2  2 4                                                           2 4  2 4 6                                                        2 4 6  2 4 6 *                                                      2 ( 4 * 6 )   ==&gt; 2 24  2 4 6 * +                                                   ( 2 + 24 )   ==&gt; 26  2 4 6 * + 7                                                26 7  2 4 6 * + 7 5                                             26 7 5  2 4 6 * + 7 5 -                                           26 ( 7 - 5 ) ==&gt; 26 2  2 4 6 * + 7 5 - *                                         ( 26 * 2 )   ==&gt; 52  最終答案 : 52",
+        "output": "詳細專業 !!! 超淺顯易懂的啦 !!!!! Nice"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;iostream&gt;  using namespace std;  bool isThreeDigits(int number) {          return (99 &lt; number &amp;&amp; number &lt; 1000); // 100~999      } // end isThreeDigits()  bool findCombinations(int M, int curSum, int curNumber, int quantity) {          if (quantity == 3) {         if (curSum == M) {             cout &lt;&lt; endl &lt;&lt;  M =  ;             return true;         } else {             return false;         } // end if-else     } // end if           // 避免相同數字的同時，縮小迴圈需要跑的範圍     for (int n = curNumber+1 ; n &lt; M ; n++) {  // curNumber只會越來越大，+1是為了不重複                  if (findCombinations(M, curSum+n, n, quantity+1)) {             cout &lt;&lt; n;             if (quantity != 0) {                 cout &lt;&lt;   +  ;                 return true;             } // end if                      } // end if     } // end for          return false; } // end findCombinations()  int main(void) {          cout &lt;&lt;  ********************************************* ;     cout &lt;&lt; endl &lt;&lt;  *以下為尋找3個數字不同且加總等於M的所有3位數* ;     cout &lt;&lt; endl &lt;&lt;  ********************************************* ;     int M;     cout &lt;&lt; endl &lt;&lt;  請輸入M:  ;     cin &gt;&gt; M;          if (isThreeDigits(M)) {         findCombinations(M, 0, 0, 0);     } else {         cout &lt;&lt; endl &lt;&lt;  is not three digits ;     } // end if-else          return 0; } // end main()",
+        "output": "避免相同數字  有嗎？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 運算式: + * 2 4 6 * - 7 5是前序式嗎？為什麼？  原式: +(* 2 4) 6 * - 7 5     (* 2 4) 為前序式將他視為一個變數a  =&gt; (+ a 6) * - 7 5            (+ a 6) 為前序式將他視為一個變數b  =&gt; b * (- 7 5)                  (- 7 5) 為前序式將他視為一個變數c  =&gt; b * c  不為前序式  因此: + * 2 4 6 * - 7 5 不為前序式  原式: + * 2 4 6 * - 7 5 ，若將中間的 * 提到最前面改成=&gt; * + * 2 4 6 - 7 5 則為合法前序式",
+        "output": "很完整欸&gt;:D 在後面有註解 超貼心的 !!!! OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 前序是由後面往前算，因此流程可以長這樣  (1)  + * 2 4 6 * - 7 5  (2)  + * 2 4 6 * 2  在做第三不時會發生錯誤，  因為 2 後面應該還要再一個數字跟2做相乘的動作。  由此得知，此不為前序。",
+        "output": "好猛! 第三不時會發生錯誤"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 根據前序式的文法定義:  &lt;prefix&gt; = &lt;operand&gt; | &lt;operator&gt; &lt;prefix&gt; &lt;prefix&gt;  &lt;operand&gt; = 0 | 1 | 2 | ... | 9   &lt;operator&gt; = + | - | * | /    所以當E為一個合法的前序式，Y不是空字串，EY = &lt;prefix&gt;Y，不可能符合上述文法定義，必不為前序。  自左而右作運算可得知+*246 已為一合法前序式，但Y不為空字串 -&gt; 得證+ * 2 4 6 * - 7 5不為合法前序式",
+        "output": "太強啦 !!!!! Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 遍歷後序式，遇到數字存進堆疊，遇到運算子把堆疊中的兩個數字取出做四則運算再放回  1.堆疊放入2 2.堆疊放入4 3.堆疊放入6 4.遇到運算子&#39;*&#39;:堆疊取出4,6做:4*6 = 24，堆疊放入24 5.遇到運算子&#39;+&#39;:堆疊取出2,24做:2+24 = 26，堆疊放入26 6.堆疊放入7 7.堆疊放入5 8.遇到運算子&#39;-&#39;:堆疊取出7,5做:7-5 = 2，堆疊放入2 9.遇到運算子&#39;*&#39;:堆疊取出26,2做:26*2 =52，堆疊放入52  後序式遍歷結束，答案為52",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不是。  前序表示法是將運算子放到所有運算元之前的表示法，像是中序(2+3)轉成前序是+23  +*246*-75  =  +86*2 (8=*24,2=-75)  =  14*2 (14=+86)  運算子在運算元中前(false)",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不是  前序表示法是將運算子放到所有運算元之前的表示法，格式為「運算子 運算元 運算元」 +*246*-75 = +86*2 = 14*2( 不符合前序的要求 )",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: + * 2 4 6 * - 7 5不是前序式,前序式必須將運算子放在前方。  例如: 2+5此中序式若轉為前序式應為  + 2 5  上方的算式到了 + * 2 4 6 * 2 就卡住了",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: + * 2 4 6 * - 7 5 不是前序式  因為（7-5)=2  下一步就沒有數字與2相乘  所以並不正確。",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？  前序式由右往左做計算  因此原式 + * 2 4 6 * - 7 5  先從-75開始計算  = + * 2 4 6 * 2   接著算*2，但此時*2沒有其他的數字可以計算，不符合前序式運算  因此 + * 2 4 6 * - 7 5 並不是前序式。",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不是，前序式要由右往左看，步驟為下 :  +  *  2  4  6  *  -  7  5    +  *  2  4  6  *  2  __         到第二步就會發現底線處少一個運算元，因此不是前序式  若把2, 4, 6其中一個數字往後移，就會變為合理的前序式，例如 :  +  *  2  4  *  -  7  5  6     +  *  2  4  *  2  6        +  *  2  4  12     +  8  12   = 20",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: # include &lt;iostream&gt;  # include &lt;fstream&gt;  # include &lt;string&gt;  using namespace std ;      int main( ) {          string file_name ;         cout &lt;&lt;  Enter a file name:   ;         cin &gt;&gt; file_name ;         file_name = file_name +  .txt  ;         ifstream input_file( file_name ) ;         ofstream output_file(  output.txt  ) ;         if ( input_file.is_open( ) &amp;&amp; output_file.is_open( ) ) {                 string line ;                 while ( getline( input_file, line ) ) {                         output_file &lt;&lt; line &lt;&lt; endl ;                 }  // while                     cout &lt;&lt;  File successfully read and written.  &lt;&lt; endl ;                 input_file.close( ) ;                 output_file.close( ) ;         }  // if         else {                 cout &lt;&lt;  Unable to open file.  &lt;&lt; endl ;         }  // else             return 0 ;  }  // main",
+        "output": "介紹？not just code..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;stack&gt; #include &lt;vector&gt; #include &lt;cstdlib&gt; #include &lt;string&gt;  int evalRPN(std::vector&lt;std::string&gt;&amp; tokens) {     std::stack&lt;int&gt; stack;        for (std::string&amp; token : tokens) {         if (token ==  +  || token ==  -  || token ==  *  || token ==  / ) {             int op2 = stack.top();             stack.pop();             int op1 = stack.top();             stack.pop();             if (token ==  + )                 stack.push(op1 + op2);             else if (token ==  - )                 stack.push(op1 - op2);             else if (token ==  * )                 stack.push(op1 * op2);         } else {             stack.push(atoi(token.c_str()));         }     }        return stack.top(); }  int main() {     std::vector&lt;std::string&gt; tokens = { 2 ,  4 ,  6 ,  * ,  + ,  7 ,  5 ,  - ,  * };     std::cout &lt;&lt; evalRPN(tokens); // Output: -12        return 0; }",
+        "output": "過程？ not code..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Python原始碼:    class Myclass:      public_member = 1      __private_member = 2      @classmethod      def private_member(self):          return self.__private_member       try:      print( Accessing public member )      print( The value of public member is ,Myclass.public_member)  except:      print( Can&#39;t access! )  print()  try:      print( Accessing private member directly )      print( The value of private member is ,Myclass.__private_member)  except:      print( Can&#39;t access! )  print()  try:      print( Accessing private member by classmethod )      print( The value of private member is ,Myclass.private_member())  except:      print( Can&#39;t access! )  輸出: Accessing public member The value of public member is 1  Accessing private member directly Can&#39;t access!  Accessing private member by classmethod The value of private member is 2  與C++的差異:  Python本身沒有嚴謹定義的private修飾詞，只能使用name mangling的方法在前面加上雙底線來達成類似的效果  這直接導致了Python中要隱藏資料的話，變數名稱會被限制一定要用雙底線開頭  而C++則只需要在變數宣告前一行加上private:就好",
+        "output": "Excellent!  寫得不錯的參考  其他舉例的參考"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;iostream&gt; using namespace std;  void findNumbers(int M, int currentSum, int currentNum, int position) {     // 如果目前數字已經是三位數     if (position == 3) {         // 檢查加總是否等於M，且百位數不為零         if (currentSum == M &amp;&amp; currentNum / 100 != 0) {             cout &lt;&lt; currentNum &lt;&lt; endl;         }         return;     }      // 遞迴生成數字     for (int i = 1; i &lt;= 9; ++i) {         // 遞迴呼叫，更新加總、數字、位置         findNumbers(M, currentSum + i, currentNum * 10 + i, position + 1);     } }  int main() {     // 輸入整數M     int M;     cout &lt;&lt;  請輸入整數M： ;     cin &gt;&gt; M;      // 呼叫遞迴函數     cout &lt;&lt;  滿足條件的三位數有：  &lt;&lt; endl;     findNumbers(M, 0, 0, 0);      return 0; }",
+        "output": "Nice, especially the use of currentNum * 10 + i; however, 3個數字不同有做到嗎？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 後序式 : 2 4 6 * + 7 5 - *  作法 : 數字與運算子都要進到堆疊做處理。每遇到運算子，pop出兩個堆疊物件，即拿出兩個運算元做該運算 ( 如果是合法的後序式，pop出來的兩物件一定是運算元 ) 。再把運算的結果推回堆疊中。最後的結果就是答案。(第二個pop的物件是被作運算的數字，7 5 -，7 為被減數，5 為減數 )  過程 :   後序式                                                      堆疊內( 最右邊為top )  2                                                              2  2 4                                                           2 4  2 4 6                                                        2 4 6  2 4 6 *                                                      2 ( 4 * 6 )   ==&gt; 2 24  2 4 6 * +                                                   ( 2 + 24 )   ==&gt; 26  2 4 6 * + 7                                                26 7  2 4 6 * + 7 5                                             26 7 5  2 4 6 * + 7 5 -                                           26 ( 7 - 5 ) ==&gt; 26 2  2 4 6 * + 7 5 - *                                         ( 26 * 2 )   ==&gt; 52  最終答案 : 52",
+        "output": "詳細專業 !!! 超淺顯易懂的啦 !!!!! Nice"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: #include &lt;iostream&gt;  using namespace std;  bool isThreeDigits(int number) {          return (99 &lt; number &amp;&amp; number &lt; 1000); // 100~999      } // end isThreeDigits()  bool findCombinations(int M, int curSum, int curNumber, int quantity) {          if (quantity == 3) {         if (curSum == M) {             cout &lt;&lt; endl &lt;&lt;  M =  ;             return true;         } else {             return false;         } // end if-else     } // end if           // 避免相同數字的同時，縮小迴圈需要跑的範圍     for (int n = curNumber+1 ; n &lt; M ; n++) {  // curNumber只會越來越大，+1是為了不重複                  if (findCombinations(M, curSum+n, n, quantity+1)) {             cout &lt;&lt; n;             if (quantity != 0) {                 cout &lt;&lt;   +  ;                 return true;             } // end if                      } // end if     } // end for          return false; } // end findCombinations()  int main(void) {          cout &lt;&lt;  ********************************************* ;     cout &lt;&lt; endl &lt;&lt;  *以下為尋找3個數字不同且加總等於M的所有3位數* ;     cout &lt;&lt; endl &lt;&lt;  ********************************************* ;     int M;     cout &lt;&lt; endl &lt;&lt;  請輸入M:  ;     cin &gt;&gt; M;          if (isThreeDigits(M)) {         findCombinations(M, 0, 0, 0);     } else {         cout &lt;&lt; endl &lt;&lt;  is not three digits ;     } // end if-else          return 0; } // end main()",
+        "output": "避免相同數字  有嗎？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 運算式: + * 2 4 6 * - 7 5是前序式嗎？為什麼？  原式: +(* 2 4) 6 * - 7 5     (* 2 4) 為前序式將他視為一個變數a  =&gt; (+ a 6) * - 7 5            (+ a 6) 為前序式將他視為一個變數b  =&gt; b * (- 7 5)                  (- 7 5) 為前序式將他視為一個變數c  =&gt; b * c  不為前序式  因此: + * 2 4 6 * - 7 5 不為前序式  原式: + * 2 4 6 * - 7 5 ，若將中間的 * 提到最前面改成=&gt; * + * 2 4 6 - 7 5 則為合法前序式",
+        "output": "很完整欸&gt;:D 在後面有註解 超貼心的 !!!! OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 前序是由後面往前算，因此流程可以長這樣  (1)  + * 2 4 6 * - 7 5  (2)  + * 2 4 6 * 2  在做第三不時會發生錯誤，  因為 2 後面應該還要再一個數字跟2做相乘的動作。  由此得知，此不為前序。",
+        "output": "好猛! 第三不時會發生錯誤"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 根據前序式的文法定義:  &lt;prefix&gt; = &lt;operand&gt; | &lt;operator&gt; &lt;prefix&gt; &lt;prefix&gt;  &lt;operand&gt; = 0 | 1 | 2 | ... | 9   &lt;operator&gt; = + | - | * | /    所以當E為一個合法的前序式，Y不是空字串，EY = &lt;prefix&gt;Y，不可能符合上述文法定義，必不為前序。  自左而右作運算可得知+*246 已為一合法前序式，但Y不為空字串 -&gt; 得證+ * 2 4 6 * - 7 5不為合法前序式",
+        "output": "太強啦 !!!!! Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 遍歷後序式，遇到數字存進堆疊，遇到運算子把堆疊中的兩個數字取出做四則運算再放回  1.堆疊放入2 2.堆疊放入4 3.堆疊放入6 4.遇到運算子&#39;*&#39;:堆疊取出4,6做:4*6 = 24，堆疊放入24 5.遇到運算子&#39;+&#39;:堆疊取出2,24做:2+24 = 26，堆疊放入26 6.堆疊放入7 7.堆疊放入5 8.遇到運算子&#39;-&#39;:堆疊取出7,5做:7-5 = 2，堆疊放入2 9.遇到運算子&#39;*&#39;:堆疊取出26,2做:26*2 =52，堆疊放入52  後序式遍歷結束，答案為52",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不是。  前序表示法是將運算子放到所有運算元之前的表示法，像是中序(2+3)轉成前序是+23  +*246*-75  =  +86*2 (8=*24,2=-75)  =  14*2 (14=+86)  運算子在運算元中前(false)",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不是  前序表示法是將運算子放到所有運算元之前的表示法，格式為「運算子 運算元 運算元」 +*246*-75 = +86*2 = 14*2( 不符合前序的要求 )",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: + * 2 4 6 * - 7 5不是前序式,前序式必須將運算子放在前方。  例如: 2+5此中序式若轉為前序式應為  + 2 5  上方的算式到了 + * 2 4 6 * 2 就卡住了",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: + * 2 4 6 * - 7 5 不是前序式  因為（7-5)=2  下一步就沒有數字與2相乘  所以並不正確。",
+        "output": "Duplicate"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？  前序式由右往左做計算  因此原式 + * 2 4 6 * - 7 5  先從-75開始計算  = + * 2 4 6 * 2   接著算*2，但此時*2沒有其他的數字可以計算，不符合前序式運算  因此 + * 2 4 6 * - 7 5 並不是前序式。",
+        "output": "Duplicate"
+    }
+]

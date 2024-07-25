@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:46",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174275",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2022-10-24 12:05:18",
+        "poster": "11027243",
+        "realname": "陳冠妤",
+        "email": "hiroto104360@gmail.com",
+        "homepage": null,
+        "subject": "121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。",
+        "content": "<p>環狀鏈結串列 Circular Linked List：</p>\r\n\r\n<p><br />\r\n說明：</p>\r\n\r\n<ul>\r\n\t<li>將單向鏈接串列最後一個節點的指標，指向第一個節點(HEAD)</li>\r\n\t<li>不論從哪個節點開始讀取，都能經過所有的節點，不會指向NULL</li>\r\n</ul>\r\n\r\n<p>舉例：</p>\r\n\r\n<p>像是團康遊戲 鬼抓人，大家會圍成一個圓圈，先選一個人當鬼 鬼會在圓圈外尋找下手的目標，假設這個鬼拍了你&nbsp;你就要站起來追他</p>\r\n\r\n<ul>\r\n\t<li>如果追到他，他就繼續當鬼</li>\r\n\t<li>如果讓鬼跑一圈，搶坐在你原本的位置上，那就要換你當鬼</li>\r\n</ul>\r\n\r\n<p>上述的遊戲，就很像是環狀連節串列，不管鬼從哪邊開始跑哪邊開始挑對象，他跑的路徑一定會經過所有人</p>\r\n\r\n<p><br />\r\n另外還有約瑟夫問題，其解法也是使用環狀鏈結串列來模擬整個過程</p>\r\n\r\n<p><br />\r\n參考：</p>\r\n\r\n<p>https://zh.wikipedia.org/wiki/%E7%BA%A6%E7%91%9F%E5%A4%AB%E6%96%AF%E9%97%AE%E9%A2%98</p>\r\n\r\n<p><a href=\"https://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8\">https://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "37",
+        "lang": "1"
+    }
+}

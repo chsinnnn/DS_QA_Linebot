@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000020.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000020",
+        "site": "1000110001",
+        "pt": "2023-10-04 15:46:00",
+        "poster": "11127238",
+        "realname": "王詩霈",
+        "email": "rita11127238@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p><span style=\"font-family:新細明體,serif\">遞迴呼叫可能導致記憶體出現問題，淺在原因包括</span><span style=\"font-family:新細明體,serif\">：</span></p>\r\n\r\n<p>1.<span style=\"font-family:新細明體,serif\">當遞迴呼叫過深，</span> <span style=\"font-family:新細明體,serif\">不斷呼叫堆疊，可能造成堆疊溢位</span>(Stack Overflow)<span style=\"font-family:新細明體,serif\">。例如</span><span style=\"font-family:新細明體,serif\">：</span>segmentation fault<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p>2.<span style=\"font-family:新細明體,serif\">如果在遞迴中錯誤分配記憶體或沒有釋放記憶體</span>(Memory Leak)<span style=\"font-family:新細明體,serif\">，可能導致記憶體洩漏。例如</span><span style=\"font-family:新細明體,serif\">：</span>bad_alloc<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p>3.<span style=\"font-family:新細明體,serif\">錯誤的遞迴停止條件也可能會導致無限迴圈</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:07" type="post" filename="b000000006.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278680</board_id>
+  <node>000000006</node>
+  <site>1000110001</site>
+  <pt>2023-07-12 13:12:36</pt>
+  <poster>06005635</poster>
+  <realname>&#x9EC3;&#x535A;&#x5143;  </realname>
+  <email>maruko1mjw@yahoo.com.tw</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;123 </subject>
+  <content>&lt;p&gt;&#x984C;&#x76EE; :&amp;nbsp;&#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x8907;&#x88FD;&#x4E00;&#x6574;&#x500B;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B54;&#x6848; :&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7BC0;&#x9EDE;&#x7D50;&#x69CB;&lt;br /&gt;&#xD;
+struct Node {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int data;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* next;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x8907;&#x88FD;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x51FD;&#x6578;&lt;br /&gt;&#xD;
+Node* cloneLinkedList(Node* head) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (head == nullptr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return nullptr;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5275;&#x5EFA;&#x65B0;&#x7684;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x982D;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* newHead = new Node();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; newHead-&amp;gt;data = head-&amp;gt;data;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; newHead-&amp;gt;next = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; Node* currentNode = head-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* clonedCurrentNode = newHead;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x904D;&#x6B77;&#x539F;&#x59CB;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x4E26;&#x8907;&#x88FD;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (currentNode != nullptr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Node* newNode = new Node();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; newNode-&amp;gt;data = currentNode-&amp;gt;data;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; newNode-&amp;gt;next = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; clonedCurrentNode-&amp;gt;next = newNode;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; currentNode = currentNode-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; clonedCurrentNode = clonedCurrentNode-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return newHead;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;&#x78BC;&lt;br /&gt;&#xD;
+int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x5275;&#x5EFA;&#x539F;&#x59CB;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* head = new Node();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; head-&amp;gt;data = 1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; Node* node2 = new Node();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node2-&amp;gt;data = 2;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; Node* node3 = new Node();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node3-&amp;gt;data = 3;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; head-&amp;gt;next = node2;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node2-&amp;gt;next = node3;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; node3-&amp;gt;next = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x8907;&#x88FD;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* clonedList = cloneLinkedList(head);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x8F38;&#x51FA;&#x539F;&#x59CB;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x539F;&#x59CB;&#x93C8;&#x7D50;&#x4E32;&#x5217;: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* currentNode = head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (currentNode != nullptr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; currentNode-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; currentNode = currentNode-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x8F38;&#x51FA;&#x8907;&#x88FD;&#x7684;&#x93C8;&#x7D50;&#x4E32;&#x5217;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x8907;&#x88FD;&#x7684;&#x93C8;&#x7D50;&#x4E32;&#x5217;: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; currentNode = clonedList;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (currentNode != nullptr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; currentNode-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; currentNode = currentNode-&amp;gt;next;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x57F7;&#x884C;&#x7D50;&#x679C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/0/6/06005635/images/%E6%90%B6%E7%AD%94123.png" style="height:183px; width:1004px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>25</hit>
+  <lang>1</lang>
+</data>

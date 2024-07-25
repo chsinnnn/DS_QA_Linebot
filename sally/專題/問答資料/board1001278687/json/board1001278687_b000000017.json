@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:16:49",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答223",
+        "content": "<p><strong>相同搜尋鍵的二筆資料如何存入二元搜尋樹？</strong></p>\r\n\r\n<p><strong>在二元搜尋樹中，如果有相同的搜尋鍵，可以使用一些策略來處理這種情況。常見的策略包括：</strong></p>\r\n\r\n<p><strong>1.計數器（Counters）：在每個節點中，除了存儲搜尋鍵值之外，還可以存儲一個計數器，用於記錄相同鍵值出現的次數。當有重複的搜尋鍵插入時，只需要增加計數器，而不是插入一個新的節點。</strong></p>\r\n\r\n<p><strong>2.重複的搜尋鍵作為左子樹：對於有相同搜尋鍵的節點，我們可以將重複的搜尋鍵作為左子樹，這樣就能保持BST的有序性。當要插入一個重複的搜尋鍵時，將其插入到左子樹中。</strong></p>\r\n\r\n<p><strong>class Node:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, key):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.key = key</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.left = None</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.right = None</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.count = 1&nbsp; # 初始化計數器為1</strong></p>\r\n\r\n<p><strong>def insert(root, key):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;if root is None:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Node(key)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;if key == root.key:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root.count += 1&nbsp; # 如果搜尋鍵已存在，增加計數器</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;elif key &lt; root.key:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root.left = insert(root.left, key)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;else:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root.right = insert(root.right, key)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;return root</strong></p>\r\n\r\n<p><strong># 建立一棵空的二元搜尋樹</strong></p>\r\n\r\n<p><strong>root = None</strong></p>\r\n\r\n<p><strong># 依次插入節點</strong></p>\r\n\r\n<p><strong>root = insert(root, 5)</strong></p>\r\n\r\n<p><strong>root = insert(root, 2)</strong></p>\r\n\r\n<p><strong>root = insert(root, 8)</strong></p>\r\n\r\n<p><strong>root = insert(root, 5)&nbsp; # 插入重複的搜尋鍵</strong></p>\r\n\r\n<p><strong>root = insert(root, 2)&nbsp; # 插入重複的搜尋鍵</strong></p>\r\n\r\n<p><strong>root = insert(root, 5)&nbsp; # 插入重複的搜尋鍵</strong></p>\r\n\r\n<p><strong># 中序走訪，檢查結果</strong></p>\r\n\r\n<p><strong>def inorder_traversal(root):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;if root:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inorder_traversal(root.left)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f&quot;{root.key} (count: {root.count})&quot;)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inorder_traversal(root.right)</strong></p>\r\n\r\n<p><strong>inorder_traversal(root)</strong></p>\r\n\r\n<p><strong>輸出結果：</strong></p>\r\n\r\n<p><strong>2 (count: 2)</strong></p>\r\n\r\n<p><strong>5 (count: 3)</strong></p>\r\n\r\n<p><strong>8 (count: 1)</strong></p>\r\n\r\n<p><strong>使用計數器來處理重複的搜尋鍵。當插入重複的搜尋鍵時，只需要增加計數器，而不是插入新的節點。這樣可以節省空間並保持BST的有序性。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

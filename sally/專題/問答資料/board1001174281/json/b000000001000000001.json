@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:01:04",
+        "@type": "post",
+        "@filename": "b000000001000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174281",
+        "node": "000000001000000001",
+        "site": "1000110001",
+        "pt": "2022-12-26 11:40:13",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 226. 舉例說明如何為二元搜尋樹刪除節點。",
+        "content": "<p>&quot;舉例說明如何為二元搜尋樹刪除節點。&quot;&nbsp;</p>\r\n\r\n<p>Give an <strong>example </strong>to show how to delete a node from binary search tree.</p>\r\n\r\n<p><span style=\"color:#ff0000\">Do&nbsp;NOT provide the code!</span></p>\r\n\r\n<p><em>Only an&nbsp;example and the explanation in your own words are needed!</em></p>\r\n\r\n<p>PS. An example means the input data, while explanation refers to the steps to proceed.</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "3",
+        "lang": "1"
+    }
+}

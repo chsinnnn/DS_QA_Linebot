@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:00:55" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174282</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-12-26 06:41:50</pt>
+  <poster>11027247</poster>
+  <realname>&#x8A31;&#x5A01;&#x8317;  </realname>
+  <email>as355068@asjh.ntpc.edu.tw</email>
+  <homepage>  </homepage>
+  <subject>222. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5982;&#x4F55;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x65B0;&#x589E;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;struct Bst{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int key ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;vector&amp;lt;int&amp;gt; no ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Bst *left ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Bst *right ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;Bst *Insert_Bst( Bst *node, int num&amp;nbsp;){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x628A;&#x8CC7;&#x6599;&#x653E;&#x5165;&#x6A39;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( node != NULL ){&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x9084;&#x672A;&#x627E;&#x5230;&#x6700;&#x4E0B;&#x9762;&#xFF0C;&#x9078;&#x64C7;&#x5F80;&#x5DE6;&#x9084;&#x662F;&#x5F80;&#x53F3;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if( num&amp;nbsp; &amp;gt; node-&amp;gt;key ){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6BD4;&#x76EE;&#x524D;&#x7684;&#x5927;&#xFF0C;&#x5F80;&#x53F3;&#x908A;&#x905E;&#x8FF4;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;right = Insert_Bst( node-&amp;gt;right, num&amp;nbsp; ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else if( num&amp;nbsp; &amp;lt; node-&amp;gt;key ){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x6BD4;&#x76EE;&#x524D;&#x7684;&#x5C0F;&#xFF0C;&#x5F80;&#x5DE6;&#x908A;&#x905E;&#x8FF4;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;left = Insert_Bst( node-&amp;gt;left, num&amp;nbsp; ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x503C;&#x4E00;&#x6A23;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;no.push_back( num&amp;nbsp; ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x65B0;&#x589E;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node = new Bst ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;key =num&amp;nbsp; ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;no.push_back(num&amp;nbsp;) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;left = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;node-&amp;gt;right = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return node ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x900F;&#x904E;&#x905E;&#x8FF4;&#x627E;&#x5230;&#x8981;&#x65B0;&#x589E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5982;&#x679C;&#x8981;&#x65B0;&#x589E;&#x7684;&#x503C;&#x6BD4;&#x8F03;&#x5927;&#x5C31;&#x5F80;&#x53F3;&#x905E;&#x8FF4;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5982;&#x679C;&#x8981;&#x65B0;&#x589E;&#x7684;&#x503C;&#x6BD4;&#x8F03;&#x5C0F;&#x5C31;&#x5F80;&#x5DE6;&#x905E;&#x8FF4;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5982;&#x679C;&#x4E00;&#x6A23;&#x5C31;&#x628A;&#x6240;&#x9700;&#x7684;&#x8CC7;&#x6599;&#x5B58;&#x5728;&#x540C;&#x4E00;&#x500B;&#x9EDE;&#x4E0A;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>38</hit>
+  <lang>1</lang>
+</data>

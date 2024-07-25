@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:09" type="post" filename="b000000014.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162649</board_id>
+  <node>000000014</node>
+  <site>1000110001</site>
+  <pt>2022-10-17 00:27:09</pt>
+  <poster>11027105</poster>
+  <realname>&#x76E7;&#x99FF;&#x63DA;  </realname>
+  <email>jy.lu123456@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>116. &#x5C07;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x524D;&#x5E8F;&#x5F0F;prefix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002;* a b + c * d e + f * + w z + * </subject>
+  <content>&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F8C;&#x5E8F;&#x5F0F;&lt;/span&gt;: &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x904B;&#x7B97;&#x5143;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x904B;&#x7B97;&#x5143;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x904B;&#x7B97;&#x5B50;&lt;/span&gt; ex: ab+&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x524D;&#x5E8F;&#x5F0F;&lt;/span&gt;: &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x904B;&#x7B97;&#x5B50;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x904B;&#x7B97;&#x5143;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x904B;&#x7B97;&#x5143;&lt;/span&gt; ex: +ab&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F8C;&#x5E8F;&#x5F0F;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8F49;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x524D;&#x5E8F;&#x5F0F;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F9E;&#x5DE6;&#x908A;&#x958B;&#x59CB;&#x627E;&#x904B;&#x7B97;&#x5B50;&lt;/span&gt;,&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x627E;&#x5230;&#x5C31;&#x628A;&#x904B;&#x7B97;&#x5B50;&#x79FB;&#x5230;&#x524D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143;&lt;/span&gt;(&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6216;&#x662F;&lt;/span&gt; &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x88AB;&#x62EC;&#x4F4F;&#x7684;&#x5F0F;&#x5B50;&lt;/span&gt;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x524D;&#x9762;&lt;/span&gt;, &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x505A;&#x5230;&#x6700;&#x53F3;&#x908A;&#x5F8C;&#x518D;&#x5C07;&#x62EC;&#x865F;&#x79FB;&#x9664;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;a b + c * d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(+ab)c*de+f*+wz+*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[*(+ab)c]de+f*+wz+*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[*(+ab)c](d+e)f*+wz+*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;[*(+ab)c][*(+de)f]+wz+*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{+[*(+ab)c][*(+de)f]}wz+*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{+[*(+ab)c][*(+de)f]}(+wz)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;*{+[*(+ab)c][*(+de)f]}(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;*+*+abc*+def+wz&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>25</hit>
+  <lang>1</lang>
+</data>

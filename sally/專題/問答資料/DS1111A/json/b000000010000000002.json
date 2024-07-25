@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000010000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000010000000002",
+        "site": "1000110001",
+        "pt": "2023-09-21 13:38:22",
+        "poster": "11277028",
+        "realname": "江晨銘",
+        "email": "gugugu1127@gmail.com",
+        "homepage": null,
+        "subject": "Re: 102",
+        "content": "<p>1. 附上的程式執行後出來的結果並不在你所提供的vector中。<br />\r\n2. 題目要求的是整數，型別應該使用int做宣告<br />\r\n3. pivotIndex 代表的是基準點的座標，同樣不應該以float宣告</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

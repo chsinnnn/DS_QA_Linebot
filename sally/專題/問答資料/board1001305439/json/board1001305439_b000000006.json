@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:18",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305439",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-12-20 18:56:38",
+        "poster": "11120427",
+        "realname": "蔡絜茵",
+        "email": "anna0809123@gmail.com",
+        "homepage": null,
+        "subject": "220. 舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。",
+        "content": "<p>&nbsp;假設二元樹為 A -&gt; B -&gt; C</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>前序（Preorder）：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>走訪順序：根節點 -&gt; 左子樹 -&gt; 右子樹。</li>\r\n\t\t<li>前序走訪結果為 A -&gt; B -&gt; C。</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>中序（Inorder）：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>走訪順序：左子樹 -&gt; 根節點 -&gt; 右子樹。</li>\r\n\t\t<li>中序走訪結果為 B -&gt; A -&gt; C。</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>後序（Postorder）：</strong></p>\r\n\r\n\t<ul>\r\n\t\t<li>走訪順序：左子樹 -&gt; 右子樹 -&gt; 根節點。</li>\r\n\t\t<li>後序走訪結果為 B -&gt; C -&gt; A。</li>\r\n\t</ul>\r\n\t</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

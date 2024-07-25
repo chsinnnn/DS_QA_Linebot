@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:57:02" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296425</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2023-12-07 00:09:49</pt>
+  <poster>11127112</poster>
+  <realname>&#x838A;&#x6C9B;&#x5112;  </realname>
+  <email>a0922166067@gmail.com</email>
+  <homepage> </homepage>
+  <subject>211 </subject>
+  <content>&lt;p&gt;&lt;span style="font-size:14px"&gt;&lt;strong&gt;&#x8209;&#x4F8B;&#x6BD4;&#x8F03;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x548C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x7684;&#x8CC7;&#x6599;&#x4EA4;&#x63DB;swap&#x6B21;&#x6578;&#xFF0C;&#x4F55;&#x8005;&#x8F03;&#x591A;&#xFF1F;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&#x5047;&#x8A2D;&#x6709;&#x4E00;&#x4E32;&#x672A;&#x6392;&#x5217;&#x6578;&#x64DA; 23 78 45 8&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;Bubble sort:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E00;&#x6B21;&#x8FF4;&#x5708;: 23&#x548C;78&#x6BD4;&#xFF0C;23&#x5C0F;&#x4E0D;&#x52D5;&lt;/span&gt;&#xFF0C;&#x63A5;&#x8457;78&#x548C;45&#x6BD4;&#xFF0C;45&#x5C0F;&#xFF0C;&#x4EA4;&#x63DB;&#xFF0C;&#x63A5;&#x8457;78&#x548C;8&#x6BD4;&#xFF0C;8&#x5C0F;&#xFF0C;&#x4EA4;&#x63DB; =&amp;gt;&#x63DB;2&#x6B21; &#x76EE;&#x524D;&#x9806;&#x5E8F;&#xFF1A;23 45 8 78&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &lt;span style="font-size:12px"&gt;&#x7B2C;&#x4E8C;&#x6B21;&#x8FF4;&#x5708;:23&#x548C;45&#x6BD4;&#xFF0C;23&#x5C0F;&#x4E0D;&#x52D5;&#xFF0C;&#x63A5;&#x8457;45&#x548C;8&#x6BD4;&#xFF0C;8&#x5C0F;&#xFF0C;&#x4EA4;&#x63DB;=&amp;gt;&#x63DB;1&#x6B21; &#x76EE;&#x524D;&#x9806;&#x5E8F;&#xFF1A;23 8 45 78&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E09;&#x6B21;&#x8FF4;&#x5708;:23&#x548C;8&#x6BD4;&#xFF0C;8&#x5C0F;&#xFF0C;&#x4EA4;&#x63DB; =&amp;gt; &#x63DB;1&#x6B21; &#x76EE;&#x524D;&#x9806;&#x5E8F;&#xFF1A; 8 23 45 78&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7E3D;&#x5171;&#x4EA4;&#x63DB;4&#x6B21;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;Selection sort:&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E00;&#x6B21;: 8 | 78 45 23 =&amp;gt; &#x4EA4;&#x63DB;1&#x6B21;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E8C;&#x6B21;&#xFF1A;8 23 | 45 78 =&amp;gt; &#x4EA4;&#x63DB;1&#x6B21;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7B2C;&#x4E09;&#x6B21;:&amp;nbsp; 8 23 45 | 78 =&amp;gt;&#x4E0D;&#x4EA4;&#x63DB;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7B2C;&#x56DB;&#x6B21;: 8 23 45 78&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&amp;nbsp; &amp;nbsp; &#x7E3D;&#x5171;&#x4EA4;&#x63DB;2 &#x6B21;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:12px"&gt;&#x56E0;&#x6B64;&#xFF0C;&#x5F9E;&#x4EE5;&#x4E0A;&#x53EF;&#x4EE5;&#x770B;&#x51FA;bubble sort&#x7684;&#x4EA4;&#x63DB;&#x6B21;&#x6578;&#x8F03;selection sort &#x591A;&#x3002;&lt;/span&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>21</hit>
+  <lang>1</lang>
+</data>

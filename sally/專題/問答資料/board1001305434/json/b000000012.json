@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:08",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305434",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-10-24 15:45:19",
+        "poster": "11120427",
+        "realname": "蔡絜茵",
+        "email": "anna0809123@gmail.com",
+        "homepage": null,
+        "subject": "124. 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。",
+        "content": "<p>總共有五種</p>\r\n\r\n<p>1.()()()</p>\r\n\r\n<p>2.()(())</p>\r\n\r\n<p>3.(())()</p>\r\n\r\n<p>4.(()())</p>\r\n\r\n<p>5.((()))</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

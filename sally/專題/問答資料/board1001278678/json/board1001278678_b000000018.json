@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-11 19:08:02",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答115",
+        "content": "<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>void modify(int* ptr) {<br />\r\n&nbsp; &nbsp; *ptr = 500; //修改指標指向的值<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int num = 100;<br />\r\n&nbsp; &nbsp; int* ptr = &amp;num; //取得的記憶體位址</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;原本的值: &quot; &lt;&lt; num &lt;&lt; endl;</p>\r\n\r\n<p><br />\r\n&nbsp; &nbsp; modify(ptr);</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;經過修改後的值: &quot; &lt;&lt; num &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>執行結果如下<br />\r\n<img alt=\"\" src=\"/user/0/6/06005634/images/%E5%9C%96%E7%89%873.png\" style=\"height:171px; width:692px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000026.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000026",
+        "site": "1000110001",
+        "pt": "2023-07-24 23:02:40",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答216",
+        "content": "<p><span style=\"font-size:14px\">216. 舉例解說希爾排序shell sort是否穩定stable。</span></p>\r\n\r\n<p>shell sort的概念就是將input array的元素先分割成n個小陣列，<br />\r\n然後n/2做高斯取底=k(這裡用k來表示)，來當作間隔的長度，<br />\r\n每次在以k的間距來做比較，然後逐漸縮小間隔的長度，直到k=1，<br />\r\n最後再用插入排序做最後檢查。</p>\r\n\r\n<p>而在比較交換的過程中，原先在前面的元素可能會被換到後面，<br />\r\n此時就可以稱為unstable。</p>\r\n\r\n<p>4/2=2，span=2<br />\r\n-----------------<br />\r\nstep0<br />\r\ninput data A=[<u><strong>4</strong></u>][4][2][7]</p>\r\n\r\n<p>step1<br />\r\ninput data A=[2][4][<u><strong>4</strong></u>][7]&nbsp; &lt;-----此時原本在前面的元素被換到後面了，這樣就是unstable</p>\r\n\r\n<p>step2<br />\r\ninput data A=[2][4][<u><strong>4</strong></u>][7]<br />\r\n無須比較及交換的元素，結束sorting</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

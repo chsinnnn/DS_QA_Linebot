@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2022-09-16 16:38:58",
+        "poster": "11027142",
+        "realname": "林蕙郁",
+        "email": "tiffanylin0914@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>一、當問題可以拆解為小問題，且每個問題都是具有重複性的狀態下，是非常適合使用遞迴的。</p>\r\n\r\n<p>例如：1.階乘 2.累加 3.樹狀資料結構</p>\r\n\r\n<p>二、想要美化&amp;簡化程式碼，讓程式碼看起來簡潔有力，也較易於除錯。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "80",
+        "lang": "1"
+    }
+}

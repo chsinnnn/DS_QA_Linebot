@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:11",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296426",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-12-17 00:50:58",
+        "poster": "11127110",
+        "realname": "許至昀",
+        "email": "alberthsu919@gmail.com",
+        "homepage": null,
+        "subject": "219",
+        "content": "<p>219. <span style=\"font-family:新細明體,serif\">舉例區別完全</span>full<span style=\"font-family:新細明體,serif\">、完整</span>complete<span style=\"font-family:新細明體,serif\">及平衡</span>balanced<span style=\"font-family:新細明體,serif\">二元樹的差異。</span></p>\r\n\r\n<p>Full Binary Tree <span style=\"font-family:新細明體,serif\">完全樹：除了最底層外，其餘節點都有左右兩個子節點。</span></p>\r\n\r\n<p>Complete Binary Tree<span style=\"font-family:新細明體,serif\">完整樹：最底層之上為完全樹，最底層的節點是由左而右添加。</span></p>\r\n\r\n<p>Balanced Binary Tree <span style=\"font-family:新細明體,serif\">平衡樹：每一個節點的兩子樹之樹高，相差不大於</span>1<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\"><img alt=\"\" src=\"/user/1/1/11127110/images/%E9%99%90%E6%99%82%E6%90%B6%E7%AD%94%20216-220.jpg\" style=\"height:134px; width:600px\" /></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

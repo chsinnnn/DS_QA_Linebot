@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2022-10-18 23:42:37",
+        "poster": "11027209",
+        "realname": "巫年巨",
+        "email": "yy911123@gmail.com",
+        "homepage": null,
+        "subject": "119. 寫C++程式碼說明刪除鏈結串列linked list第3個節點。",
+        "content": "<p>#include &lt;bits/stdc++.h&gt;</p>\r\n\r\n<p>struct Node{</p>\r\n\r\n<p>&nbsp; int value ;</p>\r\n\r\n<p>&nbsp; Node *next;</p>\r\n\r\n<p>} ;&nbsp;</p>\r\n\r\n<p>typedef Node * NodePtr;</p>\r\n\r\n<p>int main(){</p>\r\n\r\n<p>&nbsp; int i = 0;</p>\r\n\r\n<p>&nbsp; NodePtr n, temp, cur;<br />\r\n&nbsp;&nbsp;<br />\r\n&nbsp; n = new Node;</p>\r\n\r\n<p>&nbsp; temp = n ; // temp指向n</p>\r\n\r\n<p>&nbsp; for( i = 1 ; i &lt;= 10 ; i++){ &nbsp;// 假設node有10項</p>\r\n\r\n<p>&nbsp; &nbsp; temp-&gt;value = i ;</p>\r\n\r\n<p>&nbsp; &nbsp; temp-&gt;next = new Node;</p>\r\n\r\n<p>&nbsp; &nbsp; temp = temp-&gt;next;</p>\r\n\r\n<p>&nbsp; &nbsp; temp-&gt;next = NULL ; //後面接null</p>\r\n\r\n<p>&nbsp; } // for<br />\r\n&nbsp;</p>\r\n\r\n<p>&nbsp; // ******* 這邊是function<br />\r\n&nbsp; temp = n;<br />\r\n&nbsp; for( i = 1 ; i &lt;= 3 ; i++){</p>\r\n\r\n<p>&nbsp; &nbsp; if ( temp-&gt;next != NULL &amp;&amp; i != 3) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; cur = temp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; temp = temp-&gt;next;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;} // if</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;else if ( temp -&gt; next == NULL &amp;&amp; i != 3)</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; break; // linked list長度小於3</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;if ( i == 3 ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;if ( temp-&gt;next == NULL ) { // 長度=3 刪除第三項</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cur-&gt;next = NULL ;&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;delete temp ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;temp = NULL ; &nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;} // if</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;else if ( temp -&gt;next != NULL ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cur-&gt;next = temp-&gt;next; // 第二項移去第四項</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;temp-&gt;next = NULL ; // 第三項斷路</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;delete temp ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;temp = NULL ;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;} // else if</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;} // if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />\r\n&nbsp; } // for</p>\r\n\r\n<p>&nbsp; // ******* 到這邊是function<br />\r\n} // main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "6",
+        "lang": "1"
+    }
+}

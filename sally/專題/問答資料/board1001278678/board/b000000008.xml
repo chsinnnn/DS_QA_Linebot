@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 22:47:41</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;112 </subject>
+  <content>&lt;p&gt;112.&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5169;&#x500B;&#x985E;&#x5225;&#x9593;&#x7684;&#x7E7C;&#x627F;inheritance&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F7F;&#x7528;&#x7E7C;&#x627F;&#xFF08;inheritance&#xFF09;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x985E;&#x5225;&#xFF0C;&#x8A72;&#x985E;&#x5225;&#x5C07;&#x7E7C;&#x627F;&#x81EA;&#x53E6;&#x4E00;&#x500B;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x985E;&#x5225;&#xFF0C;&#x4E26;&#x7372;&#x5F97;&#x7236;&#x985E;&#x5225;&#xFF08;&#x57FA;&#x985E;&#x5225;&#xFF09;&#x7684;&#x5C6C;&#x6027;&#x548C;&#x884C;&#x70BA;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x662F;&#x5229;&#x7528;&#x52D5;&#x7269;Animal(&#x7236;&#x985E;&#x5225;)&#x53CA;dog(&#x5B50;&#x985E;&#x5225;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x57FA;&#x985E;&#x5225;&#xFF08;&#x7236;&#x985E;&#x5225;&#xFF09;&lt;br /&gt;&#xD;
+class Animal {&lt;br /&gt;&#xD;
+public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; void eat() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;Animal is eating.&amp;quot; &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x884D;&#x751F;&#x985E;&#x5225;&#xFF08;&#x5B50;&#x985E;&#x5225;&#xFF09;&#xFF0C;&#x7E7C;&#x627F;&#x81EA;Animal&#x985E;&#x5225;&lt;br /&gt;&#xD;
+class Dog : public Animal {&lt;br /&gt;&#xD;
+public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; void bark() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;Dog is barking.&amp;quot; &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; Dog dog;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; dog.eat();&amp;nbsp;&amp;nbsp; // &#x5B50;&#x985E;&#x5225;Dog&#x7E7C;&#x627F;&#x4E86;&#x7236;&#x985E;&#x5225;Animal&#x7684;eat()&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; dog.bark();&amp;nbsp; // &#x5B50;&#x985E;&#x5225;Dog&#x81EA;&#x5DF1;&#x7684;bark()&#x51FD;&#x5F0F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Animal&#x662F;&#x4E00;&#x500B;&#x57FA;&#x985E;&#x5225;&#xFF08;&#x7236;&#x985E;&#x5225;&#xFF09;&#xFF0C;&#x5B83;&#x6709;&#x4E00;&#x500B;eat()&#x51FD;&#x5F0F;&#x3002;&#x7136;&#x5F8C;&#x6211;&#x5011;&#x5275;&#x5EFA;&#x4E86;&#x4E00;&#x500B;&#x884D;&#x751F;&#x985E;&#x5225;&#xFF08;&#x5B50;&#x985E;&#x5225;&#xFF09;Dog&#xFF0C;&#x5B83;&#x4F7F;&#x7528;&#x95DC;&#x9375;&#x5B57;public&#x7E7C;&#x627F;&#x81EA;Animal&#x3002;&#x884D;&#x751F;&#x985E;&#x5225;Dog&#x5177;&#x6709;&#x81EA;&#x5DF1;&#x7684;bark()&#x51FD;&#x5F0F;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5728;main()&#x51FD;&#x5F0F;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x5275;&#x5EFA;&#x4E86;&#x4E00;&#x500B;Dog&#x7269;&#x4EF6;dog&#xFF0C;&#x4E26;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;dog.eat()&#x548C;dog.bark()&#x8ABF;&#x7528;&#x57FA;&#x985E;&#x5225;&#x548C;&#x884D;&#x751F;&#x985E;&#x5225;&#x7684;&#x51FD;&#x5F0F;&#x3002;&#x7531;&#x65BC;Dog&#x7E7C;&#x627F;&#x4E86;Animal&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Animal&#x985E;&#x5225;&#x4E2D;&#x7684;eat()&#x51FD;&#x5F0F;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>28</hit>
+  <lang>1</lang>
+</data>

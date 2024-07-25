@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000011000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000011000000003",
+        "site": "1000110001",
+        "pt": "2022-10-14 08:01:50",
+        "poster": "11027147",
+        "realname": "邱峻彥",
+        "email": "jim97503@gmail.com",
+        "homepage": null,
+        "subject": "Re: 118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p>確實有可能發生這種狀況 ！</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

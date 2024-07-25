@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-10-26 23:22:38",
+        "poster": "11127106",
+        "realname": "陳子昂",
+        "email": "leonchen0810@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p>+ * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>不是</p>\r\n\r\n<p>因為如果依照前序的算法來看，先會處理 *2 4 得出 8 之後 會變成 + 8 6 * - 7 5 雖然 + 8 5 和- 7 5都是前序式 但是得出結果後就會變成</p>\r\n\r\n<p>14 * 2 這個就變中序了</p>\r\n\r\n<p>不符合前序的 &lt;運算子&gt;&lt;運算元&gt;&lt;運算元&gt;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

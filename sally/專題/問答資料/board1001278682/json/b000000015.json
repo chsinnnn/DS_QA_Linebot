@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-07-21 17:41:24",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答202",
+        "content": "<p><strong>舉例說明單一佇列模擬如何計算平均佇列長度 queue length</strong></p>\r\n\r\n<p><strong>單一佇列模擬是一種模擬系統中只有一個佇列（Queue）的情況，例如單一服務台或單一資源的情況。在這種模擬中，我們可以使用以下方法來計算平均佇列長度（Average Queue Length）：</strong></p>\r\n\r\n<p><strong>假設我們正在模擬一個顧客進入服務台的情境，顧客到達服務台的間隔時間（Inter-arrival time）是隨機的，而服務時間（Service time）也是隨機的。這裡使用典型的離散事件模擬，當顧客到達服務台時，會進行服務，服務結束後離開佇列。</strong></p>\r\n\r\n<p><strong>步驟如下：</strong></p>\r\n\r\n<p><strong>初始化模擬參數：設定模擬時間範圍，設定到達顧客的間隔時間分佈、服務時間分佈，以及佇列容量（如果有的話）等。</strong></p>\r\n\r\n<p><strong>創建一個佇列：用於保存等待服務的顧客。</strong></p>\r\n\r\n<p><strong>模擬過程：根據到達間隔時間，模擬顧客到達服務台的情況。每次到達一個顧客，將其加入佇列中。</strong></p>\r\n\r\n<p><strong>服務過程：如果服務台是空閒的，從佇列中取出下一個顧客進行服務。根據服務時間模擬服務過程。</strong></p>\r\n\r\n<p><strong>計算佇列長度：在模擬過程中，記錄佇列中每個時間點的長度（佇列中等待服務的顧客數量）。</strong></p>\r\n\r\n<p><strong>計算平均佇列長度：將記錄的佇列長度加總，然後除以模擬的時間範圍，即可得到平均佇列長度。</strong></p>\r\n\r\n<p><strong>以下是一個簡化的Python示例程式碼，用於單一佇列模擬計算平均佇列長度：</strong></p>\r\n\r\n<p><strong>import random</strong></p>\r\n\r\n<p><strong>def simulate_single_queue(simulation_time, inter_arrival_time_mean, service_time_mean):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;queue = []</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;current_time = 0</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;queue_length_record = []</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;while current_time &lt; simulation_time:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not queue:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# If the queue is empty, set the next arrival time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next_arrival_time = random.expovariate(1 / inter_arrival_time_mean)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_time += next_arrival_time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;queue.append(current_time)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# If the queue is not empty, process the next customer</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next_service_time = random.expovariate(1 / service_time_mean)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_time += next_service_time</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;queue.pop(0)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;queue_length_record.append(len(queue))</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;average_queue_length = sum(queue_length_record) / len(queue_length_record)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;return average_queue_length</strong></p>\r\n\r\n<p><strong># Example usage:</strong></p>\r\n\r\n<p><strong>simulation_time = 10000&nbsp; # Total simulation time</strong></p>\r\n\r\n<p><strong>inter_arrival_time_mean = 5.0&nbsp; # Mean time between customer arrivals</strong></p>\r\n\r\n<p><strong>service_time_mean = 4.0&nbsp; # Mean service time</strong></p>\r\n\r\n<p><strong>result = simulate_single_queue(simulation_time, inter_arrival_time_mean, service_time_mean)</strong></p>\r\n\r\n<p><strong>print(&quot;Average Queue Length:&quot;, result)</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

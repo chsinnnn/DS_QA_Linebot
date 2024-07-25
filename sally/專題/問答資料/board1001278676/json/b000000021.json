@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2023-07-07 18:18:51",
+        "poster": "11027103",
+        "realname": "李思德",
+        "email": "aaronlee0425@gmail.com",
+        "homepage": null,
+        "subject": "搶答104",
+        "content": "<p>104. 什麼情況下適合使用遞迴？為什麼？*&nbsp;</p>\r\n\r\n<p>Ans:一個問題可以拆解成規模較小但是性質和原問題完全一樣的問題的時候。使用遞迴時可以使程式碼相對於迴圈時來的簡潔。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

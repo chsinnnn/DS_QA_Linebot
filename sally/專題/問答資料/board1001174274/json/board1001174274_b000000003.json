@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-10-10 23:41:53",
+        "poster": "11027202",
+        "realname": "黃楷傑",
+        "email": "nikiwu90@hotmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p>假設一鏈結串列為下圖所示</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027202/images/%E6%93%B7%E5%8F%96%283%29.PNG\" style=\"height:275px; width:1081px\" /></p>\r\n\r\n<p>在程式中，一個等號是用來將右邊的值存放到左邊的變數，所以ptrX = ptrX-&gt;next簡單來說就是讓ptrX擁有與ptrX-&gt;next相同的形式，讓ptrX指向與ptrX-&gt;next相同的節點，如下圖所示</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027202/images/%E6%93%B7%E5%8F%96%284%29.PNG\" style=\"height:345px; width:1339px\" /></p>\r\n\r\n<p>而ptrX-&gt;next = ptrX就是反過來，讓ptrX-&gt;next指向與ptrX相同的節點，但由於ptrX所指向的節點就是ptrX-&gt;next，所以ptrX-&gt;next最後會指向自己，如下圖所示</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027202/images/%E6%93%B7%E5%8F%96%285%29.PNG\" style=\"height:457px; width:1171px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "52",
+        "lang": "1"
+    }
+}

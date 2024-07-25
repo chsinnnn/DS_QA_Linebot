@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-07-06 04:26:11",
+        "poster": "11020143",
+        "realname": "吳柏賢",
+        "email": "s25880260@gmail.com",
+        "homepage": null,
+        "subject": "搶答104",
+        "content": "<p>當問題可以被分為更小的問題且子問題和原問題相似，這時候就適合使用遞迴</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:10",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162657",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2022-12-27 17:25:20",
+        "poster": "11027160",
+        "realname": "劉冠毅",
+        "email": "zxcy70532@gmail.com",
+        "homepage": null,
+        "subject": "225. 已排序資料如何建立一棵平衡的二元搜尋樹？",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027160/images/unnamed1%281%29.png\" style=\"height:2016px; width:1147px\" /></p>\r\n\r\n<p>假設有一排序資料如圖一。</p>\r\n\r\n<p>當我們取32(，也就是排序資料的中心)作為父節點（根節點）時，能分出兩側。</p>\r\n\r\n<p>如圖二。</p>\r\n\r\n<p><br />\r\n但這不算一個完整的平衡樹，於是應該要在左側與右側各做一遍這步驟，<br />\r\n也就是：取左側排序資料中心做出左子樹插入根節點左子節點。</p>\r\n\r\n<p>&nbsp; &nbsp;同理：取右側排序資料中心做出右子樹插入根節點右子節點。</p>\r\n\r\n<p>最後會得到平衡樹如圖三。<br />\r\n&nbsp;</p>\r\n\r\n<p>想法來自這個mergesort分割資料：當我們在已排序資料中標示一個位子（標示父節點）可以分割出左側資料與右側資料，與二元樹分子樹的概念很像。</p>\r\n\r\n<p>而資料數量多時可以使用遞迴分割排序資料來重複上述論點。</p>\r\n\r\n<p>取法可以像下圖並遞迴：<img alt=\"\" src=\"/user/1/1/11027160/images/unnamed2.png\" style=\"height:1676px; width:1257px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

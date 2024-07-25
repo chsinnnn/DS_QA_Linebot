@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-06 02:29:44",
+        "poster": "06005727",
+        "realname": "陳彥勳",
+        "email": "cys890403@gmail.com",
+        "homepage": null,
+        "subject": "搶答101",
+        "content": "<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">問101</span>：</span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">以自己的話描述遞迴recursion</span>是什麼。</span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">答101</span>：將一個</span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">大的問題，分割成許多小問題</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">去解決。而從程式設計角度來看，函式不單只能被其他函式呼叫，也能</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">被它自己呼叫</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">，也就是在一個函式當中呼叫它自己，即為遞迴函式。</span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">1.</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">一個大問題，拆解成幾個較小的問題。</span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">2.</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">較小的問題，又能依照<strong><span style=\"font-family:微軟正黑體,sans-serif\">相同方式</span></strong>拆成更小的問題。</span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">3.</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">小問題解決時，<strong><span style=\"font-family:微軟正黑體,sans-serif\">大問題也可以依靠小問題的結果來解決。</span></strong></span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">4.</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">解決方法都是<strong><span style=\"font-family:微軟正黑體,sans-serif\">一樣</span></strong>的，除了<strong><span style=\"font-family:微軟正黑體,sans-serif\">最小的問題</span></strong>以外。</span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">5.</span></span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">以上幾點，我們可以不斷套用相同的函數，讓他<strong><span style=\"font-family:微軟正黑體,sans-serif\">自己幫自己解決問題。</span></strong></span></span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-10-23 23:27:24",
+        "poster": "11127133",
+        "realname": "陳乙菁",
+        "email": "fiona99107@gmail.com",
+        "homepage": null,
+        "subject": "122",
+        "content": "<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">122. </span></span></span><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">寫C++</span>程式碼說明傳參考呼叫call by reference</span>。</span></p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>#include &lt;stdio.h&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>void add(int &amp; a, int b) {</p>\r\n\r\n<p>b = a + b ;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; a = a + b;&nbsp;&nbsp;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; int a = 1;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; int b = 2;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; add( a, b) ;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; printf(&quot;%d\\n&quot;, a) ; // a = 4</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; printf(&quot;%d\\n&quot;, b) ; // b = 2</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; a<span style=\"font-family:新細明體,serif\">是</span>call by reference<span style=\"font-family:新細明體,serif\">，</span>b<span style=\"font-family:新細明體,serif\">是</span>call by value<span style=\"font-family:新細明體,serif\">，因為</span>a<span style=\"font-family:新細明體,serif\">在</span>add function<span style=\"font-family:新細明體,serif\">中改變的值，</span>main<span style=\"font-family:新細明體,serif\">也會跟著改變，而</span>b<span style=\"font-family:新細明體,serif\">無論在</span>add function<span style=\"font-family:新細明體,serif\">中怎麼改變，值在</span>main<span style=\"font-family:新細明體,serif\">裡都不會改變。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

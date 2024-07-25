@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2022-09-26 22:46:49",
+        "poster": "11027130",
+        "realname": "邱奕翔",
+        "email": "ioppoi1029384756@gmail.com",
+        "homepage": null,
+        "subject": "107. 作業二採用什麼資料結構儲存讀入資料，須說明原因。*",
+        "content": "<p>作業二我認為採佇列(queue)的方式儲存使用者所輸入的資料，因為可以看到先輸入甚麼排列時就先排甚麼符合先進先出(FIFO)的原則。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

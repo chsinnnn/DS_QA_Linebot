@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:55",
+        "@type": "post",
+        "@filename": "b000000001000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174282",
+        "node": "000000001000000002",
+        "site": "1000110001",
+        "pt": "2022-12-26 21:06:08",
+        "poster": "11027246",
+        "realname": "林詰詠",
+        "email": "a78419261@gmail.com",
+        "homepage": null,
+        "subject": "Re: 222. 撰寫程式碼指出如何為二元搜尋樹新增節點。",
+        "content": "<p>精闢講解，讓我種出聖誕樹</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:10",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162657",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-12-23 23:50:13",
+        "poster": "11027139",
+        "realname": "許書維",
+        "email": "xushuwei1122@gmail.com",
+        "homepage": null,
+        "subject": "222. 撰寫程式碼指出如何為二元搜尋樹新增節點",
+        "content": "<p>base case :&nbsp;是遞迴到 root 指向 null 就新增節點 並且寫入數值 設定左右分之為 NULL 才不會執行錯誤。</p>\r\n\r\n<p>大於 : 新增在右邊。</p>\r\n\r\n<p>小於 : 新增在左邊。</p>\r\n\r\n<p>下面的程式碼多了一個條件是遇到一樣的，就在原節點 vector 做 push_back。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027139/images/2022-12-23_234602.png\" style=\"height:364px; width:703px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

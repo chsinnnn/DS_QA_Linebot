@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-11-26 00:54:42",
+        "poster": "11127110",
+        "realname": "許至昀",
+        "email": "alberthsu919@gmail.com",
+        "homepage": null,
+        "subject": "201",
+        "content": "<p><span style=\"font-family:新細明體,serif\">舉例說明單一佇列模擬如何計算平均等候時間</span>waiting time<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">平均等候時間為每個事件進入佇列之「開始執行時間減抵達時間」之平均值。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">如有以下四筆資料：</span></p>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; border:none\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">事件編號</span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">抵達時間</span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">工作耗時</span></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>1</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>20</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>5</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>2</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>22</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>4</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>3</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>23</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>2</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>4</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>30</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:184px\">\r\n\t\t\t<p>3</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">我們可以得知：</span></p>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; border:none; width:557px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">事件編號</span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">開始執行時間</span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">離開時間</span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p><span style=\"font-family:新細明體,serif\">等候時間</span></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>1</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>20</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>25</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>0</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>2</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>25</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>29</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>25-22=3</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>3</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>29</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>31</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>29-23=6</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>4</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>31</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>34</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:139px\">\r\n\t\t\t<p>31-30=1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">平均等候時間：(</span>0+3+6+1<font face=\"新細明體, serif\">)</font>/4=2.5<span style=\"font-family:新細明體,serif\">。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-10-07 15:21:37",
+        "poster": "11027237",
+        "realname": "程怡欣",
+        "email": "ssc5613@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p><strong>寫出C++程式碼說明傳值呼叫call by value</strong></p>\r\n\r\n<p><span style=\"color:black\">*與call by reference相比可清楚看出差異，因此以call by reference</span>做對照。</p>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; border:none\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:123px\">&nbsp;</td>\r\n\t\t\t<td style=\"vertical-align:top; width:217px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">Call by value</span></span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:213px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">call by reference</span></span></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:123px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">參數值影響</span></span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:217px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">並</span></span><span style=\"color:red\"><span style=\"font-family:新細明體,serif\">不會改變所呼叫參數值</span></span><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">，因呼叫的只是該變數當時數值，並不是該變數本身</span></span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:213px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">函數內部所做的更動</span></span><span style=\"color:red\"><span style=\"font-family:新細明體,serif\">會影響實際參數</span></span></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"vertical-align:top; width:123px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">儲存位置</span></span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:217px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">呼叫的函數和主程式所使用參數的記憶體位置</span></span><span style=\"color:red\"><span style=\"font-family:新細明體,serif\">不同</span></span></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"vertical-align:top; width:213px\">\r\n\t\t\t<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">呼叫的函數和主程式所使用參數的記憶體位置</span></span><span style=\"color:red\"><span style=\"font-family:新細明體,serif\">相同</span></span></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027237/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20150723.png\" style=\"height:302px; width:350px\" />&nbsp; &nbsp; &nbsp;<img alt=\"\" src=\"/user/1/1/11027237/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20150551.png\" style=\"height:220px; width:350px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "59",
+        "lang": "1"
+    }
+}

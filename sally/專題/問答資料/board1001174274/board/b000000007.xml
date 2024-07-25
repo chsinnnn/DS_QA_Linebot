@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2022-10-13 19:13:01</pt>
+  <poster>11027251</poster>
+  <realname>&#x9673;&#x51A0;&#x860B;  </realname>
+  <email>tanya0920617@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>116. &#x5C07;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x524D;&#x5E8F;&#x5F0F;prefix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002; a b + c * d e + f * + w z + * </subject>
+  <content>&lt;p&gt;a b + c * d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;postfix-&amp;gt;infix&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(a+b)c*(d+e)f*+(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;((a+b)*c)((d+e)*f)+(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(((a+b)*c)+ ((d+e)*f))(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(((a+b)*c)+ ((d+e)*f))*(w+z)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;infix-&amp;gt;prefixt&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(((+ab)*c)+ ((+de)*f))*(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;((*+abc)+(*+def))*(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(+*+abc*+def)*(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;*+*+abc*+def+wz&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;a b + c * d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(a+b)c*(d+e)f*+(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;((a+b)*c)((d+e)*f)+(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(((a+b)*c)+ ((d+e)*f))(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(((a+b)*c)+ ((d+e)*f))*(w+z)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(((+ab)*c)+ ((+de)*f))*(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;((*+abc)+(*+def))*(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(+*+abc*+def)*(+wz)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;*+*+abc*+def+wz&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>40</hit>
+  <lang>1</lang>
+</data>

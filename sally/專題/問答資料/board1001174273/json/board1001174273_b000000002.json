@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-09-29 22:18:20",
+        "poster": "10911101",
+        "realname": "鄭皓元",
+        "email": "xpoi5020@gmail.com",
+        "homepage": null,
+        "subject": "113. 將此後序式postfix轉中序式infix，並詳述步驟。*",
+        "content": "<p>我的作法是先把這個以後序表示法表示的式子以二元樹的方式儲存(這個二元樹經Postorder traversal後會得到原本後續後序表示法的式子)<br />\r\n因為在中序表示法中，乘法及除法的運算優先順序高於加法及減法，也就是說中序表示法需考慮運算元的優先順序。<br />\r\n所以當運算優先順序較高的節點，其左節點或右節點的運算優先順序低於此節點，<br />\r\n表示在中序表示法中，需將左節點或右節點表示成中序表示法後，在其左右兩邊加上括號，才能讓左節點或右節點能夠先被計算。</p>\r\n\r\n<p>過程:</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10911101/images/13326%282%29.png\" style=\"height:603px; width:915px\" /></p>\r\n\r\n<p>以&quot;a b + c * d e + f * + w z + *&quot;建出來的二元樹長的像是這樣，其中黑底字表示的是此端點轉成中序表示式的結果。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10911101/images/13326.png\" style=\"height:698px; width:640px\" /></p>\r\n\r\n<p>以C++實作大概是</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10911101/images/13326%283%29.png\" style=\"height:280px; width:954px\" /></p>",
+        "attach": "postfix_to_infix.cpp\tWM6336b960e997e.cpp",
+        "rcount": null,
+        "rank": null,
+        "hit": "65",
+        "lang": "1"
+    }
+}

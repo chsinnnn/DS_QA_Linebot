@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:14",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162650",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-10-15 12:50:38",
+        "poster": "11027119",
+        "realname": "秦嘉昇",
+        "email": "c20021219@gmail.com",
+        "homepage": null,
+        "subject": "123. 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。",
+        "content": "<p>以Linkedlist裡只有一個num值為例進行複製</p>\r\n\r\n<p>以linklist A&nbsp;複製到&nbsp;linklist B 並印出檢查，兩者的輸出相同，即表示複製成功</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027119/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-15%20125221.png\" style=\"height:1152px; width:1675px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "56",
+        "lang": "1"
+    }
+}

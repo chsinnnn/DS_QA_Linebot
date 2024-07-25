@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:08",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305434",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-10-24 15:08:14",
+        "poster": "10823323",
+        "realname": "王　婕",
+        "email": "jessicawang900318@gmail.com",
+        "homepage": null,
+        "subject": "124. 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。",
+        "content": "<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">(1)()()()</span></span></span></p>\r\n\r\n<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">(2)(()())</span></span></span></p>\r\n\r\n<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">(3)()(())</span></span></span></p>\r\n\r\n<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">(4)(())()</span></span></span></p>\r\n\r\n<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">(5)((()))</span></span></span></p>\r\n\r\n<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">共有五組不同的形式</span></span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

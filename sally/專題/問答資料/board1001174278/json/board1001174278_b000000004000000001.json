@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:28",
+        "@type": "post",
+        "@filename": "b000000004000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174278",
+        "node": "000000004000000001",
+        "site": "1000110001",
+        "pt": "2022-12-13 15:07:47",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 209. 撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。",
+        "content": "<p>Exactly!</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

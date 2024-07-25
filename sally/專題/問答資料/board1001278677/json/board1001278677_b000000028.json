@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000028.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000028",
+        "site": "1000110001",
+        "pt": "2023-07-09 21:57:28",
+        "poster": "06004870",
+        "realname": "曾浚楷",
+        "email": "kenneth61215@gmail.com",
+        "homepage": null,
+        "subject": "搶答110",
+        "content": "<p>110. 寫出C++程式碼說明傳值呼叫call by value。</p>\r\n\r\n<p>答:&nbsp;</p>\r\n\r\n<p>int changeValue(int x) {<br />\r\n&nbsp; &nbsp; x&nbsp;= x / 10; // 將傳入的參數進行遞增操作<br />\r\n&nbsp; &nbsp; return x;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int initial = 100;</p>\r\n\r\n<p>&nbsp; &nbsp; std::cout &lt;&lt; &quot;呼叫函數前的initial： &quot; &lt;&lt; initial &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp; //輸出: 100<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; int after = changeValue(initial);&nbsp;<br />\r\n&nbsp; &nbsp; // call by value</p>\r\n\r\n<p>&nbsp; &nbsp; std::cout &lt;&lt; &quot;呼叫函數後的initial： &quot; &lt;&lt; initial &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp; //輸出: 100</p>\r\n\r\n<p>&nbsp; &nbsp; std::cout &lt;&lt; &quot;函數輸出的值： &quot; &lt;&lt; after &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp; //輸出:10</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>輸出為:</p>\r\n\r\n<p>呼叫函數前的initial： 100<br />\r\n呼叫函數後的initial： 100<br />\r\n函數輸出的值： 10</p>\r\n\r\n<p>有上述舉例可見，函數為傳值呼叫，是將輸入變數複製，並使用複製的值進行運算，並不會改變原來的變數。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

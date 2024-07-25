@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-07-20 20:19:49",
+        "poster": "06005931",
+        "realname": "佘仲傑",
+        "email": "szj891226@gmail.com",
+        "homepage": null,
+        "subject": "搶答207",
+        "content": "<p>舉例解說選擇排序selection sort並非穩定stable的排序方法。</p>\r\n\r\n<p>Ans:</p>\r\n\r\n<p>選擇排序是從數列找出最大或最小的元素，把它放到排序好的數列尾端，接著以此類推對其他元素重複操作，但要判斷穩定性的條件是當存在兩個相同值的元素時，在排序前後，若原本在前面的元素仍然在後面的元素之前，則視為穩定的排序法。</p>\r\n\r\n<p>假設有個數列:5 2 8 2 3，從最小的元素開始:</p>\r\n\r\n<p>-&gt;<span style=\"color:#ff0000\">2</span> <span style=\"color:#00ff00\">5</span> 8 2 3</p>\r\n\r\n<p>-&gt;2 <span style=\"color:#ff0000\">2</span> 8 <span style=\"color:#00ff00\">5</span> 3</p>\r\n\r\n<p>-&gt;2 2 <span style=\"color:#ff0000\">3</span> 5 <span style=\"color:#00ff00\">8</span></p>\r\n\r\n<p>從過程中可以看到原本在第四個位置的 2 排序後移動到了第一個位置，這證明了選擇排序不是穩定的排序算法，</p>\r\n\r\n<p>如果是穩定的排序，那麼第一個 2 應該仍然位於第四個 2 之前，所以可以確定選擇排序不具有穩定性。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

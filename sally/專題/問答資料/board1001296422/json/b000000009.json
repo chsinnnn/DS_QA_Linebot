@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-10-24 17:21:30",
+        "poster": "11127142",
+        "realname": "范庭郡",
+        "email": "handsome11623@gmail.com",
+        "homepage": null,
+        "subject": "128",
+        "content": "<p>&nbsp;題目: 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。</p>\r\n\r\n<p>簡介:</p>\r\n\r\n<p>&nbsp; &nbsp;定義語言&lt;calculate&gt; = &lt;operand&gt;&lt;operand&gt;&lt;operator&gt;</p>\r\n\r\n<p>&nbsp; &nbsp;其中:</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;operand&gt; = 0|1|2|3|4|5|6|7|8|9 , &lt;operator&gt; = +|-|*|/</p>\r\n\r\n<p>&nbsp; &nbsp;如果條件符合，會將此單位進行計算合體，使之成為一新&lt;operand&gt;存入堆疊中並待等後方的&lt;operand&gt;進行合併，如已無其餘&nbsp; &nbsp; &nbsp;&lt;operand&gt;則為最終解答，將之彈出。如果條件尚未符合，會持續將&lt;operand&gt;放入堆疊中待合併又或彈出。</p>\r\n\r\n<p>以範例操作過程:</p>\r\n\r\n<ol>\r\n\t<li>&nbsp;2, 因尚未符合條件, 將2放入堆疊。堆疊目前為 2。</li>\r\n\t<li>&nbsp;4, 因尚未符合條件, 將4放入堆疊。堆疊目前為 2 ,4。</li>\r\n\t<li>&nbsp;6, 因尚未符合條件, 將6放入堆疊。堆疊目前為 2, 4 ,6。</li>\r\n\t<li>&nbsp;*, 因 4, 6 , * 符合, 彈出4, 6 並 * ,&nbsp;產生一新&lt;operand&gt; = 24 , 存入堆疊之中。堆疊目前為 2, 24。</li>\r\n\t<li>+,&nbsp;因 2, 24, +&nbsp;符合, 彈出2, 24&nbsp;並 +, 產生一新&lt;operand&gt; = 26&nbsp;, 存入堆疊之中。堆疊目前為 26。</li>\r\n\t<li>&nbsp;7,因尚未符合條件, 將7放入堆疊。堆疊目前為 26, 7。</li>\r\n\t<li>&nbsp;5,因尚未符合條件, 將5放入堆疊。堆疊目前為 26, 7, 5。</li>\r\n\t<li>&nbsp;- ,因 7, 5&nbsp;, - 符合, 彈出7, 5 並 - ,&nbsp;產生一新&lt;operand&gt; = 2 , 存入堆疊之中。堆疊目前為26, 2。</li>\r\n\t<li>&nbsp;*,因 26, 2, * 符合, 彈出26, 2 並 * ,&nbsp;產生一新&lt;operand&gt; = 72 , 存入堆疊之中。堆疊目前為72。</li>\r\n\t<li>&nbsp; ,因已無其餘&lt;operand&gt;and &lt;operator&gt;。彈出結果為72。</li>\r\n</ol>\r\n\r\n<p>&nbsp; &nbsp; &nbsp;72 為後序式2 4 6 * + 7 5 - * 的答案。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

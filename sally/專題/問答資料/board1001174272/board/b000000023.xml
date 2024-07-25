@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:17" type="post" filename="b000000023.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174272</board_id>
+  <node>000000023</node>
+  <site>1000110001</site>
+  <pt>2022-10-03 16:38:33</pt>
+  <poster>11027235</poster>
+  <realname>&#x6C5F;&#x5EAD;&#x7444;  </realname>
+  <email>sherrychiang01@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>109. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int x[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; &amp;nbsp; &amp;nbsp;// &#x5C07;1&#x6307;&#x5B9A;&#x7D66;x[0]&#xFF0C;2&#x6307;&#x5B9A;&#x7D66;x[1]&#xFF0C;...&#xFF0C;&#x6700;&#x5F8C;&#x5C07;10&#x6307;&#x5B9A;&#x7D66;x[9]&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; char y[7] = {&amp;#39;H&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;l&amp;#39;, &amp;#39;l&amp;#39;, &amp;#39;o&amp;#39;}; &amp;nbsp;//char&#x578B;&#x5225;&#x4E5F;&#x53EF;&#x4EE5;&#x4EE5;&#x6B64;&#x985E;&#x63A8;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; char array_name[7] = &amp;quot;Hello!&amp;quot;; &amp;nbsp;// &#x9084;&#x53EF;&#x7C21;&#x5316;&#x70BA;&#x5B57;&#x4E32;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>36</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:18" type="post" filename="b000000005.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305435</board_id>
+  <node>000000005</node>
+  <site>1000110001</site>
+  <pt>2023-10-23 22:28:28</pt>
+  <poster>11020117</poster>
+  <realname>&#x6797;&#x5B50;&#x7693;  </realname>
+  <email>ke951736@gmail.com</email>
+  <homepage> </homepage>
+  <subject>129. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8A2D;&#x8A08;&#x905E;&#x8FF4;&#x51FD;&#x6578;&#x7522;&#x751F;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&#x4E14;&#x52A0;&#x7E3D;&#x7B49;&#x65BC;M&#x7684;&#x6240;&#x6709;3&#x4F4D;&#x6578;&#xFF0C;M&#x662F;&#x8F38;&#x5165;&#x7684;&#x6574;&#x6578;&#xFF0C;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;&#x96F6;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void findNumbers(int M, int currentSum, int currentNum, int position) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x5982;&#x679C;&#x76EE;&#x524D;&#x6578;&#x5B57;&#x5DF2;&#x7D93;&#x662F;&#x4E09;&#x4F4D;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (position == 3) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x6AA2;&#x67E5;&#x52A0;&#x7E3D;&#x662F;&#x5426;&#x7B49;&#x65BC;M&#xFF0C;&#x4E14;&#x767E;&#x4F4D;&#x6578;&#x4E0D;&#x70BA;&#x96F6;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (currentSum == M &amp;amp;&amp;amp; currentNum / 100 != 0) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; currentNum &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x905E;&#x8FF4;&#x751F;&#x6210;&#x6578;&#x5B57;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 1; i &amp;lt;= 9; ++i) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x905E;&#x8FF4;&#x547C;&#x53EB;&#xFF0C;&#x66F4;&#x65B0;&#x52A0;&#x7E3D;&#x3001;&#x6578;&#x5B57;&#x3001;&#x4F4D;&#x7F6E;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; findNumbers(M, currentSum + i, currentNum * 10 + i, position + 1);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x8F38;&#x5165;&#x6574;&#x6578;M&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int M;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x8ACB;&#x8F38;&#x5165;&#x6574;&#x6578;M&#xFF1A;&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cin &amp;gt;&amp;gt; M;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x547C;&#x53EB;&#x905E;&#x8FF4;&#x51FD;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x6EFF;&#x8DB3;&#x689D;&#x4EF6;&#x7684;&#x4E09;&#x4F4D;&#x6578;&#x6709;&#xFF1A;&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; findNumbers(M, 0, 0, 0);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>19</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2022-09-25 19:30:23",
+        "poster": "11027202",
+        "realname": "黃楷傑",
+        "email": "nikiwu90@hotmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>#include&lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; &nbsp; char anArray[5] = { &#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39; };</p>\r\n\r\n<p>&nbsp; &nbsp; int num[5] = { 1, 2, 3, 4, 5 };</p>\r\n\r\n<p>&nbsp; &nbsp; for( int i = 0 ; i &lt; 5 ; i++ ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; anArray[i] &lt;&lt; &quot; : &quot; &lt;&lt; num[i];</p>\r\n\r\n<p>&nbsp; &nbsp; } // for</p>\r\n\r\n<p>} // main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "53",
+        "lang": "1"
+    }
+}

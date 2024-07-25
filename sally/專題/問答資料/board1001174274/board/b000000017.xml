@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000017.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000017</node>
+  <site>1000110001</site>
+  <pt>2022-10-18 23:42:37</pt>
+  <poster>11027209</poster>
+  <realname>&#x5DEB;&#x5E74;&#x5DE8;  </realname>
+  <email>yy911123@gmail.com</email>
+  <homepage> </homepage>
+  <subject>119. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; int value ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; Node *next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} ;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;typedef Node * NodePtr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(){&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; int i = 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; NodePtr n, temp, cur;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; n = new Node;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; temp = n ; // temp&#x6307;&#x5411;n&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; for( i = 1 ; i &amp;lt;= 10 ; i++){ &amp;nbsp;// &#x5047;&#x8A2D;node&#x6709;10&#x9805;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; temp-&amp;gt;value = i ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; temp-&amp;gt;next = new Node;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; temp = temp-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; temp-&amp;gt;next = NULL ; //&#x5F8C;&#x9762;&#x63A5;null&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; } // for&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; // ******* &#x9019;&#x908A;&#x662F;function&lt;br /&gt;&#xD;
+&amp;nbsp; temp = n;&lt;br /&gt;&#xD;
+&amp;nbsp; for( i = 1 ; i &amp;lt;= 3 ; i++){&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; if ( temp-&amp;gt;next != NULL &amp;amp;&amp;amp; i != 3) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; cur = temp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; temp = temp-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;} // if&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;else if ( temp -&amp;gt; next == NULL &amp;amp;&amp;amp; i != 3)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break; // linked list&#x9577;&#x5EA6;&#x5C0F;&#x65BC;3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;if ( i == 3 ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if ( temp-&amp;gt;next == NULL ) { // &#x9577;&#x5EA6;=3 &#x522A;&#x9664;&#x7B2C;&#x4E09;&#x9805;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;cur-&amp;gt;next = NULL ;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;delete temp ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;temp = NULL ; &amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;} // if&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;else if ( temp -&amp;gt;next != NULL ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;cur-&amp;gt;next = temp-&amp;gt;next; // &#x7B2C;&#x4E8C;&#x9805;&#x79FB;&#x53BB;&#x7B2C;&#x56DB;&#x9805;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;temp-&amp;gt;next = NULL ; // &#x7B2C;&#x4E09;&#x9805;&#x65B7;&#x8DEF;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;delete temp ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;temp = NULL ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;} // else if&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;} // if &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; } // for&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; // ******* &#x5230;&#x9019;&#x908A;&#x662F;function&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>6</hit>
+  <lang>1</lang>
+</data>

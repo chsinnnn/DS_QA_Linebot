@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:46" type="post" filename="b000000002000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174275</board_id>
+  <node>000000002000000001</node>
+  <site>1000110001</site>
+  <pt>2022-10-30 15:48:23</pt>
+  <poster>11813</poster>
+  <realname>&#x5433;&#x5B9C;&#x9D3B;  </realname>
+  <email>yhwu@cycu.edu.tw</email>
+  <homepage>https://www.researchgate.net/profile/Yi-Hung-Wu-2 </homepage>
+  <subject>Re: 122. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;call by reference&#x3002;  </subject>
+  <content>&lt;p&gt;Good example.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Other comments:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1. There is one typo in&amp;nbsp;the 2nd line: &amp;quot;&#x800C; call by &lt;span style="color:#0000cd"&gt;reference&amp;nbsp;&lt;/span&gt;&lt;s&gt;&lt;span style="color:#ff0000"&gt;value &lt;/span&gt;&lt;/s&gt;&#x662F;&#x5C07;&#x300C;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x300D;&#x5E36;&#x5165; function&#xFF0C;...&amp;quot;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;2. Explain more about static member functions, e.g., how it still works without using &amp;#39;static&amp;#39;.&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;3. Is there any reference like &lt;a href="https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/" target="_blank"&gt;this&lt;/a&gt;?&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>2</hit>
+  <lang>1</lang>
+</data>

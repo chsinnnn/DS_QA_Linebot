@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:05:50",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答219",
+        "content": "<p><strong>舉例區別完全full、完整complete及平衡balanced二元樹的差異。</strong></p>\r\n\r\n<p><strong>在二元樹的概念中，完全（Complete）、完整（Full）和平衡（Balanced）是三個不同的屬性，它們描述了不同類型的二元樹。</strong></p>\r\n\r\n<p><strong>完全（Complete）二元樹：</strong></p>\r\n\r\n<p><strong>在一棵完全二元樹中，所有的節點都從左到右依次填滿，缺少的節點只能出現在最後兩層。換句話說，從根節點到倒數第二層的節點都必須是滿的，最後一層的節點如果存在缺失節點，則只能在最右側。以下是一個完全二元樹的例子：</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;2 &nbsp; &nbsp; 3</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;/ \\ &nbsp; /</strong></p>\r\n\r\n<p><strong>&nbsp;4 &nbsp; 5 6</strong></p>\r\n\r\n<p><strong>這是一棵完全二元樹，所有節點都按照從左到右的順序填充。</strong></p>\r\n\r\n<p><strong>完整（Full）二元樹：</strong></p>\r\n\r\n<p><strong>在一棵完整二元樹中，每個節點要麼有兩個子節點，要麼沒有子節點（即為葉節點）。換句話說，每個節點的度數要麼是2，要麼是0。以下是一個完整二元樹的例子：</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;2 &nbsp; &nbsp; 3</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;/ \\ &nbsp; / \\</strong></p>\r\n\r\n<p><strong>&nbsp;4 &nbsp; 5 6 &nbsp; 7</strong></p>\r\n\r\n<p><strong>這是一棵完整二元樹，每個節點都有兩個子節點或者是葉節點。</strong></p>\r\n\r\n<p><strong>平衡（Balanced）二元樹：</strong></p>\r\n\r\n<p><strong>平衡二元樹是一種高度平衡的二元樹，它是指樹中任意節點的兩個子樹的高度差不超過1。從根節點到葉節點的最長路徑和最短路徑的高度差不超過1。平衡二元樹的目的是保持搜索、插入和刪除等操作的時間複雜度在對數級別。以下是一個平衡二元樹的例子：</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;2 &nbsp; &nbsp; 6</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;/&nbsp; \\ &nbsp; /&nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;1 &nbsp; 3&nbsp; 5 &nbsp; 7</strong></p>\r\n\r\n<p><strong>這是一棵平衡二元樹，任意節點的兩個子樹的高度差都不超過1。</strong></p>\r\n\r\n<p><strong>總結如下：</strong></p>\r\n\r\n<p><strong>完全二元樹是節點依次從左到右填滿，缺失的節點只能在最後兩層。</strong></p>\r\n\r\n<p><strong>完整二元樹是每個節點要麼有兩個子節點，要麼是葉節點。</strong></p>\r\n\r\n<p><strong>平衡二元樹是任意節點的兩個子樹的高度差不超過1。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

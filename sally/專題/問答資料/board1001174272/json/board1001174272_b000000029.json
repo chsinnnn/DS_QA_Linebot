@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000029.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000029",
+        "site": "1000110001",
+        "pt": "2022-10-04 13:59:56",
+        "poster": "11027216",
+        "realname": "潘葉依琳",
+        "email": "jocelyn11027216@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">在遞迴的每一步想要回傳，但仍然<strong>有沒辦法處理的部份時</strong>，就會先把目前的東西，放到記憶體裡叫做 <strong>stack (堆棧</strong><strong>)</strong> 的地方</span></span></p>\r\n\r\n<ol>\r\n\t<li><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">若遞迴呼叫過量使堆疊爆了，就會造成&nbsp;Stack Overflow&nbsp;Error 。</span></span></li>\r\n\t<li><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:14px\">無限遞迴，終止條件未設定好，導致的堆疊溢位</span></span></li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

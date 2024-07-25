@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-10-09 17:16:20",
+        "poster": "11027206",
+        "realname": "林育萱",
+        "email": "cindylin911105@gmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p>- 比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。</p>\r\n\r\n<p>因為等號的運算優先順序是&quot;由右至左&quot;，所以右邊做完的值會複製給左邊的變數，因此(看下面說明)</p>\r\n\r\n<p>(1)&nbsp;ptrX = ptrX-&gt;next</p>\r\n\r\n<p>ptrX-&gt;next所指向的位置會複製給ptrX</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027206/images/49940A82-5BE0-4399-9221-E3367D4CBF9E%285%29.jpg\" style=\"height:188px; width:350px\" />#註:紅字為運算完的結果</p>\r\n\r\n<p>(2) ptrX-&gt;next = ptrX</p>\r\n\r\n<p>ptrX所指向的位置會複製給ptrX-&gt;next</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027206/images/A19AE331-F798-444A-B9E5-3424C6F99536%282%29.jpg\" style=\"height:170px; width:350px\" />#註:紅字為運算完的結果</p>\r\n\r\n<p>結論: 左式指向第二個節點；右式指向原本的位置(第一個節點)，兩者不同。</p>\r\n\r\n<p>(假設ptrX指向第一個節點時)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "67",
+        "lang": "1"
+    }
+}

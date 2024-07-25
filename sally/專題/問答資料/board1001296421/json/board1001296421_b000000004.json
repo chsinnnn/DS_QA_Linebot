@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-10-15 15:44:27",
+        "poster": "11127139",
+        "realname": "陳　恩",
+        "email": "a04182596@gmail.com",
+        "homepage": null,
+        "subject": "125",
+        "content": "<p>125. 寫出可以精準描述自己學號(如字串10927188)的文法grammar。<br />\r\n<br />\r\n&lt;學號&gt;=&lt;入學年度&gt;&lt;學系編號&gt;&lt;班級編號&gt;&lt;座號&gt;<br />\r\n&lt;入學年度&gt;= 1 &lt;digit&gt; &lt;digit&gt; | &lt;digit&gt; &lt;digit&gt;<br />\r\n&lt;學系編號&gt; = &lt;digit&gt;&lt;digit&gt;<br />\r\n&lt;班級編號&gt; = &lt;digit&gt;<br />\r\n&lt;座號&gt; =&nbsp; &lt;digit&gt;&lt;digit&gt;<br />\r\n補充：<br />\r\n&lt;digit&gt; = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "39",
+        "lang": "1"
+    }
+}

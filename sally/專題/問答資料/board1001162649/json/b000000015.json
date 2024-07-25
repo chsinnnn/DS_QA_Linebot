@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2022-10-17 19:06:08",
+        "poster": "11027113",
+        "realname": "呂季軒",
+        "email": "samlu0509@gmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p>ptrX = ptrX-&gt;next，是指ptrX這個指標指向原本ptrX的下一個節點。這個運用在創立一個新節點時，讓指標指在剛創立的節點上。</p>\r\n\r\n<p>ptrX-&gt;next = ptrX，是指PtrX這個指標指向自己，形成單個節點的環狀鏈結串列。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

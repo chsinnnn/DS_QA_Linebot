@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000013000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000013000000001",
+        "site": "1000110001",
+        "pt": "2023-07-07 15:07:38",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答106",
+        "content": "<p>&quot;遞迴的次數太多或處理的資料量太大&quot; <span style=\"color:#b22222\">這是二種不同的情況，其關係為何？</span></p>\r\n\r\n<p>&quot;記憶體區段錯誤或程式執行速度極慢&quot; <span style=\"color:#ff0000\">這是二種不同的情況，題意是問前者，後者是如何發生的？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

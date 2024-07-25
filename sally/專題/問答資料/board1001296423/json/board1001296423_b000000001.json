@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-11-16 14:02:36",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "201",
+        "content": "<p><span style=\"font-size:20px\">舉例說明單一佇列模擬如何計算平均等候時間waiting time</span></p>\r\n\r\n<p><span style=\"font-size:14px\">計算平均waiting time，需要的資料為：</span></p>\r\n\r\n<ul>\r\n\t<li><span style=\"font-size:12px\">進入隊伍的時間</span></li>\r\n\t<li><span style=\"font-size:12px\">服務時間</span><br />\r\n\t&nbsp;</li>\r\n</ul>\r\n\r\n<p>要計算平均等待時間，可以將所有人放進Queue，應用&nbsp;Queue 中 first in, first out 的概念。<br />\r\n將前一位結束服務的時間減去進入Queue的時間則為當前節點的等待時間，進入服務則移除front，最後再將所有等待時間平均則為答案。</p>\r\n\r\n<p>假設 今天有4個客戶：</p>\r\n\r\n<ol>\r\n\t<li>進入時間0分 服務時間5分</li>\r\n\t<li>進入時間2分 服務時間10分</li>\r\n\t<li>進入時間6分 服務時間2分</li>\r\n\t<li>進入時間9分 服務時間5分</li>\r\n</ol>\r\n\r\n<p>&nbsp;則以上可得知</p>\r\n\r\n<p>1號 進入時無需等待（因為前面沒人）因此waiting time 為 0。</p>\r\n\r\n<p>2號 進入queue時為2分 前一位服務結束時間為 0+5&nbsp; 則 waiting time 為 5-2 = 3。</p>\r\n\r\n<p>3號 進入queue時間為6分 前一位服務結束時間為 5+10 （前面開始時間＋服務時間） 則waiting time為 15 - 6 = 9。</p>\r\n\r\n<p>4號 進入queue時間為9分&nbsp;前一位服務結束時間為 15+2（前面開始時間＋服務時間） 則waiting time為 17-9 = 8。<br />\r\n<br />\r\n將所有人的waiting time平均後為平均等待時間 (0+3+9+8) / 4 = 5。</p>\r\n\r\n<p>Ans: 5分鐘</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-06 02:51:05",
+        "poster": "06005727",
+        "realname": "陳彥勳",
+        "email": "cys890403@gmail.com",
+        "homepage": null,
+        "subject": "搶答106",
+        "content": "<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">問106</span>：</span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">遞迴呼叫為何會造成記憶體區段錯誤？</span></span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">答106</span>：</span></span><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">堆疊溢位</span></span></span>，如果遞迴呼叫的層數過多，堆疊可能會超出其容量限制，導致堆疊溢位。這種情況下，程式執行時會發生記憶體區段錯誤，通常會導致程式異常終止。資源耗盡，如果遞迴的次數太多或處理的資料量太大，程式可能耗盡系統可用的記憶體或運算資源，導致記憶體區段錯誤或程式執行速度極慢。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

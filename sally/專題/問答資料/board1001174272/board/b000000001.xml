@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:17" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174272</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-09-21 00:24:15</pt>
+  <poster>11027241</poster>
+  <realname>&#x694A;&#x6600;&#x7956;  </realname>
+  <email>jimmy23230333@gmail.com</email>
+  <homepage> </homepage>
+  <subject>109. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int nums[5] = {1, 2, 3, 4, 5};&lt;br /&gt;&#xD;
+}&amp;nbsp;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>103</hit>
+  <lang>1</lang>
+</data>

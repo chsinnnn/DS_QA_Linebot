@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-07-22 13:46:46",
+        "poster": "06005635",
+        "realname": "黃博元",
+        "email": "maruko1mjw@yahoo.com.tw",
+        "homepage": null,
+        "subject": "搶答222",
+        "content": "<p>題目 :&nbsp;撰寫程式碼指出如何為二元搜尋樹新增節點。</p>\r\n\r\n<p>回答 :&nbsp;</p>\r\n\r\n<p>當要在二元搜尋樹中新增節點時，需要考慮以下步驟：</p>\r\n\r\n<ol>\r\n\t<li>若二元搜尋樹為空，則直接建立新節點作為根節點。</li>\r\n\t<li>若二元搜尋樹不為空，則從根節點開始，比較要新增的值與目前節點的值大小關係。 a. 若要新增的值比目前節點的值小，則往左子樹遞迴新增。 b. 若要新增的值比目前節點的值大，則往右子樹遞迴新增。</li>\r\n\t<li>重複步驟 2 直到找到適當的位置，並在該位置建立新節點。</li>\r\n</ol>\r\n\r\n<p>以下是用 C++ 撰寫的二元搜尋樹新增節點的程式碼示例：</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>// 定義二元搜尋樹的節點結構<br />\r\nstruct Node {<br />\r\n&nbsp; &nbsp; int data;<br />\r\n&nbsp; &nbsp; Node* left;<br />\r\n&nbsp; &nbsp; Node* right;</p>\r\n\r\n<p>&nbsp; &nbsp; Node(int value) : data(value), left(nullptr), right(nullptr) {}<br />\r\n};</p>\r\n\r\n<p>// 函式：新增節點到二元搜尋樹<br />\r\nNode* insertNode(Node* root, int value) {<br />\r\n&nbsp; &nbsp; // 若二元搜尋樹為空，則建立新節點作為根節點<br />\r\n&nbsp; &nbsp; if (root == nullptr) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root = new Node(value);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; return root;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; // 遞迴地尋找適當的位置插入新節點<br />\r\n&nbsp; &nbsp; if (value &lt; root-&gt;data) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root-&gt;left = insertNode(root-&gt;left, value);<br />\r\n&nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; else if (value &gt; root-&gt;data) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root-&gt;right = insertNode(root-&gt;right, value);<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return root;<br />\r\n}</p>\r\n\r\n<p>// 輔助函式：印出中序遍歷結果（用於確認樹的結構是否正確）<br />\r\nvoid inorderTraversal(Node* root) {<br />\r\n&nbsp; &nbsp; if (root != nullptr) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; inorderTraversal(root-&gt;left);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; root-&gt;data &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; inorderTraversal(root-&gt;right);<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; Node* root = nullptr;</p>\r\n\r\n<p>&nbsp; &nbsp; // 在二元搜尋樹中新增節點<br />\r\n&nbsp; &nbsp; root = insertNode(root, 5);<br />\r\n&nbsp; &nbsp; root = insertNode(root, 3);<br />\r\n&nbsp; &nbsp; root = insertNode(root, 8);<br />\r\n&nbsp; &nbsp; root = insertNode(root, 1);<br />\r\n&nbsp; &nbsp; root = insertNode(root, 4);<br />\r\n&nbsp; &nbsp; root = insertNode(root, 7);<br />\r\n&nbsp; &nbsp; root = insertNode(root, 9);</p>\r\n\r\n<p>&nbsp; &nbsp; // 中序遍歷樹的節點，印出結果<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;中序遍歷結果：&quot;;<br />\r\n&nbsp; &nbsp; inorderTraversal(root);<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>執行結果 :&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"/user/0/6/06005635/images/222.png\" style=\"height:228px; width:552px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:27",
+        "@type": "post",
+        "@filename": "b000000005000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305441",
+        "node": "000000005000000001",
+        "site": "1000110001",
+        "pt": "2023-12-26 15:17:39",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 224. 如何將二元搜尋樹存檔後再讀入可恢復原狀？",
+        "content": "<p><span style=\"color:#b22222\">誤解題意，題目是問&quot;二元搜尋樹&quot;。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

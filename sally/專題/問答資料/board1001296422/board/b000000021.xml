@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:13" type="post" filename="b000000021.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296422</board_id>
+  <node>000000021</node>
+  <site>1000110001</site>
+  <pt>2023-11-01 02:01:49</pt>
+  <poster>11127122</poster>
+  <realname>&#x80E1;&#x6C9B;&#x980E;  </realname>
+  <email>123456789paige26@gmail.com</email>
+  <homepage> </homepage>
+  <subject>128 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&lt;span style="font-size:14px"&gt;128. &#x5F8C;&#x5E8F;&#x5F0F;2 4 6 * + 7 5 - *&#x8981;&#x5982;&#x4F55;&#x900F;&#x904E;&#x5806;&#x758A;&#x6C42;&#x89E3;&#xFF1F;&#x8981;&#x5217;&#x51FA;&#x904E;&#x7A0B;&#x3002;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-size:14px"&gt;&lt;strong&gt;&#x7B54;:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5F9E;&#x982D;&#x4E00;&#x500B;&#x4E00;&#x500B;&#x5F80;&#x5F8C;&#x6AA2;&#x6E2C;&#x5F8C;&#x5E8F;&#x5F0F;&#x7684; link list &#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x82E5;&#x9047;&#x5230;&#x904B;&#x7B97;&#x5143;&#xFF0C;&#x4FBF;&#x5C07;&#x5176;&amp;nbsp;push &#x9032; stack &#x4E2D;&#xFF0C;&#x82E5;&#x9047;&#x5230;&#x904B;&#x7B97;&#x5B50;&#xFF0C;&#x5247;&#x53D6; stack &#x4E2D;&#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143;&#x4F86;&#x9032;&#x884C;&#x904B;&#x7B97;&#xFF0C;&#x63A5;&#x8457;&#x522A;&#x6389;stack&#x4E2D;&#x525B;&#x525B;&#x7528;&#x65BC;&#x904B;&#x7B97;&#x7684;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143;&#x5F8C;&#xFF0C;&#x628A;&#x7D50;&#x679C;push &#x9032; stack &#x4E2D;&#x3002;&#x6700;&#x5F8C;&#x6AA2;&#x6E2C;&#x5230; link list &#x7684;&#x7BC0;&#x9EDE;&#x70BA;NULL&#x7684;&#x6642;&#x5019;&#xFF0C;stack &#x50C5;&#x5B58;&#x7684;&#x904B;&#x7B97;&#x5143;&#x5C31;&#x70BA;&#x8A72;&#x5F8C;&#x5E8F;&#x5F0F;&#x7684;&#x89E3;&#x7B54;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-size:14px"&gt;&#x904E;&#x7A0B;:&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(1) &#x6AA2;&#x6E2C;&#x5230; 2&#xFF0C;&#x628A;&#x8EAB;&#x70BA;&#x904B;&#x7B97;&#x5143;&#x7684;&amp;nbsp;2 push &#x9032; stack &#x4E2D; &#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(2) &#x6AA2;&#x6E2C;&#x5230; 4&#xFF0C;&#x628A;&#x8EAB;&#x70BA;&#x904B;&#x7B97;&#x5143;&#x7684; 4&amp;nbsp;push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(3) &#x6AA2;&#x6E2C;&#x5230; 6&#xFF0C;&#x628A;&#x8EAB;&#x70BA;&#x904B;&#x7B97;&#x5143;&#x7684; 6 push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(4) &#x6AA2;&#x6E2C;&#x5230;&#x904B;&#x7B97;&#x5B50; * &#xFF0C;&#x5247;&#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 6 &#x548C; 4 &#x9032;&#x884C; * &#x904B;&#x7B97;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(5) &#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 6 &#x548C; 4 &#x522A;&#x6389;&#x5F8C;&#xFF0C;&#x5C07;&#x904B;&#x7B97;&#x5F8C;&#x5F97;&#x5230;&#x7684;&#x7D50;&#x679C; 24 push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(6) &#x6AA2;&#x6E2C;&#x5230;&#x904B;&#x7B97;&#x5B50; + &#xFF0C;&#x5247;&#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 24 &#x548C; 2&amp;nbsp;&#x9032;&#x884C; + &#x904B;&#x7B97;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(7) &#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x6578;&#x5B57; 24&amp;nbsp;&#x548C; 2 &#x522A;&#x6389;&#x5F8C;&#xFF0C;&#x5C07;&#x904B;&#x7B97;&#x5F8C;&#x5F97;&#x5230;&#x7684;&#x7D50;&#x679C; 26 push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(8) &#x6AA2;&#x6E2C;&#x5230; 7&#xFF0C;&#x628A;&#x8EAB;&#x70BA;&#x904B;&#x7B97;&#x5143;&#x7684;&amp;nbsp;7&amp;nbsp;push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(9) &#x6AA2;&#x6E2C;&#x5230; 5&#xFF0C;&#x628A;&#x8EAB;&#x70BA;&#x904B;&#x7B97;&#x5143;&#x7684; 5 push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(10) &#x6AA2;&#x6E2C;&#x5230;&#x904B;&#x7B97;&#x5B50; - &#xFF0C;&#x5247;&#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 7 &#x548C; 5 &#x9032;&#x884C; - &#x904B;&#x7B97;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(11) &#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 7 &#x548C; 5 &#x522A;&#x6389;&#x5F8C;&#xFF0C;&#x5C07;&#x904B;&#x7B97;&#x5F8C;&#x5F97;&#x5230;&#x7684;&#x7D50;&#x679C; 2 push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(12) &#x6AA2;&#x6E2C;&#x5230;&#x904B;&#x7B97;&#x5B50; * &#xFF0C;&#x5247;&#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 2 &#x548C; 26 &#x9032;&#x884C; * &#x904B;&#x7B97;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(13) &#x628A; stack &#x9760;&#x8FD1;&#x9802;&#x90E8;&#x7684;&#x982D;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143; 2&amp;nbsp;&#x548C; 26&amp;nbsp;&#x522A;&#x6389;&#x5F8C;&#xFF0C;&#x5C07;&#x904B;&#x7B97;&#x5F8C;&#x5F97;&#x5230;&#x7684;&#x7D50;&#x679C; 52&amp;nbsp;push &#x9032; stack &#x4E2D;&#xFF0C;&#x4E26;&#x524D;&#x5F80; postfix &#x7684; link list &#x4E2D;&#xFF0C;&#x8A72;&#x9805;&#x7684;&#x4E0B;&#x4E00;&#x9805;&#x6AA2;&#x6E2C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(14) &#x6AA2;&#x6E2C;&#x5230;&amp;nbsp;next &#x70BA; NULL &#xFF0C;&#x6545;&#x6B64; postfix &#x7684;&#x904B;&#x7B97;&#x7D50;&#x679C;&#x70BA; stack &#x50C5;&#x5B58;&#x7684;&#x904B;&#x7B97;&#x5143; 52&amp;nbsp;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>19</hit>
+  <lang>1</lang>
+</data>

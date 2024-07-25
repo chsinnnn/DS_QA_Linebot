@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-07-05 01:31:49",
+        "poster": "06005727",
+        "realname": "陳彥勳",
+        "email": "cys890403@gmail.com",
+        "homepage": null,
+        "subject": "搶答109",
+        "content": "<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">問109</span>：靜態陣列和動態陣列有何差異？指出其優缺點。</span></span></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">答109</span>：靜態陣列和動態陣列的差別在於記憶體的使用狀況，動態陣列在程式尚未執行到有關該陣列的宣告之前不會配置任何記憶體給該陣列，當程式執行到宣告陣列時，才會要求系統配置記憶體空間給動態陣列使用。而靜態陣列則是程式在載入到記憶體時，同時也要求配置記憶體空間給靜態陣列使用。靜態陣列的優點是找查記憶體十分快速，缺點是對於拓展空間、插入資料很浪費資源，需要移動大量資料。動態陣列的優點是可以動態的新增和刪除元素</span></span>、可以動態的改變陣列的容量，缺點是<span style=\"color:black\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:9.0pt\">當需要插入或刪除元素時，可能需要重新分配記憶體並移動其他元素，以便保持連續的記憶體空間且插入或刪除元素的成本較高，尤其是在陣列的開頭或中間位置。</span></span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

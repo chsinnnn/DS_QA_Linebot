@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:00" type="post" filename="b000000017.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278679</board_id>
+  <node>000000017</node>
+  <site>1000110001</site>
+  <pt>2023-07-13 23:40:27</pt>
+  <poster>06005984</poster>
+  <realname>&#x8A31;&#x7956;&#x777F;  </realname>
+  <email>ray900510@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;116 </subject>
+  <content>&lt;p&gt;116. &#x5C07;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x524D;&#x5E8F;&#x5F0F;prefix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002;&lt;br /&gt;&#xD;
+a b + c * d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5148;&#x628A;&#x5F8C;&#x5E8F;&#x8F49;&#x56DE;&#x4F86;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(a+b)c*&amp;nbsp; &amp;nbsp;(d+e)f*+&amp;nbsp; &amp;nbsp; (w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;((a+b)*c)&amp;nbsp; &amp;nbsp;((d+e)*f)+&amp;nbsp; &amp;nbsp;(w+z)*&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;((((a+b)*c)+((d+e)*f))*(w+z))&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F49;&#x5B8C;&#x4E4B;&#x5F8C;&#x6539;&#x6210;&#x524D;&#x5E8F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x6700;&#x8FD1;&#x8005;&#x70BA;&#x512A;&#x5148;,&#x53D6;&#x4EE3;&#x6240;&#x6709;&#x5DE6;&#x62EC;&#x865F;,&#x5C07;&#x6240;&#x6709;&#x53F3;&#x62EC;&#x865F;&#x53BB;&#x6389;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;*+*+abc*+def+wz&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>9</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:38",
+        "@type": "post",
+        "@filename": "b000000003000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305440",
+        "node": "000000003000000001",
+        "site": "1000110001",
+        "pt": "2023-12-26 14:59:33",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 228. 如何將一個陣列轉換成一棵堆積？",
+        "content": "<p>Good!</p>\r\n\r\n<p><a href=\"https://en.cppreference.com/w/cpp/algorithm/make_heap\" target=\"_blank\">https://en.cppreference.com/w/cpp/algorithm/make_heap</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

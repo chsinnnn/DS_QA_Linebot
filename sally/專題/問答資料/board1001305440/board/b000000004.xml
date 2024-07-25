@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:51:38" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305440</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2023-12-26 20:52:28</pt>
+  <poster>11111239</poster>
+  <realname>&#x9AD8;&#x4E8E;&#x55AC;  </realname>
+  <email>rita920927@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>227. &#x5217;&#x8209;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x548C;&#x5806;&#x7A4D;heap&#x7684;&#x4E09;&#x9805;&#x5DEE;&#x7570;&#x3002; </subject>
+  <content>&lt;p&gt;1. &#x6392;&#x5E8F;&#x65B9;&#x5F0F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;BST&#xFF1A;&#x5DE6;&#x5B50;&#x6A39;&#x4E0A;&#x6240;&#x6709;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&#x5C0F;&#x65BC;&#x6839;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&#xFF0C;&#x53F3;&#x5B50;&#x6A39;&#x4E0A;&#x6240;&#x6709;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&#x5927;&#x65BC;&#x7B49;&#x65BC;&#x6839;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Heap&#xFF1A;&#x5206;&#x70BA;&#x6700;&#x5927;&#x5806;&#x758A;&#x548C;&#x6700;&#x5C0F;&#x5806;&#x758A;&#x3002;&#x5728;&#x6700;&#x5927;&#x5806;&#x758A;&#x4E2D;&#xFF0C;root&#x662F;&#x6700;&#x5927;&#x7684;&#xFF1B;&#x800C;&#x5728;&#x6700;&#x5C0F;&#x5806;&#x4E2D;&#xFF0C;root&#x662F;&#x6700;&#x5C0F;&#x7684;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2. &#x5E73;&#x8861;&#x6027;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;BST&#xFF1A;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;complete tree&#x3002;&#x7576;&#x65B0;&#x589E;&#x6216;&#x522A;&#x9664;&#x6642;&#xFF0C;&#x53EF;&#x80FD;&#x6703;&#x7522;&#x751F;&#x4E00;&#x500B;&#x4E0D;&#x5E73;&#x8861;&#x7684;&#x6A39;&#x7D50;&#x69CB;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Heap&#xFF1A;&#x4E0D;&#x7BA1;&#x65B0;&#x589E;&#x6216;&#x522A;&#x9664;&#x8CC7;&#x6599;&#xFF0C;heap&#x90FD;&#x6703;&#x4FDD;&#x6301;complete tree&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;3. &#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;BST&#xFF1A;Average&#xFF1A;O(log n&#xFF09;Worst&#xFF1A;O&#xFF08;n&#xFF09;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Heap&#xFF1A;O(n log n)&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>9</hit>
+  <lang>1</lang>
+</data>

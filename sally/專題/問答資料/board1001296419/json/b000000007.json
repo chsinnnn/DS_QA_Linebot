@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:45",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296419",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-07 21:20:33",
+        "poster": "10731126",
+        "realname": "陳冠吾",
+        "email": "aa1025489@gmail.com",
+        "homepage": null,
+        "subject": "113",
+        "content": "<p>113. 將此後序式postfix轉中序式infix，並詳述步驟。*<br />\r\na b + c * d e + f * + w z + *</p>\r\n\r\n<p>1.逐個讀進後序式，根據受體不同做出以下對應操作。</p>\r\n\r\n<p>2-1.若為運算元，推進棧中，並在運算元(式)中以&quot; ; &quot;作為與前者的分隔符。</p>\r\n\r\n<p>2-2.若為運算子，將棧中的右運算式取出，壓入運算子後重新壓入右運算元，並在左右運算式外加入左右括號</p>\r\n\r\n<p>逐個進行以上步驟直到後續式讀取完畢，結束時重新檢查算是中是否有分隔符，若有，則error</p>\r\n\r\n<p>以下是轉換時棧中變化:</p>\r\n\r\n<p>a<br />\r\na;b<br />\r\n(a+b)<br />\r\n(a+b);c<br />\r\n((a+b)*c)<br />\r\n((a+b)*c);d<br />\r\n((a+b)*c);d;e<br />\r\n((a+b)*c);(d+e)<br />\r\n((a+b)*c);(d+e);f<br />\r\n((a+b)*c);((d+e)*f)<br />\r\n(((a+b)*c)+((d+e)*f))<br />\r\n(((a+b)*c)+((d+e)*f));w<br />\r\n(((a+b)*c)+((d+e)*f));w;z<br />\r\n(((a+b)*c)+((d+e)*f));(w+z)<br />\r\n((((a+b)*c)+((d+e)*f))*(w+z))<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

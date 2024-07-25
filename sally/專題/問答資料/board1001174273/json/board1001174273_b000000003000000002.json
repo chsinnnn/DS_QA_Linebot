@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000003000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000003000000002",
+        "site": "1000110001",
+        "pt": "2022-10-09 23:52:55",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p><span style=\"color:#ff0000\">請依題意解釋程式碼。</span></p>\r\n\r\n<p>附註：</p>\r\n\r\n<p><span style=\"color:#b22222\">1. 本課程作業勿使用&quot;萬能標頭檔&quot;。(理由：清楚認知程式所使用的既有函數)</span></p>\r\n\r\n<p><span style=\"color:#b22222\">2. 本課程作業勿使用auto自動變數。(理由：清楚認知程式所使用的變數型別)</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

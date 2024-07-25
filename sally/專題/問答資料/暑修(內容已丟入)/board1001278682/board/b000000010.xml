@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:20" type="post" filename="b000000010.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278682</board_id>
+  <node>000000010</node>
+  <site>1000110001</site>
+  <pt>2023-07-19 15:22:19</pt>
+  <poster>06005635</poster>
+  <realname>&#x9EC3;&#x535A;&#x5143;  </realname>
+  <email>maruko1mjw@yahoo.com.tw</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;204 </subject>
+  <content>&lt;p&gt;&#x984C;&#x76EE; : &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x591A;&#x91CD;&#x4F47;&#x5217;&#x5982;&#x4F55;&#x6A21;&#x64EC;&#xFF0C;&#x9808;&#x6307;&#x51FA;&#x9078;&#x64C7;&#x4F47;&#x5217;&#x7684;&#x7B56;&#x7565;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56DE;&#x7B54; :&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5047;&#x8A2D;&#x9280;&#x884C;&#x6709;&#x5169;&#x500B;queue,&#x4E26;&#x4E14;&#x5982;&#x679C;&#x5169;&#x500B;&#x4F47;&#x5217;&#x90FD;&#x7A7A;&#x5247;&#x512A;&#x5148;&#x9078;&#x64C7;&#x7B2C;&#x4E00;&#x500B;.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Arrival&amp;nbsp; Transaction&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;5&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 9&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;7&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;14&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;30&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;32&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;34&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;38&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;3&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bankQueue1 (5,9) (14,5) (30,5) (34,5)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bankQueue2 (7,5) (32,5) (38,3)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x7576;&#x4E2D;&#x53EA;&#x6709;(34,5)&#x6703;&#x7B49;&#x5F85;,&#x56E0;&#x70BA;(34,5)&#x62B5;&#x9054;&#x6642;bankQueue1&#x5728;&#x505A;(30,5),&#x800C;bankQueue2 &#x5728;&#x505A;(32,5),&#x5176;&#x4E2D;(30,5)&#x8F03;&#x65E9;&#x5B8C;&#x6210;&#x4E14;&#x8981;&#x505A;&#x5230;35,&#x6240;&#x4EE5;&#x7B49;&#x5F85;&#x6642;&#x9593;&#x662F;35-34=1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5E73;&#x5747;&#x7B49;&#x5F85;&#x6642;&#x9593;&#x70BA;1/7&#x5206;&#x9418;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>20</hit>
+  <lang>1</lang>
+</data>

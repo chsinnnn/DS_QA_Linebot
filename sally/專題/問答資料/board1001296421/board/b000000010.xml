@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:04" type="post" filename="b000000010.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296421</board_id>
+  <node>000000010</node>
+  <site>1000110001</site>
+  <pt>2023-10-24 17:39:54</pt>
+  <poster>11127142</poster>
+  <realname>&#x8303;&#x5EAD;&#x90E1;  </realname>
+  <email>handsome11623@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>125 </subject>
+  <content>&lt;p&gt;&#x5BEB;&#x51FA;&#x53EF;&#x4EE5;&#x7CBE;&#x6E96;&#x63CF;&#x8FF0;&#x81EA;&#x5DF1;&#x5B78;&#x865F;(&#x5982;&#x5B57;&#x4E32;10927188)&#x7684;&#x6587;&#x6CD5;grammar&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&#x5B78;&#x865F;&amp;gt; = &amp;lt;&#x5165;&#x5B78;&#x5E74;&#x5EA6;&amp;gt;&amp;lt;&#x7CFB;&#x9662;&amp;gt;&amp;lt;&#x79D1;&#x7CFB;&#x6392;&#x5E8F;&amp;gt;&amp;lt;&#x73ED;&#x7D1A;&amp;gt;&amp;lt;&#x5EA7;&#x865F;&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&#x5165;&#x5B78;&#x5E74;&#x5EA6;&amp;gt; = &amp;lt;digit&amp;gt;&amp;lt;digit&amp;gt; | &amp;lt;digit&amp;gt;&amp;lt;digit&amp;gt;&amp;lt;digit&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&#x7CFB;&#x9662;&amp;gt; = 1|2|3|4|5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&#x79D1;&#x7CFB;&#x6392;&#x5E8F;&amp;gt; = &amp;lt;digit&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&#x73ED;&#x7D1A;&amp;gt; = 1|2|3|4&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;&#x5EA7;&#x865F;&amp;gt; = &amp;lt;digit&amp;gt;&amp;lt;digit&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;lt;digit&amp;gt; = 0|1|2|3|4|5|6|7|8|9&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E2D;&#x539F;&#x5927;&#x5B78;&#x5404;&#x7CFB;&#x7D1A;&#x865F;&#x78BC;&#x5C0D;&#x61C9;&#x79D1;&#x7CFB;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11127142/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202023-10-24%20173810.png" style="height:536px; width:497px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>15</hit>
+  <lang>1</lang>
+</data>

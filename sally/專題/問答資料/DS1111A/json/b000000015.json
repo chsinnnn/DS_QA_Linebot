@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-09-20 21:12:12",
+        "poster": "10942208",
+        "realname": "陳洺安",
+        "email": "asd0389wsx0216@gmail.com",
+        "homepage": null,
+        "subject": "104",
+        "content": "<p>&nbsp;什麼情況下適合使用遞迴？</p>\r\n\r\n<p>問題可以被分解成更小的相似子問題 Divide and Conquer，ex: 二元樹的追蹤</p>\r\n\r\n<p>為什麼？</p>\r\n\r\n<p>可以簡化程式碼(提高可讀性、可維護性)</p>\r\n\r\n<p>但還是要注意終止條件，不然可能造成無限循環</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "38",
+        "lang": "1"
+    }
+}

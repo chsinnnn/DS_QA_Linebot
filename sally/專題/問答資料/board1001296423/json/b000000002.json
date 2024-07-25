@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-11-16 14:41:21",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "205",
+        "content": "<p><span style=\"font-size:18px\">提出二種選擇佇列的策略，並舉例比較二者。</span></p>\r\n\r\n<p>以下假設有三個服務 a b c 分別為 100秒 10秒 10秒</p>\r\n\r\n<ul>\r\n\t<li>First In, First Out (FIFO)\r\n\t<ul>\r\n\t\t<li>\r\n\t\t<p>先進的先服務</p>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t<p>優點是很公平先來先做</p>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t<p>缺點是 如果用以上假設&nbsp;這樣平均週期會很長 100+110+120</p>\r\n\t\t</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>\r\n\t<p>Shortest Job First (SJF)</p>\r\n\r\n\t<ul>\r\n\t\t<li>\r\n\t\t<p>最短的先服務</p>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t<p>優點是可以減少平均等待時間 (0+10+100) / 3</p>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t<p>缺點是相較於FIFO比較不公平</p>\r\n\t\t</li>\r\n\t</ul>\r\n\t</li>\r\n</ul>\r\n\r\n<p>此外，這些策略也同時應用在CPU&nbsp;Scheduling，因為在一台電腦上有眾多的 process ，</p>\r\n\r\n<p>每一種策略都會影響電腦在<strong>同時</strong>處理每一個&nbsp;process 的方式。&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

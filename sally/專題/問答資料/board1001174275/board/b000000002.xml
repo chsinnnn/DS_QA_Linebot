@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:46" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174275</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-10-21 21:59:37</pt>
+  <poster>11027229</poster>
+  <realname>&#x5353;&#x69AE;&#x6689;  </realname>
+  <email>intercoursedr@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>122. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;call by reference&#x3002; </subject>
+  <content>&lt;p&gt;call by reference &#x8DDF; call by value &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;call by value &#x662F;&#x5C07;&#x503C;&#x8907;&#x88FD;&#x5230; function &#x88E1;&#x9762;&#x518D;&#x57F7;&#x884C;&#x8A72; function&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x6703;&#x5F15;&#x60F3;&#x5230;&#x5E36;&#x5165;&#x7684;&#x5F15;&#x6578;&#x3002;&lt;br /&gt;&#xD;
+&#x800C; call by value &#x662F;&#x5C07;&#x300C;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x300D;&#x5E36;&#x5165; function&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x5728; funcion &#x88E1;&#x9762;&#x6539;&#x52D5;&#x5230;&#x53C3;&#x6578;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x547C;&#x53EB; function &#x6642;&#x5E36;&#x5165;&#x7684;&#x5F15;&#x6578;&#x6703;&#x96A8;&#x4E4B;&#x6539;&#x52D5;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x662F;&#x7A0B;&#x5F0F;&#x78BC; :&lt;br /&gt;&#xD;
+#include&amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include&amp;lt;string&amp;gt;&lt;br /&gt;&#xD;
+// &#x7C21;&#x55AE;&#x7684; enum &#x5B58;&#x53EF;&#x4EE5;&#x559D;&#x7684;&#x98F2;&#x6599;&#xFF0C;&#x5176;&#x4E2D; NOTHING &#x662F;&#x6307;&#x6C92;&#x6709;&#x98F2;&#x6599;&amp;nbsp;&lt;br /&gt;&#xD;
+enum BeverageType { COFFEE, TEA, WATER, CYANIDE, BEER, PARAQUAT, NOTHING };&amp;nbsp;&lt;br /&gt;&#xD;
+class Cup{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x516C;&#x958B;&#x7684;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;Cup(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;isEmpty = true;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;type = NOTHING;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x70BA;&#x4E86;&#x5448;&#x73FE; call by reference&#x8DDF;call by value&#x7684;&#x5DEE;&#x5225;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x7528;&#x4E86;static&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x52A0;&#x4E86; &amp;amp; &#x5B57;&#x865F;&#x5C31;&#x662F;&#x5C07;&#x5730;&#x5740;&#x50B3;&#x5230;&#x9019;&#x500B;function&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;static Fill(Cup &amp;amp; cup, BeverageType type){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cup.type = type;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cup.isEmpty = false;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// call by value&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;static AnotherFill(Cup cup, BeverageType type){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cup.type = type;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cup.isEmpty = false;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x88E1;&#x9762;&#x662F;&#x5565;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;BeverageType whatIsInside(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(!isEmpty) return type;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;else return NOTHING;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x662F;&#x5426;&#x70BA;&#x7A7A;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;bool isItEmpty(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;return isEmpty;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x975E;&#x516C;&#x958B;&#x7684;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;bool isEmpty; // &#x662F;&#x5426;&#x70BA;&#x7A7A;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;BeverageType type; // &#x7A2E;&#x985E;&amp;nbsp;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;BeverageType coffee = COFFEE;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// Two ordinary cups&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Cup cup1, cup2;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// fill cup1&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Cup::Fill(cup1,coffee);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// fill cup2&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Cup::AnotherFill(cup2,coffee);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;if(cup1.isItEmpty()) printf(&amp;quot;cup1 is empty\n&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;else printf(&amp;quot;cup1 is not empty\n&amp;quot;); // &#x6703;&#x5370;&#x51FA;&#x9019;&#x500B;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;if(cup2.isItEmpty()) printf(&amp;quot;cup2 is empty\n&amp;quot;); // &#x6703;&#x5370;&#x51FA;&#x9019;&#x500B;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;else printf(&amp;quot;cup2 is not empty\n&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E0B;&#x9762;&#x662F;&#x4E0A;&#x9762;&#x7A0B;&#x5F0F;&#x78BC;&#x7684;&#x5716;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027229/images/IMG_0694_Original.gif" style="height:270px; width:500px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>41</hit>
+  <lang>1</lang>
+</data>

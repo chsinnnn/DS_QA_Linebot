@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:43",
+        "@type": "post",
+        "@filename": "b000000001000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305436",
+        "node": "000000001000000001",
+        "site": "1000110001",
+        "pt": "2023-12-13 15:48:27",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time",
+        "content": "<p><span style=\"color:#0000cd\">Excellent step-by-step explanation!</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

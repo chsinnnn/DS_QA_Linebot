@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-07-19 15:22:19",
+        "poster": "06005635",
+        "realname": "黃博元",
+        "email": "maruko1mjw@yahoo.com.tw",
+        "homepage": null,
+        "subject": "搶答204",
+        "content": "<p>題目 : 舉例說明多重佇列如何模擬，須指出選擇佇列的策略。</p>\r\n\r\n<p>回答 :</p>\r\n\r\n<p>假設銀行有兩個queue,並且如果兩個佇列都空則優先選擇第一個.</p>\r\n\r\n<p>Arrival&nbsp; Transaction</p>\r\n\r\n<p>5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9</p>\r\n\r\n<p>7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>30&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>32&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>34&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>38&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;3</p>\r\n\r\n<p>bankQueue1 (5,9) (14,5) (30,5) (34,5)</p>\r\n\r\n<p>bankQueue2 (7,5) (32,5) (38,3)</p>\r\n\r\n<p>這當中只有(34,5)會等待,因為(34,5)抵達時bankQueue1在做(30,5),而bankQueue2 在做(32,5),其中(30,5)較早完成且要做到35,所以等待時間是35-34=1</p>\r\n\r\n<p>平均等待時間為1/7分鐘</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

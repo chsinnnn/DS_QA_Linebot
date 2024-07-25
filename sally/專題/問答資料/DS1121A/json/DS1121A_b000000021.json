@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2022-09-19 18:28:41",
+        "poster": "11027127",
+        "realname": "林業昌",
+        "email": "a0930549766@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>遞迴可以用來解決重複性高的問題，例如二元樹可以利用遞迴輕鬆地區分數據。又或是尋找最大公因數這種繁瑣的問題，利用遞迴一層一層的把數字拆解開來，來尋找最後的答案。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "42",
+        "lang": "1"
+    }
+}

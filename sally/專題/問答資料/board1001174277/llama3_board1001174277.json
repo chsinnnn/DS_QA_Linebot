@@ -1,0 +1,17 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 用上課講義的內容當作例子\n\n第一項用Arrival + duration算出Departure 由於是第一項所以waiting time = 0(不用等待)\n\n後面開始用Departure - Arrival 算出的差值就是waiting time\n\n當Departure - Arrival 的值 &gt;=0 時，後續的Departure 就等於 Departure + duration\n\n特例就是當waiting time &lt; 0 的時候，要把waiting當作0來看待，因為是從Arrival的時候才開始動作，不會提前知道運行\n\n就像例子的第4項Departure - Arrival 是24 - 30 = -6 這時就要當作0來看待\n\n同時Departure的計算回到從Departure + duration 一開始的 Arrival + duration\n\n最後把算出的waiting time的全部加起來做出總和\n\n然後  總和 / waiting time的數量 = 就是平均等候時間Average Waiting Time(AWT)\n\n講義的這題就是 總和為28 , waiting time = 7 故 28/7 = 4 (AWT)平均等待時間",
+        "output": "清楚詳盡的解釋。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 以作業任務三的例子來說，以佇列1(Q1)當成主要的廚師，佇列2(Q2)為次要的廚師，兩個廚師的閒置時間(CQ1、CQ2)彼此獨立，處理訂單會改變閒置時間\n\n當訂單進來時，\n\nif Q1為空的且訂單的抵達時間大於等於CQ1且CQ1&lt;=CQ2\n\n        則由Q1直接處理此訂單\n\nelse if Q2為空且訂單抵達時間&gt;=CQ2\n\n        則由Q2直接處理此訂單\n\nelse if 下筆訂單的抵達時間&gt;=CQ1 || &gt;=CQ2\n\n        取出並處理各自佇列的訂單，直到抵達時間( &gt;=CQ1 &amp;&amp; &gt;=CQ2 ) || 佇列已經空了\n\n        接著將訂單新增到佇列內訂單數較少的一方，若相同則新增到Q1\n\nelse \n\n        新增到較短的佇列中，若兩個佇列都已滿，則直接取消此訂單\n\n當沒有新訂單時，則直接一一處理佇列中剩餘的訂單",
+        "output": "如果將不同意義的時間以變數名稱取代，文字敘述的邏輯比較容易理解或偵錯。\n\n例如：令下一個訂單的抵達時間為Onew、佇列1的閒置時間為CQ1，然後時間早的寫在前面，就可以簡寫成 CQ1&lt;=Onew。 👍 👏🏻👏🏻👏🏻 我阿公看完都會寫了"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n共2位同學參與問答。",
+        "output": ""
+    }
+]

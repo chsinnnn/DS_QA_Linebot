@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-07-08 00:40:39",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答110",
+        "content": "<p>110. 寫出C++程式碼說明傳值呼叫call by value。</p>\r\n\r\n<p>當在 C++ 中使用傳值呼叫（call by value）時，函式的參數會接收實際參數的複本，而不是直接操作實際參數本身。</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>// 傳值呼叫的函式<br />\r\nvoid increment(int num) {<br />\r\n&nbsp;&nbsp;&nbsp; num++;&nbsp; // 對傳入的參數進行增加操作<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp; int number = 10;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;原始數字： &quot; &lt;&lt; number &lt;&lt; std::endl;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; increment(number);&nbsp; // 傳值呼叫</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;呼叫函式後的數字： &quot; &lt;&lt; number &lt;&lt; std::endl;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

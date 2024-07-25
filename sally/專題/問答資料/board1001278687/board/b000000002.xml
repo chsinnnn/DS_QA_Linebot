@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:52" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278687</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2023-07-22 01:39:38</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage> </homepage>
+  <subject>&#x6436;&#x7B54;222 </subject>
+  <content>&lt;p&gt;222. &#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5982;&#x4F55;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x65B0;&#x589E;&#x7BC0;&#x9EDE;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct TreeNode {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int data;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* left;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* right;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode(int val) : data(val), left(nullptr), right(nullptr) {}&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class BinarySearchTree {&lt;br /&gt;&#xD;
+public:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; BinarySearchTree() : root(nullptr) {}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x65B0;&#x589E;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; void insert(int val) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; root = insertNode(root, val);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;private:&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x905E;&#x8FF4;&#x63D2;&#x5165;&#x7BC0;&#x9EDE;&#x7684;&#x8F14;&#x52A9;&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* insertNode(TreeNode* node, int val) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x5982;&#x679C;&#x6A39;&#x70BA;&#x7A7A;&#xFF0C;&#x5247;&#x76F4;&#x63A5;&#x5EFA;&#x7ACB;&#x65B0;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (node == nullptr) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return new TreeNode(val);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x905E;&#x8FF4;&#x5F80;&#x5DE6;&#x5B50;&#x6A39;&#x6216;&#x53F3;&#x5B50;&#x6A39;&#x63D2;&#x5165;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (val &amp;lt; node-&amp;gt;data) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; node-&amp;gt;left = insertNode(node-&amp;gt;left, val);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else if (val &amp;gt; node-&amp;gt;data) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; node-&amp;gt;right = insertNode(node-&amp;gt;right, val);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x56DE;&#x50B3;&#x6839;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return node;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* root;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; BinarySearchTree bst;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(5);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(3);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(7);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(1);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(4);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(6);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; bst.insert(8);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x9019;&#x88E1;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x5176;&#x4ED6;&#x5C0D;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x641C;&#x5C0B;&#x3001;&#x522A;&#x9664;&#x7B49;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>18</hit>
+  <lang>1</lang>
+</data>

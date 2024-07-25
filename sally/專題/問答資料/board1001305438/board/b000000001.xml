@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:51:06" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305438</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-11-29 17:11:24</pt>
+  <poster>11127229</poster>
+  <realname>&#x5ED6;&#x7FCA;&#x5D34;  </realname>
+  <email>willy.liao921118@gmail.com</email>
+  <homepage> </homepage>
+  <subject>211. &#x8209;&#x4F8B;&#x6BD4;&#x8F03;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x548C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x7684;&#x8CC7;&#x6599;&#x4EA4;&#x63DB;swap&#x6B21;&#x6578;&#xFF0C;&#x4F55;&#x8005;&#x8F03;&#x591A;&#xFF1F; </subject>
+  <content>&lt;p&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void bubbleSort( int arr[], int n, int *swapCount) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n - 1; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = 0; j &amp;lt; n - i - 1; j++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (arr[j] &amp;gt; arr[j + 1]) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int temp = arr[j];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j] = arr[j + 1];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j + 1] = temp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (*swapCount)++;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void selectionSort(int arr[], int n, int *swapCount) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n - 1; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int min_idx = i;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = i + 1; j &amp;lt; n; j++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (arr[j] &amp;lt; arr[min_idx]) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; min_idx = j;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int temp = arr[i];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[i] = arr[min_idx];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[min_idx] = temp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (*swapCount)++;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr[] = {64, 34, 25, 12, 22, 11, 90};&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int n = sizeof(arr) / sizeof(arr[0]);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int swapCount = 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; bubbleSort(arr, n, &amp;amp;swapCount);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; printf(&amp;quot;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x4EA4;&#x63DB;&#x6B21;&#x6578;: %d\n&amp;quot;, swapCount);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int arr2[] = {64, 34, 25, 12, 22, 11, 90};&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; swapCount = 0;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; selectionSort(arr2, n, &amp;amp;swapCount);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; printf(&amp;quot;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x4EA4;&#x63DB;&#x6B21;&#x6578;: %d\n&amp;quot;, swapCount);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;ul&gt;&#xD;
+	&lt;li&gt;&#x4E00;&#x822C;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x7684;&#x4EA4;&#x63DB;&#x6B21;&#x6578;&#x8F03;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x591A;&#xFF0C;&#x9019;&#x662F;&#x56E0;&#x70BA;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x5728;&#x6BCF;&#x6B21;&#x6BD4;&#x8F03;&#x5F8C;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x9032;&#x884C;&#x4EA4;&#x63DB;&#xFF0C;&#x800C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x6BCF;&#x8F2A;&#x53EA;&#x9032;&#x884C;&#x4E00;&#x6B21;&#x4EA4;&#x63DB;&#x3002;&lt;/li&gt;&#xD;
+&lt;/ul&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>19</hit>
+  <lang>1</lang>
+</data>

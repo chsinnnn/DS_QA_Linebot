@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000034.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000034",
+        "site": "1000110001",
+        "pt": "2022-10-04 21:36:46",
+        "poster": "11027204",
+        "realname": "鄭宇傑",
+        "email": "11027204@O365st.cycu.edu.tw",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>遞回呼叫在進行完成前，會將資料傳給stack（堆疊）裏面，而如果資料超過stack的空間的話，就會造成堆棧溢位，也稱為stack overflow，這也是造成記憶體區段錯誤的原因之一。</p>\r\n\r\n<p><strong>以下是一些導致儲存器段錯誤的一般原因：</strong></p>\r\n\r\n<p>試圖訪問不存在的內存空間（進程內存空間以外）</p>\r\n\r\n<p>試圖訪問沒有權限的內存空間（例如：訪問操作系統內核的內存地址）</p>\r\n\r\n<p>試圖寫入至只讀內存段（例如：代碼段）</p>\r\n\r\n<p><strong>以下是一些導致儲存器段錯誤的一般編程錯誤： </strong></p>\r\n\r\n<p>引用空指針 引用未初始化的野指針</p>\r\n\r\n<p>引用已經被調用free()函數釋放了的懸空指針</p>\r\n\r\n<p>緩衝區溢出</p>\r\n\r\n<p><span style=\"color:#ff0000\">堆棧溢出 （本問題的原因）</span></p>\r\n\r\n<p>運行未正確編譯的程序（儘管存在編譯時錯誤，某些編譯器依然會輸出可執行文件）</p>\r\n\r\n<p>ref.<a href=\"https://zh.wikipedia.org/wiki/%E8%A8%98%E6%86%B6%E9%AB%94%E5%8D%80%E6%AE%B5%E9%8C%AF%E8%AA%A4\">https://zh.wikipedia.org/wiki/%E8%A8%98%E6%86%B6%E9%AB%94%E5%8D%80%E6%AE%B5%E9%8C%AF%E8%AA%A4</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "44",
+        "lang": "1"
+    }
+}

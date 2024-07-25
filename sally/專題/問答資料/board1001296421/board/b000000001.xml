@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:04" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296421</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-10-11 16:49:13</pt>
+  <poster>11127137</poster>
+  <realname>&#x9EC3;&#x4E59;&#x5BB6;  </realname>
+  <email>u810025@gmail.com</email>
+  <homepage>https://ja-errorpro.cf </homepage>
+  <subject>124 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&lt;span style="font-size:16px"&gt;&#x5408;&#x6CD5;&#x904B;&#x7B97;&#x5F0F;&#x82E5;&#x6709;&#x4E09;&#x7D44;&#x62EC;&#x5F27;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x5E7E;&#x7A2E;&#x4E0D;&#x540C;&#x7684;&#x5F62;&#x5F0F;&#xFF1F;&#x4F8B;&#x5982;()()()&#x548C;(()())&#x5C31;&#x662F;&#x4E8C;&#x7A2E;&#x4E0D;&#x540C;&#x7684;&#x5F62;&#x5F0F;&#x3002;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5C0D;&#x61C9;LeetCode&#x984C;&#x76EE;&#xFF1A;&lt;a href="https://leetcode.com/problems/generate-parentheses/"&gt;https://leetcode.com/problems/generate-parentheses/&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x53CA;ZJ a229&#xFF1A;&lt;a href="https://zerojudge.tw/ShowProblem?problemid=a229"&gt;https://zerojudge.tw/ShowProblem?problemid=a229&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x679A;&#x8209;&#x6240;&#x6709;&#x5F62;&#x5F0F;&#xFF0C;&#x8A2D;N&#x4EE3;&#x8868;&#x8981;&#x5E7E;&#x7D44;&#x62EC;&#x865F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6709;&#x4E09;&#x7A2E;&#x53EF;&#x80FD;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5DE6;&#x53F3;&#x62EC;&#x865F;&#x6578;&#x76F8;&#x540C;, &#x627E;&#x5230;&#x4E00;&#x7A2E;&#x5408;&#x6CD5;&#x5F62;&#x5F0F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5DE6;&#x62EC;&#x865F;&#x6578;&#x7B49;&#x65BC;N&#xFF0C;&#x53EA;&#x80FD;&#x518D;&#x653E;&#x53F3;&#x62EC;&#x865F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5DE6;&#x62EC;&#x865F;&#x6578;&#x5C0F;&#x65BC;&#x53F3;&#x62EC;&#x865F;&#x6578;(&#x6216;&#x5DE6;&#x53F3;&#x62EC;&#x865F;&#x9806;&#x5E8F;&#x4E0D;&#x5C0D;), &#x4E0D;&#x5408;&#x6CD5;&#xFF0C;&#x905E;&#x8FF4;&#x7D50;&#x675F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5426;&#x5247;&#x53EF;&#x4EE5;&#x9078;&#x5DE6;&#x62EC;&#x865F;&#x6216;&#x53F3;&#x62EC;&#x865F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F9D;&#x64DA;&#x4E0A;&#x8FF0;&#x53EF;&#x5F97;&#x77E5;&#x905E;&#x8FF4;&#x95DC;&#x4FC2;&#x5F0F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="C_{n+1} = C_0C_n+C_1C_{n-1}+\dots+C_nC_0, C_0 = 1" src="https://latex.codecogs.com/gif.latex?C_%7Bn&amp;amp;plus;1%7D%20%3D%20C_0C_n&amp;amp;plus;C_1C_%7Bn-1%7D&amp;amp;plus;%5Cdots&amp;amp;plus;C_nC_0%2C%20C_0%20%3D%201" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6B64;&#x70BA;&#x5361;&#x5854;&#x862D;&#x6578;(Catalan number)&#x7684;&#x539F;&#x59CB;&#x5B9A;&#x7FA9;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E00;&#x822C;&#x5F0F;&#x70BA;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="C_n = \frac{(2n)!}{n!(n+1)!}" src="https://latex.codecogs.com/gif.latex?C_n%20%3D%20%5Cfrac%7B%282n%29%21%7D%7Bn%21%28n&amp;amp;plus;1%29%21%7D" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="N=3" src="https://latex.codecogs.com/gif.latex?N%3D3" /&gt;&#x76F4;&#x63A5;&#x5E36;&#x5165;&#xFF0C;&#x7B54;&#x6848;&#x5C31;&#x662F;&amp;nbsp;5 &#x7A2E;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-size:14px"&gt;&#x53E6;&#x4E00;&#x7A2E;&#x770B;&#x6CD5;&#xFF1A;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x52D5;&#x614B;&#x898F;&#x5283;(Dynamic Programming)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5B9A;&#x7FA9;&#x72C0;&#x614B;&#xFF1A;dp[L][R] &#x70BA;&#x53D6; L&amp;nbsp;&#x500B;&#x5DE6;&#x62EC;&#x865F;&#x8207; R&amp;nbsp;&#x500B;&#x53F3;&#x62EC;&#x865F;&#x6709;&#x5E7E;&#x7A2E;&#x5F62;&#x5F0F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F49;&#x79FB;&#x5F0F;&#xFF1A;&amp;nbsp;&#x7576;&amp;nbsp;&lt;img alt="L \ge R" src="https://latex.codecogs.com/gif.latex?L%20%5Cge%20R" /&gt;&#xFF0C;&#x53EF;&#x4EE5;&#x53D6;&#x5DE6;&#x62EC;&#x865F;&#x8DDF;&#x53F3;&#x62EC;&#x865F;&#xFF0C;dp[L][R] = dp[L-1][R] + dp[L][R-1]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x57FA;&#x5E95;&#x72C0;&#x614B;&#xFF1A;dp[L][0] &#x7B54;&#x6848;&#x4E00;&#x5B9A;&#x70BA; 1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6700;&#x5F8C;&#x7684;&#x7B54;&#x6848;&#x5C31;&#x662F;dp[N][N]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```cpp&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void solve() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; int n;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; cin &amp;gt;&amp;gt; n;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; dp(n + 1, vector&amp;lt;int&amp;gt;(n + 1, 0));&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; for (int l = 1; l &amp;lt;= n; l++)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; dp[l][0] = 1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; for (int l = 1; l &amp;lt;= n; l++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for (int r = 1; r &amp;lt;= l; r++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; dp[l][r] = dp[l - 1][r] + dp[l][r - 1];&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; cout &amp;lt;&amp;lt; dp[n][n] &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F38;&#x5165;3, &#x7D50;&#x679C;&#x4E5F;&#x6703;&#x662F;5&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>70</hit>
+  <lang>1</lang>
+</data>

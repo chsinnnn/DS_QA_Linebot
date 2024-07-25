@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:33" type="post" filename="b000000015.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278684</board_id>
+  <node>000000015</node>
+  <site>1000110001</site>
+  <pt>2023-07-23 22:20:40</pt>
+  <poster>06005836</poster>
+  <realname>&#x9673;&#x4E88;&#x7487;  </realname>
+  <email>jason40125520@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;211 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8209;&#x4F8B;&#x6BD4;&#x8F03;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x548C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x7684;&#x8CC7;&#x6599;&#x4EA4;&#x63DB;&lt;/span&gt;swap&lt;/strong&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6B21;&#x6578;&#xFF0C;&#x4F55;&#x8005;&#x8F03;&#x591A;&#xFF1F;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x548C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x90FD;&#x662F;&#x7C21;&#x55AE;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x5B83;&#x5011;&#x7684;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x90FD;&#x662F;&lt;/span&gt; O(n^2)&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF0C;&#x5176;&#x4E2D;&lt;/span&gt; n &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x662F;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x5143;&#x7D20;&#x6578;&#x91CF;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5C31;&#x8CC7;&#x6599;&#x4EA4;&#x63DB;&#xFF08;&lt;/span&gt;swap&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF09;&#x6B21;&#x6578;&#x800C;&#x8A00;&#xFF0C;&#x5169;&#x8005;&#x7684;&#x8868;&#x73FE;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#xFF08;&lt;/span&gt;Bubble Sort&lt;/strong&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF09;&#xFF1A;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x662F;&#x4E00;&#x7A2E;&#x4EA4;&#x63DB;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x5B83;&#x901A;&#x904E;&#x53CD;&#x8986;&#x5730;&#x4EA4;&#x63DB;&#x76F8;&#x9130;&#x5169;&#x500B;&#x5143;&#x7D20;&#xFF0C;&#x628A;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x9010;&#x6F38;&lt;/span&gt;&amp;quot;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6D6E;&lt;/span&gt;&amp;quot;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5230;&#x6578;&#x5217;&#x7684;&#x6700;&#x5F8C;&#x3002;&#x5728;&#x6700;&#x58DE;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x9700;&#x8981;&#x9032;&#x884C;&lt;/span&gt; n(n-1)/2 &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6B21;&#x6BD4;&#x8F03;&#x548C;&#x4EA4;&#x63DB;&#x64CD;&#x4F5C;&#x3002;&#x5373;&#x4FBF;&#x5728;&#x6700;&#x4F73;&#x60C5;&#x6CC1;&#x4E0B;&#xFF08;&#x7576;&#x6578;&#x5217;&#x5DF2;&#x7D93;&#x6709;&#x5E8F;&#xFF09;&#xFF0C;&#x5B83;&#x7684;&#x4EA4;&#x63DB;&#x6B21;&#x6578;&#x4E5F;&#x4E0D;&#x6703;&#x6E1B;&#x5C11;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#xFF08;&lt;/span&gt;Selection Sort&lt;/strong&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF09;&#xFF1A;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x662F;&#x4E00;&#x7A2E;&#x9078;&#x64C7;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;&#x5B83;&#x904D;&#x6B77;&#x6578;&#x5217;&#xFF0C;&#x6BCF;&#x6B21;&#x9078;&#x64C7;&#x6700;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4E26;&#x5C07;&#x5176;&#x653E;&#x5230;&#x5DF2;&#x6392;&#x5E8F;&#x90E8;&#x5206;&#x7684;&#x672B;&#x5C3E;&#x3002;&#x5728;&#x6700;&#x58DE;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x9700;&#x8981;&#x9032;&#x884C;&lt;/span&gt; n(n-1)/2 &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6B21;&#x6BD4;&#x8F03;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x53EA;&#x9700;&#x8981;&#x9032;&#x884C;&lt;/span&gt; n-1 &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6B21;&#x4EA4;&#x63DB;&#x64CD;&#x4F5C;&#x3002;&#x9019;&#x662F;&#x56E0;&#x70BA;&#x5728;&#x6BCF;&#x6B21;&#x9078;&#x64C7;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x6642;&#xFF0C;&#x5B83;&#x76F4;&#x63A5;&#x653E;&#x5728;&#x6B63;&#x78BA;&#x7684;&#x4F4D;&#x7F6E;&#x4E0A;&#xFF0C;&#x800C;&#x4E0D;&#x50CF;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x90A3;&#x6A23;&#x9700;&#x8981;&#x9010;&#x6B65;&#x4EA4;&#x63DB;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5C31;&#x8CC7;&#x6599;&#x4EA4;&#x63DB;&#x6B21;&#x6578;&#x800C;&#x8A00;&#xFF0C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x6BD4;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x5C11;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x9019;&#x500B;&#x7279;&#x5B9A;&#x6307;&#x6A19;&#x4E0B;&#xFF0C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x8F03;&#x512A;&#x65BC;&#x6C23;&#x6CE1;&#x6392;&#x5E8F;&#x3002;&#x5169;&#x8005;&#x5728;&#x5BE6;&#x969B;&#x61C9;&#x7528;&#x4E2D;&#x90FD;&#x4E0D;&#x662F;&#x9AD8;&#x6548;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x7279;&#x5225;&#x662F;&#x5728;&#x8655;&#x7406;&#x5927;&#x91CF;&#x6578;&#x64DA;&#x6642;&#xFF0C;&#x61C9;&#x8003;&#x616E;&#x4F7F;&#x7528;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x5982;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF08;&lt;/span&gt;Quick Sort&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF09;&#x6216;&#x5408;&#x4F75;&#x6392;&#x5E8F;&#xFF08;&lt;/span&gt;Merge Sort&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF09;&#x3002;&lt;/span&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>8</hit>
+  <lang>1</lang>
+</data>

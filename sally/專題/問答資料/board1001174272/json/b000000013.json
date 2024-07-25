@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2022-09-26 22:11:41",
+        "poster": "11027257",
+        "realname": "洪暄妮",
+        "email": "nini20035290@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>在執行遞迴時，尚未被完成的function會被暫放在記憶體中的stack區等待處理。</p>\r\n\r\n<p>然而若是出現以下任一情形 :</p>\r\n\r\n<ul>\r\n\t<li>傳入資料過多</li>\r\n\t<li>遞迴為無窮遞迴，無法終止(它就會狂呼叫自己 產生一堆function占用stack空間)</li>\r\n</ul>\r\n\r\n<p>就很可能造成<span style=\"color:#ff0000\">stack overflow(堆疊溢位)</span>，而stack overflow則是此情況中導致記憶體區段錯誤的原因。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "91",
+        "lang": "1"
+    }
+}

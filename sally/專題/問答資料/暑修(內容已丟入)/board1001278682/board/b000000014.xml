@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:20" type="post" filename="b000000014.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278682</board_id>
+  <node>000000014</node>
+  <site>1000110001</site>
+  <pt>2023-07-21 17:39:52</pt>
+  <poster>06005836</poster>
+  <realname>&#x9673;&#x4E88;&#x7487;  </realname>
+  <email>jason40125520@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;201 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;waiting time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x5728;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x4F86;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;&#xFF08;Average Waiting Time&#xFF09;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x5047;&#x8A2D;&#x6211;&#x5011;&#x6B63;&#x5728;&#x6A21;&#x64EC;&#x4E00;&#x500B;&#x9867;&#x5BA2;&#x9032;&#x5165;&#x670D;&#x52D9;&#x53F0;&#x7684;&#x60C5;&#x5883;&#xFF0C;&#x9867;&#x5BA2;&#x5230;&#x9054;&#x670D;&#x52D9;&#x53F0;&#x7684;&#x9593;&#x9694;&#x6642;&#x9593;&#xFF08;Inter-arrival time&#xFF09;&#x662F;&#x96A8;&#x6A5F;&#x7684;&#xFF0C;&#x800C;&#x670D;&#x52D9;&#x6642;&#x9593;&#xFF08;Service time&#xFF09;&#x4E5F;&#x662F;&#x96A8;&#x6A5F;&#x7684;&#x3002;&#x9019;&#x88E1;&#x4F7F;&#x7528;&#x5178;&#x578B;&#x7684;&#x96E2;&#x6563;&#x4E8B;&#x4EF6;&#x6A21;&#x64EC;&#xFF0C;&#x7576;&#x9867;&#x5BA2;&#x5230;&#x9054;&#x670D;&#x52D9;&#x53F0;&#x6642;&#xFF0C;&#x6703;&#x9032;&#x884C;&#x670D;&#x52D9;&#xFF0C;&#x670D;&#x52D9;&#x7D50;&#x675F;&#x5F8C;&#x96E2;&#x958B;&#x4F47;&#x5217;&#x3002;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x5728;&#x6A21;&#x64EC;&#x904E;&#x7A0B;&#x4E2D;&#x8A18;&#x9304;&#x6BCF;&#x500B;&#x9867;&#x5BA2;&#x9032;&#x5165;&#x4F47;&#x5217;&#x7684;&#x6642;&#x9593;&#xFF0C;&#x4EE5;&#x53CA;&#x5B8C;&#x6210;&#x670D;&#x52D9;&#x7684;&#x6642;&#x9593;&#xFF0C;&#x9019;&#x6A23;&#x5C31;&#x53EF;&#x4EE5;&#x8A08;&#x7B97;&#x6BCF;&#x500B;&#x9867;&#x5BA2;&#x7684;&#x7B49;&#x5019;&#x6642;&#x9593;&#xFF0C;&#x4E26;&#x6700;&#x5F8C;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;&#x3002;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x7C21;&#x5316;&#x7684;Python&#x793A;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#xFF0C;&#x7528;&#x65BC;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;import random&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;def simulate_single_queue(simulation_time, inter_arrival_time_mean, service_time_mean):&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;queue = []&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;current_time = 0&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;total_waiting_time = 0&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;num_customers_served = 0&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;while current_time &amp;lt; simulation_time:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if not queue:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;# If the queue is empty, set the next arrival time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;next_arrival_time = random.expovariate(1 / inter_arrival_time_mean)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;current_time += next_arrival_time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;queue.append(current_time)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;else:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;# If the queue is not empty, process the next customer&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;next_service_time = random.expovariate(1 / service_time_mean)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;current_time += next_service_time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;# Calculate waiting time for the current customer&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;waiting_time = current_time - queue[0]&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;total_waiting_time += waiting_time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;num_customers_served += 1&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;queue.pop(0)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;average_waiting_time = total_waiting_time / num_customers_served&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return average_waiting_time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;# Example usage:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;simulation_time = 10000&amp;nbsp; # Total simulation time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;inter_arrival_time_mean = 5.0&amp;nbsp; # Mean time between customer arrivals&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;service_time_mean = 4.0&amp;nbsp; # Mean service time&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;result = simulate_single_queue(simulation_time, inter_arrival_time_mean, service_time_mean)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;print(&amp;quot;Average Waiting Time:&amp;quot;, result)&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x9019;&#x500B;&#x793A;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x4E2D;&#xFF0C;&#x6211;&#x5011;&#x8FFD;&#x8E64;&#x4E86;&#x6BCF;&#x500B;&#x9867;&#x5BA2;&#x7684;&#x7B49;&#x5019;&#x6642;&#x9593;&#xFF0C;&#x4E26;&#x6700;&#x7D42;&#x8A08;&#x7B97;&#x51FA;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;&#x3002;&#x9019;&#x53EA;&#x662F;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x6A21;&#x64EC;&#x793A;&#x4F8B;&#xFF0C;&#x5BE6;&#x969B;&#x61C9;&#x7528;&#x4E2D;&#x53EF;&#x80FD;&#x6703;&#x8003;&#x616E;&#x66F4;&#x591A;&#x7684;&#x56E0;&#x7D20;&#xFF0C;&#x4F8B;&#x5982;&#x4F47;&#x5217;&#x7684;&#x5BB9;&#x91CF;&#x9650;&#x5236;&#x3001;&#x9867;&#x5BA2;&#x7684;&#x512A;&#x5148;&#x7D1A;&#x7B49;&#x7B49;&#x3002;&#x540C;&#x6A23;&#x5730;&#xFF0C;&#x5EFA;&#x8B70;&#x9032;&#x884C;&#x591A;&#x6B21;&#x6A21;&#x64EC;&#x4F86;&#x7372;&#x5F97;&#x66F4;&#x7A69;&#x5B9A;&#x7684;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;&#x7D50;&#x679C;&#x3002;&lt;/strong&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>13</hit>
+  <lang>1</lang>
+</data>

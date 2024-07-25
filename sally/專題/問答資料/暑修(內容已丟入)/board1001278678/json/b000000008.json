@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-07-07 22:47:41",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答112",
+        "content": "<p>112.寫出C++程式碼說明兩個類別間的繼承inheritance。</p>\r\n\r\n<p>使用繼承（inheritance），你可以創建一個新的類別，該類別將繼承自另一個已存在的類別，並獲得父類別（基類別）的屬性和行為。</p>\r\n\r\n<p>以下是利用動物Animal(父類別)及dog(子類別)</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>// 基類別（父類別）<br />\r\nclass Animal {<br />\r\npublic:<br />\r\n&nbsp;&nbsp;&nbsp; void eat() {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;Animal is eating.&quot; &lt;&lt; std::endl;<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n};</p>\r\n\r\n<p>// 衍生類別（子類別），繼承自Animal類別<br />\r\nclass Dog : public Animal {<br />\r\npublic:<br />\r\n&nbsp;&nbsp;&nbsp; void bark() {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;Dog is barking.&quot; &lt;&lt; std::endl;<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n};</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp; Dog dog;<br />\r\n&nbsp;&nbsp;&nbsp; dog.eat();&nbsp;&nbsp; // 子類別Dog繼承了父類別Animal的eat()函式<br />\r\n&nbsp;&nbsp;&nbsp; dog.bark();&nbsp; // 子類別Dog自己的bark()函式</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>Animal是一個基類別（父類別），它有一個eat()函式。然後我們創建了一個衍生類別（子類別）Dog，它使用關鍵字public繼承自Animal。衍生類別Dog具有自己的bark()函式。</p>\r\n\r\n<p>在main()函式中，我們創建了一個Dog物件dog，並可以使用dog.eat()和dog.bark()調用基類別和衍生類別的函式。由於Dog繼承了Animal，因此它可以使用Animal類別中的eat()函式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "28",
+        "lang": "1"
+    }
+}

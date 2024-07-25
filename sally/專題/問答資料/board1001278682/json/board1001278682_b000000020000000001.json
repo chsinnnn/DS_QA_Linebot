@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000020000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000020000000001",
+        "site": "1000110001",
+        "pt": "2023-07-23 12:03:54",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答202",
+        "content": "<p><span style=\"color:#ff0000\">這可以是另外一種定義：任何一分鐘的平均佇列長度，但是並非教材賦予的定義：任何一位顧客感受到的平均佇列長度。</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">顧客抵達時段通常分散在整個時間範圍內，可能存在許多時段是完全沒有顧客的，那將嚴重影響前者的數值。</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">相對來說，後者只看至少存在一位顧客時的佇列長度，忽略完全沒有顧客的時段，比較符合常見應用的需求。</span></p>\r\n\r\n<p>以銀行櫃檯為例，每位顧客排的隊伍長度才是關鍵，完全沒顧客上門的時段沒必要列入考量。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

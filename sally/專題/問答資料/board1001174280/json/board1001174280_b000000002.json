@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:03:50",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174280",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-12-20 18:12:26",
+        "poster": "11027247",
+        "realname": "許威茗",
+        "email": "as355068@asjh.ntpc.edu.tw",
+        "homepage": null,
+        "subject": "219. 舉例區別完全full、完整complete及平衡balanced二元樹的差異。",
+        "content": "<p><strong><span style=\"font-size:16px\">完全樹：</span></strong></p>\r\n\r\n<p><span style=\"font-size:14px\">1.在level小於樹高的節點，每個點都是被填滿的</span></p>\r\n\r\n<p><span style=\"font-size:14px\">2.點到每個最遠的點的傳遞時間都是一樣的</span></p>\r\n\r\n<p><span style=\"font-size:14px\">3.資料數易受限</span></p>\r\n\r\n<p><strong><span style=\"font-size:16px\">完整樹：</span></strong></p>\r\n\r\n<p><span style=\"font-size:14px\">1.當樹高是h時，h-1以上的層是個完全樹</span></p>\r\n\r\n<p><span style=\"font-size:14px\">2.h層由左至右或由右至左填滿</span></p>\r\n\r\n<p><strong><span style=\"font-size:16px\">平衡樹：</span></strong></p>\r\n\r\n<p><span style=\"font-size:14px\">1.每個點的左右子樹的高度差不超過1</span></p>\r\n\r\n<p><span style=\"font-size:14px\">2.不需受由左至右填滿的規則</span></p>\r\n\r\n<p><span style=\"font-size:14px\"><img alt=\"\" src=\"/user/1/1/11027247/images/S__112689154.jpg\" style=\"height:1478px; width:1108px\" /></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "33",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-07-11 19:59:47",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答125",
+        "content": "<p>125. 寫出可以精準描述自己學號(如字串00605636)的文法grammar。</p>\r\n\r\n<p>文法 Grammar :是一組規則，用三言兩語構築一大堆字串、構築一套 Language 。 Grammar 必須剛好生成 Language 之內的所有字串、必須永不生成 Language 以外的所有字串。</p>\r\n\r\n<p>學號 &quot;00605636&quot; 編寫一個簡單的語法規則，該規則可精確描述這個學號的格式。下面是一個可能的語法規則：</p>\r\n\r\n<p>學號 -&gt; 數字 數字 數字 數字 數字 數字 數字 數字<br />\r\n數字 -&gt; &quot;0&quot; | &quot;1&quot; | &quot;2&quot; | &quot;3&quot; | &quot;4&quot; | &quot;5&quot; | &quot;6&quot; | &quot;7&quot; | &quot;8&quot; | &quot;9&quot;</p>\r\n\r\n<p>這個語法規則表示學號由8個數字組成，每個數字的取值範圍是0到9。根據這個規則，學號 &quot;00605636&quot; 是一個有效的學號。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

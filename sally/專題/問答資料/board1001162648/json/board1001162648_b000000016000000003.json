@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:02",
+        "@type": "post",
+        "@filename": "b000000016000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162648",
+        "node": "000000016000000003",
+        "site": "1000110001",
+        "pt": "2022-10-11 22:21:30",
+        "poster": "11027161",
+        "realname": "麥加楷",
+        "email": "a0909661385@gmail.com",
+        "homepage": null,
+        "subject": "Re: 111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>雖只有短短兩行卻能十分清楚表達令許多人感到疑惑的Call by value，有當老師的潛力，讚讚。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

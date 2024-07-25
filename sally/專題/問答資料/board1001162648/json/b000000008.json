@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:02",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162648",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2022-10-08 18:23:13",
+        "poster": "11027113",
+        "realname": "呂季軒",
+        "email": "samlu0509@gmail.com",
+        "homepage": null,
+        "subject": "114. 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027113/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-08%20180832%282%29.png\" style=\"height:602px; width:468px\" /><img alt=\"\" src=\"/user/1/1/11027113/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-08%20180914.png\" style=\"height:136px; width:382px\" /></p>\r\n\r\n<p>同一個class中，至少有兩個相同名稱的function，但是傳入值不同(如圖一所示)，這樣就是多載(Overload)。</p>\r\n\r\n<p>另外function名稱相同，傳入值也相同，只有回傳型態不同，這樣並不是多載。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:30" type="post" filename="b000000005.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296424</board_id>
+  <node>000000005</node>
+  <site>1000110001</site>
+  <pt>2023-11-28 11:25:43</pt>
+  <poster>11127144</poster>
+  <realname>&#x99AC;&#x4E8E;&#x671D;  </realname>
+  <email>marumax0922@gmail.com</email>
+  <homepage> </homepage>
+  <subject>206 </subject>
+  <content>&lt;p&gt;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x5728;bubbleSort&#x7684;loop&#x88E1;&#x9762;&#x7528;&#x4E00;&#x500B;&#x5E03;&#x6797;&#x503C;(&#x8B8A;&#x6578;&amp;#39;swapped&amp;#39;)&#x4F86;&#x8FFD;&#x8E64;&#x5728;&#x6BCF;&#x4E00;&#x8F2A;&#x7684;&#x6383;&#x63CF;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x9032;&#x884C;&#x5143;&#x7D20;&#x7684;&#x4EA4;&#x63DB;&#x3002;&#x5982;&#x679C;&#x4E00;&#x8F2A;&#x6383;&#x63CF;&#x7D50;&#x675F;&#x5F8C;swapped&#x4ECD;&#x7136;&#x662F;False&#xFF0C;&#x8868;&#x793A;&#x6578;&#x5217;&#x5DF2;&#x7D93;&#x6392;&#x5E8F;&#x5B8C;&#x6210;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x7D50;&#x675F;&#x6574;&#x500B;&#x6392;&#x5E8F;&#x904E;&#x7A0B;&#x3002;&#x9019;&#x7A2E;&#x5C31;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4E4B;&#x5F8C;&#x6392;&#x5E8F;&#x5DF2;&#x5B8C;&#x6210;&#x537B;&#x91CD;&#x8907;&#x6383;&#x63CF;&#x7684;&#x60C5;&#x6CC1;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void bubbleSort(int arr[], int n) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n-1; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; bool swapped = false; &amp;nbsp; // &#x6A19;&#x8A18;&#x662F;&#x5426;&#x767C;&#x751F;&#x4EA4;&#x63DB;&#x6216;&#x91CD;&#x7F6E;&#x72C0;&#x614B;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = 0; j &amp;lt; n-i-1; j++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (arr[j] &amp;gt; arr[j+1]) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; swap(arr[j], arr[j+1]);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; swapped = true; &amp;nbsp; // &#x6A19;&#x8A18;&#x767C;&#x751F;&#x4EA4;&#x63DB;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (!swapped) &amp;nbsp; // &#x5982;&#x679C;&#x6C92;&#x6709;&#x767C;&#x751F;&#x4EA4;&#x63DB;&#xFF0C;&#x5247;&#x63D0;&#x65E9;&#x7D50;&#x675F;&#x6392;&#x5E8F;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>27</hit>
+  <lang>1</lang>
+</data>

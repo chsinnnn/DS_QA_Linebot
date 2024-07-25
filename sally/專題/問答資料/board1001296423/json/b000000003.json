@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-11-16 21:33:54",
+        "poster": "11127139",
+        "realname": "陳　恩",
+        "email": "a04182596@gmail.com",
+        "homepage": null,
+        "subject": "202",
+        "content": "<p>202. 舉例說明單一佇列模擬如何計算平均佇列長度queue length。<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Average queue length計算方法：<br />\r\n\t計算每個任務抵達時的排隊長度(等待數量)， 以Cn表示第n個任務抵達時的排隊長度<br />\r\n\tAverage queue length = (C1+C2+&hellip;+Cn) / n</li>\r\n</ul>\r\n\r\n<p><br />\r\n以下表進行模擬：</p>\r\n\r\n<table>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>id</th>\r\n\t\t\t<th>Arrival</th>\r\n\t\t\t<th>Duration</th>\r\n\t\t\t<th>Departure</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>A</td>\r\n\t\t\t<td>20</td>\r\n\t\t\t<td>5</td>\r\n\t\t\t<td>?</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>B</td>\r\n\t\t\t<td>22</td>\r\n\t\t\t<td>4</td>\r\n\t\t\t<td>?</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>C</td>\r\n\t\t\t<td>23</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>?</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>D</td>\r\n\t\t\t<td>29</td>\r\n\t\t\t<td>4</td>\r\n\t\t\t<td>?</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><strong>time = 20</strong>:<br />\r\nA arrived</p>\r\n\r\n<table>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>id</th>\r\n\t\t\t<th>Arrival</th>\r\n\t\t\t<th>Departure</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>A</td>\r\n\t\t\t<td>20</td>\r\n\t\t\t<td>20+5 = 25</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>C1 = 0</p>\r\n\r\n<p><strong>time = 22</strong>:<br />\r\nB Arrived</p>\r\n\r\n<table>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>id</th>\r\n\t\t\t<th>Arrival</th>\r\n\t\t\t<th>Departure</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>A</td>\r\n\t\t\t<td>20</td>\r\n\t\t\t<td>20+5 = 25</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>B</td>\r\n\t\t\t<td>22</td>\r\n\t\t\t<td>25+4 = 29</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>C2 = 1</p>\r\n\r\n<p><strong>time = 23</strong>:<br />\r\nC Arrived</p>\r\n\r\n<table>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>id</th>\r\n\t\t\t<th>Arrival</th>\r\n\t\t\t<th>Departure</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>A</td>\r\n\t\t\t<td>20</td>\r\n\t\t\t<td>20+5 = 25</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>B</td>\r\n\t\t\t<td>22</td>\r\n\t\t\t<td>25+4 = 29</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>C</td>\r\n\t\t\t<td>23</td>\r\n\t\t\t<td>29+2 = 31</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>C3 = 2</p>\r\n\r\n<p><strong>time = 29</strong>:<br />\r\nA Departure (time = 25)<br />\r\nB Departure (time = 29)<br />\r\nD Arrived</p>\r\n\r\n<table>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th>id</th>\r\n\t\t\t<th>Arrival</th>\r\n\t\t\t<th>Departure</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>C</td>\r\n\t\t\t<td>23</td>\r\n\t\t\t<td>29+2 = 31</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>D</td>\r\n\t\t\t<td>29</td>\r\n\t\t\t<td>31+4 = 35</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>C4 = 1<br />\r\n<br />\r\nAverage queue length = (C1+C2+C3+C4) / 4 = (0+1+2+1) / 4 = 1</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

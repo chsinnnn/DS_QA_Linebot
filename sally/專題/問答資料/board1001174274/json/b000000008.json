@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2022-10-14 16:11:12",
+        "poster": "11027237",
+        "realname": "程怡欣",
+        "email": "ssc5613@gmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p><strong><span style=\"color:#333333\">比較ptrX = ptrX-&gt;next</span>和ptrX-&gt;next = ptrX的差異</strong></p>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; border:none; width:535px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"height:30px; vertical-align:top; width:41px\">&nbsp;</td>\r\n\t\t\t<td style=\"height:30px; vertical-align:top; width:493px\">\r\n\t\t\t<p><strong><span style=\"color:#333333\"><span style=\"font-family:新細明體,serif\">ptrX = ptrX -&gt; next</span></span></strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"height:27px; vertical-align:top; width:41px\">\r\n\t\t\t<p><strong><span style=\"font-family:新細明體,serif\">說明</span></strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"height:27px; vertical-align:top; width:493px\">\r\n\t\t\t<p><strong><span style=\"color:red\"><span style=\"font-family:新細明體,serif\">將ptrX -&gt; next此項動作給予ptrX</span></span></strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"height:266px; vertical-align:top; width:41px\">\r\n\t\t\t<p><strong><span style=\"font-family:新細明體,serif\">圖片</span></strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"height:266px; vertical-align:top; width:493px\">\r\n\t\t\t<p><img alt=\"\" src=\"/user/1/1/11027237/images/1.jpg\" style=\"height:239px; width:450px\" /></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse; border:none; width:535px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"height:31px; vertical-align:top; width:42px\">&nbsp;</td>\r\n\t\t\t<td style=\"height:31px; vertical-align:top; width:494px\">\r\n\t\t\t<p><strong><span style=\"color:#333333\"><span style=\"font-family:新細明體,serif\">ptrX -&gt; next = ptrX</span></span></strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"height:27px; vertical-align:top; width:42px\">\r\n\t\t\t<p><strong><span style=\"font-family:新細明體,serif\">說明</span></strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"height:27px; vertical-align:top; width:494px\">\r\n\t\t\t<p><strong><span style=\"color:red\"><span style=\"font-family:新細明體,serif\">將ptrX此項動作給予ptrX -&gt; next</span></span></strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"height:272px; vertical-align:top; width:42px\">\r\n\t\t\t<p><strong><span style=\"font-family:新細明體,serif\">圖片</span></strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"height:272px; vertical-align:top; width:494px\">\r\n\t\t\t<p><img alt=\"\" src=\"/user/1/1/11027237/images/2.jpg\" style=\"height:155px; width:450px\" /></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><strong><span style=\"font-family:新細明體,serif\">結論</span>:</strong></p>\r\n\r\n<p><span style=\"color:black\"><span style=\"font-family:新細明體,serif\">由於等號運算順序由右至左，因此</span></span><span style=\"color:#333333\"><span style=\"font-family:新細明體,serif\">ptrX = ptrX-&gt;next</span></span><span style=\"color:#333333\"><span style=\"font-family:新細明體,serif\">和ptrX-&gt;next = ptrX</span>產生差異</span>。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

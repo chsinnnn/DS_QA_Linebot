@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000023.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000023",
+        "site": "1000110001",
+        "pt": "2023-07-21 23:51:35",
+        "poster": "06005914",
+        "realname": "陳彥中",
+        "email": "jackson89911@gmail.com",
+        "homepage": null,
+        "subject": "搶答201",
+        "content": "<p>201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time</p>\r\n\r\n<p>A:假設有一家咖啡店，只有一個櫃台可以接待客人點咖啡。客人會依次排隊等待服務。</p>\r\n\r\n<p>必須根據每位客人進入咖啡店的時間、每位客人點咖啡所花費的時間去計算平均等待時間。</p>\r\n\r\n<p>等待時間為開始點餐時間-進入咖啡店時間。</p>\r\n\r\n<p>​​​​</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "5",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:08" type="post" filename="b000000015.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305434</board_id>
+  <node>000000015</node>
+  <site>1000110001</site>
+  <pt>2023-10-25 09:24:18</pt>
+  <poster>11127213</poster>
+  <realname>&#x51CC;&#x9F0E;&#x8ED2;  </realname>
+  <email>benson920925@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>123. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x8907;&#x88FD;&#x4E00;&#x6574;&#x500B;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x3002; </subject>
+  <content>&lt;p&gt;# include &amp;lt;stdio.h&amp;gt;&lt;br /&gt;&#xD;
+# include &amp;lt;stdlib.h&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;typedef struct Node Node;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int val;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;struct Node* next;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* CreateNode( int value );&lt;br /&gt;&#xD;
+void AppendToTail( Node* list_head, Node* add );&lt;br /&gt;&#xD;
+void PrintList( Node* head );&lt;br /&gt;&#xD;
+Node* copyList( Node* head );&lt;br /&gt;&#xD;
+void FreeAll( Node* head );&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* CreateNode( int value ) &amp;nbsp;{ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// create and initialize the node&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node* create = ( Node* )calloc( 1, sizeof( Node ) );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;create -&amp;gt; next = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;create -&amp;gt; val = value;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return create;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void AppendToTail( Node** list_head, Node* add ) &amp;nbsp;{ &amp;nbsp; &amp;nbsp; &amp;nbsp;// add nodes to the tail, using indirect pointer&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node** ptr = list_head;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while ( *ptr )&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ptr = &amp;amp;( ( *ptr ) -&amp;gt; next );&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *ptr = add;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void PrintList( Node* head ) &amp;nbsp;{ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// print the list&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;while ( head ) &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;printf( &amp;quot;%d\n&amp;quot;, head -&amp;gt; val );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = head -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* copyList( Node* head ) &amp;nbsp;{ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // copy whole linked list&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node* temp = NULL, *copy_head = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;while ( head ) &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( head -&amp;gt; val );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;copy_head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = head -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return copy_head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void SetUpTestCase() &amp;nbsp;{ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// test case for copyList function&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node* temp = NULL, *head = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf( &amp;quot;=============Origianl List=============\n&amp;quot; );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( 1 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( 5 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( 2 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( 7 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( 6 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = CreateNode( 8 );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;AppendToTail( &amp;amp;head, temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;PrintList( head );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;printf( &amp;quot;=============Copied List=============\n&amp;quot; );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node* copy_list = copyList( head );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;PrintList( copy_list );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;FreeAll( copy_list );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;FreeAll( head );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void FreeAll( Node* head ) &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;Node* temp = NULL;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;while ( head ) &amp;nbsp;{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;temp = head;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;head = head -&amp;gt; next;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;free( temp );&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() &amp;nbsp;{ &amp;nbsp; &amp;nbsp; // invoke the test case function&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;SetUpTestCase();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>14</hit>
+  <lang>1</lang>
+</data>

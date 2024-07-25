@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-07-10 01:07:36",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答116",
+        "content": "<p>問116：將後序式postfix轉前序式prefix，並詳述步驟。a b + c * d e + f * + w z + *</p>\r\n\r\n<p>答116：</p>\r\n\r\n<p>1.(a+b), c, *, (d+e), f, *, +, (w+z), *</p>\r\n\r\n<p>2.((a+b)*c), ((d+e)*f), +, (w+z), *</p>\r\n\r\n<p>3. (((a+b)*c)+ ((d+e)*f)), (w+z), *</p>\r\n\r\n<p>4. ((((a+b)*c)+ ((d+e)*f))*&nbsp;(w+z))</p>\r\n\r\n<p>5.*, +, *, +, a, b, c, *, +, d, e, f, +, w, z</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "28",
+        "lang": "1"
+    }
+}

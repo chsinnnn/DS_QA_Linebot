@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:29",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162652",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-11-27 22:26:55",
+        "poster": "11027147",
+        "realname": "邱峻彥",
+        "email": "jim97503@gmail.com",
+        "homepage": null,
+        "subject": "202. 舉例說明單一佇列模擬如何計算平均佇列長度queue length。",
+        "content": "<p>當每一筆資料進佇列時記錄此佇列的長度，並設一個變數累加這些長度，最後再用這個變數除以有幾筆資料就可以得到佇列的平均長度。</p>\r\n\r\n<p>totalLen = 0</p>\r\n\r\n<p>新的資料進queue</p>\r\n\r\n<p>totalLen =&nbsp;totalLen + queue.size()</p>\r\n\r\n<p>沒資料時</p>\r\n\r\n<p>averageLen =&nbsp;totalLen / datas.size()</p>\r\n\r\n<p>佇列的平均長度為averageLen。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "18",
+        "lang": "1"
+    }
+}

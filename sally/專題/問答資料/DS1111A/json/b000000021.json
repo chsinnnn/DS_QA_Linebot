@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2023-09-24 23:53:34",
+        "poster": "11127106",
+        "realname": "陳子昂",
+        "email": "leonchen0810@gmail.com",
+        "homepage": null,
+        "subject": "104",
+        "content": "<p>什麼情況下適合使用遞迴？為什麼？</p>\r\n\r\n<p>當你需要一直重複操作且過程繁雜的時候，可以使用遞迴。相較迴圈，雖然不一定比較快，但是程式步驟會更加簡略且更好理解。</p>\r\n\r\n<p>而使用遞迴最重要的是你需要知道你的終止條件(base case)是甚麼, 以免程式會無窮呼叫。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "56",
+        "lang": "1"
+    }
+}

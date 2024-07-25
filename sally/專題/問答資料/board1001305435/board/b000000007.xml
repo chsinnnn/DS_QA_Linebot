@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:18" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305435</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2023-10-25 13:20:44</pt>
+  <poster>11127245</poster>
+  <realname>&#x859B;&#x5B8F;&#x6BD3;  </realname>
+  <email>a0975809594@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>129. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8A2D;&#x8A08;&#x905E;&#x8FF4;&#x51FD;&#x6578;&#x7522;&#x751F;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&#x4E14;&#x52A0;&#x7E3D;&#x7B49;&#x65BC;M&#x7684;&#x6240;&#x6709;3&#x4F4D;&#x6578;&#xFF0C;M&#x662F;&#x8F38;&#x5165;&#x7684;&#x6574;&#x6578;&#xFF0C;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;&#x96F6;&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bool isThreeDigits(int number) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return (99 &amp;lt; number &amp;amp;&amp;amp; number &amp;lt; 1000); // 100~999&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+} // end isThreeDigits()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bool findCombinations(int M, int curSum, int curNumber, int quantity) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (quantity == 3) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (curSum == M) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;M = &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return true;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return false;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } // end if-else&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end if&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x907F;&#x514D;&#x76F8;&#x540C;&#x6578;&#x5B57;&#x7684;&#x540C;&#x6642;&#xFF0C;&#x7E2E;&#x5C0F;&#x8FF4;&#x5708;&#x9700;&#x8981;&#x8DD1;&#x7684;&#x7BC4;&#x570D;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int n = curNumber+1 ; n &amp;lt; M ; n++) { &amp;nbsp;// curNumber&#x53EA;&#x6703;&#x8D8A;&#x4F86;&#x8D8A;&#x5927;&#xFF0C;+1&#x662F;&#x70BA;&#x4E86;&#x4E0D;&#x91CD;&#x8907;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (findCombinations(M, curSum+n, n, quantity+1)) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; n;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (quantity != 0) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot; + &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return true;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } // end if&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } // end if&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end for&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return false;&lt;br /&gt;&#xD;
+} // end findCombinations()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(void) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;*********************************************&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;*&#x4EE5;&#x4E0B;&#x70BA;&#x5C0B;&#x627E;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&#x4E14;&#x52A0;&#x7E3D;&#x7B49;&#x65BC;M&#x7684;&#x6240;&#x6709;3&#x4F4D;&#x6578;*&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;*********************************************&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int M;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;&#x8ACB;&#x8F38;&#x5165;M: &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cin &amp;gt;&amp;gt; M;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (isThreeDigits(M)) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; findCombinations(M, 0, 0, 0);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;is not three digits&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; } // end if-else&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+} // end main()&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>22</hit>
+  <lang>1</lang>
+</data>

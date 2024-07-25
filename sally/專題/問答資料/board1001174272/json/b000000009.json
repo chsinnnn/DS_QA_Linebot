@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2022-09-24 17:34:26",
+        "poster": "11027229",
+        "realname": "卓榮暉",
+        "email": "intercoursedr@gmail.com",
+        "homepage": null,
+        "subject": "108. 若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？",
+        "content": "<p>通常是不太會讓異常的程式繼續執行 不過因為這題是要強制執行<br />\r\n在下因為開發經驗稍微弱了一點<br />\r\n絞盡了腦汁想 只想到一種方法 (抱歉我開發經驗稍微不足):</p>\r\n\r\n<p>Exception Handling<br />\r\n基本上這個東西在很多程式語言都有</p>\r\n\r\n<p>使用方式:<br />\r\n用 try 包住可能會發生例外的程式碼區段，<br />\r\n用 catch 來處理這個 try 區域所發生的例外<br />\r\n如果執行中發生Exception 不會直接將程式中止 而是會進入catch那邊</p>\r\n\r\n<p>以下是會發生錯誤的程式碼</p>\r\n\r\n<p>#include&lt;bits/stdc++.h&gt; // 對不起啦QAQ<br />\r\nusing namespace std; // 我很抱歉QQ<br />\r\nvoid A(){<br />\r\n&nbsp;&nbsp; &nbsp;cin.exceptions(ios_base::failbit);&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;try{<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;int t;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cin &gt;&gt; t; // 輸入t<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; t &lt;&lt; endl; // 輸出t<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;A(); // 遞迴進下一層<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp; &nbsp; // 當發生錯誤時<br />\r\n&nbsp;&nbsp; &nbsp;catch (exception&amp; ba){<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;printf(&quot;Error\\n&quot;); // 印出Error<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cin.clear(); // 先把cin清空<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;cin.ignore();&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;A(); // 再遞迴XD<br />\r\n&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>}<br />\r\nint main(){<br />\r\n&nbsp;&nbsp; &nbsp;A(); // infinite loop<br />\r\n}</p>\r\n\r\n<p>(如果是指stack overflow還繼續執行的話 很抱歉我沒找到方法XD)</p>\r\n\r\n<p>(參考資源:<br />\r\nhttps://shengyu7697.github.io/cpp-exception/<br />\r\nhttps://cplusplus.com/reference/ios/ios/exceptions/<br />\r\nhttps://learn.microsoft.com/zh-tw/cpp/cpp/errors-and-exception-handling-modern-cpp?view=msvc-170<br />\r\n)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "112",
+        "lang": "1"
+    }
+}

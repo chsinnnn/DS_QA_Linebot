@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000003000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000003000000001",
+        "site": "1000110001",
+        "pt": "2023-09-14 15:50:56",
+        "poster": "11127139",
+        "realname": "陳　恩",
+        "email": "a04182596@gmail.com",
+        "homepage": null,
+        "subject": "Re: 104",
+        "content": "<p>沒錯，還有如果不是線性遞迴的話，執行的效率會非常的差，這種時候可能就要考慮有沒有其他的方法。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

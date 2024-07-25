@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-11-23 16:44:43",
+        "poster": "11127116",
+        "realname": "曾詮淳",
+        "email": "kevin47338647@gmail.com",
+        "homepage": null,
+        "subject": "203",
+        "content": "<p>&nbsp;舉例說明雙重佇列如何模擬，須指出選擇佇列的策略。</p>\r\n\r\n<p>雙重佇列（Double Queue）是一種將作業或任務分為兩個佇列的調度策略，每個佇列可能使用不同的調度策略。這種方式通常用於更有效地處理不同類型的作業，例如優先級高的作業和優先級低的作業。</p>\r\n\r\n<p>以下是一個簡單的雙重佇列模擬的例子，其中包含兩個佇列，分別使用先到先服務（FCFS）和最短作業優先（SJN）策略。</p>\r\n\r\n<p>1.高優先級佇列（Priority Queue，使用最短作業優先（SJN）：<br />\r\n&nbsp; &nbsp;Process &nbsp; Arrival Time &nbsp; Burst Time &nbsp; Priority<br />\r\n&nbsp; &nbsp;P1 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;High<br />\r\n&nbsp; &nbsp;P2 &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;High<br />\r\n&nbsp; &nbsp;P3 &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;High<br />\r\n&nbsp; &nbsp;</p>\r\n\r\n<p>2. 低優先級佇列（Regular Queue），使用先到先服務（FCFS）：<br />\r\n&nbsp; &nbsp;Process &nbsp; Arrival Time &nbsp; Burst Time &nbsp; Priority<br />\r\n&nbsp; &nbsp;P4 &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Low<br />\r\n&nbsp; &nbsp;P5 &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Low<br />\r\n&nbsp; &nbsp;P6 &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Low</p>\r\n\r\n<p>這裡，高優先級佇列的作業使用 SJN 策略，即最短作業優先，而低優先級佇列的作業使用 FCFS 策略，即先到先服務。</p>\r\n\r\n<p>執行順序可能如下：<br />\r\n1. SJN 選擇高優先級佇列中最短作業 P1，執行 8 單位時間。<br />\r\n2. FCFS 選擇低優先級佇列中最早到達的作業 P4，執行 2 單位時間。<br />\r\n3. FCFS 選擇低優先級佇列中最早到達的作業 P5，執行 5 單位時間。<br />\r\n4. FCFS 選擇低優先級佇列中最早到達的作業 P6，執行 3 單位時間。</p>\r\n\r\n<p>這樣交替執行高優先級佇列和低優先級佇列，直到所有作業完成。</p>\r\n\r\n<p>這種雙重佇列的模擬可以更有效地處理不同優先級的作業，確保高優先級的作業優先處理，同時保證低優先級的作業也有機會執行。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

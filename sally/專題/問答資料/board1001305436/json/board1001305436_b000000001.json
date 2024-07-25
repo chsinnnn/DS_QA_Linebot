@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:43",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305436",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-11-18 22:46:06",
+        "poster": "11127204",
+        "realname": "吳冠毅",
+        "email": "s11127204@cycu.edu.tw",
+        "homepage": null,
+        "subject": "201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time",
+        "content": "<p>以下列已分類名單為例，其中以抵達時間的先後作依據，再以編號做區分:<br />\r\nNum&nbsp;&nbsp; &nbsp;Arrival&nbsp;&nbsp; &nbsp;duration<br />\r\n1&nbsp;&nbsp; &nbsp;20&nbsp;&nbsp; &nbsp;5<br />\r\n2&nbsp;&nbsp; &nbsp;22&nbsp;&nbsp; &nbsp;4<br />\r\n3&nbsp;&nbsp; &nbsp;23&nbsp;&nbsp; &nbsp;2<br />\r\n4&nbsp;&nbsp; &nbsp;30&nbsp;&nbsp; &nbsp;3<br />\r\n以1號作開始，因佇列未有等待的人，其departure會是<br />\r\nArrival + duration = 20 + 5 = 25 ，並waiting為 0<br />\r\n而在25之前，會陸續有2號和3號抵達並等待，直至1號離開，得2號的waiting為 :&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp;1號的departure - 2號的Arrival = 25 - 20 = 5 。<br />\r\n故可統整除1號的每人其waiting和departure為 :&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp;自己的waiting = 前一號人的departure - 自己的Arrival<br />\r\n&nbsp; &nbsp; &nbsp;自己的departure = 自己的waiting + duration<br />\r\n以此得出每個人的waiting分別為 : 0, 3, 6, 1 ，<br />\r\n而AWT(平均等待時間)則為 (0+3+6+1) / 4 = 2.5</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

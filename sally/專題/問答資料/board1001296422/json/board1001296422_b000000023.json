@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000023.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000023",
+        "site": "1000110001",
+        "pt": "2023-11-01 21:34:31",
+        "poster": "03109309",
+        "realname": "呂沛霖",
+        "email": "0",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p><strong>+ * 2 4 6 * - 7 5是前序式嗎？</strong></p>\r\n\r\n<p>其中+*246為完整的前序式，而一個前序式後面再接上非空字串就一定不是前序式。</p>\r\n\r\n<p>雖然-75也是合法前序式但中間的*不符合前序式。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/0/3/03109309/images/%E7%8F%BE%E5%AF%A6%E6%90%B6%E7%AD%94.png\" style=\"height:213px; width:1000px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

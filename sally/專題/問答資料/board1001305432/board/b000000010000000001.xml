@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:36" type="post" filename="b000000010000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305432</board_id>
+  <node>000000010000000001</node>
+  <site>1000110001</site>
+  <pt>2023-11-27 17:47:39</pt>
+  <poster>11813</poster>
+  <realname>&#x5433;&#x5B9C;&#x9D3B;  </realname>
+  <email>yhwu@cycu.edu.tw</email>
+  <homepage>https://www.researchgate.net/profile/Yi-Hung-Wu-2  </homepage>
+  <subject>Re: 114. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x540C;&#x985E;&#x5225;&#x5169;&#x500B;&#x65B9;&#x6CD5;&#x5982;&#x4F55;&#x5BE6;&#x73FE;&#x591A;&#x8F09;overloading&#x3002;  </subject>
+  <content>&lt;p&gt;&amp;quot;&#x53C3;&#x6578;&#x5167;&#x5BB9;&#x4E00;&#x5B9A;&#x8981;&#x4E0D;&#x540C;&#xFF0C;&#x4E0D;&#x7136;&#x6703;&#x767C;&#x751F;ambiguity&amp;quot;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#ff0000"&gt;&#x8209;&#x7684;&#x4F8B;&#x5B50;&#x6B63;&#x597D;&#x5C31;&#x662F;&#x6703;&#x9020;&#x6210;ambiguous&#xFF1A;&amp;nbsp;obj.add(12, 3.0212)&#x8981;&#x547C;&#x53EB;&#x54EA;&#x4E00;&#x500B;&#xFF1F;&lt;/span&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>1</hit>
+  <lang>1</lang>
+</data>

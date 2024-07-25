@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-09-30 22:20:32",
+        "poster": "11127239",
+        "realname": "陳映銓",
+        "email": "edan0727@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>會造成此狀況的原因，最根本的問題是記憶體不夠的問題。<br />\r\n因遞迴而造成記憶體不夠的問題有以下兩點。</p>\r\n\r\n<p>1、<span style=\"color:#0000ff\">遞迴次數過多</span>，所佔的記憶體空間超出負荷。</p>\r\n\r\n<p>2、遞迴的條件沒寫好，導致程式<span style=\"color:#0000ff\">無窮的遞迴</span>，直到超出記憶體空間上限。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "40",
+        "lang": "1"
+    }
+}

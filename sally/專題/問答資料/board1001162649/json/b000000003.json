@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-10-07 22:40:21",
+        "poster": "11027129",
+        "realname": "劉宗崴",
+        "email": "wilson41587@gmail.com",
+        "homepage": null,
+        "subject": "116. 將後序式postfix轉前序式prefix，並詳述步驟。* a b + c * d e + f * + w z + *",
+        "content": "<p>後序表示法:&lt;運算元&gt;&lt;運算元&gt;&lt;運算子&gt;</p>\r\n\r\n<p>前序表示法:&lt;運算子&gt;&lt;運算元&gt;&lt;運算元&gt;</p>\r\n\r\n<p>後序轉前序:</p>\r\n\r\n<p><img alt=\"開啟相片\" src=\"https://scontent.ftpe11-2.fna.fbcdn.net/v/t1.15752-9/310084410_471057511647108_7426877758651200359_n.jpg?stp=dst-jpg_p206x206&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=aee45a&amp;_nc_ohc=2c0fQy1jZ5EAX_Bi2Z9&amp;_nc_ht=scontent.ftpe11-2.fna&amp;oh=03_AVJM_xvlc7sBN_Bgpzg_ml2zPNq7ACiKa0NPUAT0AZQ0Mg&amp;oe=6363F78C\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "48",
+        "lang": "1"
+    }
+}

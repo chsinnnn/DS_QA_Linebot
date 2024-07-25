@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:30",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296424",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-12-03 12:58:31",
+        "poster": "11127133",
+        "realname": "陳乙菁",
+        "email": "fiona99107@gmail.com",
+        "homepage": null,
+        "subject": "206",
+        "content": "<p>206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。<br />\r\nvoid bubbleSort(int A[], int n ){</p>\r\n\r\n<p>&nbsp; &nbsp; bool sorted = False ;</p>\r\n\r\n<p>&nbsp; &nbsp; for(pass = 1; pass &lt;n &amp;&amp; != sorted; ++pass){</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; sorted = TRUE;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; for(int index = 0; index &lt; n-pass; index++){</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(A[index]&gt; A[index+1]){</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(A[index], A[index+1]);</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sorted = FALSE;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>}</p>\r\n\r\n<p>多加一個bool值去判斷是否排好序，只要有一次交換就把bool值改成false。當資料量大時，原時間複雜度O(n<sup>2</sup>)能變成O(n)。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

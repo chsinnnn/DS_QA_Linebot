@@ -1,0 +1,77 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 因為 LinkedList本身的資料與指標是環環相扣的，因此無法單純的直接讓新的 Head 指向原本的 Head 的 Next\n否則改動新的LinkedList，舊的也會跟著改動。\n\n那既然要實現複製的話，就只能使用狠暴力的方式 : 那就是將每個節點走訪，並且將內容推向新的 LinkedList。\n( 可能有更方便的方式，只是我目前想到的是這個 )\n\n以下是程式碼的部分\n\n#include&lt;string.h&gt;\n#include&lt;iostream&gt;\n#include&lt;stdlib.h&gt;\n#include&lt;sstream&gt;\n\nusing namespace std; // 我就懶 \n// -*- c++ 11 -*-\n\n// Node\n// 利用泛型實作\ntemplate &lt;typename T&gt;\nstruct Node {\n    T num; // 資料\n    Node * next; // 下一個點 \n};\n\n// 利用泛型實作LinkedList\n// 殘缺的LinkedList, 不過可以應付這題\ntemplate &lt;typename T&gt;\nclass LinkedList {\n    public:\n        // 建構子\n        // 初始化資料\n        LinkedList() {\n            head = NULL; // 頭先設定為NULL \n            tail = NULL; // 尾也先設定為NULL \n            size = 0;\n        }\n\n        // 把資料放進去\n        void push(T data) {\n            // 如果裡面空空的\n            if(size==0) {\n                head = new Node&lt;T&gt;; // 讓head變成新的Node\n                head -&gt; num = data; // 把資料放進去\n                head -&gt; next = NULL; // 指定head的next是null\n                size++; // 讓size++\n                tail = head;// 讓tail變成head\n                return; // return 回去 避免進入下一行\n            }\n\n            // 要是不是空的話\n            tail -&gt; next = new Node&lt;T&gt;; // 先讓tail的下一個變成新的Node\n            tail = tail -&gt; next; // 把tail 移到下一層\n            tail -&gt; num = data;// 把資料放進去\n            tail -&gt; next = NULL; // tail的下一個指定為NULL\n            size++;// size增加\n            return;// return 回去 可加可不加\n        }\n\n        // 單純的複製LinkedList\n        // 這邊是產生一個新的LinkedList 而不是把原本的return回去\n        // 因為如果是把原本的return回去，會導致資料會被互相引響\n        LinkedList copy() {\n            LinkedList toReturn; // 準備回傳回去的資料\n            Node&lt;T&gt; * temp = head; // 指標 用來走訪整個LinkedList\n            while(temp!=NULL) {\n                toReturn.push(temp-&gt;num); // 透過方法一直去push資料\n                temp = temp -&gt; next;\n            }\n            return toReturn; // return\n\n        }\n\n        // 透過 index 去取得資料\n        T getDataFromIndex(int k) {\n            Node&lt;T&gt; * temp = getFromIndex(k);\n            return temp -&gt; num;\n        }\n\n        // 透過index 移除資料 並且將資料回傳 \n        T removeFromIndex(int k) {\n            // 如果k的大小==0 就代表刪掉頭 \n            if(k==0){\n                if(head==NULL) return NULL;\n                T n = head -&gt; num;\n                head = head -&gt; next;\n                size--;\n                return n;\n            }\n            // 如果k小於0或者不小於size 就代表越界 因此直接return NULL \n            if(k&gt;=size || k &lt; 0) return NULL;\n            \n            // 暫時的節點 用來儲存即將被刪除的節點的上一個節點 \n            Node&lt;T&gt; * temp = getFromIndex(k-1);\n            if(temp==NULL) return NULL; // 如果取不到 就代表越界 直接 return NULL \n            T n = temp -&gt; next -&gt; num; // N是即將被回傳的值 也就代表被刪除的節點的值 \n            temp -&gt; next = temp -&gt; next -&gt; next; // 讓next指向更下一層的節點 \n            size--; // size記得要-1 \n            return n; // return value\n        }\n\n        // 取得大小 \n        int getSize() {\n            return size;\n        }\n        \n        // 排序 \n        void sortList(){\n            head = mergeSort(head);\n        }\n        \n\n\n    // 不公開的 \n    private:\n        Node&lt;T&gt; * head;\n        Node&lt;T&gt; * tail;\n        int size;\n\n        // 這邊之所以放在private 是為了防止有人透過此方法破壞 LinkedList \n        // 此方法單純就是將第i個Node回傳 \n        Node&lt;T&gt; * getFromIndex(int i) {\n            if(i==0) return head;\n            if(i&gt;=size) return NULL;\n            Node&lt;T&gt; * temp = head;\n            for(int j = 0 ; j &lt; i ; j++) {\n                temp = temp -&gt; next;\n            }\n\n            return temp;\n        }\n        \n        // 將節點排序 \n        Node&lt;T&gt; * mergeSort(Node&lt;T&gt; * h){\n            // 如果 h 的大小只有 1 或者是根本沒東西 直接回傳 h \n            if(h==NULL||h -&gt; next == NULL) return h;\n            // 找出中心點\n            // 利用快慢指標 \n            Node&lt;T&gt; * slow = h;\n            Node&lt;T&gt; * fast = h -&gt; next;\n            while(fast!=NULL&amp;&amp;fast-&gt; next!=NULL){\n                fast = fast -&gt; next;\n                slow = slow -&gt; next;\n            }\n            \n            Node&lt;T&gt; * mid = slow -&gt; next;\n            // 找到中心點後 分割開前半部以及後半部 \n            slow -&gt; next = NULL;\n            // 再度分割前半部 並且等待回傳的結果 \n            Node&lt;T&gt; * left = mergeSort(h);\n            // 再度分割後半部 並且等待回傳的結果 \n            Node&lt;T&gt; * right = mergeSort(mid);\n            // 開頭 Dummy head Node\n            Node&lt;T&gt; * ans = new Node&lt;T&gt;;\n            // 結尾先指向ans \n            Node&lt;T&gt; * last = ans;\n            \n            // 跑回圈 逐漸合併各個節點 並且回傳回去 \n            while(left!=NULL||right!=NULL){\n                T n1 = (left != NULL? left -&gt; num : INT_MAX ); // 判斷 left 是不是 NULL 若不是 就指定 n1 為左邊的資料，否則設為 INT_MAX \n                T n2 = (right != NULL? right -&gt; num: INT_MAX ); // 判斷 right 是不是 NULL 若不是 就指定 n2 為右邊的資料，否則設為 INT_MAX \n                // 若左邊小於右邊，就讓 last 後面接著左邊 \n                if(n1&lt;n2){\n                    last -&gt; next = left;\n                    left = left -&gt; next;\n                }\n                // 否則就做相反的事情 \n                else{\n                    last -&gt; next = right;\n                    right = right -&gt; next; \n                }\n                \n                last = last -&gt; next; // 記得 last 要移動\n            }\n            \n            // 記得不要把dummy head 回傳，而是將dummy head的下一個 ( 也就是真正的頭 ) 回傳 \n            return ans -&gt; next;\n        }    \n\n};\n\nint main(){\n    LinkedList&lt;int&gt; k; // 新增一個 LinkedList&lt;int&gt; k \n    for(int i = 100 ; i &gt;= 0 ; i--){\n        k.push(i); // 將 100 到 0 推進去 k 裡面 \n    }\n    LinkedList&lt;int&gt; t = k.copy(); // 套copy這個function去複製整個LinkedList\n    t.sortList(); // 排序 為了證明這兩個LinkedList是不一樣的 \n    \n    // 印出k裡面的內容\n    // 印出資料 100 到 0 \n    for(int i = 0 ; i &lt; k.getSize() ; i++){\n        printf( %d\\n ,k.getDataFromIndex(i));\n    }\n    \n    printf( ==================\\n ); // 分隔線 \n    \n    // 印出t的內容 \n    // 印出資料 會印出 0 到 100 \n    for(int i = 0 ; i &lt;t.getSize() ;i++){\n        printf( %d\\n ,t.getDataFromIndex(i));\n    }\n}\n\n另外值得一提的是，我的排序是用 Merge Sort 排的，比起Bubble Sort使用了O( n ^ 2 )，Merge Sort只需要 O( nlog( n ) ) 。\n\n至於怎麼實現的，請參考 https://www.geeksforgeeks.org/merge-sort-for-linked-list/\n想試試看自己寫的是否為正確，可以上 https://leetcode.com/problems/sort-list/ 測試",
+        "output": "Excellent!\n\n排序的程式碼好像反而寫得比複製多...\n\n小瑕疵： 互相引響"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: call by reference 跟 call by value 不同的是，call by value 是將值複製到 function 裡面再執行該 function，因此不會引想到帶入的引數。\n而 call by value 是將「記憶體位置」帶入 function，因此如果在 funcion 裡面改動到參數的值，在呼叫 function 時帶入的引數會隨之改動。\n\n以下是程式碼 :\n#include&lt;iostream&gt;\n#include&lt;string&gt;\n// 簡單的 enum 存可以喝的飲料，其中 NOTHING 是指沒有飲料 \nenum BeverageType { COFFEE, TEA, WATER, CYANIDE, BEER, PARAQUAT, NOTHING }; \nclass Cup{\n    // 公開的 \n    public:\n        Cup(){\n            isEmpty = true;\n            type = NOTHING;\n        }\n    \n        // 為了呈現 call by reference跟call by value的差別，因此我用了static\n        // 加了 &amp; 字號就是將地址傳到這個function \n        static Fill(Cup &amp; cup, BeverageType type){\n            cup.type = type;\n            cup.isEmpty = false; \n        }\n        \n        // call by value\n        static AnotherFill(Cup cup, BeverageType type){\n            cup.type = type;\n            cup.isEmpty = false; \n        }\n        \n        // 裡面是啥 \n        BeverageType whatIsInside(){\n            if(!isEmpty) return type;\n            else return NOTHING;\n        }\n        \n        // 是否為空 \n        bool isItEmpty(){\n            return isEmpty;\n        }\n        \n    // 非公開的 \n    private:\n        bool isEmpty; // 是否為空 \n        BeverageType type; // 種類 \n};\n\nint main(){\n    BeverageType coffee = COFFEE;\n    // Two ordinary cups\n    Cup cup1, cup2;\n    // fill cup1\n    Cup::Fill(cup1,coffee);\n    // fill cup2\n    Cup::AnotherFill(cup2,coffee);\n    \n    if(cup1.isItEmpty()) printf( cup1 is empty\\n );\n    else printf( cup1 is not empty\\n ); // 會印出這個 \n    if(cup2.isItEmpty()) printf( cup2 is empty\\n ); // 會印出這個 \n    else printf( cup2 is not empty\\n );\n    \n}\n\n下面是上面程式碼的圖",
+        "output": "Good example.\n\nOther comments:\n\n1. There is one typo in the 2nd line:  而 call by reference value 是將「記憶體位置」帶入 function，... \n\n2. Explain more about static member functions, e.g., how it still works without using &#39;static&#39;.\n\n3. Is there any reference like this?"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 5種\n\n1.((()))\n\n2.(()())\n\n3.(())()\n\n4.()()()\n\n5.()(())\n\n算法：(2*n!/n!*n!)-(2*n!/(n+1)!*(n-1)!)",
+        "output": "如果延伸到4組括弧、5組括弧、... 能否以此類推找出答案？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 在回合制多人遊戲裡面，所有玩家的回合需要用環狀鏈結串列來決定，假如遊戲有4個玩家，從玩家一到玩家二到玩家三最後到玩家四時，因為玩家四是最後一個，如果不是使用環狀鏈結串列的話，玩家四的next會指向ＮＵＬＬ，造成沒辦法持續進行遊戲，所以在這邊使用環狀鏈結串列，將玩家四的next指向玩家一，以使遊戲能夠不斷的進行。",
+        "output": "Reasonable example..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 環狀鏈結串列Circularly linked list簡述:\n  1. 最後一個節點的指標會指向第一個節點。\n  2. 沒有任一個節點指向NULL，每個節點都有後一位。\n\n舉個簡單的例子，在團康遊戲中，大家很常會圍成一個圈，目的是為了讓每一個人都能玩到遊戲，並且還能玩好幾回合，這就很像環狀鏈結串列的概念，人就是串列中的節點，左右(前後)兩邊都有人(節點)，也就是說，串列像環狀一樣，不論從哪一個節點開始出發，繞一圈都會經過每一個節點。\n\n使用環狀串列:\n  1. 在建立第一個節點的時候，第一個節點不是指向NULL，而是指向他自己。\n  2. 在計算長度的時候，不是指向NULL停止，而是指向第一個時停止。(停止條件不一樣)\n\n環狀鏈結串列的\n  優點: 想查詢全部資訊，任一節點都可以作為始點。\n  缺點: 不能隨機讀取指定位置的資料，只能一個一個走到指定的位置才能讀取。",
+        "output": "詳盡清楚！ Good~清楚明瞭!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: int main()\n{\n    vector &lt;int&gt; vec{1, 2, 3, 4, 5, 6, 7, 8};\n    cout &lt;&lt;  call by value:     ;\n    for(auto i:vec)\n        i++;\n    for(auto i:vec)\n        cout &lt;&lt; i &lt;&lt;    ;\n\n    cout &lt;&lt;  \\ncall by reference: ;\n    for(auto&amp;i:vec) // call by reference\n        i++;\n    for(auto i:vec)\n        cout &lt;&lt; i &lt;&lt;    ;\n\n}\n\ncall by value:       1 2 3 4 5 6 7 8\ncall by reference:2 3 4 5 6 7 8 9\n\n只有call by reference才會真正改變呼叫變數的值",
+        "output": "The code should be able to run.\n\nDo not use  auto  in this course, please.\n\nIf you really like it, you may also try: for(const auto&amp;i: vec)."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 環狀鏈結串列 Circular Linked List：\n\n\n說明：\n\n\n\t將單向鏈接串列最後一個節點的指標，指向第一個節點(HEAD)\n\t不論從哪個節點開始讀取，都能經過所有的節點，不會指向NULL\n\n\n舉例：\n\n像是團康遊戲 鬼抓人，大家會圍成一個圓圈，先選一個人當鬼 鬼會在圓圈外尋找下手的目標，假設這個鬼拍了你 你就要站起來追他\n\n\n\t如果追到他，他就繼續當鬼\n\t如果讓鬼跑一圈，搶坐在你原本的位置上，那就要換你當鬼\n\n\n上述的遊戲，就很像是環狀連節串列，不管鬼從哪邊開始跑哪邊開始挑對象，他跑的路徑一定會經過所有人\n\n\n另外還有約瑟夫問題，其解法也是使用環狀鏈結串列來模擬整個過程\n\n\n參考：\n\nhttps://zh.wikipedia.org/wiki/%E7%BA%A6%E7%91%9F%E5%A4%AB%E6%96%AF%E9%97%AE%E9%A2%98\n\nhttps://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8",
+        "output": "OK wow good good"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 答案為五種，解題結果如下:\n\n首先，合法運算式的括號必須符合第一個是左括號、最後一個是右括號的規則。\n\n因此我直接假設，三組括號中其中有一組括號負責滿足這個規則。\n\n剩下就是兩組括號(兩種相異物)的排列組合數，答案是C4取2等於6。\n\n而最後的答案並不是6。\n\n在合法運算式當中，若在已滿足括號成對的情況之下的下一個出現右括號(例如「()」的下一個出現右括號)\n\n即為不合法，因此此題我假設已滿足一對括號且下一個為右括號的情況(「(()XX)」) PS:這裡的兩個X一樣要符合左右括號數量相同的規則\n\n此時不合法的情況就是第一個X是右括號的情況，也就是一種(C1取1)。\n\n最後的答案是 6-1=5\n\n如果是四組以上括號一樣可以照著這個思路去計算。(第一次假設一組括號成對，第二次假設兩組......，將所有不合法的情況除去)",
+        "output": "讚 思考邏輯的表達敘述都很清楚，只是對於第二句話指出的規則不太清楚：\n\n 合法運算式的括號必須符合第一個是左括號、第二個是右括號的規則。 \n\n第一個是左括號沒問題，但是，第二個為什麼必須是右括號呢？例如：( (  (  ) ) ) 也是合法的呀。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 環狀鏈結串列是指鏈結串列的尾巴指向頭\n\n可以應用在循環的資料ex Queue\n\n特性 \n\n\n\t對於資料沒有明確的頭跟尾的定義\n\t沒有結點指向NULL\n\t即使是單向環狀鏈結串列，不論從那個結點開始，所有節點皆可造訪",
+        "output": "第一句話:  環狀鏈結串列是指鏈結串列的尾巴 \n\n是否沒寫完？ good good"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 稍稍改個命題：n組合法的括號能有幾種組合？\n\n數學上，這些組合所形成的數列名叫卡塔蘭數（Catalan number）。\n\n一般公式：\n\n\n\n另一種表達式：\n\n\n\n（還有多種表達式...）\n\n※註：此數列定義第0項（n = 0）為1。\n\n要解釋為什麼能套用卡塔蘭數列，我用第二種表達式來解釋。\n\n首先，我們知道合法的括號必然成對；因此n對括號有2n個括號，左括號與右括號的數量都是n。\n\n因此，所有的組合數為(2n)!/n!*n!，化簡為C(2n, n)。～式(1)\n\n再來，判斷列式時必是由左向右，且第一位必為左括號；因此，由第一位向右掃到任意一點時，經過的左括號數量永遠大於或等於經過的右括號的數量；亦即，左括號不是未成對就是成對，右括號不是成對就是還沒掃到（未出現）。\n\n現在來找不合法的組合數，條件一樣為左右括號各n個，設m由0開始。假設掃描到第2m+1位時，有m+1個右括號及m個左括號（亦即，左括號個數&lt;右括號個數），則剩餘的字串中會有n-m個左括號及n-(m+1)個右括號。將2m+1位以後的括號映射（左變右，右變左），則右括號會有n+1個，左括號會有n-1個。因此，所有非法的組合數為(2n)!/[(n+1)!*(n-1)!]，化簡為C(2n, n+1)。～式(2)\n\n由式(1)與式(2)，可得所有合法的組合數為C(2n, n) - C(2n, n+1)，屬於卡塔蘭數列的表達式之一。\n\n因此，若有三組括弧，可以有C(6, 3) - C(6, 4) = 20 - 15 = 5種組合，其它以此類推。\n\n【另解：棋盤方格法】\n\n對，就是高中數學的排列組合那個單元。\n\n假設有一個n*n的棋盤，左下角是起點，右上角是終點，移動方式只能向右或向上，令C(n)為走單調路徑且不越過對角線的個數。\n\n1. n*n格的棋盤：代表左右括弧都各為n個的所有可能組合數。\n\n2. 移動方式只能向右或向上：向右代表左括號，向上代表右括號。\n\n3. 不能越過對角線：合法表達式的第一位只能是左括號，如果第一步就向上，亦即第一位就是右括號，不合法。\n\n所以，以左下到右上的對角線為界，左邊的路徑是不合法的括號組合，右邊的則是合法的。\n\n以n = 4為例：\n\n\n\n這14個路徑圖分別代表14種合法組合：\n\n(1)：(((())))\n\n(2)：((()()))\n\n(3)：((())())\n\n(4)：(()(()))\n\n(5)：()((()))\n\n(6)：(()()())\n\n(7)：((()))()\n\n(8)：()(()())\n\n(9)：(())(())\n\n(10)：(()())()\n\n(11)：(())()()\n\n(12)：()(())()\n\n(13)：()()(())\n\n(14)：()()()()\n\n其它組合也可如法炮製。\n\n再扯就要扯到離散了\n\n參考：\n\nhttps://math.mit.edu/~djk/18.310/18.310F04/parentheses.pdf\n\nhttps://zhuanlan.zhihu.com/p/143272203\n\nhttps://zh.wikipedia.org/wiki/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0\n\nhttps://www.twblogs.net/a/5b9979542b717757338fb79d\n\nhttps://math.stackexchange.com/questions/2991347/catalan-numbers-sequence-of-balanced-parentheses\n\nhttps://www.twblogs.net/a/5b7dd1042b71776838540a8f\n\nhttps://blog.csdn.net/u011489043/article/details/77884434",
+        "output": "讚 Excellent!\n\n以下是畫蛇添足的補充：\n\n 將2m+1位以後的括號映射（左變右，右變左）  這個關鍵步驟之後，\n\n左括號個數 = m + (n-(m+1)) = n - 1\n\n右括號個數 = (m+1) + (n-m) = n + 1\n\n換一個方式想，到第2m+1位為止左括號多一個，剩餘的原本左括號少一個，經過上述步驟後反而變成多一個，因此總共多二個。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 合法運算式若有三組括弧，可以有幾種不同的形式？\n\n\n\n總共有5種形式",
+        "output": "Nice code!\n\nNext time you&#39;d better provide the code in plain text to be verified by the others. good 哇 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 環狀鏈結串列是指鏈結串列的最後一個節點會指向串列的第一個節點，而非像單向鏈結串列指向null。\n\n像是數位相框的照片隨順序撥放，到最後一張圖片時可以回到第一張圖片重新開始，可以運用在需要一直進行「下一個」動作的模式上，且不管從哪點開始都能走遍每個節點。",
+        "output": "good wow Nice example!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 假設用單向鏈結串列當作音樂mp3清單撥放器指針的話，從第一首歌造順序撥放到最後一首歌播完就會停止\n\n但是使用環狀串列當作音樂mp3清單撥放器的指針的話，最後一首歌播完不會停止反而回到第一首歌持續輪迴，或者我們可以設條件跑完第一圈就刪除某首歌這樣。\n\n因為單向Circular linked list的tail指向head 代表著這個串列不會有NULL產生的狀況，所以怎麼前進都會循環。",
+        "output": "Good example!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 張元翔老師的演算法分析有教到，這是卡塔蘭數列\n此題題目的括弧變化為五種，算式及其他舉例如下方兩張圖",
+        "output": "You need to write down more descriptions to explain what you draw in the pictures."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 如題。\n到目前為止，共計51位同學問答已得分。",
+        "output": ""
+    }
+]

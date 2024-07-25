@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:14",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162650",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2022-10-22 00:34:40",
+        "poster": "11027105",
+        "realname": "盧駿揚",
+        "email": "jy.lu123456@gmail.com",
+        "homepage": null,
+        "subject": "124. 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。",
+        "content": "<p><span style=\"font-family:新細明體,serif\">總共有三種類型</span></p>\r\n\r\n<p>()()() <span style=\"font-family:新細明體,serif\">單一的括弧</span></p>\r\n\r\n<p>((())) <span style=\"font-family:新細明體,serif\">三層的括弧</span></p>\r\n\r\n<p>(())(), ()(()), (()()) <span style=\"font-family:新細明體,serif\">兩層的括弧</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">總共五種</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">若想要再知道</span>3<span style=\"font-family:新細明體,serif\">組以上的括弧有幾種形式，可透過</span>backtracking<span style=\"font-family:新細明體,serif\">的方式寫出一支程式找出其合法的形式。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

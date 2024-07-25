@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-10-25 11:57:12",
+        "poster": "11127126",
+        "realname": "黃柏寧",
+        "email": "kevinqwer666@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p>126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>不是，以下為+ * 2 4 6 * - 7 5的求解過程:</p>\r\n\r\n<p>1.&quot;* 2 4&quot;先做運算，得知&quot;* 2 4&quot;的答案為8，計算完後新的前序式為:+ 8 6 * - 7 5</p>\r\n\r\n<p>2.&quot;+&nbsp;8&nbsp;6&quot;先做運算，得知&quot;+&nbsp;8&nbsp;6&quot;的答案為14，計算完後新的前序式為:&nbsp;14 *&nbsp;- 7 5</p>\r\n\r\n<p>3.&quot;- 7 5&quot;先做運算，得知&quot;- 7 5&quot;的答案為2，計算完後新的前序式為:&nbsp;14 *&nbsp;2</p>\r\n\r\n<p>到這裡為止，&nbsp;14 *&nbsp;2就已經不是前序式了，因為前序式的格式為一個運算子後面要接兩個運算元，而14 *&nbsp;2的格式為兩個運算元中間放一個運算子，這是中序式的格式，所以+ * 2 4 6 * - 7 5不是前序式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

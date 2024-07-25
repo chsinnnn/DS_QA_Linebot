@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000022.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000022",
+        "site": "1000110001",
+        "pt": "2023-07-15 21:24:05",
+        "poster": "11027103",
+        "realname": "李思德",
+        "email": "aaronlee0425@gmail.com",
+        "homepage": null,
+        "subject": "搶答121",
+        "content": "<p><span style=\"font-family:Comic Sans MS,cursive\">問題:舉例說明使用環狀鏈結串列Circularly linked list的情境。</span></p>\r\n\r\n<p><span style=\"font-family:Comic Sans MS,cursive\">Ans:滿足環狀鏈結串列的條件大概有兩點:1.最後一個節點將與第一個節點連接。2.必須經過所有節點。</span></p>\r\n\r\n<p><span style=\"font-family:Comic Sans MS,cursive\">例子:公車路線規劃系統</span></p>\r\n\r\n<p><span style=\"font-family:Comic Sans MS,cursive\">&nbsp; &nbsp; &nbsp; &nbsp; 在不考慮其他因素的狀況下，公車路線的頭尾將是一樣的，符合第一個特點。公車必須嚴格的按照規定的路線行駛，所以將會經過設&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 定時的每一個點，符合第二點。若將設定好的路線導入這個系統而沒有回到原點時，就代表路線的規劃有問題。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

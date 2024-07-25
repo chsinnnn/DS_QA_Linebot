@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:38",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305440",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-12-21 22:47:54",
+        "poster": "11020126",
+        "realname": "鄭祐昀",
+        "email": "carry0987@gmail.com",
+        "homepage": null,
+        "subject": "228. 如何將一個陣列轉換成一棵堆積？",
+        "content": "<p>如果要把一個陣列變成一個堆積（Heap），可以用std::make_heap來做。通常，std::make_heap會將陣列做成一個最大堆積，就是說所有的父節點都會比子節點大。</p>\r\n\r\n<p>這裡舉個例子：</p>\r\n\r\n<blockquote>\r\n<p><br />\r\n#include &lt;algorithm&gt; // std::make_heap<br />\r\n#include &lt;vector&gt; &nbsp; &nbsp;// std::vector，一種動態陣列</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; std::vector&lt;int&gt; v = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};</p>\r\n\r\n<p>&nbsp; &nbsp; // 把vector變成最大堆積<br />\r\n&nbsp; &nbsp; std::make_heap(v.begin(), v.end());</p>\r\n\r\n<p>&nbsp; &nbsp; // 不過如果要最小堆積的話，得多加一個參數讓最小的在前面<br />\r\n&nbsp; &nbsp; std::make_heap(v.begin(), v.end(), std::greater&lt;int&gt;());</p>\r\n\r\n<p>&nbsp; &nbsp; // 現在這個vector v 就是個堆積了</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}<br />\r\n&nbsp;</p>\r\n</blockquote>\r\n\r\n<p>我用std::vector來代替一般的陣列，因為它更靈活。先建立了一個帶有些數字的vector，然後用std::make_heap讓它成為最大堆積。如果想要最小堆積，就在std::make_heap加上std::greater&lt;int&gt;()這個比較器，這樣堆積裡的元素順序就會顛倒，變成最小的在前面。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

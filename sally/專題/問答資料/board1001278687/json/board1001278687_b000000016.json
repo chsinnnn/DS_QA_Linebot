@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:14:22",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答222",
+        "content": "<p><strong>撰寫程式碼指出如何為二元搜尋樹新增節點。</strong></p>\r\n\r\n<p><strong>新增節點到二元搜尋樹的過程，包括在適當的位置插入新節點以維持樹的排序特性。實作這個功能，需要定義一個Node類別表示二元搜尋樹的節點，並加入一個插入函數來新增節點。</strong></p>\r\n\r\n<p><strong>class Node:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, key):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.key = key</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.left = None</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.right = None</strong></p>\r\n\r\n<p><strong>def insert(root, key):</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;# 如果樹是空的，則直接新增節點作為根節點</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;if root is None:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Node(key)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;# 如果要插入的值小於根節點的值，則插入左子樹</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;if key &lt; root.key:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root.left = insert(root.left, key)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;# 如果要插入的值大於或等於根節點的值，則插入右子樹</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;elif key &gt;= root.key:</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root.right = insert(root.right, key)</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;return root</strong></p>\r\n\r\n<p><strong># 建立一棵空的二元搜尋樹</strong></p>\r\n\r\n<p><strong>root = None</strong></p>\r\n\r\n<p><strong># 依次插入節點</strong></p>\r\n\r\n<p><strong>root = insert(root, 5)</strong></p>\r\n\r\n<p><strong>root = insert(root, 2)</strong></p>\r\n\r\n<p><strong>root = insert(root, 8)</strong></p>\r\n\r\n<p><strong>root = insert(root, 1)</strong></p>\r\n\r\n<p><strong>root = insert(root, 4)</strong></p>\r\n\r\n<p><strong>root = insert(root, 9)</strong></p>\r\n\r\n<p><strong>定義了一個Node類別來表示二元搜尋樹的節點，每個節點包含一個key值，以及指向左子樹和右子樹的指針。一個insert函數來新增節點到樹中。在新增節點時，我們根據key值的大小遞迴地插入到左子樹或右子樹，直到找到適當的位置插入新節點。如果樹是空的，則直接新增節點作為根節點。</strong></p>\r\n\r\n<p><strong>依次插入節點5、2、8、1、4和9到空的二元搜尋樹中，形成一棵有序的BST。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

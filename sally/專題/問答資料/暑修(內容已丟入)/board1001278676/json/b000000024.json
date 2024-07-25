@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000024.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000024",
+        "site": "1000110001",
+        "pt": "2023-07-07 23:11:34",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答105.",
+        "content": "<p>105. 試描述整數溢位integer overflow的避免方法，並寫出C++程式碼。</p>\r\n\r\n<p>整數溢位（integer overflow）是指當一個整數值超出其資料類型所能表示的範圍時所產生的錯誤情況。這可能導致結果無效或未定義的行為。 下列為整數溢位integer overflow的避免方法</p>\r\n\r\n<p>1. 使用適當的資料類型&nbsp; 2. 檢查溢位條件&nbsp;&nbsp; 3. 使用安全的數學函數</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\n#include &lt;limits&gt;</p>\r\n\r\n<p>bool isSafeAddition(int a, int b) { // 函式用於檢查兩個整數相加是否安全（沒有溢位）<br />\r\n&nbsp;&nbsp;&nbsp; if (b &gt; 0 &amp;&amp; a &gt; std::numeric_limits&lt;int&gt;::max() - b) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;&nbsp; // 溢位條件<br />\r\n&nbsp;&nbsp;&nbsp; } else if (b &lt; 0 &amp;&amp; a &lt; std::numeric_limits&lt;int&gt;::min() - b) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;&nbsp; // 溢位條件<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n&nbsp;&nbsp;&nbsp; return true;<br />\r\n}</p>\r\n\r\n<p>int safeAddition(int a, int b) { // safeAddition 函式在進行整數相加之前，使用 isSafeAddition 函式檢查溢位條件。如果結果是安全的，則返回兩個數字的和。否則，可以根據需求處理溢位情況，拋出異常或返回預設值。<br />\r\n&nbsp;&nbsp;&nbsp; if (isSafeAddition(a, b)) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return a + b;<br />\r\n&nbsp;&nbsp;&nbsp; } else {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 處理溢位的情況，例如拋出異常或返回預設值<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw std::overflow_error(&quot;Integer overflow occurred.&quot;);<br />\r\n&nbsp;&nbsp;&nbsp; }<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp; int num1 = 100000;<br />\r\n&nbsp;&nbsp;&nbsp; int num2 = 200000;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; try {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int result = safeAddition(num1, num2);<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;Result: &quot; &lt;&lt; result &lt;&lt; std::endl;<br />\r\n&nbsp;&nbsp;&nbsp; } catch (std::overflow_error&amp; e) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; &quot;Error: &quot; &lt;&lt; e.what() &lt;&lt; std::endl;<br />\r\n&nbsp;&nbsp;&nbsp; }</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

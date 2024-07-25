@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000014000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000014000000001",
+        "site": "1000110001",
+        "pt": "2022-09-18 17:28:37",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p><span style=\"color:#ff0000\">這個遞迴函數是不正確的，變數n在遞迴過程沒有任何變化，大多數情況都是無法終止...</span></p>\r\n\r\n<p>Ref.&nbsp;<a href=\"https://www.banpresto.jp/shop/search.html?country_id=04\" target=\"_blank\">https://www.banpresto.jp/shop/search.html?country_id=04</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

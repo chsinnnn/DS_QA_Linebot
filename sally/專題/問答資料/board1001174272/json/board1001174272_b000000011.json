@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2022-09-26 00:02:15",
+        "poster": "11020107",
+        "realname": "蘇伯勳",
+        "email": "pohsun.su@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; // 多維陣列除了第一個以外，其餘都必須指定，否則會拋出錯誤(以arr2為例)<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; int arr1[][4] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 } };<br />\r\n&nbsp; &nbsp; int arr2[][][] = { { { 1, 2, 3, 4 } } };<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;arr1 :\\n&quot;; // 印出arr1<br />\r\n&nbsp; &nbsp; for ( auto &amp;a: arr1 ) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &quot;{ &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for ( auto &amp;b: a ) cout &lt;&lt; b &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &quot;}\\n&quot;;<br />\r\n&nbsp; &nbsp; } // foreach<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // error: declaration of &lsquo;arr2&rsquo; as multidimensional array must have bounds for all dimensions except the first<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // 一維陣列初始值為不同非零整數<br />\r\n&nbsp; &nbsp; int arr3[] = { 1, 2, 3, 4 }; // 第一種作法<br />\r\n&nbsp; &nbsp; int arr4[4] = { [0] = 1, [1] = 2, [2] = 3, [3] = 4 }; // 第二種作法<br />\r\n&nbsp; &nbsp; int arr5[4] = { 1, 2, 3, 4 }; // 第三種作法<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;arr3 :\\n&quot;; // 印出arr3<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;{ &quot;;<br />\r\n&nbsp; &nbsp; for ( auto &amp;c: arr3 ) cout &lt;&lt; c &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;}\\n&quot;;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;arr4 :\\n&quot;; // 印出arr4<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;{ &quot;;<br />\r\n&nbsp; &nbsp; for ( auto &amp;d: arr4 ) cout &lt;&lt; d &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;}\\n&quot;;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;arr5 :\\n&quot;; // 印出arr5<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;{ &quot;;<br />\r\n&nbsp; &nbsp; for ( auto &amp;e: arr5 ) cout &lt;&lt; e &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;}\\n&quot;;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // 一維陣列初始值為同一非零整數<br />\r\n&nbsp; &nbsp; int arr6[] = { 1, 1, 1, 1 }; // 其實就是把arr3、arr4、arr5的所有值設為同一個，就不印出贅述了<br />\r\n&nbsp; &nbsp; int arr7[] = { [0 ... 3] = 1 }; // 特殊寫法，僅限GCC編譯器<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n} // main()</p>\r\n\r\n<p>參照：</p>\r\n\r\n<p><a href=\"https://www.geeksforgeeks.org/different-ways-to-initialize-all-members-of-an-array-to-the-same-value-in-c/\">https://www.geeksforgeeks.org/different-ways-to-initialize-all-members-of-an-array-to-the-same-value-in-c/</a></p>\r\n\r\n<p><a href=\"https://stackoverflow.com/questions/12990568/passing-2-d-array-as-argument\">https://stackoverflow.com/questions/12990568/passing-2-d-array-as-argument</a></p>\r\n\r\n<p><a href=\"http://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc/Designated-Inits.html\">http://gcc.gnu.org/onlinedocs/gcc-4.1.2/gcc/Designated-Inits.html</a></p>\r\n\r\n<p><a href=\"https://stackoverflow.com/questions/201101/how-to-initialize-all-members-of-an-array-to-the-same-value\">https://stackoverflow.com/questions/201101/how-to-initialize-all-members-of-an-array-to-the-same-value</a></p>\r\n\r\n<p><a href=\"https://coherence0815.wordpress.com/2016/07/11/initialize-an-array-in-cc/\">https://coherence0815.wordpress.com/2016/07/11/initialize-an-array-in-cc/</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "46",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-07-12 13:46:02",
+        "poster": "06005771",
+        "realname": "莊明鴻",
+        "email": "mattsonc204@gmail.com",
+        "homepage": null,
+        "subject": "搶答121",
+        "content": "<p>問:舉例說明使用環狀鏈結串列Circularly linked list的情境。</p>\r\n\r\n<p>答:循環播放列表（Circular Playlist）：</p>\r\n\r\n<p>循環播放列表是一種播放音樂或視頻的方式，當播放到最後一首歌曲或最後一個視頻時，會循環回到第一首歌曲或第一個視頻。環狀鏈結串列可以被用於實現這種循環播放列表。每個歌曲或視頻可以表示為環狀鏈結串列的一個節點，並按照播放順序連接在一起。當播放到最後一個節點時，指標可以循環回到第一個節點，實現循環播放的效果。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

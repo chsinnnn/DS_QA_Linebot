@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:14",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162650",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2022-10-18 20:40:37",
+        "poster": "11027139",
+        "realname": "許書維",
+        "email": "xushuwei1122@gmail.com",
+        "homepage": null,
+        "subject": "122. 寫C++程式碼說明傳參考呼叫call by reference",
+        "content": "<p>以下是我自己寫得程式範例，解釋在程式的下方</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027139/images/call_by_reference.png\" style=\"height:498px; width:807px\" /></p>\r\n\r\n<p>Call by reference是&nbsp;C++才有的，call by reference 和 call by address的差別主要在於後者的指標它的內容為指向的位置，所以他本身仍然有記憶體位置但是前者是不會有的。因此參數在被函式呼叫之後，主程式的值會受到函式的影響，以及函式和主程式所使用的參數的記憶體位置是相同的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

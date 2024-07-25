@@ -1,0 +1,82 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: It depends of what method you want to do. It can be a class to help you build a binary search tree, a structure to help you hold your information and using the linked list method. Nevertheless, no matter what you choose, their process is somewhat the same.  To delete a node in a binary search tree you have to point in what direction it may be: right or left. When you found the node you want to delete, you just have to declare it null and then that node will be lost in the abyss forever. No take backs.",
+        "output": "舉例說明如何為二元搜尋樹刪除節點。    Give an example to show how to delete a node from binary search tree.  Do NOT provide the code!  Only an example and the explanation in your own words are needed!  PS. An example means the input data, while explanation refers to the steps to proceed. 👍🏻 讚 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Heap sort不是一個穩定的排序   Heap sort 的機制是建立一個二元樹，然後反復從中提取最小的元素，直到最後。   由於二元樹中不保留數值相同的元素的相對順序，所以當使用 Heap sort 對數列進行排列時，可能會重新排列數列裡的元素，而不一定是數組的原始順序。因此數值相同的元素可能會被重新排列，因此他們在排序後的列表中的相對順序可能會改變。       舉例來說    4 , 3a , 3b , 2 , 1   3a=3b   如果我們使用一個穩定的排序法ex. Merge sort對這個數列進行排序，得到的數列將保持具有原有的相對順序。   例如: 1 , 2 , 3a , 3b , 4   然而，如果我們使用 Heap sort 來對同一個數列進行排序，首先4被移除並放在最後一個位置上，然後3a被移除並放在倒數第二的位置上，3b放在第三的位置上，所以Heap sort排列後的數組得到的列表將不會保持數列原有的相對順序。   例如: 1 ,2, 3b, 3a, 4",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 假設要刪除最大的節點，因題目只問如何刪除節點，因此省略查找最大節點的步驟  分四個case",
+        "output": "5th case: the node to be deleted has two children. 畫得太好，設計學院沒請你去畫樹，是他們莫大的損失"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 1. heap和Binary Search Tree(以下簡稱B.S.T)都為Binary Tree但只有heap為一complete Binary Tree，B.S.T則未必(多為隨意的樹狀結構)  2. 建樹規則的差別  heap:  heap分成兩種樹狀結構，min-heap和Max-heap。  min-heap的任一節點會小於他的子節點的值，且root為樹中的最小值。  Max-heap的任一節點則會大於他的子節點的值，且root為樹中的最大值。  B.S.T:  B.S.T的每一個節點的值則會大於所有左子樹的值，並小於所有右子樹的值。  結論：簡言之，heap的排序是從root到leaf，而B.S.T則是從Left subtree到Right subtree  3. 搜尋時的時間複雜度的差異  在搜尋時，heap的Big O 為 O(n)，而B.S.T的為O(logn)",
+        "output": "大致OK，只有最後一句比較怪： 在搜尋時，heap的Big O 為 O(n)   可能要更精確指出 搜尋 是什麼意思？heap的用途並不是任意搜尋。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不穩定排序  排序後相同值的相對位置可能被調換",
+        "output": "舉例解說？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 陣列：  優：存取資料使用時間比陣列有效率 也不用多記錄指標 節省記憶體空間  缺：新增跟刪除較麻煩  指標：  優：新增跟刪除較方便，只需要動到新增或是刪除的相關節點就好  缺：不能像陣列一樣直接用index找到元素",
+        "output": "Full Binary tree和堆積結構有何關係？  OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: For a node that is to be deleted there can be four cases.  No nodes below: Delete current node.  Only left node below: Delete current node and connect left node to previous node.  Only right node below: Delete current node and connect right node to previous node.  Both left and right nodes below: Find the left most node on the sub-tree to the right and replace the current node with the found node, then delete the node that was found.",
+        "output": "Exactly."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 1. Heaps have to be complete binary trees, while binary search trees can have unfilled nodes.  2. Binary search trees are sorted with larger values to the right and smaller values to the left, while heaps are not.  3. Heaps allow duplicate values, while binary search trees do not.",
+        "output": "The 3rd item is not quite correct. Both of them allow duplicate values."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: It depends of what method you want to do. It can be a class to help you build a binary search tree, a structure to help you hold your information and using the linked list method. Nevertheless, no matter what you choose, their process is somewhat the same.  To delete a node in a binary search tree you have to point in what direction it may be: right or left. When you found the node you want to delete, you just have to declare it null and then that node will be lost in the abyss forever. No take backs.",
+        "output": "舉例說明如何為二元搜尋樹刪除節點。    Give an example to show how to delete a node from binary search tree.  Do NOT provide the code!  Only an example and the explanation in your own words are needed!  PS. An example means the input data, while explanation refers to the steps to proceed. 👍🏻 讚 讚"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: Heap sort不是一個穩定的排序   Heap sort 的機制是建立一個二元樹，然後反復從中提取最小的元素，直到最後。   由於二元樹中不保留數值相同的元素的相對順序，所以當使用 Heap sort 對數列進行排列時，可能會重新排列數列裡的元素，而不一定是數組的原始順序。因此數值相同的元素可能會被重新排列，因此他們在排序後的列表中的相對順序可能會改變。       舉例來說    4 , 3a , 3b , 2 , 1   3a=3b   如果我們使用一個穩定的排序法ex. Merge sort對這個數列進行排序，得到的數列將保持具有原有的相對順序。   例如: 1 , 2 , 3a , 3b , 4   然而，如果我們使用 Heap sort 來對同一個數列進行排序，首先4被移除並放在最後一個位置上，然後3a被移除並放在倒數第二的位置上，3b放在第三的位置上，所以Heap sort排列後的數組得到的列表將不會保持數列原有的相對順序。   例如: 1 ,2, 3b, 3a, 4",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 假設要刪除最大的節點，因題目只問如何刪除節點，因此省略查找最大節點的步驟  分四個case",
+        "output": "5th case: the node to be deleted has two children. 畫得太好，設計學院沒請你去畫樹，是他們莫大的損失"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 1. heap和Binary Search Tree(以下簡稱B.S.T)都為Binary Tree但只有heap為一complete Binary Tree，B.S.T則未必(多為隨意的樹狀結構)  2. 建樹規則的差別  heap:  heap分成兩種樹狀結構，min-heap和Max-heap。  min-heap的任一節點會小於他的子節點的值，且root為樹中的最小值。  Max-heap的任一節點則會大於他的子節點的值，且root為樹中的最大值。  B.S.T:  B.S.T的每一個節點的值則會大於所有左子樹的值，並小於所有右子樹的值。  結論：簡言之，heap的排序是從root到leaf，而B.S.T則是從Left subtree到Right subtree  3. 搜尋時的時間複雜度的差異  在搜尋時，heap的Big O 為 O(n)，而B.S.T的為O(logn)",
+        "output": "大致OK，只有最後一句比較怪： 在搜尋時，heap的Big O 為 O(n)   可能要更精確指出 搜尋 是什麼意思？heap的用途並不是任意搜尋。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 不穩定排序  排序後相同值的相對位置可能被調換",
+        "output": "舉例解說？"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 陣列：  優：存取資料使用時間比陣列有效率 也不用多記錄指標 節省記憶體空間  缺：新增跟刪除較麻煩  指標：  優：新增跟刪除較方便，只需要動到新增或是刪除的相關節點就好  缺：不能像陣列一樣直接用index找到元素",
+        "output": "Full Binary tree和堆積結構有何關係？  OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: For a node that is to be deleted there can be four cases.  No nodes below: Delete current node.  Only left node below: Delete current node and connect left node to previous node.  Only right node below: Delete current node and connect right node to previous node.  Both left and right nodes below: Find the left most node on the sub-tree to the right and replace the current node with the found node, then delete the node that was found.",
+        "output": "Exactly."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 1. Heaps have to be complete binary trees, while binary search trees can have unfilled nodes.  2. Binary search trees are sorted with larger values to the right and smaller values to the left, while heaps are not.  3. Heaps allow duplicate values, while binary search trees do not.",
+        "output": "The 3rd item is not quite correct. Both of them allow duplicate values."
+    }
+]

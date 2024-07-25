@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:27",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305441",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-12-13 08:34:52",
+        "poster": "11127229",
+        "realname": "廖翊崴",
+        "email": "willy.liao921118@gmail.com",
+        "homepage": null,
+        "subject": "222. 撰寫程式碼指出如何為二元搜尋樹新增節點。",
+        "content": "<p># include &lt;stdio.h&gt;</p>\r\n\r\n<p>&nbsp;struct Node {</p>\r\n\r\n<p>&nbsp; &nbsp; int number ;</p>\r\n\r\n<p>&nbsp; &nbsp; Node * left ;</p>\r\n\r\n<p>&nbsp; &nbsp; Node * right ;</p>\r\n\r\n<p>};</p>\r\n\r\n<p>typedef Node * NodePtr ;</p>\r\n\r\n<p>void Add( NodePtr &amp; head, int num ) { &nbsp;// insert new node</p>\r\n\r\n<p>&nbsp; &nbsp; if ( head == NULL ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; head = new Node ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; head -&gt;&nbsp;left = NULL&nbsp;;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; head -&gt; right = NULL ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; head -&gt; number = num ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return ;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; else if ( num &lt; head -&gt;&nbsp;number ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; Add( head -&gt; left, num ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; else if ( num &gt;= head -&gt; number ) {&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; Add( head -&gt; right, num ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return ;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>void Inorder( NodePtr head ) { &nbsp;// print inorder of tree</p>\r\n\r\n<p>&nbsp; &nbsp; if ( head == NULL ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return ;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; Inorder( head -&gt; left ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; printf( &quot;%d &quot;, head -&gt; number ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; Inorder( head -&gt; right ) ;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main( ) {</p>\r\n\r\n<p>&nbsp; &nbsp; int num = 0, order = 0 ;</p>\r\n\r\n<p>&nbsp; &nbsp; NodePtr head = NULL ;</p>\r\n\r\n<p>&nbsp; &nbsp; do {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;******************\\n&quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Order 0: quit\\n&quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Order 1: insert\\n&quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;******************\\n&quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Input an order: &quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; scanf( &quot;%d&quot;, &amp;order ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; if ( order == 0 ) break ; &nbsp;// end</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; else if ( order == 1 ) { &nbsp;// insert&nbsp;node</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Input a number: &quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanf( &quot;%d&quot;, &amp;num ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Add( head, num ) ; &nbsp;// insert</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Inorder: &quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Inorder( head ) ; &nbsp;// check the tree</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; else {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Not the order!&quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;\\n\\n&quot; ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; } while( order != 0 ) ;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0 ;</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

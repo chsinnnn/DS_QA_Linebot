@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2022-10-16 17:54:58",
+        "poster": "11027238",
+        "realname": "王紫薰",
+        "email": "isawang92@gmail.com",
+        "homepage": null,
+        "subject": "119. 寫C++程式碼說明刪除鏈結串列linked list第3個節點。",
+        "content": "<p>#include &lt;bits/stdc++.h&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>int main()<br />\r\n{<br />\r\n&nbsp; &nbsp; list&lt;int&gt; AList;<br />\r\n&nbsp; &nbsp; for(int i=0;i&lt;10;i++)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; AList.push_back(i);<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;Before: &quot;; //印出初始陣列<br />\r\n&nbsp; &nbsp; for(auto i:AList){<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout&lt;&lt;i&lt;&lt;&quot; &quot;;<br />\r\n&nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; cout&lt;&lt;endl;</p>\r\n\r\n<p>&nbsp; &nbsp; list&lt;int&gt;::iterator it = AList.begin(); // 刪除第三個<br />\r\n&nbsp; &nbsp; advance(it,2);<br />\r\n&nbsp; &nbsp; AList.erase(it);</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;After: &quot;; //印出修改後陣列<br />\r\n&nbsp; &nbsp; for(auto i:AList){<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout&lt;&lt;i&lt;&lt;&quot; &quot;;<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

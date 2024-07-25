@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:45",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296419",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-10-03 16:33:25",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "112",
+        "content": "<p><span style=\"font-size:18px\">寫出C++程式碼說明兩個類別間的繼承inheritance。</span></p>\r\n\r\n<p>可以在新建的 class 中去繼承已經建立好的 class ，並調用已經建立好的 method。<br />\r\n可以調用以下兩種形式的 method</p>\r\n\r\n<ul>\r\n\t<li>public</li>\r\n\t<li>protected</li>\r\n</ul>\r\n\r\n<p>若不想讓外面可以直接調用的話則使用 protected&nbsp;去保護。若是&nbsp;private 則不能在繼承後調用。<br />\r\n<br />\r\n以下為示範程式碼</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127140/images/Screen%20Shot%202023-10-03%20at%204.31.54%20PM.png\" style=\"height:382px; width:300px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

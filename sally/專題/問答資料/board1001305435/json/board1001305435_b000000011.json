@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-10-25 21:10:09",
+        "poster": "11127232",
+        "realname": "林鈺宸",
+        "email": "sam179851@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p>根據前序式的文法定義:</p>\r\n\r\n<p>&lt;prefix&gt; = &lt;operand&gt;&nbsp;| &lt;operator&gt; &lt;prefix&gt; &lt;prefix&gt;</p>\r\n\r\n<p>&lt;operand&gt; = 0 | 1 | 2 | ... | 9&nbsp;</p>\r\n\r\n<p>&lt;operator&gt; = + | - | * | /&nbsp;&nbsp;</p>\r\n\r\n<p>所以當E為一個合法的前序式，Y不是空字串，EY = &lt;prefix&gt;Y，不可能符合上述文法定義，必不為前序。</p>\r\n\r\n<p>自左而右作運算可得知+*246 已為一合法前序式，但Y不為空字串 -&gt; 得證+ * 2 4 6 * - 7 5不為合法前序式</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2022-10-01 21:54:00",
+        "poster": "11027156",
+        "realname": "林芷安",
+        "email": "annann9277@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p><sub><span style=\"font-family:新細明體,serif\">遞迴會造成記憶體區段錯誤的原因通常是因為其層數過多、沒有設好終止條件或接收資料太過龐大，所堆疊的東西超過記憶體大小，就造成</span>stack overflow</sub><sub><span style=\"font-family:新細明體,serif\">了。</span></sub></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "36",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:53:45" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296419</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2023-10-03 16:26:09</pt>
+  <poster>11127137</poster>
+  <realname>&#x9EC3;&#x4E59;&#x5BB6;  </realname>
+  <email>u810025@gmail.com</email>
+  <homepage>https://ja-errorpro.cf </homepage>
+  <subject>115 </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&lt;span style="font-size:16px"&gt;&#x50B3;&#x5165;&#x9663;&#x5217;A&#x548C;&#x6574;&#x6578;S&#xFF0C;&#x5BEB;&#x51FA;C++&#x51FD;&#x6578;&#x5F9E;A&#x627E;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA;S&#x7684;&#x7D44;&#x5408;&#x3002;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x984C;&#x53EF;&#x4EE5;&#x5C0D;&#x61C9;&#x5230;Leetcode &#x7684; 3sum &#x4EE5;&#x53CA; 3sum Closest &#x5169;&#x984C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://leetcode.com/problems/3sum/"&gt;https://leetcode.com/problems/3sum/&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://leetcode.com/problems/3sum-closest/"&gt;https://leetcode.com/problems/3sum-closest/&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5047;&#x8A2D;&#x8981;&#x627E;&#x7684;&#x7D44;&#x5408;&#x4E0D;&#x80FD;&#x6709;&#x91CD;&#x8907;&#x7684;&#xFF0C;&#x5148;&#x6392;&#x5E8F;&#x597D;&#x9663;&#x5217;&#x5F8C;&#x6703;&#x6BD4;&#x8F03;&#x597D;&#x505A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E00;&#x7A2E;&#x4F5C;&#x6CD5;&#x662F;&#x6392;&#x5E8F;&#x597D;&#x5F8C;&#x958B;&#x4E09;&#x5C64;&#x8FF4;&#x5708;&#x76F4;&#x63A5;&#x66B4;&#x529B;&#x641C;&#x5C0B;(Brute Force)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```cpp&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum(vector&amp;lt;int&amp;gt; &amp;amp;nums, int target) { // Brute Force&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; if (nums.empty() || nums.size() &amp;lt; 3) // &#x4E0D;&#x5230;&#x4E09;&#x500B;&#x6578;&#x5B57;&#xFF0C;&#x6C92;&#x6709;&#x7B54;&#x6848;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return {};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int n = nums.size();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; sort(nums.begin(), nums.end()); // &#x5148;&#x6392;&#x5E8F;&#x597D; &#x5E73;&#x5747;&#xFF1A;O(nlgn)&#xFF0C;&#x6700;&#x5DEE;&#xFF1A;O(n^2)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; ret;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n - 2; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if (i == 0 || nums[i] != nums[i - 1]) { // &#x53BB;&#x6389;&#x91CD;&#x8907;&#x7684;&#x6578;&#x5B57;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = i + 1; j &amp;lt; n - 1; j++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (j == i + 1 || nums[j] != nums[j - 1]) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int k = j + 1; k &amp;lt; n; k++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (k == j + 1 || nums[k] != nums[k - 1]) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (nums[i] + nums[j] + nums[k] == target) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ret.push_back({nums[i], nums[j], nums[k]});&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return ret;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA; &lt;img alt="O(N^3)" src="https://latex.codecogs.com/gif.latex?O%28N%5E3%29" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E8C;&#x7A2E;&#x4F5C;&#x6CD5;&#x6CBF;&#x7528;&#x7B2C;&#x4E00;&#x7A2E;&#xFF0C;&#x4F46;&#x4F7F;&#x7528;hash table&#x8F14;&#x52A9;&#x641C;&#x5C0B;&#xFF0C;&#x5148;&#x5C07;&#x6240;&#x6709;&#x5143;&#x7D20;&#x653E;&#x5165;hash&amp;nbsp;table&#xFF0C;&#x7136;&#x5F8C;&#x66B4;&#x529B;&#x679A;&#x8209;&#x53D6;&#x5169;&#x6578;&#xFF0C;&#x5047;&#x8A2D;&#x53EB; &lt;img alt="a, b" src="https://latex.codecogs.com/gif.latex?a%2C%20b" /&gt;&#xFF0C;&#x90A3;&#x9EBC;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528; &lt;img alt="O(1)" src="https://latex.codecogs.com/gif.latex?O%281%29" /&gt; &#x7684;&#x6642;&#x9593;&#x770B;&lt;img alt="target - ( a+b )" src="https://latex.codecogs.com/gif.latex?target%20-%20%28%20a&amp;amp;plus;b%20%29" /&gt; &#x662F;&#x5426;&#x6709;&#x5728;hash table&#x88E1;&#xFF0C;&#x6BD4;&#x76F4;&#x63A5;&#x66B4;&#x529B;&#x641C;&#x5C0B;&#x9084;&#x5FEB;&#x4E00;&#x500B;N&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```cpp&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum2(vector&amp;lt;int&amp;gt; &amp;amp;nums,&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int target) { // hash table&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; if (nums.empty() || nums.size() &amp;lt; 3)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return {};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int n = nums.size();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; sort(nums.begin(), nums.end());&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; ret;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; unordered_map&amp;lt;int, int&amp;gt; mp; // hash table&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; mp[nums[i]] = i;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n - 2; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if (i == 0 || nums[i] != nums[i - 1]) { // &#x53BB;&#x6389;&#x91CD;&#x8907;&#x7684;&#x6578;&#x5B57;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = i + 1; j &amp;lt; n - 1; j++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (j == i + 1 || nums[j] != nums[j - 1]) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int t = target - nums[i] - nums[j];&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (mp.find(t) != mp.end() &amp;amp;&amp;amp; mp[t] &amp;gt; j) { // &#x627E;&#x5230;&#x4E14;&#x4E0D;&#x91CD;&#x8907;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ret.push_back({nums[i], nums[j], t});&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return ret;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA; &lt;img alt="O(N^2)" src="https://latex.codecogs.com/gif.latex?O%28N%5E2%29" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B2C;&#x4E09;&#x7A2E;&#x4F5C;&#x6CD5;&#x4F7F;&#x7528; Two Pointers(&#x96D9;&#x6307;&#x91DD;)&#xFF0C;&#x6392;&#x5E8F;&#x5F8C;&#x5148;&#x56FA;&#x5B9A;&#x597D;&#x9663;&#x5217;&#x4E2D;&#x4E00;&#x500B;&#x6578;&#xFF0C;&#x63A5;&#x8457;&#x5B9A;&#x597D;&#x5DE6;&#x53F3;&#x754C;(&lt;img alt="l, r, i \le l \le r" src="https://latex.codecogs.com/gif.latex?l%2C%20r%2C%20i%20%5Cle%20l%20%5Cle%20r" /&gt;)&#xFF0C;&#x5982;&#x679C; &lt;img alt="array[i] + array[l] + array[r]" src="https://latex.codecogs.com/gif.latex?array%5Bi%5D%20&amp;amp;plus;%20array%5Bl%5D%20&amp;amp;plus;%20array%5Br%5D" /&gt; &#x6BD4;&#x76EE;&#x6A19;&#x9084;&#x5927;&#xFF0C;&#x8868;&#x793A;&#x9700;&#x8981;&#x53D6;&#x66F4;&#x5C0F;&#x7684;&#x503C;&#xFF0C;&#x53F3;&#x754C;&#x8981;&#x5F80;&#x5DE6;&#x79FB;&#x52D5;&#xFF0C;&#x53CD;&#x4E4B;&#x5982;&#x679C;&#x6BD4;&#x76EE;&#x6A19;&#x5C0F;&#xFF0C;&#x8868;&#x793A;&#x9700;&#x8981;&#x53D6;&#x66F4;&#x5927;&#x7684;&#x503C;&#xFF0C;&#x5DE6;&#x754C;&#x5F80;&#x53F3;&#x79FB;&#x52D5;&#xFF0C;&#x63A5;&#x8457;&#x53EA;&#x8981;&#x9663;&#x5217;&#x7684;&#x6BCF;&#x500B;&#x6578;&#x5B57;&#x90FD;&#x56FA;&#x5B9A;&#x4E00;&#x6B21;( &lt;img alt="O(N)" src="https://latex.codecogs.com/gif.latex?O%28N%29" /&gt; )&#xFF0C;&#x63A5;&#x8457;&#x96D9;&#x6307;&#x91DD;&#x8DD1;&#x4E00;&#x904D; (&lt;img alt="O(N)" src="https://latex.codecogs.com/gif.latex?O%28N%29" /&gt;) &#x5C31;&#x80FD;&#x627E;&#x51FA;&#x6240;&#x6709;&#x7D44;&#x5408;&#xFF0C;&#x52A0;&#x4E0A;&#x6392;&#x5E8F;&#x8907;&#x96DC;&#x5EA6;&#x6700;&#x5DEE;&#x60C5;&#x6CC1;&#x662F; &lt;img alt="O(N^2)" src="https://latex.codecogs.com/gif.latex?O%28N%5E2%29" /&gt;&#xFF0C;&#x7E3D;&#x8907;&#x96DC;&#x5EA6; &lt;img alt="= O ( N^2 + N^2 ) = O( N^2 )" src="https://latex.codecogs.com/gif.latex?%3D%20O%20%28%20N%5E2%20&amp;amp;plus;%20N%5E2%20%29%20%3D%20O%28%20N%5E2%20%29" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```cpp&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; threeSum3(vector&amp;lt;int&amp;gt; &amp;amp;nums,&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int target) { // Two Pointers, O(n^2)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; if (nums.empty() || nums.size() &amp;lt; 3)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return {};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int n = nums.size();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; sort(nums.begin(), nums.end());&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; ret;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; n - 2; i++) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if (i == 0 || nums[i] != nums[i - 1]) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int l = i + 1, r = n - 1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while (l &amp;lt; r) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (nums[i] + nums[l] + nums[r] == target) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ret.push_back({nums[i], nums[l], nums[r]});&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while (l &amp;lt; r &amp;amp;&amp;amp; nums[l] == nums[l + 1]) // &#x53BB;&#x6389;&#x91CD;&#x8907;&#x7684;&#x6578;&#x5B57;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; l++;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while (l &amp;lt; r &amp;amp;&amp;amp; nums[r] == nums[r - 1])&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; r--;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; l++;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; r--;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else if (nums[i] + nums[l] + nums[r] &amp;lt; target) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; l++;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; r--;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return ret;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;```&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6700;&#x5F8C;&#x6211;&#x96A8;&#x6A5F;&#x751F;&#x4E00;&#x7B46; N = 1000 &#x7684;&#x6E2C;&#x8CC7;&#x4E26;&#x6E2C;&#x91CF;&#x57F7;&#x884C;&#x6642;&#x9593;&#xFF0C;&#x5F97;&#x5230;&#x4EE5;&#x4E0B;&#x7D50;&#x679C;(&#x7DE8;&#x8B6F;&#x5668;&#x70BA; g++ (MinGW-W64), C++11)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Brute Force : 0.712229&lt;br /&gt;&#xD;
+Hash table : 0.024005&lt;br /&gt;&#xD;
+Two Pointers : 0.004116&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x55AE;&#x4F4D;&#xFF1A;&#x79D2;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9644;&#x6A94;&#x70BA;&#x5B8C;&#x6574;&#x6E2C;&#x8A66;&#x7A0B;&#x5F0F;&#x78BC;&#x4EE5;&#x53CA;&#x6E2C;&#x8CC7;&lt;/p&gt;</content>
+  <attach>115.cpp	WM651bd0032b9ec.cpp	input.txt	WM651bd00349eec.txt</attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>44</hit>
+  <lang>1</lang>
+</data>

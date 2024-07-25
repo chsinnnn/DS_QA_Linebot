@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000029.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000029",
+        "site": "1000110001",
+        "pt": "2023-07-07 23:53:21",
+        "poster": "06004870",
+        "realname": "曾浚楷",
+        "email": "kenneth61215@gmail.com",
+        "homepage": null,
+        "subject": "搶答102",
+        "content": "<p>102. 試寫出一個遞迴函數找出一群整數的中位數median。</p>\r\n\r\n<p>int findMedium(int nums[]) {<br />\r\n&nbsp;&nbsp; &nbsp;int len = sizeof(nums) / sizeof(nums[0]);&nbsp;&nbsp; &nbsp;//求出數列長度<br />\r\n&nbsp;&nbsp; &nbsp;int mid = 0;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;if (len == 1) {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return nums[0];&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//若數列長度為1，則輸出該數字<br />\r\n&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;std::sort(nums, nums + len);&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//使用sort對數列進行排列</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;if (len % 2 == 0) {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mid = len / 2;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return ((nums[len] + nums[len + 1]) / 2);&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//若數列長度為偶數，則輸出中間兩位數字的平均數<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;else {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mid = len / 2 + 1;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return nums[mid];&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//若數列長度為奇數，則輸出中間位數<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

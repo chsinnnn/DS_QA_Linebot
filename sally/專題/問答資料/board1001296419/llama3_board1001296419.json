@@ -1,0 +1,57 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 111.寫出C++程式碼說明傳值呼叫call by value。\n\n#include &lt;iostream&gt;\nvoid doubleValue(int x) {\n    x = x * 2;  // 修改輸入的值\n    std::cout &lt;&lt;  Inside function: x =   &lt;&lt; x &lt;&lt; std::endl;\n}\n\nint main() {\n    int a = 5;\n    std::cout &lt;&lt;  Before function call: a =   &lt;&lt; a &lt;&lt; std::endl;\n    \n    doubleValue(a);  // 呼叫 doubleValue 函數\n    \n    std::cout &lt;&lt;  After function call: a =   &lt;&lt; a &lt;&lt; std::endl; // 注意這裡的 a 值沒有改變\n    return 0;\n}\n當你運行這段程式，你會得到以下輸出：\n\nBefore function call: a = 5\nInside function: x = 10\nAfter function call: a = 5\n\n\n儘管在 doubleValue 函數中 x 的值被改變了，但是在 main 函數中的 a 的值並沒有改變。這是因為 doubleValue 函數獲得的是 a 的一個拷貝，所以對它的任何修改都不會影響到原來的 a。這就是傳值呼叫的特點。\n\n以下討論的為當參數為指標時，要注意的點:\n\n你仍然是在使用傳值呼叫，但你傳遞的是指標的值 (即記憶體地址)。這意味著在函數中你可以透過該指標修改它所指向的值，但你不能改變指標本身所指向的記憶體地址。",
+        "output": "ok Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。\n\n這題可以對應到Leetcode 的 3sum 以及 3sum Closest 兩題\n\nhttps://leetcode.com/problems/3sum/\n\nhttps://leetcode.com/problems/3sum-closest/\n\n假設要找的組合不能有重複的，先排序好陣列後會比較好做\n\n第一種作法是排序好後開三層迴圈直接暴力搜尋(Brute Force)\n\n```cpp\n\nvector&lt;vector&lt;int&gt;&gt; threeSum(vector&lt;int&gt; &amp;nums, int target) { // Brute Force\n\n    if (nums.empty() || nums.size() &lt; 3) // 不到三個數字，沒有答案\n\n      return {};\n\n    int n = nums.size();\n\n    sort(nums.begin(), nums.end()); // 先排序好 平均：O(nlgn)，最差：O(n^2)\n\n    vector&lt;vector&lt;int&gt;&gt; ret;\n\n    for (int i = 0; i &lt; n - 2; i++) {\n\n      if (i == 0 || nums[i] != nums[i - 1]) { // 去掉重複的數字\n\n        for (int j = i + 1; j &lt; n - 1; j++) {\n\n          if (j == i + 1 || nums[j] != nums[j - 1]) {\n\n            for (int k = j + 1; k &lt; n; k++) {\n\n              if (k == j + 1 || nums[k] != nums[k - 1]) {\n\n                if (nums[i] + nums[j] + nums[k] == target) {\n\n                  ret.push_back({nums[i], nums[j], nums[k]});\n\n                }\n\n              }\n\n            }\n\n          }\n\n        }\n\n      }\n\n    }\n\n    return ret;\n\n  }\n\n```\n\n時間複雜度為 \n\n第二種作法沿用第一種，但使用hash table輔助搜尋，先將所有元素放入hash table，然後暴力枚舉取兩數，假設叫 ，那麼就可以直接用  的時間看 是否有在hash table裡，比直接暴力搜尋還快一個N\n\n```cpp\n\nvector&lt;vector&lt;int&gt;&gt; threeSum2(vector&lt;int&gt; &amp;nums,\n\n                                int target) { // hash table\n\n    if (nums.empty() || nums.size() &lt; 3)\n\n      return {};\n\n    int n = nums.size();\n\n    sort(nums.begin(), nums.end());\n\n    vector&lt;vector&lt;int&gt;&gt; ret;\n\n    unordered_map&lt;int, int&gt; mp; // hash table\n\n    for (int i = 0; i &lt; n; i++) {\n\n      mp[nums[i]] = i;\n\n    }\n\n    for (int i = 0; i &lt; n - 2; i++) {\n\n      if (i == 0 || nums[i] != nums[i - 1]) { // 去掉重複的數字\n\n        for (int j = i + 1; j &lt; n - 1; j++) {\n\n          if (j == i + 1 || nums[j] != nums[j - 1]) {\n\n            int t = target - nums[i] - nums[j];\n\n            if (mp.find(t) != mp.end() &amp;&amp; mp[t] &gt; j) { // 找到且不重複\n\n              ret.push_back({nums[i], nums[j], t});\n\n            }\n\n          }\n\n        }\n\n      }\n\n    }\n\n    return ret;\n\n  }\n\n```\n\n時間複雜度為 \n\n第三種作法使用 Two Pointers(雙指針)，排序後先固定好陣列中一個數，接著定好左右界()，如果  比目標還大，表示需要取更小的值，右界要往左移動，反之如果比目標小，表示需要取更大的值，左界往右移動，接著只要陣列的每個數字都固定一次(  )，接著雙指針跑一遍 () 就能找出所有組合，加上排序複雜度最差情況是 ，總複雜度 \n\n```cpp\n\nvector&lt;vector&lt;int&gt;&gt; threeSum3(vector&lt;int&gt; &amp;nums,\n\n                                int target) { // Two Pointers, O(n^2)\n\n    if (nums.empty() || nums.size() &lt; 3)\n\n      return {};\n\n    int n = nums.size();\n\n    sort(nums.begin(), nums.end());\n\n    vector&lt;vector&lt;int&gt;&gt; ret;\n\n    for (int i = 0; i &lt; n - 2; i++) {\n\n      if (i == 0 || nums[i] != nums[i - 1]) {\n\n        int l = i + 1, r = n - 1;\n\n        while (l &lt; r) {\n\n          if (nums[i] + nums[l] + nums[r] == target) {\n\n            ret.push_back({nums[i], nums[l], nums[r]});\n\n            while (l &lt; r &amp;&amp; nums[l] == nums[l + 1]) // 去掉重複的數字\n\n              l++;\n\n            while (l &lt; r &amp;&amp; nums[r] == nums[r - 1])\n\n              r--;\n\n            l++;\n\n            r--;\n\n          } else if (nums[i] + nums[l] + nums[r] &lt; target) {\n\n            l++;\n\n          } else\n\n            r--;\n\n        }\n\n      }\n\n    }\n\n    return ret;\n\n  }\n\n```\n\n最後我隨機生一筆 N = 1000 的測資並測量執行時間，得到以下結果(編譯器為 g++ (MinGW-W64), C++11)\n\nBrute Force : 0.712229\nHash table : 0.024005\nTwo Pointers : 0.004116\n\n(單位：秒)\n\n附檔為完整測試程式碼以及測資",
+        "output": "作法完整且說明十分詳細 Excellent!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 寫出C++程式碼說明兩個類別間的繼承inheritance。\n\n可以在新建的 class 中去繼承已經建立好的 class ，並調用已經建立好的 method。\n可以調用以下兩種形式的 method\n\n\n\tpublic\n\tprotected\n\n\n若不想讓外面可以直接調用的話則使用 protected 去保護。若是 private 則不能在繼承後調用。\n\n以下為示範程式碼",
+        "output": "ok OK\n\n程式碼以剪貼文字取代截圖，以便其他同學測試"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。\n\n在不同參數下去呼叫相同函式，然後做出不同事情。以下為示範程式碼。\n\n\n\n可以看到儘管是相同名稱的function，仍然可以定義兩次，並且做得事情可以不一樣。\n但在傳入參數上一定要不一樣。",
+        "output": "ok"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 題目:\n\n111. 寫出C++程式碼說明傳值呼叫call by value。\n\n程式碼:\n\n#include&lt;iostream&gt;\n\nusing namespace std;\n\nvoid callByValue( int numB ) {\n\n  numB += 10;\n\n  return;\n\n}\n\nint main() {\n\n  int numA = 0;\n\n  cout &lt;&lt; numA &lt;&lt; endl;\n\n  callByValue( numA );\n\n  cout &lt;&lt; numA &lt;&lt; endl;\n\n}\n\n說明:\n\n如上面的程式碼所示範，執行後會先印出一開始初始化的numA也就是0，經過call by value傳入函式中以numB接，接著將numB加上10後結束，再次在main中印出numA可以發現還是0。\n\n是因為call by value只是將傳入的參數複製一份一模一樣的數值，簡單來說numA及numB是兩個完全不同的變數，只是內容剛好相同而已。",
+        "output": "OK OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 112. 寫出C++程式碼說明兩個類別間的繼承inheritance。\n\n#繼承: 子類別可以承接父類別的 public成員 ,使之具有共通的public屬性或方法, 所以可以說子類別是父類別的延伸。\n\n# 總結: 繼承是能減少相似的 code，並同時滿足不同的功能",
+        "output": "ok OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 113. 將此後序式postfix轉中序式infix，並詳述步驟。*\na b + c * d e + f * + w z + *\n\n1.逐個讀進後序式，根據受體不同做出以下對應操作。\n\n2-1.若為運算元，推進棧中，並在運算元(式)中以  ;  作為與前者的分隔符。\n\n2-2.若為運算子，將棧中的右運算式取出，壓入運算子後重新壓入右運算元，並在左右運算式外加入左右括號\n\n逐個進行以上步驟直到後續式讀取完畢，結束時重新檢查算是中是否有分隔符，若有，則error\n\n以下是轉換時棧中變化:\n\na\na;b\n(a+b)\n(a+b);c\n((a+b)*c)\n((a+b)*c);d\n((a+b)*c);d;e\n((a+b)*c);(d+e)\n((a+b)*c);(d+e);f\n((a+b)*c);((d+e)*f)\n(((a+b)*c)+((d+e)*f))\n(((a+b)*c)+((d+e)*f));w\n(((a+b)*c)+((d+e)*f));w;z\n(((a+b)*c)+((d+e)*f));(w+z)\n((((a+b)*c)+((d+e)*f))*(w+z))",
+        "output": "ok OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 將此後序式postfix轉中序式infix，並詳述步驟。\n\na b + c * d e + f * + w z + *\n\n使用樹狀圖的解法，依左、右、中後序的順序，將運算符號與字母依序畫入樹狀圖，再依左、中、右中序的順序，讀取運算符號與字母，並加入括號完成數學列式。((((a+b)*c)+((d+e)*f))*(w+z))\n\n              *\n\n            /   \\\n\n         +      +\n\n        / \\     / \\\n\n      *    *   w   z\n\n    / \\   / \\\n\n  +  c  +  f\n\n / \\     / \\\n\na  b   d  e",
+        "output": "ok OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 題目: 111.寫出C++程式碼說明傳值呼叫call by value\n\n程式碼:\n\n#include &lt;iostream&gt;\nusing namespace std;\n\n// 定義一個函數，接受一個整數參數（使用傳值呼叫）\nvoid modifyValue(int x) {\n    x = x + 3; // 在函數內部修改形式參數的值\n    cout &lt;&lt;  modifyValue修改後的值:   &lt;&lt; x &lt;&lt; endl;\n}\n\nint main() {\n    int num = 1; //num的初始值為1\n\n    cout &lt;&lt;  原始值:   &lt;&lt; num &lt;&lt; endl;\n    \n    // 呼叫modifyValue函數，傳遞num的值\n    modifyValue(num);\n\n    cout &lt;&lt;  呼叫modifyValue後的值:   &lt;&lt; num &lt;&lt; endl;\n    \n    return 0;\n}\n\n當我們呼叫modifyValue(num)時，我們實際上將num的值（即1）傳遞給了modifyValue函數。在modifyValue函數內部，我們將形式參數x的值（即1）加3，但這個更改僅影響函數內部的x，不會影響main函數中的num。因此，儘管在函數內部修改了x，但num的值仍然保持不變，最終輸出為：\n\n原始值: 1\nmodifyValue修改後的值: 4\n呼叫modifyValue後的值: 1",
+        "output": "注意回答不要與其他同學重複"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 111. 寫出C++程式碼說明傳值呼叫call by value。\n\n#include &lt;iostream&gt;\n\n#include &lt;stdio.h&gt;\n\nusing namespace std;\n\nint add2(int a, int b) {\n\n    a = a + b;\n\n    return a ;\n\n}\n\nvoid add1(int &amp; a, int b) {\n\n    a = a + b;\n\n}\n\nvoid add(int a, int b) {\n\n    a = a + b;\n\n}\n\nint main() {\n\n    int a = 1;\n\n    int b = 2;\n\n    add( a, b) ;\n\n    printf( %d\\n , a) ; // a=1 (a沒變)\n\n    add1( a, b) ;\n\n    printf( %d\\n , a); // a = 1+2 = 3 (a變了)\n\n    printf( %d , add2( a, b)); a = 3+2 = 5 (a變了)\n\n    return 0;\n\n}\n\n                最終a印出1的原因是此為call by value的程式碼，程式碼只是在add function 中把a和b的值拿去做運算，在main function中並不會改變a的值，若想把a值改變，方法有1.(add1 function)在int a中間加入&amp;符號 2.(add2 function)把void改為int，return a，並印出add(a, b)。",
+        "output": "late..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 得分已達26位同學。",
+        "output": ""
+    }
+]

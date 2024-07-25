@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-09-27 00:10:21",
+        "poster": "11127235",
+        "realname": "許倚菁",
+        "email": "a0966082988@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>有不同的問題會造成記憶體區段錯誤，例如:遞迴函示深度太大，無限遞迴，等....</p>\r\n\r\n<p>遞迴深度太大，函數所產生的stack會超出系統可容納的範圍，造成stack overflow</p>\r\n\r\n<p>無限遞迴，遞迴函數沒有正確的中止條件，可能無法停止遞迴，取用太多stack，也會造成stack overflow，最終造成記憶體區段錯誤</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

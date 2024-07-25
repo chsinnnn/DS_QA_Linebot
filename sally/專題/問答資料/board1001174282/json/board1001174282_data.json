@@ -1,0 +1,32 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: struct Node {     int num;     Node * left;     Node * right; }; // Node  void insertnode ( Node * &amp;root, int N ) {     if ( root == NULL ) {         root = new Node;         root -&gt; num = N;         root -&gt; left = NULL;         root -&gt; right = NULL;     } // if     else if ( N &gt; root -&gt; num )          insertnode ( root -&gt; right, N );     else if ( N &lt; root -&gt; num )         insertnode ( root -&gt; left, N );     } // insertnode  因題目只問如何新增節點，若傳進來值相同的話，會無視。  若N比當前節點的num大時，往右傳  若N比當前節點的num小時，往左傳  若root == NULL ，則new一個節點，並傳值進去。",
+        "output": "Exactly! 精闢講解，讓我種出聖誕樹"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: struct Bst{         int key ;         vector&lt;int&gt; no ;         Bst *left ;         Bst *right ;     };      Bst *Insert_Bst( Bst *node, int num ){     // 把資料放入樹          if( node != NULL ){          // 還未找到最下面，選擇往左還是往右             if( num  &gt; node-&gt;key ){             // 比目前的大，往右邊遞迴                  node-&gt;right = Insert_Bst( node-&gt;right, num  ) ;             }                      else if( num  &lt; node-&gt;key ){             // 比目前的小，往左邊遞迴                 node-&gt;left = Insert_Bst( node-&gt;left, num  ) ;             }                          else{              // 值一樣                  node-&gt;no.push_back( num  ) ;             }         }          else{          // 新增一個節點             node = new Bst ;             node-&gt;key =num  ;             node-&gt;no.push_back(num ) ;             node-&gt;left = NULL;             node-&gt;right = NULL;         }                  return node ;     }  透過遞迴找到要新增的位置，  如果要新增的值比較大就往右遞迴，  如果要新增的值比較小就往左遞迴，  如果一樣就把所需的資料存在同一個點上",
+        "output": "Glad to see an answer different from the previous one."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 穩定排序:如果排序相同資料，在排序後相對位置與排序前相同時。  例如:  排序前：3,5,19,1,3,10  排序後：1,3,3,5,10,19  (因為兩個3, 3的相對位置在排序前與後皆相同)  不穩定排序:如果排序相同之資料，在排序後相對位置與排序前位置補相同。  例如:  排序前：3,5,19,1,3,10  排序後：1,4,3,3,10,19  (因為兩個3, 3的相對位置在排序前與後不相同)  當二元搜尋樹遇到相同的資料時，我們會將它視為同一個節點然後push_back那筆資料的編號到vector，所以由此可知在排序前跟排序後相同資料編號的相對位置是沒有改變的，因此二元搜尋樹為穩定排序。  程式範例:  typedef struct BST{     int key;                                              // search key     vector&lt;int&gt; idx;                               // store no of the same key     struct BST *lchild;                            // left child     struct BST *rchild;                            // right child  } nodeType;     void insertNode(nodeType *&amp;root, int key, int no) {       if (root == NULL) { // 還沒有東西，建立節點         root = new nodeType;         root -&gt; key = key;         root -&gt; idx.push_back(no);         root -&gt; lchild = NULL;         root -&gt; rchild = NULL;     } else {         if (hp &lt; root-&gt;key)  // 比該節點小，往左節點             insertNode(root-&gt;lchild,key, no);         else if(key == root-&gt;key)  // 一樣大，存到同一節點             root -&gt; idx.push_back(no);         else// 比該節點大，往右節點             insertNode(root-&gt;rchild, key, no);     }  }",
+        "output": "看來有人hp沒改成key呦 相同的資料時，我們會將它視為同一個節點  這是作業題目的特殊規定，上述解答是沒問題。  不過，題意是指一般處理同值資料是新增節點且放入右子樹的二元搜尋樹，其中序走訪得到的是否為穩定排序？。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: struct Node {     int num;     Node * left;     Node * right; }; // Node  void insertnode ( Node * &amp;root, int N ) {     if ( root == NULL ) {         root = new Node;         root -&gt; num = N;         root -&gt; left = NULL;         root -&gt; right = NULL;     } // if     else if ( N &gt; root -&gt; num )          insertnode ( root -&gt; right, N );     else if ( N &lt; root -&gt; num )         insertnode ( root -&gt; left, N );     } // insertnode  因題目只問如何新增節點，若傳進來值相同的話，會無視。  若N比當前節點的num大時，往右傳  若N比當前節點的num小時，往左傳  若root == NULL ，則new一個節點，並傳值進去。",
+        "output": "Exactly! 精闢講解，讓我種出聖誕樹"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: struct Bst{         int key ;         vector&lt;int&gt; no ;         Bst *left ;         Bst *right ;     };      Bst *Insert_Bst( Bst *node, int num ){     // 把資料放入樹          if( node != NULL ){          // 還未找到最下面，選擇往左還是往右             if( num  &gt; node-&gt;key ){             // 比目前的大，往右邊遞迴                  node-&gt;right = Insert_Bst( node-&gt;right, num  ) ;             }                      else if( num  &lt; node-&gt;key ){             // 比目前的小，往左邊遞迴                 node-&gt;left = Insert_Bst( node-&gt;left, num  ) ;             }                          else{              // 值一樣                  node-&gt;no.push_back( num  ) ;             }         }          else{          // 新增一個節點             node = new Bst ;             node-&gt;key =num  ;             node-&gt;no.push_back(num ) ;             node-&gt;left = NULL;             node-&gt;right = NULL;         }                  return node ;     }  透過遞迴找到要新增的位置，  如果要新增的值比較大就往右遞迴，  如果要新增的值比較小就往左遞迴，  如果一樣就把所需的資料存在同一個點上",
+        "output": "Glad to see an answer different from the previous one."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 穩定排序:如果排序相同資料，在排序後相對位置與排序前相同時。  例如:  排序前：3,5,19,1,3,10  排序後：1,3,3,5,10,19  (因為兩個3, 3的相對位置在排序前與後皆相同)  不穩定排序:如果排序相同之資料，在排序後相對位置與排序前位置補相同。  例如:  排序前：3,5,19,1,3,10  排序後：1,4,3,3,10,19  (因為兩個3, 3的相對位置在排序前與後不相同)  當二元搜尋樹遇到相同的資料時，我們會將它視為同一個節點然後push_back那筆資料的編號到vector，所以由此可知在排序前跟排序後相同資料編號的相對位置是沒有改變的，因此二元搜尋樹為穩定排序。  程式範例:  typedef struct BST{     int key;                                              // search key     vector&lt;int&gt; idx;                               // store no of the same key     struct BST *lchild;                            // left child     struct BST *rchild;                            // right child  } nodeType;     void insertNode(nodeType *&amp;root, int key, int no) {       if (root == NULL) { // 還沒有東西，建立節點         root = new nodeType;         root -&gt; key = key;         root -&gt; idx.push_back(no);         root -&gt; lchild = NULL;         root -&gt; rchild = NULL;     } else {         if (hp &lt; root-&gt;key)  // 比該節點小，往左節點             insertNode(root-&gt;lchild,key, no);         else if(key == root-&gt;key)  // 一樣大，存到同一節點             root -&gt; idx.push_back(no);         else// 比該節點大，往右節點             insertNode(root-&gt;rchild, key, no);     }  }",
+        "output": "看來有人hp沒改成key呦 相同的資料時，我們會將它視為同一個節點  這是作業題目的特殊規定，上述解答是沒問題。  不過，題意是指一般處理同值資料是新增節點且放入右子樹的二元搜尋樹，其中序走訪得到的是否為穩定排序？。"
+    }
+]

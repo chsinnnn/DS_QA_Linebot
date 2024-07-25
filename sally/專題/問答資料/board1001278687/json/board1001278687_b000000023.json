@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000023.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000023",
+        "site": "1000110001",
+        "pt": "2023-07-25 22:16:58",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答223",
+        "content": "<p>223. 相同搜尋鍵的二筆資料如何存入二元搜尋樹？<br />\r\n把相同的值處存在一個節點中，並替這個節點加上其他屬性，<br />\r\n例如：增加count來記錄相同值的個數，就可以在插入和搜尋節點時處理相同值的情況。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

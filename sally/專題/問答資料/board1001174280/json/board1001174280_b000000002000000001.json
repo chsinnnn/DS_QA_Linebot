@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:03:50",
+        "@type": "post",
+        "@filename": "b000000002000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174280",
+        "node": "000000002000000001",
+        "site": "1000110001",
+        "pt": "2022-12-26 11:55:18",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 219. 舉例區別完全full、完整complete及平衡balanced二元樹的差異。",
+        "content": "<p><strong>2.h層由左至右</strong><u><span style=\"color:#ff0000\"><s>或由右至左</s></span></u><strong>填滿</strong></p>\r\n\r\n<p><span style=\"color:#b22222\">By definition of a </span><a href=\"https://en.wikipedia.org/wiki/Binary_tree#complete\" target=\"_blank\"><span style=\"color:#b22222\">complete binary tree</span></a><span style=\"color:#b22222\">, the nodes at the last level are filled&nbsp;from the left.</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

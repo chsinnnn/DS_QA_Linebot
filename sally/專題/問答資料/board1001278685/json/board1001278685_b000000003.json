@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-07-21 03:28:47",
+        "poster": "11020143",
+        "realname": "吳柏賢",
+        "email": "s25880260@gmail.com",
+        "homepage": null,
+        "subject": "搶答220",
+        "content": "<p>220. 舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。<br />\r\n有一個二元樹如下:</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>\r\n\r\n<p><span style=\"font-size:8px\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \\</span></p>\r\n\r\n<p><span style=\"font-size:8px\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 3</span></p>\r\n\r\n<p><span style=\"font-size:8px\">&nbsp; &nbsp; &nbsp;/&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; \\&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;/&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; \\</span></p>\r\n\r\n<p>4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7&nbsp;<br />\r\n&nbsp;</p>\r\n\r\n<p>1.前序（Preorder）走訪：</p>\r\n\r\n<p>前序走訪是指訪問根、左子樹、右子樹。</p>\r\n\r\n<p>走訪順序：1 -&gt; 2 -&gt; 4&nbsp;-&gt; 5&nbsp;-&gt; 3&nbsp;-&gt; 6 -&gt; 7</p>\r\n\r\n<p>2.中序（Inorder）走訪：</p>\r\n\r\n<p>中序走訪是指訪問左子樹、根、右子樹。</p>\r\n\r\n<p>走訪順序：4 -&gt; 2 -&gt; 5 -&gt; 1 -&gt; 6&nbsp;-&gt; 3 -&gt; 7</p>\r\n\r\n<p>3.後序（Postorder）走訪：</p>\r\n\r\n<p>後序走訪是指訪問左子樹、右子樹、根</p>\r\n\r\n<p>走訪順序：4 -&gt; 5 -&gt; 2 -&gt; 6 -&gt; 7&nbsp;-&gt; 3 -&gt; 1</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

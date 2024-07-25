@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000021.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000021</node>
+  <site>1000110001</site>
+  <pt>2023-07-11 23:06:36</pt>
+  <poster>06005952</poster>
+  <realname>&#x59DA;&#x627F;&#x5FD7;  </realname>
+  <email>ge062851@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;115 </subject>
+  <content>&lt;p&gt;&lt;span style="font-size:14px"&gt;&lt;strong&gt;115. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x5740;&#x547C;&#x53EB;call by address&#x3002;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;call by address&#x662F;&#x628A;&#x8A18;&#x61B6;&#x9AD4;&#x7684;&#x4F4D;&#x7F6E;&#x50B3;&#x7D66;&#x53E6;&#x4E00;&#x500B;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x503C;&#xFF0C;&lt;br /&gt;&#xD;
+&#x6240;&#x4EE5;&#x5C0D;&#x5F62;&#x5F0F;&#x53C3;&#x6578;&#x6240;&#x505A;&#x7684;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#x90FD;&#x6703;&#x5C0D;&#x5BE6;&#x969B;&#x53C3;&#x6578;&#x9032;&#x884C;&#x76F8;&#x540C;&#x7684;&#x4FEE;&#x6539;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void swap(int *, int *);&lt;br /&gt;&#xD;
+int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int a=100, b=300;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;before: &amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;a=&amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;quot;, b=&amp;quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt;endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; swap (&amp;amp;a, &amp;amp;b);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;after: &amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;a=&amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;quot;, b=&amp;quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+void swap(int *x, int *y)&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int temp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; temp = *x;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *x = *y;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *y = temp;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>13</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:51",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174276",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2022-10-30 23:12:47",
+        "poster": "11027243",
+        "realname": "陳冠妤",
+        "email": "hiroto104360@gmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p><span style=\"font-size:14px\">後序式求值：</span></p>\r\n\r\n<ul>\r\n\t<li><strong>遇到數字push進堆疊，遇到運算符號就pop出堆疊最上層兩個數字進行運算再將答案push進堆疊</strong><br />\r\n\t&nbsp;</li>\r\n</ul>\r\n\r\n<ol>\r\n\t<li>將 2、4、6 三個數字依序push進stack中</li>\r\n\t<li>讀到 * 取出stack最上層兩數 4 6 進行運算得到答案為 4*6 = 24 並將 4 6 從stack中移除，再將 24 push回stack</li>\r\n\t<li>讀到 + 取出取出stack最上層兩數 24 2 進行運算得到 24 + 2 = 26 並將 24 2 從stack中移除，再將 26 push回stack</li>\r\n\t<li>將 7、5 兩個數字依序push進stack中</li>\r\n\t<li>讀到 - 取出取出stack最上層兩數 5 7 進行運算得到 7 - 5 = 2 並將 7 5 從stack中移除，再將 2 push回stack</li>\r\n\t<li>讀到 * 取出取出stack最上層兩數 2 26 進行運算得到 2 * 26 = 52 並將 2 26 從stack中移除，再將52push回stack</li>\r\n\t<li>字串全部讀完，stack中剩下一數 52 即為最後的答案</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

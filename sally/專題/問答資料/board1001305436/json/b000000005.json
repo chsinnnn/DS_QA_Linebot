@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:43",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305436",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-11-27 12:10:31",
+        "poster": "11127239",
+        "realname": "陳映銓",
+        "email": "edan0727@gmail.com",
+        "homepage": null,
+        "subject": "204. 舉例說明多重佇列如何模擬，須指出選擇佇列的策略。",
+        "content": "<p>因為是使用多個佇列，所以不知道會有多少個佇列，</p>\r\n\r\n<p>因此可以使用<span style=\"color:#0000ff\">vector裡面放的就是Queue calss的型態</span>，</p>\r\n\r\n<p>這樣就可以實現n個佇列。</p>\r\n\r\n<p>接下來是排隊順序的部分，我的想法是可以依照<span style=\"color:#0000ff\">第一個佇列到第n個佇列</span>的方式，</p>\r\n\r\n<p>看裡面的size，<span style=\"color:#0000ff\">排到人數最少的那一排</span>。</p>\r\n\r\n<p>若size都一樣，就從<span style=\"color:#0000ff\">第一個繼續排下去</span>，直到每一排都排滿為止。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "33",
+        "lang": "1"
+    }
+}

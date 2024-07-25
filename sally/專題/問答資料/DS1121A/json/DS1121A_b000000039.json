@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000039.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000039",
+        "site": "1000110001",
+        "pt": "2022-09-25 16:05:04",
+        "poster": "11027119",
+        "realname": "秦嘉昇",
+        "email": "c20021219@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼",
+        "content": "<p>把大問題處理完一小部分後，繼續做一樣的事，直到抵達base case return 就能得到大問題的結果。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "59",
+        "lang": "1"
+    }
+}

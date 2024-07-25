@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000045.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000045",
+        "site": "1000110001",
+        "pt": "2022-09-26 18:39:34",
+        "poster": "11027106",
+        "realname": "杜姳蓁",
+        "email": "rziostudent616@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>遞迴是將一個問題拆分成好幾個小問題，直到達成中止條件才會停止拆分，而這些小問題都是在解決同一個問題。此方式的優點在於程式會比較精簡。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

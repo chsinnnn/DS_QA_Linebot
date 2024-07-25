@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:46" type="post" filename="b000000006.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278677</board_id>
+  <node>000000006</node>
+  <site>1000110001</site>
+  <pt>2023-07-05 17:02:21</pt>
+  <poster>06005732</poster>
+  <realname>&#x738B;&#x6631;&#x9032;  </realname>
+  <email>louis21501@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x9650;&#x6642;108 </subject>
+  <content>&lt;p&gt;108. &#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5E6B;&#x9663;&#x5217;&#x5BEB;&#x5165;&#x975E;0&#x521D;&#x59CB;&#x503C;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x8A2D;&#x7F6E;&#x8B8A;&#x6578;&#x6642;&#x5728;&#x8B8A;&#x6578;&#x7684;&#x5F8C;&#x65B9;&#x62EC;&#x865F;&#x8F38;&#x5165;&#x9700;&#x8981;&#x7684;&#x503C;&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Code:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int X[100]={};//&#x57FA;&#x790E;&#x8A2D;&#x5B9A;&#x70BA;0&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int Y[100]={1,2,3, ... ,99,100};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6216;&#x662F;&#x5229;&#x7528;&#x8FF4;&#x5708;&#x5B9A;&#x7FA9;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int X[100];&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;for(int i=0;i&amp;lt;100;i++)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;x[i]=i+1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>10</hit>
+  <lang>1</lang>
+</data>

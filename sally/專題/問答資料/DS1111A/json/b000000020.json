@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000020.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000020",
+        "site": "1000110001",
+        "pt": "2023-09-24 22:23:35",
+        "poster": "11127133",
+        "realname": "陳乙菁",
+        "email": "fiona99107@gmail.com",
+        "homepage": null,
+        "subject": "104",
+        "content": "<p>104. 什麼情況下適合使用遞迴？為什麼？</p>\r\n\r\n<p>1.<span style=\"font-family:新細明體,serif\">有明確終止條件</span>2.<span style=\"font-family:新細明體,serif\">要解的問題可以拆分成小規模的子問題</span>3.<span style=\"font-family:新細明體,serif\">且有重複性質時可以使用遞迴。另外，在選擇要使用遞迴或迴圈時，若希望自己的程式碼</span>1.<span style=\"font-family:新細明體,serif\">一目瞭然</span>2.<span style=\"font-family:新細明體,serif\">容易維護</span>3.<span style=\"font-family:新細明體,serif\">不要求效率時適合使用遞迴，因為寫遞迴程式碼時只須寫一份程式碼，有精簡、易懂、一目瞭然的特性，使看程式的時間可以縮短。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

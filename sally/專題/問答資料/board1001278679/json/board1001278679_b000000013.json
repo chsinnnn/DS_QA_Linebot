@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-12 12:59:48",
+        "poster": "06005635",
+        "realname": "黃博元",
+        "email": "maruko1mjw@yahoo.com.tw",
+        "homepage": null,
+        "subject": "搶答118",
+        "content": "<p>題目 :&nbsp;令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。</p>\r\n\r\n<p>回答 :&nbsp;</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p>ptrX = ptrX-&gt;next： 這個表達式的意思是將ptrX指向鏈結串列中的下一個節點。也就是說，將ptrX指標的值更新為指向其下一個節點的位置。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>ptrX-&gt;next = ptrX： 這個表達式的意思是將ptrX節點的下一個指標指向ptrX本身。這會導致鏈結串列中的一個節點指向它自己，形成一個循環，也被稱為&quot;自環&quot;。</p>\r\n\t</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

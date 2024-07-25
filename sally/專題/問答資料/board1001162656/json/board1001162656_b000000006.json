@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:21",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162656",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-01-03 22:21:18",
+        "poster": "11027144",
+        "realname": "陳佳音",
+        "email": "crechessiissii@gmail.com",
+        "homepage": null,
+        "subject": "226. 舉例說明如何為二元搜尋樹刪除節點。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027144/images/00000.png\" style=\"height:125px; width:150px\" /></p>\r\n\r\n<p>進行刪除時會碰到以下幾種情況：</p>\r\n\r\n<p>1. 要刪除的節點沒有子節點，即要刪除的為葉節點，直接將該節點刪除。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027144/images/111111.png\" style=\"height:125px; width:150px\" /></p>\r\n\r\n<p>2. 要刪除的節點有一個子節點，就用子節點補位，也就是刪除該節點且讓該節點的父節點與子節點相接。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027144/images/222222.png\" style=\"height:125px; width:150px\" /></p>\r\n\r\n<p>3.要刪除的節點有兩個子節點，要找比該節點小的最大節點或比該節點大的最小節點，即找左子樹最大值或是右子樹最小值做為取代點，選其中一個和要刪除的節點交換並刪除待刪節點。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027144/images/333333.png\" style=\"height:125px; width:150px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

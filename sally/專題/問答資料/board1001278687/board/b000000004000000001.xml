@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:52" type="post" filename="b000000004000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278687</board_id>
+  <node>000000004000000001</node>
+  <site>1000110001</site>
+  <pt>2023-07-22 15:13:35</pt>
+  <poster>11813</poster>
+  <realname>&#x5433;&#x5B9C;&#x9D3B;  </realname>
+  <email>yhwu@cycu.edu.tw</email>
+  <homepage>https://www.researchgate.net/profile/Yi-Hung-Wu-2  </homepage>
+  <subject>Re: &#x6436;&#x7B54;222  </subject>
+  <content>&lt;p&gt;OK.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#b22222"&gt;Minor issues:&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#b22222"&gt;1. &#x4F55;&#x4E0D;&#x5C07;insertNode&#x8A2D;&#x8A08;&#x70BA;Node&#x7684;&#x6210;&#x54E1;&#x51FD;&#x6578;&#xFF1F;&#x5982;&#x6B64;&#x5373;&#x53EF;&#x6539;&#x7528;root.insertNode(5)&#x547C;&#x53EB;&#xFF0C;&#x6E1B;&#x5C11;&#x53C3;&#x6578;&#x5217;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#b22222"&gt;2. &#x7F3A;&#x5C11;&#x4E00;&#x7A2E;&#x72C0;&#x6CC1;&#xFF1A;(value ==&amp;nbsp;root-&amp;gt;data)&lt;/span&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>1</hit>
+  <lang>1</lang>
+</data>

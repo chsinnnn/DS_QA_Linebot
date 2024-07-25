@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:02" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162648</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2022-10-08 10:39:22</pt>
+  <poster>11027105</poster>
+  <realname>&#x76E7;&#x99FF;&#x63DA;  </realname>
+  <email>jy.lu123456@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;Call by value &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6703;&#x628A;&#x503C;&#x8907;&#x88FD;&#x4E00;&#x4EFD;&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x57F7;&#x884C;&#x50CF;&lt;/span&gt;Call by value &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&lt;/span&gt;function&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6642;&#xFF0C;&#x50B3;&#x9032;&#x4F86;&#x7684;&#x53C3;&#x6578;&#x5728;&#x57F7;&#x884C;&#x5B8C;&lt;/span&gt;function&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6642;&#xFF0C;&#x56DE;&#x5230;&lt;/span&gt;main&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E2D;&#x7684;&#x503C;&#x4E26;&#x4E0D;&#x6703;&#x88AB;&#x6539;&#x8B8A;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;A&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x503C;&#x7D93;&#x904E;&lt;/span&gt;function&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F8C;&#x4E26;&#x672A;&#x6539;&#x8B8A;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;void Call_by_value(int a){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;a = 123;&lt;br /&gt;&#xD;
+}&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Call by reference &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6703;&#x628A;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x50B3;&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8A18;&#x61B6;&#x4F4D;&#x7F6E;&#x4E0A;&#xFF0C;&#x5728;&#x57F7;&#x884C;&lt;/span&gt;Call by value &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&lt;/span&gt;function&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6642;&#xFF0C;&#x50B3;&#x9032;&#x4F86;&#x7684;&#x53C3;&#x6578;&#x5728;&#x57F7;&#x884C;&#x5B8C;&lt;/span&gt;function&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6642;&#xFF0C;&#x56DE;&#x5230;&lt;/span&gt;main&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E2D;&#x7684;&#x503C;&#x5C31;&#x6703;&#x88AB;&#x6539;&#x8B8A;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;A&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x503C;&#x7D93;&#x904E;&lt;/span&gt;function&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6539;&#x8B8A;&#x4E86;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;void Call_by_value(int &amp;amp;a){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;a = 123;&lt;br /&gt;&#xD;
+}&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&lt;img alt="" src="/user/1/1/11027105/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-08%20103826.png" style="height:318px; width:892px" /&gt;&lt;/span&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>38</hit>
+  <lang>1</lang>
+</data>

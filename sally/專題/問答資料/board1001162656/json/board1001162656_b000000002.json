@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:21",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162656",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-12-21 16:20:20",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "227. 列舉二元搜尋樹和堆積heap的三項差異。",
+        "content": "<table cellpadding=\"0\" cellspacing=\"0\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>差異/類型</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>二元搜尋樹</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>堆積</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>結構</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>二元樹</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>完全二元樹</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>值</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>右節點大於根 左節點小於根</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>根大於等於或小於等於子節點（最大堆或最小堆）</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>找尋最大值時間複雜度</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>O(logn)</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>O(1)（最大堆）</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "37",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-07-05 14:56:05",
+        "poster": "06005635",
+        "realname": "黃博元",
+        "email": "maruko1mjw@yahoo.com.tw",
+        "homepage": null,
+        "subject": "搶答110",
+        "content": "<p>問題 : 寫出C++程式碼說明傳值呼叫call by value。</p>\r\n\r\n<p>答案 :&nbsp;</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>// 函式定義，接收一個整數參數<br />\r\nvoid increment(int num) {<br />\r\n&nbsp; &nbsp; num++; // 將參數增加 1<br />\r\n&nbsp; &nbsp; std::cout &lt;&lt; &quot;Inside the function: &quot; &lt;&lt; num &lt;&lt; std::endl;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int number = 5;</p>\r\n\r\n<p>&nbsp; &nbsp; std::cout &lt;&lt; &quot;Before calling the function: &quot; &lt;&lt; number &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp; increment(number); // 傳值呼叫函式<br />\r\n&nbsp; &nbsp; std::cout &lt;&lt; &quot;After calling the function: &quot; &lt;&lt; number &lt;&lt; std::endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>在上述程式碼中，我們定義了一個 increment 函式，該函式接收一個整數參數 num。在 increment 函式內部，我們將 num 的值增加 1，並輸出結果。</p>\r\n\r\n<p>根據傳值呼叫的方式，increment 函式中的參數 num 是 number 的複製。因此，函式內部對 num 的修改不會影響到 number 的值。這也可以在輸出結果中觀察到：呼叫函式後，num的值變為6，而number 的值仍然是 5。</p>\r\n\r\n<p>輸出結果在附件。</p>",
+        "attach": "123.png\tWM64a512d3a39ad.png",
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:18",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305439",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-12-18 11:57:24",
+        "poster": "10823323",
+        "realname": "王　婕",
+        "email": "jessicawang900318@gmail.com",
+        "homepage": null,
+        "subject": "220. 舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。",
+        "content": "<p><strong><span style=\"font-family:新細明體,serif\">前序遍歷（</span>Preorder</strong><strong><span style=\"font-family:新細明體,serif\">）：</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">定義：首先訪問根節點，然後遞歸地遍歷左子樹，最後遞歸地遍歷右子樹。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">範例：假設有一個二元樹，其根節點是</span>A<span style=\"font-family:新細明體,serif\">，左子樹是</span>B<span style=\"font-family:新細明體,serif\">，右子樹是</span>C<span style=\"font-family:新細明體,serif\">，</span><span style=\"font-family:新細明體,serif\">前序遍歷順序是</span>A<span style=\"font-family:新細明體,serif\">、</span>B<span style=\"font-family:新細明體,serif\">、</span>C<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><strong><span style=\"font-family:新細明體,serif\">中序遍歷（</span>Inorder</strong><strong><span style=\"font-family:新細明體,serif\">）：</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">定義：先遞歸地遍歷左子樹，然後訪問根節點，最後遞歸地遍歷右子樹。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">範例：假設有一個二元樹，其根節點是</span>A<span style=\"font-family:新細明體,serif\">，左子樹是</span>B<span style=\"font-family:新細明體,serif\">，右子樹是</span>C<span style=\"font-family:新細明體,serif\">，中序遍歷順序是</span>B<span style=\"font-family:新細明體,serif\">、</span>A<span style=\"font-family:新細明體,serif\">、</span>C<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><strong><span style=\"font-family:新細明體,serif\">後序遍歷（</span>Postorder</strong><strong><span style=\"font-family:新細明體,serif\">）：</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">定義：先遞歸地遍歷左子樹，然後遞歸地遍歷右子樹，最後訪問根節點。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">範例：假設有一個二元樹，其根節點是</span>A<span style=\"font-family:新細明體,serif\">，左子樹是</span>B<span style=\"font-family:新細明體,serif\">，右子樹是</span>C<span style=\"font-family:新細明體,serif\">，後序遍歷順序是</span>B<span style=\"font-family:新細明體,serif\">、</span>C<span style=\"font-family:新細明體,serif\">、</span>A<span style=\"font-family:新細明體,serif\">。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

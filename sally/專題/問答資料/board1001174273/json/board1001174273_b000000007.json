@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2022-10-10 11:47:26",
+        "poster": "11027239",
+        "realname": "邱宥文",
+        "email": "ivan42095108@gmail.com",
+        "homepage": null,
+        "subject": "114. 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。",
+        "content": "<p>可以定義相同名稱之函數，但引數必須不同</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027239/images/Screenshot%202022-10-10%20114214.jpg\" style=\"height:397px; width:379px\" /><img alt=\"\" src=\"/user/1/1/11027239/images/Screenshot%202022-10-10%20114238.jpg\" style=\"height:114px; width:421px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

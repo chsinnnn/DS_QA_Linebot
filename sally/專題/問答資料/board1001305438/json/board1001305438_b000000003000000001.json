@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:06",
+        "@type": "post",
+        "@filename": "b000000003000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305438",
+        "node": "000000003000000001",
+        "site": "1000110001",
+        "pt": "2023-12-26 15:33:30",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 212. 舉例說明何時插入排序的資料搬動次數比希爾排序shell sort多？",
+        "content": "<p><span style=\"color:#0000cd\">雖然沒有實際舉例，可是說明很清楚！完全顛倒次序的資料是Insertion Sort的worst case，而Shell Sort可以提升效率。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

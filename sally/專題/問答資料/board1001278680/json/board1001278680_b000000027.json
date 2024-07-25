@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000027.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000027",
+        "site": "1000110001",
+        "pt": "2023-07-15 23:57:09",
+        "poster": "06005914",
+        "realname": "陳彥中",
+        "email": "jackson89911@gmail.com",
+        "homepage": null,
+        "subject": "搶答122",
+        "content": "<p>122. + * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>A:由右而左找到連續的兩個運算元和一個運算子將他們做運算</p>\r\n\r\n<p>第一步:+(2*4)6*(7-5)</p>\r\n\r\n<p>第二步:((2*4)+6)*(7-5)</p>\r\n\r\n<p>接著會發現無法再繼續做下去了，說明此運算式並非前序式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

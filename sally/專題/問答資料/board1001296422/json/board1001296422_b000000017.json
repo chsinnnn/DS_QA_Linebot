@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-10-30 18:04:32",
+        "poster": "11127133",
+        "realname": "陳乙菁",
+        "email": "fiona99107@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p>126.+ * 2 4 6 * - 7 5<span style=\"font-family:新細明體,serif\">是前序式嗎？為什麼？</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">不是。解題的過程如下:</span></p>\r\n\r\n<p>1. +(2*4)6*(7-5)</p>\r\n\r\n<p>2. +86*2</p>\r\n\r\n<p>3. (8+6)*2</p>\r\n\r\n<p>4. 14*2</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">在步驟四時發現運算式變成中序了，因此此算式不是前序</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:53:54" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296420</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-10-06 16:15:05</pt>
+  <poster>10924148</poster>
+  <realname>&#x9673;&#x9EC3;&#x63DA;  </realname>
+  <email>conary0917@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>118 </subject>
+  <content>&lt;p&gt;&#x984C;&#x76EE;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;118. &#x4EE4;ptrX&#x6307;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x6BD4;&#x8F03;ptrX = ptrX-&amp;gt;next&#x548C;ptrX-&amp;gt;next = ptrX&#x7684;&#x5DEE;&#x7570;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x89E3;&#x8AAA;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5047;&#x8A2D;&#x4E00;&#x4E32;&#x7D50;&#x9663;&#x5217;&#x70BA; ptrX -&amp;gt; 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; NULL&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9996;&#x5148; ptrX = ptrX -&amp;gt; next &#x6703;&#x5C07;&#x9019;&#x500B;&#x8CC7;&#x6599;&#x5217;&#x8B8A;&#x6210;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;ptrX -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; NULL ( &#x82E5;&#x6C92;&#x5176;&#x4ED6;&#x6307;&#x6A19;&#x6307;&#x5411;1&#xFF0C;&#x9664;&#x4E86;&#x6703;&#x627E;&#x4E0D;&#x5230;1&#x5916;&#xFF0C;&#x4E5F;&#x91CB;&#x653E;&#x4E0D;&#x6389;&#x8A18;&#x61B6;&#x9AD4; )&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x518D;&#x4F86; &#x82E5;&#x662F; ptrX -&amp;gt; next = ptrX &#x5247;&#x6703;&#x8B8A;&#x6210;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;ptrX -&amp;gt; 1 - - |&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ^&amp;nbsp; &amp;nbsp; &amp;nbsp; |&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;| - -&amp;nbsp;|&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5373;&#x70BA;ptrX&#x7684;next&#x6307;&#x56DE;ptrX&#x76EE;&#x524D;&#x6307;&#x8457;&#x7684;&#x5730;&#x65B9;( &#x5F8C;&#x9762;&#x7684;2&#x3001;3&#x6703;&#x627E;&#x4E0D;&#x5230; )&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>26</hit>
+  <lang>1</lang>
+</data>

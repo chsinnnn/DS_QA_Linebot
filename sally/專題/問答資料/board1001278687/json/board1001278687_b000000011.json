@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-07-23 13:19:29",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答223",
+        "content": "<p>223. 相同搜尋鍵的二筆資料如何存入二元搜尋樹？</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p>使用額外的資料結構：將相同鍵值的資料存入一個額外的資料結構中，例如列表（List）、鏈表（Linked List）等。在每個節點中，除了存儲搜尋鍵之外，還需存儲一個指向這個資料結構的引用或指標。這樣，每個節點就可以同時存儲多筆資料。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>修改節點結構：在每個節點中，除了搜尋鍵之外，新增一個欄位來存儲多筆資料。這樣，在插入時，當遇到相同的搜尋鍵時，只需將新的資料追加到該節點的欄位中。</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p>使用第一種方法，利用鏈表來存儲相同鍵值的資料</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\n#include &lt;vector&gt;</p>\r\n\r\n<p>class TreeNode {<br />\r\npublic:<br />\r\n&nbsp; &nbsp; int key;<br />\r\n&nbsp; &nbsp; std::vector&lt;std::string&gt; data_list; // 使用vector來存儲相同鍵值的資料<br />\r\n&nbsp; &nbsp; TreeNode* left;<br />\r\n&nbsp; &nbsp; TreeNode* right;</p>\r\n\r\n<p>&nbsp; &nbsp; TreeNode(int val) : key(val), left(nullptr), right(nullptr) {}<br />\r\n};</p>\r\n\r\n<p>class BinarySearchTree {<br />\r\nprivate:<br />\r\n&nbsp; &nbsp; TreeNode* root;</p>\r\n\r\n<p>&nbsp; &nbsp; TreeNode* insertRecursive(TreeNode* node, int key, const std::string&amp; data) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (node == nullptr) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return new TreeNode(key);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; if (key == node-&gt;key) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; node-&gt;data_list.push_back(data); // 將資料添加到資料vector中<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } else if (key &lt; node-&gt;key) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; node-&gt;left = insertRecursive(node-&gt;left, key, data);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } else {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; node-&gt;right = insertRecursive(node-&gt;right, key, data);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return node;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>public:<br />\r\n&nbsp; &nbsp; BinarySearchTree() : root(nullptr) {}</p>\r\n\r\n<p>&nbsp; &nbsp; void insert(int key, const std::string&amp; data) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; root = insertRecursive(root, key, data);<br />\r\n&nbsp; &nbsp; }<br />\r\n};</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; BinarySearchTree bst;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // 新增節點<br />\r\n&nbsp; &nbsp; bst.insert(5, &quot;data1&quot;);<br />\r\n&nbsp; &nbsp; bst.insert(3, &quot;data2&quot;);<br />\r\n&nbsp; &nbsp; bst.insert(7, &quot;data3&quot;);<br />\r\n&nbsp; &nbsp; bst.insert(5, &quot;data4&quot;); // 存入相同鍵值的資料</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>改用C++程式碼，我們定義了TreeNode類別表示二元搜尋樹的節點，並使用std::vector來存儲相同鍵值的資料。當插入新的資料時，如果遇到相同的搜尋鍵，則將新的資料添加到該節點的data_list向量中，這樣就可以在同一個節點下保存多筆資料。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

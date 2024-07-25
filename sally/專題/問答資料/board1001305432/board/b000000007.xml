@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:36" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305432</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2023-10-04 23:33:43</pt>
+  <poster>11127239</poster>
+  <realname>&#x9673;&#x6620;&#x9293;  </realname>
+  <email>edan0727@gmail.com</email>
+  <homepage> </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;# include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void math( int x ){&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; x = x + 1 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;math_x : &amp;quot; &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;quot;\n&amp;quot; ; // &lt;span style="background-color:#afeeee"&gt;&#x5370;&#x51FA;&#x7B54;&#x6848;&#x70BA; 1&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} // math( int x )&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main(){&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int x = 0 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;firse_x : &amp;quot; &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;quot;\n&amp;quot; ; // &lt;span style="background-color:#afeeee"&gt;&#x5370;&#x51FA;&#x7B54;&#x6848;&#x70BA; 0&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; math( x ) ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;final_x : &amp;quot; &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;quot;\n&amp;quot; ; // &lt;span style="background-color:#afeeee"&gt;&#x5370;&#x51FA;&#x7B54;&#x6848;&#x4ECD;&#x70BA; 0&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} // main&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>63</hit>
+  <lang>1</lang>
+</data>

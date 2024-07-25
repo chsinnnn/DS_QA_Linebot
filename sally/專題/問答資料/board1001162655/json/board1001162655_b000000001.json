@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:03",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162655",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-12-18 22:35:03",
+        "poster": "11020105",
+        "realname": "簡健洲",
+        "email": "jay0982854390@gmail.com",
+        "homepage": null,
+        "subject": "216. 舉例解說希爾排序shell sort是否穩定stable。",
+        "content": "<p>假設 現在有一組數字為{4,<span style=\"color:#ff0000\">3</span>,<span style=\"color:#0000ff\">3</span>,8,7}，將gap=2,就會是由[4,<span style=\"color:#0000ff\">3,</span>7]以及[<span style=\"color:#ff0000\">3</span>,8]這兩組內比較，比較完後為{<span style=\"color:#0000ff\">3</span>,<span style=\"color:#ff0000\">3</span>,4,8,7}，之後再以gap=1下去比較，產生出排序為{<span style=\"color:#0000ff\">3</span>,<span style=\"color:#ff0000\">3</span>,4,7,8}由這裡可以看出若是有相同數字在數列中，可能會導致<strong>原先在前的</strong>會排到<strong>原先在後的</strong>後面，這也就是shell sort不穩定的原因。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

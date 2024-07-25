@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2022-10-11 23:31:48",
+        "poster": "11027246",
+        "realname": "林詰詠",
+        "email": "a78419261@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>call by value:當副程式呼叫主程式的值後會把原本在記憶體裡面的值複製之後，將複製後的值傳到另一個記憶體的位置上，而副程式的值就是使用複製後的記憶體位置，因此那個值如何更改都不會改變主程式原本的值。</p>\r\n\r\n<p><br />\r\ncall by reference: 當副程式呼叫主程式的值後會直接取主程式的值的記憶體位置，因此之後的變動都是在同一個記憶體做運算，所以回到主程式後得到的值是會隨著運算變動。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027246/images/%E6%93%B7%E5%8F%96.PNG\" style=\"height:845px; width:1820px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "39",
+        "lang": "1"
+    }
+}

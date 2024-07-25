@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:01:04",
+        "@type": "post",
+        "@filename": "b000000004000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174281",
+        "node": "000000004000000001",
+        "site": "1000110001",
+        "pt": "2022-12-30 11:13:48",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 227. 列舉二元搜尋樹和堆積heap的三項差異。",
+        "content": "<p>大致OK，只有最後一句比較怪：&quot;<em>在搜尋時，heap的Big O 為 O(n)</em>&quot;</p>\r\n\r\n<p><span style=\"color:#b22222\">可能要更精確指出&quot;搜尋&quot;是什麼意思？heap的用途並不是任意搜尋。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

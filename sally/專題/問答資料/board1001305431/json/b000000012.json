@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-09-30 16:47:09",
+        "poster": "11127229",
+        "realname": "廖翊崴",
+        "email": "willy.liao921118@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p># include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std ;</p>\r\n\r\n<p>&nbsp;&nbsp;</p>\r\n\r\n<p>int main( ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; const int size = 5 ;&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; int myArray[size] ;&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; for ( int i = 0 ; i &lt; size ; i++ ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myArray[i] = i + 1 ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; } &nbsp;// for</p>\r\n\r\n<p>&nbsp;&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return 0 ;</p>\r\n\r\n<p>} &nbsp;// main( )</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "26",
+        "lang": "1"
+    }
+}

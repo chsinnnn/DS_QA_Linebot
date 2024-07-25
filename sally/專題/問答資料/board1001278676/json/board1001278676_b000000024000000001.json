@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000024000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000024000000001",
+        "site": "1000110001",
+        "pt": "2023-07-09 11:16:15",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答105.",
+        "content": "<p>(b &lt; 0 &amp;&amp; a &lt; std::numeric_limits&lt;int&gt;::min() - b)</p>\r\n\r\n<p><span style=\"color:#ff0000\">這行有測試過嗎？std::numeric_limits&lt;int&gt;::min()是負整數，b也是負的，二者差值並不會比極限值min()更小吧？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-07-09 23:47:08",
+        "poster": "06005771",
+        "realname": "莊明鴻",
+        "email": "mattsonc204@gmail.com",
+        "homepage": null,
+        "subject": "搶答111",
+        "content": "<p>題目:傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\n#include &lt;vector&gt;<br />\r\n#include &lt;algorithm&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>void findCombination(vector&lt;int&gt;&amp; A, int targetSum, vector&lt;int&gt;&amp; currentCombination, vector&lt;vector&lt;int&gt; &gt;&amp; result, int startIndex) {<br />\r\n&nbsp; &nbsp; if (currentCombination.size() == 3) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (targetSum == 0) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result.push_back(currentCombination);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; return;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; for (int i = startIndex; i &lt; A.size(); i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (i &gt; startIndex &amp;&amp; A[i] == A[i - 1]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue; // 避免重複的組合<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; currentCombination.push_back(A[i]);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; findCombination(A, targetSum - A[i], currentCombination, result, i + 1);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; currentCombination.pop_back();<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>vector&lt;vector&lt;int&gt; &gt; findCombination(vector&lt;int&gt;&amp; A, int S) {<br />\r\n&nbsp; &nbsp; vector&lt;vector&lt;int&gt; &gt; result;<br />\r\n&nbsp; &nbsp; vector&lt;int&gt; currentCombination;</p>\r\n\r\n<p>&nbsp; &nbsp; sort(A.begin(), A.end());<br />\r\n&nbsp; &nbsp; findCombination(A, S, currentCombination, result, 0);</p>\r\n\r\n<p>&nbsp; &nbsp; return result;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int arr[] = {1, 2, 3, 4, 5, 6, 7}; //範例<br />\r\n&nbsp; &nbsp; vector&lt;int&gt; A(arr, arr + sizeof(arr) / sizeof(arr[0]));<br />\r\n&nbsp; &nbsp; int S = 9;&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; vector&lt;vector&lt;int&gt; &gt; combinations = findCombination(A, S);</p>\r\n\r\n<p>&nbsp; &nbsp; // 輸出結果<br />\r\n&nbsp; &nbsp; for (size_t i = 0; i &lt; combinations.size(); i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (size_t j = 0; j &lt; combinations[i].size(); j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; combinations[i][j] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>",
+        "attach": "螢幕擷取畫面 2023-07-09 234509.png\tWM64aad67772387.png",
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

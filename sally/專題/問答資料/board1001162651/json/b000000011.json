@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2022-10-28 19:32:43",
+        "poster": "11027147",
+        "realname": "邱峻彥",
+        "email": "jim97503@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p>+ * 2 4 6 * - 7 5不是前序式</p>\r\n\r\n<p>因為我們可以透過數學歸納法得知前序式加上任何字串就不會為前序式，在此例中可以透過</p>\r\n\r\n<p>&lt;prefix&gt; =&nbsp; &lt;number&gt; | &lt;operator&gt;&lt;prefix&gt;&lt;prefix&gt;</p>\r\n\r\n<p>&lt;operator&gt; = + | - | * | /</p>\r\n\r\n<p>&lt;number&gt; = &lt;dight&gt; |&nbsp;&lt;number&gt;&lt;dight&gt;</p>\r\n\r\n<p>&lt;dight&gt; = 1 | 2 | ... | 9</p>\r\n\r\n<p>程式得出+ * 2 4 6為題目字串的最長前序式，因此在其後加上的* - 7 5此字串就會使得+ * 2 4 6 * - 7 5不會為前序式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "37",
+        "lang": "1"
+    }
+}

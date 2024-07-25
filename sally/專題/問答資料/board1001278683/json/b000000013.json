@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-22 16:05:39",
+        "poster": "10924326",
+        "realname": "吳英睿",
+        "email": "incaray901228@gmail.com",
+        "homepage": null,
+        "subject": "搶答210",
+        "content": "<p>問題：依據程式碼解說選擇排序的時間複雜度</p>\r\n\r\n<p>以下是選擇排序的程式碼</p>\r\n\r\n<p>void selectionSort(int arr[], int n) {<br />\r\n&nbsp; &nbsp; for (int i = 0; i &lt; n - 1; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; int min_idx = i;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (int j = i + 1; j &lt; n; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &lt; arr[min_idx]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min_idx = j;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; // Swap the minimum element with the first unsorted element<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; int temp = arr[i];<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; arr[i] = arr[min_idx];<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; arr[min_idx] = temp;<br />\r\n&nbsp; &nbsp; }<br />\r\n}<br />\r\n&nbsp;</p>\r\n\r\n<p>1.從第一個元素開始，將其視為已排序部分。</p>\r\n\r\n<p>2.在未排序部分中找到最小的元素，並將其與已排序部分的末尾進行交換。</p>\r\n\r\n<p>3.然後將下一個未排序元素視為已排序部分，重複步驟2，直到所有元素都排序完畢。</p>\r\n\r\n<p>選擇排序包含兩個嵌套的循環。外層循環遍歷n-1次（0到n-2，共n-1個元素），內層循環遍歷剩餘未排序部分找到最小值。內層循環每次遍歷剩餘未排序部分，所以其運行次數為n-1、n-2、...，直到1。因此，總的運行次數為(n-1) + (n-2) + ... + 1。</p>\r\n\r\n<p>根據數學公式(n-1) + (n-2) + ... + 1 = n * (n-1) / 2。因此，選擇排序的時間複雜度為O(n^2)。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

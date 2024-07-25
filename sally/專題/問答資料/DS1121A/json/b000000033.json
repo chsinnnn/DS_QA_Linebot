@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000033.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000033",
+        "site": "1000110001",
+        "pt": "2022-09-21 13:42:47",
+        "poster": "11027114",
+        "realname": "徐梓薰",
+        "email": "cchahahsu@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>遞迴指把大問題分解成小問題，使問題精簡化變得容易解決。</p>\r\n\r\n<p>程式碼精簡且容易解釋，但相較不求效率，所以在選擇寫程式的時候要衡量想要精簡還是效率！</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "42",
+        "lang": "1"
+    }
+}

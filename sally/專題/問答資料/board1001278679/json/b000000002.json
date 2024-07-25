@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-07-09 10:07:39",
+        "poster": "06005634",
+        "realname": "郭宸榤",
+        "email": "jyh2guo@gmail.com",
+        "homepage": null,
+        "subject": "搶答116",
+        "content": "<p>116. 將後序式postfix轉前序式prefix，並詳述步驟。<br />\r\na b + c * d e + f * + w z + *</p>\r\n\r\n<p>先將postfix轉為infix</p>\r\n\r\n<p>1.(a+b), c, *,(d+e), f, *, +, (w+z), *</p>\r\n\r\n<p><br />\r\n2.((a+b)*c), ((d+e)*f), +, (w+z), *</p>\r\n\r\n<p>3. (((a+b)*c)+ ((d+e)*f)), (w+z), *</p>\r\n\r\n<p>4. ((((a+b)*c)+ ((d+e)*f))* (w+z))<br />\r\n再將infix轉prefix</p>\r\n\r\n<p>5.*+*+abc*+def+wz</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

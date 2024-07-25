@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-23 17:46:37",
+        "poster": "11127130",
+        "realname": "蔡淳全",
+        "email": "charles930417@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p>題目： + * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>不是，用前序式規則來計算看看就知道了。</p>\r\n\r\n<p>+ * 2 4 6 * - 7 5</p>\r\n\r\n<p>=+ 8 6 * - 7 5</p>\r\n\r\n<p>= 14 * - 7 5</p>\r\n\r\n<p>= 14 * 2</p>\r\n\r\n<p>不符合前序式格式 (前序式格式：&lt;運算子&gt;&lt;運算元&gt;&lt;運算元&gt;)</p>\r\n\r\n<p>所以 + * 2 4 6 * - 7 5 不是前序式</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

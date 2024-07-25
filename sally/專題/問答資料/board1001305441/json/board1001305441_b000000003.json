@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:27",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305441",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-12-13 17:52:55",
+        "poster": "11127207",
+        "realname": "楊竣傑",
+        "email": "jacky115526@gmail.com",
+        "homepage": null,
+        "subject": "223相同搜尋鍵的二筆資料如何存入二元搜尋樹？",
+        "content": "<p>在建立二元搜索樹時存儲具有相同搜索鍵的多個數據項，可以將二元搜尋樹的每個節點設計成允許存儲多個數據項的結構。這可以通過在每個節點上使用一個數組、鏈表或其他數據結構來實現。</p>\r\n\r\n<p>像是用這樣</p>\r\n\r\n<p>typedef struct treeNode {</p>\r\n\r\n<p>string schoolName ;</p>\r\n\r\n<p>string studentName ;</p>\r\n\r\n<p>treeNode *left ;</p>\r\n\r\n<p>treeNode *right ;</p>\r\n\r\n<p>TreeNode() : left(NULL), right(NULL) {}&nbsp;</p>\r\n\r\n<p>} ;</p>\r\n\r\n<p>這樣就可以在二元樹中存入兩筆相同搜尋值的二筆資料了</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

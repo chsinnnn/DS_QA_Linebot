@@ -1,0 +1,67 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用雙向鏈結串列doubly linked list的情境。  答案: 1. 單向鏈結串列要找一個節點的上一個節點的話，必須從頭開始找，但雙向鏈結串列有兩個指標節點，在處理加入或刪除節點動作時，速度比較快。  2.若雙向鏈結串列有任一端的指標連結錯誤或脫落，它可以快速進行修補錯誤或脫落的連結節點。  3.可雙向讀取節點",
+        "output": "評論:讚 評論:讚 評論:讚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明刪除鏈結串列linked list第3個節點。  答案: #include &lt;bits/stdc++.h&gt; using namespace std;  int main() {     list&lt;int&gt; AList;     for(int i=0;i&lt;10;i++)         AList.push_back(i);     cout &lt;&lt;  Before:  ; //印出初始陣列     for(auto i:AList){         cout&lt;&lt;i&lt;&lt;   ;     }     cout&lt;&lt;endl;      list&lt;int&gt;::iterator it = AList.begin(); // 刪除第三個     advance(it,2);     AList.erase(it);      cout &lt;&lt;  After:  ; //印出修改後陣列     for(auto i:AList){         cout&lt;&lt;i&lt;&lt;   ;     } }",
+        "output": "評論:本課程勿使用#include &lt;bits/stdc++.h&gt;  本課程勿使用auto  下次見到這類程式碼將逕自刪除！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: (1) ptrX = ptrX-&gt;next       ptrX會指向ptrX-&gt;next所指向的位置    (2) ptrX-&gt;next = ptrX       ptrX-&gt;next會指向ptrX所指向的位置    *以上兩張圖的紅色箭頭是後來所指向的方向",
+        "output": "評論:手繪插畫佳~讚 評論:讚 評論:讚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳址呼叫call by address。  答案: Call by address(傳址)：簡單來說就是直接呼叫他的記憶體位置進行修改。  將參數以記憶體位置的方式傳到呼叫此參數的function，此function需要有一個指標來指到這個參數的記憶體位置，所以也有人把Call by address稱作Call by value of pointer。 因為主程式和被呼叫的function是使用相同記憶體位置的內容，所以當function的內容更改時，同時也會影響到主程式的數值，傳指標仍然是call by value 只是那個value是指標本身，複製的內容也是指標本身，只不過那個value剛好就是address而已。  -   Call by value(傳值)：參數以數值方式傳遞。  -  Call by reference(傳參考)：因為call by address的內容為指向的位置，所以傳址的指標本身然仍然有記憶體位置，但是傳參考是不會有的。也因此C++的Call by reference本質上不是call by value，這也是和call by address之間的差別。  #############",
+        "output": "評論:讚 評論:👍 評論:Good! 評論:👍🏻"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明刪除鏈結串列linked list第3個節點。  答案: 這題主要是刪掉第三個節點 至於怎麼做呢? 就是先取得第二個節點 再讓第二個節點的next設成第四個節點   #include&lt;bits/stdc++.h&gt; // 這真的是不好的示範 不要亂使用 using namespace std; // 這也是個非常不好的示範 // Node // 利用泛型實作 template &lt;typename T&gt; struct Node {     T num; // 資料     Node * next; };  // 利用泛型實作LinkedList // 殘缺的LinkedList, 不過可以應付這題 template &lt;typename T&gt; class LinkedList {     public:         // 建構子         // 初始化資料         LinkedList() {             head = NULL;             tail = NULL;             size = 0;         }          // 把資料放進去         void push(T data) {             // 如果裡面空空的             if(size==0) {                 head = new Node&lt;T&gt;; // 讓head變成新的Node                 head -&gt; num = data; // 把資料放進去                 head -&gt; next = NULL; // 指定head的next是null                 size++; // 讓size++                 tail = head;// 讓tail變成head                 return; // return 回去 避免進入下一行             }              // 要是不是空的話             tail -&gt; next = new Node&lt;T&gt;; // 先讓tail的下一個變成新的Node             tail = tail -&gt; next; // 把tail 移到下一層             tail -&gt; num = data;// 把資料放進去             tail -&gt; next = NULL; // tail的下一個指定為NULL             size++;// size增加             return;// return 回去 可加可不加         }          // 單純的複製LinkedList         // 這邊是產生一個新的LinkedList 而不是把原本的return回去         // 因為如果是把原本的return回去，會導致資料會被互相引響         LinkedList copy() {             LinkedList toReturn; // 準備回傳回去的資料             Node&lt;T&gt; * temp = head; // 指標 用來走訪整個LinkedList             while(temp!=NULL) {                 toReturn.push(temp-&gt;num); // 透過方法一直去push資料                 temp = temp -&gt; next;             }             return toReturn; // return          }          // 透過 index 去取得資料         T getDataFromIndex(int k) {             Node&lt;T&gt; * temp = getFromIndex(k);             return temp -&gt; num;         }          // 透過index 移除資料 並且將資料回傳          T removeFromIndex(int k) {             Node&lt;T&gt; * temp;             if (k&gt;=size||k&lt;0) return NULL;             if (k!=0) temp = getFromIndex(k-1);             else{                     if(head==NULL) return NULL;                     T n = head -&gt; num;                     head = head -&gt; next;                     size--;                     return n;             }             if(temp==NULL) return NULL;             T n = temp -&gt; next -&gt; num;                          temp -&gt; next = temp -&gt; next -&gt; next;             size--;             return n;         }          // 取得大小          int getSize() {             return size;         }      // 不公開的      private:         Node&lt;T&gt; * head;         Node&lt;T&gt; * tail;         int size;          // 這邊之所以放在private 是為了防止有人透過此方法破壞LinkedList          // 此方法單純就是將第i個Node回傳          Node&lt;T&gt; * getFromIndex(int i) {             if(i==0) return head;             if(i&gt;=size) return NULL;             Node&lt;T&gt; * temp = head;             for(int j = 0 ; j &lt; i ; j++) {                 temp = temp -&gt; next;             }              return temp;         } };  int main(){         LinkedList&lt;int&gt; a;        a.push(12);        a.push(14);        a.push(16);        a.removeFromIndex(2); // 刪除第三個節點 }",
+        "output": "評論:Did you ever check the correctness of your code?  例如：T n = temp -&gt; next -&gt; num; 在這之前不用檢測temp-&gt;next!=NULL嗎？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將後序式postfix轉前序式prefix，並詳述步驟。a b + c * d e + f * + w z + *  答案: a b + c * d e + f * + w z + *  postfix-&gt;infix  (a+b)c*(d+e)f*+(w+z)*  ((a+b)*c)((d+e)*f)+(w+z)*  (((a+b)*c)+ ((d+e)*f))(w+z)*  (((a+b)*c)+ ((d+e)*f))*(w+z)  infix-&gt;prefixt  (((+ab)*c)+ ((+de)*f))*(+wz)  ((*+abc)+(*+def))*(+wz)  (+*+abc*+def)*(+wz)  *+*+abc*+def+wz  a b + c * d e + f * + w z + *  (a+b)c*(d+e)f*+(w+z)*  ((a+b)*c)((d+e)*f)+(w+z)*  (((a+b)*c)+ ((d+e)*f))(w+z)*  (((a+b)*c)+ ((d+e)*f))*(w+z)  (((+ab)*c)+ ((+de)*f))*(+wz)  ((*+abc)+(*+def))*(+wz)  (+*+abc*+def)*(+wz)  *+*+abc*+def+wz",
+        "output": "評論:good! 評論:太會了吧 評論:👍🏻"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: 假設一鏈結串列為下圖所示    在程式中，一個等號是用來將右邊的值存放到左邊的變數，所以ptrX = ptrX-&gt;next簡單來說就是讓ptrX擁有與ptrX-&gt;next相同的形式，讓ptrX指向與ptrX-&gt;next相同的節點，如下圖所示    而ptrX-&gt;next = ptrX就是反過來，讓ptrX-&gt;next指向與ptrX相同的節點，但由於ptrX所指向的節點就是ptrX-&gt;next，所以ptrX-&gt;next最後會指向自己，如下圖所示",
+        "output": "評論:OK 評論:OK. 評論:👍"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明刪除鏈結串列linked list第3個節點。  答案: #include &lt;bits/stdc++.h&gt; using namespace std;  struct Happy{     int num = 0;     Happy*next; };  int main(){     Happy *head = new Happy;     Happy *current = head;     Happy *tail = head;      //五個節點index:01234     int i = 0;      while( i &lt; 5 ){         tail-&gt;num = i;         tail = tail-&gt;next;         i++;     }      current = current-&gt;next; //讓current指向一號(第二個節點)      current-&gt;next = current-&gt;next-&gt;next; // 二號指向的東西給一號指      while(head!=tail){  //印出節點index:0134         cout&lt;&lt;head-&gt;num;         head= head-&gt;next;     } }",
+        "output": "評論:本課程勿使用#include &lt;bits/stdc++.h&gt; 評論:讚 評論:Good! 評論:👍🏻"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: ptrX = ptrX -&gt; next  意思是將ptrX的箭頭方向指向ptrX -&gt; next指向的方向  ptrX -&gt; next = ptrX  意思是將ptrX -&gt; next的箭頭方向指向ptrX指向的方向",
+        "output": "評論:好棒! 評論:讚 評論:圖畫得蠻清楚的 讚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明刪除鏈結串列linked list第3個節點。  答案: #include &lt;bits/stdc++.h&gt; using namespace std;  int main() {     list&lt;int&gt; intlist;     for(int i=0;i&lt;5;i++)         intlist.push_back(i);     for(auto i:intlist) //印出初始陣列         cout&lt;&lt;i&lt;&lt;   ;     cout&lt;&lt;endl;      intlist.erase(next(intlist.begin(),2));      for(auto i:intlist) //印出修改後陣列         cout&lt;&lt;i&lt;&lt;   ; }  輸出  0 1 2 3 4  0 1 3 4",
+        "output": "評論:好棒 評論:本課程勿使用#include &lt;bits/stdc++.h&gt;  本課程勿使用auto  下次見到這類程式碼將逕自刪除！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: 比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異   \t \t\t \t\t\t  \t\t\t \t\t\tptrX = ptrX -&gt; next \t\t\t \t\t \t\t \t\t\t \t\t\t說明 \t\t\t \t\t\t \t\t\t將ptrX -&gt; next此項動作給予ptrX \t\t\t \t\t \t\t \t\t\t \t\t\t圖片 \t\t\t \t\t\t \t\t\t \t\t\t \t\t \t    \t \t\t \t\t\t  \t\t\t \t\t\tptrX -&gt; next = ptrX \t\t\t \t\t \t\t \t\t\t \t\t\t說明 \t\t\t \t\t\t \t\t\t將ptrX此項動作給予ptrX -&gt; next \t\t\t \t\t \t\t \t\t\t \t\t\t圖片 \t\t\t \t\t\t \t\t\t \t\t\t \t\t \t   結論:  由於等號運算順序由右至左，因此ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX產生差異。",
+        "output": "評論:棒！ 評論:nice 評論:讚!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: ",
+        "output": "評論:👍"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: - 比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。  因為等號的運算優先順序是 由右至左 ，所以右邊做完的值會複製給左邊的變數，因此(看下面說明)  (1) ptrX = ptrX-&gt;next  ptrX-&gt;next所指向的位置會複製給ptrX  #註:紅字為運算完的結果  (2) ptrX-&gt;next = ptrX  ptrX所指向的位置會複製給ptrX-&gt;next  #註:紅字為運算完的結果  結論: 左式指向第二個節點；右式指向原本的位置(第一個節點)，兩者不同。  (假設ptrX指向第一個節點時)",
+        "output": "評論:Good. 評論:👍🏻 評論:說明得很清楚,讚! 評論:Nice. 評論:讚讚"
+    }
+]

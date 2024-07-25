@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:02",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162648",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-10-07 16:25:40",
+        "poster": "11027119",
+        "realname": "秦嘉昇",
+        "email": "c20021219@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>下圖呼叫functionA和functionB並輸出檢查</p>\r\n\r\n<p>functionA和functionB的內容都是改變testnum的值</p>\r\n\r\n<p>可以發現當先呼叫functionA 時testnum輸出的值仍為初始化的0，但當呼叫function時testnum的值卻改變了</p>\r\n\r\n<p>而兩者( functionA和functionB )的差別只在於符號&amp;</p>\r\n\r\n<p>這個符號造就兩個看似相同的函式，實際上卻是以不同型式傳遞</p>\r\n\r\n<p>沒有&amp;表示傳遞testnum的值，也就是函式裡的testnum僅是複製傳遞進來的值而已，這也是call by value的意義</p>\r\n\r\n<p>有&amp;代表的是傳遞testnum的位址，也就是從頭到尾testnum都是指同一個，這就是call by reference和call by value的差別</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027119/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20155558.png\" style=\"height:591px; width:1177px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "70",
+        "lang": "1"
+    }
+}

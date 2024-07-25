@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000020.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000020",
+        "site": "1000110001",
+        "pt": "2023-07-07 17:25:48",
+        "poster": "06005914",
+        "realname": "陳彥中",
+        "email": "jackson89911@gmail.com",
+        "homepage": null,
+        "subject": "搶答104",
+        "content": "<p>104. 什麼情況下適合使用遞迴？為什麼？*</p>\r\n\r\n<p>A:一個問題如果可以拆成規模較小，並且性質與原本的問題一模一樣時，就適合用遞迴方式處理。例如:連續加法、連續乘法或階乘的題目，就跟遞迴中的重複性概念相同，因此適合用遞迴來解。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

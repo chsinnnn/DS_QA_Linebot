@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-10-11 16:49:13",
+        "poster": "11127137",
+        "realname": "黃乙家",
+        "email": "u810025@gmail.com",
+        "homepage": "https://ja-errorpro.cf",
+        "subject": "124",
+        "content": "<p><strong><span style=\"font-size:16px\">合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。</span></strong></p>\r\n\r\n<p>對應LeetCode題目：<a href=\"https://leetcode.com/problems/generate-parentheses/\">https://leetcode.com/problems/generate-parentheses/</a></p>\r\n\r\n<p>以及ZJ a229：<a href=\"https://zerojudge.tw/ShowProblem?problemid=a229\">https://zerojudge.tw/ShowProblem?problemid=a229</a></p>\r\n\r\n<p>枚舉所有形式，設N代表要幾組括號</p>\r\n\r\n<p>有三種可能</p>\r\n\r\n<p>左右括號數相同, 找到一種合法形式</p>\r\n\r\n<p>左括號數等於N，只能再放右括號</p>\r\n\r\n<p>左括號數小於右括號數(或左右括號順序不對), 不合法，遞迴結束</p>\r\n\r\n<p>否則可以選左括號或右括號</p>\r\n\r\n<p>依據上述可得知遞迴關係式</p>\r\n\r\n<p><img alt=\"C_{n+1} = C_0C_n+C_1C_{n-1}+\\dots+C_nC_0, C_0 = 1\" src=\"https://latex.codecogs.com/gif.latex?C_%7Bn&amp;plus;1%7D%20%3D%20C_0C_n&amp;plus;C_1C_%7Bn-1%7D&amp;plus;%5Cdots&amp;plus;C_nC_0%2C%20C_0%20%3D%201\" /></p>\r\n\r\n<p>此為卡塔蘭數(Catalan number)的原始定義</p>\r\n\r\n<p>一般式為</p>\r\n\r\n<p><img alt=\"C_n = \\frac{(2n)!}{n!(n+1)!}\" src=\"https://latex.codecogs.com/gif.latex?C_n%20%3D%20%5Cfrac%7B%282n%29%21%7D%7Bn%21%28n&amp;plus;1%29%21%7D\" /></p>\r\n\r\n<p><img alt=\"N=3\" src=\"https://latex.codecogs.com/gif.latex?N%3D3\" />直接帶入，答案就是&nbsp;5 種</p>\r\n\r\n<p><strong><span style=\"font-size:14px\">另一種看法：</span></strong></p>\r\n\r\n<p><strong>動態規劃(Dynamic Programming)</strong></p>\r\n\r\n<p>定義狀態：dp[L][R] 為取 L&nbsp;個左括號與 R&nbsp;個右括號有幾種形式</p>\r\n\r\n<p>轉移式：&nbsp;當&nbsp;<img alt=\"L \\ge R\" src=\"https://latex.codecogs.com/gif.latex?L%20%5Cge%20R\" />，可以取左括號跟右括號，dp[L][R] = dp[L-1][R] + dp[L][R-1]</p>\r\n\r\n<p>基底狀態：dp[L][0] 答案一定為 1</p>\r\n\r\n<p>最後的答案就是dp[N][N]</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>void solve() {</p>\r\n\r\n<p>&nbsp; int n;</p>\r\n\r\n<p>&nbsp; cin &gt;&gt; n;</p>\r\n\r\n<p>&nbsp; vector&lt;vector&lt;int&gt;&gt; dp(n + 1, vector&lt;int&gt;(n + 1, 0));</p>\r\n\r\n<p>&nbsp; for (int l = 1; l &lt;= n; l++)</p>\r\n\r\n<p>&nbsp; &nbsp; dp[l][0] = 1;</p>\r\n\r\n<p>&nbsp; for (int l = 1; l &lt;= n; l++) {</p>\r\n\r\n<p>&nbsp; &nbsp; for (int r = 1; r &lt;= l; r++) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; dp[l][r] = dp[l - 1][r] + dp[l][r - 1];</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; }</p>\r\n\r\n<p>&nbsp; cout &lt;&lt; dp[n][n] &lt;&lt; endl;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>```</p>\r\n\r\n<p>輸入3, 結果也會是5</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "70",
+        "lang": "1"
+    }
+}

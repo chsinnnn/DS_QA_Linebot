@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000007000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000007000000003",
+        "site": "1000110001",
+        "pt": "2023-09-19 03:24:50",
+        "poster": "11127137",
+        "realname": "黃乙家",
+        "email": "u810025@gmail.com",
+        "homepage": "https://ja-errorpro.cf",
+        "subject": "Re: 105",
+        "content": "<p>如果真的有需要用到超過long long上限的數，就需要用陣列實作大數運算了，通常在C++裡做大數運算會包成結構然後定義運算子，這樣之後在寫其他算法會更方便。</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>struct BigInteger {</p>\r\n\r\n<p>&nbsp; string num; // 這裡使用字串存大數</p>\r\n\r\n<p>&nbsp; int sign;</p>\r\n\r\n<p>&nbsp; int size() { return num.size(); }</p>\r\n\r\n<p>&nbsp; BigInteger() {}</p>\r\n\r\n<p>&nbsp; BigInteger RemoveLeadingZero(int nsign) { // 去掉前導零</p>\r\n\r\n<p>&nbsp; &nbsp; sign = nsign;</p>\r\n\r\n<p>&nbsp; &nbsp; for (int i = num.size() - 1; i &gt; 0 &amp;&amp; num[i] == &#39;0&#39;; i--) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; num.pop_back();</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; if (num.size() == 1 &amp;&amp; num[0] == &#39;0&#39;) { // 0 的符號為正</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; sign = 1;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return *this;</p>\r\n\r\n<p>&nbsp; }</p>\r\n\r\n<p>&nbsp; BigInteger operator=(string s) {</p>\r\n\r\n<p>&nbsp; &nbsp; num = (s[0] == &#39;-&#39; ? s.substr(1) : s);</p>\r\n\r\n<p>&nbsp; &nbsp; reverse(num.begin(), num.end());</p>\r\n\r\n<p>&nbsp; &nbsp; (*this).RemoveLeadingZero(s[0] == &#39;-&#39; ? -1 : 1);</p>\r\n\r\n<p>&nbsp; &nbsp; return *this;</p>\r\n\r\n<p>&nbsp; }</p>\r\n\r\n<p>&nbsp; BigInteger(string s) { *this = s; }</p>\r\n\r\n<p>&nbsp; BigInteger(long long x) { (*this) = to_string(x); }</p>\r\n\r\n<p>&nbsp; BigInteger operator=(long long x) {</p>\r\n\r\n<p>&nbsp; &nbsp; (*this) = to_string(x);</p>\r\n\r\n<p>&nbsp; &nbsp; return *this;</p>\r\n\r\n<p>&nbsp; }</p>\r\n\r\n<p>};</p>\r\n\r\n<p>```</p>\r\n\r\n<p>在加法運算上，直接模擬直式加法就好</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>&nbsp; BigInteger operator+(BigInteger y) { // 模擬直式加法</p>\r\n\r\n<p>&nbsp; &nbsp; if (sign != y.sign) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; return (*this) - (-y);</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; BigInteger ans;</p>\r\n\r\n<p>&nbsp; &nbsp; ans.sign = sign;</p>\r\n\r\n<p>&nbsp; &nbsp; for (int i = 0, carry = 0; i &lt; size() || i &lt; y.size() || carry; i++) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; if (i &lt; size()) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; carry += num[i] - &#39;0&#39;;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; if (i &lt; y.size()) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; carry += y.num[i] - &#39;0&#39;;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; ans.num += (carry % 10 + &#39;0&#39;);</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; carry /= 10;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return ans.RemoveLeadingZero(sign);</p>\r\n\r\n<p>&nbsp; }</p>\r\n\r\n<p>```</p>\r\n\r\n<p>減、乘、除、模(取餘)的運算都類似。</p>\r\n\r\n<p>但直式乘法是按位計算，複雜度 <img alt=\"O(N^2)\" src=\"https://latex.codecogs.com/gif.latex?O%28N%5E2%29\" />，N代表位數，若N超過一萬，則要考慮改用Karatsuba算法或FFT(快速傅立葉轉換)</p>\r\n\r\n<p>以Divide &amp; Conquer 理念來提升速度，否則這些天文數字就算存得下也算不完</p>\r\n\r\n<p>而除法可選擇用二分法或牛頓法逼近商與餘數來提升速度</p>\r\n\r\n<p>除了用字串存大數以外，另一作法是將很多位數壓到同一個數字，</p>\r\n\r\n<p>這樣做的好處是可以再存多一點位數，而且可以寫得更精簡。</p>\r\n\r\n<p>附檔為使用字串，實作直式加法、直式減法、直式乘法、直式除法、Karatsuba算法的大數運算程式碼</p>",
+        "attach": "105_11127137.cpp\tWM6508a3fc9becd.cpp",
+        "rcount": null,
+        "rank": null,
+        "hit": "5",
+        "lang": "1"
+    }
+}

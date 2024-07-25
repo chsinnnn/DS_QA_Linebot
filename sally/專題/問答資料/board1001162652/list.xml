@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:29" type="board" filename="list.xml" id="1001162652">
+  <board_id>1001162652</board_id>
+  <bname>a:5:{s:4:"Big5";s:35:"&#x9650;&#x6642;&#x6436;&#x7B54; 201-205(20240719_copy)";s:6:"GB2312";s:25:"QA 201-205(20240719_copy)";s:2:"en";s:25:"QA 201-205(20240719_copy)";s:6:"EUC-JP";s:15:"(20240719_copy)";s:11:"user_define";s:15:"(20240719_copy)";}</bname>
+  <manager>11813</manager>
+  <title>&#x64C7;&#x4E00;&#x56DE;&#x7B54;&#xFF0C;&#x9EDE;&#x8B9A;10&#x6B21;&#x6216;3&#x4EBA;&#x7559;&#x597D;&#x8A55;&#x53EF;&#x5F97;QA&#x8A55;&#x5206;&#xFF01;&#xD;
+&#x6A19;&#x984C;&#x8A3B;&#x660E;&#x984C;&#x865F;&#x53CA;&#x984C;&#x76EE;&#xFF0C;&#x5167;&#x5BB9;&#x4E0D;&#x5B9C;&#x5C07;&#x76F4;&#x63A5;&#x522A;&#x6587;&#xFF01;&#xD;
+201. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;waiting time&#x3002;&#xD;
+202. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x4F47;&#x5217;&#x9577;&#x5EA6;queue length&#x3002;&#xD;
+203. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x96D9;&#x91CD;&#x4F47;&#x5217;&#x5982;&#x4F55;&#x6A21;&#x64EC;&#xFF0C;&#x9808;&#x6307;&#x51FA;&#x9078;&#x64C7;&#x4F47;&#x5217;&#x7684;&#x7B56;&#x7565;&#x3002;&#xD;
+204. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x591A;&#x91CD;&#x4F47;&#x5217;&#x5982;&#x4F55;&#x6A21;&#x64EC;&#xFF0C;&#x9808;&#x6307;&#x51FA;&#x9078;&#x64C7;&#x4F47;&#x5217;&#x7684;&#x7B56;&#x7565;&#x3002;&#xD;
+205. &#x63D0;&#x51FA;&#x4E8C;&#x7A2E;&#x9078;&#x64C7;&#x4F47;&#x5217;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x4E26;&#x8209;&#x4F8B;&#x6BD4;&#x8F03;&#x4E8C;&#x8005;&#x3002;</title>
+  <owner_id>10131385</owner_id>
+  <open_time>2022-11-15 01:00:00</open_time>
+  <close_time>2022-11-29 23:59:00</close_time>
+  <share_time>2022-12-20 00:00:00</share_time>
+  <switch></switch>
+  <with_attach>no</with_attach>
+  <vpost>0</vpost>
+  <default_order>pt</default_order>
+  <post_times>0</post_times>
+  <extras></extras>
+  <poster>student,assistant,teacher</poster>
+  <after_finish></after_finish>
+  <fb_comment>N</fb_comment>
+  <board>
+    <node id="000000001" type="F" data="b000000001.xml"/>
+    <node id="000000001000000001" type="F" data="b000000001000000001.xml"/>
+    <node id="000000002" type="F" data="b000000002.xml"/>
+    <node id="000000002000000001" type="F" data="b000000002000000001.xml"/>
+    <node id="000000003" type="F" data="b000000003.xml"/>
+    <node id="000000003000000001" type="F" data="b000000003000000001.xml"/>
+    <node id="000000004" type="F" data="b000000004.xml"/>
+    <node id="000000004000000001" type="F" data="b000000004000000001.xml"/>
+    <node id="000000005" type="F" data="b000000005.xml"/>
+    <node id="000000005000000001" type="F" data="b000000005000000001.xml"/>
+    <node id="000000006" type="F" data="b000000006.xml"/>
+    <node id="000000006000000001" type="F" data="b000000006000000001.xml"/>
+    <node id="000000007" type="F" data="b000000007.xml"/>
+  </board>
+  <quint/>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000020.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000020",
+        "site": "1000110001",
+        "pt": "2023-07-11 21:40:26",
+        "poster": "10827244",
+        "realname": "劉懷之",
+        "email": "s10827244@cycu.edu.tw",
+        "homepage": null,
+        "subject": "搶答113",
+        "content": "<p>逐一處理後序式的元素</p>\r\n\r\n<p>&quot;a&quot; : stack：[a]</p>\r\n\r\n<p>&quot;b&quot; : stack：[a, b]</p>\r\n\r\n<p>&quot;+&quot; : POP &#39;b&#39; 和 &#39;a&#39;，結合成infix表達式&#39;(a + b)&#39;，然後推回stack中 ; stack：[(a + b)]</p>\r\n\r\n<p>&quot;c&quot; : stack : [(a + b), c]</p>\r\n\r\n<p>&quot;*&quot; : POP c&#39; 和 &#39;(a + b)&#39;，結合成infix表達式(a + b) * c&nbsp;<br />\r\n然後推回stack中 ; stack：[ ( (a + b) * c ) ]</p>\r\n\r\n<p>&quot;d&quot; : stack : [((a + b) * c), d]</p>\r\n\r\n<p>&quot;e&quot; : stack : [((a + b) * c), d, e]</p>\r\n\r\n<p>&quot;+&quot; : POP &#39;e&#39; 和 &#39;d&#39;，結合成infix表達式 &#39;(d + e)&#39;<br />\r\n然後推回stack中 ; stack：[((a + b) * c), (d + e)]</p>\r\n\r\n<p>&quot;f&quot; &quot; stack：[((a + b) * c), (d + e), f]</p>\r\n\r\n<p>&quot;*&quot; : POP &#39;(d + e)&#39; 和 &#39;f&#39;，結合成infix表達式 &#39;( (d + e ) * f )&#39;<br />\r\n然後推回stack中。stack：[((a + b) * c), ((d + e)* f)]</p>\r\n\r\n<p>&quot;+&quot; : POP &#39;((a + b) * c)&#39; 和 &#39;((d + e)* f)&#39;，結合成infix表達式&nbsp;<br />\r\n&#39;( ((a + b) * c) + ((d + e) * f) )&#39;，然後推回stack中<br />\r\nstack：[( ((a + b) * c) + ((d + e) * f) )]</p>\r\n\r\n<p>&quot;w&quot; : stack : [( ((a + b) * c) + ((d + e) * f) ), w]</p>\r\n\r\n<p>&quot;z&quot; : stack : [( ((a + b) * c) + ((d + e) * f) ), w, z]</p>\r\n\r\n<p>&quot;+&quot; : POP &#39;z&#39; 和 &#39;w&#39;，結合成infix表達式 &#39;(w + z)&#39;<br />\r\n然後推回stack中 ; stack：[( ((a + b) * c) + ((d + e) * f) ), (w+z)]</p>\r\n\r\n<p>&quot;*&quot; : POP &#39;(w + z)&#39; 和 &#39;( ((a + b) * c) + ((d + e) * f) )&#39;，並將它們結合成子表達式<br />\r\n&#39;( ((a + b) * c) + ((d + e) * f) ) * (w+z) &#39;，然後將子表達式推回stack中。<br />\r\nstack：[{ ((a + b) * c) + ((d + e) * f) } * ( w + z ) ]</p>\r\n\r\n<p>最後從stack中彈出最終的中序式表達式：( ((a + b) * c) + ((d + e) * f) ) * ( w + z )</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:55",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174282",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-12-21 21:44:41",
+        "poster": "11027242",
+        "realname": "張子元",
+        "email": "wen031291@gmail.com",
+        "homepage": null,
+        "subject": "222. 撰寫程式碼指出如何為二元搜尋樹新增節點。",
+        "content": "<p>struct Node {<br />\r\n&nbsp;&nbsp; &nbsp;int num;<br />\r\n&nbsp;&nbsp; &nbsp;Node * left;<br />\r\n&nbsp;&nbsp; &nbsp;Node * right;<br />\r\n}; // Node</p>\r\n\r\n<p>void insertnode ( Node * &amp;root, int N ) {<br />\r\n&nbsp;&nbsp; &nbsp;if ( root == NULL ) {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;root = new Node;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;root -&gt; num = N;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;root -&gt; left = NULL;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;root -&gt; right = NULL;<br />\r\n&nbsp;&nbsp; &nbsp;} // if<br />\r\n&nbsp;&nbsp; &nbsp;else if ( N &gt; root -&gt; num )&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;insertnode ( root -&gt; right, N );<br />\r\n&nbsp;&nbsp; &nbsp;else if ( N &lt; root -&gt; num )<br />\r\n&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;insertnode ( root -&gt; left, N );&nbsp;&nbsp; &nbsp;<br />\r\n} // insertnode</p>\r\n\r\n<p>因題目只問如何新增節點，若傳進來值相同的話，會無視。</p>\r\n\r\n<p>若N比當前節點的num大時，往右傳</p>\r\n\r\n<p>若N比當前節點的num小時，往左傳</p>\r\n\r\n<p>若root == NULL ，則new一個節點，並傳值進去。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "54",
+        "lang": "1"
+    }
+}

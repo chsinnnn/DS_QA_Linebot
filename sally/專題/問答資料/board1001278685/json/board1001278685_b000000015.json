@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-07-23 14:20:25",
+        "poster": "06005771",
+        "realname": "莊明鴻",
+        "email": "mattsonc204@gmail.com",
+        "homepage": null,
+        "subject": "搶答220",
+        "content": "<p>假設有一個二元樹，其節點結構如下：</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; /&nbsp; &nbsp; &nbsp;\\</p>\r\n\r\n<p>&nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; &nbsp; 3</p>\r\n\r\n<p>&nbsp; /&nbsp; &nbsp;\\&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\\</p>\r\n\r\n<p>4&nbsp; &nbsp; &nbsp; &nbsp;5&nbsp; &nbsp; &nbsp; &nbsp; 6</p>\r\n\r\n<ol>\r\n\t<li>前序遍歷（preorder traversal）： 前序遍歷先訪問根節點，然後按照左子樹和右子樹的順序遞迴訪問子樹。</li>\r\n</ol>\r\n\r\n<p>遍歷順序：1 -&gt; 2 -&gt; 4 -&gt; 5 -&gt; 3 -&gt; 6</p>\r\n\r\n<ol start=\"2\">\r\n\t<li>中序遍歷（inorder traversal）： 中序遍歷先遞迴訪問左子樹，然後訪問根節點，最後遞迴訪問右子樹。</li>\r\n</ol>\r\n\r\n<p>遍歷順序：4 -&gt; 2 -&gt; 5 -&gt; 1 -&gt; 3 -&gt; 6</p>\r\n\r\n<ol start=\"3\">\r\n\t<li>後序遍歷（postorder traversal）： 後序遍歷先遞迴訪問左子樹，然後遞迴訪問右子樹，最後訪問根節點。</li>\r\n</ol>\r\n\r\n<p>遍歷順序：4 -&gt; 5 -&gt; 2 -&gt; 6 -&gt; 3 -&gt; 1</p>\r\n\r\n<p>這三種不同的遍歷順序會得到不同的輸出結果，因為它們在訪問節點的順序上有所區別。在實際應用中，選擇使用哪種遍歷順序取決於特定的需求。例如：</p>\r\n\r\n<ul>\r\n\t<li>前序遍歷通常用於複製一個二元樹。</li>\r\n\t<li>中序遍歷在二元樹是「二元搜索樹」（Binary Search Tree）時，可以按照節點的值大小順序獲得一個有序的序列。</li>\r\n\t<li>後序遍歷常用於釋放二元樹的內存。</li>\r\n</ul>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

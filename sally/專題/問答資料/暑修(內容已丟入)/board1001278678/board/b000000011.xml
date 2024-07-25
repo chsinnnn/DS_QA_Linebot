@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000011.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000011</node>
+  <site>1000110001</site>
+  <pt>2023-07-09 23:47:08</pt>
+  <poster>06005771</poster>
+  <realname>&#x838A;&#x660E;&#x9D3B;  </realname>
+  <email>mattsonc204@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;111 </subject>
+  <content>&lt;p&gt;&#x984C;&#x76EE;:&#x50B3;&#x5165;&#x9663;&#x5217;A&#x548C;&#x6574;&#x6578;S&#xFF0C;&#x5BEB;&#x51FA;C++&#x51FD;&#x6578;&#x5F9E;A&#x627E;&#x4E09;&#x500B;&#x6578;&#x5B57;&#x52A0;&#x7E3D;&#x70BA;S&#x7684;&#x7D44;&#x5408;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;vector&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;algorithm&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void findCombination(vector&amp;lt;int&amp;gt;&amp;amp; A, int targetSum, vector&amp;lt;int&amp;gt;&amp;amp; currentCombination, vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt;&amp;amp; result, int startIndex) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (currentCombination.size() == 3) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (targetSum == 0) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; result.push_back(currentCombination);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for (int i = startIndex; i &amp;lt; A.size(); i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (i &amp;gt; startIndex &amp;amp;&amp;amp; A[i] == A[i - 1]) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; continue; // &#x907F;&#x514D;&#x91CD;&#x8907;&#x7684;&#x7D44;&#x5408;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; currentCombination.push_back(A[i]);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; findCombination(A, targetSum - A[i], currentCombination, result, i + 1);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; currentCombination.pop_back();&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; findCombination(vector&amp;lt;int&amp;gt;&amp;amp; A, int S) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; result;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; vector&amp;lt;int&amp;gt; currentCombination;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; sort(A.begin(), A.end());&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; findCombination(A, S, currentCombination, result, 0);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return result;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr[] = {1, 2, 3, 4, 5, 6, 7}; //&#x7BC4;&#x4F8B;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; vector&amp;lt;int&amp;gt; A(arr, arr + sizeof(arr) / sizeof(arr[0]));&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int S = 9;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; combinations = findCombination(A, S);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x8F38;&#x51FA;&#x7D50;&#x679C;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (size_t i = 0; i &amp;lt; combinations.size(); i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (size_t j = 0; j &amp;lt; combinations[i].size(); j++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; combinations[i][j] &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach>&#x87A2;&#x5E55;&#x64F7;&#x53D6;&#x756B;&#x9762; 2023-07-09 234509.png	WM64aad67772387.png</attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>16</hit>
+  <lang>1</lang>
+</data>

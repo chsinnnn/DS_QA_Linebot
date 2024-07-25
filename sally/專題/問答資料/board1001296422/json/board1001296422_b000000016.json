@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-10-30 01:25:45",
+        "poster": "11127128",
+        "realname": "蔡維庭",
+        "email": "timtesai@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p><strong><span style=\"font-size:18px\">126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？</span></strong></p>\r\n\r\n<p>A: 不是，這不是合法的前序式。</p>\r\n\r\n<p>以下嘗試將此式作為前序式轉回中序式。</p>\r\n\r\n<ul>\r\n\t<li>+ 2 * 4 6 * - 7 5</li>\r\n\t<li>( 2 * 4 + 6 ) * - 7 5</li>\r\n\t<li>( 2 * 4 + 6 ) <u><strong>*</strong></u> ( 7 - 5 )</li>\r\n</ul>\r\n\r\n<p>這個乘號尚未移動位置，然而未處理之部分已不符前序式之規範（&lt;operator&gt; &lt;operand&gt; &lt;operand&gt;），因此原式並不是前序式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

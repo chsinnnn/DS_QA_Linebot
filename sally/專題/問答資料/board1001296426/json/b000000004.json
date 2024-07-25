@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:11",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296426",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-12-18 23:34:18",
+        "poster": "11127133",
+        "realname": "陳乙菁",
+        "email": "fiona99107@gmail.com",
+        "homepage": null,
+        "subject": "220",
+        "content": "<p>220. 舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127133/images/index.jpg\" style=\"height:720px; width:593px\" /></p>\r\n\r\n<p>preorder:1,2,4,5,3,6,7</p>\r\n\r\n<p>inorder:4,2,5,1,6,3,7</p>\r\n\r\n<p>postorder:4,5,2,6,7,3,1</p>\r\n\r\n<p>前序規則為:中、左、右，故會先印出父節點，再往左子樹走，接著再去右子樹。</p>\r\n\r\n<p>中序規則為:左、中、右，故會先往左子樹走，再印出父節點，接著再去右子樹。</p>\r\n\r\n<p>後序規則為:左、右、中，故會先遍歷左子樹，再遍歷右子樹，最後印出父節點。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

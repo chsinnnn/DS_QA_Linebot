@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:46" type="post" filename="b000000026.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278677</board_id>
+  <node>000000026</node>
+  <site>1000110001</site>
+  <pt>2023-07-09 21:05:47</pt>
+  <poster>06004870</poster>
+  <realname>&#x66FE;&#x6D5A;&#x6977;  </realname>
+  <email>kenneth61215@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;108 </subject>
+  <content>&lt;p&gt;108.&amp;nbsp;&#x5982;&#x4F55;&#x5E6B;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x975E;&#x96F6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1F;&#x9808;&#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7B54;: &#x9019;&#x88E1;&#x4F7F;&#x7528;rand&#x4F86;&#x96A8;&#x6A5F;&#x8CE6;&#x4E88;&#x9663;&#x5217;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x5176;&#x4E2D; array size&amp;nbsp;&#x548C; random &#x751F;&#x6210;&#x4E82;&#x6578;&#x7684;&#x7BC4;&#x570D;&#x7686;&#x53EF;&#x4F9D;&#x9700;&#x6C42;&#x8ABF;&#x6574;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;cstdlib&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;ctime&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::srand(std::time(nullptr));&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; const int size = 10;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arr[size];&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x70BA;&#x9663;&#x5217;&#x5143;&#x7D20;&#x8A2D;&#x5B9A;&#x96A8;&#x6A5F;&#x503C;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; size; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[i] = std::rand() % 100; // &#x751F;&#x6210;0&#x5230;99&#x4E4B;&#x9593;&#x7684;&#x96A8;&#x6A5F;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x8F38;&#x51FA;&#x9663;&#x5217;&#x5143;&#x7D20;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; size; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; std::endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>6</hit>
+  <lang>1</lang>
+</data>

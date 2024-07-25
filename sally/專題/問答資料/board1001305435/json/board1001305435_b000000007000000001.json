@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000007000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000007000000001",
+        "site": "1000110001",
+        "pt": "2023-11-28 22:31:43",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 129. 寫C++程式碼設計遞迴函數產生3個數字不同且加總等於M的所有3位數，M是輸入的整數，百位數必須非零。",
+        "content": "<p><span style=\"color:#b22222\">&quot;避免相同數字&quot; 有嗎？</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

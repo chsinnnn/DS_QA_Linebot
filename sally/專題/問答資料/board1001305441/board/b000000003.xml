@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:51:27" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305441</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-12-13 17:52:55</pt>
+  <poster>11127207</poster>
+  <realname>&#x694A;&#x7AE3;&#x5091;  </realname>
+  <email>jacky115526@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>223&#x76F8;&#x540C;&#x641C;&#x5C0B;&#x9375;&#x7684;&#x4E8C;&#x7B46;&#x8CC7;&#x6599;&#x5982;&#x4F55;&#x5B58;&#x5165;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#xFF1F; </subject>
+  <content>&lt;p&gt;&#x5728;&#x5EFA;&#x7ACB;&#x4E8C;&#x5143;&#x641C;&#x7D22;&#x6A39;&#x6642;&#x5B58;&#x5132;&#x5177;&#x6709;&#x76F8;&#x540C;&#x641C;&#x7D22;&#x9375;&#x7684;&#x591A;&#x500B;&#x6578;&#x64DA;&#x9805;&#xFF0C;&#x53EF;&#x4EE5;&#x5C07;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x7684;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x8A2D;&#x8A08;&#x6210;&#x5141;&#x8A31;&#x5B58;&#x5132;&#x591A;&#x500B;&#x6578;&#x64DA;&#x9805;&#x7684;&#x7D50;&#x69CB;&#x3002;&#x9019;&#x53EF;&#x4EE5;&#x901A;&#x904E;&#x5728;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x4E0A;&#x4F7F;&#x7528;&#x4E00;&#x500B;&#x6578;&#x7D44;&#x3001;&#x93C8;&#x8868;&#x6216;&#x5176;&#x4ED6;&#x6578;&#x64DA;&#x7D50;&#x69CB;&#x4F86;&#x5BE6;&#x73FE;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x50CF;&#x662F;&#x7528;&#x9019;&#x6A23;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;typedef struct treeNode {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;string schoolName ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;string studentName ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;treeNode *left ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;treeNode *right ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;TreeNode() : left(NULL), right(NULL) {}&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x6A23;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4E8C;&#x5143;&#x6A39;&#x4E2D;&#x5B58;&#x5165;&#x5169;&#x7B46;&#x76F8;&#x540C;&#x641C;&#x5C0B;&#x503C;&#x7684;&#x4E8C;&#x7B46;&#x8CC7;&#x6599;&#x4E86;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>10</hit>
+  <lang>1</lang>
+</data>

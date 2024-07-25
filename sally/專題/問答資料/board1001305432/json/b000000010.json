@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:36",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305432",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-10-10 17:52:02",
+        "poster": "11127213",
+        "realname": "凌鼎軒",
+        "email": "benson920925@gmail.com",
+        "homepage": null,
+        "subject": "114. 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。",
+        "content": "<p>C++的 overloading 是指相同函數名稱但參數型態或數量不同。回傳的資料型態不會影響到Overloading，相同與否沒有關係。由於編譯器根據參數內容來辨別該用哪個函數，參數內容一定要不同，不然會發生ambiguity(編譯器不知道該用哪個函數)。<br />\r\n<br />\r\n#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>class Addition {<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp; &nbsp; public:<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; int add(int a, int b) {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 如果傳入的兩個數是整數型態，編譯器會使用此函數</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &quot;Using int-type addition&quot; &lt;&lt;&nbsp;endl;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return a + b;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; double add(double a, double b) {&nbsp;&nbsp;// 若傳入的兩數是雙倍浮點數型態，會使用此函數。</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &quot;Using double-type addition&quot; &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return a + b;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n};</p>\r\n\r\n<p>int main()&nbsp; {</p>\r\n\r\n<p>&nbsp; &nbsp; Addition obj;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; obj.add(12, 13) &lt;&lt; &quot;\\n&quot;;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 傳入整數<br />\r\n&nbsp; &nbsp; cout &lt;&lt; obj.add( 1.01, 3.0212 ) &lt;&lt; &quot;\\n&quot;;&nbsp; &nbsp; // 傳入雙倍浮點數</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

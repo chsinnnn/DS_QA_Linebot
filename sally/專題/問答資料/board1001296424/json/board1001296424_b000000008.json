@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:30",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296424",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-12-06 23:51:50",
+        "poster": "11127122",
+        "realname": "胡沛頎",
+        "email": "123456789paige26@gmail.com",
+        "homepage": null,
+        "subject": "208",
+        "content": "<p><span style=\"font-size:14px\"><strong>208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。</strong></span></p>\r\n\r\n<p><span style=\"font-size:12px\">初始條件: A為須排序的物件串列，n為串列中元素的數量</span></p>\r\n\r\n<p><span style=\"font-size:12px\">void&nbsp; swap( int a, int b )&nbsp; {</span></p>\r\n\r\n<p><span style=\"font-size:12px\">&nbsp; temp = A[a] ;</span></p>\r\n\r\n<p><span style=\"font-size:12px\">&nbsp; A[a] = A[b]</span></p>\r\n\r\n<p><span style=\"font-size:12px\">&nbsp; A[b] = temp ;</span></p>\r\n\r\n<p><span style=\"font-size:12px\">} // swap()</span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\"><span style=\"font-family:Calibri\">for &nbsp;( &nbsp;int &nbsp;pass &nbsp;= &nbsp;1 &nbsp;; &nbsp;pass &nbsp;&lt; &nbsp;n &nbsp;; &nbsp;pass++ &nbsp;) &nbsp;{</span></span></span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\">&nbsp; &nbsp; &nbsp; &nbsp;<span style=\"font-family:Calibri\">for &nbsp;( &nbsp;int &nbsp;index &nbsp;= &nbsp;0 &nbsp;; &nbsp;index &nbsp;&lt; &nbsp;n &nbsp;- &nbsp;pass &nbsp;; &nbsp;index++ &nbsp;) &nbsp;{ &nbsp;</span></span></span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"font-family:Calibri\">If &nbsp;( &nbsp;A[index] &nbsp;&gt; &nbsp;A[index+1] &nbsp;)&nbsp; // 此為關鍵指令</span></span></span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"font-family:Calibri\">swap(&nbsp; index,&nbsp; index+1&nbsp;) ;</span></span></span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"font-family:Calibri\">} &nbsp;// &nbsp;for() </span></span></span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\"><span style=\"font-family:Calibri\">} &nbsp;// &nbsp;for()</span></span></span></p>\r\n\r\n<p><span style=\"font-size:10.5000pt\"><span style=\"font-family:新細明體\">&nbsp;&nbsp;<span style=\"font-family:Calibri\">If &nbsp;( &nbsp;A[index] &nbsp;&gt; &nbsp;A[index+1] &nbsp;)&nbsp; 為關鍵指令，不用&gt;=而用&gt;，會使得若兩者值相等的時候，並不會進行交換，故原來的順序會被保存。而此時氣泡排序法為stable。</span></span></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000001000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000001000000001",
+        "site": "1000110001",
+        "pt": "2022-09-29 22:31:29",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 114. 寫出C++程式碼說明同類別兩個方法如何實現多載overloading",
+        "content": "<p><span style=\"color:#0000cd\">蠻完整的範例及解說，給參考是不錯的習慣。</span></p>\r\n\r\n<p>private data member是作業#2必須做到的，private method則可有可無。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

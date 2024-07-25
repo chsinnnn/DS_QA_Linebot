@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:46",
+        "@type": "post",
+        "@filename": "b000000034.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278677",
+        "node": "000000034",
+        "site": "1000110001",
+        "pt": "2023-07-09 23:56:49",
+        "poster": "06005760",
+        "realname": "林奕宏",
+        "email": "guai900726@gmail.com",
+        "homepage": null,
+        "subject": "搶答106",
+        "content": "<p>遞迴呼叫在某些情況下可能導致記憶體區段錯誤 主要原因是由於堆疊溢位或無限遞迴</p>\r\n\r\n<p>另一個情況是無限遞迴 就是遞迴函數沒有終止條件或終止條件設置不正確&nbsp; 遞迴函數會不斷地呼叫自己 造成無限遞迴</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

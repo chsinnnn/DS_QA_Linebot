@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000020.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000020",
+        "site": "1000110001",
+        "pt": "2023-11-01 00:51:46",
+        "poster": "10920151",
+        "realname": "張又晟",
+        "email": "callmejerry3000@gmail.com",
+        "homepage": null,
+        "subject": "128",
+        "content": "<p>Q：後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。</p>\r\n\r\n<p>A：</p>\r\n\r\n<p>由左而右讀取算式，若遇數字則push入堆疊，若運算子則從堆疊頂端取出兩個數字出來，並做此運算子的運算，結果再push入堆疊，此算式最後的結果會在最後一個運算子的運算後得到。</p>\r\n\r\n<p>1.push(2)，push(4)，push(6)</p>\r\n\r\n<p>2.取出6，取出4，計算4*6=24</p>\r\n\r\n<p>3.push(24)</p>\r\n\r\n<p>4.取出24，取出2，計算2+24=26</p>\r\n\r\n<p>5.push(26)</p>\r\n\r\n<p>6.push(7)，push(5)</p>\r\n\r\n<p>7.取出5，取出7，計算7-5=2</p>\r\n\r\n<p>8.push(2)</p>\r\n\r\n<p>9.取出2，取出26，計算26*2=52</p>\r\n\r\n<p>10.此時以讀取至最後一個運算子，堆疊內也沒有東西，所以計算結果是52</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

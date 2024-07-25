@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-25 13:20:44",
+        "poster": "11127245",
+        "realname": "薛宏毓",
+        "email": "a0975809594@gmail.com",
+        "homepage": null,
+        "subject": "129. 寫C++程式碼設計遞迴函數產生3個數字不同且加總等於M的所有3位數，M是輸入的整數，百位數必須非零。",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>bool isThreeDigits(int number) {<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; return (99 &lt; number &amp;&amp; number &lt; 1000); // 100~999<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n} // end isThreeDigits()</p>\r\n\r\n<p>bool findCombinations(int M, int curSum, int curNumber, int quantity) {<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; if (quantity == 3) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (curSum == M) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; endl &lt;&lt; &quot;M = &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } else {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return false;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } // end if-else<br />\r\n&nbsp; &nbsp; } // end if<br />\r\n&nbsp; &nbsp;&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; // 避免相同數字的同時，縮小迴圈需要跑的範圍<br />\r\n&nbsp; &nbsp; for (int n = curNumber+1 ; n &lt; M ; n++) { &nbsp;// curNumber只會越來越大，+1是為了不重複<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (findCombinations(M, curSum+n, n, quantity+1)) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; n;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (quantity != 0) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &quot; + &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return true;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } // end if<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } // end if<br />\r\n&nbsp; &nbsp; } // end for<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; return false;<br />\r\n} // end findCombinations()</p>\r\n\r\n<p>int main(void) {<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;*********************************************&quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl &lt;&lt; &quot;*以下為尋找3個數字不同且加總等於M的所有3位數*&quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl &lt;&lt; &quot;*********************************************&quot;;<br />\r\n&nbsp; &nbsp; int M;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl &lt;&lt; &quot;請輸入M: &quot;;<br />\r\n&nbsp; &nbsp; cin &gt;&gt; M;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; if (isThreeDigits(M)) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; findCombinations(M, 0, 0, 0);<br />\r\n&nbsp; &nbsp; } else {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; endl &lt;&lt; &quot;is not three digits&quot;;<br />\r\n&nbsp; &nbsp; } // end if-else<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n} // end main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:06",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305438",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-11-29 17:11:24",
+        "poster": "11127229",
+        "realname": "廖翊崴",
+        "email": "willy.liao921118@gmail.com",
+        "homepage": null,
+        "subject": "211. 舉例比較氣泡排序和選擇排序的資料交換swap次數，何者較多？",
+        "content": "<p>#include &lt;stdio.h&gt;</p>\r\n\r\n<p>void bubbleSort( int arr[], int n, int *swapCount) {<br />\r\n&nbsp; &nbsp; for (int i = 0; i &lt; n - 1; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; n - i - 1; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &gt; arr[j + 1]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int temp = arr[j];<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arr[j] = arr[j + 1];<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arr[j + 1] = temp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (*swapCount)++;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>void selectionSort(int arr[], int n, int *swapCount) {<br />\r\n&nbsp; &nbsp; for (int i = 0; i &lt; n - 1; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; int min_idx = i;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (int j = i + 1; j &lt; n; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &lt; arr[min_idx]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min_idx = j;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; int temp = arr[i];<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; arr[i] = arr[min_idx];<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; arr[min_idx] = temp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; (*swapCount)++;<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int arr[] = {64, 34, 25, 12, 22, 11, 90};<br />\r\n&nbsp; &nbsp; int n = sizeof(arr) / sizeof(arr[0]);<br />\r\n&nbsp; &nbsp; int swapCount = 0;</p>\r\n\r\n<p>&nbsp; &nbsp; bubbleSort(arr, n, &amp;swapCount);</p>\r\n\r\n<p>&nbsp; &nbsp; printf(&quot;氣泡排序交換次數: %d\\n&quot;, swapCount);</p>\r\n\r\n<p>&nbsp; &nbsp; int arr2[] = {64, 34, 25, 12, 22, 11, 90};<br />\r\n&nbsp; &nbsp; swapCount = 0;<br />\r\n&nbsp; &nbsp; selectionSort(arr2, n, &amp;swapCount);</p>\r\n\r\n<p>&nbsp; &nbsp; printf(&quot;選擇排序交換次數: %d\\n&quot;, swapCount);</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<ul>\r\n\t<li>一般情況下，氣泡排序的交換次數較選擇排序多，這是因為氣泡排序在每次比較後都有可能進行交換，而選擇排序每輪只進行一次交換。</li>\r\n</ul>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:01:04",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174281",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-01-02 17:25:20",
+        "poster": "11027211",
+        "realname": "林芷？",
+        "email": "lin0966770819@gmail.com",
+        "homepage": null,
+        "subject": "230.比較以陣列或指標實作堆積結構的優缺點。",
+        "content": "<p>陣列：</p>\r\n\r\n<p>優：存取資料使用時間比陣列有效率 也不用多記錄指標 節省記憶體空間</p>\r\n\r\n<p>缺：新增跟刪除較麻煩</p>\r\n\r\n<p>指標：</p>\r\n\r\n<p>優：新增跟刪除較方便，只需要動到新增或是刪除的相關節點就好</p>\r\n\r\n<p>缺：不能像陣列一樣直接用index找到元素</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "28",
+        "lang": "1"
+    }
+}

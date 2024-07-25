@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:02" type="post" filename="b000000006.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162648</board_id>
+  <node>000000006</node>
+  <site>1000110001</site>
+  <pt>2022-10-07 16:25:40</pt>
+  <poster>11027119</poster>
+  <realname>&#x79E6;&#x5609;&#x6607;  </realname>
+  <email>c20021219@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;&#x4E0B;&#x5716;&#x547C;&#x53EB;functionA&#x548C;functionB&#x4E26;&#x8F38;&#x51FA;&#x6AA2;&#x67E5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;functionA&#x548C;functionB&#x7684;&#x5167;&#x5BB9;&#x90FD;&#x662F;&#x6539;&#x8B8A;testnum&#x7684;&#x503C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53EF;&#x4EE5;&#x767C;&#x73FE;&#x7576;&#x5148;&#x547C;&#x53EB;functionA &#x6642;testnum&#x8F38;&#x51FA;&#x7684;&#x503C;&#x4ECD;&#x70BA;&#x521D;&#x59CB;&#x5316;&#x7684;0&#xFF0C;&#x4F46;&#x7576;&#x547C;&#x53EB;function&#x6642;testnum&#x7684;&#x503C;&#x537B;&#x6539;&#x8B8A;&#x4E86;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x800C;&#x5169;&#x8005;( functionA&#x548C;functionB )&#x7684;&#x5DEE;&#x5225;&#x53EA;&#x5728;&#x65BC;&#x7B26;&#x865F;&amp;amp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x500B;&#x7B26;&#x865F;&#x9020;&#x5C31;&#x5169;&#x500B;&#x770B;&#x4F3C;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x5F0F;&#xFF0C;&#x5BE6;&#x969B;&#x4E0A;&#x537B;&#x662F;&#x4EE5;&#x4E0D;&#x540C;&#x578B;&#x5F0F;&#x50B3;&#x905E;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6C92;&#x6709;&amp;amp;&#x8868;&#x793A;&#x50B3;&#x905E;testnum&#x7684;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x51FD;&#x5F0F;&#x88E1;&#x7684;testnum&#x50C5;&#x662F;&#x8907;&#x88FD;&#x50B3;&#x905E;&#x9032;&#x4F86;&#x7684;&#x503C;&#x800C;&#x5DF2;&#xFF0C;&#x9019;&#x4E5F;&#x662F;call by value&#x7684;&#x610F;&#x7FA9;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6709;&amp;amp;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x50B3;&#x905E;testnum&#x7684;&#x4F4D;&#x5740;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F9E;&#x982D;&#x5230;&#x5C3E;testnum&#x90FD;&#x662F;&#x6307;&#x540C;&#x4E00;&#x500B;&#xFF0C;&#x9019;&#x5C31;&#x662F;call by reference&#x548C;call by value&#x7684;&#x5DEE;&#x5225;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027119/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20155558.png" style="height:591px; width:1177px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>70</hit>
+  <lang>1</lang>
+</data>

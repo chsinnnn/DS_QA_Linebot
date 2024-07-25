@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:51",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174276",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-10-26 00:03:35",
+        "poster": "11027209",
+        "realname": "巫年巨",
+        "email": "yy911123@gmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11027209/images/IMG_1772.jpg\" style=\"height:300px; width:400px\" /></p>\r\n\r\n<p>堆疊放運算元當讀到運算子時pop兩個運算元與運算子做計算然後算出來的result push回去堆疊，最終的result即為答案。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

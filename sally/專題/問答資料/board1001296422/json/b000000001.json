@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-10-18 17:30:46",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "126",
+        "content": "<p><span style=\"font-size:18px\">+ * 2 4 6 * - 7 5是前序式嗎？為什麼？</span></p>\r\n\r\n<p>這個並非為前序式。<br />\r\n<br />\r\n以下為計算步驟：<br />\r\n<br />\r\n一開始要先看 * 2 4 為 (2*4) （因為要從第一個數字開始去推）<br />\r\n再來前面還有 + 因此再加 6 為 (2*4+6) （因為又遇到數字，所以再往 * 2 4 的前面看）<br />\r\n此時前面已經沒有operator，但後面卻還有東西，因此此計算式非前序式，若希望做到乘上後面的(7-5)，則應該將*移至最前面。<br />\r\n例如：* + * 2 4 6 - 7 5 則結果為&nbsp;(((2*4)+6)*(7-5)) = 28</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "54",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:26" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278683</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2023-07-21 19:38:05</pt>
+  <poster>10927250</poster>
+  <realname>&#x53E4;&#x5BB8;&#x5B87;  </realname>
+  <email>ku0905264478@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;209 </subject>
+  <content>&lt;p&gt;&#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x78BC;&#x6307;&#x51FA;&#x5F71;&#x97FF;&#x63D2;&#x5165;&#x6392;&#x5E8F;insertion sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;def insertion_sort(arr):&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;for i in range(1, len(arr)):&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;key = arr[i]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; j = i - 1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style="color:#ff0000"&gt;while j &amp;gt;= 0 and key &amp;lt; arr[j]: &lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#ff0000"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;arr[j + 1] = arr[j]&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#ff0000"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; j -= 1&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#ff0000"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; #&#x9019;&#x500B;&#x6307;&#x4EE4;&#x78BA;&#x4FDD;&#x4E86;&#x63D2;&#x5165;&#x904E;&#x7A0B;&#x4E2D;&#x7684;&#x7A69;&#x5B9A;&#x6027;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j + 1] = key&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x500B;while&#x5FAA;&#x74B0;&#x6703;&#x5C07;&#x6240;&#x6709;&#x6BD4;&#x7576;&#x524D;&#x5143;&#x7D20;key&#x5927;&#xFF08;&#x5C0D;&#x65BC;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#xFF09;&#x7684;&#x5143;&#x7D20;&#x5F80;&#x5F8C;&#x79FB;&#x52D5;&#x4E00;&#x4F4D;&#xFF0C;&#x4EE5;&#x4FBF;&#x70BA;key&#x627E;&#x5230;&#x6B63;&#x78BA;&#x7684;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x3002;&#x800C;&#x4E14;&#x7576;key&#x548C;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x9032;&#x884C;&#x6BD4;&#x8F03;&#x6642;&#xFF0C;&#x4F7F;&#x7528;key &amp;lt; arr[j]&#x7684;&#x689D;&#x4EF6;&#x3002;&#x9019;&#x6A23;&#x5728;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x5C07;key&#x63D2;&#x5165;&#x5230;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x7684;&#x524D;&#x9762;&#xFF0C;&#x78BA;&#x4FDD;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5C0D;&#x9806;&#x5E8F;&#x4FDD;&#x6301;&#x4E0D;&#x8B8A;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56E0;&#x6B64;&#xFF0C;&#x9019;&#x500B;while&#x5FAA;&#x74B0;&#x662F;&#x5F71;&#x97FF;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x662F;&#x5426;&#x7A69;&#x5B9A;&#x7684;&#x95DC;&#x9375;&#x6307;&#x4EE4;&#x3002;&#x4FDD;&#x6301;&#x9019;&#x500B;while&#x5FAA;&#x74B0;&#x7684;&#x7A69;&#x5B9A;&#x6027;&#x5C07;&#x78BA;&#x4FDD;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x7A69;&#x5B9A;&#x6027;&#xFF0C;&#x5373;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5C0D;&#x9806;&#x5E8F;&#x5728;&#x6392;&#x5E8F;&#x524D;&#x5F8C;&#x4FDD;&#x6301;&#x4E0D;&#x8B8A;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>11</hit>
+  <lang>1</lang>
+</data>

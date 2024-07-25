@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-10-04 20:18:13",
+        "poster": "11127119",
+        "realname": "朱豐宇",
+        "email": "rickychuchu0923@gmail.com",
+        "homepage": null,
+        "subject": "106",
+        "content": "<p>可能是因為無窮迴圈，在遞迴函數中，必須有一個終止條件，以防止無限遞迴。如果忘記定義終止條件或者終止條件錯誤，那麼遞迴可能永遠不會停止，導致無限迴圈，最終耗盡記憶體資源</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

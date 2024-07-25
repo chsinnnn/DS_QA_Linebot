@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:39" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278676</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2023-07-05 16:49:49</pt>
+  <poster>06005732</poster>
+  <realname>&#x738B;&#x6631;&#x9032;  </realname>
+  <email>louis21501@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;105 </subject>
+  <content>&lt;p&gt;integer overflow&#x662F;&#x6307;&#x5728;&#x8A08;&#x7B97;&#x6216;&#x5B58;&#x53D6;&#x904E;&#x7A0B;&#x4E2D;&#xFF0C;&#x5B58;&#x5728;&#x8B8A;&#x6578;&#x7576;&#x4E2D;&#x7684;&#x6578;&#x503C;&#x8D85;&#x51FA;&#x8A72;&#x8B8A;&#x6578;&#x5132;&#x5B58;&#x7684;&#x4E0A;&#x9650;&#x6240;&#x767C;&#x751F;&#x7684;&#x60C5;&#x6CC1;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6211;&#x5011;&#x5E38;&#x7528;&#x7684;int&#x70BA; int32_t&#xFF0C;range&#x5728;-2147483648~2147483647&#x4E4B;&#x9593;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x907F;&#x514D;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x9078;&#x64C7;&#x8A2D;&#x7F6E;&#x4E0A;&#x4E0B;&#x9650;(&#x4EE5;&#x4E0B;&#x70BA;&#x7BC4;&#x4F8B;):&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;define max 2147483646,min -2147483647&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bool test(int x,int y)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;if(x+y&amp;gt;max || x+y&amp;lt;min || x-y&amp;lt;min)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return flase;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;else&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return true;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int&amp;nbsp;a = 2147483646; // max-1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int b = 3;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;bool ans= test(a,b);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>23</hit>
+  <lang>1</lang>
+</data>

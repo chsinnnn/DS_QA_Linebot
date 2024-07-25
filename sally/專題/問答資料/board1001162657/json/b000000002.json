@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:10",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162657",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-12-21 15:53:44",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "225. 已排序資料如何建立一棵平衡的二元搜尋樹？",
+        "content": "<p>假設有一個已排序的數組&nbsp;[1, 2, 3, 4, 5, 6, 7]，可以使用以下步驟來建立平衡二元搜尋樹：</p>\r\n\r\n<ol>\r\n\t<li>找中間節點&nbsp;4，並將其作為樹的根節點。</li>\r\n\t<li>找到第一個節點&nbsp;1到&nbsp;第三個節點3的中間節點2，並將其插入到根節點的左子節點。</li>\r\n\t<li>找到第五個節點&nbsp;5到&nbsp;第七個節點7的中間節點6，並將其插入到根節點的右子節點。</li>\r\n</ol>\r\n\r\n<p>將上述規則套用到剩下節點（遞迴），將會得到平衡二元搜尋樹如下圖</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027154/images/118BA1AC-3B95-44D5-B176-A13C428F741B.jpeg\" style=\"height:261px; width:198px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

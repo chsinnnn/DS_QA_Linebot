@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:19" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162651</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-10-21 12:38:14</pt>
+  <poster>11027154</poster>
+  <realname>&#x5ED6;&#x6893;&#x9038;  </realname>
+  <email>joe3727@gmail.com</email>
+  <homepage> </homepage>
+  <subject>129. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8A2D;&#x8A08;&#x905E;&#x8FF4;&#x51FD;&#x6578;&#x7522;&#x751F;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&#x4E14;&#x52A0;&#x7E3D;&#x7B49;&#x65BC;M&#x7684;&#x6240;&#x6709;3&#x4F4D;&#x6578;&#xFF0C;M&#x662F;&#x8F38;&#x5165;&#x7684;&#x6574;&#x6578;&#xFF0C;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;&#x96F6;&#x3002; </subject>
+  <content>&lt;p&gt;&#x4EE5;M = 311 &#x70BA;&#x4F8B;&amp;nbsp;&lt;img alt="" src="/user/1/1/11027154/images/recursion%283%29.png" style="height:1340px; width:1000px" /&gt;&#x7D50;&#x679C;&#x5982;&#x4E0B;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027154/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-21%20123628.png" style="height:622px; width:156px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7A0B;&#x5F0F;&#x78BC;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;br /&gt;&#xD;
+int num[2] ;&lt;br /&gt;&#xD;
+// &#x95B1;&#x8B80;&#x984C;&#x76EE;&#x4EE5;&#x53CA;&#x64B0;&#x5BEB;&#x7A0B;&#x5F0F;&#x904E;&#x7A0B;&#x4E2D;&#x7121;&#x53C3;&#x8003;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+void sum( int &amp;nbsp;M, int base = 100 ,int index = 0 )&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; if ( index == 2 &amp;amp;&amp;amp; M - num[0] - num[1] &amp;gt;= 100 ) // base case&lt;br /&gt;&#xD;
+&amp;nbsp; {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; num[0] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; num[1] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; M - num[0] - num[1] &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; else if ( index == 0 &amp;amp;&amp;amp; M - base &amp;gt;= 200 ) // &#x6E1B;&#x53BB;num[0]&#x5F8C;&#x81F3;&#x5C11;&#x8981;&#x5269;200(&#x7B26;&#x5408;&#x984C;&#x610F;&amp;quot;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;&#x96F6;&amp;quot;)&lt;br /&gt;&#xD;
+&amp;nbsp; {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; sum( M, base + 1, 0 ) ; // &#x6539;&#x8B8A;base&#x4F7F;&#x76EE;&#x524D;&#x4F4D;&#x7F6E;&#x7684;&#x6578;&#x5B57;&#x7D2F;&#x52A0;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; num[0] = base ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; sum( M, base + 1, 1 ) ; // &#x7B26;&#x5408;&#x984C;&#x610F;&amp;quot;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&amp;quot; &#x76EE;&#x524D;&#x4F4D;&#x7F6E;:0 &#x6E96;&#x5099;&#x905E;&#x8FF4;&#x4F4D;&#x7F6E;:1&lt;br /&gt;&#xD;
+&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; else if ( index == 1 &amp;amp;&amp;amp; M - base &amp;gt;= 100 ) // &#x6E1B;&#x53BB;num[0]&#x8207;num[1]&#x5F8C;&#x81F3;&#x5C11;&#x8981;&#x5269;100(&#x7B26;&#x5408;&#x984C;&#x610F;&amp;quot;&#x767E;&#x4F4D;&#x6578;&#x5FC5;&#x9808;&#x975E;&#x96F6;&amp;quot;)&lt;br /&gt;&#xD;
+&amp;nbsp; {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; sum( M, base + 1, 1 ) ; // &#x6539;&#x8B8A;base&#x4F7F;&#x76EE;&#x524D;&#x4F4D;&#x7F6E;&#x7684;&#x6578;&#x5B57;&#x7D2F;&#x52A0;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; num[1] = base ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; sum( M, base + 1, 2 ) ; // &#x7B26;&#x5408;&#x984C;&#x610F;&amp;quot;3&#x500B;&#x6578;&#x5B57;&#x4E0D;&#x540C;&amp;quot; &#x76EE;&#x524D;&#x4F4D;&#x7F6E;:1 &#x6E96;&#x5099;&#x905E;&#x8FF4;&#x4F4D;&#x7F6E;:2&lt;br /&gt;&#xD;
+&amp;nbsp; }&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; sum ( 311 ) ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>40</hit>
+  <lang>1</lang>
+</data>

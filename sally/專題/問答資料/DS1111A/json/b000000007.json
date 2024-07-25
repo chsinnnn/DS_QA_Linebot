@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-09-18 15:54:17",
+        "poster": "11127137",
+        "realname": "黃乙家",
+        "email": "u810025@gmail.com",
+        "homepage": "https://ja-errorpro.cf",
+        "subject": "105",
+        "content": "<p><span style=\"font-size:16px\"><strong>試描述整數溢位integer overflow的避免方法，並寫出C++程式碼。</strong></span></p>\r\n\r\n<p>有多種方式可以避免Integer Overflow</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>if ( a &gt; INT_MAX - b ){</p>\r\n\r\n<p>// 假設a, b是已宣告的int，其中INT_MAX為在&lt;limits.h&gt;已經預定義的macro，在32位元(int32_t)下，此值為 2的31次方-1，是int可存的最大值</p>\r\n\r\n<p>// 若條件成立表示a+b將發生溢位，在這裡停止程式</p>\r\n\r\n<p>}</p>\r\n\r\n<p>```</p>\r\n\r\n<p>同樣地如果是乘法操作可以寫判斷 if(b!=0 &amp;&amp; a &gt; INT_MAX / b)，如果成立代表a*b會發生溢位</p>\r\n\r\n<p><strong>注意不要寫 if(a + b ...)</strong>，因為有符號整型溢位屬於UB(Undefined behavior, 未定義行為)，任何事包含崩潰、拋出異常、出現意外負數值都有可能發生</p>\r\n\r\n<p>另一種方式是在輸入時(假設輸入合法)就判斷是否會有溢位的可能</p>\r\n\r\n<p>以Fibonacci為例，可以測試一下int32_t大概到n為四十多時就會溢位，因此在輸入時就直接擋住就好</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>int n;</p>\r\n\r\n<p>cin &gt;&gt; n;</p>\r\n\r\n<p>if(n&gt;47){</p>\r\n\r\n<p>&nbsp; cout &lt;&lt; &quot;輸入的數字太大，int存不下\\n&quot;;</p>\r\n\r\n<p>&nbsp; // 停止程式，或請使用者重新輸入</p>\r\n\r\n<p>}</p>\r\n\r\n<p>```</p>\r\n\r\n<p>還有一種是開更大的空間來存，使用int64_t(定義在C++11以後的&lt;stdint.h&gt;)來存(要注意有些編譯器不支援這個類型，考慮用long long代替)</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>long long a;</p>\r\n\r\n<p>// 或 int64_t a;</p>\r\n\r\n<p>// ...</p>\r\n\r\n<p>```</p>\r\n\r\n<p>但long long也是有上限的，沒辦法解決更大數值的溢位，且時間空間用量也相對較高</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "114",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-09-27 22:56:44",
+        "poster": "11127225",
+        "realname": "賴枋佑",
+        "email": "leolai325@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>在宣告陣列時使用大括號進行賦值，c++程式碼如下:</p>\r\n\r\n<p><br />\r\n#include &lt;iostream&gt;<br />\r\nusing namespace std;<br />\r\nint main () {<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;const int arr_size = 5;<br />\r\n&nbsp;&nbsp; &nbsp;int a[arr_size] = {1,2,3,4,5};<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;for ( int i = 0 ; i &lt; arr_size &nbsp;; i++){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; a[i]&lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2022-10-14 16:11:12</pt>
+  <poster>11027237</poster>
+  <realname>&#x7A0B;&#x6021;&#x6B23;  </realname>
+  <email>ssc5613@gmail.com</email>
+  <homepage> </homepage>
+  <subject>118. &#x4EE4;ptrX&#x6307;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x6BD4;&#x8F03;ptrX = ptrX-&amp;gt;next&#x548C;ptrX-&amp;gt;next = ptrX&#x7684;&#x5DEE;&#x7570;&#x3002; </subject>
+  <content>&lt;p&gt;&lt;strong&gt;&lt;span style="color:#333333"&gt;&#x6BD4;&#x8F03;ptrX = ptrX-&amp;gt;next&lt;/span&gt;&#x548C;ptrX-&amp;gt;next = ptrX&#x7684;&#x5DEE;&#x7570;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;table border="1" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:none; width:535px"&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="height:30px; vertical-align:top; width:41px"&gt;&amp;nbsp;&lt;/td&gt;&#xD;
+			&lt;td style="height:30px; vertical-align:top; width:493px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;ptrX = ptrX -&amp;gt; next&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="height:27px; vertical-align:top; width:41px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8AAA;&#x660E;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="height:27px; vertical-align:top; width:493px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="color:red"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5C07;ptrX -&amp;gt; next&#x6B64;&#x9805;&#x52D5;&#x4F5C;&#x7D66;&#x4E88;ptrX&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="height:266px; vertical-align:top; width:41px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5716;&#x7247;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="height:266px; vertical-align:top; width:493px"&gt;&#xD;
+			&lt;p&gt;&lt;img alt="" src="/user/1/1/11027237/images/1.jpg" style="height:239px; width:450px" /&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;table border="1" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:none; width:535px"&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="height:31px; vertical-align:top; width:42px"&gt;&amp;nbsp;&lt;/td&gt;&#xD;
+			&lt;td style="height:31px; vertical-align:top; width:494px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;ptrX -&amp;gt; next = ptrX&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="height:27px; vertical-align:top; width:42px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8AAA;&#x660E;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="height:27px; vertical-align:top; width:494px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="color:red"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5C07;ptrX&#x6B64;&#x9805;&#x52D5;&#x4F5C;&#x7D66;&#x4E88;ptrX -&amp;gt; next&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td style="height:272px; vertical-align:top; width:42px"&gt;&#xD;
+			&lt;p&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5716;&#x7247;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+			&lt;td style="height:272px; vertical-align:top; width:494px"&gt;&#xD;
+			&lt;p&gt;&lt;img alt="" src="/user/1/1/11027237/images/2.jpg" style="height:155px; width:450px" /&gt;&lt;/p&gt;&#xD;
+			&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7D50;&#x8AD6;&lt;/span&gt;:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:black"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7531;&#x65BC;&#x7B49;&#x865F;&#x904B;&#x7B97;&#x9806;&#x5E8F;&#x7531;&#x53F3;&#x81F3;&#x5DE6;&#xFF0C;&#x56E0;&#x6B64;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;ptrX = ptrX-&amp;gt;next&lt;/span&gt;&lt;/span&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x548C;ptrX-&amp;gt;next = ptrX&lt;/span&gt;&#x7522;&#x751F;&#x5DEE;&#x7570;&lt;/span&gt;&#x3002;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>32</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000025.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000025",
+        "site": "1000110001",
+        "pt": "2022-09-20 15:01:15",
+        "poster": "11027105",
+        "realname": "盧駿揚",
+        "email": "jy.lu123456@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴?為什麼?",
+        "content": "<p><span style=\"font-family:新細明體,serif\">我個人認為能夠將大問題化作小問題的問題且本質相同時，都能夠使用遞迴來解決，像是河內塔問題一樣，當有</span>4<span style=\"font-family:新細明體,serif\">個圈圈的時候問題便很難，但當圈圈數變為</span>3 <span style=\"font-family:新細明體,serif\">或</span> 2<span style=\"font-family:新細明體,serif\">的時候問題就變得淺顯易懂，這時候就可以觀察圈圈數不同時，有什麼動作會是重複的，有什麼地方會是相似的，透過觀察來發現可以使用遞迴的地方。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">遞迴我覺得最好的地方就是會讓程式碼看起來的行數少很多，乾淨很多，但相對的對背後的邏輯思考也更複雜，有時候想一想腦袋就打結了。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "48",
+        "lang": "1"
+    }
+}

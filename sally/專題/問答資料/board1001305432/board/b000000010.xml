@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:36" type="post" filename="b000000010.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305432</board_id>
+  <node>000000010</node>
+  <site>1000110001</site>
+  <pt>2023-10-10 17:52:02</pt>
+  <poster>11127213</poster>
+  <realname>&#x51CC;&#x9F0E;&#x8ED2;  </realname>
+  <email>benson920925@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>114. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x540C;&#x985E;&#x5225;&#x5169;&#x500B;&#x65B9;&#x6CD5;&#x5982;&#x4F55;&#x5BE6;&#x73FE;&#x591A;&#x8F09;overloading&#x3002; </subject>
+  <content>&lt;p&gt;C++&#x7684; overloading &#x662F;&#x6307;&#x76F8;&#x540C;&#x51FD;&#x6578;&#x540D;&#x7A31;&#x4F46;&#x53C3;&#x6578;&#x578B;&#x614B;&#x6216;&#x6578;&#x91CF;&#x4E0D;&#x540C;&#x3002;&#x56DE;&#x50B3;&#x7684;&#x8CC7;&#x6599;&#x578B;&#x614B;&#x4E0D;&#x6703;&#x5F71;&#x97FF;&#x5230;Overloading&#xFF0C;&#x76F8;&#x540C;&#x8207;&#x5426;&#x6C92;&#x6709;&#x95DC;&#x4FC2;&#x3002;&#x7531;&#x65BC;&#x7DE8;&#x8B6F;&#x5668;&#x6839;&#x64DA;&#x53C3;&#x6578;&#x5167;&#x5BB9;&#x4F86;&#x8FA8;&#x5225;&#x8A72;&#x7528;&#x54EA;&#x500B;&#x51FD;&#x6578;&#xFF0C;&#x53C3;&#x6578;&#x5167;&#x5BB9;&#x4E00;&#x5B9A;&#x8981;&#x4E0D;&#x540C;&#xFF0C;&#x4E0D;&#x7136;&#x6703;&#x767C;&#x751F;ambiguity(&#x7DE8;&#x8B6F;&#x5668;&#x4E0D;&#x77E5;&#x9053;&#x8A72;&#x7528;&#x54EA;&#x500B;&#x51FD;&#x6578;)&#x3002;&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class Addition {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; public:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int add(int a, int b) {&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x5982;&#x679C;&#x50B3;&#x5165;&#x7684;&#x5169;&#x500B;&#x6578;&#x662F;&#x6574;&#x6578;&#x578B;&#x614B;&#xFF0C;&#x7DE8;&#x8B6F;&#x5668;&#x6703;&#x4F7F;&#x7528;&#x6B64;&#x51FD;&#x6578;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Using int-type addition&amp;quot; &amp;lt;&amp;lt;&amp;nbsp;endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return a + b;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; double add(double a, double b) {&amp;nbsp;&amp;nbsp;// &#x82E5;&#x50B3;&#x5165;&#x7684;&#x5169;&#x6578;&#x662F;&#x96D9;&#x500D;&#x6D6E;&#x9EDE;&#x6578;&#x578B;&#x614B;&#xFF0C;&#x6703;&#x4F7F;&#x7528;&#x6B64;&#x51FD;&#x6578;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Using double-type addition&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return a + b;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&amp;nbsp; {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; Addition obj;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; obj.add(12, 13) &amp;lt;&amp;lt; &amp;quot;\n&amp;quot;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x50B3;&#x5165;&#x6574;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; obj.add( 1.01, 3.0212 ) &amp;lt;&amp;lt; &amp;quot;\n&amp;quot;;&amp;nbsp; &amp;nbsp; // &#x50B3;&#x5165;&#x96D9;&#x500D;&#x6D6E;&#x9EDE;&#x6578;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>21</hit>
+  <lang>1</lang>
+</data>

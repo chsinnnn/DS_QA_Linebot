@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000026.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000026",
+        "site": "1000110001",
+        "pt": "2023-10-04 20:21:53",
+        "poster": "11120406",
+        "realname": "謝宸恩",
+        "email": "allen24004828@gmail.com",
+        "homepage": null,
+        "subject": "108. 若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？",
+        "content": "<p>可以使用setjmp和longjmp函式来實現在遞迴中某層異常中止的問題，這兩個函式可以讓程式往回跳到函式呼叫堆疊中的某個函數中。通常會需要一個特殊的變數，用來儲存程式跳躍時所需之資訊。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "12",
+        "lang": "1"
+    }
+}

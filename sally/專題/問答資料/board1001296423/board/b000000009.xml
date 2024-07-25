@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:22" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296423</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2023-11-29 23:19:05</pt>
+  <poster>11127122</poster>
+  <realname>&#x80E1;&#x6C9B;&#x980E;  </realname>
+  <email>123456789paige26@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>201 </subject>
+  <content>&lt;p&gt;201. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;waiting time&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5047;&#x8A2D;&#x4E00;&#x7FA4;&#x5DE5;&#x4F5C;&#x6A21;&#x64EC;&#x6392;&#x5E8F;&#x5982;&#x4E0B;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;OID&amp;nbsp;&amp;nbsp; &amp;nbsp;Arrival&amp;nbsp;&amp;nbsp; &amp;nbsp;Duration&amp;nbsp;&amp;nbsp; &amp;nbsp;TimeOut&lt;br /&gt;&#xD;
+101&amp;nbsp;&amp;nbsp; &amp;nbsp;3&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 9&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;12&lt;br /&gt;&#xD;
+112&amp;nbsp;&amp;nbsp; &amp;nbsp;5&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 6&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;13&lt;br /&gt;&#xD;
+103&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 7&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;15&lt;br /&gt;&#xD;
+106&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 9&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;17&lt;br /&gt;&#xD;
+108&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 8&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;18&lt;br /&gt;&#xD;
+105&amp;nbsp;&amp;nbsp; &amp;nbsp;10&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 6&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;20&lt;br /&gt;&#xD;
+104&amp;nbsp;&amp;nbsp; &amp;nbsp;11&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 9&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;22&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;101 -&amp;gt; &#x7121;&#x9700;&#x7B49;&#x5F85;&#xFF0C;&#x4E26;&#x80FD;&#x5920;&#x505A;&#x5B8C;&amp;nbsp; -&amp;gt; waiting time = 0&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;112&amp;nbsp;-&amp;gt; &#x51FA;&#x73FE;&#x6642;&#xFF0C;&#x6392;&#x968A;&#xFF0C;&#x4E26;&#x7B49;&#x5F85;101&#x505A;&#x5B8C;&#xFF0C;&#x6B64;&#x6642; t = 12&#xFF0C;&#x800C;112&#x7121;&#x6CD5;&#x5B8C;&#x6210;&amp;nbsp; -&amp;gt; waiting time = 112&#x7684; timeout&amp;nbsp;- arrival time = 13 - 5 = 8&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;103 -&amp;gt; &#x51FA;&#x73FE;&#x6642;&#xFF0C;&#x6392;&#x968A;&#xFF0C;&#x4E26;&#x7B49;&#x5F85;112&#x7D50;&#x675F;&#xFF0C;&#x6B64;&#x6642; t = 13&#xFF0C;&#x800C;103&#x7121;&#x6CD5;&#x5B8C;&#x6210;&amp;nbsp; -&amp;gt; waiting time = 103&#x7684; timeout&amp;nbsp;- arrival time = 15&amp;nbsp;- 6&amp;nbsp;= 9&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;106&amp;nbsp;-&amp;gt; &#x51FA;&#x73FE;&#x6642;&#xFF0C;&#x6392;&#x968A;&#xFF0C;&#x4E26;&#x7B49;&#x5F85;103&#x7D50;&#x675F;&#xFF0C;&#x6B64;&#x6642; t = 15&#xFF0C;&#x800C;106&#x7121;&#x6CD5;&#x5B8C;&#x6210;&amp;nbsp; -&amp;gt; waiting time = 106&#x7684; timeout&amp;nbsp;- arrival time = 17&amp;nbsp;- 6&amp;nbsp;= 11&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;108&amp;nbsp;-&amp;gt; &#x51FA;&#x73FE;&#x6642;&#xFF0C;&#x6392;&#x968A;&#xFF0C;&#x4E26;&#x7B49;&#x5F85;106&#x7D50;&#x675F;&#xFF0C;&#x6B64;&#x6642; t = 17&#xFF0C;&#x800C;108&#x7121;&#x6CD5;&#x5B8C;&#x6210;&amp;nbsp; -&amp;gt; waiting time = 108&#x7684; timeout&amp;nbsp;- arrival time = 18&amp;nbsp;- 6&amp;nbsp;= 12&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;105&amp;nbsp;-&amp;gt; &#x51FA;&#x73FE;&#x6642;&#xFF0C;&#x6392;&#x968A;&#xFF0C;&#x4E26;&#x7B49;&#x5F85;108&#x7D50;&#x675F;&#xFF0C;&#x6B64;&#x6642; t = 18&#xFF0C;&#x800C;105&#x7121;&#x6CD5;&#x5B8C;&#x6210;&amp;nbsp; -&amp;gt; waiting time = 105&#x7684; timeout&amp;nbsp;- arrival time = 20 - 10&amp;nbsp;= 10&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;104-&amp;gt; &#x51FA;&#x73FE;&#x6642;&#xFF0C;&#x6392;&#x968A;&#xFF0C;&#x4E26;&#x7B49;&#x5F85;103&#x7D50;&#x675F;&#xFF0C;&#x6B64;&#x6642; t = 20&#xFF0C;&#x800C;104&#x7121;&#x6CD5;&#x5B8C;&#x6210;&amp;nbsp; -&amp;gt; waiting time = 104&#x7684; timeout&amp;nbsp;- arrival time = 22 - 11 = 9&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6240;&#x4EE5;&#x7E3D;&#x5171;&#x7684;&#x7B49;&#x5F85;&#x6642;&#x9593;&#x70BA; : 59&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5E73;&#x5747;&#x7B49;&#x5F85;&#x6642;&#x9593;&#x70BA;: 59/7 &#x7D04;&#x7B49;&#x65BC; 8.42&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>6</hit>
+  <lang>1</lang>
+</data>

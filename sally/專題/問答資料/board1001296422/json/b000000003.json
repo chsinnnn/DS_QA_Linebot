@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-10-20 03:03:51",
+        "poster": "10942208",
+        "realname": "陳洺安",
+        "email": "asd0389wsx0216@gmail.com",
+        "homepage": null,
+        "subject": "127",
+        "content": "<p><br />\r\n/*<br />\r\n10942208 陳洺安 資四乙<br />\r\n使用老師上課所教iostream subclass =&gt; ofstream &amp; ifstream<br />\r\n順便練習動態配置陣列&nbsp;<br />\r\n*/&nbsp;<br />\r\n#include &lt;iostream&gt;<br />\r\n#include &lt;string&gt;<br />\r\n#include &lt;fstream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>int main()<br />\r\n{<br />\r\n&nbsp;&nbsp; &nbsp;// 使用iostream subclass&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;輸入檔案名稱 ex: 123.txt &quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;string fileName = &quot;&quot; ;<br />\r\n&nbsp;&nbsp; &nbsp;cin &gt;&gt; fileName &nbsp;;<br />\r\n&nbsp; &nbsp; int arraySize = 50 ;<br />\r\n&nbsp; &nbsp; int *intArray = new int[arraySize];<br />\r\n&nbsp; &nbsp; // 寫檔 ==========================================================&nbsp;<br />\r\n&nbsp; &nbsp; ofstream outFile(fileName.c_str());&nbsp;<br />\r\n&nbsp; &nbsp; //.c_str() 在C++， std::ofstream接受const char，而不是string<br />\r\n&nbsp; &nbsp; int i = 0 ;<br />\r\n&nbsp; &nbsp; do{<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;outFile &lt;&lt; i &lt;&lt; endl ; // 跟cout使用方法類似&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;i++;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;}while( i &lt;= 10 ) ;<br />\r\n&nbsp;&nbsp; &nbsp;outFile.close();<br />\r\n&nbsp;&nbsp; &nbsp;// 寫檔 結束======================================================<br />\r\n&nbsp; &nbsp; // 讀檔 ==========================================================&nbsp;<br />\r\n&nbsp; &nbsp; ifstream inFile(fileName.c_str());&nbsp;<br />\r\n&nbsp; &nbsp; int number ;&nbsp;<br />\r\n&nbsp; &nbsp; i = 0 ;<br />\r\n&nbsp; &nbsp; while( inFile &gt;&gt; number ) { // 文件結束返回false&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;*(intArray+i) = number ;<br />\r\n&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;i++;<br />\r\n&nbsp;&nbsp; &nbsp;} // while<br />\r\n&nbsp;&nbsp; &nbsp;inFile.close();<br />\r\n&nbsp;&nbsp; &nbsp;// 讀檔 結束======================================================<br />\r\n&nbsp;&nbsp; &nbsp;// 印出陣列內容&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;for( int j = 0 ; j &lt; i ; j++ ) {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; intArray[j] &lt;&lt; endl ; // intArray[0] = *(intArray+0) &nbsp;;<br />\r\n&nbsp;&nbsp; &nbsp;} // for<br />\r\n&nbsp;&nbsp; &nbsp;delete[] intArray; // 釋放動態分配內存&nbsp;<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n}<br />\r\n&nbsp;</p>\r\n\r\n<p>// 執行畫面</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10942208/images/hw-1.png\" style=\"height:531px; width:1000px\" /></p>",
+        "attach": "10942208.cpp\tWM65317d95e5bae.cpp",
+        "rcount": null,
+        "rank": null,
+        "hit": "55",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:29",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162652",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-11-28 22:19:21",
+        "poster": "11020105",
+        "realname": "簡健洲",
+        "email": "jay0982854390@gmail.com",
+        "homepage": null,
+        "subject": "201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time。",
+        "content": "<p><span style=\"font-size:16px\">舉例Event1(<span style=\"color:#0000ff\">arrival time</span>=1,duration=5), Event2(<span style=\"color:#0000ff\">arrival time</span> =4,duration=3), Event3(<span style=\"color:#0000ff\">arrival time</span>=7,duration=5), Event4(<span style=\"color:#0000ff\">arrival time</span>=20, duration=3)</span></p>\r\n\r\n<p><span style=\"font-size:14px\"><strong>Total wating time</strong></span> = 先做Event1=&gt;<span style=\"color:#ff0000\">現在時間</span>會來到1+5=6, <span style=\"color:#ff0000\">現在時間</span>去減掉下個Event的<span style=\"color:#0000ff\">arrival time</span>就是下個Event的wating time,做完Event2後<span style=\"color:#ff0000\"><strong>現在時間</strong></span>會 =(做此Event時的現在時間+此Event duration也就是3)=<span style=\"color:#ff0000\">6+3=9</span>,依此類推到所有Event都執行過,若遇到下個Event的arrival time比現在的時間大,那麼此Event的wating time就是0,而現在時間也就等於此Event的arrival time。</p>\r\n\r\n<p>以這個例子做計算 Event2&#39;s wating time =<span style=\"color:#ffa500\"> </span><span style=\"color:#ff0000\">1+5</span>-<span style=\"color:#0000ff\">4</span>=<u><strong>2</strong></u>, Event3&#39;s wating time = <span style=\"color:#ff0000\">1+5+3</span>-<span style=\"color:#0000ff\">7</span>=<strong><u>2</u></strong>, Event4&#39;s wating time = 由於現在時間來到<span style=\"color:#ff0000\">1+5+3+5=14</span>,但Event4的arrival time(20) &gt; 現在時間(14) 所以Event4&#39;s wating time =<u><strong> 0</strong></u>。</p>\r\n\r\n<p>total wating time = 2+2+0=<strong><u>4</u></strong>, average wating time = 4/所有Event的數量=4/4=1。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: # include &lt;iostream&gt; using namespace std ;  void bubbleSort( int arr[], int n ) {     for ( int i = 0 ; i &lt; n ; i++ ) {         bool swapped = false ;  // 初始化標誌，其表示本輪是否有進行交換          for ( int j = 0 ; j &lt; n - i - 1 ; j++ ) {              if ( arr[j] &gt; arr[j + 1] ) {  // 如果相鄰的元素順序錯誤，進行交換                 swap( arr[j], arr[j + 1] ) ;                 swapped = true ;  // 設置標誌為true，表示有進行交換         }           if ( !swapped ) break ;  // 如果本輪沒有進行交換，表示數列已經有序，提前結束排序     }  }    int main() {     int arr[] = { 64, 34, 25, 12, 22, 11, 90 } ;  // 例子      bubbleSort( arr, 7 ) ;  // 呼叫氣泡排序函數      cout &lt;&lt;  排序後的數列:   ;  // 輸出排序後的數列     for ( auto &amp; arr : arr )         cout &lt;&lt; arr &lt;&lt;     ;      cout &lt;&lt; endl ;     return 0 ; }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 氣泡排序是一種通過反覆遍歷要排序的數列，比較每對相鄰元素，並將它們的順序對調（如果它們的順序錯誤）的演算法。穩定性指的是排序算法能否保持相同元素原始的相對順序不變；如果算法能做到這一點，它就是穩定的。  在做氣泡排序時，如果遇到兩個一樣的數，為了保持排序的穩定性，我們不應該交換它們的位置。穩定的氣泡排序會確保這些相同的數在排序完成後，它們的前後順序和在未排序之前是一樣的。  簡單來說，為了讓氣泡排序保持穩定，關鍵是相等的元素不可以交換位置。在一個經典的氣泡排序實現中，這個穩定性是自然達成的，因為當兩個元素相等時算法不會做任何動作。這就意味著等值的元素會保持它們原始的順序，從而使排序過程是穩定的。  以下是範相關的C++範例   #include &lt;iostream&gt; #include &lt;vector&gt;  void bubbleSort(std::vector&lt;int&gt;&amp; arr) {     int n = arr.size();     bool swapped;      for(int i = 0; i &lt; n - 1; i++) {         swapped = false;         for(int j = 0; j &lt; n - i - 1; j++) {             // 關鍵點在於使用  小於等於  操作             // 這會導致相同值的元素不會交換             if (arr[j] &gt; arr[j + 1]) {                 // 交換arr[j]和arr[j + 1]                 std::swap(arr[j], arr[j + 1]);                 swapped = true;             }         }          // 如果在某一輪沒有發生交換，則表示陣列已排序好         if (!swapped)             break;     } }  int main() {     std::vector&lt;int&gt; arr = {64, 34, 25, 12, 22, 11, 90};     bubbleSort(arr);      std::cout &lt;&lt;  Sorted array: \\n ;     for (int i = 0; i &lt; arr.size(); i++)         std::cout &lt;&lt; arr[i] &lt;&lt;    ;     std::cout &lt;&lt; std::endl;      return 0; }   在上面的程式碼中，要維持氣泡排序的穩定性，注重的是在內層循環遇到相等元素時不進行交換。雖然這裡沒有明確使用 小於等於 來進行比較（因為這會造成不必要的交換），但避免了對等值的元素進行交換，因為它只在 `arr[j] &gt; arr[j + 1]` 的情況下進行交換。",
+        "output": "Clear explanation!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 初始狀況:[5a, 6, 4, 5b,1]  第一次swap-&gt;[1,6,4,5b,5a]  第二次swap-&gt;[1,4,6,5b,5a]  第三次swap-&gt;[1,4,5a,5b,6]  第四次swap-&gt;[1,4,5a,5b,6]  由第一次交換可知，選擇排序改變了5a跟5b的相對位子，因此為非穩定stable的排序方法。",
+        "output": "Incorrect step:  第三次swap-&gt;[1,4,5a,5b,6]"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 若想提早結束，可以看該次氣泡排序是否有交換位置，  若無，就可以理解成已經排好了，接下來就可以提早結束。  以下是使用程式碼來解釋：  #include &lt;iostream&gt; #include &lt;vector&gt;  using namespace std;  void bubbleSort(vector&lt;int&gt;&amp; arr) {     int n = arr.size();     bool sort_true_false = true; // 用於檢測是否進行了交換      for (int i = 0; i &lt; n - 1; i++) {         sort_true_false = false;          // 未排序部分         for (int j = 0; j &lt; n - i - 1; j++) {             // 如果前面的元素大於後面的元素，則交換它們             if (arr[j] &gt; arr[j + 1]) {                 swap(arr[j], arr[j + 1]);                 sort_true_false = true; // 表示進行了交換             }         }          // 如果再一次掃描中沒有進行任何交換，表示可以提早結束         if (!sort_true_false) {             cout &lt;&lt;  提早結束。\\n ;             break;         }     } }  int main() {     vector&lt;int&gt; arr = {5, 2, 9, 1, 5, 6};          cout &lt;&lt;  未排序數列： ;     for (int num : arr) {         cout &lt;&lt; num &lt;&lt;    ;     }      cout &lt;&lt; endl;      // 呼叫氣泡排序     bubbleSort(arr);      cout &lt;&lt;  排序後數列： ;     for (int num : arr) {         cout &lt;&lt; num &lt;&lt;    ;     }      return 0; }",
+        "output": "Nice to see explaining it by code."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: //撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  #include &lt;iostream&gt;  using namespace std;  int main() {    int n;    // input    cin &gt;&gt; n;    int *arr = new int[ n ];    for ( int i = 0 ; i &lt; n ; i++ ) {      cin &gt;&gt; arr[ i ];    } // for    // insertion sort    // n is the length of arr    for ( int i = 1 ; i &lt; n ; i++ ) {      int key = arr[ i ];      int j = i - 1;      while ( j &gt;= 0 &amp;&amp; arr[ j ] &gt; key ) {        /*        關鍵在while的條件，用 arr[ j ] &gt; key 來判斷是否要將 arr[ j ] 往後移        在遇到相同的數字時，會結束迴圈，把自己放在已經被排序過的數字（相同且位置在自己前面的數字）的後面        這樣就不會改變相同數字的相對位置        */        arr[ j + 1 ] = arr[ j ];        j--;      } // while      arr[ j + 1 ] = key; // 把自己放在已經被排序過的數字（相同且位置在自己前面的數字）的後面    } // for    // output    for ( int i = 0 ; i &lt; n ; i++ ) {      cout &lt;&lt; arr[ i ] &lt;&lt;    ;    } // for    cout &lt;&lt; endl;    return 0;  } // main",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 假設有一個陣列 [5a, 2, 5b, 1]，其中 5a 和 5b 分別代表兩個值相同的元素。如果使用選擇排序，演算法可能會先找到數組中的最小值 1，然後將其與第一個 5a 交換。這導致了原本相同的兩個 5a 的相對位置發生了改變，排序後的結果可能是 [1, 2, 5b, 5a]，在穩定的排序演算法中，如果有兩個相等的元素，排序後它們的相對位置保持不變，而選擇排序會改變位置因此是非穩定。",
+        "output": "例子簡單扼要易懂。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: # include &lt;iostream&gt; using namespace std ;  void bubbleSort( int arr[], int n ) {     for ( int i = 0 ; i &lt; n ; i++ ) {         bool swapped = false ;  // 初始化標誌，其表示本輪是否有進行交換          for ( int j = 0 ; j &lt; n - i - 1 ; j++ ) {              if ( arr[j] &gt; arr[j + 1] ) {  // 如果相鄰的元素順序錯誤，進行交換                 swap( arr[j], arr[j + 1] ) ;                 swapped = true ;  // 設置標誌為true，表示有進行交換         }           if ( !swapped ) break ;  // 如果本輪沒有進行交換，表示數列已經有序，提前結束排序     }  }    int main() {     int arr[] = { 64, 34, 25, 12, 22, 11, 90 } ;  // 例子      bubbleSort( arr, 7 ) ;  // 呼叫氣泡排序函數      cout &lt;&lt;  排序後的數列:   ;  // 輸出排序後的數列     for ( auto &amp; arr : arr )         cout &lt;&lt; arr &lt;&lt;     ;      cout &lt;&lt; endl ;     return 0 ; }",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 氣泡排序是一種通過反覆遍歷要排序的數列，比較每對相鄰元素，並將它們的順序對調（如果它們的順序錯誤）的演算法。穩定性指的是排序算法能否保持相同元素原始的相對順序不變；如果算法能做到這一點，它就是穩定的。  在做氣泡排序時，如果遇到兩個一樣的數，為了保持排序的穩定性，我們不應該交換它們的位置。穩定的氣泡排序會確保這些相同的數在排序完成後，它們的前後順序和在未排序之前是一樣的。  簡單來說，為了讓氣泡排序保持穩定，關鍵是相等的元素不可以交換位置。在一個經典的氣泡排序實現中，這個穩定性是自然達成的，因為當兩個元素相等時算法不會做任何動作。這就意味著等值的元素會保持它們原始的順序，從而使排序過程是穩定的。  以下是範相關的C++範例   #include &lt;iostream&gt; #include &lt;vector&gt;  void bubbleSort(std::vector&lt;int&gt;&amp; arr) {     int n = arr.size();     bool swapped;      for(int i = 0; i &lt; n - 1; i++) {         swapped = false;         for(int j = 0; j &lt; n - i - 1; j++) {             // 關鍵點在於使用  小於等於  操作             // 這會導致相同值的元素不會交換             if (arr[j] &gt; arr[j + 1]) {                 // 交換arr[j]和arr[j + 1]                 std::swap(arr[j], arr[j + 1]);                 swapped = true;             }         }          // 如果在某一輪沒有發生交換，則表示陣列已排序好         if (!swapped)             break;     } }  int main() {     std::vector&lt;int&gt; arr = {64, 34, 25, 12, 22, 11, 90};     bubbleSort(arr);      std::cout &lt;&lt;  Sorted array: \\n ;     for (int i = 0; i &lt; arr.size(); i++)         std::cout &lt;&lt; arr[i] &lt;&lt;    ;     std::cout &lt;&lt; std::endl;      return 0; }   在上面的程式碼中，要維持氣泡排序的穩定性，注重的是在內層循環遇到相等元素時不進行交換。雖然這裡沒有明確使用 小於等於 來進行比較（因為這會造成不必要的交換），但避免了對等值的元素進行交換，因為它只在 `arr[j] &gt; arr[j + 1]` 的情況下進行交換。",
+        "output": "Clear explanation!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 初始狀況:[5a, 6, 4, 5b,1]  第一次swap-&gt;[1,6,4,5b,5a]  第二次swap-&gt;[1,4,6,5b,5a]  第三次swap-&gt;[1,4,5a,5b,6]  第四次swap-&gt;[1,4,5a,5b,6]  由第一次交換可知，選擇排序改變了5a跟5b的相對位子，因此為非穩定stable的排序方法。",
+        "output": "Incorrect step:  第三次swap-&gt;[1,4,5a,5b,6]"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 若想提早結束，可以看該次氣泡排序是否有交換位置，  若無，就可以理解成已經排好了，接下來就可以提早結束。  以下是使用程式碼來解釋：  #include &lt;iostream&gt; #include &lt;vector&gt;  using namespace std;  void bubbleSort(vector&lt;int&gt;&amp; arr) {     int n = arr.size();     bool sort_true_false = true; // 用於檢測是否進行了交換      for (int i = 0; i &lt; n - 1; i++) {         sort_true_false = false;          // 未排序部分         for (int j = 0; j &lt; n - i - 1; j++) {             // 如果前面的元素大於後面的元素，則交換它們             if (arr[j] &gt; arr[j + 1]) {                 swap(arr[j], arr[j + 1]);                 sort_true_false = true; // 表示進行了交換             }         }          // 如果再一次掃描中沒有進行任何交換，表示可以提早結束         if (!sort_true_false) {             cout &lt;&lt;  提早結束。\\n ;             break;         }     } }  int main() {     vector&lt;int&gt; arr = {5, 2, 9, 1, 5, 6};          cout &lt;&lt;  未排序數列： ;     for (int num : arr) {         cout &lt;&lt; num &lt;&lt;    ;     }      cout &lt;&lt; endl;      // 呼叫氣泡排序     bubbleSort(arr);      cout &lt;&lt;  排序後數列： ;     for (int num : arr) {         cout &lt;&lt; num &lt;&lt;    ;     }      return 0; }",
+        "output": "Nice to see explaining it by code."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: //撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  #include &lt;iostream&gt;  using namespace std;  int main() {    int n;    // input    cin &gt;&gt; n;    int *arr = new int[ n ];    for ( int i = 0 ; i &lt; n ; i++ ) {      cin &gt;&gt; arr[ i ];    } // for    // insertion sort    // n is the length of arr    for ( int i = 1 ; i &lt; n ; i++ ) {      int key = arr[ i ];      int j = i - 1;      while ( j &gt;= 0 &amp;&amp; arr[ j ] &gt; key ) {        /*        關鍵在while的條件，用 arr[ j ] &gt; key 來判斷是否要將 arr[ j ] 往後移        在遇到相同的數字時，會結束迴圈，把自己放在已經被排序過的數字（相同且位置在自己前面的數字）的後面        這樣就不會改變相同數字的相對位置        */        arr[ j + 1 ] = arr[ j ];        j--;      } // while      arr[ j + 1 ] = key; // 把自己放在已經被排序過的數字（相同且位置在自己前面的數字）的後面    } // for    // output    for ( int i = 0 ; i &lt; n ; i++ ) {      cout &lt;&lt; arr[ i ] &lt;&lt;    ;    } // for    cout &lt;&lt; endl;    return 0;  } // main",
+        "output": "OK"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 假設有一個陣列 [5a, 2, 5b, 1]，其中 5a 和 5b 分別代表兩個值相同的元素。如果使用選擇排序，演算法可能會先找到數組中的最小值 1，然後將其與第一個 5a 交換。這導致了原本相同的兩個 5a 的相對位置發生了改變，排序後的結果可能是 [1, 2, 5b, 5a]，在穩定的排序演算法中，如果有兩個相等的元素，排序後它們的相對位置保持不變，而選擇排序會改變位置因此是非穩定。",
+        "output": "例子簡單扼要易懂。"
+    }
+]

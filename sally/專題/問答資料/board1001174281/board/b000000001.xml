@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:01:04" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174281</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-12-21 16:45:23</pt>
+  <poster>11027270</poster>
+  <realname>&#x738B;&#x6587;&#x7389;  </realname>
+  <email>Wen.wang2001@gmail.com</email>
+  <homepage> </homepage>
+  <subject>226. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&#x3002; </subject>
+  <content>&lt;p&gt;It depends of what method you want to do. It can be a class to help you build a binary search tree, a structure&amp;nbsp;to help you hold your information and using the linked list method. Nevertheless, no matter what you choose,&amp;nbsp;their&amp;nbsp;process is somewhat the same.&amp;nbsp;&lt;br /&gt;&#xD;
+To delete a node in a binary search tree you have to point in what direction it may be:&amp;nbsp;right or left. When you found the node you want to delete, you just have to declare it null and then that node will be lost in the abyss forever. No take backs.&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>55</hit>
+  <lang>1</lang>
+</data>

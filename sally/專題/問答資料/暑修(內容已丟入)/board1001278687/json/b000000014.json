@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-23 15:32:18",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答225",
+        "content": "<p>225. 已排序資料如何建立一棵平衡的二元搜尋樹？</p>\r\n\r\n<p>當要建立一棵平衡的二元搜尋樹時，對於已經排序的數據陣列，最簡單的方法是遞迴地將中間元素作為根節點，然後將數組的左半部分和右半部分分別作為左子樹和右子樹。這樣的方法確保了每個子樹的高度差不會超過1，從而保證整棵樹是平衡的。假設我們有一個已排序的資料陣列：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]。為了建立平衡的二元搜尋樹，我們可以採用以下步驟：</p>\r\n\r\n<p>第一步驟選取陣列中間的元素，即5，作為根節點。</p>\r\n\r\n<p>第二步驟將陣列分為左半部分和右半部分：[1, 2, 3, 4] 和 [6, 7, 8, 9, 10]。</p>\r\n\r\n<p>第三步驟遞迴地重複步驟1和步驟2，分別選取左半部分中間的元素 2 作為5的左子節點，右半部分中間的元素 8 作為5的右子節點。</p>\r\n\r\n<p>最後繼續遞迴地重複以上步驟，直到建立完整棵平衡的二元搜尋樹。</p>\r\n\r\n<p>得到下面平衡的二元搜尋樹</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br />\r\n&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp; \\<br />\r\n&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 8<br />\r\n&nbsp; / \\&nbsp;&nbsp; / \\<br />\r\n&nbsp;1&nbsp;&nbsp; 3 6&nbsp;&nbsp; 9<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \\&nbsp;&nbsp; \\<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 10<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7</p>\r\n\r\n<p>這就是使用只有新增節點函數的方式來建立平衡的二元搜尋樹的步驟。通過這種方法，你可以確保二元搜尋樹保持平衡，並在插入新節點時保持平衡性。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "22",
+        "lang": "1"
+    }
+}

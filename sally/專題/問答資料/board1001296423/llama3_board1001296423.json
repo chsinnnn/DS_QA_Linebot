@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例說明單一佇列模擬如何計算平均等候時間waiting time\n\n計算平均waiting time，需要的資料為：\n\n\n\t進入隊伍的時間\n\t服務時間\n\t \n\n\n要計算平均等待時間，可以將所有人放進Queue，應用 Queue 中 first in, first out 的概念。\n將前一位結束服務的時間減去進入Queue的時間則為當前節點的等待時間，進入服務則移除front，最後再將所有等待時間平均則為答案。\n\n假設 今天有4個客戶：\n\n\n\t進入時間0分 服務時間5分\n\t進入時間2分 服務時間10分\n\t進入時間6分 服務時間2分\n\t進入時間9分 服務時間5分\n\n\n 則以上可得知\n\n1號 進入時無需等待（因為前面沒人）因此waiting time 為 0。\n\n2號 進入queue時為2分 前一位服務結束時間為 0+5  則 waiting time 為 5-2 = 3。\n\n3號 進入queue時間為6分 前一位服務結束時間為 5+10 （前面開始時間＋服務時間） 則waiting time為 15 - 6 = 9。\n\n4號 進入queue時間為9分 前一位服務結束時間為 15+2（前面開始時間＋服務時間） 則waiting time為 17-9 = 8。\n\n將所有人的waiting time平均後為平均等待時間 (0+3+9+8) / 4 = 5。\n\nAns: 5分鐘",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 提出二種選擇佇列的策略，並舉例比較二者。\n\n以下假設有三個服務 a b c 分別為 100秒 10秒 10秒\n\n\n\tFirst In, First Out (FIFO)\n\t\n\t\t\n\t\t先進的先服務\n\t\t\n\t\t\n\t\t優點是很公平先來先做\n\t\t\n\t\t\n\t\t缺點是 如果用以上假設 這樣平均週期會很長 100+110+120\n\t\t\n\t\n\t\n\t\n\tShortest Job First (SJF)\n\n\t\n\t\t\n\t\t最短的先服務\n\t\t\n\t\t\n\t\t優點是可以減少平均等待時間 (0+10+100) / 3\n\t\t\n\t\t\n\t\t缺點是相較於FIFO比較不公平\n\t\t\n\t\n\t\n\n\n此外，這些策略也同時應用在CPU Scheduling，因為在一台電腦上有眾多的 process ，\n\n每一種策略都會影響電腦在同時處理每一個 process 的方式。",
+        "output": "題意是選擇佇列，並非佇列內的優先次序。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 202. 舉例說明單一佇列模擬如何計算平均佇列長度queue length。\n \n\n\n\tAverage queue length計算方法：\n\t計算每個任務抵達時的排隊長度(等待數量)， 以Cn表示第n個任務抵達時的排隊長度\n\tAverage queue length = (C1+C2+&hellip;+Cn) / n\n\n\n\n以下表進行模擬：\n\n\n\t\n\t\t\n\t\t\tid\n\t\t\tArrival\n\t\t\tDuration\n\t\t\tDeparture\n\t\t\n\t\n\t\n\t\t\n\t\t\tA\n\t\t\t20\n\t\t\t5\n\t\t\t?\n\t\t\n\t\t\n\t\t\tB\n\t\t\t22\n\t\t\t4\n\t\t\t?\n\t\t\n\t\t\n\t\t\tC\n\t\t\t23\n\t\t\t2\n\t\t\t?\n\t\t\n\t\t\n\t\t\tD\n\t\t\t29\n\t\t\t4\n\t\t\t?\n\t\t\n\t\n\n\ntime = 20:\nA arrived\n\n\n\t\n\t\t\n\t\t\tid\n\t\t\tArrival\n\t\t\tDeparture\n\t\t\n\t\n\t\n\t\t\n\t\t\tA\n\t\t\t20\n\t\t\t20+5 = 25\n\t\t\n\t\n\n\nC1 = 0\n\ntime = 22:\nB Arrived\n\n\n\t\n\t\t\n\t\t\tid\n\t\t\tArrival\n\t\t\tDeparture\n\t\t\n\t\n\t\n\t\t\n\t\t\tA\n\t\t\t20\n\t\t\t20+5 = 25\n\t\t\n\t\t\n\t\t\tB\n\t\t\t22\n\t\t\t25+4 = 29\n\t\t\n\t\n\n\nC2 = 1\n\ntime = 23:\nC Arrived\n\n\n\t\n\t\t\n\t\t\tid\n\t\t\tArrival\n\t\t\tDeparture\n\t\t\n\t\n\t\n\t\t\n\t\t\tA\n\t\t\t20\n\t\t\t20+5 = 25\n\t\t\n\t\t\n\t\t\tB\n\t\t\t22\n\t\t\t25+4 = 29\n\t\t\n\t\t\n\t\t\tC\n\t\t\t23\n\t\t\t29+2 = 31\n\t\t\n\t\n\n\nC3 = 2\n\ntime = 29:\nA Departure (time = 25)\nB Departure (time = 29)\nD Arrived\n\n\n\t\n\t\t\n\t\t\tid\n\t\t\tArrival\n\t\t\tDeparture\n\t\t\n\t\n\t\n\t\t\n\t\t\tC\n\t\t\t23\n\t\t\t29+2 = 31\n\t\t\n\t\t\n\t\t\tD\n\t\t\t29\n\t\t\t31+4 = 35\n\t\t\n\t\n\n\nC4 = 1\n\nAverage queue length = (C1+C2+C3+C4) / 4 = (0+1+2+1) / 4 = 1",
+        "output": "Excellent!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例說明多重佇列如何模擬，須指出選擇佇列的策略。\n\nFCFS(First Come First Served):\n\n先到先做，缺點是CPU利用度低\n\nRound Robin(RR):\n\nProcess還是先到先做，但執行時間固定，適合做分時系統(Time sharing)\n\n如果時間量太長就如同FCFS\n\n如果時間量太短，CPU會切換得太頻繁導致效率變差\n\n多佇列排程：\n\n每個Process都有優先度，依優先度來分類到不同的queue，高優先度採用Round Robin策略排程，而低的可能使用FCFS\n\n每當接到新任務時，先處理高優先度的任務，接著處理低的\n\n但這種方式有個缺點是如果高優先度的Process一直佔著CPU會造成Starvation(低優先度永遠無法被執行)\n\n解決方法是加上計時(Aging)功能，來調整佇列優先度，如果一直沒執行到優先度就增加，如果執行時間太久就降低\n\n一個例子是Foreground Process與Background Process\n\nForeground Process需要高優先度，採用RR策略\n\nBackground Process則可使用FCFS",
+        "output": "答非所問，題意是如何選擇佇列，RR或FCFS是佇列內的優先次序。"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例說明雙重佇列如何模擬，須指出選擇佇列的策略。\n\n雙重佇列（Double Queue）是一種將作業或任務分為兩個佇列的調度策略，每個佇列可能使用不同的調度策略。這種方式通常用於更有效地處理不同類型的作業，例如優先級高的作業和優先級低的作業。\n\n以下是一個簡單的雙重佇列模擬的例子，其中包含兩個佇列，分別使用先到先服務（FCFS）和最短作業優先（SJN）策略。\n\n1.高優先級佇列（Priority Queue，使用最短作業優先（SJN）：\n   Process   Arrival Time   Burst Time   Priority\n   P1        0              8            High\n   P2        1              4            High\n   P3        2              6            High\n   \n\n2. 低優先級佇列（Regular Queue），使用先到先服務（FCFS）：\n   Process   Arrival Time   Burst Time   Priority\n   P4        3              2            Low\n   P5        4              5            Low\n   P6        5              3            Low\n\n這裡，高優先級佇列的作業使用 SJN 策略，即最短作業優先，而低優先級佇列的作業使用 FCFS 策略，即先到先服務。\n\n執行順序可能如下：\n1. SJN 選擇高優先級佇列中最短作業 P1，執行 8 單位時間。\n2. FCFS 選擇低優先級佇列中最早到達的作業 P4，執行 2 單位時間。\n3. FCFS 選擇低優先級佇列中最早到達的作業 P5，執行 5 單位時間。\n4. FCFS 選擇低優先級佇列中最早到達的作業 P6，執行 3 單位時間。\n\n這樣交替執行高優先級佇列和低優先級佇列，直到所有作業完成。\n\n這種雙重佇列的模擬可以更有效地處理不同優先級的作業，確保高優先級的作業優先處理，同時保證低優先級的作業也有機會執行。",
+        "output": "Excellent!\n\nalthough it&#39;s complicated..."
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例說明單一佇列模擬如何計算平均等候時間waiting time。\n\n假設我們有一家餐廳，顧客需要在餐廳的櫃檯等待點餐，然後等待他們的餐點。\n\n\n\t\n\t設定模擬參數： 首先，我們需要設定一些模擬的參數，例如顧客的到達速率（arrival rate）和服務速率（service rate）。到達速率表示每個顧客到達的平均速度，服務速率表示櫃檯每分鐘能處理的訂單數量。\n\t\n\t\n\t生成顧客到達時間： 使用到達速率生成一系列顧客到達的時間點。這可以使用隨機數生成器，符合柏努利分佈或泊松分佈的方法。\n\t\n\t\n\t模擬排隊過程： 顧客到達後，如果櫃檯空閒，則馬上接受服務；如果櫃檯忙碌，則加入等待佇列。在等待過程中，每個顧客的等待時間不斷增加。\n\t\n\t\n\t計算每個顧客的等候時間： 等待時間是指顧客從到達到開始接受服務之間的時間。在模擬中，我們可以記錄每個顧客的等待時間。\n\t\n\t\n\t計算平均等候時間： 最後，將所有顧客的等待時間加總，然後除以顧客的總數，得到平均等候時間。",
+        "output": "舉例說明 ... 如何計算 ...\n\nNo example? No calculation?"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 舉例說明單一佇列模擬如何計算平均等候時間waiting time。\n\n平均等候時間為每個事件進入佇列之「開始執行時間減抵達時間」之平均值。\n\n如有以下四筆資料：\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t事件編號\n\t\t\t\n\t\t\t\n\t\t\t抵達時間\n\t\t\t\n\t\t\t\n\t\t\t工作耗時\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t1\n\t\t\t\n\t\t\t\n\t\t\t20\n\t\t\t\n\t\t\t\n\t\t\t5\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t2\n\t\t\t\n\t\t\t\n\t\t\t22\n\t\t\t\n\t\t\t\n\t\t\t4\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t3\n\t\t\t\n\t\t\t\n\t\t\t23\n\t\t\t\n\t\t\t\n\t\t\t2\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t4\n\t\t\t\n\t\t\t\n\t\t\t30\n\t\t\t\n\t\t\t\n\t\t\t3\n\t\t\t\n\t\t\n\t\n\n\n我們可以得知：\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t事件編號\n\t\t\t\n\t\t\t\n\t\t\t開始執行時間\n\t\t\t\n\t\t\t\n\t\t\t離開時間\n\t\t\t\n\t\t\t\n\t\t\t等候時間\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t1\n\t\t\t\n\t\t\t\n\t\t\t20\n\t\t\t\n\t\t\t\n\t\t\t25\n\t\t\t\n\t\t\t\n\t\t\t0\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t2\n\t\t\t\n\t\t\t\n\t\t\t25\n\t\t\t\n\t\t\t\n\t\t\t29\n\t\t\t\n\t\t\t\n\t\t\t25-22=3\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t3\n\t\t\t\n\t\t\t\n\t\t\t29\n\t\t\t\n\t\t\t\n\t\t\t31\n\t\t\t\n\t\t\t\n\t\t\t29-23=6\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t4\n\t\t\t\n\t\t\t\n\t\t\t31\n\t\t\t\n\t\t\t\n\t\t\t34\n\t\t\t\n\t\t\t\n\t\t\t31-30=1\n\t\t\t\n\t\t\n\t\n\n\n平均等候時間：(0+3+6+1)/4=2.5。",
+        "output": "Good!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time。\n\nOID    Arrival    Duration    TimeOut\n101    3    9    12\n112    5    6    13\n103    6    7    15\n106    6    9    17\n108    6    8    18\n\n101 delay 0\n\n108 delay 0=(6-6)\n\n112 delay 8=(13-5)\n\n103 delay 9=(15-6)\n\n106 delay 11=(17-6)\n\n(0+0+8+9+11)/5 = 5.6",
+        "output": "Excellent!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 201. 舉例說明單一佇列模擬如何計算平均等候時間waiting time。\n\n假設一群工作模擬排序如下:\n\nOID    Arrival    Duration    TimeOut\n101    3            9                 12\n112    5            6                 13\n103    6            7                 15\n106    6            9                 17\n108    6            8                 18\n105    10          6                 20\n104    11          9                 22\n\n101 -&gt; 無需等待，並能夠做完  -&gt; waiting time = 0\n\n112 -&gt; 出現時，排隊，並等待101做完，此時 t = 12，而112無法完成  -&gt; waiting time = 112的 timeout - arrival time = 13 - 5 = 8\n\n103 -&gt; 出現時，排隊，並等待112結束，此時 t = 13，而103無法完成  -&gt; waiting time = 103的 timeout - arrival time = 15 - 6 = 9\n\n106 -&gt; 出現時，排隊，並等待103結束，此時 t = 15，而106無法完成  -&gt; waiting time = 106的 timeout - arrival time = 17 - 6 = 11\n\n108 -&gt; 出現時，排隊，並等待106結束，此時 t = 17，而108無法完成  -&gt; waiting time = 108的 timeout - arrival time = 18 - 6 = 12\n\n105 -&gt; 出現時，排隊，並等待108結束，此時 t = 18，而105無法完成  -&gt; waiting time = 105的 timeout - arrival time = 20 - 10 = 10\n\n104-&gt; 出現時，排隊，並等待103結束，此時 t = 20，而104無法完成  -&gt; waiting time = 104的 timeout - arrival time = 22 - 11 = 9\n\n所以總共的等待時間為 : 59\n\n平均等待時間為: 59/7 約等於 8.42",
+        "output": "Excellent!"
+    },
+    {
+        "instruction": "請根據以下答案做出評論",
+        "input": "題目: \n答案: 共計8位同學得分。",
+        "output": ""
+    }
+]

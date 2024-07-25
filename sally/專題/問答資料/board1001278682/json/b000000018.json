@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:20",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278682",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-21 17:43:21",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答205",
+        "content": "<p><strong>提出二種選擇佇列的策略，並舉例比較二者</strong></p>\r\n\r\n<p><strong>在多重佇列模擬中，有許多選擇佇列的策略，這些策略會影響顧客加入哪個佇列的決定。以下提供兩種常見的選擇佇列策略並進行比較：</strong></p>\r\n\r\n<p><strong>最短佇列優先（Shortest Queue First）：</strong></p>\r\n\r\n<p><strong>策略：</strong></p>\r\n\r\n<p><strong>顧客選擇加入目前長度最短的佇列。</strong></p>\r\n\r\n<p><strong>比較：</strong></p>\r\n\r\n<p><strong>這種策略通常能夠獲得較好的整體平均等候時間，因為顧客會傾向加入正在處理較少顧客的佇列，從而降低等待時間。然而，這可能導致一些佇列總是處於忙碌狀態，而其他佇列則相對閒置。</strong></p>\r\n\r\n<p><strong>最優先（Priority）：</strong></p>\r\n\r\n<p><strong>策略：</strong></p>\r\n\r\n<p><strong>每個顧客都有一個優先級，顧客加入具有最高優先級的佇列。</strong></p>\r\n\r\n<p><strong>比較：</strong></p>\r\n\r\n<p><strong>這種策略可用於區分不同顧客類型或處理不同緊急程度的事務。例如，VIP顧客可能具有較高的優先級，而其他普通顧客則具有較低的優先級。這樣可以確保高優先級顧客能夠優先接受服務，但也可能導致低優先級顧客等待時間增加。</strong></p>\r\n\r\n<p><strong>比較示例：</strong></p>\r\n\r\n<p><strong>假設有一家醫院，有兩個診療區：A區和B區。使用最短佇列優先策略，每位病人會選擇加入目前患者較少的診療區。而使用最優先策略，優先級高的病人（例如急診病人）會優先加入A區進行治療，而其他普通病人則加入B區。</strong></p>\r\n\r\n<p><strong>最短佇列優先：假設有兩個診療區，A區佇列長度為5，B區佇列長度為3。一位病人到來，他會加入B區，因為B區的佇列較短。這樣可能使A區佇列持續增長，而B區則相對較快地處理掉顧客。</strong></p>\r\n\r\n<p><strong>最優先：假設有兩個診療區，一位VIP病人到來，他具有高優先級。不論A區和B區的佇列長度如何，他都會被分配到A區，優先接受治療。這樣確保了VIP病人能夠優先獲得治療，但也可能導致A區出現較長的等待時間。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

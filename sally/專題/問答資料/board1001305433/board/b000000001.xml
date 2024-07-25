@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:45" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305433</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-10-04 15:42:40</pt>
+  <poster>11127225</poster>
+  <realname>&#x8CF4;&#x678B;&#x4F51;  </realname>
+  <email>leolai325@gmail.com</email>
+  <homepage> </homepage>
+  <subject>116. &#x5C07;&#x5F8C;&#x5E8F;&#x5F0F;postfix&#x8F49;&#x524D;&#x5E8F;&#x5F0F;prefix&#xFF0C;&#x4E26;&#x8A73;&#x8FF0;&#x6B65;&#x9A5F;&#x3002;a b + c * d e + f * + w z + * </subject>
+  <content>&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F8C;&#x5E8F;&#x5F0F;&#x8F49;&#x524D;&#x5E8F;&#x5F0F;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5F9E;&#x5DE6;&#x908A;&#x958B;&#x59CB;&#x5C0B;&#x627E;&#x4E0D;&#x5728;&#x62EC;&#x865F;&#x5167;&#x7684;&#x904B;&#x7B97;&#x5B50;&#xFF0C;&#x5C07;&#x627E;&#x5230;&#x7684;&#x904B;&#x7B97;&#x5B50;&#x79FB;&#x52D5;&#x5230;&#x5176;&#x5DE6;&#x908A;&#x7684;&#x5169;&#x500B;&#x904B;&#x7B97;&#x5143;&lt;/span&gt;(&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6216;&#x8005;&#x5DF2;&#x88AB;&#x62EC;&#x865F;&#x7684;&#x5B50;&#x7B97;&#x5F0F;&lt;/span&gt;)&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x4E4B;&#x524D;&#xFF0C;&#x4E26;&#x52A0;&#x4E0A;&#x62EC;&#x865F;&#xFF0C;&#x76F4;&#x5230;&#x5F0F;&#x5B50;&#x5DF2;&#x770B;&#x5230;&#x6700;&#x53F3;&#x908A;&#x4E86;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x62EC;&#x865F;&#x79FB;&#x9664;&#x6389;&#x3002;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x53C3;&#x8003;&#x8CC7;&#x6599;&lt;/span&gt;: &lt;a href="https://magiclen.org/arithmetic/"&gt;https://magiclen.org/arithmetic/&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x539F;&#x5F0F;&lt;/span&gt;&amp;nbsp; = a b + c * d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( + a b ) c * d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( * ( + a b ) c ) d e + f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( * ( + a b ) c ) ( + d e ) f * + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( * ( + a b ) c ) ( * ( + d e ) f ) + w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) w z + *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) ( + w z ) *&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;= ( * ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) ( + w z ) )&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7C21;&#x5316;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&amp;nbsp; = * + * + a b c * d e f + w z&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>37</hit>
+  <lang>1</lang>
+</data>

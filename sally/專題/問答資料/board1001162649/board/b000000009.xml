@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:09" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162649</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2022-10-12 11:02:42</pt>
+  <poster>11027111</poster>
+  <realname>&#x984F;&#x9091;&#x5C91;  </realname>
+  <email>22692amy@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>120. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;doubly linked list&#x7684;&#x60C5;&#x5883; </subject>
+  <content>&lt;p&gt;&#x7576;&#x78B0;&#x5230;&#x7D04;&#x745F;&#x592B;&#x74B0;&#x554F;&#x984C;&#x6642;&#x5C31;&#x9069;&#x5408;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x4F86;&#x89E3;&#x6C7A;&#x554F;&#x984C;&#xFF0C;&#x7D04;&#x745F;&#x592B;&#x74B0;&#x7684;&#x73A9;&#x6CD5;: &#x6709;N&#x500B;&#x4EBA;&#x570D;&#x6210;&#x74B0;&#x578B;&#xFF0C;&#x5C07;&#x6BCF;&#x500B;&#x4EBA;&#x7DE8;&#x865F;1&#x81F3;N&#xFF0C;&#x5F9E;&#x7DE8;&#x865F;1&#x7684;&#x4EBA;&#x958B;&#x59CB;&#x50B3;&#x905E;&#x99AC;&#x9234;&#x85AF;&#x3002;M&#x6B21;&#x50B3;&#x905E;&#x5F8C;&#xFF0C;&#x6301;&#x6709;&#x99AC;&#x9234;&#x85AF;&#x7684;&#x4EBA;&#x9000;&#x51FA;&#x904A;&#x6232;&#xFF0C;&#x74B0;&#x7E2E;&#x5C0F;&#xFF0C;&#x63A5;&#x8457;&#x904A;&#x6232;&#x5F9E;&#x9000;&#x51FA;&#x8005;&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x4EBA;&#x7E7C;&#x7E8C;&#x9032;&#x884C;&#x904A;&#x6232;&#xFF0C;&#x6700;&#x7D42;&#x7559;&#x4E0B;&#x4F86;&#x7684;&#x4EBA;&#x7372;&#x52DD;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x96A8;&#x8457;&#x50B3;&#x905E;&#x6B21;&#x6578;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x904B;&#x7B97;&#x6642;&#x9593;&#x7684;&#x8907;&#x96DC;&#x5EA6;&#x70BA;O(m * n)&#x3002;&#x70BA;&#x4E86;&#x6E1B;&#x5C11;&#x904B;&#x7B97;&#x7684;&#x8907;&#x96DC;&#x5EA6;&#xFF0C;&#x53EF;&#x4EE5;&#x4EE4;&#x50B3;&#x905E;&#x6B21;&#x6578;&#x5C0F;&#x65BC;&#x7576;&#x524D;&#x4EBA;&#x6578;&#x7684;&#x4E00;&#x534A;&#x6642;&#x5C31;&#x6B63;&#x5411;&#x50B3;&#x905E;&#xFF0C;&#x7576;&#x50B3;&#x905E;&#x6B21;&#x6578;&#x5927;&#x65BC;&#x7576;&#x524D;&#x4EBA;&#x6578;&#x7684;&#x4E00;&#x534A;&#x6642;&#x5C31;&#x53CD;&#x5411;&#x50B3;&#x905E;&#x3002;&#x6709;&#x8FA6;&#x6CD5;&#x5BE6;&#x73FE;&#x9019;&#x500B;&#x505A;&#x6CD5;&#x7684;&#x5C31;&#x662F;doubly linked&#xFF0C;&#x56E0;&#x70BA;&#x5B83;&#x5177;&#x6709;&#x524D;&#x5411;&#x6307;&#x6A19;(prev)&#x548C;&#x5F8C;&#x5411;&#x6307;&#x6A19;(next)&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x6B63;&#x5411;&#x50B3;&#x905E;&#x6216;&#x53CD;&#x5411;&#x50B3;&#x905E;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>25</hit>
+  <lang>1</lang>
+</data>

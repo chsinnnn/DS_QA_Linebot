@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:45",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162653",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2022-12-01 04:18:39",
+        "poster": "11027119",
+        "realname": "秦嘉昇",
+        "email": "c20021219@gmail.com",
+        "homepage": null,
+        "subject": "206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。",
+        "content": "<p style=\"margin-left:0cm; margin-right:0cm\"><span style=\"color:black\"><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">可以提前結束的</span></span></span><span style=\"color:black\"><span style=\"font-family:Arial,sans-serif\"><span style=\"font-size:10.0pt\">bubble sort</span></span></span><span style=\"color:black\"><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">，新增了一個判斷，若</span></span></span><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">未排序<span style=\"color:black\">的資料中，比對時都沒有進行</span>交換位，則</span></span><span style=\"font-family:Arial,sans-serif\"><span style=\"font-size:10.0pt\">change = false </span></span><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">，<span style=\"color:black\">代表資料已排序好，提早結束排序。</span></span></span></p>\r\n\r\n<p style=\"margin-left:0cm; margin-right:0cm\"><span style=\"color:black\"><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">由圖中可知改良版的排序結果並沒有與原本</span></span></span><span style=\"color:black\"><span style=\"font-family:Arial,sans-serif\"><span style=\"font-size:10.0pt\">bubble sort</span></span></span><span style=\"color:black\"><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">的結果有所不同，但</span></span></span><span style=\"color:black\"><span style=\"font-family:Arial,sans-serif\"><span style=\"font-size:10.0pt\">times(</span></span></span><span style=\"color:black\"><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">進入迴圈次數</span></span></span><span style=\"color:black\"><span style=\"font-family:Arial,sans-serif\"><span style=\"font-size:10.0pt\">)</span></span></span><span style=\"color:black\"><span style=\"font-family:新細明體,serif\"><span style=\"font-size:10.0pt\">卻能夠比原本少，也表示效率提升。</span></span></span></p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027119/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-12-01%20041310.png\" style=\"height:1002px; width:1864px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "50",
+        "lang": "1"
+    }
+}

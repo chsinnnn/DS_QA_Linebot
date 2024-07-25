@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:02",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162648",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2022-10-10 23:12:04",
+        "poster": "11027101",
+        "realname": "李庭妤",
+        "email": "timi920714@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>以下是程式碼:</p>\r\n\r\n<p>#include&lt;iostream&gt;</p>\r\n\r\n<p>using namespace std ;</p>\r\n\r\n<p>void foo1(int a){<br />\r\n&nbsp; &nbsp; a = a + 1 ; &nbsp; &nbsp;<br />\r\n}//function1</p>\r\n\r\n<p>void foo2(int &amp;a){<br />\r\n&nbsp; &nbsp; a = a + 1 ;<br />\r\n}//function2</p>\r\n\r\n<p>int main(){<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp; &nbsp; int a = 10;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; foo1(a);<br />\r\n&nbsp; &nbsp; cout &lt;&lt; a &lt;&lt; endl;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; foo2(a);<br />\r\n&nbsp; &nbsp; cout &lt;&lt; a &lt;&lt; endl;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>-------------</p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">call by value:</span></p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">指的是傳值，由於是main裡面的變數被複製到程式去，所以這兩個變數是不同記憶體空間的，所以在程式裡執行過後的結果不會影響到原本main主程式裡的數值。</span></p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">Call by reference: </span></p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">會把記憶體位置傳到另一個記憶位置上，將參數以數值的方式傳遞到呼叫此參數的程式。</span></p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">int a; // 宣告一個整數變數 a</span></p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">int &amp;a&nbsp;= n; // 宣告 a&nbsp;是 n&nbsp;的</span></p>\r\n\r\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\">這個 &amp; 記號為 reference operator (參考運算子)，他的意義代表 a&nbsp;與 n&nbsp;會使用到同一塊記憶體位址， a&nbsp;就可以當成 n&nbsp;的別名來使用。無論執行 a=100; 或 n=100; 都是同一塊記憶體位址被寫入100。</span></p>\r\n\r\n<p>下圖為結果:</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027101/images/111.png\" style=\"height:213px; width:699px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "36",
+        "lang": "1"
+    }
+}

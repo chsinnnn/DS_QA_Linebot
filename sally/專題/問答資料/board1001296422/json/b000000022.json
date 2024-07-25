@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000022.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000022",
+        "site": "1000110001",
+        "pt": "2023-11-01 21:03:47",
+        "poster": "11127112",
+        "realname": "莊沛儒",
+        "email": "a0922166067@gmail.com",
+        "homepage": null,
+        "subject": "128",
+        "content": "<p><span style=\"font-size:14px\">128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。</span></p>\r\n\r\n<p><span style=\"font-size:12px\">1.將2存入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">2.將4存入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">3.將6存入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">4.因為遇到運算元&#39;*&#39;，所以取堆疊最上面的兩個數字(4和6)，並刪除這兩個最上面的數字，之後將取出的兩個數字相乘，並將結果放入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">5.因為遇到運算元&#39;+&#39;，所以取堆疊最上面的兩個數字(24和2)，並刪除這兩個最上面的數字，之後將取出的兩個數字相加，並將結果放入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">6.將7放入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">7.將5放入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">8.因為遇到運算元&#39;-&#39;，所以取堆疊最上面的兩個數字(5和7)，並刪除這兩個最上面的數字，之後將取出的兩個數字由後取出的減先取出的，並將結果放入堆疊中</span></p>\r\n\r\n<p>9.<span style=\"font-size:12px\">因為遇到運算元&#39;*&#39;，所以取堆疊最上面的兩個數字(2和26)，並刪除這兩個最上面的數字，之後將取出的兩個數字相乘，並將結果放入堆疊中</span></p>\r\n\r\n<p><span style=\"font-size:12px\">10.發現已經沒有字符了，所以堆疊中目前的數字即為解</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

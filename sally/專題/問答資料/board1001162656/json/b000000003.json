@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:06:21",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162656",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-01-02 02:07:30",
+        "poster": "11027142",
+        "realname": "林蕙郁",
+        "email": "tiffanylin0914@gmail.com",
+        "homepage": null,
+        "subject": "226. 舉例說明如何為二元搜尋樹刪除節點。",
+        "content": "<p>需要先判斷是三種case的哪一種再去做刪除的動作。</p>\r\n\r\n<p>Case1: 沒有子節點，我們可以直接刪掉這個節點，假如是刪掉父節點的右節點，要然後將其父節點的右節點指向NULL。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027142/images/IMG_0260.jpg\" style=\"height:249px; width:400px\" /></p>\r\n\r\n<p>Case2: 如果要刪除的節點有一個子節點，那我們要將此節點的父節點指向要刪除節點的子節點，然後再刪除。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027142/images/IMG_0261.jpg\" style=\"height:259px; width:400px\" /></p>\r\n\r\n<p>Case3:節點有左右兩邊的子樹，如果要刪除的節點是在左邊，則取其子樹的最右邊(也就是最大值)來替代。</p>\r\n\r\n<p>反之，如果要刪除的節點是在右邊，則取其子樹的最左邊(最小值)來替代。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027142/images/IMG_0262.jpg\" style=\"height:272px; width:400px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "25",
+        "lang": "1"
+    }
+}

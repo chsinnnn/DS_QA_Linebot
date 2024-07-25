@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2022-10-16 16:32:59",
+        "poster": "11027233",
+        "realname": "曾品元",
+        "email": "daniel29348679@gmail.com",
+        "homepage": null,
+        "subject": "119. 寫C++程式碼說明刪除鏈結串列linked list第3個節點。",
+        "content": "<p>#include &lt;bits/stdc++.h&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>int main()<br />\r\n{<br />\r\n&nbsp; &nbsp; list&lt;int&gt; intlist;<br />\r\n&nbsp; &nbsp; for(int i=0;i&lt;5;i++)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; intlist.push_back(i);<br />\r\n&nbsp; &nbsp; for(auto i:intlist) //印出初始陣列<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout&lt;&lt;i&lt;&lt;&quot; &quot;;<br />\r\n&nbsp; &nbsp; cout&lt;&lt;endl;</p>\r\n\r\n<p>&nbsp; &nbsp; intlist.erase(next(intlist.begin(),2));</p>\r\n\r\n<p>&nbsp; &nbsp; for(auto i:intlist) //印出修改後陣列<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout&lt;&lt;i&lt;&lt;&quot; &quot;;<br />\r\n}</p>\r\n\r\n<p>輸出</p>\r\n\r\n<p>0 1 2 3 4&nbsp;<br />\r\n0 1 3 4&nbsp;<img alt=\"\" src=\"/user/1/1/11027233/images/Image%203.png\" style=\"height:573px; width:1104px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

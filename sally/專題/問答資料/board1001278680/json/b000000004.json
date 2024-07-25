@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-07-11 18:40:21",
+        "poster": "10827128",
+        "realname": "林鑫宏",
+        "email": "shawn140802@gmail.com",
+        "homepage": null,
+        "subject": "123. 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。",
+        "content": "<p>我會在這個linked list的資料結構中寫一個建構子，可以新建一個串列並在當中賦值成目標串列的值</p>\r\n\r\n<p>例:&nbsp;</p>\r\n\r\n<p>class Node {<br />\r\n&nbsp; &nbsp; int data;<br />\r\n&nbsp; &nbsp; Node* next;<br />\r\n}</p>\r\n\r\n<p>class LinkedList{</p>\r\n\r\n<p>&nbsp; // 其他member</p>\r\n\r\n<p>&nbsp; Node* CopyList(Node* head) {<br />\r\n&nbsp; &nbsp; &nbsp; if (head == nullptr) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return null;<br />\r\n&nbsp; &nbsp; &nbsp; };</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; Node* current = head;<br />\r\n&nbsp; &nbsp; &nbsp; Node* newHead = new Node(head-&gt;data);<br />\r\n&nbsp; &nbsp; &nbsp; Node* newCurrent = newHead;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; while (current-&gt;next != null) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; current = current-&gt;next;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; newCurrent -&gt;next = new Node(current-&gt;data);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; newCurrent = newCurrent -&gt;next;<br />\r\n&nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; return newHead ;<br />\r\n&nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; Node* clonedHead = cloneLinkedList(head); // 複製呼叫法</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

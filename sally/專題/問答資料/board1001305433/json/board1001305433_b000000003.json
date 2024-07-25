@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:45",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305433",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-10-04 18:16:41",
+        "poster": "11020117",
+        "realname": "林子皓",
+        "email": "ke951736@gmail.com",
+        "homepage": null,
+        "subject": "117. 寫C++程式碼說明傳址呼叫call by address。",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p><br />\r\nvoid square(int *numPtr) {<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; *numPtr = (*numPtr) * (*numPtr);<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int number = 5;</p>\r\n\r\n<p>&nbsp; &nbsp; std::cout &lt;&lt; &quot;Before function call: &quot; &lt;&lt; number &lt;&lt; std::endl;</p>\r\n\r\n<p>&nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; square(&amp;number);</p>\r\n\r\n<p>&nbsp; &nbsp; std::cout &lt;&lt; &quot;After function call: &quot; &lt;&lt; number &lt;&lt; std::endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}<br />\r\n&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

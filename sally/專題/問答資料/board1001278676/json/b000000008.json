@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-07-05 18:33:43",
+        "poster": "10924326",
+        "realname": "吳英睿",
+        "email": "incaray901228@gmail.com",
+        "homepage": null,
+        "subject": "搶答101",
+        "content": "<p>遞迴就是將一個很大的問題藉由不斷呼叫函式簡化成許多小問題，必須設置兩個條件，一個是重複呼叫一個是跳出執行</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "18",
+        "lang": "1"
+    }
+}

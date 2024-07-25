@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:14",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162650",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2022-10-25 16:01:38",
+        "poster": "11027144",
+        "realname": "陳佳音",
+        "email": "crechessiissii@gmail.com",
+        "homepage": null,
+        "subject": "122. 寫C++程式碼說明傳參考呼叫call by reference",
+        "content": "<p>以下為程式碼<img alt=\"\" src=\"/user/1/1/11027144/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-25%20155336.jpg\" style=\"height:383px; width:800px\" /></p>\r\n\r\n<p>call by reference: 把所要引用的位置複製給function的參數，兩者的地址是相同的，因此對function裡的x的改變其實就是對main中的x的改變，因此function的執行會影響到main裡面的數值。</p>\r\n\r\n<p>以下是執行結果，在呼叫function之後，main的值會受到影響，但main和function所使用的參數的記憶體位置是相同的。<img alt=\"\" src=\"/user/1/1/11027144/images/1.jpg\" style=\"height:62px; width:800px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

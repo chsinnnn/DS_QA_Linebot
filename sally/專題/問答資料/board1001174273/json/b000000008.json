@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:22",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174273",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2022-10-10 13:46:39",
+        "poster": "11027251",
+        "realname": "陳冠蘋",
+        "email": "tanya0920617@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>call by value<span style=\"font-family:新細明體,serif\">引用變數數值而</span>call by reference<span style=\"font-family:新細明體,serif\">引用變數本身，當含有</span>call by value<span style=\"font-family:新細明體,serif\">參數的函數被呼叫時，</span> <span style=\"font-family:新細明體,serif\">該變數數值會被複製，函數只能改動複製後的值。而</span>call by reference<span style=\"font-family:新細明體,serif\">則不複製，與主程式變數使用相同的記憶體位置。</span></p>\r\n\r\n<p>call by value <span style=\"font-family:新細明體,serif\">因為要複製參數的值，在呼叫上會花較多時間，影響效能，但可保護主程式的值不被任意更改。</span></p>\r\n\r\n<p>call by reference -&gt; <span style=\"font-family:新細明體,serif\">與</span>call by value <span style=\"font-family:新細明體,serif\">相比較不影響效能，但有時並不希望主程式的值被更動。</span></p>\r\n\r\n<p># include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>void RefAndVal( int &amp; ref, int val ) {<br />\r\n&nbsp;&nbsp; &nbsp;ref = ref * 2;<br />\r\n&nbsp;&nbsp; &nbsp;val = val * 2;<br />\r\n} // ByReference</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp; &nbsp;int ref = 5 , val = 5;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;Before : &quot; &lt;&lt; ref &lt;&lt; endl;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;After call by reference : &quot; &lt;&lt; ref &lt;&lt; endl;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;After call by value : &quot; &lt;&lt; val &lt;&lt; endl;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;return 0;<br />\r\n} // main</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\"><img alt=\"\" src=\"/user/1/1/11027251/images/%E5%9C%96%E7%89%871.png\" style=\"height:96px; width:371px\" /></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "40",
+        "lang": "1"
+    }
+}

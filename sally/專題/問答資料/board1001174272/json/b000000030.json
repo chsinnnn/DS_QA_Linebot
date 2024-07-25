@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000030.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000030",
+        "site": "1000110001",
+        "pt": "2022-10-04 15:20:02",
+        "poster": "11027262",
+        "realname": "鐘聿亭",
+        "email": "shenyao0214@gmail.com",
+        "homepage": null,
+        "subject": "110. 作業二靜態陣列和動態陣列有何差異？指出其優缺點。*",
+        "content": "<p><span style=\"font-family:新細明體,serif\">靜態陣列：</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"font-family:新細明體,serif\">優點：可以快速訪問資料、系統會自主釋放記憶體空間。</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"font-family:新細明體,serif\">缺點：自由度低，在刪除或加入資料時很麻煩，需要移動大量資料，且使用較無彈性，事先定義固定的長度，空間配置過多會浪費過少會不夠使用。</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">動態陣列：</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"font-family:新細明體,serif\">優點：自由度高，能簡單新增和刪除元素，且有彈性度，需要時再索取，能有效率的使用空間。</span></p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"font-family:新細明體,serif\">缺點：需要自行釋放記憶體空間。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

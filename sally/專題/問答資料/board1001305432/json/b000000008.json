@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:36",
+        "@type": "post",
+        "@filename": "b000000008.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305432",
+        "node": "000000008",
+        "site": "1000110001",
+        "pt": "2023-10-05 20:25:11",
+        "poster": "11127207",
+        "realname": "楊竣傑",
+        "email": "jacky115526@gmail.com",
+        "homepage": null,
+        "subject": "111. 寫出C++程式碼說明傳值呼叫call by value。",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std ;</p>\r\n\r\n<p>void CallByValue( int i, int k ) {<br />\r\n&nbsp;&nbsp; &nbsp;i = i + 100 ;<br />\r\n&nbsp;&nbsp; &nbsp;k = k * k + 20 ;<br />\r\n&nbsp;&nbsp; &nbsp;i = i + k ; &nbsp;// 希望回傳的值是處理過後的i加上k&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp; &nbsp;int i = 2 ;<br />\r\n&nbsp;&nbsp; &nbsp;int k = 4 ;<br />\r\n&nbsp;&nbsp; &nbsp;CallByValue( i, k ) ; // 因為是void 所以值不會回傳&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; i &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;return 0 ;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

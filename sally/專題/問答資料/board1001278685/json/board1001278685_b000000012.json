@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-22 13:58:39",
+        "poster": "06005635",
+        "realname": "黃博元",
+        "email": "maruko1mjw@yahoo.com.tw",
+        "homepage": null,
+        "subject": "搶答217",
+        "content": "<p>題目 :&nbsp;舉例解說快速排序quick sort是否穩定stable。</p>\r\n\r\n<p>答案 :&nbsp;</p>\r\n\r\n<p>快速排序（Quick Sort）是一種常見的排序算法，它是一種不穩定（Unstable）的排序算法。</p>\r\n\r\n<p>穩定性在排序算法中的意思是，當兩個相等的元素在排序前後的相對位置保持不變，那麼這個排序算法就被認為是穩定的。換句話說，如果排序算法對於相等元素的處理是保持它們原本的相對順序，則稱其為穩定的。</p>\r\n\r\n<p>快速排序在排序的過程中，通過分割數列並交換元素的位置，使得比基準元素小的元素移動到左邊，比基準元素大的元素移動到右邊，這個過程中會破壞相等元素的原始相對順序。換句話說，快速排序會導致相等元素之間的相對位置改變，因此它是一個不穩定的排序算法。</p>\r\n\r\n<p>舉例：使用數列 [<span style=\"color:#ff0000\">3</span>, 2, 4, 1, 3] 進行快速排序的步驟如下：</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p>選擇基準元素：假設選擇第一個元素 <span style=\"color:#ff0000\">3</span> 為基準元素。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>將數列進行分割，小於基準元素的數移到左邊，大於基準元素的數移到右邊。 分割後的數列：[2, 1, <span style=\"color:#ff0000\">3</span>, 4, 3]</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>遞迴地對左右兩邊的子數列進行快速排序。</p>\r\n\r\n\t<p>遞迴處理左子數列 [2, 1]：</p>\r\n\r\n\t<ul>\r\n\t\t<li>選擇基準元素：選擇第一個元素 2 為基準元素。</li>\r\n\t\t<li>分割後的數列：[1, 2]</li>\r\n\t\t<li>排序完成。</li>\r\n\t</ul>\r\n\r\n\t<p>遞迴處理右子數列 [4, 3]：</p>\r\n\r\n\t<ul>\r\n\t\t<li>選擇基準元素：選擇第一個元素 4 為基準元素。</li>\r\n\t\t<li>分割後的數列：[3, 4]</li>\r\n\t\t<li>排序完成。</li>\r\n\t</ul>\r\n\t</li>\r\n</ol>\r\n\r\n<p>最終結果為：[1, 2, <span style=\"color:#ff0000\">3</span>, 3, 4]</p>\r\n\r\n<p>數列 [<span style=\"color:#ff0000\">3</span>, 2, 4, 1, 3] 經過快速排序後，由小到大的排序結果為 [1, 2, <span style=\"color:#ff0000\">3</span>, 3, 4]。</p>\r\n\r\n<p>兩個3的相對位置變了,表示快速排序quick sort不是穩定stable。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "18",
+        "lang": "1"
+    }
+}

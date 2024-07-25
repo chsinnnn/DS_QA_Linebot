@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:43",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305436",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-11-26 17:56:31",
+        "poster": "11127232",
+        "realname": "林鈺宸",
+        "email": "sam179851@gmail.com",
+        "homepage": null,
+        "subject": "203. 舉例說明雙重佇列如何模擬，須指出選擇佇列的策略。",
+        "content": "<p>假設有queue1跟queue2兩條佇列</p>\r\n\r\n<p>佇列的選擇策略是以queue1為優先( 當queue1跟queue2都是空的則優先排入queue1，依此類推 )</p>\r\n\r\n<p>同時以[事件]( 事件要進入佇列(arrival)&nbsp; &amp; 事件處理完成(departure)&nbsp;)做為驅動模擬</p>\r\n\r\n<p>假設有資料如下:</p>\r\n\r\n<p>ID&nbsp; &nbsp; &nbsp;Arrival&nbsp; Duration</p>\r\n\r\n<p>&nbsp;1&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9&nbsp; &nbsp;&nbsp;</p>\r\n\r\n<p>&nbsp;2&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>&nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; 14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;5&nbsp;</p>\r\n\r\n<p>&nbsp;4&nbsp; &nbsp; &nbsp; &nbsp; 30&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>&nbsp;5&nbsp; &nbsp; &nbsp; &nbsp; 32&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>&nbsp;6&nbsp; &nbsp; &nbsp; &nbsp; 34&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>\r\n\r\n<p>(一)&nbsp;1號會先進入queue1並處理，接著2號進入queue2並處理</p>\r\n\r\n<p>(二) 1及2號完成後3號會進入queue1並處理，之後3號處理完成</p>\r\n\r\n<p>(三)&nbsp;4號進入queue1並處理，接著5號進入queue2並處理，6號因為兩邊都還在處理而排在queue1等待</p>\r\n\r\n<p>(四) 4號處理完畢( 此時time = 35 )，此時6號進行處理( 4號的departure - 6號的arrival = 1，因此等了1單位時間&nbsp;)</p>\r\n\r\n<p>(五) 5號處理完畢，接著6號也處理完，結束模擬</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "23",
+        "lang": "1"
+    }
+}

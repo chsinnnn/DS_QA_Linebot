@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2022-09-30 11:20:38",
+        "poster": "11020112",
+        "realname": "蔡東霖",
+        "email": "s11020112@cycu.edu.tw",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p><strong>遞迴呼叫的次數太多容易造成記憶體錯亂，可能是因為沒達到終止條件而形成無窮遞迴，造成堆疊溢位。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "42",
+        "lang": "1"
+    }
+}

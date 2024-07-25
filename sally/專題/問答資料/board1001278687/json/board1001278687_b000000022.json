@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000022.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000022",
+        "site": "1000110001",
+        "pt": "2023-07-25 22:14:25",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答222",
+        "content": "<p><span style=\"font-size:14px\">222. 撰寫程式碼指出如何為二元搜尋樹新增節點。</span></p>\r\n\r\n<p>BST_Node* InsertNode(BST_Node* root, int val)<br />\r\n{<br />\r\n&nbsp;BST_Node* newnode;<br />\r\n&nbsp;BST_Node* current;<br />\r\n&nbsp;BST_Node* parent;<br />\r\n&nbsp;<br />\r\n&nbsp;newnode = (BST_Node*)malloc(sizeof(BST_Node));<br />\r\n&nbsp;newnode-&gt;data = val;<br />\r\n&nbsp;newnode-&gt;left = NULL;<br />\r\n&nbsp;newnode-&gt;right = NULL;<br />\r\n&nbsp;if (root==NULL){<br />\r\n&nbsp; return newnode;/*若為空，則回傳newnode當作Binary Search Tree的root*/<br />\r\n}<br />\r\n&nbsp;else<br />\r\n{<br />\r\n&nbsp; current = root;<br />\r\n&nbsp; while(current!=NULL){/*藉由判斷val的大小，將current移動到適當的位置*/<br />\r\n&nbsp; &nbsp;parent = current;<br />\r\n&nbsp; &nbsp;if (current-&gt;data&gt;val){<br />\r\n&nbsp; &nbsp; current = current-&gt;left;<br />\r\n&nbsp; &nbsp;}<br />\r\n&nbsp; &nbsp;else{<br />\r\n&nbsp; &nbsp; current = current-&gt;right;<br />\r\n&nbsp; &nbsp;}<br />\r\n&nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*while()迴圈結束後，parent是在leaf的位置*/<br />\r\n&nbsp; if (parent-&gt;data&gt;val){<br />\r\n&nbsp; &nbsp;parent-&gt;left = newnode;/*若val值較小，則將newnode接在parent的左子點*/<br />\r\n&nbsp; }<br />\r\n&nbsp; else{<br />\r\n&nbsp; &nbsp;parent-&gt;right = newnode;/*若val值較大，則將newnode接在parent的右子點*/<br />\r\n&nbsp; }<br />\r\n&nbsp;}<br />\r\n&nbsp;return root;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000046.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000046",
+        "site": "1000110001",
+        "pt": "2022-09-26 22:37:59",
+        "poster": "11027130",
+        "realname": "邱奕翔",
+        "email": "ioppoi1029384756@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>遞迴主要是將不管大還是小但解決方法或性質一樣的問題藉由重複呼叫函式由大問題拆到小問題進行解決，但須明確知道終止條件。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

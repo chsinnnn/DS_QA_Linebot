@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000040.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000040",
+        "site": "1000110001",
+        "pt": "2022-09-25 18:09:12",
+        "poster": "10713226",
+        "realname": "王子楢",
+        "email": "show51848@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼",
+        "content": "<p>把一個複雜或可能要重複很多步驟的問題拆解成好幾個小問題，逐一解決這些小問題進而解決所有問題。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "7",
+        "lang": "1"
+    }
+}

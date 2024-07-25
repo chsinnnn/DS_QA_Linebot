@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2022-09-13 21:50:03",
+        "poster": "11027122",
+        "realname": "陳柏宇",
+        "email": "99588albert@gmail.com",
+        "homepage": null,
+        "subject": "104. 什麼情況下適合使用遞迴？為什麼？",
+        "content": "<p>遞迴用於解決可以被拆解成規模小、但是類型跟原本的問題一樣的情況，例如最典型的例子：階乘</p>\r\n\r\n<p>而最適合使用的時機是使用迭代法(interative method)時會讓程式過於複雜的問題，或是該問題有許多可能的分支，</p>\r\n\r\n<p>舉例來說：我們在下學期所實作的二元搜尋樹中的 preorder, inorder, postorder 如果使用遞迴能讓程式變得更簡潔易讀。</p>\r\n\r\n<p>而該使用遞迴的原因如同上述，使用遞迴最大的優點，就是能讓程式碼簡潔、清晰，且易於除錯。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "109",
+        "lang": "1"
+    }
+}

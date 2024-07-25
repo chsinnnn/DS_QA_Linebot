@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-09-20 22:05:19",
+        "poster": "11127126",
+        "realname": "黃柏寧",
+        "email": "kevinqwer666@gmail.com",
+        "homepage": null,
+        "subject": "101",
+        "content": "<p>以自己的話描述遞迴recursion是什麼</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:新細明體,serif\">遞迴是寫程式的一種手法。在執行的時候，自身的函數會不斷呼叫本身的函數，每次呼叫不一定會使用相同的參數，直到達到基本情況為止；遞迴主要目的是把一個較大或較複雜的問題化簡成數個更小的相似子問題，把子問題解決後，將子問題的解合併或運算去求更大問題的解，直到求出原來問題的答案為止。遞迴的優點是程式碼簡潔，缺點是如果跑出無窮迴圈的話會不容易除錯。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "40",
+        "lang": "1"
+    }
+}

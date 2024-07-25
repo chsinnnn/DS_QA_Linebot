@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-10-02 12:38:37",
+        "poster": "10823323",
+        "realname": "王　婕",
+        "email": "jessicawang900318@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p><span style=\"font-family:新細明體,serif\">遞迴函數的每次呼叫都會將一個新的函數呼叫放入呼叫堆疊（</span>Call Stack<span style=\"font-family:新細明體,serif\">）中，並在函數結束時將其移除，如果遞迴呼叫的深度太深，遞迴深度可能會過大，導致堆疊超出其分配的邊界，進而覆蓋其他記憶體區域，堆疊可能會耗盡，導致堆疊溢位（</span>Stack Overflow<span style=\"font-family:新細明體,serif\">），這種情況通常發生在沒有終止條件或終止條件設定不當的情況下，當程序嘗試使用這些受損或不正確的記憶體位址時，就會觸發記憶體區段錯誤。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "18",
+        "lang": "1"
+    }
+}

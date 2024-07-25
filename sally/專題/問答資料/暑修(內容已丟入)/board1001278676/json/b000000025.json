@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000025.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000025",
+        "site": "1000110001",
+        "pt": "2023-07-07 23:22:42",
+        "poster": "06005984",
+        "realname": "許祖睿",
+        "email": "ray900510@gmail.com",
+        "homepage": null,
+        "subject": "搶答104",
+        "content": "<p>104. 什麼情況下適合使用遞迴？為什麼？*</p>\r\n\r\n<p>一個問題可以被拆分成一個個的小問題，並且拆分之後問題能夠變得更加簡單，同時被一直拆分的問題也有一個明確的終點，這種問題就很<em>適合使用遞迴</em>了。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

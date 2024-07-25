@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:53",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305437",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-11-27 12:22:31",
+        "poster": "11127239",
+        "realname": "陳映銓",
+        "email": "edan0727@gmail.com",
+        "homepage": null,
+        "subject": "206. 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。",
+        "content": "<p>若想提早結束，可以看該次氣泡排序是否有交換位置，</p>\r\n\r\n<p>若無，就可以理解成已經排好了，接下來就可以提早結束。</p>\r\n\r\n<p>以下是使用程式碼來解釋：</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\n#include &lt;vector&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>void bubbleSort(vector&lt;int&gt;&amp; arr) {<br />\r\n&nbsp; &nbsp; int n = arr.size();<br />\r\n&nbsp; &nbsp; bool sort_true_false = true; // 用於檢測是否進行了交換</p>\r\n\r\n<p>&nbsp; &nbsp; for (int i = 0; i &lt; n - 1; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; sort_true_false = false;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; // 未排序部分<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; n - i - 1; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 如果前面的元素大於後面的元素，則交換它們<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &gt; arr[j + 1]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(arr[j], arr[j + 1]);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sort_true_false = true; // 表示進行了交換<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; // 如果再一次掃描中<span style=\"color:#0000ff\">沒有進行任何交換，表示可以提早結束</span><br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (!sort_true_false) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &quot;提早結束。\\n&quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; vector&lt;int&gt; arr = {5, 2, 9, 1, 5, 6};<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;未排序數列：&quot;;<br />\r\n&nbsp; &nbsp; for (int num : arr) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; num &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; // 呼叫氣泡排序<br />\r\n&nbsp; &nbsp; bubbleSort(arr);</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;排序後數列：&quot;;<br />\r\n&nbsp; &nbsp; for (int num : arr) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; num &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "33",
+        "lang": "1"
+    }
+}

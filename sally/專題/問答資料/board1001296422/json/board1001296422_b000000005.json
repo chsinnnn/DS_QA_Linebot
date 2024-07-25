@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-10-20 10:47:27",
+        "poster": "11127137",
+        "realname": "黃乙家",
+        "email": "u810025@gmail.com",
+        "homepage": "https://ja-errorpro.cf",
+        "subject": "130",
+        "content": "<p>寫Python程式碼實現近似C++ class隱藏資料的效果，並指出差異。</p>\r\n\r\n<p>使用前單底線：<br />\r\n```py<br />\r\nclass A():<br />\r\n&nbsp; &nbsp; def __init__(self):<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self._x = 48763<br />\r\n```</p>\r\n\r\n<p>這將**提醒**使用者這個變數不應該被修改，但實際上並沒有阻止使用者修改</p>\r\n\r\n<p>```py<br />\r\na = A()<br />\r\nprint(a._x) # 48763<br />\r\na._x = 0 #<br />\r\nprint(a._x) # 0<br />\r\n```</p>\r\n\r\n<p>使用前雙底線：<br />\r\n```py<br />\r\nclass B():<br />\r\n&nbsp; def __init__(self):<br />\r\n&nbsp; &nbsp; self.__y = 0xdeadbeef<br />\r\n```</p>\r\n\r\n<p>這將避免類別內的變數或函式被子類別修改<br />\r\n```py<br />\r\nb = B()<br />\r\nprint(b.__y) # AttributeError<br />\r\n```<br />\r\n但實際上如果查看b的屬性<br />\r\n```py<br />\r\nprint(dir(b))<br />\r\n```<br />\r\n會看到有一個 `_B__y`</p>\r\n\r\n<p>這是直譯器給變數做了名字修飾以保護類別變數</p>\r\n\r\n<p>仍能直接修改類別的變數<br />\r\n```py<br />\r\nb._B__y = 114514<br />\r\nprint(b._B__y) # 114514<br />\r\n```</p>\r\n\r\n<p>Property decorator:<br />\r\n```py<br />\r\nclass C():<br />\r\n&nbsp; def __init__(self):<br />\r\n&nbsp; &nbsp; self.a = 0xCAFEBABE<br />\r\n&nbsp; &nbsp; self.b = 1</p>\r\n\r\n<p>&nbsp; @property<br />\r\n&nbsp; def sum(self):<br />\r\n&nbsp; &nbsp; return a+b<br />\r\n```</p>\r\n\r\n<p>這樣可以避免sum被隨意修改，只能存取<br />\r\n```py<br />\r\nc = C()<br />\r\nprint(c.sum) # 0xCAFEBABF<br />\r\nc.sum = 0xFEEDCODE # AttributeError<br />\r\n```</p>\r\n\r\n<p>Python不提供隱藏資料(private variable)的方法，因為Python認為如果寫class的人不希望某個資料被存取，可以在前面加底線，寫程式的人應該遵守約定自己負責，而不像C++那樣嚴格</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "49",
+        "lang": "1"
+    }
+}

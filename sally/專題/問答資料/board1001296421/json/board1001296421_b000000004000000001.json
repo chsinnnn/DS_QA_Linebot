@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000004000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000004000000001",
+        "site": "1000110001",
+        "pt": "2023-10-16 17:15:36",
+        "poster": "11277028",
+        "realname": "江晨銘",
+        "email": "gugugu1127@gmail.com",
+        "homepage": null,
+        "subject": "Re: 125",
+        "content": "<p>缺少&lt;digit&gt;的定義</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "2",
+        "lang": "1"
+    }
+}

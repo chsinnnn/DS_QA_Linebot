@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:06:03" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162655</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2022-12-19 16:54:56</pt>
+  <poster>10721221</poster>
+  <realname>&#x856D;&#x831C;&#x6587;  </realname>
+  <email>wen042118@icloud.com</email>
+  <homepage>  </homepage>
+  <subject>217. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x5FEB;&#x901F;&#x6392;&#x5E8F;quick sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x3002; </subject>
+  <content>&lt;p&gt;&#x82E5;&#x5F85;&#x6392;&#x5E8F;&#x6578;&#x7D44;: int a[] ={1, 2, 2, 3, 4, 5, 6};&amp;nbsp;&lt;br /&gt;&#xD;
+&#x5728;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x7684;&#x96A8;&#x6A5F;&#x9078;&#x64C7;&#x6BD4;&#x8F03;&#x5B50;(&#x5373;pivot)&#x968E;&#x6BB5;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x82E5;&#x9078;&#x64C7;a[2]&#xFF08;&#x5373;&#x6578;&#x7D44;&#x4E2D;&#x7684;&#x7B2C;&#x4E8C;&#x500B;2&#xFF09;&#x70BA;&#x6BD4;&#x8F03;&#x5B50;&#xFF0C;&#xFF0C;&#x800C;&#x628A;&#x5927;&#x65BC;&#x7B49;&#x65BC;&#x6BD4;&#x8F03;&#x5B50;&#x7684;&#x6578;&#x5747;&#x653E;&#x7F6E;&#x5728;&#x5927;&#x6578;&#x6578;&#x7D44;&#x4E2D;&#xFF0C;&#x5247;a[1]&#xFF08;&#x5373;&#x6578;&#x7D44;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x500B;2&#xFF09;&#x6703;&#x5230;pivot&#x7684;&#x53F3;&#x908A;&#xFF0C; &#x90A3;&#x9EBC;&#x6578;&#x7D44;&#x4E2D;&#x7684;&#x5169;&#x500B;2&#x975E;&#x539F;&#x5E8F;&#xFF08;&#x9019;&#x5C31;&#x662F;&#x300C;&#x4E0D;&#x7A69;&#x5B9A;&#x300D;&#xFF09;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x82E5;&#x9078;&#x64C7;a[1]&#x70BA;&#x6BD4;&#x8F03;&#x5B50;&#xFF0C;&#x800C;&#x628A; &#x5C0F;&#x65BC;&#x7B49;&#x65BC;&#x6BD4;&#x8F03;&#x5B50;&#x7684;&#x6578;&#x5747;&#x653E;&#x7F6E;&#x5728;&#x5C0F;&#x6578;&#x6578;&#x7D44;&#x4E2D;&#xFF0C;&#x5247;&#x6578;&#x7D44;&#x4E2D;&#x7684;&#x5169;&#x500B;2&#x9806;&#x5E8F;&#x4E5F;&#x975E;&#x539F;&#x5E8F;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+&#x9019;&#x5C31;&#x8AAA;&#x660E;&#xFF0C;quick sort&#x662F;&#x4E0D;&#x7A69;&#x5B9A;&#x7684;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>19</hit>
+  <lang>1</lang>
+</data>

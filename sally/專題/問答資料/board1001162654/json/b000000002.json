@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:55",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162654",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-12-13 10:01:28",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "214. 舉例說明合併排序的遞迴深度和資料筆數的關係。",
+        "content": "<p>在合併排序中，遞迴深度和資料筆數之間存在一定的關係。通常來說，遞迴深度與資料筆數之間的關係可以表示為 O(log<sub>2</sub>N)，其中 N&nbsp;是資料筆數。這表示，當資料筆數增加時，遞迴深度會呈指數級增長。</p>\r\n\r\n<p>圖片說明可參考<a href=\"https://ithelp.ithome.com.tw/articles/10278179\">連結</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "7",
+        "lang": "1"
+    }
+}

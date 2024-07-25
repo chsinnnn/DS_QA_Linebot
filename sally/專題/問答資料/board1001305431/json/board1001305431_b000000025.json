@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000025.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000025",
+        "site": "1000110001",
+        "pt": "2023-10-04 20:17:38",
+        "poster": "11127236",
+        "realname": "莊楷崴",
+        "email": "kzhuang63@gmail.com",
+        "homepage": null,
+        "subject": "106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p style=\"font-size: 16px; white-space: pre-wrap; border: 0px solid rgb(217, 217, 227); box-sizing: border-box; margin: 0px 0px 1.25em; caret-color: rgb(55, 65, 81); color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; -webkit-text-size-adjust: 100%;\">遞迴呼叫可能導致記憶體區段錯誤的原因通常是堆疊的過度使用。每次函數呼叫時，一個新的函數呼叫框架被壓入堆疊，包含了該函數的區域變數和返回位址。當遞迴深度太深或每個遞迴呼叫佔用的堆疊空間太大時，堆疊可能會耗盡。當堆疊耗盡時，系統無法為新的函數呼叫分配足夠的堆疊空間，這將導致記憶體區段錯誤。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

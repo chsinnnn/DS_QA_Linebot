@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:30" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174274</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2022-10-10 23:41:53</pt>
+  <poster>11027202</poster>
+  <realname>&#x9EC3;&#x6977;&#x5091;  </realname>
+  <email>nikiwu90@hotmail.com</email>
+  <homepage> </homepage>
+  <subject>118. &#x4EE4;ptrX&#x6307;&#x5411;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x6BD4;&#x8F03;ptrX = ptrX-&amp;gt;next&#x548C;ptrX-&amp;gt;next = ptrX&#x7684;&#x5DEE;&#x7570;&#x3002; </subject>
+  <content>&lt;p&gt;&#x5047;&#x8A2D;&#x4E00;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x70BA;&#x4E0B;&#x5716;&#x6240;&#x793A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027202/images/%E6%93%B7%E5%8F%96%283%29.PNG" style="height:275px; width:1081px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5728;&#x7A0B;&#x5F0F;&#x4E2D;&#xFF0C;&#x4E00;&#x500B;&#x7B49;&#x865F;&#x662F;&#x7528;&#x4F86;&#x5C07;&#x53F3;&#x908A;&#x7684;&#x503C;&#x5B58;&#x653E;&#x5230;&#x5DE6;&#x908A;&#x7684;&#x8B8A;&#x6578;&#xFF0C;&#x6240;&#x4EE5;ptrX = ptrX-&amp;gt;next&#x7C21;&#x55AE;&#x4F86;&#x8AAA;&#x5C31;&#x662F;&#x8B93;ptrX&#x64C1;&#x6709;&#x8207;ptrX-&amp;gt;next&#x76F8;&#x540C;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x8B93;ptrX&#x6307;&#x5411;&#x8207;ptrX-&amp;gt;next&#x76F8;&#x540C;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#x6240;&#x793A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027202/images/%E6%93%B7%E5%8F%96%284%29.PNG" style="height:345px; width:1339px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x800C;ptrX-&amp;gt;next = ptrX&#x5C31;&#x662F;&#x53CD;&#x904E;&#x4F86;&#xFF0C;&#x8B93;ptrX-&amp;gt;next&#x6307;&#x5411;&#x8207;ptrX&#x76F8;&#x540C;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x4F46;&#x7531;&#x65BC;ptrX&#x6240;&#x6307;&#x5411;&#x7684;&#x7BC0;&#x9EDE;&#x5C31;&#x662F;ptrX-&amp;gt;next&#xFF0C;&#x6240;&#x4EE5;ptrX-&amp;gt;next&#x6700;&#x5F8C;&#x6703;&#x6307;&#x5411;&#x81EA;&#x5DF1;&#xFF0C;&#x5982;&#x4E0B;&#x5716;&#x6240;&#x793A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027202/images/%E6%93%B7%E5%8F%96%285%29.PNG" style="height:457px; width:1171px" /&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>52</hit>
+  <lang>1</lang>
+</data>

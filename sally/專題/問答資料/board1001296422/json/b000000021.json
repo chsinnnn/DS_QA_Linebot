@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:13",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296422",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2023-11-01 02:01:49",
+        "poster": "11127122",
+        "realname": "胡沛頎",
+        "email": "123456789paige26@gmail.com",
+        "homepage": null,
+        "subject": "128",
+        "content": "<p><strong><span style=\"font-size:14px\">128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。</span></strong></p>\r\n\r\n<p><span style=\"font-size:14px\"><strong>答:</strong></span></p>\r\n\r\n<p>從頭一個一個往後檢測後序式的 link list 的節點，若遇到運算元，便將其&nbsp;push 進 stack 中，若遇到運算子，則取 stack 中靠近頂部的頭兩個運算元來進行運算，接著刪掉stack中剛剛用於運算的兩個運算元後，把結果push 進 stack 中。最後檢測到 link list 的節點為NULL的時候，stack 僅存的運算元就為該後序式的解答。</p>\r\n\r\n<p><strong><span style=\"font-size:14px\">過程:</span></strong></p>\r\n\r\n<p>(1) 檢測到 2，把身為運算元的&nbsp;2 push 進 stack 中 ，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(2) 檢測到 4，把身為運算元的 4&nbsp;push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(3) 檢測到 6，把身為運算元的 6 push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(4) 檢測到運算子 * ，則把 stack 靠近頂部的頭兩個運算元 6 和 4 進行 * 運算</p>\r\n\r\n<p>(5) 把 stack 靠近頂部的頭兩個運算元 6 和 4 刪掉後，將運算後得到的結果 24 push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(6) 檢測到運算子 + ，則把 stack 靠近頂部的頭兩個運算元 24 和 2&nbsp;進行 + 運算</p>\r\n\r\n<p>(7) 把 stack 靠近頂部的頭兩個數字 24&nbsp;和 2 刪掉後，將運算後得到的結果 26 push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(8) 檢測到 7，把身為運算元的&nbsp;7&nbsp;push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(9) 檢測到 5，把身為運算元的 5 push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(10) 檢測到運算子 - ，則把 stack 靠近頂部的頭兩個運算元 7 和 5 進行 - 運算</p>\r\n\r\n<p>(11) 把 stack 靠近頂部的頭兩個運算元 7 和 5 刪掉後，將運算後得到的結果 2 push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(12) 檢測到運算子 * ，則把 stack 靠近頂部的頭兩個運算元 2 和 26 進行 * 運算</p>\r\n\r\n<p>(13) 把 stack 靠近頂部的頭兩個運算元 2&nbsp;和 26&nbsp;刪掉後，將運算後得到的結果 52&nbsp;push 進 stack 中，並前往 postfix 的 link list 中，該項的下一項檢測</p>\r\n\r\n<p>(14) 檢測到&nbsp;next 為 NULL ，故此 postfix 的運算結果為 stack 僅存的運算元 52&nbsp;</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:45",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296419",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-10-03 16:03:28",
+        "poster": "11127116",
+        "realname": "曾詮淳",
+        "email": "kevin47338647@gmail.com",
+        "homepage": null,
+        "subject": "111",
+        "content": "<p>111.寫出C++程式碼說明傳值呼叫call by value。</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\nvoid doubleValue(int x) {<br />\r\n&nbsp; &nbsp; x = x * 2; &nbsp;// 修改輸入的值<br />\r\n&nbsp; &nbsp; std::cout &lt;&lt; &quot;Inside function: x = &quot; &lt;&lt; x &lt;&lt; std::endl;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int a = 5;<br />\r\n&nbsp; &nbsp; std::cout &lt;&lt; &quot;Before function call: a = &quot; &lt;&lt; a &lt;&lt; std::endl;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; doubleValue(a); &nbsp;// 呼叫 doubleValue 函數<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; std::cout &lt;&lt; &quot;After function call: a = &quot; &lt;&lt; a &lt;&lt; std::endl; // 注意這裡的 a 值沒有改變<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n}<br />\r\n當你運行這段程式，你會得到以下輸出：</p>\r\n\r\n<p>Before function call: a = 5<br />\r\nInside function: x = 10<br />\r\nAfter function call: a = 5</p>\r\n\r\n<p><br />\r\n儘管在 doubleValue 函數中 x 的值被改變了，但是在 main 函數中的 a 的值並沒有改變。這是因為 doubleValue 函數獲得的是 a 的一個拷貝，所以對它的任何修改都不會影響到原來的 a。這就是傳值呼叫的特點。</p>\r\n\r\n<p>以下討論的為當參數為指標時，要注意的點:</p>\r\n\r\n<p>你仍然是在使用傳值呼叫，但你傳遞的是指標的值 (即記憶體地址)。這意味著在函數中你可以透過該指標修改它所指向的值，但你不能改變指標本身所指向的記憶體地址。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "42",
+        "lang": "1"
+    }
+}

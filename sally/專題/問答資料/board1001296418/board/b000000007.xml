@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:53:34" type="post" filename="b000000007.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296418</board_id>
+  <node>000000007</node>
+  <site>1000110001</site>
+  <pt>2023-10-03 01:43:54</pt>
+  <poster>10942208</poster>
+  <realname>&#x9673;&#x6D3A;&#x5B89;  </realname>
+  <email>asd0389wsx0216@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>110 </subject>
+  <content>&lt;p&gt;Static Array : &#x975C;&#x614B;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1.&#x5927;&#x5C0F;&#x56FA;&#x5B9A;(&#x8A18;&#x61B6;&#x9AD4;&#x7A7A;&#x9593;&#x5728;&#x7DE8;&#x8B6F;&#x6642;&#x9032;&#x884C;&#x5206;&#x914D;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2.&#x5B58;&#x53D6;&#x901F;&#x5EA6;&#x8F03;&#x5FEB;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Dynamic Array : &#x52D5;&#x614B;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1.&#x5927;&#x5C0F;&#x53EF;&#x8B8A;(&#x8A18;&#x61B6;&#x9AD4;&#x7A7A;&#x9593;&#x5728;&#x57F7;&#x884C;&#x6642;&#x6839;&#x64DA;&#x9700;&#x6C42;&#x9032;&#x884C;&#x5206;&#x914D;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2.&#x901F;&#x5EA6;&#x8F03;&#x6162;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6211;&#x5728;&#x4F5C;&#x696D;&#x4E00;&#x4F7F;&#x7528; new&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;graph = new char*[row];&amp;nbsp; &amp;nbsp;// graph&#x662F;&#x4E00;&#x500B;&#x6307;&#x6A19;&#x9663;&#x5217;&#xFF0C;&#x6BCF;&#x500B;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x4E00;&#x500B;&#x6307;&#x5411;char&#x578B;&#x614B;&#x7684;&#x6307;&#x6A19;&lt;br /&gt;&#xD;
+for (int i = 0; i &amp;lt; row; i++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; graph[i] = new char[column]; // &#x6BCF;&#x6B21;&#x5275;&#x5EFA;&#x9577;&#x5EA6;column&#x7684;&#x5B57;&#x5143;&#x9663;&#x5217;&#xFF0C;&#x6307;&#x6A19;&#x9644;&#x503C;&#x7D66;graph&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;for (int j = 0; j &amp;lt; c; j++) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;graph[i][j] = &amp;#39;0&amp;#39;;&amp;nbsp; // &#x521D;&#x59CB;&#x5316;&#x70BA;&amp;#39;0&amp;#39;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5176;&#x4ED6;: malloc &#x5206;&#x914D;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;char** graph = (char**)malloc(row * sizeof(char*));&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;for (int i = 0; i &amp;lt; row; ++i) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp;graph[i] = (char*)malloc(column * sizeof(char));&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} // for&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;graph&#x662F;&#x4E00;&#x500B;&#x6307;&#x5411;&#x6307;&#x6A19;&#x7684;&#x6307;&#x6A19;&#xFF0C;&#x6307;&#x5411;&#x4E00;&#x500B;&#x6307;&#x6A19;&#x9663;&#x5217;&#xFF0C;&#x6BCF;&#x500B;&#x6307;&#x6A19;&#x90FD;&#x6307;&#x5411;&#x4E00;&#x500B;&#x5B57;&#x5143;&#x9663;&#x5217;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x2605; &#x6700;&#x5F8C;&#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6642; &#x91CB;&#x653E;free &#xFF0C;&#x4E0D;&#x7136;&#x6703;memory leak&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;new/malloc &#x4E0D;&#x540C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56DE;&#x50B3;&#x578B;&#x5225;&#xFF1A; new return&#x5206;&#x914D;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x7684;&#x6307;&#x6A19;&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x986F;&#x5F0F;&#x8F49;&#x63DB;&#x985E;&#x578B;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x985E;&#x578B;&#x5B89;&#x5168;&#xFF1A; &#x6703;&#x81EA;&#x52D5;&#x8A08;&#x7B97;&#x9700;&#x8981;&#x5206;&#x914D;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x7A7A;&#x9593;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52D5;&#x6307;&#x5B9A;&#x985E;&#x578B;&#x7684;&#x5927;&#x5C0F;&#xFF0C;new int &#x6703;&#x81EA;&#x52D5;&#x5206;&#x914D;&#x8DB3;&#x5920;&#x5927;&#x5C0F;&#x7684;&#x6574;&#x6578;&#xFF08;int&#xFF09;&#x8A18;&#x61B6;&#x9AD4;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>27</hit>
+  <lang>1</lang>
+</data>

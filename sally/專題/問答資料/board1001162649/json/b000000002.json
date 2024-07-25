@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-10-07 17:21:55",
+        "poster": "11027119",
+        "realname": "秦嘉昇",
+        "email": "c20021219@gmail.com",
+        "homepage": null,
+        "subject": "119. 寫C++程式碼說明刪除鏈結串列linked list第3個節點。",
+        "content": "<p>建立一個linked list與三個節點，並用num來表示那個節點為第幾個節點</p>\r\n\r\n<p>運用delete刪除節點</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027119/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-07%20171809.png\" style=\"height:1020px; width:1480px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "60",
+        "lang": "1"
+    }
+}

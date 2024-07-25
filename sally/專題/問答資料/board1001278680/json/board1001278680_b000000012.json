@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-14 03:24:16",
+        "poster": "06005840",
+        "realname": "施伯諭",
+        "email": "u10806215@ms.ttu.edu.tw",
+        "homepage": null,
+        "subject": "搶答125",
+        "content": "<p>125. 寫出可以精準描述自己學號(如字串06005840)的文法grammar。<br />\r\n以學號06005840寫一個grammar,下列為我的範例:<br />\r\n&lt;學號&gt; = &lt;報名暑修月&gt;&lt;流水編號&gt;<br />\r\n&lt;流水編號&gt; = &lt;數字&gt;&lt;數字&gt;&lt;數字&gt;&lt;數字&gt;&lt;數字&gt;&lt;數字&gt;<br />\r\n&lt;報名暑修月&gt; =&nbsp; &quot;01&quot; | &quot;02&quot; | ... | &quot;12&quot;<br />\r\n&lt;數字&gt; = &quot;0&quot; | &quot;1&quot; | &quot;2&quot; | &quot;3&quot; | &quot;4&quot; | &quot;5&quot; | &quot;6&quot; | &quot;7&quot; | &quot;8&quot; | &quot;9&quot;<br />\r\n以上文法表示學號由報名暑修月（兩位數）和後面6個數字組成。報名暑修月可以是從01到12的兩位數。後面的6個數字可以是0到9之間的任意數字。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "35",
+        "lang": "1"
+    }
+}

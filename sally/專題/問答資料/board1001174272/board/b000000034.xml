@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:17" type="post" filename="b000000034.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174272</board_id>
+  <node>000000034</node>
+  <site>1000110001</site>
+  <pt>2022-10-04 21:36:46</pt>
+  <poster>11027204</poster>
+  <realname>&#x912D;&#x5B87;&#x5091;  </realname>
+  <email>11027204@O365st.cycu.edu.tw</email>
+  <homepage>  </homepage>
+  <subject>106. &#x905E;&#x8FF4;&#x547C;&#x53EB;&#x70BA;&#x4F55;&#x6703;&#x9020;&#x6210;&#x8A18;&#x61B6;&#x9AD4;&#x5340;&#x6BB5;&#x932F;&#x8AA4;&#xFF1F; </subject>
+  <content>&lt;p&gt;&#x905E;&#x56DE;&#x547C;&#x53EB;&#x5728;&#x9032;&#x884C;&#x5B8C;&#x6210;&#x524D;&#xFF0C;&#x6703;&#x5C07;&#x8CC7;&#x6599;&#x50B3;&#x7D66;stack&#xFF08;&#x5806;&#x758A;&#xFF09;&#x88CF;&#x9762;&#xFF0C;&#x800C;&#x5982;&#x679C;&#x8CC7;&#x6599;&#x8D85;&#x904E;stack&#x7684;&#x7A7A;&#x9593;&#x7684;&#x8A71;&#xFF0C;&#x5C31;&#x6703;&#x9020;&#x6210;&#x5806;&#x68E7;&#x6EA2;&#x4F4D;&#xFF0C;&#x4E5F;&#x7A31;&#x70BA;stack overflow&#xFF0C;&#x9019;&#x4E5F;&#x662F;&#x9020;&#x6210;&#x8A18;&#x61B6;&#x9AD4;&#x5340;&#x6BB5;&#x932F;&#x8AA4;&#x7684;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5C0E;&#x81F4;&#x5132;&#x5B58;&#x5668;&#x6BB5;&#x932F;&#x8AA4;&#x7684;&#x4E00;&#x822C;&#x539F;&#x56E0;&#xFF1A;&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8A66;&#x5716;&#x8A2A;&#x554F;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5167;&#x5B58;&#x7A7A;&#x9593;&#xFF08;&#x9032;&#x7A0B;&#x5167;&#x5B58;&#x7A7A;&#x9593;&#x4EE5;&#x5916;&#xFF09;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8A66;&#x5716;&#x8A2A;&#x554F;&#x6C92;&#x6709;&#x6B0A;&#x9650;&#x7684;&#x5167;&#x5B58;&#x7A7A;&#x9593;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x8A2A;&#x554F;&#x64CD;&#x4F5C;&#x7CFB;&#x7D71;&#x5167;&#x6838;&#x7684;&#x5167;&#x5B58;&#x5730;&#x5740;&#xFF09;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8A66;&#x5716;&#x5BEB;&#x5165;&#x81F3;&#x53EA;&#x8B80;&#x5167;&#x5B58;&#x6BB5;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x4EE3;&#x78BC;&#x6BB5;&#xFF09;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5C0E;&#x81F4;&#x5132;&#x5B58;&#x5668;&#x6BB5;&#x932F;&#x8AA4;&#x7684;&#x4E00;&#x822C;&#x7DE8;&#x7A0B;&#x932F;&#x8AA4;&#xFF1A; &lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5F15;&#x7528;&#x7A7A;&#x6307;&#x91DD; &#x5F15;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x91CE;&#x6307;&#x91DD;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5F15;&#x7528;&#x5DF2;&#x7D93;&#x88AB;&#x8ABF;&#x7528;free()&#x51FD;&#x6578;&#x91CB;&#x653E;&#x4E86;&#x7684;&#x61F8;&#x7A7A;&#x6307;&#x91DD;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7DE9;&#x885D;&#x5340;&#x6EA2;&#x51FA;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="color:#ff0000"&gt;&#x5806;&#x68E7;&#x6EA2;&#x51FA; &#xFF08;&#x672C;&#x554F;&#x984C;&#x7684;&#x539F;&#x56E0;&#xFF09;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x904B;&#x884C;&#x672A;&#x6B63;&#x78BA;&#x7DE8;&#x8B6F;&#x7684;&#x7A0B;&#x5E8F;&#xFF08;&#x5118;&#x7BA1;&#x5B58;&#x5728;&#x7DE8;&#x8B6F;&#x6642;&#x932F;&#x8AA4;&#xFF0C;&#x67D0;&#x4E9B;&#x7DE8;&#x8B6F;&#x5668;&#x4F9D;&#x7136;&#x6703;&#x8F38;&#x51FA;&#x53EF;&#x57F7;&#x884C;&#x6587;&#x4EF6;&#xFF09;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;ref.&lt;a href="https://zh.wikipedia.org/wiki/%E8%A8%98%E6%86%B6%E9%AB%94%E5%8D%80%E6%AE%B5%E9%8C%AF%E8%AA%A4"&gt;https://zh.wikipedia.org/wiki/%E8%A8%98%E6%86%B6%E9%AB%94%E5%8D%80%E6%AE%B5%E9%8C%AF%E8%AA%A4&lt;/a&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>44</hit>
+  <lang>1</lang>
+</data>

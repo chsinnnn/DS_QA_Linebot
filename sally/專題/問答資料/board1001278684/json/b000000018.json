@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:33",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278684",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-23 22:24:00",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答214",
+        "content": "<p><strong>214. </strong><strong><span style=\"font-family:新細明體,serif\">舉例說明合併排序的遞迴深度和資料筆數的關係。</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">合併排序是一種效率較高的排序算法，它採用分治法的思想，將待排序的數列分成若干個子數列，分別進行排序，然後再將排好序的子數列合併成一個有序的數列。合併排序的遞迴深度（即遞迴的層數）與資料筆數之間存在關係，這個關係是由遞迴過程所決定的。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">假設我們有一個包含</span> n <span style=\"font-family:新細明體,serif\">個元素的數列要進行合併排序。</span></p>\r\n\r\n<p>1.<span style=\"font-family:新細明體,serif\">在合併排序的遞迴過程中，首先將數列進行對半劃分，直到無法再進行劃分（即只有一個元素），此時每個子數列的長度是</span> 1<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p>2.<span style=\"font-family:新細明體,serif\">這些子數列兩兩進行合併操作，得到長度為</span> 2 <span style=\"font-family:新細明體,serif\">的有序子數列。</span></p>\r\n\r\n<p>3.<span style=\"font-family:新細明體,serif\">再將這些長度為</span> 2 <span style=\"font-family:新細明體,serif\">的有序子數列兩兩合併，得到長度為</span> 4 <span style=\"font-family:新細明體,serif\">的有序子數列。</span></p>\r\n\r\n<p>4.<span style=\"font-family:新細明體,serif\">直到最後合併成一個包含</span> n <span style=\"font-family:新細明體,serif\">個元素的有序數列。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">每次遞迴，數列的大小都會變成原來的一半。因此，在第</span> k <span style=\"font-family:新細明體,serif\">層遞迴中，數列的大小將變成</span> n / 2^k<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">當數列的大小為</span> 1 <span style=\"font-family:新細明體,serif\">時，遞迴停止。這時</span> k <span style=\"font-family:新細明體,serif\">的值即為遞迴深度。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">合併排序的遞迴深度</span> k <span style=\"font-family:新細明體,serif\">和資料筆數</span> n <span style=\"font-family:新細明體,serif\">之間的關係可以通過以下公式表示：</span>n / 2^k = 1</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">解這個方程可以得到</span> k = log2(n)<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">合併排序的遞迴深度與資料筆數</span> n <span style=\"font-family:新細明體,serif\">成正比，並且遞迴深度為</span> log2(n)<span style=\"font-family:新細明體,serif\">。這也是合併排序在大規模數列排序中的優勢之一，因為它的遞迴深度相對較小，使得排序的效率較高。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "5",
+        "lang": "1"
+    }
+}

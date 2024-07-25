@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:30",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296424",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-11-16 20:54:26",
+        "poster": "11127139",
+        "realname": "陳　恩",
+        "email": "a04182596@gmail.com",
+        "homepage": null,
+        "subject": "208",
+        "content": "<p>208. 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。<br />\r\n<br />\r\n判斷的交換條件：arr[j] &gt; arr[j+1]<br />\r\n若改為arr[j] &gt;= arr[j+1]則會改變相同數值的順序，unstable<br />\r\n&nbsp;</p>\r\n\r\n<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>void swap(int &amp;a, int &amp;b) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;int temp = a;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;a = b;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;b = temp;<br />\r\n}</p>\r\n\r\n<p>void bubbleSort( int arr[], int n ) {<br />\r\n&nbsp; for (int i = 1; i &lt; n; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; n-i; j++) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 關鍵指令，若改為arr[j] &gt;= arr[j+1]則非stable<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &gt; arr[j+1])&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(arr[j], arr[j+1]);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>void printArray(int arr[], int size) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;for (int i=0; i &lt; size; i++) {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;}<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; std::endl;<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;int arr[] = {64, 34, 25, 12, 22, 11, 90, 12, 25};<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;int n&nbsp;= sizeof(arr) / 4;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; &quot;Unsorted array: &quot;;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;printArray(arr, n);</p>\r\n\r\n<p>&nbsp; &nbsp; bubbleSort(arr, n);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; &quot;Sorted array: &quot;;<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;printArray(arr, n);</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "26",
+        "lang": "1"
+    }
+}

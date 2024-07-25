@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:57:11",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296426",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-12-14 19:21:11",
+        "poster": "03109309",
+        "realname": "呂沛霖",
+        "email": null,
+        "homepage": null,
+        "subject": "219",
+        "content": "<p>219. 舉例區別完全full、完整complete及平衡balanced二元樹的差異。</p>\r\n\r\n<p>假設有一顆樹高為5的二元樹:</p>\r\n\r\n<p>完全full: 1~4 階層的節點都有兩個子節點。</p>\r\n\r\n<p>完整complete: 1~3階層的節點都有兩個子節點，若第四層的節點有子節點，在其左邊同階層的節點都一定有兩個子節點，若第四層的節點只有一個子節點，那麼該子節點一定是左子節點。</p>\r\n\r\n<p>平衡balanced: 一個節點其左子樹和右子樹的樹高不會差超過1。</p>\r\n\r\n<p>full, complete binary Tree 是 balanced binary tree，full binary tree 是 complete binary tree</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

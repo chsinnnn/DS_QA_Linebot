@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:45",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305433",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-10-04 15:42:40",
+        "poster": "11127225",
+        "realname": "賴枋佑",
+        "email": "leolai325@gmail.com",
+        "homepage": null,
+        "subject": "116. 將後序式postfix轉前序式prefix，並詳述步驟。a b + c * d e + f * + w z + *",
+        "content": "<p><span style=\"font-family:新細明體,serif\">後序式轉前序式</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">從左邊開始尋找不在括號內的運算子，將找到的運算子移動到其左邊的兩個運算元</span>(<span style=\"font-family:新細明體,serif\">或者已被括號的子算式</span>)<span style=\"font-family:新細明體,serif\">之前，並加上括號，直到式子已看到最右邊了，把所有括號移除掉。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">參考資料</span>: <a href=\"https://magiclen.org/arithmetic/\">https://magiclen.org/arithmetic/</a></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">原式</span>&nbsp; = a b + c * d e + f * + w z + *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( + a b ) c * d e + f * + w z + *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( * ( + a b ) c ) d e + f * + w z + *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( * ( + a b ) c ) ( + d e ) f * + w z + *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( * ( + a b ) c ) ( * ( + d e ) f ) + w z + *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) w z + *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) ( + w z ) *</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= ( * ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) ( + w z ) )</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">簡化&nbsp;&nbsp;</span>&nbsp; = * + * + a b c * d e f + w z</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "37",
+        "lang": "1"
+    }
+}

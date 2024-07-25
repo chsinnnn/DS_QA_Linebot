@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-07-22 23:31:26",
+        "poster": "06005914",
+        "realname": "陳彥中",
+        "email": "jackson89911@gmail.com",
+        "homepage": null,
+        "subject": "搶答207",
+        "content": "<p>207. 舉例解說選擇排序selection sort並非穩定stable的排序方法</p>\r\n\r\n<p>A:選擇排序是一種簡單但效率較低的排序方法，但它並非穩定的排序方法。在穩定排序中，相同大小的元素在排序後相對位置保持不變，因為他們在原始序列中的順序已經是對的。</p>\r\n\r\n<p>假設有一個包含姓名和成績的資料，並希望根據成績進行排序</p>\r\n\r\n<ol>\r\n\t<li>(Eva, 90)</li>\r\n\t<li>(Bob, 90)</li>\r\n\t<li>(David, 78)</li>\r\n</ol>\r\n\r\n<p>使用選擇排序進行遞增排序：</p>\r\n\r\n<p>首先找到最小值，交換它與第一個位置。交換後：</p>\r\n\r\n<ol>\r\n\t<li>(David, 78) &lt;- 最小值</li>\r\n\t<li>(Bob, 90)</li>\r\n\t<li>(Eva, 90)</li>\r\n</ol>\r\n\r\n<p>從這個例子中可以看到，成績相同的Bob和 Eva&nbsp;在排序後的相對位置改變了，這表示選擇排序並非穩定的排序方法。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "6",
+        "lang": "1"
+    }
+}

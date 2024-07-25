@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:22",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296423",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-11-23 23:23:01",
+        "poster": "11127136",
+        "realname": "彭晨維",
+        "email": "willy921230@gmail.com",
+        "homepage": null,
+        "subject": "201",
+        "content": "<p><span style=\"font-size:14px\">舉例說明單一佇列模擬如何計算平均等候時間waiting time。</span></p>\r\n\r\n<p>假設我們有一家餐廳，顧客需要在餐廳的櫃檯等待點餐，然後等待他們的餐點。</p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>設定模擬參數：</strong> 首先，我們需要設定一些模擬的參數，例如顧客的到達速率（arrival rate）和服務速率（service rate）。到達速率表示每個顧客到達的平均速度，服務速率表示櫃檯每分鐘能處理的訂單數量。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>生成顧客到達時間：</strong> 使用到達速率生成一系列顧客到達的時間點。這可以使用隨機數生成器，符合柏努利分佈或泊松分佈的方法。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>模擬排隊過程：</strong> 顧客到達後，如果櫃檯空閒，則馬上接受服務；如果櫃檯忙碌，則加入等待佇列。在等待過程中，每個顧客的等待時間不斷增加。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>計算每個顧客的等候時間：</strong> 等待時間是指顧客從到達到開始接受服務之間的時間。在模擬中，我們可以記錄每個顧客的等待時間。</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>計算平均等候時間：</strong> 最後，將所有顧客的等待時間加總，然後除以顧客的總數，得到平均等候時間。</p>\r\n\t</li>\r\n</ol>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

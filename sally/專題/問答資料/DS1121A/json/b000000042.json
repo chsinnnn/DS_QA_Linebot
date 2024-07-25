@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000042.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000042",
+        "site": "1000110001",
+        "pt": "2022-09-26 10:38:15",
+        "poster": "11027170",
+        "realname": "白弘得",
+        "email": "hongdek1@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼",
+        "content": "<p>如果我是董事長我想要壓榨在我之下的所有員工，那我就<strong>把壓榨我之下的員工的方法</strong><em>教會</em><strong><u>我的下屬</u></strong>並且<strong>設置</strong>他<strong>也會壓榨他之下的員工，以做到無限往下壓榨直到最底層。</strong></p>\r\n\r\n<p>遞迴就是這樣，把重複的解決問題的小動作以自我呼叫的方式往下延伸。<s>老闆不要!!</s></p>\r\n\r\n<p><img alt=\"明星拿压榨员工当人设：半夜4点给员工发消息，7点问为什么不回_腾讯新闻\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BF1V3LBBQRLV5JLycrgYdHUWPf87ia3WUQ&amp;usqp=CAU\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

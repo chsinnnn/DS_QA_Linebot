@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:08" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305434</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2023-10-16 01:09:12</pt>
+  <poster>11020117</poster>
+  <realname>&#x6797;&#x5B50;&#x7693;  </realname>
+  <email>ke951736@gmail.com</email>
+  <homepage> </homepage>
+  <subject>122. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;call by reference&#x3002;</subject>
+  <content>&lt;p&gt;&lt;br /&gt;&#xD;
+#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x51FD;&#x6578;&#x4F7F;&#x7528;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;&lt;br /&gt;&#xD;
+void modifyValue(int &amp;amp;ref) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x5728;&#x51FD;&#x6578;&#x5167;&#x4FEE;&#x6539;&#x539F;&#x59CB;&#x8B8A;&#x6578;&#x7684;&#x503C;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; ref = ref * 2;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x6574;&#x6578;&#x8B8A;&#x6578;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int num = 5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5728;&#x547C;&#x53EB;&#x51FD;&#x6578;&#x6642;&#x4F7F;&#x7528;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; modifyValue(num);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5370;&#x51FA;&#x4FEE;&#x6539;&#x5F8C;&#x7684;&#x503C;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x4FEE;&#x6539;&#x5F8C;&#x7684;&#x503C;: &amp;quot; &amp;lt;&amp;lt; num &amp;lt;&amp;lt; std::endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>24</hit>
+  <lang>1</lang>
+</data>

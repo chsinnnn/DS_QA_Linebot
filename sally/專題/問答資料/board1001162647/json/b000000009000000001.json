@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000009000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000009000000001",
+        "site": "1000110001",
+        "pt": "2022-09-30 18:03:13",
+        "poster": "11077029",
+        "realname": "陳俊宇",
+        "email": "jameschunyu@gmail.com",
+        "homepage": null,
+        "subject": "Re: 107. 作業二採用什麼資料結構儲存讀入資料，須說明原因。*",
+        "content": "<p>後面似乎沒有看到原因，而是解釋佇列</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "2",
+        "lang": "1"
+    }
+}

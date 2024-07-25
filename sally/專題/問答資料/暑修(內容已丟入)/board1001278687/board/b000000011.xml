@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:52" type="post" filename="b000000011.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278687</board_id>
+  <node>000000011</node>
+  <site>1000110001</site>
+  <pt>2023-07-23 13:19:29</pt>
+  <poster>10927250</poster>
+  <realname>&#x53E4;&#x5BB8;&#x5B87;  </realname>
+  <email>ku0905264478@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;223 </subject>
+  <content>&lt;p&gt;223. &#x76F8;&#x540C;&#x641C;&#x5C0B;&#x9375;&#x7684;&#x4E8C;&#x7B46;&#x8CC7;&#x6599;&#x5982;&#x4F55;&#x5B58;&#x5165;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#xFF1F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;ol&gt;&#xD;
+	&lt;li&gt;&#xD;
+	&lt;p&gt;&#x4F7F;&#x7528;&#x984D;&#x5916;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#xFF1A;&#x5C07;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x8CC7;&#x6599;&#x5B58;&#x5165;&#x4E00;&#x500B;&#x984D;&#x5916;&#x7684;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x5217;&#x8868;&#xFF08;List&#xFF09;&#x3001;&#x93C8;&#x8868;&#xFF08;Linked List&#xFF09;&#x7B49;&#x3002;&#x5728;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x5B58;&#x5132;&#x641C;&#x5C0B;&#x9375;&#x4E4B;&#x5916;&#xFF0C;&#x9084;&#x9700;&#x5B58;&#x5132;&#x4E00;&#x500B;&#x6307;&#x5411;&#x9019;&#x500B;&#x8CC7;&#x6599;&#x7D50;&#x69CB;&#x7684;&#x5F15;&#x7528;&#x6216;&#x6307;&#x6A19;&#x3002;&#x9019;&#x6A23;&#xFF0C;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x5C31;&#x53EF;&#x4EE5;&#x540C;&#x6642;&#x5B58;&#x5132;&#x591A;&#x7B46;&#x8CC7;&#x6599;&#x3002;&lt;/p&gt;&#xD;
+	&lt;/li&gt;&#xD;
+	&lt;li&gt;&#xD;
+	&lt;p&gt;&#x4FEE;&#x6539;&#x7BC0;&#x9EDE;&#x7D50;&#x69CB;&#xFF1A;&#x5728;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x641C;&#x5C0B;&#x9375;&#x4E4B;&#x5916;&#xFF0C;&#x65B0;&#x589E;&#x4E00;&#x500B;&#x6B04;&#x4F4D;&#x4F86;&#x5B58;&#x5132;&#x591A;&#x7B46;&#x8CC7;&#x6599;&#x3002;&#x9019;&#x6A23;&#xFF0C;&#x5728;&#x63D2;&#x5165;&#x6642;&#xFF0C;&#x7576;&#x9047;&#x5230;&#x76F8;&#x540C;&#x7684;&#x641C;&#x5C0B;&#x9375;&#x6642;&#xFF0C;&#x53EA;&#x9700;&#x5C07;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x8FFD;&#x52A0;&#x5230;&#x8A72;&#x7BC0;&#x9EDE;&#x7684;&#x6B04;&#x4F4D;&#x4E2D;&#x3002;&lt;/p&gt;&#xD;
+	&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x7A2E;&#x65B9;&#x6CD5;&#xFF0C;&#x5229;&#x7528;&#x93C8;&#x8868;&#x4F86;&#x5B58;&#x5132;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x8CC7;&#x6599;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;vector&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class TreeNode {&lt;br /&gt;&#xD;
+public:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int key;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; std::vector&amp;lt;std::string&amp;gt; data_list; // &#x4F7F;&#x7528;vector&#x4F86;&#x5B58;&#x5132;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x8CC7;&#x6599;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; TreeNode* left;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; TreeNode* right;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; TreeNode(int val) : key(val), left(nullptr), right(nullptr) {}&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class BinarySearchTree {&lt;br /&gt;&#xD;
+private:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; TreeNode* root;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; TreeNode* insertRecursive(TreeNode* node, int key, const std::string&amp;amp; data) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (node == nullptr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return new TreeNode(key);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (key == node-&amp;gt;key) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; node-&amp;gt;data_list.push_back(data); // &#x5C07;&#x8CC7;&#x6599;&#x6DFB;&#x52A0;&#x5230;&#x8CC7;&#x6599;vector&#x4E2D;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else if (key &amp;lt; node-&amp;gt;key) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; node-&amp;gt;left = insertRecursive(node-&amp;gt;left, key, data);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; node-&amp;gt;right = insertRecursive(node-&amp;gt;right, key, data);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return node;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;public:&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; BinarySearchTree() : root(nullptr) {}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; void insert(int key, const std::string&amp;amp; data) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; root = insertRecursive(root, key, data);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; BinarySearchTree bst;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x65B0;&#x589E;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; bst.insert(5, &amp;quot;data1&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; bst.insert(3, &amp;quot;data2&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; bst.insert(7, &amp;quot;data3&amp;quot;);&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; bst.insert(5, &amp;quot;data4&amp;quot;); // &#x5B58;&#x5165;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x8CC7;&#x6599;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6539;&#x7528;C++&#x7A0B;&#x5F0F;&#x78BC;&#xFF0C;&#x6211;&#x5011;&#x5B9A;&#x7FA9;&#x4E86;TreeNode&#x985E;&#x5225;&#x8868;&#x793A;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x4E26;&#x4F7F;&#x7528;std::vector&#x4F86;&#x5B58;&#x5132;&#x76F8;&#x540C;&#x9375;&#x503C;&#x7684;&#x8CC7;&#x6599;&#x3002;&#x7576;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x6642;&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x76F8;&#x540C;&#x7684;&#x641C;&#x5C0B;&#x9375;&#xFF0C;&#x5247;&#x5C07;&#x65B0;&#x7684;&#x8CC7;&#x6599;&#x6DFB;&#x52A0;&#x5230;&#x8A72;&#x7BC0;&#x9EDE;&#x7684;data_list&#x5411;&#x91CF;&#x4E2D;&#xFF0C;&#x9019;&#x6A23;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x540C;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x4E0B;&#x4FDD;&#x5B58;&#x591A;&#x7B46;&#x8CC7;&#x6599;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>16</hit>
+  <lang>1</lang>
+</data>

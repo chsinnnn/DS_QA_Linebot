@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2023-10-18 23:34:17",
+        "poster": "11127122",
+        "realname": "胡沛頎",
+        "email": "123456789paige26@gmail.com",
+        "homepage": null,
+        "subject": "118",
+        "content": "<p><span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\">118. 令</span>ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。</span></span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\">假設</span>ptrX<span style=\"font-family:微軟正黑體\">所指向的鏈結串列為: </span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\"><img alt=\"\" src=\"/user/1/1/11127122/images/1.png\" style=\"height:73px; width:234px\" /></span></span></span></span></p>\r\n\r\n<p><br />\r\n<span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\">若</span>ptrX = ptrX-&gt;next&nbsp;<span style=\"font-family:微軟正黑體\">，則</span>ptrX<span style=\"font-family:微軟正黑體\">指向原本指的節點的下一個。</span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\">所以操作完成之後，</span>ptrX<span style=\"font-family:微軟正黑體\">所指的節點會變成:</span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><img alt=\"\" src=\"/user/1/1/11127122/images/2%283%29.png\" style=\"height:72px; width:239px\" /></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\">若</span>ptrX-&gt;next = ptrX&nbsp;<span style=\"font-family:微軟正黑體\">會使得</span>ptrX <span style=\"font-family:微軟正黑體\">指的節點的下一個同樣是原本</span>ptrX <span style=\"font-family:微軟正黑體\">指的節點，形成迴圈，而</span>ptrX<span style=\"font-family:微軟正黑體\">原本指向的節點的後面的節點全部遺失。</span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體\"><span style=\"font-family:微軟正黑體\">所以操作完成之後，</span>ptrX<span style=\"font-family:微軟正黑體\">所指向的鏈結串列會變成:</span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:12px\"><img alt=\"\" src=\"/user/1/1/11127122/images/3.png\" style=\"height:97px; width:126px\" /></span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "15",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:16",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174277",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-11-21 21:13:33",
+        "poster": "11027242",
+        "realname": "張子元",
+        "email": "wen031291@gmail.com",
+        "homepage": null,
+        "subject": "203. 舉例說明雙重佇列如何模擬，須指出選擇佇列的策略。",
+        "content": "<p>以作業任務三的例子來說，以佇列1(Q1)當成主要的廚師，佇列2(Q2)為次要的廚師，兩個廚師的閒置時間(CQ1、CQ2)彼此獨立，處理訂單會改變閒置時間</p>\r\n\r\n<p>當訂單進來時，</p>\r\n\r\n<p>if Q1為空的且訂單的抵達時間大於等於CQ1且CQ1&lt;=CQ2</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 則由Q1直接處理此訂單</p>\r\n\r\n<p>else if Q2為空且訂單抵達時間&gt;=CQ2</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;則由Q2直接處理此訂單</p>\r\n\r\n<p>else if&nbsp;下筆訂單的抵達時間&gt;=CQ1 || &gt;=CQ2</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 取出並處理各自佇列的訂單，直到抵達時間( &gt;=CQ1 &amp;&amp;&nbsp;&gt;=CQ2 ) || 佇列已經空了</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 接著將訂單新增到佇列內訂單數較少的一方，若相同則新增到Q1</p>\r\n\r\n<p>else&nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 新增到較短的佇列中，若兩個佇列都已滿，則直接取消此訂單</p>\r\n\r\n<p>當沒有新訂單時，則直接一一處理佇列中剩餘的訂單</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "69",
+        "lang": "1"
+    }
+}

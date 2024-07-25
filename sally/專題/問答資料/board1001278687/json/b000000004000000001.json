@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000004000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000004000000001",
+        "site": "1000110001",
+        "pt": "2023-07-22 15:13:35",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答222",
+        "content": "<p>OK.</p>\r\n\r\n<p><span style=\"color:#b22222\">Minor issues:</span></p>\r\n\r\n<p><span style=\"color:#b22222\">1. 何不將insertNode設計為Node的成員函數？如此即可改用root.insertNode(5)呼叫，減少參數列。</span></p>\r\n\r\n<p><span style=\"color:#b22222\">2. 缺少一種狀況：(value ==&nbsp;root-&gt;data)</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

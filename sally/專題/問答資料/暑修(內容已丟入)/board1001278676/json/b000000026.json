@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000026.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000026",
+        "site": "1000110001",
+        "pt": "2023-07-07 23:25:08",
+        "poster": "06004870",
+        "realname": "曾浚楷",
+        "email": "kenneth61215@gmail.com",
+        "homepage": null,
+        "subject": "搶答101",
+        "content": "<p>101. 以自己的話描述遞迴recursion是什麼。</p>\r\n\r\n<p>答:遞迴是常用於簡化程式且增加其泛用性的方法，若程式需重複多次相同任務，甚至需要根據輸入來決定重複次數時，遞迴可以有效解決這個狀況，並簡短程式碼、增加易讀性</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

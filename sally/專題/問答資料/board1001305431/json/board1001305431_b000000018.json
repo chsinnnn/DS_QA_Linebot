@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-10-03 09:00:05",
+        "poster": "11020126",
+        "realname": "鄭祐昀",
+        "email": "carry0987@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>// Create a vector of 5 integers, all initialized to 10<br />\r\nstd::vector&lt;int&gt; vec(5, 10); &nbsp; &nbsp;// The vector is now {10, 10, 10, 10, 10}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "19",
+        "lang": "1"
+    }
+}

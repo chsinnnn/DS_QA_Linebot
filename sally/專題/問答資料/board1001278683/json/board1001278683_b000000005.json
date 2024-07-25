@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-07-19 15:53:33",
+        "poster": "06005840",
+        "realname": "施伯諭",
+        "email": "u10806215@ms.ttu.edu.tw",
+        "homepage": null,
+        "subject": "搶答206",
+        "content": "<p>//撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。<br />\r\n#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p><br />\r\n/* run this program using the console pauser or add your own getch, system(&quot;pause&quot;) or input loop */</p>\r\n\r\n<p>int main(int argc, char** argv) {<br />\r\n&nbsp;&nbsp; &nbsp;int n;<br />\r\n&nbsp;&nbsp; &nbsp;int tp;<br />\r\n&nbsp;&nbsp; &nbsp;bool ischanged;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;input n:&quot;;<br />\r\n&nbsp;&nbsp; &nbsp;cin &gt;&gt; n;<br />\r\n&nbsp;&nbsp; &nbsp;int ar[n];<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;input array:&quot; &lt;&lt; endl;<br />\r\n&nbsp;&nbsp; &nbsp;for(int i = 0;i&lt;n;i++){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cin &gt;&gt; ar[i];<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;for(int i = n;i&gt;1;i--){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span data-darkreader-inline-color=\"\" style=\"--darkreader-inline-color:#ff1515; color:#ff0000\">&nbsp;ischanged = false; //預設ischanged為false;&nbsp;</span><br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for(int j = 0;j&lt;i-1;j++){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if(ar[j]&gt;ar[j+1]){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;tp = ar[j];<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;ar[j] = ar[j+1];<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;ar[j+1] = tp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span data-darkreader-inline-color=\"\" style=\"--darkreader-inline-color:#ff1515; color:#ff0000\">ischanged = true; //如果有進行元素交換,ischanged設為true&nbsp;</span><br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span data-darkreader-inline-color=\"\" style=\"--darkreader-inline-color:#ff1515; color:#ff0000\">if(ischanged == false) //如果ischanged為false,元素沒有交換,代表陣列已經排序好了,跳出迴圈。&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;break;</span><br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for(int i = 0;i&lt;n;i++){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; ar[i] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; endl;<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; endl &lt;&lt; &quot;an array has been sorted: &quot;;<br />\r\n&nbsp;&nbsp; &nbsp;for(int i = 0;i&lt;n;i++){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; ar[i] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;return 0;<br />\r\n}<br />\r\n<br />\r\n以下為範例<br />\r\n有判別是否進行元素排序:<br />\r\n<img alt=\"\" src=\"/user/0/6/06005840/images/12345.png\" style=\"height:110px; width:379px\" /><br />\r\n無判別是否進行元素排序:</p>\r\n\r\n<p><img alt=\"\" src=\"/user/0/6/06005840/images/12345no.png\" style=\"height:195px; width:394px\" /></p>\r\n\r\n<p>有判別是否進行元素排序:<br />\r\n<img alt=\"\" src=\"/user/0/6/06005840/images/32145.png\" style=\"height:220px; width:341px\" /><br />\r\n無判別是否進行元素排序:<br />\r\n<img alt=\"\" src=\"/user/0/6/06005840/images/32145no.png\" style=\"height:256px; width:340px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

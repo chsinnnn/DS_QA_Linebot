@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000010.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000010</node>
+  <site>1000110001</site>
+  <pt>2023-07-09 17:31:13</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;115 </subject>
+  <content>&lt;p&gt;115. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x5740;&#x547C;&#x53EB;call by address&#x3002; C++ &#x4E2D;&#x4F7F;&#x7528;&#x50B3;&#x5740;&#x547C;&#x53EB;&#xFF08;call by address&#xFF09;&#xFF0C;&#x6703;&#x50B3;&#x905E;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x5730;&#x5740;&#x7D66;&#x51FD;&#x5F0F;&#xFF0C;&#x9019;&#x6A23;&#x51FD;&#x5F0F;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x8A72;&#x8B8A;&#x6578;&#x7684;&#x503C;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x50B3;&#x5740;&#x547C;&#x53EB;&#x7684;&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+void changeValue(int* ptr) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x900F;&#x904E;&#x6307;&#x6A19;&#x4FEE;&#x6539;&#x8B8A;&#x6578;&#x7684;&#x503C;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; *ptr = 10;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int num = 5;//&#x521D;&#x59CB;&#x503C;&#x70BA;5&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x539F;&#x59CB;&#x6578;&#x503C;: &amp;quot; &amp;lt;&amp;lt; num &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x50B3;&#x905E;&#x8B8A;&#x6578;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x5730;&#x5740;&#x7D66;&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; changeValue(&amp;amp;num);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x4FEE;&#x6539;&#x5F8C;&#x7684;&#x6578;&#x503C;: &amp;quot; &amp;lt;&amp;lt; num &amp;lt;&amp;lt; std::endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>20</hit>
+  <lang>1</lang>
+</data>

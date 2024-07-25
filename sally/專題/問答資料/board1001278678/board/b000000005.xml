@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000005.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000005</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 10:11:06</pt>
+  <poster>10927230</poster>
+  <realname>&#x5289;&#x53C8;&#x8AA0;  </realname>
+  <email>peter082323@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;115 </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std ;&lt;br /&gt;&#xD;
+void swap( int *a, int *b ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int temp = *a ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;*a = *b ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;*b = temp ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;int a = 2 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;int b = 3 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;a = &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;quot; &amp;nbsp;b = &amp;quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;swap( &amp;amp;a, &amp;amp;b ) ; // &#x50B3;&#x5165;a,b&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;a = &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;quot; &amp;nbsp;b = &amp;quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F38;&#x51FA;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/0/10927230/images/image2" style="height:59px; width:194px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E5F;&#x53EB;call by pointer&#xFF0C;&#x628A;a&#x548C;b&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#x50B3;&#x5165;function&#x5F8C;&#xFF0C;&#x4E26;&#x4F5C;&#x70BA;&amp;quot;&#x6307;&#x5411;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#x7684;&#x6307;&#x6A19;&amp;quot; &#x4F86;&#x4F7F;&#x7528;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>18</hit>
+  <lang>1</lang>
+</data>

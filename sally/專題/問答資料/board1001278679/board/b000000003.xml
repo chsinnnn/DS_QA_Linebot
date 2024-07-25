@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:00" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278679</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-07-09 10:12:31</pt>
+  <poster>06005634</poster>
+  <realname>&#x90ED;&#x5BB8;&#x69A4;  </realname>
+  <email>jyh2guo@gmail.com</email>
+  <homepage> </homepage>
+  <subject>&#x6436;&#x7B54;118 </subject>
+  <content>&lt;ol&gt;&#xD;
+	&lt;li&gt;&#xD;
+	&lt;p&gt;ptrX = ptrX-&amp;gt;next &#x662F;&#x5C07;&#x6307;&#x6A19; ptrX &#x6307;&#x5411; ptrX &#x76EE;&#x524D;&#x6307;&#x5411;&#x7BC0;&#x9EDE;&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x5B83;&#x5C07; ptrX &#x79FB;&#x52D5;&#x5230;&#x93C8;&#x8868;&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x3002;&lt;/p&gt;&#xD;
+	&lt;/li&gt;&#xD;
+	&lt;li&gt;&#xD;
+	&lt;p&gt;ptrX-&amp;gt;next = ptrX &#x662F;&#x5C07; ptrX &#x6307;&#x5411;&#x7BC0;&#x9EDE;&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x6307;&#x6A19;&#x70BA;&#x6307;&#x5411; ptrX &#x81EA;&#x5DF1;&#x3002;&#x9019;&#x6A23;&#x505A;&#x6703;&#x5275;&#x5EFA;&#x4E00;&#x500B;cycle&#x93C8;&#x8868;&#xFF0C;&#x7576;&#x524D;&#x7BC0;&#x9EDE;&#x8207;&#x5F8C;&#x7BC0;&#x9EDE;&#x9023;&#x63A5;&#x8D77;&#x4F86;&#xFF0C;&#x5F62;&#x6210;&#x4E00;&#x500B;cycle&#x3002;&lt;/p&gt;&#xD;
+	&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x5169;&#x500B;&#x64CD;&#x4F5C;&#x7684;&#x7D50;&#x679C;&#x4E0D;&#x540C;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;ptrX = ptrX-&amp;gt;next &#x7528;&#x65BC;&#x8A2A;&#x554F;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;ptrX-&amp;gt;next = ptrX &#x7528;&#x65BC;&#x5275;&#x5EFA;cycle&#x93C8;&#x8868;&#x6216;&#x91CD;&#x65B0;&#x9023;&#x63A5;&#x7BC0;&#x9EDE;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>29</hit>
+  <lang>1</lang>
+</data>

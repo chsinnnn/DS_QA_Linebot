@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:30",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296424",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-11-18 15:37:04",
+        "poster": "11127137",
+        "realname": "黃乙家",
+        "email": "u810025@gmail.com",
+        "homepage": "https://ja-errorpro.cf",
+        "subject": "210",
+        "content": "<p><strong><span style=\"font-size:16px\">依據程式碼解說選擇排序的時間複雜度。</span></strong></p>\r\n\r\n<p>選擇排序是在數組中找出極值，以由小到大排序為例，先找出最小的數，放在第一個位置，再找出第二小的數，放在第二個位置，以此類推。</p>\r\n\r\n<p>```cpp</p>\r\n\r\n<p>void selectionSort(int arr[], int n) {</p>\r\n\r\n<p>&nbsp; &nbsp; for (int i = 0; i &lt; n - 1; i++) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; int min = i;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; for (int j = i + 1; j &lt; n; j++) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (arr[j] &lt; arr[min]) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min = j;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; swap(arr[i], arr[min]);</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>}</p>\r\n\r\n<p>```</p>\r\n\r\n<p>先假設arr[0]為極值，接著比較n-1次，如果有更小的就把極值換掉，找到極值後把極值放到最前面(交換)</p>\r\n\r\n<p>接著以同樣的思路排序&nbsp;arr[1:n] 、arr[2:n] 、arr[3:n] ...</p>\r\n\r\n<p>最後總比較次數為 <img alt=\"(n-1)+(n-2)+(n-3)+ \\dots 1 = \\frac{n*(n-1)}{2}\" src=\"https://latex.codecogs.com/gif.latex?%28n-1%29&amp;plus;%28n-2%29&amp;plus;%28n-3%29&amp;plus;%20%5Cdots%201%20%3D%20%5Cfrac%7Bn*%28n-1%29%7D%7B2%7D\" /></p>\r\n\r\n<p><img alt=\"O(\\frac{n*(n-1)}{2}) = O(\\frac{1}{2}n^2-\\frac{1}{2}n)\" src=\"https://latex.codecogs.com/gif.latex?O%28%5Cfrac%7Bn*%28n-1%29%7D%7B2%7D%29%20%3D%20O%28%5Cfrac%7B1%7D%7B2%7Dn%5E2-%5Cfrac%7B1%7D%7B2%7Dn%29\" /></p>\r\n\r\n<p>複雜度分析原則(根據複雜度定義)：</p>\r\n\r\n<p>1.小常數倍數不計</p>\r\n\r\n<p><img alt=\"O(\\frac{1}{2}n^2-\\frac{1}{2}n) = O(n^2-n)\" src=\"https://latex.codecogs.com/gif.latex?O%28%5Cfrac%7B1%7D%7B2%7Dn%5E2-%5Cfrac%7B1%7D%7B2%7Dn%29%20%3D%20O%28n%5E2-n%29\" /></p>\r\n\r\n<p>2.低次項不計</p>\r\n\r\n<p><img alt=\"O(n^2-n) = O(n^2)\" src=\"https://latex.codecogs.com/gif.latex?O%28n%5E2-n%29%20%3D%20O%28n%5E2%29\" /></p>\r\n\r\n<p>3.<img alt=\"O(f(n))\" src=\"https://latex.codecogs.com/gif.latex?O%28f%28n%29%29\" />執行<img alt=\"g(n)\" src=\"https://latex.codecogs.com/gif.latex?g%28n%29\" />次，總複雜度<img alt=\"O(f(n)*g(n))\" src=\"https://latex.codecogs.com/gif.latex?O%28f%28n%29*g%28n%29%29\" /></p>\r\n\r\n<p>比較 O(n-1) 執行 n-1 次，結果仍為原複雜度</p>\r\n\r\n<p>因為選擇排序不管初始狀態，比較次數 worst case、best case、average case都一樣，所以比較的複雜度一樣</p>\r\n\r\n<p><img alt=\"O(n^2)\" src=\"https://latex.codecogs.com/gif.latex?O%28n%5E2%29\" /></p>\r\n\r\n<p>而交換的複雜度，最好情況是已排好序，<img alt=\"O(1)\" src=\"https://latex.codecogs.com/gif.latex?O%281%29\" />，最差是逆序，要交換 n-1 次，<img alt=\"O(n)\" src=\"https://latex.codecogs.com/gif.latex?O%28n%29\" /></p>\r\n\r\n<p>總複雜度為&nbsp;<img alt=\"O(n^2)\" src=\"https://latex.codecogs.com/gif.latex?O%28n%5E2%29\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

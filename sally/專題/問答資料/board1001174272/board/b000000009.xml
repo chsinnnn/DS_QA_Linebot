@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:17" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174272</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2022-09-24 17:34:26</pt>
+  <poster>11027229</poster>
+  <realname>&#x5353;&#x69AE;&#x6689;  </realname>
+  <email>intercoursedr@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>108. &#x82E5;&#x905E;&#x8FF4;&#x5230;&#x67D0;&#x5C64;&#x5C31;&#x7570;&#x5E38;&#x7D42;&#x6B62;&#xFF0C;&#x8981;&#x5982;&#x4F55;&#x5F37;&#x5236;&#x5B83;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#x5230;&#x4E0B;&#x4E00;&#x5C64;&#xFF1F; </subject>
+  <content>&lt;p&gt;&#x901A;&#x5E38;&#x662F;&#x4E0D;&#x592A;&#x6703;&#x8B93;&#x7570;&#x5E38;&#x7684;&#x7A0B;&#x5F0F;&#x7E7C;&#x7E8C;&#x57F7;&#x884C; &#x4E0D;&#x904E;&#x56E0;&#x70BA;&#x9019;&#x984C;&#x662F;&#x8981;&#x5F37;&#x5236;&#x57F7;&#x884C;&lt;br /&gt;&#xD;
+&#x5728;&#x4E0B;&#x56E0;&#x70BA;&#x958B;&#x767C;&#x7D93;&#x9A57;&#x7A0D;&#x5FAE;&#x5F31;&#x4E86;&#x4E00;&#x9EDE;&lt;br /&gt;&#xD;
+&#x7D5E;&#x76E1;&#x4E86;&#x8166;&#x6C41;&#x60F3; &#x53EA;&#x60F3;&#x5230;&#x4E00;&#x7A2E;&#x65B9;&#x6CD5; (&#x62B1;&#x6B49;&#x6211;&#x958B;&#x767C;&#x7D93;&#x9A57;&#x7A0D;&#x5FAE;&#x4E0D;&#x8DB3;):&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Exception Handling&lt;br /&gt;&#xD;
+&#x57FA;&#x672C;&#x4E0A;&#x9019;&#x500B;&#x6771;&#x897F;&#x5728;&#x5F88;&#x591A;&#x7A0B;&#x5F0F;&#x8A9E;&#x8A00;&#x90FD;&#x6709;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;:&lt;br /&gt;&#xD;
+&#x7528; try &#x5305;&#x4F4F;&#x53EF;&#x80FD;&#x6703;&#x767C;&#x751F;&#x4F8B;&#x5916;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x5340;&#x6BB5;&#xFF0C;&lt;br /&gt;&#xD;
+&#x7528; catch &#x4F86;&#x8655;&#x7406;&#x9019;&#x500B; try &#x5340;&#x57DF;&#x6240;&#x767C;&#x751F;&#x7684;&#x4F8B;&#x5916;&lt;br /&gt;&#xD;
+&#x5982;&#x679C;&#x57F7;&#x884C;&#x4E2D;&#x767C;&#x751F;Exception &#x4E0D;&#x6703;&#x76F4;&#x63A5;&#x5C07;&#x7A0B;&#x5F0F;&#x4E2D;&#x6B62; &#x800C;&#x662F;&#x6703;&#x9032;&#x5165;catch&#x90A3;&#x908A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x662F;&#x6703;&#x767C;&#x751F;&#x932F;&#x8AA4;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include&amp;lt;bits/stdc++.h&amp;gt; // &#x5C0D;&#x4E0D;&#x8D77;&#x5566;QAQ&lt;br /&gt;&#xD;
+using namespace std; // &#x6211;&#x5F88;&#x62B1;&#x6B49;QQ&lt;br /&gt;&#xD;
+void A(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cin.exceptions(ios_base::failbit);&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;try{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;int t;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cin &amp;gt;&amp;gt; t; // &#x8F38;&#x5165;t&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; t &amp;lt;&amp;lt; endl; // &#x8F38;&#x51FA;t&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;A(); // &#x905E;&#x8FF4;&#x9032;&#x4E0B;&#x4E00;&#x5C64;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x7576;&#x767C;&#x751F;&#x932F;&#x8AA4;&#x6642;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;catch (exception&amp;amp; ba){&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;printf(&amp;quot;Error\n&amp;quot;); // &#x5370;&#x51FA;Error&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;cin.clear(); // &#x5148;&#x628A;cin&#x6E05;&#x7A7A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;cin.ignore();&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;A(); // &#x518D;&#x905E;&#x8FF4;XD&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;br /&gt;&#xD;
+int main(){&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;A(); // infinite loop&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x5982;&#x679C;&#x662F;&#x6307;stack overflow&#x9084;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#x7684;&#x8A71; &#x5F88;&#x62B1;&#x6B49;&#x6211;&#x6C92;&#x627E;&#x5230;&#x65B9;&#x6CD5;XD)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x53C3;&#x8003;&#x8CC7;&#x6E90;:&lt;br /&gt;&#xD;
+https://shengyu7697.github.io/cpp-exception/&lt;br /&gt;&#xD;
+https://cplusplus.com/reference/ios/ios/exceptions/&lt;br /&gt;&#xD;
+https://learn.microsoft.com/zh-tw/cpp/cpp/errors-and-exception-handling-modern-cpp?view=msvc-170&lt;br /&gt;&#xD;
+)&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>112</hit>
+  <lang>1</lang>
+</data>

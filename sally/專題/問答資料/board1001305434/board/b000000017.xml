@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:08" type="post" filename="b000000017.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305434</board_id>
+  <node>000000017</node>
+  <site>1000110001</site>
+  <pt>2023-10-25 15:16:25</pt>
+  <poster>11127207</poster>
+  <realname>&#x694A;&#x7AE3;&#x5091;  </realname>
+  <email>jacky115526@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;call by reference </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void IncrementByReference(int &amp;amp;num);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; int value = 5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; std::cout &amp;lt;&amp;lt; &amp;quot;&#x539F;&#x59CB;&#x503C;: &amp;quot; &amp;lt;&amp;lt; value &amp;lt;&amp;lt; std::endl; // &#x547C;&#x53EB;&#x51FD;&#x6578;&#x4E26;&#x50B3;&#x53C3;&#x8003;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; IncrementByReference(value); std::cout &amp;lt;&amp;lt; &amp;quot;&#x51FD;&#x6578;&#x547C;&#x53EB;&#x5F8C;&#x7684;&#x503C;: &amp;quot; &amp;lt;&amp;lt; value &amp;lt;&amp;lt; std::endl; return 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;IncrementByReference(int &amp;amp;num) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp;num++;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>5</hit>
+  <lang>1</lang>
+</data>

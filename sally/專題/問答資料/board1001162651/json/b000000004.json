@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2022-10-22 21:11:52",
+        "poster": "11027148",
+        "realname": "周品誼",
+        "email": "070522jacqueline@gmail.com",
+        "homepage": null,
+        "subject": "128. 後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。",
+        "content": "<p>2 4 6 * + 7 5 - *</p>\r\n\r\n<p>1: 將2放進堆疊裡&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;stack目前有2</p>\r\n\r\n<p>2: 將4放進堆疊裡&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;stack目前有2 4</p>\r\n\r\n<p>3: 將6放進堆疊裡&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;stack目前有2 4 6</p>\r\n\r\n<p>4: 碰到* 將堆疊裡後加入兩個數字做運算並放進堆疊裡&nbsp; &nbsp; stack目前有2 24</p>\r\n\r\n<p>5: 碰到+將堆疊裡後加入兩個數字做運算並放進堆疊裡&nbsp; &nbsp; stack目前有26</p>\r\n\r\n<p>6:&nbsp;將7放進堆疊裡&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;stack目前有26 7</p>\r\n\r\n<p>7: 將5放進堆疊裡&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;stack目前有26 7 5</p>\r\n\r\n<p>8:&nbsp;碰到-將堆疊裡後加入兩個數字做運算並放進堆疊裡&nbsp; &nbsp; stack目前有26 2</p>\r\n\r\n<p>9: 碰到*將堆疊裡後加入兩個數字做運算並放進堆疊裡&nbsp; &nbsp; 結果為52</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "59",
+        "lang": "1"
+    }
+}

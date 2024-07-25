@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:00",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278679",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-07-10 15:57:43",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答118",
+        "content": "<p>118. 令ptrX指向鏈結串列的節點，比較 ptrX = ptrX-&gt;next 和 ptrX-&gt;next = ptrX 的差異。</p>\r\n\r\n<p>ptrX = ptrX-&gt;next: ptrX所指向節點下一個節點設置為指向ptrX目前所指向節點，使ptrX目前所指向的節點的下一個節點指向自己，使得形成cycle。</p>\r\n\r\n<p>ptrX-&gt;next = ptrX : ptrX所指向節點的下一個節點設置為指向ptrX目前所指向節點，使ptrX目前所指向的節點的下一個節點指向自己，得形成cycle。</p>\r\n\r\n<p>ptrX = ptrX-&gt;next 將 ptrX 移動到鏈結串列的下一個節點，而 ptrX-&gt;next = ptrX 將 ptrX 目前所指向節點的下一個節點設置為指向自己，從而形成了一個循環。 想法一樣，但方法不同</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "27",
+        "lang": "1"
+    }
+}

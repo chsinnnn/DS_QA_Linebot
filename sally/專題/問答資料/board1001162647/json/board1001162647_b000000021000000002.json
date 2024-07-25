@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000021000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000021000000002",
+        "site": "1000110001",
+        "pt": "2022-10-02 01:56:43",
+        "poster": "11027142",
+        "realname": "林蕙郁",
+        "email": "tiffanylin0914@gmail.com",
+        "homepage": null,
+        "subject": "Re: 106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>講得真好!</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

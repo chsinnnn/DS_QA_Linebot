@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000021.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000021",
+        "site": "1000110001",
+        "pt": "2023-07-25 22:09:21",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答221",
+        "content": "<p><span style=\"font-size:14px\">221. 舉例解說中序走訪二元搜尋樹是否穩定排序。</span></p>\r\n\r\n<p>中序走訪二元搜尋數時，會先走訪完左子樹木的所有節點，再走訪根節點，最後再走訪右子樹的所有節點，</p>\r\n\r\n<p>假設有個二元樹長這樣 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp;\\<br />\r\n&nbsp; &nbsp; &nbsp;2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7<br />\r\n&nbsp;&nbsp; /&nbsp;&nbsp; \\&nbsp;&nbsp; &nbsp; /&nbsp;&nbsp;&nbsp; \\<br />\r\n3&nbsp; &nbsp; &nbsp; &nbsp;4 6&nbsp; &nbsp; &nbsp; &nbsp;8<br />\r\n首先會先從根節點開始走，訪問左子樹的最左的根節點，所以第一個節點為3。接下來訪問節點2，再來是節點4，因為節點2是節點4的父節點，所以節點3會先訪問，再來才是4，然後再訪問節點5，接著是節點6，因為節點5是節點6的父節點。最後訪問節點7，再訪問節點8，因為節點7是節點8的父節點，那麼依順序為：2,3,4,5,6,7,8，此可證明中序中訪是一種穩定排序，是按照大小節點進行排序，所以最後的結果是有序的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000005.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000005",
+        "site": "1000110001",
+        "pt": "2023-10-17 20:17:34",
+        "poster": "11120117",
+        "realname": "林筠翔",
+        "email": "lin1050265@gmail.com",
+        "homepage": null,
+        "subject": "122",
+        "content": "<p>122. 寫C++程式碼說明傳參考呼叫call by reference。</p>\r\n\r\n<p>#include &lt;stdio.h&gt;</p>\r\n\r\n<p>void SwitchNum( int &amp; num1, int &amp; num2 ) { // call by reference ( address ) ( 若無 &amp; 即為 call by value&nbsp;)&nbsp;</p>\r\n\r\n<p>int temp = 0; // 暫存變數</p>\r\n\r\n<p>temp = num1 ;</p>\r\n\r\n<p>num1 = num2 ;</p>\r\n\r\n<p>num2 = temp ;</p>\r\n\r\n<p>return ;</p>\r\n\r\n<p>} &nbsp;</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; int num1 = 1 ;</p>\r\n\r\n<p>&nbsp; int num2 = 2;</p>\r\n\r\n<p>&nbsp; printf( &quot;Before：\\n&quot;);</p>\r\n\r\n<p>&nbsp; printf( &quot;num1：%d\\n&quot;, num1 );&nbsp;</p>\r\n\r\n<p>&nbsp; printf( &quot;num2：%d\\n&quot;, num2 );&nbsp;</p>\r\n\r\n<p>&nbsp; SwitchNum( num1, num2 ); // 交換num1和num2的數字</p>\r\n\r\n<p>&nbsp; printf( &quot;After：\\n&quot;);</p>\r\n\r\n<p>&nbsp; printf( &quot;num1：%d\\n&quot;, num1 );&nbsp;</p>\r\n\r\n<p>&nbsp; printf( &quot;num2：%d\\n&quot;, num2 );&nbsp;</p>\r\n\r\n<p>&nbsp; return 0;</p>\r\n\r\n<p>}&nbsp;</p>\r\n\r\n<p>=======================================</p>\r\n\r\n<p>輸出結果：</p>\r\n\r\n<p>Before：</p>\r\n\r\n<p>num1：1</p>\r\n\r\n<p>num2：2</p>\r\n\r\n<p>After：</p>\r\n\r\n<p>num1：2</p>\r\n\r\n<p>num2：1</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "48",
+        "lang": "1"
+    }
+}

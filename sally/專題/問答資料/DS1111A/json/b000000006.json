@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 08:54:28",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296417",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-09-17 15:24:02",
+        "poster": "11127115",
+        "realname": "陳姿安",
+        "email": "ciyo1102@gmail.com",
+        "homepage": null,
+        "subject": "103",
+        "content": "<p><span style=\"font-size:16px\">簡介Acker函數，並列出Acker(2,3)的求解過程。</span></p>\r\n\r\n<p><span style=\"font-size:8px\">●為一遞迴但不為原始遞迴的函數，輸入兩自然數，輸出一自然數，輸出增長速度高</span></p>\r\n\r\n<p><span style=\"font-size:8px\">●Acker( 2, 3 )<br />\r\n= Acker( 1, Acker( 2, 2 ) )<br />\r\n= Acker( 1, Acker( 2, 1 ) )<br />\r\n= Acker( 1, Acker( 2, 0 ) )<br />\r\n= Acker( 1, 1 )<br />\r\n= Acker( 0, Acker( 1, 0 ) )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 2 )<br />\r\n= Acker( 0, Acker( 1, 2 ) )<br />\r\n= Acker( 0, Acker( 1, 1 ) )<br />\r\n= Acker( 0, Acker( 1, 0 ) )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 2 )<br />\r\n= Acker( 0, 3 )<br />\r\n= Acker( 0, 4 )<br />\r\n= Acker( 0, Acker( 1, 4 ) )<br />\r\n= Acker( 0, Acker( 1, 3 ) )<br />\r\n= Acker( 0, Acker( 1, 2 ) )<br />\r\n= Acker( 0, Acker( 1, 1 ) )<br />\r\n= Acker( 0, Acker( 1, 0 ) )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 2 )<br />\r\n= Acker( 0, 3 )<br />\r\n= Acker( 0, 4 )<br />\r\n= Acker( 0, 5 )<br />\r\n= Acker( 0, 6 )<br />\r\n= Acker( 0, Acker( 1, 6 ) )<br />\r\n= Acker( 0, Acker( 1, 5 ) )<br />\r\n= Acker( 0, Acker( 1, 4 ) )<br />\r\n= Acker( 0, Acker( 1, 3 ) )<br />\r\n= Acker( 0, Acker( 1, 2 ) )<br />\r\n= Acker( 0, Acker( 1, 1 ) )<br />\r\n= Acker( 0, Acker( 1, 0 ) )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 1 )<br />\r\n= Acker( 0, 2 )<br />\r\n= Acker( 0, 3 )<br />\r\n= Acker( 0, 4 )<br />\r\n= Acker( 0, 5 )<br />\r\n= Acker( 0, 6 )<br />\r\n= Acker( 0, 7 )<br />\r\n= Acker( 0, 8 )<br />\r\n= 9</span></p>",
+        "attach": "11127115 Acker.cpp\tWM6506b7c7281d6.cpp",
+        "rcount": null,
+        "rank": null,
+        "hit": "64",
+        "lang": "1"
+    }
+}

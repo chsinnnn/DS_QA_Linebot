@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:00" type="post" filename="b000000014.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278679</board_id>
+  <node>000000014</node>
+  <site>1000110001</site>
+  <pt>2023-07-12 13:04:19</pt>
+  <poster>06005645</poster>
+  <realname>&#x6797;&#x54C1;&#x7444;  </realname>
+  <email>hank61061007@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x554F;&#x7B54;119 </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int data;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void deleteNode(Node*&amp;amp; head, int position) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;if (head == nullptr)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* current = head;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* previous = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int count = 1; // &#x627E;&#x5230;&#x8981;&#x522A;&#x9664;&#x7BC0;&#x9EDE;&#x7684;&#x4F4D;&#x7F6E;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;while (current != nullptr &amp;amp;&amp;amp; count &amp;lt; position) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;previous = current; current = current-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;count++;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} // &#x5982;&#x679C; position &#x8D85;&#x904E;&#x4E86;&#x7BC0;&#x9EDE;&#x7684;&#x6578;&#x91CF;&#xFF0C;&#x5247;&#x4E0D;&#x57F7;&#x884C;&#x522A;&#x9664;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;if (current == nullptr)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return; // &#x522A;&#x9664;&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;if (previous == nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;head = current-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;delete current;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} else {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;previous-&amp;gt;next = current-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;delete current;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void printList(Node* node) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;while (node != nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;std::cout &amp;lt;&amp;lt; node-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;node = node-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;std::cout &amp;lt;&amp;lt; std::endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5EFA;&#x7ACB;&#x93C8;&#x7D50;&#x4E32;&#x5217;: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* head = new Node();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* second = new Node();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* third = new Node();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* fourth = new Node();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* fifth = new Node();&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;head-&amp;gt;data = 1;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;head-&amp;gt;next = second;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;second-&amp;gt;data = 2;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;second-&amp;gt;next = third;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;third-&amp;gt;data = 3;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;third-&amp;gt;next = fourth;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;fourth-&amp;gt;data = 4;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;fourth-&amp;gt;next = fifth;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;fifth-&amp;gt;data = 5;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;fifth-&amp;gt;next = nullptr;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;std::cout &amp;lt;&amp;lt; &amp;quot;&#x539F;&#x59CB;&#x93C8;&#x7D50;&#x4E32;&#x5217;: &amp;quot;;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;printList(head); // &#x522A;&#x9664;&#x7B2C;3&#x500B;&#x7BC0;&#x9EDE;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int position = 3;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;deleteNode(head, position);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;std::cout &amp;lt;&amp;lt; &amp;quot;&#x522A;&#x9664;&#x7B2C;&amp;quot; &amp;lt;&amp;lt; position &amp;lt;&amp;lt; &amp;quot;&#x500B;&#x7BC0;&#x9EDE;&#x5F8C;&#x7684;&#x93C8;&#x7D50;&#x4E32;&#x5217;: &amp;quot;;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;printList(head); // &#x91CB;&#x653E;&#x93C8;&#x7D50;&#x4E32;&#x5217;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* current = head;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;while (current != nullptr) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Node* next = current-&amp;gt;next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;delete current;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;current = next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x6211;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x500B;&#x6307;&#x6A19; previous &#x4F86;&#x8FFD;&#x8E64;&#x524D;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x4E26;&#x5728;&#x627E;&#x5230;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x6642;&#x9032;&#x884C;&#x522A;&#x9664;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#x679C;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x662F;&#x982D;&#x7BC0;&#x9EDE;&#xFF0C;&#x6211;&#x5011;&#x76F4;&#x63A5;&#x66F4;&#x65B0; head &#x6307;&#x6A19;&#x3002;&#x5426;&#x5247;&#xFF0C;&#x6211;&#x5011;&#x66F4;&#x65B0;&#x524D;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x7684; next &#x6307;&#x6A19;&#x4F86;&#x8DF3;&#x904E;&#x8981;&#x522A;&#x9664;&#x7684;&#x7BC0;&#x9EDE;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>26</hit>
+  <lang>1</lang>
+</data>

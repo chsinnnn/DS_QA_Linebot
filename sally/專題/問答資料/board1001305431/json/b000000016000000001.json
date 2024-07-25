@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:13",
+        "@type": "post",
+        "@filename": "b000000016000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305431",
+        "node": "000000016000000001",
+        "site": "1000110001",
+        "pt": "2023-10-03 01:49:55",
+        "poster": "11277029",
+        "realname": "何亮頡",
+        "email": "g11277029@cycu.edu.tw",
+        "homepage": null,
+        "subject": "Re: 106. 遞迴呼叫為何會造成記憶體區段錯誤？",
+        "content": "<p>good，可以再額外了解一下os的記憶體管理相關內容，segmentation fault其實是一種保護。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

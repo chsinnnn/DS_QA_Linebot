@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:04:57",
+        "@type": "post",
+        "@filename": "b000000019000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162647",
+        "node": "000000019000000001",
+        "site": "1000110001",
+        "pt": "2022-10-01 15:55:27",
+        "poster": "11027149",
+        "realname": "游婕歆",
+        "email": "xin090918@gmail.com",
+        "homepage": null,
+        "subject": "Re: 108. 若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？",
+        "content": "<p>學到了如何增加堆疊空間的方法了！下次遇到這種情況可以試看看</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

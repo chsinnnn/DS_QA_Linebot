@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000023.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000023",
+        "site": "1000110001",
+        "pt": "2022-09-20 11:35:54",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "105. 試描述整數溢位integer overflow的避免方法，並寫出C++程式碼。(轉自乙班)",
+        "content": "<p><span style=\"color:#800080\"><span style=\"font-size:14px\"><strong>11027229 ( 卓榮暉 )</strong></span></span></p>\r\n\r\n<p>以下是我認知的方法:<br />\r\n1. 直接用long long int 來當變數宣告 ( 這有點偷吃步 且還是會溢位 )<br />\r\n2. gcc本身有避免overflow的一些函式<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;e.g. bool __builtin_add_overflow (type1 a, type2 b, type3 *res)&nbsp;&nbsp;bool __builtin_sub_overflow (type1 a, type2 b, type3 *res)...etc.<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;如果溢位的話上述會回傳true 沒有的話會回傳false<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;(資料來源:&nbsp;https://stackoverflow.com/questions/62935799/generally-how-do-i-prevent-integer-overflow-from-happening-in-c-language)<br />\r\n3. 使用大數運算 ( 相比long long int 更能避免overflow )<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;原理：讓每個陣列元素可以儲存 0 到 9999，也就是 10000 進位。<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;考慮正負數的情況下，最高位數用來標示正負數，正數最高位數會是 0000，負數最高位數會是 9999，負數採 10000 補數<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;以下是程式碼的部分<br />\r\n&nbsp; &nbsp;&nbsp;<img alt=\"\" src=\"https://i-learning.cycu.edu.tw/user/1/1/11027229/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-09-16%20234358.png\" /><br />\r\n&nbsp; &nbsp; ( 我很懶惰 只寫了加跟減的部分XD 還有乘跟除 還有怎麼把String轉成BigInteger )<br />\r\n&nbsp; &nbsp; (參考資源:https://openhome.cc/zh-tw/algorithm/numbers/bigint/)</p>\r\n\r\n<p>4. 避免一定會溢位的情況 譬如除以0</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "30",
+        "lang": "1"
+    }
+}

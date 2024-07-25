@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000019.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000019",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:03:42",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答217",
+        "content": "<p><strong>舉例解說快速排序quick sort是否穩定stable。</strong></p>\r\n\r\n<p><strong>快速排序（Quick Sort）是一種常見且高效的排序算法，它是一種不穩定的排序算法。在快速排序的過程中，會進行元素的交換操作，這導致相同鍵值的元素可能在排序後改變位置，因此它不保證穩定性。</strong></p>\r\n\r\n<p><strong>假設以下tuple需要排序：</strong></p>\r\n\r\n<table>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>索引</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>值</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>0</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>1</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>8</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>3</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>4</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>9</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><strong>使用快速排序：</strong></p>\r\n\r\n<p><strong>1.選擇一個軸點（pivot），例如選擇索引2的元素&quot;8&quot;作為軸點。</strong></p>\r\n\r\n<p><strong>2.進行劃分，把比軸點小的元素放在軸點左邊，比軸點大的元素放在軸點右邊。在這個例子中，劃分之後的結果可能如下：</strong></p>\r\n\r\n<table>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>索引</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>值</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>0</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>1</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>3</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>8</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>4</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>9</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><strong>接著遞迴地對左右兩個區域進行排序。</strong></p>\r\n\r\n<p><strong>原本位於索引0和索引2的兩個相同值&quot;5&quot;，在排序後它們的相對位置改變了，這就表明快速排序是非穩定的。</strong></p>\r\n\r\n<p><strong>快速排序是一種高效的排序算法，但不保證相同鍵值的元素的相對位置不變，因此它是非穩定的排序算法。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "10",
+        "lang": "1"
+    }
+}

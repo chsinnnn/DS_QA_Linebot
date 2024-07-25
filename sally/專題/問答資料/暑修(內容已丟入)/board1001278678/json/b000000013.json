@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:52",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278678",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-10 14:16:05",
+        "poster": "10927250",
+        "realname": "古宸宇",
+        "email": "ku0905264478@gmail.com",
+        "homepage": null,
+        "subject": "搶答115",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>// 定義一個交換兩個整數值的函式</p>\r\n\r\n<p>void swapValues(int* a, int* b) {</p>\r\n\r\n<p>&nbsp; int temp = *a; // 使用指標解除參考(*)來取得傳入位址上的值</p>\r\n\r\n<p>&nbsp; *a = *b; // 修改第一個整數的值</p>\r\n\r\n<p>&nbsp; *b = temp; // 修改第二個整數的值</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; int x = 5;</p>\r\n\r\n<p>&nbsp; int y = 10;</p>\r\n\r\n<p>&nbsp; std::cout &lt;&lt; &quot;交換前：&quot; &lt;&lt; &quot;x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl; // 傳遞變數的記憶體位址給swapValues函式&nbsp; &nbsp; &nbsp; &nbsp;swapValues(&amp;x, &amp;y);</p>\r\n\r\n<p>&nbsp; std::cout &lt;&lt; &quot;交換後：&quot; &lt;&lt; &quot;x = &quot; &lt;&lt; x &lt;&lt; &quot;, y = &quot; &lt;&lt; y &lt;&lt; std::endl;</p>\r\n\r\n<p>&nbsp; return 0;</p>\r\n\r\n<p>&nbsp;}</p>\r\n\r\n<p>在上述程式碼中，我們使用int*型別的指標來接受位址參數。在swapValues函式內部，我們使用指標解除參考運算符(*)來存取傳入位址上的值。藉由交換這兩個整數變數的值，函式修改了main函式中x和y的內容。</p>\r\n\r\n<p>輸出結果：</p>\r\n\r\n<p>Copy code</p>\r\n\r\n<p>交換前：x = 5, y = 10 交換後：x = 10, y = 5</p>\r\n\r\n<p>請注意，傳址呼叫允許我們在函式內部修改變數的值，但在某些情況下，可能需要注意位址的有效性及避免不必要的指標錯誤。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

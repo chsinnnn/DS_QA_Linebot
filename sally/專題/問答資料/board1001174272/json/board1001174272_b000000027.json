@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000027.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000027",
+        "site": "1000110001",
+        "pt": "2022-10-04 00:09:39",
+        "poster": "11027210",
+        "realname": "廖庭宣",
+        "email": "lucy920203@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std;</p>\r\n\r\n<p>int main(){</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;int anArray1[ ] = {-1, -1, -1, -1, -1 };</p>\r\n\r\n<p>&nbsp; &nbsp; int anArray2[5] = {-2, -2, -2, -2, -2};</p>\r\n\r\n<p>&nbsp; &nbsp; for( int i = 0; anArray1[i] == -1 ; i++ ) {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; anArray1[i] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp; &nbsp;} // for</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;\\n&quot;;</p>\r\n\r\n<p>&nbsp; &nbsp; for( int i = 0; i&lt;5&nbsp;; i++ ) {<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; anArray2[i] &lt;&lt; &quot; &quot;;<br />\r\n&nbsp;&nbsp; &nbsp;} // for</p>\r\n\r\n<p><br />\r\n} // main()</p>\r\n\r\n<p>此時的輸出</p>\r\n\r\n<p>-1 -1 -1 -1 -1</p>\r\n\r\n<p>-2 -2 -2 -2 -2</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "32",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:46",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174275",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2022-10-24 20:57:11",
+        "poster": "11020107",
+        "realname": "蘇伯勳",
+        "email": "pohsun.su@gmail.com",
+        "homepage": null,
+        "subject": "124. 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。",
+        "content": "<p>稍稍改個命題：n組合法的括號能有幾種組合？</p>\r\n\r\n<p>數學上，這些組合所形成的數列名叫卡塔蘭數（Catalan number）。</p>\r\n\r\n<p>一般公式：</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11020107/images/C1%281%29.png\" style=\"height:73px; width:326px\" /></p>\r\n\r\n<p>另一種表達式：</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11020107/images/C2%281%29.png\" style=\"height:67px; width:355px\" /></p>\r\n\r\n<p>（還有多種表達式...）</p>\r\n\r\n<p>※註：此數列定義第0項（n = 0）為1。</p>\r\n\r\n<p>要解釋為什麼能套用卡塔蘭數列，我用第二種表達式來解釋。</p>\r\n\r\n<p>首先，我們知道合法的括號必然成對；因此n對括號有2n個括號，左括號與右括號的數量都是n。</p>\r\n\r\n<p>因此，所有的組合數為(2n)!/n!*n!，化簡為C(2n, n)。～式(1)</p>\r\n\r\n<p>再來，判斷列式時必是由左向右，且第一位必為左括號；因此，由第一位向右掃到任意一點時，經過的左括號數量永遠大於或等於經過的右括號的數量；亦即，左括號不是未成對就是成對，右括號不是成對就是還沒掃到（未出現）。</p>\r\n\r\n<p>現在來找不合法的組合數，條件一樣為左右括號各n個，設m由0開始。假設掃描到第2m+1位時，有m+1個右括號及m個左括號（亦即，左括號個數&lt;右括號個數），則剩餘的字串中會有n-m個左括號及n-(m+1)個右括號。將2m+1位以後的括號映射（左變右，右變左），則右括號會有n+1個，左括號會有n-1個。因此，所有非法的組合數為(2n)!/[(n+1)!*(n-1)!]，化簡為C(2n, n+1)。～式(2)</p>\r\n\r\n<p>由式(1)與式(2)，可得所有合法的組合數為C(2n, n) - C(2n, n+1)，屬於卡塔蘭數列的表達式之一。</p>\r\n\r\n<p>因此，若有三組括弧，可以有C(6, 3) - C(6, 4) = 20 - 15 = 5種組合，其它以此類推。</p>\r\n\r\n<p>【另解：棋盤方格法】</p>\r\n\r\n<p>對，就是高中數學的排列組合那個單元。</p>\r\n\r\n<p>假設有一個n*n的棋盤，左下角是起點，右上角是終點，移動方式只能向右或向上，令C(n)為走單調路徑且不越過對角線的個數。</p>\r\n\r\n<p>1. n*n格的棋盤：代表左右括弧都各為n個的所有可能組合數。</p>\r\n\r\n<p>2. 移動方式只能向右或向上：向右代表左括號，向上代表右括號。</p>\r\n\r\n<p>3. 不能越過對角線：合法表達式的第一位只能是左括號，如果第一步就向上，亦即第一位就是右括號，不合法。</p>\r\n\r\n<p>所以，以左下到右上的對角線為界，左邊的路徑是不合法的括號組合，右邊的則是合法的。</p>\r\n\r\n<p>以n = 4為例：</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11020107/images/C3.png\" style=\"height:283px; width:568px\" /></p>\r\n\r\n<p>這14個路徑圖分別代表14種合法組合：</p>\r\n\r\n<p>(1)：(((())))</p>\r\n\r\n<p>(2)：((()()))</p>\r\n\r\n<p>(3)：((())())</p>\r\n\r\n<p>(4)：(()(()))</p>\r\n\r\n<p>(5)：()((()))</p>\r\n\r\n<p>(6)：(()()())</p>\r\n\r\n<p>(7)：((()))()</p>\r\n\r\n<p>(8)：()(()())</p>\r\n\r\n<p>(9)：(())(())</p>\r\n\r\n<p>(10)：(()())()</p>\r\n\r\n<p>(11)：(())()()</p>\r\n\r\n<p>(12)：()(())()</p>\r\n\r\n<p>(13)：()()(())</p>\r\n\r\n<p>(14)：()()()()</p>\r\n\r\n<p>其它組合也可如法炮製。</p>\r\n\r\n<p><s>再扯就要扯到離散了</s></p>\r\n\r\n<p>參考：</p>\r\n\r\n<p><a href=\"https://math.mit.edu/~djk/18.310/18.310F04/parentheses.pdf\">https://math.mit.edu/~djk/18.310/18.310F04/parentheses.pdf</a></p>\r\n\r\n<p><a href=\"https://zhuanlan.zhihu.com/p/143272203\">https://zhuanlan.zhihu.com/p/143272203</a></p>\r\n\r\n<p><a href=\"https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0\">https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0</a></p>\r\n\r\n<p><a href=\"https://www.twblogs.net/a/5b9979542b717757338fb79d\">https://www.twblogs.net/a/5b9979542b717757338fb79d</a></p>\r\n\r\n<p><a href=\"https://math.stackexchange.com/questions/2991347/catalan-numbers-sequence-of-balanced-parentheses\">https://math.stackexchange.com/questions/2991347/catalan-numbers-sequence-of-balanced-parentheses</a></p>\r\n\r\n<p><a href=\"https://www.twblogs.net/a/5b7dd1042b71776838540a8f\">https://www.twblogs.net/a/5b7dd1042b71776838540a8f</a></p>\r\n\r\n<p><a href=\"https://blog.csdn.net/u011489043/article/details/77884434\">https://blog.csdn.net/u011489043/article/details/77884434</a></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "31",
+        "lang": "1"
+    }
+}

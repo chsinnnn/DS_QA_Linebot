@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-07-19 17:14:56",
+        "poster": "06005645",
+        "realname": "林品瑄",
+        "email": "hank61061007@gmail.com",
+        "homepage": null,
+        "subject": "搶答208",
+        "content": "<p>撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。</p>\r\n\r\n<p>在氣泡排序中，保證排序的穩定性的主要是因為當兩個元素相等時，我們並不會進行交換。在下面的 C++ 程式碼中，只有當前一個元素大於後一個元素時，我們才進行交換。也就是說，等價元素的相對順序在排序過程中是不會改變的，因此算法是穩定的。</p>\r\n\r\n<p>#include&lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>void bubbleSort(int arr[], int n) {<br />\r\n&nbsp; &nbsp; bool swapped;</p>\r\n\r\n<p>&nbsp; &nbsp; for(int i = 0; i &lt; n-1; i++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; swapped = false;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; for(int j = 0; j &lt; n-i-1; j++) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 這裡是關鍵，當兩個元素相等時，我們不進行交換<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(arr[j] &gt; arr[j+1]) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 只有當前一個元素大於後一個元素時，我們才進行交換<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swap(arr[j], arr[j+1]);<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; swapped = true;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; // 如果在這輪比較中沒有進行過交換，那麼該陣列已經排序完成，我們可以提前結束<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if(swapped == false)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int arr[] = {64, 34, 25, 12, 22, 11, 90};<br />\r\n&nbsp; &nbsp; int n = sizeof(arr)/sizeof(arr[0]);</p>\r\n\r\n<p>&nbsp; &nbsp; bubbleSort(arr, n);</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;Sorted array is: &quot;;<br />\r\n&nbsp; &nbsp; for(int i = 0; i &lt; n; i++)<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; &#39; &#39; &lt;&lt; arr[i];<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n\r\n<p>在這個程序中，&quot;if(arr[j] &gt; arr[j+1])&quot; 是確保排序穩定性的關鍵語句。由於它不會在兩個元素相等時進行交換，這就確保了等價元素的相對順序在排序過程中不會改變，從而使得排序算法是穩定的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

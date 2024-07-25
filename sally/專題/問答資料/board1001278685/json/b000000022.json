@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000022.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000022",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:07:08",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答220",
+        "content": "<p><strong>舉例區別前序preorder、中序inorder及後序postorder二元樹走訪的差異。</strong></p>\r\n\r\n<p><strong>在二元樹的走訪（遍歷）中，前序（Preorder）、中序（Inorder）和後序（Postorder）是三種常見的走訪方式。這些走訪方式描述了節點被訪問的順序。</strong></p>\r\n\r\n<p><strong>假設我們有以下二元樹作為例子：</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp; &nbsp; 3</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp; \\ &nbsp; \\</strong></p>\r\n\r\n<p><strong>&nbsp;&nbsp;&nbsp;4&nbsp; &nbsp; 5 &nbsp; 6</strong></p>\r\n\r\n<p><strong>1.前序（Preorder）走訪：</strong></p>\r\n\r\n<p><strong>前序走訪是指先訪問節點本身，然後再先序走訪其左子樹，最後先序走訪其右子樹。根節點的訪問發生在最前面。</strong></p>\r\n\r\n<p><strong>走訪順序：1 -&gt; 2 -&gt; 4 -&gt; 5 -&gt; 3 -&gt; 6</strong></p>\r\n\r\n<p><strong>2.中序（Inorder）走訪：</strong></p>\r\n\r\n<p><strong>中序走訪是指先中序走訪左子樹，然後訪問節點本身，最後中序走訪其右子樹。根節點的訪問發生在中間。</strong></p>\r\n\r\n<p><strong>走訪順序：4 -&gt; 2 -&gt; 5 -&gt; 1 -&gt; 3 -&gt; 6</strong></p>\r\n\r\n<p><strong>3.後序（Postorder）走訪：</strong></p>\r\n\r\n<p><strong>後序走訪是指先後序走訪左子樹，然後後序走訪右子樹，最後訪問節點本身。根節點的訪問發生在最後面。</strong></p>\r\n\r\n<p><strong>走訪順序：4 -&gt; 5 -&gt; 2 -&gt; 6 -&gt; 3 -&gt; 1</strong></p>\r\n\r\n<p><strong>總結如下：</strong></p>\r\n\r\n<p><strong>前序走訪先訪問節點本身，然後先序走訪左子樹，最後先序走訪右子樹。</strong></p>\r\n\r\n<p><strong>中序走訪先中序走訪左子樹，然後訪問節點本身，最後中序走訪右子樹。</strong></p>\r\n\r\n<p><strong>後序走訪先後序走訪左子樹，然後後序走訪右子樹，最後訪問節點本身。</strong></p>\r\n\r\n<p><strong>這些走訪方式對於不同的應用場景都有用處，選擇適合的走訪方式取決於具體的問題需求。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

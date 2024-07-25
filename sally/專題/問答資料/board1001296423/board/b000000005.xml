@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:22" type="post" filename="b000000005.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296423</board_id>
+  <node>000000005</node>
+  <site>1000110001</site>
+  <pt>2023-11-23 16:44:43</pt>
+  <poster>11127116</poster>
+  <realname>&#x66FE;&#x8A6E;&#x6DF3;  </realname>
+  <email>kevin47338647@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>203 </subject>
+  <content>&lt;p&gt;&amp;nbsp;&#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x96D9;&#x91CD;&#x4F47;&#x5217;&#x5982;&#x4F55;&#x6A21;&#x64EC;&#xFF0C;&#x9808;&#x6307;&#x51FA;&#x9078;&#x64C7;&#x4F47;&#x5217;&#x7684;&#x7B56;&#x7565;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x96D9;&#x91CD;&#x4F47;&#x5217;&#xFF08;Double Queue&#xFF09;&#x662F;&#x4E00;&#x7A2E;&#x5C07;&#x4F5C;&#x696D;&#x6216;&#x4EFB;&#x52D9;&#x5206;&#x70BA;&#x5169;&#x500B;&#x4F47;&#x5217;&#x7684;&#x8ABF;&#x5EA6;&#x7B56;&#x7565;&#xFF0C;&#x6BCF;&#x500B;&#x4F47;&#x5217;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x8ABF;&#x5EA6;&#x7B56;&#x7565;&#x3002;&#x9019;&#x7A2E;&#x65B9;&#x5F0F;&#x901A;&#x5E38;&#x7528;&#x65BC;&#x66F4;&#x6709;&#x6548;&#x5730;&#x8655;&#x7406;&#x4E0D;&#x540C;&#x985E;&#x578B;&#x7684;&#x4F5C;&#x696D;&#xFF0C;&#x4F8B;&#x5982;&#x512A;&#x5148;&#x7D1A;&#x9AD8;&#x7684;&#x4F5C;&#x696D;&#x548C;&#x512A;&#x5148;&#x7D1A;&#x4F4E;&#x7684;&#x4F5C;&#x696D;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684;&#x96D9;&#x91CD;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5169;&#x500B;&#x4F47;&#x5217;&#xFF0C;&#x5206;&#x5225;&#x4F7F;&#x7528;&#x5148;&#x5230;&#x5148;&#x670D;&#x52D9;&#xFF08;FCFS&#xFF09;&#x548C;&#x6700;&#x77ED;&#x4F5C;&#x696D;&#x512A;&#x5148;&#xFF08;SJN&#xFF09;&#x7B56;&#x7565;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;1.&#x9AD8;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#xFF08;Priority Queue&#xFF0C;&#x4F7F;&#x7528;&#x6700;&#x77ED;&#x4F5C;&#x696D;&#x512A;&#x5148;&#xFF08;SJN&#xFF09;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;Process &amp;nbsp; Arrival Time &amp;nbsp; Burst Time &amp;nbsp; Priority&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;P1 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;0 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;8 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;High&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;P2 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;1 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;4 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;High&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;P3 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;2 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;6 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;High&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;2. &#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#xFF08;Regular Queue&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x5148;&#x5230;&#x5148;&#x670D;&#x52D9;&#xFF08;FCFS&#xFF09;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;Process &amp;nbsp; Arrival Time &amp;nbsp; Burst Time &amp;nbsp; Priority&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;P4 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;3 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;2 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Low&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;P5 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;4 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;5 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Low&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;P6 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;5 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;3 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Low&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x88E1;&#xFF0C;&#x9AD8;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x7684;&#x4F5C;&#x696D;&#x4F7F;&#x7528; SJN &#x7B56;&#x7565;&#xFF0C;&#x5373;&#x6700;&#x77ED;&#x4F5C;&#x696D;&#x512A;&#x5148;&#xFF0C;&#x800C;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x7684;&#x4F5C;&#x696D;&#x4F7F;&#x7528; FCFS &#x7B56;&#x7565;&#xFF0C;&#x5373;&#x5148;&#x5230;&#x5148;&#x670D;&#x52D9;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x57F7;&#x884C;&#x9806;&#x5E8F;&#x53EF;&#x80FD;&#x5982;&#x4E0B;&#xFF1A;&lt;br /&gt;&#xD;
+1. SJN &#x9078;&#x64C7;&#x9AD8;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x4E2D;&#x6700;&#x77ED;&#x4F5C;&#x696D; P1&#xFF0C;&#x57F7;&#x884C; 8 &#x55AE;&#x4F4D;&#x6642;&#x9593;&#x3002;&lt;br /&gt;&#xD;
+2. FCFS &#x9078;&#x64C7;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x4E2D;&#x6700;&#x65E9;&#x5230;&#x9054;&#x7684;&#x4F5C;&#x696D; P4&#xFF0C;&#x57F7;&#x884C; 2 &#x55AE;&#x4F4D;&#x6642;&#x9593;&#x3002;&lt;br /&gt;&#xD;
+3. FCFS &#x9078;&#x64C7;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x4E2D;&#x6700;&#x65E9;&#x5230;&#x9054;&#x7684;&#x4F5C;&#x696D; P5&#xFF0C;&#x57F7;&#x884C; 5 &#x55AE;&#x4F4D;&#x6642;&#x9593;&#x3002;&lt;br /&gt;&#xD;
+4. FCFS &#x9078;&#x64C7;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x4E2D;&#x6700;&#x65E9;&#x5230;&#x9054;&#x7684;&#x4F5C;&#x696D; P6&#xFF0C;&#x57F7;&#x884C; 3 &#x55AE;&#x4F4D;&#x6642;&#x9593;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x6A23;&#x4EA4;&#x66FF;&#x57F7;&#x884C;&#x9AD8;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#x548C;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x4F47;&#x5217;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x4F5C;&#x696D;&#x5B8C;&#x6210;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x9019;&#x7A2E;&#x96D9;&#x91CD;&#x4F47;&#x5217;&#x7684;&#x6A21;&#x64EC;&#x53EF;&#x4EE5;&#x66F4;&#x6709;&#x6548;&#x5730;&#x8655;&#x7406;&#x4E0D;&#x540C;&#x512A;&#x5148;&#x7D1A;&#x7684;&#x4F5C;&#x696D;&#xFF0C;&#x78BA;&#x4FDD;&#x9AD8;&#x512A;&#x5148;&#x7D1A;&#x7684;&#x4F5C;&#x696D;&#x512A;&#x5148;&#x8655;&#x7406;&#xFF0C;&#x540C;&#x6642;&#x4FDD;&#x8B49;&#x4F4E;&#x512A;&#x5148;&#x7D1A;&#x7684;&#x4F5C;&#x696D;&#x4E5F;&#x6709;&#x6A5F;&#x6703;&#x57F7;&#x884C;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>21</hit>
+  <lang>1</lang>
+</data>

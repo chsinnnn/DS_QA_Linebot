@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:18",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305439",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-12-18 11:42:53",
+        "poster": "11111239",
+        "realname": "高于喬",
+        "email": "rita920927@gmail.com",
+        "homepage": null,
+        "subject": "219. 舉例區別完全full、完整complete及平衡balanced二元樹的差異。",
+        "content": "<p>full（root&#39;s subtrees are both full binary tree）</p>\r\n\r\n<p>除了樹葉以外其他節點都有兩個小孩</p>\r\n\r\n<p>&nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp;/ \\<br />\r\n&nbsp; 2 &nbsp; 3<br />\r\n&nbsp;/ \\ / \\<br />\r\n4 &nbsp;5 6 &nbsp;7</p>\r\n\r\n<p>complete（full to level h - 1, level h is filled from left to right）</p>\r\n\r\n<p>除了最後一層各層節點全滿，最後一層節點全部靠左</p>\r\n\r\n<p>&nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp;/ \\<br />\r\n&nbsp; 2 &nbsp; 3<br />\r\n&nbsp;/ \\ &nbsp;/<br />\r\n4 &nbsp; 5 6</p>\r\n\r\n<p>balanced</p>\r\n\r\n<p>每個節點的左和右子樹的高度相差不超過1</p>\r\n\r\n<p>&nbsp; &nbsp; 1<br />\r\n&nbsp; &nbsp;/ \\<br />\r\n&nbsp; 2 &nbsp; 3<br />\r\n&nbsp;/ \\<br />\r\n4 &nbsp; 5</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "7",
+        "lang": "1"
+    }
+}

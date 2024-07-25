@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:51:18" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305439</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2023-12-09 15:52:42</pt>
+  <poster>11127229</poster>
+  <realname>&#x5ED6;&#x7FCA;&#x5D34;  </realname>
+  <email>willy.liao921118@gmail.com</email>
+  <homepage> </homepage>
+  <subject>216. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x5E0C;&#x723E;&#x6392;&#x5E8F;shell sort&#x662F;&#x5426;&#x7A69;&#x5B9A;stable&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;vector&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void shellSort( vector&amp;lt;int&amp;gt;&amp;amp; arr ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int n = arr.size() ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for ( int gap = n / 2 ; gap &amp;gt; 0 ; gap /= 2 ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for ( int i = gap ; i &amp;lt; n ; i++ ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int temp = arr[i] ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int j = i ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while ( j &amp;gt;= gap &amp;amp;&amp;amp; arr[j - gap] &amp;gt; temp ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j] = arr[j - gap] ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; j -= gap ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; arr[j] = temp ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; vector&amp;lt;int&amp;gt; arr = { 5, 2, 9, 1, 5, 6 } ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Original Array: &amp;quot; ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for ( int num : arr ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; num &amp;lt;&amp;lt; &amp;quot; &amp;quot; ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; shellSort(arr) ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Sorted Array: &amp;quot; ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; for ( int num : arr ) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; num &amp;lt;&amp;lt; &amp;quot; &amp;quot; ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; endl ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5728;&#x4E0A;&#x9762;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x7531;&#x65BC;&#x5B58;&#x5728;&#x4EA4;&#x63DB;&#x64CD;&#x4F5C;&#xFF0C;&#x5E0C;&#x723E;&#x6392;&#x5E8F;&#x53EF;&#x80FD;&#x6703;&#x7834;&#x58DE;&#x76F8;&#x540C;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5C0D;&#x9806;&#x5E8F;&#xFF0C;&#x56E0;&#x6B64;&#x662F;&#x4E0D;&#x7A69;&#x5B9A;&#x7684;&#x3002;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>13</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:43" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305436</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2023-11-26 17:56:31</pt>
+  <poster>11127232</poster>
+  <realname>&#x6797;&#x923A;&#x5BB8;  </realname>
+  <email>sam179851@gmail.com</email>
+  <homepage> </homepage>
+  <subject>203. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x96D9;&#x91CD;&#x4F47;&#x5217;&#x5982;&#x4F55;&#x6A21;&#x64EC;&#xFF0C;&#x9808;&#x6307;&#x51FA;&#x9078;&#x64C7;&#x4F47;&#x5217;&#x7684;&#x7B56;&#x7565;&#x3002; </subject>
+  <content>&lt;p&gt;&#x5047;&#x8A2D;&#x6709;queue1&#x8DDF;queue2&#x5169;&#x689D;&#x4F47;&#x5217;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4F47;&#x5217;&#x7684;&#x9078;&#x64C7;&#x7B56;&#x7565;&#x662F;&#x4EE5;queue1&#x70BA;&#x512A;&#x5148;( &#x7576;queue1&#x8DDF;queue2&#x90FD;&#x662F;&#x7A7A;&#x7684;&#x5247;&#x512A;&#x5148;&#x6392;&#x5165;queue1&#xFF0C;&#x4F9D;&#x6B64;&#x985E;&#x63A8; )&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x540C;&#x6642;&#x4EE5;[&#x4E8B;&#x4EF6;]( &#x4E8B;&#x4EF6;&#x8981;&#x9032;&#x5165;&#x4F47;&#x5217;(arrival)&amp;nbsp; &amp;amp; &#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x5B8C;&#x6210;(departure)&amp;nbsp;)&#x505A;&#x70BA;&#x9A45;&#x52D5;&#x6A21;&#x64EC;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5047;&#x8A2D;&#x6709;&#x8CC7;&#x6599;&#x5982;&#x4E0B;:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;ID&amp;nbsp; &amp;nbsp; &amp;nbsp;Arrival&amp;nbsp; Duration&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;1&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;5&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 9&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;2&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;7&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;3&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 14&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;5&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;4&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 30&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;5&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 32&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;6&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 34&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 5&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x4E00;)&amp;nbsp;1&#x865F;&#x6703;&#x5148;&#x9032;&#x5165;queue1&#x4E26;&#x8655;&#x7406;&#xFF0C;&#x63A5;&#x8457;2&#x865F;&#x9032;&#x5165;queue2&#x4E26;&#x8655;&#x7406;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x4E8C;) 1&#x53CA;2&#x865F;&#x5B8C;&#x6210;&#x5F8C;3&#x865F;&#x6703;&#x9032;&#x5165;queue1&#x4E26;&#x8655;&#x7406;&#xFF0C;&#x4E4B;&#x5F8C;3&#x865F;&#x8655;&#x7406;&#x5B8C;&#x6210;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x4E09;)&amp;nbsp;4&#x865F;&#x9032;&#x5165;queue1&#x4E26;&#x8655;&#x7406;&#xFF0C;&#x63A5;&#x8457;5&#x865F;&#x9032;&#x5165;queue2&#x4E26;&#x8655;&#x7406;&#xFF0C;6&#x865F;&#x56E0;&#x70BA;&#x5169;&#x908A;&#x90FD;&#x9084;&#x5728;&#x8655;&#x7406;&#x800C;&#x6392;&#x5728;queue1&#x7B49;&#x5F85;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x56DB;) 4&#x865F;&#x8655;&#x7406;&#x5B8C;&#x7562;( &#x6B64;&#x6642;time = 35 )&#xFF0C;&#x6B64;&#x6642;6&#x865F;&#x9032;&#x884C;&#x8655;&#x7406;( 4&#x865F;&#x7684;departure - 6&#x865F;&#x7684;arrival = 1&#xFF0C;&#x56E0;&#x6B64;&#x7B49;&#x4E86;1&#x55AE;&#x4F4D;&#x6642;&#x9593;&amp;nbsp;)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(&#x4E94;) 5&#x865F;&#x8655;&#x7406;&#x5B8C;&#x7562;&#xFF0C;&#x63A5;&#x8457;6&#x865F;&#x4E5F;&#x8655;&#x7406;&#x5B8C;&#xFF0C;&#x7D50;&#x675F;&#x6A21;&#x64EC;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>23</hit>
+  <lang>1</lang>
+</data>

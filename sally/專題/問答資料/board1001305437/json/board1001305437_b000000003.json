@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:53",
+        "@type": "post",
+        "@filename": "b000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305437",
+        "node": "000000003",
+        "site": "1000110001",
+        "pt": "2023-11-25 09:41:29",
+        "poster": "11127253",
+        "realname": "林語恬",
+        "email": "a92100450615@gmail.com",
+        "homepage": null,
+        "subject": "207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。",
+        "content": "<p><span style=\"color:#333333\"><span style=\"font-family:微軟正黑體,sans-serif\"><span style=\"font-size:10.5pt\">初始狀況:[5a, 6, 4, 5b,1]</span></span></span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">第一次</span>swap-&gt;[1,6,4,5b,5a]</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">第二次</span>swap-&gt;[1,4,6,5b,5a]</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">第三次</span>swap-&gt;[1,4,5a,5b,6]</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">第四次</span>swap-&gt;[1,4,5a,5b,6]</p>\r\n\r\n<p>由第一次交換可知，選擇排序改變了5a跟5b的相對位子，因此為非穩定stable的排序方法。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

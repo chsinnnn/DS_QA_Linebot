@@ -1,0 +1,62 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳址呼叫call by address。  答案: # include &lt;iostream&gt;  using namespace std ;  void math( int * x ){      * x = * x + 1 ;      cout &lt;&lt;  math_x_location :   &lt;&lt; x &lt;&lt;  \\n  ;   // 印出x所在的記憶體位置(0x...)      cout &lt;&lt;  math_x :   &lt;&lt; * x &lt;&lt;  \\n  ;               // 印出答案為 1  } // math( int x )  int main(){      int x = 0 ;      cout &lt;&lt;  firse_x :   &lt;&lt; x &lt;&lt;  \\n  ;    // 印出答案為 0      math( &amp; x ) ;      cout &lt;&lt;  final_x :   &lt;&lt; x &lt;&lt;  \\n  ;    // 印出答案為 1  } // main",
+        "output": "評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用雙向鏈結串列doubly linked list的情境。  答案: #include&lt;iostream&gt; using namespace std;  struct Node {     int data;     struct Node *prev;     struct Node *next; };  void addNode(Node **start, int value) {   // 在串列的開始新增元素     Node *node = new Node;     node-&gt;data = value;     node-&gt;prev = NULL;     node-&gt;next = (start != NULL)? *start : NULL;     if (*start != NULL) {          (*start)-&gt;prev = node;      }     *start = node;  }  void printList(Node *node) {   // 印出串列資料     while(node != NULL){          cout &lt;&lt; node-&gt;data &lt;&lt;    ;          node = node-&gt;next;      } }  // 主程式 int main() {     Node* start = NULL;      addNode(&amp;start, 10);      addNode(&amp;start, 20);      addNode(&amp;start, 30);      printList(start);  // 印出30 20 10     return 0; }   addNode函式在串列的開始新增元素，然後printList函式使用next指標來迭代整個串列並印出其中的值",
+        "output": "評論:舉例說明使用情境"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明刪除鏈結串列linked list第3個節點。  答案: # include &lt;iostream&gt; using namespace std ;  struct Node {     int data ;     Node * next ; };  void DeleteThirdNode( Node * &amp;head ) {     Node * temp = head ;     temp = temp -&gt; next ;     Node * toDelete = temp -&gt; next ;     temp -&gt; next = toDelete -&gt; next ;     delete toDelete ; }  void PrintList( Node * head ) {     Node * temp = head ;     while ( temp != nullptr ) {         cout &lt;&lt; temp -&gt; data &lt;&lt;   -&gt;   ;         temp = temp -&gt; next ;     }      cout &lt;&lt;  nullptr  &lt;&lt; endl ; }  int main( ) {     Node * head = new Node{ 1, nullptr } ;     head -&gt; next = new Node{ 2, nullptr } ;     head -&gt; next -&gt; next = new Node{ 3, nullptr } ;     head -&gt; next -&gt; next -&gt; next = new Node{ 4, nullptr } ;     head -&gt; next -&gt; next -&gt; next -&gt; next = new Node{ 5, nullptr } ;      cout &lt;&lt;  初始鏈結串列：  &lt;&lt; endl ;     PrintList( head ) ;      DeleteThirdNode( head ) ;      cout &lt;&lt;  刪除第3個節點：  &lt;&lt; endl ;     PrintList( head ) ;      while ( head != nullptr ) {         Node * temp = head ;         head = head -&gt; next ;         delete temp ;     }      return 0 ; }",
+        "output": "評論:沒註解？  沒分數！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將後序式postfix轉前序式prefix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 後序式轉前序式  從左邊開始尋找不在括號內的運算子，將找到的運算子移動到其左邊的兩個運算元(或者已被括號的子算式)之前，並加上括號，直到式子已看到最右邊了，把所有括號移除掉。  參考資料: https://magiclen.org/arithmetic/  原式  = a b + c * d e + f * + w z + *           = ( + a b ) c * d e + f * + w z + *           = ( * ( + a b ) c ) d e + f * + w z + *           = ( * ( + a b ) c ) ( + d e ) f * + w z + *           = ( * ( + a b ) c ) ( * ( + d e ) f ) + w z + *           = ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) w z + *           = ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) ( + w z ) *           = ( * ( + ( * ( + a b ) c ) ( * ( + d e ) f ) ) ( + w z ) )  簡化    = * + * + a b c * d e f + w z",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 令ptrX指向鏈結串列的節點，比較ptrX = ptrX->next和ptrX->next = ptrX的差異。  答案: PtrX = PtrX -&gt; next 表示把PtrX指向自己的下一個節點。  PtrX -&gt; next = PtrX 表示把PtrX的下一個節點指回自己。",
+        "output": "評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳址呼叫call by address。  答案: #include &lt;iostream&gt;   void square(int *numPtr) {          *numPtr = (*numPtr) * (*numPtr); }  int main() {     int number = 5;      std::cout &lt;&lt;  Before function call:   &lt;&lt; number &lt;&lt; std::endl;         square(&amp;number);      std::cout &lt;&lt;  After function call:   &lt;&lt; number &lt;&lt; std::endl;      return 0; }",
+        "output": "評論:不解釋？  沒分數！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用雙向鏈結串列doubly linked list的情境。  答案: 雙向鏈結串列（Doubly Linked List），是一種數據結構，它允許你從頭到尾或從尾到頭輕松遍歷，並在需要時進行快速插入或刪除操作，而無需像數組那樣整體移動元素。這種數據結構通常由節點組成，每個節點包含數據以及指向前一個和後一個節點的引用。  想像一輛火車，你可以從頭車廂走到尾車廂，也可以從尾車廂走回頭車廂，而不需要回到站台。這在需要快速插入或刪除頭尾元素的情況下很有用，因為你不需要像陣列那樣整個移動車廂（元素）。",
+        "output": "評論:輕松遍歷"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用雙向鏈結串列doubly linked list的情境。  答案: 因為雙向連結串鍊這種資料結構的每一個節點都會指向前一個節點和後一個節點所以假設正在開發一個文檔編輯器應用程式，其中需要實現編輯歷史功能，以便用戶可以回溯、撤銷和重做他們對文檔所做的更改。在這種情況下，雙向鏈結串列可以派上用場。  像是可以重做操作：如果用戶執行了撤銷操作，然後決定要重做，可以使用後一個版本的指針，將文檔恢復到撤銷之前的狀態",
+        "output": "評論:Nice example application!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳址呼叫call by address。  答案: #include &lt;iostream&gt; using namespace std ;  void ChangeValue(int* ptr) {     // 通過指針修改原始變數的值     *ptr = 16; //隨意給一個數值     cout &lt;&lt;  num位置 :   &lt;&lt; ptr &lt;&lt;  \\n  ;   // 印出記憶體位置   }  int main() {     int num = 10;      std::cout &lt;&lt;  原始數值：   &lt;&lt; num &lt;&lt;  \\n ;      // 呼叫 ChangeValue 函數，將變數 num 的地址傳遞給它     ChangeValue(&amp;num);      std::cout &lt;&lt;  修改後的數值：   &lt;&lt; num &lt;&lt;  \\n ;  // 位址改變後 數值也跟著改變      return 0; }",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用雙向鏈結串列doubly linked list的情境。  答案: 雙向鏈結串列（Doubly Linked List）是一種常見的數據結構，它與單向鏈結串列（Singly Linked List）不同，每個節點都包含指向前一個節點和後一個節點的鏈結。  例如：  瀏覽網頁的瀏覽器歷史記錄： 瀏覽器可以使用雙向鏈結串列來實現歷史記錄。每個節點代表一個訪問的網頁，並且有一個指向前一個訪問網頁和下一個訪問網頁的鏈結。這樣，用戶可以輕鬆地在網頁之間前進和後退，而無需重新加載。  雙向鏈結串列的主要優勢是它允許在不需要重新遍歷整個串列的情況下，以常數時間訪問前一個節點，這對於某些應用非常有用。然而，它也需要更多的內存，因為每個節點需要存儲兩個鏈結指針。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將後序式postfix轉前序式prefix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 題目 : 將後序式 a b + c * d e + f * + w z + * ，轉換為前序式prefix。  後序式 postfix ( 左 -&gt; 右 -&gt; 中 )   前序式prefix ( 中 -&gt; 左 -&gt; 右 )   我會先將後序式寫成樹狀圖(如下圖)，再對照此圖寫出前序式  =&gt; * + * + a b c * + d e f + w z",
+        "output": "評論:Good!  這棵樹一般稱為(binary) expression tree。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用雙向鏈結串列doubly linked list的情境。  答案: 單向鏈結串列只能往前走，而雙向鏈結串列則可以取往前走以及往後走的節點。  例如:今天蓋了十層樓，而我想要從五樓往前和往後找到第一個人口比第五層樓少的樓層就可以使用。",
+        "output": "評論:Nice."
+    }
+]

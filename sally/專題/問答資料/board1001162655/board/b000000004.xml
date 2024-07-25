@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:06:03" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162655</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2022-12-20 22:35:31</pt>
+  <poster>10527234</poster>
+  <realname>&#x5ED6;&#x5F65;&#x6674;  </realname>
+  <email>ingrid.liao@hotmail.com</email>
+  <homepage>  </homepage>
+  <subject>220. &#x8209;&#x4F8B;&#x5340;&#x5225;&#x524D;&#x5E8F;preorder&#x3001;&#x4E2D;&#x5E8F;inorder&#x53CA;&#x5F8C;&#x5E8F;postorder&#x4E8C;&#x5143;&#x6A39;&#x8D70;&#x8A2A;&#x7684;&#x5DEE;&#x7570; </subject>
+  <content>&lt;p&gt;&lt;img src="https://ithelp.ithome.com.tw/upload/images/20181028/20111557YgB20xzqR3.jpg" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;ol&gt;&#xD;
+	&lt;li&gt;&#x524D;&#x5E8F;&#xFF1A;&#x9806;&#x5E8F;&#x662F;&#x6839;&#x7BC0;&#x9EDE;&#x3001;&#x5DE6;&#x5B50;&#x7BC0;&#x9EDE;&#x3001;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#xFF0C;&#x6839;&#x6392;&#x5728;&#x524D;&#x9762;&#x3002;&lt;br /&gt;&#xD;
+	[1, 2, 4, 7, 8, 5, 3, 6, 9, 10]&lt;/li&gt;&#xD;
+	&lt;li&gt;&#x4E2D;&#x5E8F;&#xFF1A;&#x9806;&#x5E8F;&#x662F;&#x5DE6;&#x5B50;&#x7BC0;&#x9EDE;&#x3001;&#x6839;&#x7BC0;&#x9EDE;&#x3001;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#xFF0C;&#x6839;&#x6392;&#x5728;&#x4E2D;&#x9593;&#x3002;&lt;br /&gt;&#xD;
+	[7, 4, 8, 2, 5, 1, 3, 9, 6, 10]&lt;/li&gt;&#xD;
+	&lt;li&gt;&#x5F8C;&#x5E8F;&#xFF1A;&#x9806;&#x5E8F;&#x662F;&#x5DE6;&#x5B50;&#x7BC0;&#x9EDE;&#x3001;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x3001;&#x6839;&#x7BC0;&#x9EDE;&#xFF0C;&#x6839;&#x6392;&#x5728;&#x5F8C;&#x9762;&#x3002;&lt;br /&gt;&#xD;
+	[7, 8, 4, 5, 2, 9, 10, 6, 3, 1]&lt;/li&gt;&#xD;
+&lt;/ol&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>6</hit>
+  <lang>1</lang>
+</data>

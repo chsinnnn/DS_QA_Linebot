@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:46" type="post" filename="b000000015.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278677</board_id>
+  <node>000000015</node>
+  <site>1000110001</site>
+  <pt>2023-07-07 09:51:50</pt>
+  <poster>10927230</poster>
+  <realname>&#x5289;&#x53C8;&#x8AA0;  </realname>
+  <email>peter082323@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;110 </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std ;&lt;br /&gt;&#xD;
+int sum( int a, int b ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;a = 7 ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return a + b ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;int a = 2 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;int b = 3 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;a = &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; sum( a, b ) &amp;lt;&amp;lt; endl ;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;a = &amp;quot; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F38;&#x51FA;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/0/10927230/images/image77" style="height:91px; width:125px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C31;&#x7B97;sum&#x4E2D;&#x66F4;&#x6539;a&#x7684;&#x503C;&#xFF0C;&#x57F7;&#x884C;function&#x5F8C;a&#x7684;&#x503C;&#x9084;&#x662F;&#x4E0D;&#x8B8A;&#xFF0C;&#x56E0;&#x70BA;call by value&#x53EA;&#x50B3;&#x503C;&#x9032;&#x53BB;function&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E0D;&#x6703;&#x52D5;&#x5230;a&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#x88E1;&#x9762;&#x7684;&#x6771;&#x897F;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>10</hit>
+  <lang>1</lang>
+</data>

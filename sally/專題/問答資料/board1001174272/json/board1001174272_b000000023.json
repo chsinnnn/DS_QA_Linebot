@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:17",
+        "@type": "post",
+        "@filename": "b000000023.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174272",
+        "node": "000000023",
+        "site": "1000110001",
+        "pt": "2022-10-03 16:38:33",
+        "poster": "11027235",
+        "realname": "江庭瑄",
+        "email": "sherrychiang01@gmail.com",
+        "homepage": null,
+        "subject": "109. 如何幫陣列元素設定非零的初始值？須寫出C++程式碼。",
+        "content": "<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp; &nbsp; int x[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; &nbsp; &nbsp;// 將1指定給x[0]，2指定給x[1]，...，最後將10指定給x[9]<br />\r\n&nbsp; &nbsp; char y[7] = {&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;}; &nbsp;//char型別也可以以此類推<br />\r\n&nbsp; &nbsp; char array_name[7] = &quot;Hello!&quot;; &nbsp;// 還可簡化為字串<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n} // main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "36",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:22" type="post" filename="b000000008.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296423</board_id>
+  <node>000000008</node>
+  <site>1000110001</site>
+  <pt>2023-11-29 11:47:14</pt>
+  <poster>11127133</poster>
+  <realname>&#x9673;&#x4E59;&#x83C1;  </realname>
+  <email>fiona99107@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>201 </subject>
+  <content>&lt;p&gt;201. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x7B49;&#x5019;&#x6642;&#x9593;waiting time&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;OID&amp;nbsp;&amp;nbsp; &amp;nbsp;Arrival&amp;nbsp;&amp;nbsp; &amp;nbsp;Duration&amp;nbsp;&amp;nbsp; &amp;nbsp;TimeOut&lt;br /&gt;&#xD;
+101&amp;nbsp;&amp;nbsp; &amp;nbsp;3&amp;nbsp; &amp;nbsp; 9&amp;nbsp;&amp;nbsp; &amp;nbsp;12&lt;br /&gt;&#xD;
+112&amp;nbsp;&amp;nbsp; &amp;nbsp;5&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp;&amp;nbsp; &amp;nbsp;13&lt;br /&gt;&#xD;
+103&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp;&amp;nbsp; &amp;nbsp;7&amp;nbsp;&amp;nbsp; &amp;nbsp;15&lt;br /&gt;&#xD;
+106&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp;&amp;nbsp; &amp;nbsp;9&amp;nbsp;&amp;nbsp; &amp;nbsp;17&lt;br /&gt;&#xD;
+108&amp;nbsp;&amp;nbsp; &amp;nbsp;6&amp;nbsp;&amp;nbsp; &amp;nbsp;8&amp;nbsp;&amp;nbsp; &amp;nbsp;18&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;101 delay 0&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;108 delay 0=(6-6)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;112 delay 8=(13-5)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;103 delay 9=(15-6)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;106 delay 11=(17-6)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;(0+0+8+9+11)/5 = 5.6&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>13</hit>
+  <lang>1</lang>
+</data>

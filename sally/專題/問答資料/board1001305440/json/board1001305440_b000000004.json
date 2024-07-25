@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:38",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305440",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-12-26 20:52:28",
+        "poster": "11111239",
+        "realname": "高于喬",
+        "email": "rita920927@gmail.com",
+        "homepage": null,
+        "subject": "227. 列舉二元搜尋樹和堆積heap的三項差異。",
+        "content": "<p>1. 排序方式</p>\r\n\r\n<p>BST：左子樹上所有節點的值小於根節點的值，右子樹上所有節點的值大於等於根節點的值。</p>\r\n\r\n<p>Heap：分為最大堆疊和最小堆疊。在最大堆疊中，root是最大的；而在最小堆中，root是最小的。</p>\r\n\r\n<p>2. 平衡性</p>\r\n\r\n<p>BST：不一定是complete tree。當新增或刪除時，可能會產生一個不平衡的樹結構，</p>\r\n\r\n<p>Heap：不管新增或刪除資料，heap都會保持complete tree</p>\r\n\r\n<p>3. 時間複雜度</p>\r\n\r\n<p>BST：Average：O(log n）Worst：O（n）</p>\r\n\r\n<p>Heap：O(n log n)</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

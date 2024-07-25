@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:45",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296419",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-10-06 20:33:17",
+        "poster": "11127109",
+        "realname": "魏盈姍",
+        "email": "reginawei.tw@gmail.com",
+        "homepage": null,
+        "subject": "112.",
+        "content": "<p>112. 寫出C++程式碼說明兩個類別間的繼承inheritance。</p>\r\n\r\n<p>#繼承:&nbsp;子類別可以承接父類別<strong>的</strong>&nbsp;public成員 ,使之具有共通<strong>的</strong>public屬性或方法, 所以可以說子類別是父類別的延伸。</p>\r\n\r\n<p># 總結:&nbsp;繼承是能減少相似的 code，並同時滿足不同的功能</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127109/images/Screenshot%202023-10-06%20202955.png\" style=\"height:761px; width:602px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "24",
+        "lang": "1"
+    }
+}

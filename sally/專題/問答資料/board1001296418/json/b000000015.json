@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000015.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000015",
+        "site": "1000110001",
+        "pt": "2023-10-04 22:59:51",
+        "poster": "11127112",
+        "realname": "莊沛儒",
+        "email": "a0922166067@gmail.com",
+        "homepage": null,
+        "subject": "107",
+        "content": "<p><span style=\"font-size:16px\">作業一採用什麼資料結構儲存讀入資料，須說明原因。</span></p>\r\n\r\n<p>我的作業一是利用雙重vector去存我的迷宮，因為每一次輸入的迷宮大小都不一樣，如果使用靜態陣列去存，需要將陣列大小設的很大，因此，就很容易造成空間上的浪費，所以我使用二維的vector去存我的資料，這樣我的迷宮就能根據給定的長寬去調整迷宮，而不需要一開始就設定的大大的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

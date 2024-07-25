@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:53" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305437</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-11-25 09:41:29</pt>
+  <poster>11127253</poster>
+  <realname>&#x6797;&#x8A9E;&#x606C;  </realname>
+  <email>a92100450615@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>207. &#x8209;&#x4F8B;&#x89E3;&#x8AAA;&#x9078;&#x64C7;&#x6392;&#x5E8F;selection sort&#x4E26;&#x975E;&#x7A69;&#x5B9A;stable&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#x3002; </subject>
+  <content>&lt;p&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x5FAE;&#x8EDF;&#x6B63;&#x9ED1;&#x9AD4;,sans-serif"&gt;&lt;span style="font-size:10.5pt"&gt;&#x521D;&#x59CB;&#x72C0;&#x6CC1;:[5a, 6, 4, 5b,1]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7B2C;&#x4E00;&#x6B21;&lt;/span&gt;swap-&amp;gt;[1,6,4,5b,5a]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7B2C;&#x4E8C;&#x6B21;&lt;/span&gt;swap-&amp;gt;[1,4,6,5b,5a]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7B2C;&#x4E09;&#x6B21;&lt;/span&gt;swap-&amp;gt;[1,4,5a,5b,6]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7B2C;&#x56DB;&#x6B21;&lt;/span&gt;swap-&amp;gt;[1,4,5a,5b,6]&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x7531;&#x7B2C;&#x4E00;&#x6B21;&#x4EA4;&#x63DB;&#x53EF;&#x77E5;&#xFF0C;&#x9078;&#x64C7;&#x6392;&#x5E8F;&#x6539;&#x8B8A;&#x4E86;5a&#x8DDF;5b&#x7684;&#x76F8;&#x5C0D;&#x4F4D;&#x5B50;&#xFF0C;&#x56E0;&#x6B64;&#x70BA;&#x975E;&#x7A69;&#x5B9A;stable&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>17</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000011.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000011",
+        "site": "1000110001",
+        "pt": "2022-09-15 21:34:23",
+        "poster": "11027148",
+        "realname": "周品誼",
+        "email": "070522jacqueline@gmail.com",
+        "homepage": null,
+        "subject": "101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>遞迴是一種將問題簡單化為小問題 進行拆解直到達成終止條件<br />\r\n是解決複雜問題的一種方式。<br />\r\n舉例：</p>\r\n\r\n<p>我是一個愛買衣服的人 每一天一定要而且只買一件衣服價格為100</p>\r\n\r\n<p>而我有存款500 終止條件是沒錢（存款為0）</p>\r\n\r\n<p>f(n)= f(n-1) -100 , f(0) 為原有存款500， n 為買衣服的第n天</p>\r\n\r\n<p>由此遞迴式可得知，當第五日時已沒錢。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "104",
+        "lang": "1"
+    }
+}

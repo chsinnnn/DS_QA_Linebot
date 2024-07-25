@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:53:54" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296420</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2023-10-18 19:57:34</pt>
+  <poster>11127133</poster>
+  <realname>&#x9673;&#x4E59;&#x83C1;  </realname>
+  <email>fiona99107@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>119 </subject>
+  <content>&lt;p&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x5FAE;&#x8EDF;&#x6B63;&#x9ED1;&#x9AD4;,sans-serif"&gt;&lt;span style="font-size:10.5pt"&gt;119. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:&#x5FAE;&#x8EDF;&#x6B63;&#x9ED1;&#x9AD4;,sans-serif"&gt;&lt;span style="font-size:10.5pt"&gt;&#x5BEB;C++&lt;/span&gt;&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x522A;&#x9664;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&lt;/span&gt;&#x7B2C;3&lt;/span&gt;&#x500B;&#x7BC0;&#x9EDE;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;# include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;{&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; struct Node {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; int item;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node *next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x6307;&#x6A19;&#x67B6;&#x69CB;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; int count = 2 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Node *p, *cur, *post ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; p = new Node ; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5275;&#x5EFA;&#x6307;&#x6A19;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; p -&amp;gt; item = 1 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; for( cur = p; count &amp;lt; 6; count++){&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cur -&amp;gt; next = new Node ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cur = cur -&amp;gt; next ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cur -&amp;gt; item = count ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cur -&amp;gt; next = NULL;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; } // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5275;&#x5EFA;&#x9577;&#x5EA6;&#x70BA;&lt;/span&gt;5&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x6307;&#x6A19;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; count = 0 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; for( cur = p; count &amp;lt; 1; count++)&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cur = cur -&amp;gt; next;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; post = cur -&amp;gt; next ; // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x522A;&#x9664;&#x6307;&#x6A19;&lt;/span&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; cur -&amp;gt; next = post -&amp;gt; next ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; delete post ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; post = NULL ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; for( cur = p; cur != NULL; cur = cur -&amp;gt; next) // &lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5370;&#x51FA;&#x7D50;&#x679C;&lt;/span&gt;1245&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; cur -&amp;gt; item &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x5148;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x540D;&#x53EB;&lt;/span&gt;p&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x88E1;&#x9762;&#x53EF;&#x5B58;&lt;/span&gt;int&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x6307;&#x6A19;&#xFF0C;&#x518D;&#x7528;&lt;/span&gt;for&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x8FF4;&#x5708;&#x4F7F;&lt;/span&gt;p&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x9577;&#x5EA6;&#x589E;&#x9577;&#x70BA;&lt;/span&gt;5&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#xFF0C;&#x88E1;&#x9762;&#x5132;&#x5B58;&#x7684;&#x6578;&#x5B57;&#x610F;&#x7FA9;&#x70BA;&#x662F;&#x7B2C;&#x5E7E;&#x500B;&#x6307;&#x6A19;&#xFF0C;&#x518D;&#x522A;&#x9664;&#x7B2C;&lt;/span&gt;3&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x500B;&#x6307;&#x6A19;&#xFF0C;&#x6700;&#x5F8C;&#x5370;&#x51FA;&lt;/span&gt;p&lt;span style="font-family:&#x65B0;&#x7D30;&#x660E;&#x9AD4;,serif"&gt;&#x7684;&#x6240;&#x6709;&#x5167;&#x5BB9;&#xFF0C;&#x5370;&#x51FA;&#x7D50;&#x679C;&#x70BA;&lt;/span&gt;1245&#x3002;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>15</hit>
+  <lang>1</lang>
+</data>

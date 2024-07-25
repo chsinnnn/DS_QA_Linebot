@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:07",
+        "@type": "post",
+        "@filename": "b000000014.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278680",
+        "node": "000000014",
+        "site": "1000110001",
+        "pt": "2023-07-15 01:45:04",
+        "poster": "11027151",
+        "realname": "簡　璦",
+        "email": "jianai590@gmail.com",
+        "homepage": null,
+        "subject": "搶答121",
+        "content": "<p>121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">唸出數字</span> &quot;2020&quot;<span style=\"font-family:新細明體,serif\">這行數字，就能夠舉例使用到環狀鏈結串列的情境</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">若從第一個數字</span>&rdquo;2&rdquo;<span style=\"font-family:新細明體,serif\">唸起</span>,<span style=\"font-family:新細明體,serif\">則會唸出</span>&rdquo;2020&rdquo;,</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">唸出第三個數字</span>&rdquo;2&rdquo;<span style=\"font-family:新細明體,serif\">時又成為下一個循環</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">若從第二個數字</span>&rdquo;0&rdquo;<span style=\"font-family:新細明體,serif\">唸起</span>,<span style=\"font-family:新細明體,serif\">則會唸出</span>&rdquo;0202&rdquo;,</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">唸出第三個數字</span>&rdquo;0&rdquo;<span style=\"font-family:新細明體,serif\">時又成為下一個循環</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">若從第三個數字</span>&rdquo;2&rdquo;<span style=\"font-family:新細明體,serif\">唸起</span>,<span style=\"font-family:新細明體,serif\">則會唸出</span>&rdquo;2020&rdquo; ,</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">唸出第三個數字</span>&rdquo;2&rdquo;<span style=\"font-family:新細明體,serif\">時又成為下一個循環</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">若從第四個數字</span>&rdquo;0&rdquo;<span style=\"font-family:新細明體,serif\">唸起</span>,<span style=\"font-family:新細明體,serif\">則會唸出</span>&rdquo;0202&rdquo;</p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">唸出第三個數字</span>&rdquo;0&rdquo;<span style=\"font-family:新細明體,serif\">時又成為下一個循環</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">不管從哪裡唸起都會成為一個循環</span>,<span style=\"font-family:新細明體,serif\">就像環狀鏈結串列一樣</span>,<span style=\"font-family:新細明體,serif\">無論從哪個節點開始，</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">都可以按照特定的順序移動到下一個節點，直到回到起始節點。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "21",
+        "lang": "1"
+    }
+}

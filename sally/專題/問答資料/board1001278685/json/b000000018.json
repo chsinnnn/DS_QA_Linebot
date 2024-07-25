@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:44",
+        "@type": "post",
+        "@filename": "b000000018.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278685",
+        "node": "000000018",
+        "site": "1000110001",
+        "pt": "2023-07-24 15:02:53",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答216",
+        "content": "<p><strong>舉例解說希爾排序shell sort是否穩定stable。</strong></p>\r\n\r\n<p><strong>希爾排序（Shell Sort）是一種插入排序的改進版本，它是非穩定的排序算法。在穩定的排序算法中，對於具有相同鍵值的元素，排序前後它們的相對位置不會改變。換句話說，如果一個排序算法是穩定的，當兩個相同鍵值的元素a和b，排序前a位於b的前面，則排序後a仍然會位於b的前面。</strong></p>\r\n\r\n<p><strong>希爾排序在排序的過程中會涉及到跳躍式的交換，這導致相同鍵值的元素可能會在排序後發生位置的變化。這就是為什麼希爾排序是非穩定的原因。</strong></p>\r\n\r\n<p><strong>舉例來說：</strong></p>\r\n\r\n<p><strong>假設我們有以下數組需要排序：</strong></p>\r\n\r\n<table>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>索引</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>值</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>0</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>1</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>8</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>3</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>4</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>9</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><strong>使用希爾排序，一種可能的排序過程是這樣的：</strong></p>\r\n\r\n<p><strong>第一次排序（gap = 2）：</strong></p>\r\n\r\n<table>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>索引</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>值</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>0</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>1</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>2</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>9</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>3</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>5</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>4</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>8</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><strong>第二次排序（gap = 1）：</strong></p>\r\n\r\n<p><strong>原本位於索引0和3的兩個相同值&quot;5&quot;，在排序後它們的相對位置改變了，這就表明希爾排序是非穩定的。</strong></p>\r\n\r\n<p><strong>希爾排序是一種高效的排序算法，但不保證相同鍵值的元素的相對位置不變，因此它是非穩定的排序算法。</strong></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

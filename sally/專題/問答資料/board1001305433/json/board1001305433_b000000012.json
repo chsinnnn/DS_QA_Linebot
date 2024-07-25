@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:45",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305433",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-10-13 16:00:43",
+        "poster": "11020126",
+        "realname": "鄭祐昀",
+        "email": "carry0987@gmail.com",
+        "homepage": null,
+        "subject": "120. 舉例說明使用雙向鏈結串列doubly linked list的情境",
+        "content": "<blockquote>\r\n<p>#include&lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>struct Node {<br />\r\n&nbsp; &nbsp; int data;<br />\r\n&nbsp; &nbsp; struct Node *prev;<br />\r\n&nbsp; &nbsp; struct Node *next;<br />\r\n};</p>\r\n\r\n<p>void addNode(Node **start, int value) { &nbsp; // 在串列的開始新增元素<br />\r\n&nbsp; &nbsp; Node *node = new Node;<br />\r\n&nbsp; &nbsp; node-&gt;data = value;<br />\r\n&nbsp; &nbsp; node-&gt;prev = NULL;<br />\r\n&nbsp; &nbsp; node-&gt;next = (start != NULL)? *start : NULL;<br />\r\n&nbsp; &nbsp; if (*start != NULL) {&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; (*start)-&gt;prev = node;&nbsp;<br />\r\n&nbsp; &nbsp; }<br />\r\n&nbsp; &nbsp; *start = node;&nbsp;<br />\r\n}</p>\r\n\r\n<p>void printList(Node *node) { &nbsp; // 印出串列資料<br />\r\n&nbsp; &nbsp; while(node != NULL){&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; node-&gt;data &lt;&lt; &quot; &quot;;&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; node = node-&gt;next;&nbsp;<br />\r\n&nbsp; &nbsp; }<br />\r\n}</p>\r\n\r\n<p>// 主程式<br />\r\nint main() {<br />\r\n&nbsp; &nbsp; Node* start = NULL;&nbsp;<br />\r\n&nbsp; &nbsp; addNode(&amp;start, 10);&nbsp;<br />\r\n&nbsp; &nbsp; addNode(&amp;start, 20);&nbsp;<br />\r\n&nbsp; &nbsp; addNode(&amp;start, 30);&nbsp;<br />\r\n&nbsp; &nbsp; printList(start); &nbsp;// 印出30 20 10<br />\r\n&nbsp; &nbsp; return 0;<br />\r\n}</p>\r\n</blockquote>\r\n\r\n<p>addNode函式在串列的開始新增元素，然後printList函式使用next指標來迭代整個串列並印出其中的值</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

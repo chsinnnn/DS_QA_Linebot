@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:00:55",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174282",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-12-26 06:41:50",
+        "poster": "11027247",
+        "realname": "許威茗",
+        "email": "as355068@asjh.ntpc.edu.tw",
+        "homepage": null,
+        "subject": "222. 撰寫程式碼指出如何為二元搜尋樹新增節點。",
+        "content": "<p>&nbsp;&nbsp; &nbsp;struct Bst{<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;int key ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;vector&lt;int&gt; no ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Bst *left ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Bst *right ;<br />\r\n&nbsp;&nbsp; &nbsp;};</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;Bst *Insert_Bst( Bst *node, int num&nbsp;){<br />\r\n&nbsp;&nbsp; &nbsp;// 把資料放入樹&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if( node != NULL ){</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 還未找到最下面，選擇往左還是往右<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if( num&nbsp; &gt; node-&gt;key ){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 比目前的大，往右邊遞迴&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;right = Insert_Bst( node-&gt;right, num&nbsp; ) ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else if( num&nbsp; &lt; node-&gt;key ){<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 比目前的小，往左邊遞迴<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;left = Insert_Bst( node-&gt;left, num&nbsp; ) ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else{</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 值一樣</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;no.push_back( num&nbsp; ) ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else{</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 新增一個節點<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node = new Bst ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;key =num&nbsp; ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;no.push_back(num&nbsp;) ;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;left = NULL;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;node-&gt;right = NULL;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return node ;<br />\r\n&nbsp;&nbsp; &nbsp;}</p>\r\n\r\n<p>透過遞迴找到要新增的位置，</p>\r\n\r\n<p>如果要新增的值比較大就往右遞迴，</p>\r\n\r\n<p>如果要新增的值比較小就往左遞迴，</p>\r\n\r\n<p>如果一樣就把所需的資料存在同一個點上</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "38",
+        "lang": "1"
+    }
+}

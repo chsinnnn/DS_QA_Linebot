@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:33",
+        "@type": "post",
+        "@filename": "b000000006000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278684",
+        "node": "000000006000000001",
+        "site": "1000110001",
+        "pt": "2023-07-20 19:36:06",
+        "poster": "10827143",
+        "realname": "江晨銘",
+        "email": "gugugu1127@gmail.com",
+        "homepage": null,
+        "subject": "Re: 搶答212",
+        "content": "<p><span style=\"color:#ff0000\">以希爾排序來說，已排好序的元素不會做不必要的數據偏移。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "2",
+        "lang": "1"
+    }
+}

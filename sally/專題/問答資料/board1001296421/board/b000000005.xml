@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:04" type="post" filename="b000000005.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296421</board_id>
+  <node>000000005</node>
+  <site>1000110001</site>
+  <pt>2023-10-17 20:17:34</pt>
+  <poster>11120117</poster>
+  <realname>&#x6797;&#x7B60;&#x7FD4;  </realname>
+  <email>lin1050265@gmail.com</email>
+  <homepage> </homepage>
+  <subject>122 </subject>
+  <content>&lt;p&gt;122. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x53C3;&#x8003;&#x547C;&#x53EB;call by reference&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void SwitchNum( int &amp;amp; num1, int &amp;amp; num2 ) { // call by reference ( address ) ( &#x82E5;&#x7121; &amp;amp; &#x5373;&#x70BA; call by value&amp;nbsp;)&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int temp = 0; // &#x66AB;&#x5B58;&#x8B8A;&#x6578;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;temp = num1 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;num1 = num2 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;num2 = temp ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;return ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;} &amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; int num1 = 1 ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; int num2 = 2;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; printf( &amp;quot;Before&#xFF1A;\n&amp;quot;);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; printf( &amp;quot;num1&#xFF1A;%d\n&amp;quot;, num1 );&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; printf( &amp;quot;num2&#xFF1A;%d\n&amp;quot;, num2 );&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; SwitchNum( num1, num2 ); // &#x4EA4;&#x63DB;num1&#x548C;num2&#x7684;&#x6578;&#x5B57;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; printf( &amp;quot;After&#xFF1A;\n&amp;quot;);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; printf( &amp;quot;num1&#xFF1A;%d\n&amp;quot;, num1 );&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; printf( &amp;quot;num2&#xFF1A;%d\n&amp;quot;, num2 );&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; return 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;=======================================&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F38;&#x51FA;&#x7D50;&#x679C;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;Before&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;num1&#xFF1A;1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;num2&#xFF1A;2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;After&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;num1&#xFF1A;2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;num2&#xFF1A;1&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>48</hit>
+  <lang>1</lang>
+</data>

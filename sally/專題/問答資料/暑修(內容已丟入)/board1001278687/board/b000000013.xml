@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:55:52" type="post" filename="b000000013.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278687</board_id>
+  <node>000000013</node>
+  <site>1000110001</site>
+  <pt>2023-07-23 15:24:35</pt>
+  <poster>06005636</poster>
+  <realname>&#x6731;&#x7D18;&#x6B63;  </realname>
+  <email>henry3446@gmail.com</email>
+  <homepage> </homepage>
+  <subject>&#x6436;&#x7B54;224 </subject>
+  <content>&lt;p&gt;224. &#x5982;&#x4F55;&#x5C07;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x5B58;&#x6A94;&#x5F8C;&#x518D;&#x8B80;&#x5165;&#x53EF;&#x6062;&#x5FA9;&#x539F;&#x72C0;&#xFF1F;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5C07;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x5B58;&#x6A94;&#x5F8C;&#x518D;&#x8B80;&#x5165;&#x53EF;&#x6062;&#x5FA9;&#x539F;&#x72C0;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E00;&#x6B65;1&#xFF1A;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x5C0D;&#x65BC;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x7684;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x524D;&#x5E8F;&#x3001;&#x4E2D;&#x5E8F;&#x6216;&#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#xFF0C;&#x5176;&#x4E2D;&#x524D;&#x5E8F;&#x548C;&#x4E2D;&#x5E8F;&#x904D;&#x6B77;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x7B2C;&#x4E8C;&#x6B65; 2&#xFF1A;&#x5B58;&#x6A94;&#xFF0C;&#x5C07;&#x5E8F;&#x5217;&#x5316;&#x5F8C;&#x7684;&#x8CC7;&#x6599;&#x5B58;&#x6A94;&#x5230;&#x6A94;&#x6848;&#x6216;&#x8CC7;&#x6599;&#x5EAB;&#x4E2D;&#x3002;&#x7B2C;&#x4E09;&#x6B65; 3&#xFF1A;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x73FE;&#x5728;&#xFF0C;&#x5F9E;&#x6A94;&#x6848;&#x4E2D;&#x8B80;&#x53D6;&#x8CC7;&#x6599;&#x4E26;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x70BA;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4F7F;&#x7528;&#x524D;&#x5E8F;&#x904D;&#x6B77;&#x4F86;&#x5E8F;&#x5217;&#x5316;&#x4E8C;&#x5143;&#x641C;&#x5C0B;&#x6A39;&#x7684;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;fstream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;sstream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;vector&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct TreeNode {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; int val;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* left;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* right;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode(int v) : val(v), left(nullptr), right(nullptr) {}&lt;br /&gt;&#xD;
+};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void serialize(TreeNode* root, stringstream&amp;amp; ss) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (!root) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ss &amp;lt;&amp;lt; &amp;quot;None,&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; ss &amp;lt;&amp;lt; root-&amp;gt;val &amp;lt;&amp;lt; &amp;quot;,&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; serialize(root-&amp;gt;left, ss);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; serialize(root-&amp;gt;right, ss);&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;TreeNode* deserialize(stringstream&amp;amp; ss) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; string val;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; getline(ss, val, &amp;#39;,&amp;#39;);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (val == &amp;quot;None&amp;quot;)&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return nullptr;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* root = new TreeNode(stoi(val));&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; root-&amp;gt;left = deserialize(ss);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; root-&amp;gt;right = deserialize(ss);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return root;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void saveToFile(TreeNode* root, const string&amp;amp; filename) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; ofstream file(filename);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (!file) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x932F;&#x8AA4;&#xFF1A;&#x7121;&#x6CD5;&#x5EFA;&#x7ACB;&#x6A94;&#x6848;&#xFF01;&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; stringstream ss;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; serialize(root, ss);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; file &amp;lt;&amp;lt; ss.str();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; file.close();&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;TreeNode* restoreFromFile(const string&amp;amp; filename) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; ifstream file(filename);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; if (!file) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x932F;&#x8AA4;&#xFF1A;&#x627E;&#x4E0D;&#x5230;&#x6A94;&#x6848;&#xFF01;&amp;quot; &amp;lt;&amp;lt; endl;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return nullptr;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; string data;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; getline(file, data);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; stringstream ss(data);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; file.close();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; return deserialize(ss);&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x793A;&#x4F8B;&#xFF1A;&#x69CB;&#x5EFA;&#x4E00;&#x500B;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6A39;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* root = new TreeNode(4);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; root-&amp;gt;left = new TreeNode(2);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; root-&amp;gt;right = new TreeNode(5);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; root-&amp;gt;left-&amp;gt;left = new TreeNode(1);&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; root-&amp;gt;left-&amp;gt;right = new TreeNode(3);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x5C07;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6A39;&#x5B58;&#x6A94;&#x5230;&#x6587;&#x4EF6;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; saveToFile(root, &amp;quot;bst_data.txt&amp;quot;);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x5F9E;&#x6587;&#x4EF6;&#x4E2D;&#x8B80;&#x53D6;&#x8CC7;&#x6599;&#x4E26;&#x6062;&#x5FA9;&#x70BA;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6A39;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; TreeNode* restored_root = restoreFromFile(&amp;quot;bst_data.txt&amp;quot;);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x73FE;&#x5728; restored_root &#x5305;&#x542B;&#x4E86;&#x5F9E;&#x5B58;&#x6A94;&#x8CC7;&#x6599;&#x4E2D;&#x6062;&#x5FA9;&#x539F;&#x72C0;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6A39;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x6E05;&#x7406;&#x5167;&#x5B58;&#xFF08;&#x91CB;&#x653E;&#x7BC0;&#x9EDE;&#xFF09;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; // &#x6B64;&#x8655;&#x7701;&#x7565;&#x6E05;&#x7406;&#x7A0B;&#x5F0F;&#x78BC;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>11</hit>
+  <lang>1</lang>
+</data>

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:26",
+        "@type": "post",
+        "@filename": "b000000010000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278683",
+        "node": "000000010000000001",
+        "site": "1000110001",
+        "pt": "2023-07-22 10:51:52",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 搶答207",
+        "content": "<p>第二步：選擇第二小的數值2，與第二個位置的元素交換。</p>\r\n\r\n<p>[(&#39;C&#39;, 1), (&#39;E&#39;, 2), (&#39;A&#39;, 3), (&#39;D&#39;, 3), (&#39;B&#39;, 2)]</p>\r\n\r\n<p><span style=\"color:#ff0000\">這一步是錯誤的，第二個位置本來就是2，根本不用交換！</span></p>\r\n\r\n<p><span style=\"color:#ff0000\">結果仍然維持是第一步的樣子：[(&#39;C&#39;, 1), (&#39;B&#39;, 2), (&#39;A&#39;, 3), (&#39;D&#39;, 3), (&#39;E&#39;, 2)]</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

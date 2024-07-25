@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-10-23 00:59:56",
+        "poster": "11127225",
+        "realname": "賴枋佑",
+        "email": "leolai325@gmail.com",
+        "homepage": null,
+        "subject": "130. 寫Python程式碼實現近似C++ class隱藏資料的效果，並指出差異。",
+        "content": "<p>Python原始碼:<br />\r\n&nbsp;</p>\r\n\r\n<p>class Myclass:</p>\r\n\r\n<p>&nbsp; &nbsp; public_member = 1</p>\r\n\r\n<p>&nbsp; &nbsp; __private_member = 2</p>\r\n\r\n<p>&nbsp; &nbsp; @classmethod</p>\r\n\r\n<p>&nbsp; &nbsp; def private_member(self):</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; return self.__private_member</p>\r\n\r\n<p>&nbsp; &nbsp;</p>\r\n\r\n<p>try:</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;Accessing public member&quot;)</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;The value of public member is&quot;,Myclass.public_member)</p>\r\n\r\n<p>except:</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;Can&#39;t access!&quot;)</p>\r\n\r\n<p>print()</p>\r\n\r\n<p>try:</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;Accessing private member directly&quot;)</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;The value of private member is&quot;,Myclass.__private_member)</p>\r\n\r\n<p>except:</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;Can&#39;t access!&quot;)</p>\r\n\r\n<p>print()</p>\r\n\r\n<p>try:</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;Accessing private member by classmethod&quot;)</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;The value of private member is&quot;,Myclass.private_member())</p>\r\n\r\n<p>except:</p>\r\n\r\n<p>&nbsp; &nbsp; print(&quot;Can&#39;t access!&quot;)</p>\r\n\r\n<p>輸出:<br />\r\nAccessing public member<br />\r\nThe value of public member is 1</p>\r\n\r\n<p>Accessing private member directly<br />\r\nCan&#39;t access!</p>\r\n\r\n<p>Accessing private member by classmethod<br />\r\nThe value of private member is 2</p>\r\n\r\n<p>與C++的差異:</p>\r\n\r\n<p>Python本身沒有嚴謹定義的private修飾詞，只能使用name mangling的方法在前面加上雙底線來達成類似的效果</p>\r\n\r\n<p>這直接導致了Python中要隱藏資料的話，變數名稱會被限制一定要用雙底線開頭</p>\r\n\r\n<p>而C++則只需要在變數宣告前一行加上private:就好</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

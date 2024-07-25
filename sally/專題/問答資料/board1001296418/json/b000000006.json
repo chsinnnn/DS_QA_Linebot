@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2023-10-02 23:15:30",
+        "poster": "11127124",
+        "realname": "何俊霆",
+        "email": "ju482239@gmail.com",
+        "homepage": null,
+        "subject": "107",
+        "content": "<p>107. 作業一採用什麼資料結構儲存讀入資料，須說明原因。<br />\r\n<br />\r\n作業一我先定義一個Maze類別，在裡面創建一個二維向量&nbsp;vector&lt;vector&lt;char&gt;&gt;&nbsp;<br />\r\n，其中每個元素是一個字元（char），代表迷宮格子的狀態。<br />\r\n<br />\r\n利用二維向量的原因是因為迷宮大小不固定，而vector可以動態改變大小，也提供很多方便的函式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

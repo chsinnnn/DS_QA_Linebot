@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:49:36" type="post" filename="b000000009.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305432</board_id>
+  <node>000000009</node>
+  <site>1000110001</site>
+  <pt>2023-10-07 17:49:42</pt>
+  <poster>11120411</poster>
+  <realname>&#x9673;&#x701A;&#x5091;  </realname>
+  <email>jackc0410@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>114. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x540C;&#x985E;&#x5225;&#x5169;&#x500B;&#x65B9;&#x6CD5;&#x5982;&#x4F55;&#x5BE6;&#x73FE;&#x591A;&#x8F09;overloading </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;class function {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;public:&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5169;&#x500B;&#x6578;&#x76F8;&#x52A0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int add(int a, int b) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return a + b;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; //&#x4E09;&#x500B;&#x6578;&#x76F8;&#x52A0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; int add(int a, int b, int c) {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return a + b + c;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;};&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; function calc;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x5169;&#x500B;&#x6578;&#x76F8;&#x52A0;: &amp;quot; &amp;lt;&amp;lt; calc.add(5, 3) &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x4E09;&#x500B;&#x6578;&#x76F8;&#x52A0;: &amp;quot; &amp;lt;&amp;lt; calc.add(3, 4, 5) &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5229;&#x7528;overloading&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x900F;&#x904E;&#x8F38;&#x5165;&#x4E0D;&#x540C;&#x6578;&#x91CF;&#x7684;&#x6578;&#x5B57;&#xFF0C;&#x4F86;&#x9032;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x5F0F;&#x4E2D;&#x9032;&#x884C;&#x76F8;&#x52A0;&#xFF0C;&#x9032;&#x800C;&#x5BE6;&#x73FE;&#x591A;&#x8F09;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>12</hit>
+  <lang>1</lang>
+</data>

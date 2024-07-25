@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:59:30",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001174274",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2022-10-17 13:01:29",
+        "poster": "11020107",
+        "realname": "蘇伯勳",
+        "email": "pohsun.su@gmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;</p>\r\n\r\n<p>typedef struct Node { // an example linked list<br />\r\n&nbsp; &nbsp; int val;<br />\r\n&nbsp; &nbsp; Node *next;<br />\r\n} *NodePtr ;</p>\r\n\r\n<p>int main(void) {<br />\r\n&nbsp; &nbsp; NodePtr cur = NULL, head = NULL;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // initializing, put in 1 ~ 10<br />\r\n&nbsp; &nbsp; int num = 1;<br />\r\n&nbsp; &nbsp; do {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; if (cur == NULL) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur = new Node;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; head = cur;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur-&gt;next = NULL;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } // end if<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; else {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur-&gt;val = num;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur-&gt;next = new Node;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur = cur-&gt;next;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur-&gt;val = 10; // default range<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur-&gt;next = NULL;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num++;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; } // end else<br />\r\n&nbsp; &nbsp; } while(num &lt; 10);<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cur = head;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // print out all nodes&#39; values<br />\r\n&nbsp; &nbsp; while (cur != NULL) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; cur-&gt;val &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cur = cur-&gt;next;<br />\r\n&nbsp; &nbsp; } // end while<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; cur = head;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // comparing ptrX = ptrX-&gt;next and ptrX-&gt;next = ptrX<br />\r\n&nbsp; &nbsp; NodePtr ptrX = head;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // 1. ptrX = ptrX-&gt;next<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;Before, ptrX&#39;s value is : &quot; &lt;&lt; ptrX-&gt;val &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; ptrX = ptrX-&gt;next; // 指向下一個節點ptrX-&gt;next，因此能印出所有內容並正常停止<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;After, ptrX&#39;s value is : &quot; &lt;&lt; ptrX-&gt;val &lt;&lt; &quot;, &quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;and ptrX-&gt;next&#39;s value is : &quot; &lt;&lt; ptrX-&gt;next-&gt;val &lt;&lt; endl;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // print out all nodes&#39; values，正常停止<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;All nodes&#39; values are : &quot;;<br />\r\n&nbsp; &nbsp; while (cur != NULL) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; cur-&gt;val &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cur = cur-&gt;next;<br />\r\n&nbsp; &nbsp; } // end while<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; cur = head;<br />\r\n&nbsp; &nbsp; ptrX = head;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // 2. ptrX-&gt;next = ptrX;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;Before, ptrX&#39;s value is : &quot; &lt;&lt; ptrX-&gt;val &lt;&lt; endl;<br />\r\n&nbsp; &nbsp; ptrX-&gt;next = ptrX; // 指向自己ptrX，因此為一雙向鏈結串列，只含有原本鏈結串列的第一個節點，印出所有節點時因沒有NULL而產生無窮迴圈<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;After, ptrX&#39;s value is : &quot; &lt;&lt; ptrX-&gt;val &lt;&lt; &quot;, &quot;;<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;and ptrX-&gt;next&#39;s value is : &quot; &lt;&lt; ptrX-&gt;next-&gt;val &lt;&lt; endl;<br />\r\n&nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; // print out all nodes&#39; values，無窮迴圈<br />\r\n&nbsp; &nbsp; cout &lt;&lt; &quot;All nodes&#39; values are : &quot;;<br />\r\n&nbsp; &nbsp; while (cur != NULL) {<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; cur-&gt;val &lt;&lt; &quot; &quot;;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; cur = cur-&gt;next;<br />\r\n&nbsp; &nbsp; } // end while</p>\r\n\r\n<p>&nbsp; &nbsp; return 0;<br />\r\n} // main()</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "17",
+        "lang": "1"
+    }
+}

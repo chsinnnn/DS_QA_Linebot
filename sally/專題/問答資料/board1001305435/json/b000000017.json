@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000017.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000017",
+        "site": "1000110001",
+        "pt": "2023-11-01 20:30:45",
+        "poster": "10911110",
+        "realname": "江侑倫",
+        "email": "acth11256@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p>126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？</p>\r\n\r\n<p>前序式由右往左做計算</p>\r\n\r\n<p>因此原式 + * 2 4 6 * <u><span style=\"background-color:#00ffff\">- 7 5</span></u><span style=\"background-color:#00ffff\">&nbsp;</span> 先從-75開始計算</p>\r\n\r\n<p>=&nbsp;+ * 2 4 6 <u><span style=\"background-color:#00ffff\">* 2&nbsp;</span></u>&nbsp; 接著算*2，但此時*2沒有其他的數字可以計算，不符合前序式運算</p>\r\n\r\n<p>因此 + * 2 4 6 * - 7 5 並不是前序式。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "5",
+        "lang": "1"
+    }
+}

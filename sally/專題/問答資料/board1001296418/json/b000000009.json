@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000009.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000009",
+        "site": "1000110001",
+        "pt": "2023-10-03 15:53:13",
+        "poster": "11127140",
+        "realname": "姜義新",
+        "email": "jabeeschool@gmail.com",
+        "homepage": null,
+        "subject": "108",
+        "content": "<p><span style=\"font-size:18px\">若遞迴到某層就異常終止，要如何強制它繼續執行到下一層？</span></p>\r\n\r\n<p>在遞迴到某一層異常終止並且需要繼續走下一層的話，則可以使用 exception handling (例外處例) ，以下是c++的範例，使用try-catch處理例外。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11127140/images/Screen%20Shot%202023-10-03%20at%203.51.35%20PM.png\" style=\"height:207px; width:300px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "20",
+        "lang": "1"
+    }
+}

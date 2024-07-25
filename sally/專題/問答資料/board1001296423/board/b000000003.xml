@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:22" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296423</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-11-16 21:33:54</pt>
+  <poster>11127139</poster>
+  <realname>&#x9673;&#x3000;&#x6069;  </realname>
+  <email>a04182596@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>202 </subject>
+  <content>&lt;p&gt;202. &#x8209;&#x4F8B;&#x8AAA;&#x660E;&#x55AE;&#x4E00;&#x4F47;&#x5217;&#x6A21;&#x64EC;&#x5982;&#x4F55;&#x8A08;&#x7B97;&#x5E73;&#x5747;&#x4F47;&#x5217;&#x9577;&#x5EA6;queue length&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;ul&gt;&#xD;
+	&lt;li&gt;Average queue length&#x8A08;&#x7B97;&#x65B9;&#x6CD5;&#xFF1A;&lt;br /&gt;&#xD;
+	&#x8A08;&#x7B97;&#x6BCF;&#x500B;&#x4EFB;&#x52D9;&#x62B5;&#x9054;&#x6642;&#x7684;&#x6392;&#x968A;&#x9577;&#x5EA6;(&#x7B49;&#x5F85;&#x6578;&#x91CF;)&#xFF0C; &#x4EE5;Cn&#x8868;&#x793A;&#x7B2C;n&#x500B;&#x4EFB;&#x52D9;&#x62B5;&#x9054;&#x6642;&#x7684;&#x6392;&#x968A;&#x9577;&#x5EA6;&lt;br /&gt;&#xD;
+	Average queue length = (C1+C2+&amp;hellip;+Cn) / n&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+&#x4EE5;&#x4E0B;&#x8868;&#x9032;&#x884C;&#x6A21;&#x64EC;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;thead&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;th&gt;id&lt;/th&gt;&#xD;
+			&lt;th&gt;Arrival&lt;/th&gt;&#xD;
+			&lt;th&gt;Duration&lt;/th&gt;&#xD;
+			&lt;th&gt;Departure&lt;/th&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/thead&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;A&lt;/td&gt;&#xD;
+			&lt;td&gt;20&lt;/td&gt;&#xD;
+			&lt;td&gt;5&lt;/td&gt;&#xD;
+			&lt;td&gt;?&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;B&lt;/td&gt;&#xD;
+			&lt;td&gt;22&lt;/td&gt;&#xD;
+			&lt;td&gt;4&lt;/td&gt;&#xD;
+			&lt;td&gt;?&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;C&lt;/td&gt;&#xD;
+			&lt;td&gt;23&lt;/td&gt;&#xD;
+			&lt;td&gt;2&lt;/td&gt;&#xD;
+			&lt;td&gt;?&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;D&lt;/td&gt;&#xD;
+			&lt;td&gt;29&lt;/td&gt;&#xD;
+			&lt;td&gt;4&lt;/td&gt;&#xD;
+			&lt;td&gt;?&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;time = 20&lt;/strong&gt;:&lt;br /&gt;&#xD;
+A arrived&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;thead&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;th&gt;id&lt;/th&gt;&#xD;
+			&lt;th&gt;Arrival&lt;/th&gt;&#xD;
+			&lt;th&gt;Departure&lt;/th&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/thead&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;A&lt;/td&gt;&#xD;
+			&lt;td&gt;20&lt;/td&gt;&#xD;
+			&lt;td&gt;20+5 = 25&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;C1 = 0&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;time = 22&lt;/strong&gt;:&lt;br /&gt;&#xD;
+B Arrived&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;thead&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;th&gt;id&lt;/th&gt;&#xD;
+			&lt;th&gt;Arrival&lt;/th&gt;&#xD;
+			&lt;th&gt;Departure&lt;/th&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/thead&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;A&lt;/td&gt;&#xD;
+			&lt;td&gt;20&lt;/td&gt;&#xD;
+			&lt;td&gt;20+5 = 25&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;B&lt;/td&gt;&#xD;
+			&lt;td&gt;22&lt;/td&gt;&#xD;
+			&lt;td&gt;25+4 = 29&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;C2 = 1&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;time = 23&lt;/strong&gt;:&lt;br /&gt;&#xD;
+C Arrived&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;thead&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;th&gt;id&lt;/th&gt;&#xD;
+			&lt;th&gt;Arrival&lt;/th&gt;&#xD;
+			&lt;th&gt;Departure&lt;/th&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/thead&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;A&lt;/td&gt;&#xD;
+			&lt;td&gt;20&lt;/td&gt;&#xD;
+			&lt;td&gt;20+5 = 25&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;B&lt;/td&gt;&#xD;
+			&lt;td&gt;22&lt;/td&gt;&#xD;
+			&lt;td&gt;25+4 = 29&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;C&lt;/td&gt;&#xD;
+			&lt;td&gt;23&lt;/td&gt;&#xD;
+			&lt;td&gt;29+2 = 31&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;C3 = 2&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;strong&gt;time = 29&lt;/strong&gt;:&lt;br /&gt;&#xD;
+A Departure (time = 25)&lt;br /&gt;&#xD;
+B Departure (time = 29)&lt;br /&gt;&#xD;
+D Arrived&lt;/p&gt;&#xD;
+&#xD;
+&lt;table&gt;&#xD;
+	&lt;thead&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;th&gt;id&lt;/th&gt;&#xD;
+			&lt;th&gt;Arrival&lt;/th&gt;&#xD;
+			&lt;th&gt;Departure&lt;/th&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/thead&gt;&#xD;
+	&lt;tbody&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;C&lt;/td&gt;&#xD;
+			&lt;td&gt;23&lt;/td&gt;&#xD;
+			&lt;td&gt;29+2 = 31&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+		&lt;tr&gt;&#xD;
+			&lt;td&gt;D&lt;/td&gt;&#xD;
+			&lt;td&gt;29&lt;/td&gt;&#xD;
+			&lt;td&gt;31+4 = 35&lt;/td&gt;&#xD;
+		&lt;/tr&gt;&#xD;
+	&lt;/tbody&gt;&#xD;
+&lt;/table&gt;&#xD;
+&#xD;
+&lt;p&gt;C4 = 1&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+Average queue length = (C1+C2+C3+C4) / 4 = (0+1+2+1) / 4 = 1&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>21</hit>
+  <lang>1</lang>
+</data>

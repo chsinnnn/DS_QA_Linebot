@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:14",
+        "@type": "post",
+        "@filename": "b000000006.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162650",
+        "node": "000000006",
+        "site": "1000110001",
+        "pt": "2022-10-17 01:42:20",
+        "poster": "11020105",
+        "realname": "簡健洲",
+        "email": "jay0982854390@gmail.com",
+        "homepage": null,
+        "subject": "寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。",
+        "content": "<p>先假設有一鏈結串列裡的值依序是10,20,30。宣告另一個鏈結串列來複製值。</p>\r\n\r\n<p>若依序印出的值與初始相同代表複製成功</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11020105/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%20%2886%29%281%29.png\" style=\"height:878px; width:1920px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

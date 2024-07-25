@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000018000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000018000000001",
+        "site": "1000110001",
+        "pt": "2022-09-19 20:30:29",
+        "poster": "10977001",
+        "realname": "郭維哲",
+        "email": "g10977001@cycu.edu.tw",
+        "homepage": null,
+        "subject": "Re: 101. 以自己的話描述遞迴recursion是什麼。",
+        "content": "<p>不錯的發現，高中時也有題目是給出遞迴式，利用數學歸納法求出一般項。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

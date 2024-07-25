@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:54",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296420",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-10-18 23:02:22",
+        "poster": "03109309",
+        "realname": "呂沛霖",
+        "email": "0",
+        "homepage": null,
+        "subject": "118",
+        "content": "<p><strong>118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。</strong></p>\r\n\r\n<p>1. ptrX= ptrX -&gt; next:</p>\r\n\r\n<p>ptrX 指向的是現在這個節點位址的下一個位址 ( ptrX 在 Linked List 上向右移動)。</p>\r\n\r\n<p>2. ptrX-&gt;next = ptrX:</p>\r\n\r\n<p>prtX指向的現在這個節點的下一個位址為自己本身這個節點的位址 ( 在 Linked List 上形成一個封閉的迴圈，會無法取得接下來的Linked List 資料)。</p>\r\n\r\n<p><img alt=\"\" src=\"/user/0/3/03109309/images/IMG_0218%281%29.PNG\" style=\"height:371px; width:500px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

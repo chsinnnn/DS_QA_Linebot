@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:53:34",
+        "@type": "post",
+        "@filename": "b000000004.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296418",
+        "node": "000000004",
+        "site": "1000110001",
+        "pt": "2023-09-29 17:55:30",
+        "poster": "11127129",
+        "realname": "張軒偉",
+        "email": "billy.wilai@gmail.com",
+        "homepage": null,
+        "subject": "109",
+        "content": "<p><span style=\"font-size:16px\">如何幫陣列元素設定非零的初始值？須寫出C++程式碼。</span></p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; // 創建一個整數陣列時直接初始化所有元素為非零值</p>\r\n\r\n<p>&nbsp; int Array[] = {1, 3, 5, 7, 9};</p>\r\n\r\n<p>&nbsp; // 利用迴圈設定非零初始值</p>\r\n\r\n<p>&nbsp; for (int i = 0; i &lt; 5; ++i) {</p>\r\n\r\n<p>&nbsp; &nbsp; Array[i] = 100;</p>\r\n\r\n<p>&nbsp; }</p>\r\n\r\n<p>&nbsp; return 0;</p>\r\n\r\n<p>}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "43",
+        "lang": "1"
+    }
+}

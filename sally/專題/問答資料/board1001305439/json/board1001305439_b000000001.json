@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:18",
+        "@type": "post",
+        "@filename": "b000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305439",
+        "node": "000000001",
+        "site": "1000110001",
+        "pt": "2023-12-09 15:52:42",
+        "poster": "11127229",
+        "realname": "廖翊崴",
+        "email": "willy.liao921118@gmail.com",
+        "homepage": null,
+        "subject": "216. 舉例解說希爾排序shell sort是否穩定stable。",
+        "content": "<p>#include &lt;iostream&gt;</p>\r\n\r\n<p>#include &lt;vector&gt;</p>\r\n\r\n<p>using namespace std ;</p>\r\n\r\n<p>void shellSort( vector&lt;int&gt;&amp; arr ) {</p>\r\n\r\n<p>&nbsp; &nbsp; int n = arr.size() ;</p>\r\n\r\n<p>&nbsp; &nbsp; for ( int gap = n / 2 ; gap &gt; 0 ; gap /= 2 ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; for ( int i = gap ; i &lt; n ; i++ ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int temp = arr[i] ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int j = i ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while ( j &gt;= gap &amp;&amp; arr[j - gap] &gt; temp ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arr[j] = arr[j - gap] ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j -= gap ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arr[j] = temp ;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>}</p>\r\n\r\n<p>int main() {</p>\r\n\r\n<p>&nbsp; &nbsp; vector&lt;int&gt; arr = { 5, 2, 9, 1, 5, 6 } ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;Original Array: &quot; ;</p>\r\n\r\n<p>&nbsp; &nbsp; for ( int num : arr ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; num &lt;&lt; &quot; &quot; ;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; endl ;</p>\r\n\r\n<p>&nbsp; &nbsp; shellSort(arr) ;</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; &quot;Sorted Array: &quot; ;</p>\r\n\r\n<p>&nbsp; &nbsp; for ( int num : arr ) {</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; num &lt;&lt; &quot; &quot; ;</p>\r\n\r\n<p>&nbsp; &nbsp; }</p>\r\n\r\n<p>&nbsp; &nbsp; cout &lt;&lt; endl ;</p>\r\n\r\n<p>&nbsp; &nbsp; return 0 ;</p>\r\n\r\n<p>}</p>\r\n\r\n<p>在上面這個例子中，由於存在交換操作，希爾排序可能會破壞相同元素的相對順序，因此是不穩定的。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

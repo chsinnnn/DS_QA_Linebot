@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-06-30 09:15:17" type="post" filename="b000000002.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162646</board_id>
+  <node>000000002</node>
+  <site>1000110001</site>
+  <pt>2022-09-13 19:20:53</pt>
+  <poster>11027162</poster>
+  <realname>&#x5289;&#x5F65;&#x6210;  </realname>
+  <email>s11027162@cycu.edu.tw</email>
+  <homepage>  </homepage>
+  <subject>103. &#x7C21;&#x4ECB;Acker&#x51FD;&#x6578;&#xFF0C;&#x4E26;&#x5217;&#x51FA;Acker(2,3)&#x7684;&#x6C42;&#x89E3;&#x904E;&#x7A0B;&#x3002; </subject>
+  <content>&lt;p&gt;Acker&#x51FD;&#x6578;&#x53C8;&#x540D;&#x963F;&#x514B;&#x66FC;&#x51FD;&#x6578;&#xFF0C;&#x662F;&#x4E00;&#x7A2E;&#x900F;&#x904E;&#x905E;&#x8FF4;&#x95DC;&#x4FC2;&#x6240;&#x751F;&#x6210;&#x7684;&#x51FD;&#x6578;&#x3002;&#x8F38;&#x5165;&#x70BA;&#x5169;&#x81EA;&#x7136;&#x6578;&#xFF0C;&#x8F38;&#x51FA;&#x70BA;&#x4E00;&#x81EA;&#x7136;&#x6578;&#xFF0C;&#x4E14;&#x5176;&#x51FD;&#x6578;&#x503C;&#x6210;&#x9577;&#x5E45;&#x5EA6;&#x5DE8;&#x5927;&#xFF0C;&#x800C;&#x5176;&#x53CD;&#x51FD;&#x6578;&#x4E3B;&#x8981;&#x7528;&#x65BC;&#x6F14;&#x7B97;&#x6CD5;&#x7684;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;&#x70BA;&lt;strong&gt;&amp;nbsp;( &lt;/strong&gt;&#x4EE5;&#x4E0B;&#x7531;A&#x4F86;&#x4EE3;&#x6307;Ackermann function&lt;strong&gt; )&lt;/strong&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="A(m,n) = \begin{cases} n + 1 &amp;amp;\text{if } m = 0 \\ A( m - 1, 1) &amp;amp;\text{if } m&amp;gt;0 \ \&amp;amp; \ n = 0 \\ A(m - 1, A(m,n-1))&amp;amp;\text{otherwise } \end{case}" src="https://latex.codecogs.com/gif.latex?A%28m%2Cn%29%20%3D%20%5Cbegin%7Bcases%7D%20n%20&amp;amp;plus;%201%20%26%5Ctext%7Bif%20%7D%20m%20%3D%200%20%5C%5C%20A%28%20m%20-%201%2C%201%29%20%26%5Ctext%7Bif%20%7D%20m%3E0%20%5C%20%5C%26%20%5C%20n%20%3D%200%20%5C%5C%20A%28m%20-%201%2C%20A%28m%2Cn-1%29%29%26%5Ctext%7Botherwise%20%7D%20%5Cend%7Bcase%7D" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x5E38;&#x898B;&#x7684;Ackermann function&#x6709; A(2,2) = 7, A(1,2) = 4, A(2,1) = 5, A(2,3) = 9, A(3,2) = 29&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x800C;A(2,3)&#x7684;&#x6C42;&#x89E3;&#x904E;&#x7A0B;&#x5982;&#x4E0B;&lt;img alt="" src="/user/1/1/11027162/images/305996284_1625712037824417_3373354301334798655_n%20%281%29.jpg" style="height:1439px; width:2048px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>91</hit>
+  <lang>1</lang>
+</data>

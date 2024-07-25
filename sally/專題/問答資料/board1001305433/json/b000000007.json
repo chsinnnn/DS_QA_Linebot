@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:49:45",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305433",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-10 18:12:24",
+        "poster": "11127213",
+        "realname": "凌鼎軒",
+        "email": "benson920925@gmail.com",
+        "homepage": null,
+        "subject": "118. 令ptrX指向鏈結串列的節點，比較ptrX = ptrX-&gt;next和ptrX-&gt;next = ptrX的差異。",
+        "content": "<p><img alt=\"\" src=\"/user/1/1/11127213/images/DS116-120.drawio.png\" style=\"height:625px; width:472px\" /></p>\r\n\r\n<p>PtrX = PtrX -&gt; next 表示把PtrX指向自己的下一個節點。</p>\r\n\r\n<p>PtrX -&gt; next = PtrX 表示把PtrX的下一個節點指回自己。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "29",
+        "lang": "1"
+    }
+}

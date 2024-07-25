@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000023.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000023",
+        "site": "1000110001",
+        "pt": "2023-07-07 23:10:00",
+        "poster": "06005984",
+        "realname": "許祖睿",
+        "email": "ray900510@gmail.com",
+        "homepage": null,
+        "subject": "搶答101",
+        "content": "<p>101. 以自己的話描述遞迴recursion是什麼。</p>\r\n\r\n<p>在一個函式當中再去呼叫它自己,重複呼叫自身程式碼來得到答案</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "9",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:51:38",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305440",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2023-12-20 09:55:49",
+        "poster": "11127229",
+        "realname": "廖翊崴",
+        "email": "willy.liao921118@gmail.com",
+        "homepage": null,
+        "subject": "230. 比較以陣列或指標實作堆積結構的優缺點。",
+        "content": "<p>・使用陣列</p>\r\n\r\n<p>優點：</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;直觀性：易於理解的數據結構，透過索引訪問元素，代碼可讀性較高。</p>\r\n\r\n<p>缺點：</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;固定大小：陣列的大小在創建時就已經固定，無法動態調整。</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;插入和刪除效率低：在陣列中執行插入和刪除操作可能需要移動大量元素。</p>\r\n\r\n<p>・使用指標</p>\r\n\r\n<p>優點：</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;動態分配：使用指標可以方便的進行動態分配，大小可以根據需要時做動態調整。</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;插入和刪除效率高：透過指標，可以更輕鬆的進行元素的插入和刪除。</p>\r\n\r\n<p>缺點：</p>\r\n\r\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;複雜性：指標操作相對較為複雜，需要更多的程式來確保空間的正確管理，包括分配和釋放。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "13",
+        "lang": "1"
+    }
+}

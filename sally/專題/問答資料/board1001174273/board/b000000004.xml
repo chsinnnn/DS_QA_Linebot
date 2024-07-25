@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:59:22" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001174273</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2022-10-02 14:40:17</pt>
+  <poster>11020107</poster>
+  <realname>&#x8607;&#x4F2F;&#x52F3;  </realname>
+  <email>pohsun.su@gmail.com</email>
+  <homepage> </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;/*&lt;br /&gt;&#xD;
+1. Call by value :&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; main()&#x4E2D;&#x7684;&#x8B8A;&#x6578;&#x503C;&#x88AB;&#x8907;&#x88FD;&#x5230;&#x526F;&#x51FD;&#x5F0F;swap_CallByValue()&#xFF0C;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x610F;&#x5373;&#x4F7F;&#x7528;&#x7684;&#x65B0;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#xFF0C;&#x4E0D;&#x6703;&#x6539;&#x52D5;&#x5230;&#x4E3B;&#x51FD;&#x5F0F;main()&#x4E2D;&#x7684;&#x503C;&#xFF1B;&lt;br /&gt;&#xD;
+*/&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void swap_CallByValue( int value1, int value2 ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int temp = value1;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; value1 = value2;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; value2 = temp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After swapped by using call by value in sub fucntion :\nvalue1 is &amp;quot; &amp;lt;&amp;lt; value1 &amp;lt;&amp;lt; &amp;quot; and value2 is &amp;quot; &amp;lt;&amp;lt; value2 &amp;lt;&amp;lt; &amp;quot;\n&amp;quot;;&lt;br /&gt;&#xD;
+} // swap_CallByValue()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;/*&lt;br /&gt;&#xD;
+2. Call by address/pointer :&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x672C;&#x8CEA;&#x4E0A;&#x4E5F;&#x662F;&#x4E00;&#x7A2E;call by value&#xFF0C;&#x53EA;&#x4E0D;&#x904E;&#x6B64;value&#x5C31;&#x662F;&#x6307;&#x6A19;&#xFF0C;&#x8907;&#x88FD;&#x7684;&#x4E5F;&#x662F;&#x6307;&#x6A19;&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x4E3B;&#x51FD;&#x5F0F;main()&#x50B3;&#x5165;&#x4F4D;&#x5740;&#x5F8C;&#xFF0C;&#x526F;&#x51FD;&#x5F0F;swap_CallByAddress()&#x4EE5;&#x6307;&#x6A19;&#x6307;&#x5411;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#xFF1B;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x7531;&#x65BC;&#x4EA4;&#x63DB;&#x4E86;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#xFF0C;&#x56E0;&#x6B64;&#x56DE;&#x5230;&#x4E3B;&#x51FD;&#x5F0F;main()&#x5F8C;&#x539F;&#x672C;&#x7684;&#x503C;&#x6703;&#x4EA4;&#x63DB;&#x3002;&lt;br /&gt;&#xD;
+*/&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void swap_CallByAddress( int *address1, int *address2 ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int temp = *address1;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *address1 = *address2;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *address2 = temp;&lt;br /&gt;&#xD;
+} // swap_CallByAddress()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;/*&lt;br /&gt;&#xD;
+3. Call by reference :&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x50C5;&#x9650;C++&#xFF0C;&#x76F4;&#x63A5;&#x50B3;&#x5165;&#x4F4D;&#x5740;&#x53BB;&#x4EA4;&#x63DB;&#xFF0C;&#x6240;&#x4EE5;&#x56DE;&#x5230;&#x4E3B;&#x51FD;&#x5F0F;main()&#x5F8C;&#x539F;&#x672C;&#x7684;&#x503C;&#x4E5F;&#x6703;&#x4EA4;&#x63DB;&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x7531;&#x65BC;call by address&#x662F;&#x7528;&#x6307;&#x6A19;&#x6307;&#x5411;&#x4F4D;&#x5740;&#xFF0C;&#x56E0;&#x6B64;&#x6307;&#x6A19;&#x672C;&#x8EAB;&#x4E5F;&#x5177;&#x6709;&#x4F4D;&#x5740;&#xFF1B;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x800C;call by reference&#x662F;&#x76F4;&#x63A5;&#x50B3;&#x5165;&#x4F4D;&#x5740;&#xFF0C;&#x672C;&#x8EAB;&#x4E0D;&#x5177;&#x4F4D;&#x5740;&#x3002;&lt;br /&gt;&#xD;
+*/&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void swap_CallByReference( int &amp;amp;reference1, int &amp;amp;reference2 ) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int temp = reference1;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; reference1 = reference2;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; reference2 = temp;&lt;br /&gt;&#xD;
+} // swap_CallByReference()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;/*&lt;br /&gt;&#xD;
+4. &#x6BD4;&#x8F03;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x3010;Call by value&#x3011;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (1)&#x82E5;&#x4F7F;&#x7528;&#x592A;&#x591A;&#x4E14;&#x4F7F;&#x7528;&#x5B8C;&#x6C92;&#x522A;&#x6389;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x7A7A;&#x9593;&#xFF0C;&#x53EF;&#x80FD;&#x6703;&#x5C0E;&#x81F4;&#x8A18;&#x61B6;&#x9AD4;&#x4E0D;&#x8DB3;&#x800C;&#x7A0B;&#x5F0F;&#x5D29;&#x6F70;&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (2)&#x7531;&#x65BC;&#x8981;&#x8907;&#x88FD;&#x503C;&#xFF0C;&#x56E0;&#x6B64;&#x6548;&#x80FD;&#x8F03;&#x5DEE;&#x3001;&#x8F03;&#x6162;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (3)&#x4E0D;&#x6703;&#x5F71;&#x97FF;&#x5230;&#x4E3B;&#x51FD;&#x5F0F;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x3010;Call by address/pointer&#x3011;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (1)&#x7531;&#x65BC;&#x63A5;&#x6536;&#x7684;&#x662F;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x526F;&#x51FD;&#x5F0F;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x8B8A;&#x52D5;&#x90FD;&#x53EF;&#x80FD;&#x5F71;&#x97FF;&#x5230;&#x4E3B;&#x51FD;&#x5F0F;&#x3002;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (2)&#x4E5F;&#x662F;&#x4E00;&#x7A2E;call by value1&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x3010;Call by reference&#x3011;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (1)&#x50C5;&#x9650;C++&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (2)&#x6703;&#x6AA2;&#x67E5;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x7F6E;&#x662F;&#x5426;&#x5408;&#x6CD5;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ex.&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int iVal = 10;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int &amp;amp;refVal = iVal; // &#x5408;&#x6CD5;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int &amp;amp;refVal; // &#x975E;&#x6CD5;&#xFF0C;&#x672A;&#x521D;&#x59CB;&#x5316;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (error: &amp;lsquo;refVal&amp;rsquo; declared as reference but not initialized)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int &amp;amp;refVal = 0; // &#x975E;&#x6CD5;&#xFF0C;&#x521D;&#x503C;&#x5FC5;&#x9808;&#x662F;&#x7269;&#x4EF6;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (error: cannot bind non-const lvalue reference of type &amp;lsquo;int&amp;amp;&amp;rsquo; to an rvalue of type &amp;lsquo;int&amp;rsquo;)&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; (3)&#x7576;&#x4F5C;&#x7269;&#x4EF6;&#x7684;&#x5225;&#x540D;(alias)&#x4F7F;&#x7528;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &#x3010;&#x6548;&#x80FD;&#x6BD4;&#x8F03;&#x3011;&#xFF1A;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Call by reference = Call by address &amp;gt; Call by value&lt;br /&gt;&#xD;
+*/&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int value1 = 10, value2 = 20;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;The original values of call by value :\nvalue1 is &amp;quot; &amp;lt;&amp;lt; value1 &amp;lt;&amp;lt; &amp;quot; and value2 is &amp;quot; &amp;lt;&amp;lt; value2 &amp;lt;&amp;lt; &amp;quot;\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; swap_CallByValue( value1, value2 );&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After swapped by using call by value in main fucntion :\nvalue1 is &amp;quot; &amp;lt;&amp;lt; value1 &amp;lt;&amp;lt; &amp;quot; and value2 is &amp;quot; &amp;lt;&amp;lt; value2 &amp;lt;&amp;lt; &amp;quot;\n\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int address1 = 30, address2 = 40;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;The original values of call by address :\naddress1 is &amp;quot; &amp;lt;&amp;lt; address1 &amp;lt;&amp;lt; &amp;quot; and address2 is &amp;quot; &amp;lt;&amp;lt; address2 &amp;lt;&amp;lt; &amp;quot;\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; swap_CallByAddress( &amp;amp;address1, &amp;amp;address2 );&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After swapped by using call by address :\naddress1 is &amp;quot; &amp;lt;&amp;lt; address1 &amp;lt;&amp;lt; &amp;quot; and address2 is &amp;quot; &amp;lt;&amp;lt; address2 &amp;lt;&amp;lt; &amp;quot;\n\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int reference1 = 50, reference2 = 60;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;The original values of call by reference :\nreference1 is &amp;quot; &amp;lt;&amp;lt; reference1 &amp;lt;&amp;lt; &amp;quot; and reference2 is &amp;quot; &amp;lt;&amp;lt; reference2 &amp;lt;&amp;lt; &amp;quot;\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; swap_CallByReference( reference1, reference2 );&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;After swapped by using call by reference :\nreference1 is &amp;quot; &amp;lt;&amp;lt; reference1 &amp;lt;&amp;lt; &amp;quot; and reference2 is &amp;quot; &amp;lt;&amp;lt; reference2 &amp;lt;&amp;lt; &amp;quot;\n\n&amp;quot;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+} // main()&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x8F38;&#x51FA;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11020107/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-02%20212011.png" style="height:367px; width:617px" /&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x53C3;&#x7167;&#xFF1A;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://dotblogs.com.tw/Ace_Dream/2016/06/01/callbyvalue_callbyaddress_callbyreference"&gt;https://dotblogs.com.tw/Ace_Dream/2016/06/01/callbyvalue_callbyaddress_callbyreference&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="https://hackmd.io/@yunfanlu/r1xryJdSI#Call-by-reference"&gt;https://hackmd.io/@yunfanlu/r1xryJdSI#Call-by-reference&lt;/a&gt;&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>59</hit>
+  <lang>1</lang>
+</data>

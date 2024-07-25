@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-20 09:54:52" type="post" filename="b000000018.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001278678</board_id>
+  <node>000000018</node>
+  <site>1000110001</site>
+  <pt>2023-07-11 19:08:02</pt>
+  <poster>06005634</poster>
+  <realname>&#x90ED;&#x5BB8;&#x69A4;  </realname>
+  <email>jyh2guo@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>&#x6436;&#x7B54;115 </subject>
+  <content>&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void modify(int* ptr) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; *ptr = 500; //&#x4FEE;&#x6539;&#x6307;&#x6A19;&#x6307;&#x5411;&#x7684;&#x503C;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int num = 100;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int* ptr = &amp;amp;num; //&#x53D6;&#x5F97;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x539F;&#x672C;&#x7684;&#x503C;: &amp;quot; &amp;lt;&amp;lt; num &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; modify(ptr);&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;&#x7D93;&#x904E;&#x4FEE;&#x6539;&#x5F8C;&#x7684;&#x503C;: &amp;quot; &amp;lt;&amp;lt; num &amp;lt;&amp;lt; endl;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x57F7;&#x884C;&#x7D50;&#x679C;&#x5982;&#x4E0B;&lt;br /&gt;&#xD;
+&lt;img alt="" src="/user/0/6/06005634/images/%E5%9C%96%E7%89%873.png" style="height:171px; width:692px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>16</hit>
+  <lang>1</lang>
+</data>

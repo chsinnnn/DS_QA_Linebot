@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:19",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162651",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-10-21 12:38:14",
+        "poster": "11027154",
+        "realname": "廖梓逸",
+        "email": "joe3727@gmail.com",
+        "homepage": null,
+        "subject": "129. 寫C++程式碼設計遞迴函數產生3個數字不同且加總等於M的所有3位數，M是輸入的整數，百位數必須非零。",
+        "content": "<p>以M = 311 為例&nbsp;<img alt=\"\" src=\"/user/1/1/11027154/images/recursion%283%29.png\" style=\"height:1340px; width:1000px\" />結果如下</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/1/11027154/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-10-21%20123628.png\" style=\"height:622px; width:156px\" /></p>\r\n\r\n<p>程式碼:</p>\r\n\r\n<p>#include &lt;iostream&gt;<br />\r\nusing namespace std;<br />\r\nint num[2] ;<br />\r\n// 閱讀題目以及撰寫程式過程中無參考資料<br />\r\nvoid sum( int &nbsp;M, int base = 100 ,int index = 0 )<br />\r\n{<br />\r\n&nbsp; if ( index == 2 &amp;&amp; M - num[0] - num[1] &gt;= 100 ) // base case<br />\r\n&nbsp; {<br />\r\n&nbsp; &nbsp; cout &lt;&lt; num[0] &lt;&lt; &quot; &quot; &lt;&lt; num[1] &lt;&lt; &quot; &quot; &lt;&lt; M - num[0] - num[1] &lt;&lt; endl ;<br />\r\n&nbsp; }<br />\r\n&nbsp; else if ( index == 0 &amp;&amp; M - base &gt;= 200 ) // 減去num[0]後至少要剩200(符合題意&quot;百位數必須非零&quot;)<br />\r\n&nbsp; {<br />\r\n&nbsp; &nbsp; sum( M, base + 1, 0 ) ; // 改變base使目前位置的數字累加<br />\r\n&nbsp; &nbsp; num[0] = base ;<br />\r\n&nbsp; &nbsp; sum( M, base + 1, 1 ) ; // 符合題意&quot;3個數字不同&quot; 目前位置:0 準備遞迴位置:1<br />\r\n&nbsp; }<br />\r\n&nbsp; else if ( index == 1 &amp;&amp; M - base &gt;= 100 ) // 減去num[0]與num[1]後至少要剩100(符合題意&quot;百位數必須非零&quot;)<br />\r\n&nbsp; {<br />\r\n&nbsp; &nbsp; sum( M, base + 1, 1 ) ; // 改變base使目前位置的數字累加<br />\r\n&nbsp; &nbsp; num[1] = base ;<br />\r\n&nbsp; &nbsp; sum( M, base + 1, 2 ) ; // 符合題意&quot;3個數字不同&quot; 目前位置:1 準備遞迴位置:2<br />\r\n&nbsp; }<br />\r\n}<br />\r\nint main() {<br />\r\n&nbsp; sum ( 311 ) ;<br />\r\n}</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "40",
+        "lang": "1"
+    }
+}

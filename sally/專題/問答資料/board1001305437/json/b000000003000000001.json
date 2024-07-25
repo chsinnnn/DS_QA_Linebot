@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:53",
+        "@type": "post",
+        "@filename": "b000000003000000001.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305437",
+        "node": "000000003000000001",
+        "site": "1000110001",
+        "pt": "2023-11-27 22:36:14",
+        "poster": "11813",
+        "realname": "吳宜鴻",
+        "email": "yhwu@cycu.edu.tw",
+        "homepage": "https://www.researchgate.net/profile/Yi-Hung-Wu-2",
+        "subject": "Re: 207. 舉例解說選擇排序selection sort並非穩定stable的排序方法。",
+        "content": "<p><span style=\"color:#ff0000\">Incorrect step:</span></p>\r\n\r\n<p>第三次swap-&gt;[1,4,5a,5b,6]</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

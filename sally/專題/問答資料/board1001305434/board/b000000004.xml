@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:50:08" type="post" filename="b000000004.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001305434</board_id>
+  <node>000000004</node>
+  <site>1000110001</site>
+  <pt>2023-10-16 23:10:13</pt>
+  <poster>11127258</poster>
+  <realname>&#x7C21;&#x73EE;&#x6DB5;  </realname>
+  <email>phhhh5210@gmail.com</email>
+  <homepage> </homepage>
+  <subject>123. &#x5BEB;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x5982;&#x4F55;&#x8907;&#x88FD;&#x4E00;&#x6574;&#x500B;&#x93C8;&#x7D50;&#x4E32;&#x5217;linked list&#x5230;&#x53E6;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x3002; </subject>
+  <content>&lt;p&gt;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;linked list&#xFF0C;&#x9010;&#x4E00;&#x5C07;&#x8CC7;&#x6599;&#x653E;&#x5165;&#x6B64;linked list&#x7BC0;&#x9EDE;&#x4E2D;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;struct Node {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int data ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* next ;&lt;br /&gt;&#xD;
+} ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x8907;&#x88FD;&lt;br /&gt;&#xD;
+Node* copyLinkedList(Node* head) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; if (head == NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return NULL ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5275;&#x5EFA;&#x65B0;&#x7684;linked list&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* copyList = new Node ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; copyList-&amp;gt;data = head-&amp;gt;data ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; copyList-&amp;gt;next = NULL ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5275;&#x5EFA;&#x5169;&#x6307;&#x6A19;&#xFF0C;&#x4E00;&#x8868;&#x793A;&#x4E32;&#x5217;&#x7576;&#x524D;&#x4F4D;&#x7F6E;&#xFF0C;&#x53E6;&#x4E00;&#x8868;&#x793A;&#x4E0B;&#x4E00;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* current = copyList ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* original = head-&amp;gt;next ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (original != NULL) { // &#x5224;&#x65B7;&#x662F;&#x5426;&#x9084;&#x6709;&#x7BC0;&#x9EDE;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x5275;&#x5EFA;&#x65B0;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; current-&amp;gt;next = new Node ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; current = current-&amp;gt;next ; // &#x79FB;&#x52D5;&#x81F3;&#x4E0B;&#x4E00;&#x7BC0;&#x9EDE;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; current-&amp;gt;data = original-&amp;gt;data ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; current-&amp;gt;next = NULL ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // &#x79FB;&#x52D5;&#x81F3;&#x4E0B;&#x4E00;&#x7BC0;&#x9EDE;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; original = original-&amp;gt;next ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return copyList ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x5370;&#x51FA;&lt;br /&gt;&#xD;
+void printLinkedList(Node* head) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* current = head ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while (current != NULL) {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; current-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; -&amp;gt; &amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; current = current-&amp;gt;next ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; }&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;NULL&amp;quot; &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main() {&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x8A2D;&#x7F6E;linked list&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* List = new Node ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; List-&amp;gt;data = 1 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; List-&amp;gt;next = new Node ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; List-&amp;gt;next-&amp;gt;data = 2 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; List-&amp;gt;next-&amp;gt;next = new Node ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; List-&amp;gt;next-&amp;gt;next-&amp;gt;data = 3 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; List-&amp;gt;next-&amp;gt;next-&amp;gt;next = NULL ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x8907;&#x88FD;linked list&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; Node* List2 = copyLinkedList(List) ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; // &#x5370;&#x51FA;linked list&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Original List: &amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; printLinkedList(List) ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;quot;Copy List: &amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; printLinkedList(List2) ;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; return 0 ;&lt;br /&gt;&#xD;
+}&lt;/p&gt;</content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>38</hit>
+  <lang>1</lang>
+</data>

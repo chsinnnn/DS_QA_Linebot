@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 09:05:02" type="post" filename="b000000001.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001162648</board_id>
+  <node>000000001</node>
+  <site>1000110001</site>
+  <pt>2022-09-28 09:12:42</pt>
+  <poster>11027126</poster>
+  <realname>&#x937E;&#x6631;&#x8CE2;  </realname>
+  <email>lucas920421@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>111. &#x5BEB;&#x51FA;C++&#x7A0B;&#x5F0F;&#x78BC;&#x8AAA;&#x660E;&#x50B3;&#x503C;&#x547C;&#x53EB;call by value&#x3002; </subject>
+  <content>&lt;p&gt;void wrongSwap(int a, int b) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int temp = a;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;a = b;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;b = temp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x662F;&#x50B3;&#x503C;&#x547C;&#x53EB;( Call by Value )&#xFF0C;&#x50B3;&#x503C;&#x547C;&#x53EB;&#x6703;&#x5C07;&#x53C3;&#x6578;&#x4E2D;&#x7684;&#x503C;&#x8907;&#x88FD;&#x4E00;&#x4EFD;&#x5230;&#x51FD;&#x5F0F;&#x4E2D;&#xFF0C;&#x5728;&#x51FD;&#x5F0F;&#x4E2D;&#x82E5;&#x6709;&#x66F4;&#x6539;&#x53C3;&#x6578;&#x7684;&#x503C;&#x4E26;&#x4E0D;&#x6703;&#x5C0D;&#x539F;&#x8B8A;&#x6578;&#x9020;&#x6210;&#x5F71;&#x97FF;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x56E0;&#x6B64;&#x82E5;&#x662F;&#x60F3;&#x8981;&#x85C9;&#x7531;&#x51FD;&#x5F0F;&#x4F86;&#x6539;&#x8B8A;&#x53C3;&#x6578;&#x672C;&#x8EAB;&#x7684;&#x503C;&#x5728;C++&#x4E2D;&#x6211;&#x5011;&#x5FC5;&#x9808;&#x8981;&#x7528;&#x53C3;&#x8003;&#x503C;&#x547C;&#x53EB; ( Call by Reference )&#xFF0C;&#x9019;&#x7A2E;&#x65B9;&#x6CD5;&#x6703;&#x5C07;&#x8B8A;&#x6578;&#x672C;&#x8EAB;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#x50B3;&#x7D66;&#x51FD;&#x5F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x51FD;&#x5F0F;&#x5728;&#x5C0D;&#x53C3;&#x6578;&#x505A;&#x66F4;&#x6539;&#x6642;&#x6703;&#x76F4;&#x63A5;&#x66F4;&#x6539;&#x539F;&#x8B8A;&#x6578;&#xFF0C;&#x4EE5;&#x4E0B;&#x70BA; Call by Reference &#x7684;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x3002;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;void correctSwap(int &amp;amp;a, int &amp;amp;b) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;int temp = a;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;a = b;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;b = temp;&lt;br /&gt;&#xD;
+}&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&#x4E0B;&#x5716;&#x5247;&#x70BA; call by value &#x53CA; call by reference &#x7684;&#x57F7;&#x884C;&#x7D50;&#x679C;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/1/11027126/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-09-28%20091158.png" style="height:237px; width:228px" /&gt;&lt;/p&gt; </content>
+  <attach></attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>87</hit>
+  <lang>1</lang>
+</data>

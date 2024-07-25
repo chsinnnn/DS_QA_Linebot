@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-06-30 09:15:17",
+        "@type": "post",
+        "@filename": "b000000002.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162646",
+        "node": "000000002",
+        "site": "1000110001",
+        "pt": "2022-09-13 19:20:53",
+        "poster": "11027162",
+        "realname": "劉彥成",
+        "email": "s11027162@cycu.edu.tw",
+        "homepage": null,
+        "subject": "103. 簡介Acker函數，並列出Acker(2,3)的求解過程。",
+        "content": "<p>Acker函數又名阿克曼函數，是一種透過遞迴關係所生成的函數。輸入為兩自然數，輸出為一自然數，且其函數值成長幅度巨大，而其反函數主要用於演算法的時間複雜度分析。</p>\r\n\r\n<p>函數定義為<strong>&nbsp;( </strong>以下由A來代指Ackermann function<strong> )</strong></p>\r\n\r\n<p><img alt=\"A(m,n) = \\begin{cases} n + 1 &amp;\\text{if } m = 0 \\\\ A( m - 1, 1) &amp;\\text{if } m&gt;0 \\ \\&amp; \\ n = 0 \\\\ A(m - 1, A(m,n-1))&amp;\\text{otherwise } \\end{case}\" src=\"https://latex.codecogs.com/gif.latex?A%28m%2Cn%29%20%3D%20%5Cbegin%7Bcases%7D%20n%20&amp;plus;%201%20%26%5Ctext%7Bif%20%7D%20m%20%3D%200%20%5C%5C%20A%28%20m%20-%201%2C%201%29%20%26%5Ctext%7Bif%20%7D%20m%3E0%20%5C%20%5C%26%20%5C%20n%20%3D%200%20%5C%5C%20A%28m%20-%201%2C%20A%28m%2Cn-1%29%29%26%5Ctext%7Botherwise%20%7D%20%5Cend%7Bcase%7D\" /></p>\r\n\r\n<p>常見的Ackermann function有 A(2,2) = 7, A(1,2) = 4, A(2,1) = 5, A(2,3) = 9, A(3,2) = 29</p>\r\n\r\n<p>而A(2,3)的求解過程如下<img alt=\"\" src=\"/user/1/1/11027162/images/305996284_1625712037824417_3373354301334798655_n%20%281%29.jpg\" style=\"height:1439px; width:2048px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "91",
+        "lang": "1"
+    }
+}

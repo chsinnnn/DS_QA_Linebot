@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:52",
+        "@type": "post",
+        "@filename": "b000000024.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278687",
+        "node": "000000024",
+        "site": "1000110001",
+        "pt": "2023-07-25 22:18:49",
+        "poster": "06005952",
+        "realname": "姚承志",
+        "email": "ge062851@gmail.com",
+        "homepage": null,
+        "subject": "搶答224",
+        "content": "<p><span style=\"font-size:14px\">224. 如何將二元搜尋樹存檔後再讀入可恢復原狀？</span><br />\r\n可以使用樹的走訪，像是前序或是中序，將數的節點序列化，即轉換為字串，<br />\r\n接下來將序列化後的資料寫入檔案，然後當需要恢復樹的狀態時，只需要讀取檔案，<br />\r\n再把序列化的資料反序列化。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "11",
+        "lang": "1"
+    }
+}

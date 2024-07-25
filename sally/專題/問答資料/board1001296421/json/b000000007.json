@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:54:04",
+        "@type": "post",
+        "@filename": "b000000007.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001296421",
+        "node": "000000007",
+        "site": "1000110001",
+        "pt": "2023-10-21 00:14:05",
+        "poster": "10942208",
+        "realname": "陳洺安",
+        "email": "asd0389wsx0216@gmail.com",
+        "homepage": null,
+        "subject": "122",
+        "content": "<p>/*&nbsp;<br />\r\n10942208 陳洺安 資四乙<br />\r\n用swap(交換兩數)說明傳參考呼叫call by reference。&nbsp;<br />\r\n*/</p>\r\n\r\n<p>&nbsp;<br />\r\n#include &lt;stdio.h&gt;<br />\r\n#include &lt;string&gt;<br />\r\n#include &lt;iostream&gt;</p>\r\n\r\n<p>using namespace std ;</p>\r\n\r\n<p>void swapCallByReference( int &amp;n1, int &amp;n2) {<br />\r\n&nbsp;&nbsp; &nbsp;// &amp;接收到的是變數的記憶體位址（參照）<br />\r\n&nbsp;&nbsp; &nbsp;int temp = n1 ;<br />\r\n&nbsp;&nbsp; &nbsp;n1 = n2 ;<br />\r\n&nbsp;&nbsp; &nbsp;n2 = temp ;<br />\r\n} // swapCallByReference<br />\r\nvoid swapCallByValue( int n1, int n2) {<br />\r\n&nbsp;&nbsp; &nbsp;// 內部修改的是 n1,n2 所指向的記憶體位置的值，而不是 a,b<br />\r\n&nbsp;&nbsp; &nbsp;int temp = n1 ;<br />\r\n&nbsp;&nbsp; &nbsp;n1 = n2 ;<br />\r\n&nbsp;&nbsp; &nbsp;n2 = temp ;<br />\r\n} // swapCallByValue</p>\r\n\r\n<p><br />\r\n//使用指標時，可以存取或修改該指標所指向的記憶體位置的資料。<br />\r\n//將一個變數的指標傳遞給一個函數，函數可以通過指標來修改該變數的值，就像使用傳參考的方式一樣。<br />\r\nvoid swapCallByReferenceUsePointer( int *n1, int *n2) {<br />\r\n&nbsp; &nbsp; int temp = *n1;<br />\r\n&nbsp; &nbsp; *n1 = *n2;<br />\r\n&nbsp; &nbsp; *n2 = temp;<br />\r\n} // swapCallByReferenceUsePointer</p>\r\n\r\n<p>int main() {<br />\r\n&nbsp;&nbsp; &nbsp;int a , b ;<br />\r\n&nbsp;&nbsp; &nbsp;a = 0 ;<br />\r\n&nbsp;&nbsp; &nbsp;b = 0 ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;輸入兩個number &quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;a = &quot; ;<br />\r\n&nbsp;&nbsp; &nbsp;cin &gt;&gt; a ;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;b = &quot; ;<br />\r\n&nbsp;&nbsp; &nbsp;cin &gt;&gt; b ;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;call by reference&quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;交換前 =&gt; &nbsp;a = &quot; &lt;&lt; a &lt;&lt; &quot;, b = &quot; &lt;&lt; b &nbsp;&lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;swapCallByReference( a, b );<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;交換後 =&gt; &nbsp;a = &quot; &lt;&lt; a &lt;&lt; &quot;, b = &quot; &lt;&lt; b &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;==================================================================&quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;call by value&quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;交換前 =&gt; &nbsp;a = &quot; &lt;&lt; a &lt;&lt; &quot;, b = &quot; &lt;&lt; b &nbsp;&lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;swapCallByValue( a, b );<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;交換後 =&gt; &nbsp;a = &quot; &lt;&lt; a &lt;&lt; &quot;, b = &quot; &lt;&lt; b &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;==================================================================&quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;CallByReferenceUsePointer&quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;int *n1 = &amp;a ;<br />\r\n&nbsp;&nbsp; &nbsp;int *n2 = &amp;b ;&nbsp;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;交換前 =&gt; &nbsp;a = &quot; &lt;&lt; *n1 &lt;&lt; &quot;, b = &quot; &lt;&lt; *n2 &nbsp;&lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;swapCallByReferenceUsePointer( n1, n2 );<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;交換後 =&gt; &nbsp;a = &quot; &lt;&lt; *n1 &lt;&lt; &quot;, b = &quot; &lt;&lt; *n2 &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;cout &lt;&lt; &quot;==================================================================&quot; &lt;&lt; endl ;<br />\r\n&nbsp;&nbsp; &nbsp;<br />\r\n} // main()</p>\r\n\r\n<p>// 執行結果</p>\r\n\r\n<p><img alt=\"\" src=\"/user/1/0/10942208/images/swap.png\" style=\"height:531px; width:836px\" /></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "16",
+        "lang": "1"
+    }
+}

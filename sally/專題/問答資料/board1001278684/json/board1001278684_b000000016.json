@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:33",
+        "@type": "post",
+        "@filename": "b000000016.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278684",
+        "node": "000000016",
+        "site": "1000110001",
+        "pt": "2023-07-23 22:21:22",
+        "poster": "06005836",
+        "realname": "陳予璇",
+        "email": "jason40125520@gmail.com",
+        "homepage": null,
+        "subject": "搶答212",
+        "content": "<p><strong><span style=\"font-family:新細明體,serif\">舉例說明何時插入排序的資料搬動次數比希爾排序</span>shell sort</strong><strong><span style=\"font-family:新細明體,serif\">多？</span></strong></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">插入排序和希爾排序（</span>Shell Sort<span style=\"font-family:新細明體,serif\">）都是基於比較的排序算法，其主要區別在於排序策略的不同。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">插入排序的特點是將數列分為已排序和未排序兩部分，然後遍歷未排序部分的元素，將其插入到已排序部分的適當位置，以保持整個數列的有序性。在插入過程中，如果遇到比要插入元素大的元素，就需要將這些元素往後搬移一個位置，以便為要插入的元素腾出空間。因此，插入排序的資料搬動次數與要插入的元素在已排序部分的位置有關。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">希爾排序是插入排序的一種改進版本，它引入了所謂的「間隔（</span>gap<span style=\"font-family:新細明體,serif\">）」的概念。希爾排序通過將整個數列按照一定的間隔進行分組，然後對每一組進行插入排序。隨著排序進行，間隔會逐漸減小，直到間隔為</span>1<span style=\"font-family:新細明體,serif\">，最後再進行一次常規的插入排序。這種分組的做法可以讓較小的元素更快地向前移動，從而減少資料搬動的次數。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">舉個例子來說明何時插入排序的資料搬動次數比希爾排序多：</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">假設我們有以下未排序的數列：</span>[5, 3, 1, 4, 2]<span style=\"font-family:新細明體,serif\">。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">插入排序：</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">將</span>5<span style=\"font-family:新細明體,serif\">視為已排序部分，然後從</span>3<span style=\"font-family:新細明體,serif\">開始向前插入。進行一次比較，發現</span>5<span style=\"font-family:新細明體,serif\">比</span>3<span style=\"font-family:新細明體,serif\">大，於是將</span>5<span style=\"font-family:新細明體,serif\">往後搬移一個位置，數列變為：</span>[3, 5, 1, 4, 2]<span style=\"font-family:新細明體,serif\">。然後再將</span>1<span style=\"font-family:新細明體,serif\">插入已排序部分，需要兩次搬動：</span>[1, 3, 5, 4, 2]<span style=\"font-family:新細明體,serif\">。插入排序的總資料搬動次數是：</span>0 + 1 + 2 + 1 = 4<span style=\"font-family:新細明體,serif\">次。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">希爾排序：</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">使用希爾排序，並且選擇一個間隔為</span>2<span style=\"font-family:新細明體,serif\">（也就是每隔一個元素進行分組）。將數列分組為：</span>[5, 1], [3, 4], [2]<span style=\"font-family:新細明體,serif\">。對每一組進行插入排序。第一組需要一次搬動：</span>[1, 5]<span style=\"font-family:新細明體,serif\">；第二組需要一次搬動：</span>[3, 4]<span style=\"font-family:新細明體,serif\">；第三組無需搬動：</span>[2]<span style=\"font-family:新細明體,serif\">。縮小間隔為</span>1<span style=\"font-family:新細明體,serif\">，對整個數列進行常規的插入排序。只需要一次搬動：</span>[1, 3, 4, 2, 5]<span style=\"font-family:新細明體,serif\">。希爾排序的總資料搬動次數是：</span>1 + 1 + 0 + 1 = 3<span style=\"font-family:新細明體,serif\">次。</span></p>\r\n\r\n<p><span style=\"font-family:新細明體,serif\">希爾排序的資料搬動次數比插入排序少。希爾排序的性能取決於所選擇的間隔序列，並不是所有情況下都能優於插入排序。</span></p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "6",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:55:33",
+        "@type": "post",
+        "@filename": "b000000013.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278684",
+        "node": "000000013",
+        "site": "1000110001",
+        "pt": "2023-07-23 21:04:42",
+        "poster": "10827128",
+        "realname": "林鑫宏",
+        "email": "shawn140802@gmail.com",
+        "homepage": null,
+        "subject": "搶答 215.",
+        "content": "<p>會直接影響到遞迴深度的就是如果每次切分data時，都能剛好切成對等的2半，那就越接近best case，</p>\r\n\r\n<p>因為如果都是分成很極端的left part 99個元素 right part 只有原本的pivot item，那就會越不貼近divide and conquer的原意，</p>\r\n\r\n<p>而這種狀況只要原本就排的很乾淨，或是剛好data排起來pivot就是剛好賄選到極端值時會出現，反之則是sort時效率最好的狀況</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "8",
+        "lang": "1"
+    }
+}

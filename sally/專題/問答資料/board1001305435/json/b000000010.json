@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 08:50:18",
+        "@type": "post",
+        "@filename": "b000000010.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001305435",
+        "node": "000000010",
+        "site": "1000110001",
+        "pt": "2023-10-25 21:06:29",
+        "poster": "11127239",
+        "realname": "陳映銓",
+        "email": "edan0727@gmail.com",
+        "homepage": null,
+        "subject": "126. + * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+        "content": "<p>前序是由後面往前算，因此流程可以長這樣</p>\r\n\r\n<p><span style=\"color:#0000ff\">(1)</span>&nbsp; + * 2 4 6 * - <span style=\"background-color:#add8e6\">7 5</span></p>\r\n\r\n<p><span style=\"color:#0000ff\">(2)</span>&nbsp; + * 2 4 6 * <span style=\"background-color:#add8e6\">2</span></p>\r\n\r\n<p>在做第三不時會發生錯誤，</p>\r\n\r\n<p>因為 2 後面應該還要<span style=\"background-color:#d3d3d3\">再一個數字</span>跟2做相乘的動作。</p>\r\n\r\n<p>由此得知，此<span style=\"background-color:#dda0dd\">不為前序</span>。</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "49",
+        "lang": "1"
+    }
+}

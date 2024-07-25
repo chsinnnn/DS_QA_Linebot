@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-20 09:54:39",
+        "@type": "post",
+        "@filename": "b000000012.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001278676",
+        "node": "000000012",
+        "site": "1000110001",
+        "pt": "2023-07-06 01:38:17",
+        "poster": "06005636",
+        "realname": "朱紘正",
+        "email": "henry3446@gmail.com",
+        "homepage": null,
+        "subject": "搶答101",
+        "content": "<p>101. 以自己的話描述遞迴recursion是什麼。*</p>\r\n\r\n<p>將一個函式中自己呼叫自己本身的過程。簡單來說，遞迴就是函式在執行過程中重複調用自身的行為</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "14",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "@version": "3.0",
+        "@time": "2024-07-19 09:05:09",
+        "@type": "post",
+        "@filename": "b000000009000000003.xml",
+        "open_time": "0000-00-00",
+        "close_time": "0000-00-00",
+        "lang_name": "Big5",
+        "board_id": "1001162649",
+        "node": "000000009000000003",
+        "site": "1000110001",
+        "pt": "2022-10-12 17:56:31",
+        "poster": "11027122",
+        "realname": "陳柏宇",
+        "email": "99588albert@gmail.com",
+        "homepage": null,
+        "subject": "Re: 120. 舉例說明使用雙向鏈結串列doubly linked list的情境",
+        "content": "<p>淺顯易懂，好讚👍</p>",
+        "attach": null,
+        "rcount": null,
+        "rank": null,
+        "hit": "1",
+        "lang": "1"
+    }
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<data version="3.0" time="2024-07-19 08:54:13" type="post" filename="b000000003.xml">
+  <open_time>0000-00-00</open_time>
+  <close_time>0000-00-00</close_time>
+  <lang_name>Big5</lang_name>
+  <board_id>1001296422</board_id>
+  <node>000000003</node>
+  <site>1000110001</site>
+  <pt>2023-10-20 03:03:51</pt>
+  <poster>10942208</poster>
+  <realname>&#x9673;&#x6D3A;&#x5B89;  </realname>
+  <email>asd0389wsx0216@gmail.com</email>
+  <homepage>  </homepage>
+  <subject>127 </subject>
+  <content>&lt;p&gt;&lt;br /&gt;&#xD;
+/*&lt;br /&gt;&#xD;
+10942208 &#x9673;&#x6D3A;&#x5B89; &#x8CC7;&#x56DB;&#x4E59;&lt;br /&gt;&#xD;
+&#x4F7F;&#x7528;&#x8001;&#x5E2B;&#x4E0A;&#x8AB2;&#x6240;&#x6559;iostream subclass =&amp;gt; ofstream &amp;amp; ifstream&lt;br /&gt;&#xD;
+&#x9806;&#x4FBF;&#x7DF4;&#x7FD2;&#x52D5;&#x614B;&#x914D;&#x7F6E;&#x9663;&#x5217;&amp;nbsp;&lt;br /&gt;&#xD;
+*/&amp;nbsp;&lt;br /&gt;&#xD;
+#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;string&amp;gt;&lt;br /&gt;&#xD;
+#include &amp;lt;fstream&amp;gt;&lt;br /&gt;&#xD;
+using namespace std;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;int main()&lt;br /&gt;&#xD;
+{&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x4F7F;&#x7528;iostream subclass&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; &amp;quot;&#x8F38;&#x5165;&#x6A94;&#x6848;&#x540D;&#x7A31; ex: 123.txt &amp;quot; &amp;lt;&amp;lt; endl ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;string fileName = &amp;quot;&amp;quot; ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;cin &amp;gt;&amp;gt; fileName &amp;nbsp;;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int arraySize = 50 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int *intArray = new int[arraySize];&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x5BEB;&#x6A94; ==========================================================&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; ofstream outFile(fileName.c_str());&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; //.c_str() &#x5728;C++&#xFF0C; std::ofstream&#x63A5;&#x53D7;const char&#xFF0C;&#x800C;&#x4E0D;&#x662F;string&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int i = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; do{&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;outFile &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl ; // &#x8DDF;cout&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x985E;&#x4F3C;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;i++;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}while( i &amp;lt;= 10 ) ;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;outFile.close();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5BEB;&#x6A94; &#x7D50;&#x675F;======================================================&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; // &#x8B80;&#x6A94; ==========================================================&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; ifstream inFile(fileName.c_str());&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; int number ;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; i = 0 ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; while( inFile &amp;gt;&amp;gt; number ) { // &#x6587;&#x4EF6;&#x7D50;&#x675F;&#x8FD4;&#x56DE;false&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;*(intArray+i) = number ;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;i++;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;} // while&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;inFile.close();&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x8B80;&#x6A94; &#x7D50;&#x675F;======================================================&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;// &#x5370;&#x51FA;&#x9663;&#x5217;&#x5167;&#x5BB9;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;for( int j = 0 ; j &amp;lt; i ; j++ ) {&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;cout &amp;lt;&amp;lt; intArray[j] &amp;lt;&amp;lt; endl ; // intArray[0] = *(intArray+0) &amp;nbsp;;&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;} // for&lt;br /&gt;&#xD;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;delete[] intArray; // &#x91CB;&#x653E;&#x52D5;&#x614B;&#x5206;&#x914D;&#x5167;&#x5B58;&amp;nbsp;&lt;br /&gt;&#xD;
+&amp;nbsp; &amp;nbsp; return 0;&lt;br /&gt;&#xD;
+}&lt;br /&gt;&#xD;
+&amp;nbsp;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;// &#x57F7;&#x884C;&#x756B;&#x9762;&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;img alt="" src="/user/1/0/10942208/images/hw-1.png" style="height:531px; width:1000px" /&gt;&lt;/p&gt; </content>
+  <attach>10942208.cpp	WM65317d95e5bae.cpp</attach>
+  <rcount></rcount>
+  <rank></rank>
+  <hit>55</hit>
+  <lang>1</lang>
+</data>
