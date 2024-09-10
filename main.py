@@ -10,7 +10,7 @@ import requests
 import os
 import datetime
 from linebot.models import CarouselColumn, TemplateSendMessage, CarouselTemplate
-
+from linebot.exceptions import LineBotApiError
 os.chdir('/home/hsin/DS_QA_Linebot')
 
 app = Flask(__name__)
@@ -47,7 +47,8 @@ unit_collections = {
     "佇列": mongo_db["queue"],
     "遞迴": mongo_db["recursion"],
     "排序": mongo_db["sort"],
-    "堆疊": mongo_db["stack"]
+    "堆疊": mongo_db["stack"],
+    "二元樹": mongo_db["bst"]
 }
 
 def is_valid_student_id(student_id):
@@ -78,7 +79,8 @@ def handle_unit_selection(event):
         QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
         QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
         QuickReplyButton(action=MessageAction(label="排序", text="排序")),
-        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊"))
+        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
+        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹"))
     ])
 
     message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
@@ -195,13 +197,14 @@ def handle_user_answer(event, user_answer):
         else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
             print("無法找到學號，無法存儲題目和用戶答案")
+        reply = f"題目：{question_title} 回答：{user_answer}"
+        # 將題目發送給 語言模型並回傳答案
+        answer = send_question_to_mymodel(reply)
 
-        # 將題目發送給 Llama3 伺服器並回傳答案
-        llama3_answer = send_question_to_llama3(question_title)
-
-        # 組合要回覆的文字訊息，包括用戶的回答和 Llama3 的回答
-        reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\nLlama3 回答：{llama3_answer}"
-
+        # 組合要回覆的文字訊息，包括用戶的回答和 語言模型評論
+        #reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\n評論：{answer}"
+        reply_text = f"{answer}"
+        
         # 使用 TextSendMessage 回覆文字訊息
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
 
@@ -235,7 +238,8 @@ def send_quick_ans_records_reply(reply_token):
         QuickReplyButton(action=MessageAction(label="佇列", text="查看單元「佇列」的作答紀錄")),
         QuickReplyButton(action=MessageAction(label="遞迴", text="查看單元「遞迴」的作答紀錄")),
         QuickReplyButton(action=MessageAction(label="排序", text="查看單元「排序」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="堆疊", text="查看單元「堆疊」的作答紀錄"))
+        QuickReplyButton(action=MessageAction(label="堆疊", text="查看單元「堆疊」的作答紀錄")),
+        QuickReplyButton(action=MessageAction(label="二元樹", text="查看單元「二元樹」的作答紀錄"))
         ]
     )
     line_bot_api.reply_message(
@@ -296,31 +300,41 @@ def show_unit_answer_records(event, student_id, selected_unit):
 
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=units_reply_message))
 
-def send_question_to_llama3(question):
-    llama3_server_url = 'http://192.168.100.137:5000/ask'
+def send_question_to_mymodel(question):
+    # 設定語言模型API的URL
+    model_api_url = "http://192.168.100.140:5001/generate"  # 替換為語言模型伺服器的IP地址和端口號
+
+    # 準備發送的數據
+    payload = {
+        "input_text": question  # 修改這裡的鍵名為 input_text，符合API預期的字段
+    }
 
     try:
-        print(f"Sending question to Llama3 server: {llama3_server_url}")
-        response = requests.post(llama3_server_url, json={'question': question})
-        response.raise_for_status()
-        answer = response.json().get('answer', '無法獲取回答')
-        print(f"Received answer from Llama3 server: {answer}")
-        return answer
+        # 發送POST請求到語言模型的API
+        response = requests.post(model_api_url, json=payload)
+        # 檢查請求是否成功
+        if response.status_code == 200:
+            # 解析回覆的JSON數據
+            data = response.json()
+            return data.get("output", "模型未能生成回覆")
+        else:
+            print(f"Error: Received status code {response.status_code}")
+            return "模型回覆失敗，請稍後再試。"
     except requests.exceptions.RequestException as e:
-        print(f"Error sending question to Llama3: {e}")
-        return '無法獲取回答'
+        print(f"Request error: {e}")
+        return "無法連接到模型伺服器。"
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+
     user_id = event.source.user_id
     user_profile = line_bot_api.get_profile(user_id)
     user_name = user_profile.display_name
     user_document = mongo_collection.find_one({"user_id": user_id})
-    student_id = user_document.get("student_id")
+    student_id = None if user_document is None else user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
     
-
     if awaiting_suggestion:
         handle_suggestion(event)
     elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):

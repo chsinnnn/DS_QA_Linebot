@@ -1,0 +1,32 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 撰寫程式碼指出如何為二元搜尋樹新增節點。  答案: class BinaryTree {  private:      struct Node {          int data;       // 節點中存儲的資料              Node* left;     // 指向左子節點的指標              Node* right;    // 指向右子節點的指標      };      Node* root;    // 指向樹根的指標      Node* createNode(int data)    //NODE節點       {          Node* newNode = new Node;    //新增一個Node          newNode-&gt;data = data;    //新增節點的值設為data          newNode-&gt;left = nullptr;    //並把它的左、右子樹設為空的          newNode-&gt;right = nullptr;          return newNode;    //回傳新節點的位址      }            Node* insertNode(Node* currentNode, int data) { //新增資料節點          if (currentNode == nullptr)        //如果當前節點為空          {              return createNode(data);    //創建節點、放資料          }          if (data &lt; currentNode-&gt;data) {    //資料比較小，遞迴呼叫左子樹              currentNode-&gt;left = insertNode(currentNode-&gt;left, data);          }          else if (data &gt;= currentNode-&gt;data) { //資料大於等於，遞迴呼叫右子數              currentNode-&gt;right = insertNode(currentNode-&gt;right, data);          }          return currentNode; //返回修改後的目前位置      }  };",
+        "output": "評論:else if (data &gt;= currentNode-&gt;data) // 後面的if敘述明顯是多餘的"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 如何將二元搜尋樹存檔後再讀入可恢復原狀？  答案: 只要將樹的兩種排序方式紀錄下來即可還原樹原本的樣子。  例如說存樹的前序式跟中序式  前序: A B D E C  中序: D B E A C     可以從前序的第一個找到樹根（A），再從中序看到前序的下一個節點（B）在樹的左邊還是右邊。  以上述例子來看的話就可以看到前序A的下一個是B，那他可能長：    A                      A   /         或              \\  B                            B     但如果有中序的話就可以看到節點B在節點A的左邊，就可以推知B的位置是在A的左邊，像這樣：      A     /  B     以此類推就可以知道整棵樹的樣子長                           A                      /     \\                    B      C                  /     \\              D       E",
+        "output": "評論:誤解題意，題目是問 二元搜尋樹 。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 撰寫程式碼指出如何為二元搜尋樹新增節點。  答案: # include &lt;stdio.h&gt;   struct Node {      int number ;      Node * left ;      Node * right ;  };  typedef Node * NodePtr ;  void Add( NodePtr &amp; head, int num ) {  // insert new node      if ( head == NULL ) {          head = new Node ;          head -&gt; left = NULL ;          head -&gt; right = NULL ;          head -&gt; number = num ;          return ;      }      else if ( num &lt; head -&gt; number ) {          Add( head -&gt; left, num ) ;      }      else if ( num &gt;= head -&gt; number ) {           Add( head -&gt; right, num ) ;      }      return ;  }  void Inorder( NodePtr head ) {  // print inorder of tree      if ( head == NULL ) {          return ;      }      Inorder( head -&gt; left ) ;      printf(  %d  , head -&gt; number ) ;      Inorder( head -&gt; right ) ;  }  int main( ) {      int num = 0, order = 0 ;      NodePtr head = NULL ;      do {          printf(  ******************\\n  ) ;          printf(  Order 0: quit\\n  ) ;          printf(  Order 1: insert\\n  ) ;          printf(  ******************\\n  ) ;          printf(  Input an order:   ) ;          scanf(  %d , &amp;order ) ;          if ( order == 0 ) break ;  // end          else if ( order == 1 ) {  // insert node              printf(  Input a number:   ) ;              scanf(  %d , &amp;num ) ;              Add( head, num ) ;  // insert              printf(  Inorder:   ) ;              Inorder( head ) ;  // check the tree          }          else {              printf(  Not the order!  ) ;          }          printf(  \\n\\n  ) ;      } while( order != 0 ) ;      return 0 ;  }",
+        "output": "評論:No comment?"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 相同搜尋鍵的二筆資料如何存入二元搜尋樹？  答案: 在建立二元搜索樹時存儲具有相同搜索鍵的多個數據項，可以將二元搜尋樹的每個節點設計成允許存儲多個數據項的結構。這可以通過在每個節點上使用一個數組、鏈表或其他數據結構來實現。  像是用這樣  typedef struct treeNode {  string schoolName ;  string studentName ;  treeNode *left ;  treeNode *right ;  TreeNode() : left(NULL), right(NULL) {}   } ;  這樣就可以在二元樹中存入兩筆相同搜尋值的二筆資料了",
+        "output": "評論:string schoolName ; // 搜尋值  string studentName ;  // 不知為何有學生姓名？  treeNode *left ; // 另一個節點  treeNode *right ; // 另一個節點  看不出相同搜尋值的二筆資料要如何存入同一個節點？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 已排序資料如何建立一棵平衡的二元搜尋樹？  答案: 最有效的方式是以中位數作為根節點，然後遞迴地將左半部分和右半部分的資料分別作為左子樹和右子樹。  以下為範例:  TreeNode* rebuild(const vector&lt;int&gt;&amp; nodeList, int start, int end) {      // 如果起始索引大於結束索引，表示當前區間為空，返回空指針      if (start &gt; end) {          return nullptr;      }      int mid = (start + end) / 2; // 計算當前區間的中位數      TreeNode* node = new TreeNode(nodeList[mid]);  // 以中間節點值創建一個新的節點      node-&gt;left = rebuild(nodeList, start, mid - 1); // 遞迴處理左半部分，將左子樹設置為左半部分的重建結果      node-&gt;right = rebuild(nodeList, mid + 1, end); // 遞迴處理右半部分，將右子樹設置為右半部分的重建結果      return node;  // 返回樹的根節點  }",
+        "output": "評論:Excellent!  Further issue: what if a series of data with identical keys, wich lead to right skewed tree?"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例解說中序走訪二元搜尋樹是否穩定排序。  答案: 在中序走訪二元搜尋樹的過程中，訪問和輸出節點的順序會是一個遞增或遞減序列，因為BST的特性就是左子樹所有節點的值都小於該節點的值，而右子樹所有節點的值都大於該節點的值。  這種走訪本質上是穩定的排序，因為它不會改變具有相同值節點的相對順序。但二元搜索樹本身在插入具有相同值的節點時可能不是穩定的，這取決於具體的插入策略。如果BST的實現允許重複值並且在保持這些值的插入順序上是一致的，那麼中序走訪就會是穩定的。  舉個例子：  假設我們按照下列順序向BST插入一系列值：5, 3, 7, 3, 8 (這裏有兩個3)。  如果在我們的BST實現中，對於相同的值，新插入的節點總是作為重複節點的右子節點，我們的樹可能長這樣：        5    / \\   3   7    \\   \\     3   8   當進行中序走訪時，節點的訪問順序是：3, 3, 5, 7, 8。第一個插入的3在遍歷過程中會首先被訪問，接著是第二個插入的3，保存了其原始的插入順序，因此在這個情況下，中序走訪是穩定的。  但是，如果BST實現中沒有針對相同節點值進行特定的操作，而是將新的節點隨意插入到左子樹或右子樹，那麼原始插入順序就可能不會得到保留，進而在中序走訪時不能保證是穩定的。  所以，中序走訪二元搜尋樹在遵循特定的插入策略時是能夠保證穩定排序的，但這要看樹的插入和構建方式是否保持相同值節點的相對順序不變。",
+        "output": "評論:如果BST實現中沒有針對相同節點值進行特定的操作，而是將新的節點隨意插入到左子樹或右子樹...   論點沒錯，只是補充另一種觀點：也可以解釋為何新的同值資料要在右子樹下新增節點，而不是左子樹。"
+    }
+]

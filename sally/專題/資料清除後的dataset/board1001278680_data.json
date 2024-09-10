@@ -1,0 +1,137 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: #include &lt;iostream&gt;  using namespace std;  // 鏈結串列的節點結構 struct Node {     int data;     Node* next; };  // 複製鏈結串列函數 Node* cloneLinkedList(Node* head) {     if (head == nullptr) {         return nullptr;     }      // 創建新的鏈結串列頭節點     Node* newHead = new Node();     newHead-&gt;data = head-&gt;data;     newHead-&gt;next = nullptr;      Node* currentNode = head-&gt;next;     Node* clonedCurrentNode = newHead;      // 遍歷原始鏈結串列並複製每個節點     while (currentNode != nullptr) {         Node* newNode = new Node();         newNode-&gt;data = currentNode-&gt;data;         newNode-&gt;next = nullptr;          clonedCurrentNode-&gt;next = newNode;          currentNode = currentNode-&gt;next;         clonedCurrentNode = clonedCurrentNode-&gt;next;     }      return newHead; }  // 測試程式碼 int main() {     // 創建原始鏈結串列     Node* head = new Node();     head-&gt;data = 1;      Node* node2 = new Node();     node2-&gt;data = 2;      Node* node3 = new Node();     node3-&gt;data = 3;      head-&gt;next = node2;     node2-&gt;next = node3;     node3-&gt;next = nullptr;      // 複製鏈結串列     Node* clonedList = cloneLinkedList(head);      // 輸出原始鏈結串列     cout &lt;&lt;  原始鏈結串列:  ;     Node* currentNode = head;     while (currentNode != nullptr) {         cout &lt;&lt; currentNode-&gt;data &lt;&lt;    ;         currentNode = currentNode-&gt;next;     }     cout &lt;&lt; endl;      // 輸出複製的鏈結串列     cout &lt;&lt;  複製的鏈結串列:  ;     currentNode = clonedList;     while (currentNode != nullptr) {         cout &lt;&lt; currentNode-&gt;data &lt;&lt;    ;         currentNode = currentNode-&gt;next;     }     cout &lt;&lt; endl;      return 0; }  執行結果",
+        "output": "評論:OK.  The example used to test the function is nice."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: + * 2 4 6 * - 7 5是前序式嗎？為什麼？  A:前序式是由右向左開始運算  （7-5）再來如果沒有運算子多了一個運算元那就沒辦法做計算他是不符合前序式的  除非改成 + * 2 4 * 6 - 7 5   這樣7-5後才能跟6做相乘然後再進來4和2再來4*2最後兩個數字再做相加",
+        "output": "評論:沒有運算子多了一個運算元  ?"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  答案: 以學號06005840寫一個grammar,下列為我的範例: &lt;學號&gt; = &lt;報名暑修月&gt;&lt;流水編號&gt; &lt;流水編號&gt; = &lt;數字&gt;&lt;數字&gt;&lt;數字&gt;&lt;數字&gt;&lt;數字&gt;&lt;數字&gt; &lt;報名暑修月&gt; =   01  |  02  | ... |  12  &lt;數字&gt; =  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  以上文法表示學號由報名暑修月（兩位數）和後面6個數字組成。報名暑修月可以是從01到12的兩位數。後面的6個數字可以是0到9之間的任意數字。",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  答案: 文法 Grammar :是一組規則，用三言兩語構築一大堆字串、構築一套 Language 。 Grammar 必須剛好生成 Language 之內的所有字串、必須永不生成 Language 以外的所有字串。  學號  00605636  編寫一個簡單的語法規則，該規則可精確描述這個學號的格式。下面是一個可能的語法規則：  學號 -&gt; 數字 數字 數字 數字 數字 數字 數字 數字 數字 -&gt;  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9   這個語法規則表示學號由8個數字組成，每個數字的取值範圍是0到9。根據這個規則，學號  00605636  是一個有效的學號。",
+        "output": "評論:OK  顯然這組規則表達的學號沒什麼限制，就只是八個阿拉伯數字的序列。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: + * 2 4 6 * - 7 5是前序式嗎？為什麼？  不是，因為前序表示法是將運算子放到所有運算元之前的表示法，格式應該要是(運算子 運算元 運算元)這樣子",
+        "output": "評論:可以指出哪個位置出錯吧？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 問122：+ * 2 4 6 * - 7 5是前序式嗎？為什麼？  答122：  1.+, (2*4), 6, *, (7-5)  2.((2*4)+6), *, (7-5)  3. ((2*4)+6), (7-5), *  由上可知不是前序式，((2*4)+6)和(7-5)之間少了一個合法運算子且多了一個*。",
+        "output": "評論:Great! 評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 時鐘，以12小時制來說，當Hour走到12時，下一個小時會回到1繼續走，而不是走12小時就停止  非環狀鏈結串列比較像是拿直尺量測長度，如果量測距離超過12公分的直尺極限時，我們需要紀錄現在12公分的位置，然後移動直尺將0公分對到原來的12公分的位置，才能繼續量測。",
+        "output": "評論:題意並非解釋何謂環狀串列，而是要求舉例一個使用情境。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 在播放一系列youtube影片的時候，可以透過循環播放的功能，來把每部影片當作節點，將每部影片串在一起，當整個系列都播放完後，透過指標指向的方式從頭再循環一次，讓這系列影片可以循環播放。",
+        "output": "評論:Nice."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 問:舉例說明使用環狀鏈結串列Circularly linked list的情境。  答:循環播放列表（Circular Playlist）：  循環播放列表是一種播放音樂或視頻的方式，當播放到最後一首歌曲或最後一個視頻時，會循環回到第一首歌曲或第一個視頻。環狀鏈結串列可以被用於實現這種循環播放列表。每個歌曲或視頻可以表示為環狀鏈結串列的一個節點，並按照播放順序連接在一起。當播放到最後一個節點時，指標可以循環回到第一個節點，實現循環播放的效果。",
+        "output": "評論:OK."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。   假設開發一個車站管理系統，要追蹤列車行進方向。每輛列車唯一的編號，車站內的軌道是以環狀的方式連接在一起，列車可以依序進入和離開軌道。  在這種狀況下，你可以使用環狀鏈結串列來表示列車的行進方向。每個節點代表一輛列車，且包含相關資訊，如編號、車型等等。最後一個節點的下一個節點指向第一個節點，形成一個循環。  當一輛列車進入軌道時，你可以在環狀鏈結串列中插入一個新節點，表示列車的位置和行進方向。當列車離開軌道時，可以移除對應的節點。  環狀鏈結串列，可以輕鬆追蹤列車的行進方向。例如，你可以從任意節點開始，順著每個節點的下一個節點指標，獲得列車的順序和位置信息。這可以有效地處理列車的進站、出站和順序變更等等。",
+        "output": "評論:OK 評論:車站內的軌道是以環狀的方式連接在一起   有點難以想像！  改為大範圍的都市捷運網環狀線去思考，比較有機會合理化。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 問題:舉例說明使用環狀鏈結串列Circularly linked list的情境。  Ans:滿足環狀鏈結串列的條件大概有兩點:1.最後一個節點將與第一個節點連接。2.必須經過所有節點。  例子:公車路線規劃系統          在不考慮其他因素的狀況下，公車路線的頭尾將是一樣的，符合第一個特點。公車必須嚴格的按照規定的路線行駛，所以將會經過設            定時的每一個點，符合第二點。若將設定好的路線導入這個系統而沒有回到原點時，就代表路線的規劃有問題。",
+        "output": "評論:符合不代表有用處，公車路線如何使用環狀串列的資料結構呢？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 122. + * 2 4 6 * - 7 5是前序式嗎？為什麼？  前序式定義: (運算子, 運算元,運算元)，但對於題目運算式+ * 2 4 6 * - 7 5，我們可以看到第一個運算子是 + ，它後面跟著兩個子運算式 * 2 4 6 和 * - 7 5。然而， * 2 4 6  和  * - 7 5  並不是運算元緊跟在運算子之後的形式，因此這個運算式不符合前序式的定義。",
+        "output": "評論:運算符 + ,   ,   和 - ，送出前請確認貼文無錯字。 評論:可以指出哪個位置出錯吧？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 122. + * 2 4 6 * - 7 5是前序式嗎？為什麼？  A:由右而左找到連續的兩個運算元和一個運算子將他們做運算  第一步:+(2*4)6*(7-5)  第二步:((2*4)+6)*(7-5)  接著會發現無法再繼續做下去了，說明此運算式並非前序式。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: + * 2 4 6 * - 7 5是前序式嗎？為什麼？  &gt;&gt; 看起來很像，但並不算是，因為  + * 2 4 6 * - 7 5 無法用前序式解出答案  由右至左讀出的結果依序為   \t若 &ndash; 為運算子(op)，則讀到( 7 &ndash; 5 )後， \t下一個 op( * ) 時只剩一個數(2)，無法相乘 \t若 &ndash; 是(負數)而不是(減) \t則讀完後會變成 ( 2*4 )+ 6 ( -7 )*5 \t少一個運算子",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: 我會在這個linked list的資料結構中寫一個建構子，可以新建一個串列並在當中賦值成目標串列的值  例:   class Node {     int data;     Node* next; }  class LinkedList{    // 其他member    Node* CopyList(Node* head) {       if (head == nullptr) {           return null;       };        Node* current = head;       Node* newHead = new Node(head-&gt;data);       Node* newCurrent = newHead;        while (current-&gt;next != null) {         current = current-&gt;next;         newCurrent -&gt;next = new Node(current-&gt;data);         newCurrent = newCurrent -&gt;next;       }        return newHead ;   }           Node* clonedHead = cloneLinkedList(head); // 複製呼叫法",
+        "output": "評論:須提供完整且可執行的C/C++程式碼。  Node* newHead = new Node(head-&gt;data); cloneLinkedList(head)  沒有函數定義是無法執行的！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 122. + * 2 4 6 * - 7 5是前序式嗎？為什麼？  Ans:  把式子推回中序-&gt;會變成2*4+6(*)7-5  從中會發現多出一個*號無法轉換排序，所以此式並非是前序式",
+        "output": "評論:把式子推回中序  是如何進行的？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: 123. 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  #include &lt;iostream&gt;  struct Node {     int data;     Node* next; };  Node* copyLinkedList(Node* head) {     if (head == nullptr) {         return nullptr;     }      Node* newHead = new Node();     newHead-&gt;data = head-&gt;data;     newHead-&gt;next = copyLinkedList(head-&gt;next);      return newHead; }  void printLinkedList(Node* head) {     while (head != nullptr) {         std::cout &lt;&lt; head-&gt;data &lt;&lt;    ;         head = head-&gt;next;     }      std::cout &lt;&lt; std::endl; }  int main() {     Node* head = new Node{1, nullptr};     Node* secondNode = new Node{2, nullptr};     Node* thirdNode = new Node{3, nullptr};      head-&gt;next = secondNode;     secondNode-&gt;next = thirdNode;      Node* copiedList = copyLinkedList(head);      std::cout &lt;&lt;  原本鏈結串列： ;     printLinkedList(head);      std::cout &lt;&lt;  複製鏈結串列： ;     printLinkedList(copiedList);      return 0; }",
+        "output": "評論:Good!  The following way to lengthen the linked list is great!      Node* copiedList = copyLinkedList(head);"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: + * 2 4 6 * - 7 5是前序式嗎？為什麼？  不是，因為正常的前序運算執行不了，多了一個*號，運算下來會變成+ * 2 4 6 * 2-&gt;+8 6 * 2-&gt;14 * 2。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  可以透過進行Catalan數的計算來解決。Catalan數的定義是：  給定n對括號，可以形成的有效括號組合的數量是第n個Catalan數。  這裡我們有3對括號，所以我們要找的是第3個Catalan數。  Catalan數的一般公式為：  C_n = (2n choose n) / (n + 1)  在這個公式中， choose 表示組合，也就是從2n個元素中選擇n個元素的方式數量。  對於n = 3，我們可以計算出：  C_3 = (6 choose 3) / (3 + 1) = 20 / 4 = 5  所以，有三組括號的合法運算式可以有5種不同的形式。這五種形式分別是：   \t()()() \t(())() \t()(()) \t(()()) \t((()))",
+        "output": "評論:Excellent! 評論:GOOD"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  A:排班系統，用於管理一個24小時運作的排班。  讓每個員工都被視為一個節點，然後每個節點都包含指向下一個員工節點的指標。所有的員工節點形成一個環，其中最後一個員工節點的指標指向第一個員工節點，形成了一個環狀鏈結串列，這樣就形成一個排班循環。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 122. + * 2 4 6 * - 7 5是前序式嗎？為什麼？  答: 由右向左讀，尋找 連續兩個運算元接著一個運算子 ，操作如下:  首先看到 - 7 5 符合條件 =&gt; 7 - 5 = 2 , 所以運算式變為: + * 2 4 6 * 2  接下來看到 * 2 4 符合條件 =&gt; 2 * 4 = 8, 所以運算式變為: + 8 6 * 2  接下來看到 + 8 6 符合條件 =&gt; 8 + 6 = 14, 所以運算式變為: 14 * 2  因為運算式中還有運算子，但沒有符合條件的排列了，故無法繼續計算 =&gt; 此為非法前序式",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。  A:假設一個賽車遊戲中的賽道是環狀封閉的，在賽道之中設有檢查點檢查玩家是否有通過。環狀鏈結串列就可用於追蹤賽車遊戲中的賽道檢查點的順序。每個檢查點可以表示為一個節點，並將最後的檢查點節點指向第一個檢查點形成環狀結構，使玩家能夠循環通過檢查點。而當檢查點設置的夠密集時，也可以靠通過玩家通過檢查點順序來判斷玩家行駛方向，如果順序反了，可以通知玩家現在正在逆向中。",
+        "output": "評論:Good example!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 124. 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答: 因為已經有人用Catalan number回答，所以這邊我模擬了一個情境來進行窮舉  假設有三條橡皮筋要套在柱子上，規則如下:  規則: 1. 所有柱子都要有至少一條橡皮筋是單獨套在上面 (●)           2. 橡皮筋可以套住任意數量的柱子，例如: 一條橡皮筋套住兩根柱子 (● ●)  情況一: 一根柱子: 所有橡皮筋都在同一根柱子上 =&gt; (((●)))  情況二: 兩根柱子: 兩根柱子先各套一條橡皮筋，剩下的橡皮筋就可以套在任意柱子 =&gt; (●) ((●)) 或 ((●)) (●) 或 ((●) (●))  情況三: 三根柱子: 三根柱子各套一條橡皮筋，剩下的橡皮筋可以套在任意柱子，但沒有剩餘的橡皮筋了 =&gt; (●) (●) (●)  情況四: 四根柱子: 橡皮筋數量已無法達成 規則1.  由上述窮舉法可以得知共有五種組合",
+        "output": "評論:簡單易懂的窮舉法！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。     A:五種     1.( ) ( ) ( )三個括弧獨立     2.( ( ( ) ) )像洋蔥包在一起     3.( ) ( ( ) )前面獨立後面兩個大包小     4.( ( ) ) ( )前面兩個大包小後面獨立     5.( ( ) ( ) )外面一個大括弧裡面兩個獨立的小括弧",
+        "output": "評論:先前幾篇貼文已經回答得很不錯了！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 121. 舉例說明使用環狀鏈結串列Circularly linked list的情境。  唸出數字  2020 這行數字，就能夠舉例使用到環狀鏈結串列的情境  若從第一個數字&rdquo;2&rdquo;唸起,則會唸出&rdquo;2020&rdquo;,  唸出第三個數字&rdquo;2&rdquo;時又成為下一個循環  若從第二個數字&rdquo;0&rdquo;唸起,則會唸出&rdquo;0202&rdquo;,  唸出第三個數字&rdquo;0&rdquo;時又成為下一個循環  若從第三個數字&rdquo;2&rdquo;唸起,則會唸出&rdquo;2020&rdquo; ,  唸出第三個數字&rdquo;2&rdquo;時又成為下一個循環  若從第四個數字&rdquo;0&rdquo;唸起,則會唸出&rdquo;0202&rdquo;  唸出第三個數字&rdquo;0&rdquo;時又成為下一個循環  不管從哪裡唸起都會成為一個循環,就像環狀鏈結串列一樣,無論從哪個節點開始，  都可以按照特定的順序移動到下一個節點，直到回到起始節點。",
+        "output": "評論:應用情境(application scenario)的意思是指可以運用技術產出結果的可能方式，這個方式描述越詳盡，代表實施的細節越清楚，當然，應 符合人類生活需求的邏輯才算合理。以貼文為例，不太清楚的點是持續唸出2020或0202有什麼樣的用途？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  串列是一個 header ，後面的 linked 一個個接後面，全部都是指標，所以並不能直接把 header 等於到另一個 header ，而是要把所有 linked 全部 new 一個新的，並加到目標的串鏈中。  這是在寫四則運算時用的stack ，這裡改成 queue 方式  Copy 的部份程式碼(完整程式碼在最後)：  // push  void Push( const Node &amp; node )  {              Link *p ;              // 沒有              if( _header == NULL )              {                         _header = new Link( node , NULL );                         return ;              }              // 讀到最後一個              p = _header ;              while( p-&gt;Next() != NULL )                         p = p-&gt;Next();              // 新建              p-&gt;setNext( new Link( node , NULL ));  }  // 加入全部  void AddAll( const expQueue &amp;src )  {              // 取來源的根              const Link *link = src._header ;              // 一個一個抓出來，並push 到自己裡面              while( link != NULL )              {                         // 加到串列中                         this-&gt;Push( *link );                         // 換到下一個 node                         link = link-&gt;Next();              }  }  // copy時，先把自己的移掉，再加入全部  void Copy( const expQueue &amp;src )  {              RemoveAll();              AddAll( src );  }  // 用一個 class operator運算  void operator = ( const expQueue &amp; src )  {              this-&gt;Copy( src );  }  #include &lt;iostream&gt;  using namespace std;  // ----------------------------------------------------------------  // Node 節點資料  class Node  {  private :  string _string ; // 字串  char _op ; // 運算子  int _value ; // 值  public:  // 建構  Node( const std::string&amp; string , char op , int value )  {              _string = string;              _op = op ;              _value = value ;  }  // 取 op  char OP()const  {              return _op ;  }  // 取 值  int Value() const  {              return _value ;  }  // 印出  void Print() const  {              cout &lt;&lt; _string ;  }  };  // ----------------------------------------------------------------  // Link 串列  class Link  {  private :  Node _node ; // 實體資料  Link *_next ; // 下一個的串  public :  // 建構  Link( const Node&amp; node , Link * next )                         : _node(node), _next(next)  {  }  // 取得節點  operator Node () const { return _node; }  // 取下一個  Link * Next()  {              return _next;  }  const Link * Next()const  {              return _next;  }  // 印出  void Print() const  {              _node.Print();  }  // 設定下一個  void setNext( Link * pLink )  {              _next = pLink;  }  };  // ----------------------------------------------------------------  // stack  class expQueue  {  private :  // 資料串  Link *_header ;  public :  // 建構子  expQueue()  {              _header = NULL ;  }  // 解構子，移掉全部即可  ~expQueue()  {              RemoveAll();  }  // 移除全部  void RemoveAll()  {              Link *link = _header ;              Link *next ;              while( link != NULL )              {                         next = link-&gt;Next();                         delete link ;                         link = next ;              }              _header = NULL ;  }  // 是否是空的  bool isEmpty() const{ return _header == NULL ; }  // push  void Push( const Node &amp; node )  {              Link *p ;              // 沒有              if( _header == NULL )              {                         _header = new Link( node , NULL );                         return ;              }              // 讀到最後一個              p = _header ;              while( p-&gt;Next() != NULL )                         p = p-&gt;Next();              // 新建              p-&gt;setNext( new Link( node , NULL ));  }  // pop  Node Pop()  {              Node ret = *_header ;              Link *nowLink = _header-&gt;Next() ;              delete _header ;              _header = nowLink ;              return ret ;  }  // 查看目前的資料  Node Peek()  {              return *_header ;  }  // push 一個數值  void PushValue( int value )  {              char ch[1024] ;              sprintf( ch ,  %d , value );              Node node( ch , 0 , value );              Push( node );  }  // push 一個 op  void PushOP( char op )  {              char ch[4] = { op , 0 } ;              Node node( ch , op , 0 );              Push( node );  }  // pop 一個 op  char PopOP()  {              Node ret = Pop();              return ret.OP();  }  // 印 stack 串  void Print() const  {              int i = 0 ;              Link *node = _header ;  // loop 到沒有節點為止              while( node != 0 )              {                         if( i &gt; 0 )                                   cout &lt;&lt;   ,  ;                         node-&gt;Print();                         ++i ;                         node = node-&gt;Next();              }              cout &lt;&lt; endl ;  }  // 加入全部  void AddAll( const expQueue &amp;src )  {              // 取來源的根              const Link *link = src._header ;              // 一個一個抓出來，並push 到自己裡面              while( link != NULL )              {                         this-&gt;Push( *link );                         link = link-&gt;Next();              }  }  // copy時，先把自己的移掉，再加入全部  void Copy( const expQueue &amp;src )  {              RemoveAll();              AddAll( src );  }  // 用一個 class operator運算  void operator = ( const expQueue &amp; src )  {              this-&gt;Copy( src );  }  };  int main()  {  int i ;  expQueue a , b ;  // 測試  // 隨機加入 10 個數  for( i = 0 ; i &lt; 10 ; ++i )              a.PushValue( rand()%1000);  cout &lt;&lt;  a array value:   ;  a.Print();  cout &lt;&lt; endl ;  //  cout &lt;&lt;  copy to b array  &lt;&lt; endl ;  b = a ;  // 也可以  // b.Copy( a );  cout &lt;&lt;  b array value:   ;  b.Print();  cout &lt;&lt; endl ;  return 0;  }",
+        "output": "評論:搶答未必需要完整的程式碼，重點在於表達正確、清楚且完整。  例如：p-&gt;Next() 是什麼意思？可以執行嗎？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 問124：合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答124：三個左括號及三個右括號之合法配對數為五種。  1.( ) ( ) ( )  2.( ( ( ) ) )  3.( ) ( ( ) )  4.( ( ) ) ( )  5.( ( ) ( ) )  公式為：(1/n+1)*(2n取n)（Catalan Number）。",
+        "output": "評論:OK"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  滑鼠連點程式(或是其他需要重複執行有規律的滑鼠點擊or鍵盤輸入的程式):  以滑鼠連點程式為例，在第一個node存入的指令為按下左鍵，第二個node則存入彈開左鍵的指令，如此便可以一直重複點擊的動作達到連點的功能。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 122. 寫C++程式碼說明傳參考呼叫call by reference。  #include &lt;stdio.h&gt;  void SwitchNum( int &amp; num1, int &amp; num2 ) { // call by reference ( address ) ( 若無 &amp; 即為 call by value )   int temp = 0; // 暫存變數  temp = num1 ;  num1 = num2 ;  num2 = temp ;  return ;  }    int main() {    int num1 = 1 ;    int num2 = 2;    printf(  Before：\\n );    printf(  num1：%d\\n , num1 );     printf(  num2：%d\\n , num2 );     SwitchNum( num1, num2 ); // 交換num1和num2的數字    printf(  After：\\n );    printf(  num1：%d\\n , num1 );     printf(  num2：%d\\n , num2 );     return 0;  }   =======================================  輸出結果：  Before：  num1：1  num2：2  After：  num1：2  num2：1",
+        "output": "評論:回答前須附上題目 評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: 122. 寫C++程式碼說明傳參考呼叫call by reference。  #include &lt;iostream&gt;  #include &lt;stdio.h&gt;  using namespace std;  void add(int &amp; a, int b) {  b = a + b ;      a = a + b;    }  int main() {      int a = 1;      int b = 2;      add( a, b) ;      printf( %d\\n , a) ; // a = 4      printf( %d\\n , b) ; // b = 2      return 0;  }      a是call by reference，b是call by value，因為a在add function中改變的值，main也會跟著改變，而b無論在add function中怎麼改變，值在main裡都不會改變。",
+        "output": "評論:Nice comparison!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  對應LeetCode題目：https://leetcode.com/problems/generate-parentheses/  以及ZJ a229：https://zerojudge.tw/ShowProblem?problemid=a229  枚舉所有形式，設N代表要幾組括號  有三種可能  左右括號數相同, 找到一種合法形式  左括號數等於N，只能再放右括號  左括號數小於右括號數(或左右括號順序不對), 不合法，遞迴結束  否則可以選左括號或右括號  依據上述可得知遞迴關係式    此為卡塔蘭數(Catalan number)的原始定義  一般式為    直接帶入，答案就是 5 種  另一種看法：  動態規劃(Dynamic Programming)  定義狀態：dp[L][R] 為取 L 個左括號與 R 個右括號有幾種形式  轉移式： 當 ，可以取左括號跟右括號，dp[L][R] = dp[L-1][R] + dp[L][R-1]  基底狀態：dp[L][0] 答案一定為 1  最後的答案就是dp[N][N]  ```cpp  void solve() {    int n;    cin &gt;&gt; n;    vector&lt;vector&lt;int&gt;&gt; dp(n + 1, vector&lt;int&gt;(n + 1, 0));    for (int l = 1; l &lt;= n; l++)      dp[l][0] = 1;    for (int l = 1; l &lt;= n; l++) {      for (int r = 1; r &lt;= l; r++) {        dp[l][r] = dp[l - 1][r] + dp[l][r - 1];      }    }    cout &lt;&lt; dp[n][n] &lt;&lt; endl;  }  ```  輸入3, 結果也會是5",
+        "output": "評論:Nice. 評論:十分清楚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: /*  10942208 陳洺安 資四乙 用swap(交換兩數)說明傳參考呼叫call by reference。  */    #include &lt;stdio.h&gt; #include &lt;string&gt; #include &lt;iostream&gt;  using namespace std ;  void swapCallByReference( int &amp;n1, int &amp;n2) {     // &amp;接收到的是變數的記憶體位址（參照）     int temp = n1 ;     n1 = n2 ;     n2 = temp ; } // swapCallByReference void swapCallByValue( int n1, int n2) {     // 內部修改的是 n1,n2 所指向的記憶體位置的值，而不是 a,b     int temp = n1 ;     n1 = n2 ;     n2 = temp ; } // swapCallByValue   //使用指標時，可以存取或修改該指標所指向的記憶體位置的資料。 //將一個變數的指標傳遞給一個函數，函數可以通過指標來修改該變數的值，就像使用傳參考的方式一樣。 void swapCallByReferenceUsePointer( int *n1, int *n2) {     int temp = *n1;     *n1 = *n2;     *n2 = temp; } // swapCallByReferenceUsePointer  int main() {     int a , b ;     a = 0 ;     b = 0 ;     cout &lt;&lt;  輸入兩個number   &lt;&lt; endl ;     cout &lt;&lt;  a =   ;     cin &gt;&gt; a ;      cout &lt;&lt;  b =   ;     cin &gt;&gt; b ;      cout &lt;&lt;  call by reference  &lt;&lt; endl ;     cout &lt;&lt;  交換前 =&gt;  a =   &lt;&lt; a &lt;&lt;  , b =   &lt;&lt; b  &lt;&lt; endl ;     swapCallByReference( a, b );     cout &lt;&lt;  交換後 =&gt;  a =   &lt;&lt; a &lt;&lt;  , b =   &lt;&lt; b &lt;&lt; endl ;     cout &lt;&lt;  ==================================================================  &lt;&lt; endl ;     cout &lt;&lt;  call by value  &lt;&lt; endl ;     cout &lt;&lt;  交換前 =&gt;  a =   &lt;&lt; a &lt;&lt;  , b =   &lt;&lt; b  &lt;&lt; endl ;     swapCallByValue( a, b );     cout &lt;&lt;  交換後 =&gt;  a =   &lt;&lt; a &lt;&lt;  , b =   &lt;&lt; b &lt;&lt; endl ;     cout &lt;&lt;  ==================================================================  &lt;&lt; endl ;     cout &lt;&lt;  CallByReferenceUsePointer  &lt;&lt; endl ;          int *n1 = &amp;a ;     int *n2 = &amp;b ;      cout &lt;&lt;  交換前 =&gt;  a =   &lt;&lt; *n1 &lt;&lt;  , b =   &lt;&lt; *n2  &lt;&lt; endl ;     swapCallByReferenceUsePointer( n1, n2 );     cout &lt;&lt;  交換後 =&gt;  a =   &lt;&lt; *n1 &lt;&lt;  , b =   &lt;&lt; *n2 &lt;&lt; endl ;     cout &lt;&lt;  ==================================================================  &lt;&lt; endl ;      } // main()  // 執行結果",
+        "output": "評論:OK 評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  音樂播放器的循環播放模式: 當你有一個播放列表，希望音樂可以循環播放，當播放到最後一首歌曲時，可以自動回到第一首歌曲繼續播放。這時，環狀鏈結串列可以幫助你輕易地達到此目的。  計時器或時鐘的實作: 一個數字時鐘顯示 0 到 59 分鐘。當分鐘從59增加到60時，它將返回到0。在這種情況下，環狀鏈結串列可以用於表示每一分鐘，當到達59後，下一個是0。  電腦遊戲中的循環地圖: 在某些遊戲中，當玩家移動到地圖的一邊時，他們將出現在另一邊。這種循環的地圖結構可以用環狀鏈結串列來表示。  這些情境都可以使用環狀鏈結串列來模擬或實現，因為它們都需要在到達末尾時返回到開始，形成一個循環。",
+        "output": "評論:OK 評論:解釋得很清楚，另外在作業走右下左上也可以用到！ 評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  答案: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  &lt;學號&gt; = &lt;入學年度&gt;&lt;系院&gt;&lt;科系排序&gt;&lt;班級&gt;&lt;座號&gt;  &lt;入學年度&gt; = &lt;digit&gt;&lt;digit&gt; | &lt;digit&gt;&lt;digit&gt;&lt;digit&gt;  &lt;系院&gt; = 1|2|3|4|5  &lt;科系排序&gt; = &lt;digit&gt;  &lt;班級&gt; = 1|2|3|4  &lt;座號&gt; = &lt;digit&gt;&lt;digit&gt;  &lt;digit&gt; = 0|1|2|3|4|5|6|7|8|9  中原大學各系級號碼對應科系:",
+        "output": "評論:Great!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  答案: 125. 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  &lt;學號&gt;=&lt;入學年度&gt;&lt;學系編號&gt;&lt;班級編號&gt;&lt;座號&gt; &lt;入學年度&gt;= 1 &lt;digit&gt; &lt;digit&gt; | &lt;digit&gt; &lt;digit&gt; &lt;學系編號&gt; = &lt;digit&gt;&lt;digit&gt; &lt;班級編號&gt; = &lt;digit&gt; &lt;座號&gt; =  &lt;digit&gt;&lt;digit&gt; 補充： &lt;digit&gt; = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9",
+        "output": "評論:缺少&lt;digit&gt;的定義 評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  答案: 寫出可以精準描述自己學號(如字串10927188)的文法grammar。  &lt;學號&gt; = &lt;入學年度&gt; &lt;學院&gt; &lt;學系&gt; &lt;班級&gt; &lt;座號&gt;  &lt;入學年度&gt; = &lt;digit&gt; &lt;digit&gt; &lt;digit&gt;  &lt;學院&gt; = &lt;college&gt;  &lt;學系&gt; = &lt;digit&gt;  &lt;班級&gt; = &lt;class&gt;  &lt;座號&gt; = &lt;digit&gt; &lt;digit&gt;  &lt;digit&gt; = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9  &lt;college&gt; = 1 | 2 | 3 | 4 | 5  &lt;class&gt; = 1 | 2 | 3",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。    #include &lt;iostream&gt;   // 鏈結串列節點結構   struct Node {       int data;       Node* next;   };   // 複製鏈結串列函數   Node* copyLinkedList( const Node* original ) {       Node* newHead = nullptr; // 新鏈結串列的頭節點       Node* newTail = nullptr; // 新鏈結串列的尾節點       Node* current = original; // 用於遍歷原鏈結串列的指針       while ( current ) {       Node* newNode = new Node( current-&gt;data ); // 複製節點資料       if ( !newHead ) {   newHead = newNode;   newTail = newNode;       }       else {   newTail-&gt;next = newNode;   newTail = newNode;       }       current = current-&gt;next; // 移動到下一個節點       }       return newHead;   }   int main() {       // 創建原始鏈結串列       Node* originalHead = new Node( a );       originalHead-&gt;next = new Node( b );       originalHead-&gt;next-&gt;next = new Node( c );       // 複製鏈結串列       Node* copiedHead = copyLinkedList( originalHead );   }",
+        "output": "評論:OK 評論:OK"
+    }
+]

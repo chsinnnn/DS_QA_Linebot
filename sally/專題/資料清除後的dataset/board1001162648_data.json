@@ -1,0 +1,72 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 下圖呼叫functionA和functionB並輸出檢查  functionA和functionB的內容都是改變testnum的值  可以發現當先呼叫functionA 時testnum輸出的值仍為初始化的0，但當呼叫function時testnum的值卻改變了  而兩者( functionA和functionB )的差別只在於符號&amp;  這個符號造就兩個看似相同的函式，實際上卻是以不同型式傳遞  沒有&amp;表示傳遞testnum的值，也就是函式裡的testnum僅是複製傳遞進來的值而已，這也是call by value的意義  有&amp;代表的是傳遞testnum的位址，也就是從頭到尾testnum都是指同一個，這就是call by reference和call by value的差別",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 以下是我的程式碼    此為call by value的結果    此為call by reference的結果    call by value 就是向函式傳遞參數的值，也就是把參數的值複製給函式，在這種情況下，修改函式內的形式參數並不會影響到函式外的實際參數，所以由上面程式的結果可以看出main裡面的值沒有被影響。  call by reference就是向函式傳遞參數的引用，也就是說他把引用的地址複製給函式。在函式裡面該引用會訪問要用到的實際參數，所以在函式內修改參數會影響實際參數，從上面程式結果可看出x的值被改變了。",
+        "output": "評論:Good example. 評論:講得真好！ 評論:講解得很清楚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: 多載就是在class裡面同一個方法名稱可以透過傳不同參數來做不同事情，以我上圖為例，要存資料但參數不同就不用再另外寫一個方法名稱，可以共用同一個，這樣在設計程式時就不太會亂。",
+        "output": "評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 這是我寫的範例程式碼以及執行出來的結果，call_by_value的解釋在圖片下方。    從結果可以看到: Call by value: 參數在被副程式呼叫之後，主程式的參數的值不會受到函式的影響，以及函式和主程式所使用的參數的記憶體位置是不同的。",
+        "output": "評論:OK."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: void wrongSwap(int a, int b) {     int temp = a;     a = b;     b = temp; }  上面的程式碼是傳值呼叫( Call by Value )，傳值呼叫會將參數中的值複製一份到函式中，在函式中若有更改參數的值並不會對原變數造成影響。  因此若是想要藉由函式來改變參數本身的值在C++中我們必須要用參考值呼叫 ( Call by Reference )，這種方法會將變數本身的存放位置傳給函式，使得函式在對參數做更改時會直接更改原變數，以下為 Call by Reference 的範例程式碼。  void correctSwap(int &amp;a, int &amp;b) {     int temp = a;     a = b;     b = temp; }  下圖則為 call by value 及 call by reference 的執行結果",
+        "output": "評論:內容完整，範例簡單清晰。  評論:二者對比蠻清楚的！  如果是下列寫法，應該算是哪一種？  void correctSwap(int *a, int *b) ... 評論:鉅細靡遺，深入淺出!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 如下圖    分別示範了call by value和call by reference的差別。  call by value只是引用數值拿來使用，不會改變數值本身，就是複製一份相同的數值拿來用，不會去動到原數值。  而call by reference就是直接將變數拿來使用，藉由傳遞變數所存在的記憶體位置後，對記憶體位置數值做使用，使用後會改變變數數值。",
+        "output": "評論:非常淺顯易懂 好會寫! 評論:真讚 清晰 評論:懂了，讚!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: Call by value 會把值複製一份到另一個記憶體位置，所以在執行像Call by value 的function時，傳進來的參數在執行完function時，回到main中的值並不會被改變。  A的值經過function後並未改變。  void Call_by_value(int a){     a = 123; }  Call by reference 會把記憶體位置傳到另一個記憶位置上，在執行Call by value 的function時，傳進來的參數在執行完function時，回到main中的值就會被改變。  A的值經過function改變了。  void Call_by_value(int &amp;a){     a = 123; }",
+        "output": "評論:了解，讚 評論:清楚易懂，讚 評論:講的很好 讚！ 評論:第二個函數的名稱是否有誤？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 解題觀念   以Stack演示轉換步驟，依序遍歷後序式元素，依照下列條件做轉換 條件一: 遇到運算符號時，取出頂端兩數值運算，並將結存放stack  條件二: 遇到非運算符號時(如整數)，直接存放至stack   結論 若為合法的後序式，到最後stack內只會剩下一個數值。並在遇到運算符號時，stack至少有兩數值。  範例影片",
+        "output": "評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 下面兩張圖是我寫的程式碼和執行出來的結果:      當變數是以call by value的方式被傳入函式時，引入的僅僅是這個變數的值，而不是變數本身，因此兩者的記憶體是分開的，需要有兩個記憶體去儲存他們，所以當我們改變函式中的值時，主函式中的值並不會跟著變動。  而當變數是以call by reference的方式被傳入函式時，傳遞的是此變數的記憶體位址，因此當我們改動函式中的值時，主函式中的值也會跟著變動。",
+        "output": "評論:說明得很清楚，超棒的! 評論:講解得很清楚，讓大一困擾我很久的問題解開了，非常感謝! 評論:OK 評論:很清楚明瞭的說明!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 後序轉中序就是把格式從「運算元、運算元、運算子」轉成「運算元、運算子、運算元」 a b + c * d e + f * + w z + * (a b +) c *(d e +) f * + (w z +) * (a + b) c *(d + e) f * + (w + z) * [(a + b) c *] [(d + e) f *] + (w + z) * [(a + b) * c] [(d + e) * f] + (w + z) * {[(a + b) * c] [(d + e) * f] +} (w + z) * {[(a + b) * c] + [(d + e) * f]} (w + z) * {[(a + b) * c] + [(d + e) * f]} * (w + z)",
+        "output": "評論:讚！ 評論:講得真好！ 評論:讚讚讚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: 同一個class中，至少有兩個相同名稱的function，但是傳入值不同(如圖一所示)，這樣就是多載(Overload)。  另外function名稱相同，傳入值也相同，只有回傳型態不同，這樣並不是多載。",
+        "output": "評論:大拇指！ 評論:尚可，可惜輸出內容無從分辨執行哪個函數。 評論:說明清晰 真讚"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: function中變數的記憶體位置與main中變數的紀體位置不同，call by value時將變數值傳給副程式或是function並不會改變原值。  也就是說傳進function的變數值只存在在function中，出function也不會回傳。",
+        "output": "評論:謝謝 我可以清楚理解call_by_value是怎麼運作了 評論:雖只有短短兩行卻能十分清楚表達令許多人感到疑惑的Call by value，有當老師的潛力，讚讚。 評論:講解得清楚，好讚！ 評論:大拇指！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 從結果可以看出call by value變數被呼叫之後，main變數不會被副程式所影響，以及main和副程式的記憶體位置是不同的。  而call by refrence變數被變數呼叫之後，main變數會被副程式所影響，main和副程式的記憶體位置是相同的。  有此可知call by value &amp; call by refrence最大的差異就是一個是傳數值進去另一個是傳記憶體進去。",
+        "output": "評論:很讚!簡單易懂! 評論:說得很好，讚! "
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 後序表示法: &lt;運算元1&gt; &lt;運算元2&gt; &lt;運算子&gt;  中序表示法:&lt;運算元1&gt; &lt;運算子&gt; &lt;運算元2&gt;  後序轉中序:兩個運算子+一個運算為即可轉成中序    P.S.題目原為 * a b + c * d e + f * + w z + *   因不符合後序，第一個*認定為「註記」  如有錯誤隨時都可以提出糾正，謝謝",
+        "output": "評論:沒錯，第一個*為【註記】，並非運算子。"
+    }
+]

@@ -15,9 +15,11 @@ def create_new_data(db):
     try:
         collection = db.stack
         data = [
-            {"Question": "合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。", "Answer": "xx"},
-            {"Question": "+ * 2 4 6 * - 7 5是前序式嗎？為什麼？", "Answer": "xx"},
-            {"Question": "後序式2 4 6 * + 7 5 - *要如何透過堆疊求解？要列出過程。", "Answer": "xx"}
+            {"Question": "將此後序式postfix轉中序式infix。a b + c * d e + f * + w z + *"},
+            {"Question": "將後序式postfix轉前序式prefix。a b + c * d e + f * + w z + *"},
+            {"Question": "合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。"},
+            {"Question": "+ * 2 4 6 * - 7 5是前序式嗎？為什麼？"},
+            {"Question": "算出後序式2 4 6 * + 7 5 - *的正確答案"}
         ]
         result = collection.insert_many(data)
         pprint(result.inserted_ids)

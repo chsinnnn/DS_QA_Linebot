@@ -1,0 +1,7 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例比較氣泡排序和選擇排序的資料交換swap次數，何者較多？  答案: bubble sort 的swap次數一定會大於等於 selection sort 的次數  bubble sort 的swap時機是在發現相鄰的數值比較大時進行一次位置交換的swap  而selection sort的swap時機是在目前尚未sorted的數值中找到最小值數值 直接swap到已經sort好的的數值的最右側   因此selection sort 的swap次數一定會少於等於bubble sort的次數   但是因selection sort是直接swap數值，跳過中間尚未sorted好的數值，因此無法維持好相同值的順序  所以selection sort 是unstable 的排序方式，bubble sort 反之。  範例：",
+        "output": "評論:Excellent! But the definitions of a movement or a swap should be distinquished."
+    }
+]

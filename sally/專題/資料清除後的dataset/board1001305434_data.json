@@ -1,0 +1,97 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: # include &lt;iostream&gt;  using namespace std ;  void math( int &amp; x ){      x = x + 1 ;      cout &lt;&lt;  math_x :   &lt;&lt; x &lt;&lt;  \\n  ;   // 印出答案為 1  } // math( int &amp; x )  int main(){      int x = 0 ;      cout &lt;&lt;  firse_x :   &lt;&lt; x &lt;&lt;  \\n  ;   // 印出答案為 0      math( x ) ;      cout &lt;&lt;  final_x :   &lt;&lt; x &lt;&lt;  \\n  ;   // 印出答案為 1  } // main",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 總共有五種  1.()()()  2.()(())  3.(())()  4.(()())  5.((()))",
+        "output": "評論:Duplicate"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: #include &lt;iostream&gt;  using namespace std;  // 函數定義 void swap(int &amp;x, int &amp;y) {     int temp;     temp = x; //將x的值儲存至臨時變數     x = y;    //將y的值傳給x     y = temp; //將臨時變數的值傳給y }  int main() {     int a = 100;     int b = 200;      cout &lt;&lt;  在交換前，a的值 ：  &lt;&lt; a &lt;&lt;  , b的值 :  &lt;&lt; b &lt;&lt; endl;      /* 用swap將值交換 */     swap(a, b);      cout &lt;&lt;  在交換後，a的值 ：  &lt;&lt; a &lt;&lt;  , b的值 :  &lt;&lt; b &lt;&lt; endl;      return 0; }",
+        "output": "評論:Nice."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: #include &lt;iostream&gt; #include &lt;new&gt;  using namespace std;   typedef struct listNode {    // 創建串列資料結構           int value;     listNode *next;      } listNode;      class expLIST {          private:                                  listNode *head, *tail;        // 宣告串列的head、tail指標           public:                  expLIST () {                // 初始化head及tail指向NULL                           head = NULL;             tail = NULL;                  }                  bool isEmpty() {        // 判斷串列是否為空                           if ( head == NULL )                 return true;             else                 return false;                      }                  void append( int invalue ) {    // 新增資料至串列                           if ( head == NULL ) {                                              head = new listNode;                 head -&gt; value = invalue;                 head -&gt; next = NULL;                 tail = head;                              }                           else {                                                                              tail -&gt; next = new listNode;                 tail = tail -&gt; next;                 tail -&gt; value = invalue;                 tail -&gt; next = NULL;                              }                      }                  listNode* gethead() {                // 拿到指向head的指標                           return head;                      }                  void print() {                        // 印出linklist之值                          for ( listNode * cur = head ; cur != NULL; cur = cur -&gt; next ) {                                  cout &lt;&lt;     &lt;&lt; cur -&gt; value;              }                      }      };  void copy( expLIST data, expLIST &amp; copy ) {        // 複製新的linklist      for ( listNode * cur = data.gethead() ; cur != NULL; cur = cur -&gt; next ) {                  copy.append( cur -&gt; value );      }      }  int main() {          expLIST link1, link2;     link1.append( 100 );     link1.append( 200 );     copy( link1, link2 );          link1.print();     cout &lt;&lt; &#39;\\n&#39;;     link2.print();      }",
+        "output": "評論:雖然程式碼可以編譯執行(最好能清楚解釋原因)，仍要避免讓函數名稱和變數名稱相同。  void copy( expLIST data, expLIST &amp; copy ) {        // 複製新的linklist"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 對於三組括弧，有多種不同的合法形式，每種形式都具有不同的括弧排列方式。以下是可能的形式：   \t()()() \t()(()) \t(())() \t(()()) \t((()))",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: # include &lt;stdio.h&gt; # include &lt;stdlib.h&gt;  typedef struct Node Node;  struct Node {          int val;     struct Node* next;       };  Node* CreateNode( int value ); void AppendToTail( Node* list_head, Node* add ); void PrintList( Node* head ); Node* copyList( Node* head ); void FreeAll( Node* head );  Node* CreateNode( int value )  {                        // create and initialize the node          Node* create = ( Node* )calloc( 1, sizeof( Node ) );     create -&gt; next = NULL;     create -&gt; val = value;     return create;      }  void AppendToTail( Node** list_head, Node* add )  {      // add nodes to the tail, using indirect pointer          Node** ptr = list_head;          while ( *ptr )         ptr = &amp;( ( *ptr ) -&gt; next );              *ptr = add;      }  void PrintList( Node* head )  {            // print the list          while ( head )  {                  printf(  %d\\n , head -&gt; val );         head = head -&gt; next;              }      }  Node* copyList( Node* head )  {             // copy whole linked list          Node* temp = NULL, *copy_head = NULL;          while ( head )  {                  temp = CreateNode( head -&gt; val );         AppendToTail( &amp;copy_head, temp );         head = head -&gt; next;              }          return copy_head;      }  void SetUpTestCase()  {                      // test case for copyList function          Node* temp = NULL, *head = NULL;          printf(  =============Origianl List=============\\n  );          temp = CreateNode( 1 );     AppendToTail( &amp;head, temp );     temp = CreateNode( 5 );     AppendToTail( &amp;head, temp );     temp = CreateNode( 2 );     AppendToTail( &amp;head, temp );     temp = CreateNode( 7 );     AppendToTail( &amp;head, temp );     temp = CreateNode( 6 );     AppendToTail( &amp;head, temp );     temp = CreateNode( 8 );     AppendToTail( &amp;head, temp );          PrintList( head );     printf(  =============Copied List=============\\n  );          Node* copy_list = copyList( head );     PrintList( copy_list );          FreeAll( copy_list );     FreeAll( head );      }  void FreeAll( Node* head )  {          Node* temp = NULL;          while ( head )  {                  temp = head;         head = head -&gt; next;         free( temp );              }      }  int main()  {     // invoke the test case function          SetUpTestCase();      }",
+        "output": "評論:認同一樓 推爆 !! 評論:認真推! 評論:Explain your code, at least the key part or the overview."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 總共為五種：   \t((())) \t()(()) \t(())() \t(()()) \t()()()",
+        "output": "評論:Duplicate"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 共5種，如下 :   1、()()()  2、(())()  3、()(())  4、((()))  5、(()())",
+        "output": "評論:Duplicate.."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 輪詢算法：在計算機網絡中，輪詢算法通常使用環狀鏈結串列，來依次處理一組設備或任務，並在處理完最後一個後重新從頭開始。 \t \t \t環形緩存：在圖形繪製、音頻處理或圖像處理中，可以使用環狀鏈結串列來實現環形緩存，以便持續處理和顯示數據，無需中斷。 \t \t \t循環遊戲：在電子遊戲中，玩家可能需要穿越地圖或環境的邊界而不中斷遊戲，這可以使用環狀鏈結串列來實現。 \t \t \t循環播放列表：在音樂播放器或媒體播放應用中，可以使用環狀鏈結串列來實現循環播放列表，使播放列表中的歌曲無限循環。 \t \t \t輪盤賭局：在賭場的輪盤賭局中，賭場通常使用環狀鏈結串列的概念，以確保輪盤旋轉並隨機落在某個數字或色塊上。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 有5種形式，個別為:  ()()()、(()())、()(()())、(()()())、()()()()",
+        "output": "評論:Duplicate"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明如何複製一整個鏈結串列linked list到另一個變數。  答案: 創建一個新linked list，逐一將資料放入此linked list節點中  #include &lt;iostream&gt; using namespace std;  struct Node {     int data ;     Node* next ; } ;  // 複製 Node* copyLinkedList(Node* head) {     if (head == NULL) {         return NULL ;     }      // 創建新的linked list     Node* copyList = new Node ;     copyList-&gt;data = head-&gt;data ;     copyList-&gt;next = NULL ;      // 創建兩指標，一表示串列當前位置，另一表示下一節點     Node* current = copyList ;     Node* original = head-&gt;next ;       while (original != NULL) { // 判斷是否還有節點          // 創建新節點         current-&gt;next = new Node ;         current = current-&gt;next ; // 移動至下一節點          current-&gt;data = original-&gt;data ;         current-&gt;next = NULL ;          // 移動至下一節點         original = original-&gt;next ;     }      return copyList ; }  // 印出 void printLinkedList(Node* head) {     Node* current = head ;     while (current != NULL) {         cout &lt;&lt; current-&gt;data &lt;&lt;   -&gt;   ;         current = current-&gt;next ;     }     cout &lt;&lt;  NULL  &lt;&lt; endl ; }  int main() {     // 設置linked list      Node* List = new Node ;     List-&gt;data = 1 ;     List-&gt;next = new Node ;     List-&gt;next-&gt;data = 2 ;     List-&gt;next-&gt;next = new Node ;     List-&gt;next-&gt;next-&gt;data = 3 ;     List-&gt;next-&gt;next-&gt;next = NULL ;      // 複製linked list      Node* List2 = copyLinkedList(List) ;      // 印出linked list      cout &lt;&lt;  Original List:   ;     printLinkedList(List) ;      cout &lt;&lt;  Copy List:   ;     printLinkedList(List2) ;      return 0 ; }",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: void addone(int &amp; a) {  a+=1;  }  int main() {  int a = 1;  addone(a);  cout &lt;&lt; a;  }",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: (1)()()()  (2)(()())  (3)()(())  (4)(())()  (5)((()))  共有五組不同的形式",
+        "output": "評論:Duplicate"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 三組括號在運算式中的五種組合，可以有以下的形式:  1、(())()  2、()()()  3、()(())  4、(()())  5、((()))",
+        "output": "評論:Duplicate"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 三組括弧的合法運算式，可以有5種不同的形式如下:  1、()()()  2、(())()  3、()(())  4、((()))  5、(()())",
+        "output": "評論:Duplicate.."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例說明使用環狀鏈結串列Circularly linked list的情境。  答案: 當你需要處理一個具有循環性質的任務或資料集時，可以使用環狀鏈結串列。一個環狀鏈結串列就像一個圓圈，最後一個元素指向第一個元素，這樣你可以無限次地環繞。  例如，當你在一個音樂播放列表中播放歌曲時，當你播放到最後一首歌曲後，它會自動回到第一首歌曲，實現無縫的循環播放。這是一個實際使用環狀鏈結串列的情境。",
+        "output": "評論:Excellent!  擴充情境：電台循環播放清單，若每首歌播放期間收到聽眾留言、點讚或捐獻，此時要立即記錄在那首歌的位置，可以透過這個串列儲存。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目:   答案: #include &lt;iostream&gt;  void IncrementByReference(int &amp;num);  int main() {    int value = 5;    std::cout &lt;&lt;  原始值:   &lt;&lt; value &lt;&lt; std::endl; // 呼叫函數並傳參考    IncrementByReference(value); std::cout &lt;&lt;  函數呼叫後的值:   &lt;&lt; value &lt;&lt; std::endl; return 0;  }   IncrementByReference(int &amp;num) {     num++;  }",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。  答案: 總共有五種不同形式:    \t()()() \t(())() \t((())) \t(()()) \t()(())",
+        "output": "評論:Duplicate"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫C++程式碼說明傳參考呼叫call by reference。  答案: #include &lt;iostream&gt;  // 函數使用傳參考呼叫 void modifyValue(int &amp;ref) {     // 在函數內修改原始變數的值     ref = ref * 2; }  int main() {     // 定義一個整數變數     int num = 5;      // 在呼叫函數時使用傳參考呼叫     modifyValue(num);      // 印出修改後的值     std::cout &lt;&lt;  修改後的值:   &lt;&lt; num &lt;&lt; std::endl;      return 0; }",
+        "output": "評論:OK"
+    }
+]

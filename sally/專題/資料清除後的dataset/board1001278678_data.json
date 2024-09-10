@@ -1,0 +1,107 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 第一步:(a+b), c, *, (d+e), f, *, +, (w+z), *  第二步:((a+b)*c), ((d+e)*f), +, (w+z), *  第三步:(((a+b)*c)+ ((d+e)*f)), (w+z), *  第四步: ((((a+b)*c)+ ((d+e)*f))* (w+z))",
+        "output": "評論:禁用附檔，圖片須改用插圖以供瀏覽，未修正將不予計分。 評論:先前的貼文要閱讀過，避免重複。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: 115. 寫C++程式碼說明傳址呼叫call by address。  call by address是把記憶體的位置傳給另一個記憶體位置上的值， 所以對形式參數所做的任何更改都會對實際參數進行相同的修改  #include &lt;iostream&gt;  using namespace std;  void swap(int *, int *); int main() {     int a=100, b=300;     cout &lt;&lt;  before:   &lt;&lt; endl;     cout &lt;&lt;  a=  &lt;&lt; a &lt;&lt;  , b=  &lt;&lt; b &lt;&lt;endl;     swap (&amp;a, &amp;b);     cout &lt;&lt;  after:   &lt;&lt; endl;     cout &lt;&lt;  a=  &lt;&lt; a &lt;&lt;  , b=  &lt;&lt; b &lt;&lt; endl;     return 0; } void swap(int *x, int *y) {     int temp;     temp = *x;     *x = *y;     *y = temp; }",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 1.(a+b), c, *, (d+e), f, *, +, (w+z), *  2.((a+b)*c), ((d+e)*f), +, (w+z), *  3. (((a+b)*c)+ ((d+e)*f)), (w+z), *  4. ((((a+b)*c)+ ((d+e)*f))* (w+z))",
+        "output": "評論:有看過前面的貼文嗎？內容重複是不予計分的。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: #include &lt;iostream&gt; using namespace std ; void swap( int *a, int *b ) {     int temp = *a ;     *a = *b ;     *b = temp ; }  int main() {    int a = 2 ;    int b = 3 ;    cout &lt;&lt;  a =   &lt;&lt; a &lt;&lt;    b =   &lt;&lt; b &lt;&lt; endl ;    swap( &amp;a, &amp;b ) ; // 傳入a,b的記憶體位址    cout &lt;&lt;  a =   &lt;&lt; a &lt;&lt;    b =   &lt;&lt; b &lt;&lt; endl ; }  輸出    也叫call by pointer，把a和b記憶體位址傳入function後，並作為 指向記憶體位址的指標  來使用",
+        "output": "評論:請附上原本的題目敘述，並寫上正確的中英文專有名詞！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: #include &lt;iostream&gt; using namespace std;  void square(int* num) ;   void square(int* num) {     (*num) = (*num ) * ( *num ); }  int main() {     int num ;      cin &gt;&gt; num ;      cout &lt;&lt;  原本的值： &lt;&lt; num &lt;&lt; endl;      square(&amp;num);      cout &lt;&lt;  平方后的值:   &lt;&lt; num &lt;&lt; endl;      return 0; }    主函示中輸入整數值將其址傳入函式square，加上指標做出運算可以直接改變原本的值  附圖執行結果",
+        "output": "評論:OK, 函數定義放在主程式之前就不需要函數宣告了。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 1.(a+b), c, *, (d+e), f, *, +, (w+z), *  2.((a+b)*c), ((d+e)*f), +, (w+z), *  3. (((a+b)*c)+ ((d+e)*f)), (w+z), *  4. ((((a+b)*c)+ ((d+e)*f))* (w+z))",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: 寫C++程式碼說明傳址呼叫call by address。  當你在C++中使用傳址呼叫（call by address）時，你實際上是傳遞變數的記憶體位址給函式，而不是值本身。  #include &lt;iostream&gt;  // 傳址呼叫函式，使用參考來修改變數的值  void changeValue(int&amp; ref) {  ref = 100; // 直接修改參考的值  }  int main() {  int num = 10;//初始值  std::cout &lt;&lt;  原始值:   &lt;&lt; num &lt;&lt; std::endl; // 傳遞變數的參考給函式  changeValue(num);  std::cout &lt;&lt;  修改後的值:   &lt;&lt; num &lt;&lt; std::endl;  return 0;  }",
+        "output": "評論:call by reference並非call by address！"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: #include &lt;iostream&gt; using namespace std; class Cal { public:     int add(int a,int b) {         return a+b;     }      double add1(double a, double b) {         return a+b;     } };  int main() {     Cal c;     int result = c.add(30, 35);//result=30+35=65     double result1 = c.add1(2.4, 3.9);//result1=2.4+3.9=6.3     cout &lt;&lt;  整數相加的結果為:   &lt;&lt; result &lt;&lt; endl;    cout &lt;&lt;  浮點數的相加結果為:   &lt;&lt; result1 &lt;&lt; endl;      return 0; } 執行結果如下",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: 題目 : 寫C++程式碼說明傳址呼叫call by address  答案 :   #include &lt;iostream&gt;  using namespace std;  // 傳址呼叫函式 void increment(int* num) {     (*num)++;  // 通過解除參照（dereferencing）遞增傳入位址對應的值 }  int main() {     int number = 10;      std::cout &lt;&lt;  原始數值:   &lt;&lt; number &lt;&lt; std::endl;      // 呼叫increment函式，將number的位址傳遞進去     increment(&amp;number);      std::cout &lt;&lt;  遞增後的數值:   &lt;&lt; number &lt;&lt; std::endl;      return 0; }  當我們在C++中使用傳址呼叫（call by address）時，我們將一個變數的記憶體位址傳遞給函式，使得函式可以直接修改該位址對應的變數的值。  執行結果在附檔",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: #include &lt;iostream&gt;  // 傳址呼叫函式 void incrementByOne(int* num) {     (*num)++;  // 透過解參考指標來修改原始變數的值 }  int main() {     int number = 10;     std::cout &lt;&lt;  原始數字:   &lt;&lt; number &lt;&lt; std::endl;     // 呼叫傳址呼叫函式並傳遞變數的記憶體位址      incrementByOne(&amp;number);     std::cout &lt;&lt;  增加後的數字:   &lt;&lt; number &lt;&lt; std::endl;      return 0; }  這個程式中，定義一個incrementByOne的函式，這個函式接受一個整數指標作為參數。在函式裡，我們透過解參考指標，將原始變數的值加一。在main函式中，我們宣告一個整數變數number並初始化為10。然後，我們呼叫incrementByOne函式，並將number的記憶體位址傳遞給該函式。當函式執行完成後，number的值已經被修改為11。最後，我們輸出修改後的值。",
+        "output": "評論:解參考指標  是什麼？請附上原始的英文專有名詞。  void incrementByOne(int* num)  // num是傳遞指標的參數。  incrementByOne(&amp;number);   // &amp;稱為取址運算子，指向number變數位址"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: 115. 寫C++程式碼說明傳址呼叫call by address。 C++ 中使用傳址呼叫（call by address），會傳遞一個變數的記憶體地址給函式，這樣函式就可以直接修改該變數的值。  #include &lt;iostream&gt;  // 傳址呼叫的函式 void changeValue(int* ptr) {     // 透過指標修改變數的值     *ptr = 10; }  int main() {     int num = 5;//初始值為5          std::cout &lt;&lt;  原始數值:   &lt;&lt; num &lt;&lt; std::endl;          // 傳遞變數的記憶體地址給函式     changeValue(&amp;num);          std::cout &lt;&lt;  修改後的數值:   &lt;&lt; num &lt;&lt; std::endl;          return 0; }",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明兩個類別間的繼承inheritance。  答案: 一個類別(子類別)可以繼承另一個類別（父類別) 子類別可以使用父類別的變數和函數，同時也可以新增或重寫這些成員來擴展或修改其行為。  CODE: #include &lt;iostream&gt;  // 定義父類別 class Shape { protected:     int width;     int height; public:     void setWidth(int w) {         width = w;     }     void setHeight(int h) {         height = h;     } };  // 定義子類別 class Rectangle : public Shape { //繼承 public:     int getArea() {          return width * height;     } };  int main() {     Rectangle rect;      rect.setWidth(5); //用父類的定義     rect.setHeight(3);      int area = rect.getArea();  //用父類別給的變數進到子類別，並使用子類別的函式     std::cout &lt;&lt;  矩形的面積:   &lt;&lt; area &lt;&lt; std::endl;      return 0; }",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: #include &lt;iostream&gt; using namespace std;  void modify(int* ptr) {     *ptr = 500; //修改指標指向的值 }  int main() {     int num = 100;     int* ptr = &amp;num; //取得的記憶體位址      cout &lt;&lt;  原本的值:   &lt;&lt; num &lt;&lt; endl;       modify(ptr);      cout &lt;&lt;  經過修改後的值:   &lt;&lt; num &lt;&lt; endl;      return 0; }  執行結果如下",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 題目:傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  #include &lt;iostream&gt; #include &lt;vector&gt; #include &lt;algorithm&gt;  using namespace std;  void findCombination(vector&lt;int&gt;&amp; A, int targetSum, vector&lt;int&gt;&amp; currentCombination, vector&lt;vector&lt;int&gt; &gt;&amp; result, int startIndex) {     if (currentCombination.size() == 3) {         if (targetSum == 0) {             result.push_back(currentCombination);         }         return;     }      for (int i = startIndex; i &lt; A.size(); i++) {         if (i &gt; startIndex &amp;&amp; A[i] == A[i - 1]) {             continue; // 避免重複的組合         }          currentCombination.push_back(A[i]);         findCombination(A, targetSum - A[i], currentCombination, result, i + 1);         currentCombination.pop_back();     } }  vector&lt;vector&lt;int&gt; &gt; findCombination(vector&lt;int&gt;&amp; A, int S) {     vector&lt;vector&lt;int&gt; &gt; result;     vector&lt;int&gt; currentCombination;      sort(A.begin(), A.end());     findCombination(A, S, currentCombination, result, 0);      return result; }  int main() {     int arr[] = {1, 2, 3, 4, 5, 6, 7}; //範例     vector&lt;int&gt; A(arr, arr + sizeof(arr) / sizeof(arr[0]));     int S = 9;       vector&lt;vector&lt;int&gt; &gt; combinations = findCombination(A, S);      // 輸出結果     for (size_t i = 0; i &lt; combinations.size(); i++) {         for (size_t j = 0; j &lt; combinations[i].size(); j++) {             cout &lt;&lt; combinations[i][j] &lt;&lt;    ;         }         cout &lt;&lt; endl;     }      return 0; }",
+        "output": "評論:OK.  Q1. sort有必要嗎？  Q2. 遞迴有幫助嗎？(非遞迴好寫嗎？)"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: #include &lt;iostream&gt;  // 定義一個交換兩個整數值的函式  void swapValues(int* a, int* b) {    int temp = *a; // 使用指標解除參考(*)來取得傳入位址上的值    *a = *b; // 修改第一個整數的值    *b = temp; // 修改第二個整數的值  }  int main() {    int x = 5;    int y = 10;    std::cout &lt;&lt;  交換前：  &lt;&lt;  x =   &lt;&lt; x &lt;&lt;  , y =   &lt;&lt; y &lt;&lt; std::endl; // 傳遞變數的記憶體位址給swapValues函式       swapValues(&amp;x, &amp;y);    std::cout &lt;&lt;  交換後：  &lt;&lt;  x =   &lt;&lt; x &lt;&lt;  , y =   &lt;&lt; y &lt;&lt; std::endl;    return 0;   }  在上述程式碼中，我們使用int*型別的指標來接受位址參數。在swapValues函式內部，我們使用指標解除參考運算符(*)來存取傳入位址上的值。藉由交換這兩個整數變數的值，函式修改了main函式中x和y的內容。  輸出結果：  Copy code  交換前：x = 5, y = 10 交換後：x = 10, y = 5  請注意，傳址呼叫允許我們在函式內部修改變數的值，但在某些情況下，可能需要注意位址的有效性及避免不必要的指標錯誤。",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明兩個類別間的繼承inheritance。  答案: 112.寫出C++程式碼說明兩個類別間的繼承inheritance。  使用繼承（inheritance），你可以創建一個新的類別，該類別將繼承自另一個已存在的類別，並獲得父類別（基類別）的屬性和行為。  以下是利用動物Animal(父類別)及dog(子類別)  #include &lt;iostream&gt;  // 基類別（父類別） class Animal { public:     void eat() {         std::cout &lt;&lt;  Animal is eating.  &lt;&lt; std::endl;     } };  // 衍生類別（子類別），繼承自Animal類別 class Dog : public Animal { public:     void bark() {         std::cout &lt;&lt;  Dog is barking.  &lt;&lt; std::endl;     } };  int main() {     Dog dog;     dog.eat();   // 子類別Dog繼承了父類別Animal的eat()函式     dog.bark();  // 子類別Dog自己的bark()函式      return 0; }  Animal是一個基類別（父類別），它有一個eat()函式。然後我們創建了一個衍生類別（子類別）Dog，它使用關鍵字public繼承自Animal。衍生類別Dog具有自己的bark()函式。  在main()函式中，我們創建了一個Dog物件dog，並可以使用dog.eat()和dog.bark()調用基類別和衍生類別的函式。由於Dog繼承了Animal，因此它可以使用Animal類別中的eat()函式。",
+        "output": "評論:最好是幫二個類別也加上建構子constructor，這樣還可以解釋下列這行程式碼會執行什麼動作：      Dog dog;"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 逐一處理後序式的元素   a  : stack：[a]   b  : stack：[a, b]   +  : POP &#39;b&#39; 和 &#39;a&#39;，結合成infix表達式&#39;(a + b)&#39;，然後推回stack中 ; stack：[(a + b)]   c  : stack : [(a + b), c]   *  : POP c&#39; 和 &#39;(a + b)&#39;，結合成infix表達式(a + b) * c  然後推回stack中 ; stack：[ ( (a + b) * c ) ]   d  : stack : [((a + b) * c), d]   e  : stack : [((a + b) * c), d, e]   +  : POP &#39;e&#39; 和 &#39;d&#39;，結合成infix表達式 &#39;(d + e)&#39; 然後推回stack中 ; stack：[((a + b) * c), (d + e)]   f    stack：[((a + b) * c), (d + e), f]   *  : POP &#39;(d + e)&#39; 和 &#39;f&#39;，結合成infix表達式 &#39;( (d + e ) * f )&#39; 然後推回stack中。stack：[((a + b) * c), ((d + e)* f)]   +  : POP &#39;((a + b) * c)&#39; 和 &#39;((d + e)* f)&#39;，結合成infix表達式  &#39;( ((a + b) * c) + ((d + e) * f) )&#39;，然後推回stack中 stack：[( ((a + b) * c) + ((d + e) * f) )]   w  : stack : [( ((a + b) * c) + ((d + e) * f) ), w]   z  : stack : [( ((a + b) * c) + ((d + e) * f) ), w, z]   +  : POP &#39;z&#39; 和 &#39;w&#39;，結合成infix表達式 &#39;(w + z)&#39; 然後推回stack中 ; stack：[( ((a + b) * c) + ((d + e) * f) ), (w+z)]   *  : POP &#39;(w + z)&#39; 和 &#39;( ((a + b) * c) + ((d + e) * f) )&#39;，並將它們結合成子表達式 &#39;( ((a + b) * c) + ((d + e) * f) ) * (w+z) &#39;，然後將子表達式推回stack中。 stack：[{ ((a + b) * c) + ((d + e) * f) } * ( w + z ) ]  最後從stack中彈出最終的中序式表達式：( ((a + b) * c) + ((d + e) * f) ) * ( w + z )",
+        "output": "評論:Excellent!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: a b + c * d e + f * + w z +*  (a+b)c* (d+e)f*+(w+z)*  ((a+b)*c)((d+e)*f))+(w+z)*  ((a+b)*c)+((d+e)*f)(w+z)*  (((a+b)*c)+((d+e)*f))*(w+z)",
+        "output": "評論:有看過前面的貼文嗎？內容重複是不予計分的。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: C++的多載 Overloading 可以透過調整 相同名稱 Funtion 的參數數量或是參數型別來實現。  CODE :  # include &lt;iostream&gt;  using namespace std;  class Calculate {  public:      // 兩個型別為 int 參數加總      int GetSum( int a, int b ) {          return a + b;      } // GetSum()      // 三個型別為 int 參數加總      int GetSum( int a, int b, int c ) {          return a + b + c;      } // GetSum()      // 兩個型別為 float 參數加總      float GetSum( float a, float b ) {          return a + b;      } // GetSum()  } ; // class Calculate  int main() {      int num1 = 10;      int num2 = 20;      int num3 = 30;      float float1 = 2.5;      float float2 = 10.5;      Calculate cal;      cout &lt;&lt; cal.GetSum( num1, num2 ) &lt;&lt; endl;       // 輸出30      cout &lt;&lt; cal.GetSum( num1, num2, num3 ) &lt;&lt; endl; // 輸出60      cout &lt;&lt; cal.GetSum( float1, float2 ) &lt;&lt; endl;   // 輸出13      system( pause );      return 0;  } // main()",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 113. 將此後序式postfix轉中序式infix，並詳述步驟。  a b + c * d e + f * + w z + *  Step1:(a b +) c * (d e +)  f  *   +   (w z +)   *  Step2: [(a+b)c *] [(d+e) f  *] + [(w+z)] *  Step3:{[(a+b)*c ] [(d+e)*f] +} [(w+z)*]  Step4:[(a+b)*c ]+[(d+e)*f] [(w+z) *]  Step5:[(a+b)*c ]+[(d+e)*f] * [(w+z)]  =&gt;(((a+b)*c)+((d+e)*f)*(w+z)",
+        "output": "評論:有看過前面的貼文嗎？內容重複是不予計分的。"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: 111. 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  //本程式收到一個整數陣列 A 和一個整數 S，然後找出陣列 A 中的三個數，使它們的和等於 S  #include &lt;iostream&gt; #include &lt;vector&gt; #include &lt;algorithm&gt;  using namespace std;  vector&lt;vector&lt;int&gt;&gt; findCombination(vector&lt;int&gt;&amp; A, int S) {     vector&lt;vector&lt;int&gt;&gt; result;     int n = A.size();          sort(A.begin(), A.end());  // 排序陣列 A，以便在後續查找中使用雙指針法          for (int i = 0; i &lt; n - 2; i++) {         if (i &gt; 0 &amp;&amp; A[i] == A[i - 1])             continue;  // 避免重複的組合                  int left = i + 1;         int right = n - 1;                  while (left &lt; right) {             int sum = A[i] + A[left] + A[right];                          if (sum == S) {                 result.push_back({A[i], A[left], A[right]});                 left++;                 right--;                                  while (left &lt; right &amp;&amp; A[left] == A[left - 1])                     left++;  // 避免重複的組合                                  while (left &lt; right &amp;&amp; A[right] == A[right + 1])                     right--;  // 避免重複的組合             } else if (sum &lt; S) {                 left++;             } else {                 right--;             }         }     }          return result; }  int main() {     vector&lt;int&gt; A = {1, 2, 3, 4, 5, 6, 7, 8, 9};     int S = 15;          vector&lt;vector&lt;int&gt;&gt; combinations = findCombination(A, S);          if (combinations.empty()) {         cout &lt;&lt;  No combination found.  &lt;&lt; endl;     } else {         cout &lt;&lt;  Combinations found:  &lt;&lt; endl;         for (const auto&amp; combination : combinations) {             cout &lt;&lt; combination[0] &lt;&lt;   +   &lt;&lt; combination[1] &lt;&lt;   +   &lt;&lt; combination[2] &lt;&lt;   =   &lt;&lt; S &lt;&lt; endl;         }     }          return 0; }  1. 為何要排序？  排序是為了在後續查找中使用雙指針法，我們需要找到陣列 A 中的三個數字加總為 S 的組合。排序後，我們可以使用兩個指針（left 和 right）來進行查找，從而有效地避免重複計算和處理。  2. 如何改寫成遞迴？  若要改寫成遞迴，可以將函數改為遞迴形式，其中遞迴的終止條件是找到三個數字加總為 S 的組合或者陣列 A 中的數字不足三個。  vector&lt;vector&lt;int&gt;&gt; findCombination(vector&lt;int&gt;&amp; A, int S, int startIndex, int count) {     vector&lt;vector&lt;int&gt;&gt; result;     if (count == 3) {         if (S == 0) {             result.push_back({});         }         return result;     }          int n = A.size();     for (int i = startIndex; i &lt; n; i++) {         if (i &gt; startIndex &amp;&amp; A[i] == A[i - 1]) {             continue;  // 避免重複的組合         }         if (A[i] &gt; S) {             break;  // A 已排序，後續數字皆大於 S，不可能有組合         }                  int num = A[i];         vector&lt;vector&lt;int&gt;&gt; subCombinations = findCombination(A, S - num, i + 1, count + 1);         for (auto&amp; combination : subCombinations) {             combination.insert(combination.begin(), num);             result.push_back(combination);         }     }          return result; }  int main() {     vector&lt;int&gt; A = {1, 2, 3, 4, 5, 6, 7, 8, 9};     int S = 15;          vector&lt;vector&lt;int&gt;&gt; combinations = findCombination(A, S, 0, 0);          if (combinations.empty()) {         cout &lt;&lt;  No combination found.  &lt;&lt; endl;     } else {         cout &lt;&lt;  Combinations found:  &lt;&lt; endl;         for (const auto&amp; combination : combinations) {             cout &lt;&lt; combination[0] &lt;&lt;   +   &lt;&lt; combination[1] &lt;&lt;   +   &lt;&lt; combination[2] &lt;&lt;   =   &lt;&lt; S &lt;&lt; endl;         }     }          return 0; }",
+        "output": "評論:1. 為何要排序？  2. 如何改寫成遞迴？ 評論:Nice responses."
+    }
+]

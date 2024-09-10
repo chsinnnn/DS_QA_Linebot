@@ -1,0 +1,22 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 撰寫程式碼說明氣泡排序bubble sort如何提早結束執行。  答案: 當沒有再進行任何交換時 代表已經交換完成了 就沒有必要繼續進行。  // 已經宣告過的: vector&lt;string&gt; data; void compare(int index1, int index2);  void bubbleSort() {             bool flag = false;             for(int i = 0 ; i &lt; data.size() - 1; i++) {                 for(int j = 0 ; j &lt; data.size()-i-1; j++) {                     if(compare(data[j],data[j+1])) {                         swap(j,j+1);                         flag = true;                     }                 }                 if(!flag) return;                 else flag = false;             }                      }    void swap(int a, int  b){             string temp = data[a];             data[a] = data[b];             data[b] = temp;         } &lt;參考資料 :　https://hackmd.io/@Aquamay/HyyCFRj9d　＞",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 撰寫程式碼指出影響氣泡排序是否穩定stable的關鍵指令。  答案: #include&lt;iostream&gt;  using namespace std;  #define MAX 10  void BubbleSort(int array[MAX], int n) {      for(int p=1 ; p&lt;n ; ++p) {          for(int index=0 ; index&lt; (n-p) ; index++) {              if(array[index] &gt; array[index+1]) {                  swap(array[index], array[index+1]);              }          }      }  }  void swap(int &amp;a, int &amp;b) {      int temp = a;      a = b;      b = temp;  }  影響氣泡排序是否穩定stable的關鍵指令:  if(array[index] &gt; array[index+1])  如果將&gt;換成&gt;=，就可能造成同樣大小的資料之先後順序不同",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 撰寫程式碼指出影響插入排序insertion sort是否穩定stable的關鍵指令。  答案: ",
+        "output": "評論:Exactly!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例解說選擇排序selection sort並非穩定stable的排序方法。  答案: *穩定排序法(Stable Sorting)：具相同鍵值(key-value)的資料，經排序後依然保持排序前的順序。  為何選擇排序(selection sort)是非穩定(unstable)的排序方法：   如果要將以下資料用selection sort排序  (1,2 代表班級；a,b,c代表學生姓名的英文字母；)  排序前為 {2a,2b,1c} (key-value為姓名字母)  其後若依班級代號(key-value為數字)排序結果為：  {1c,2b,2a}  排序結果造成具有兩個相同(數字key-value)的2a、2b  跟原來排序前的順序不同，因此為不穩定排序法。  *參考資料：  https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/",
+        "output": "評論:Good!  Further reading: Timsort"
+    }
+]

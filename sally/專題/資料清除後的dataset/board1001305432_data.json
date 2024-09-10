@@ -1,0 +1,57 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 1. (ab+)c*(de+)f*+(wz+)*  由於postfix是依照 左-&gt;右-&gt;中 來輸出，所以我們景需要先將其節點最下端的合成就行，寫成式子的postfix會有一個特點，就是當有兩個數字連在一起時，其為該分支的最後兩個節點，故將其進行運算，而運算符號則為他們的右方(左-&gt;右-&gt;中)  2. [(a+b)c* ][ (d+e)f*]+(w+z)*  然後我們因為將其代數化，所以只要將括號內的看成一個代數，並繼續我們之前的邏輯進行運算  3. {[(a+b)*c][(d+e)*f]+}(w+z)*  4. {[(a+b)*c]+[(d+e)*f]}(w+z)*  5. { [ (a + b) * c ]+[ ( d + e ) * f ] } * ( w + z )  即可達成infix排序  若要將infix回推成postfix則將上面完成的運算符號在該括號內往右推即可(若沒有括號則直接推到最右端)，最後刪除括號即完成  若要將infix回推成prefix則將上面完成的運算符號在該括號內往左推即可(若沒有括號則直接推到最左端)，最後刪除括號即完成",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目:   答案: a b + c * d e + f * + w z + *  =( a + b ) c * d e + f * + w z + *  =( a + b ) * c d e + f * + w z + *  =( a + b ) * c ( d + e ) f * + w z + *  =( a + b ) * c ( d + e ) * f + w z + *  =( a + b ) * c + ( d + e ) * f w z + *  =( a + b ) * c + ( d + e ) * f (w + z ) *  =( ( a + b ) * c + ( d + e ) * f ) * (w + z )",
+        "output": "評論:late..."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: #include &lt;iostream&gt;  using namespace std;  class function {  public:      // 兩個數相加      int add(int a, int b) {          return a + b;      }      //三個數相加      int add(int a, int b, int c) {          return a + b + c;      }  };  int main() {      function calc;      cout &lt;&lt;  兩個數相加:   &lt;&lt; calc.add(5, 3) &lt;&lt; endl;      cout &lt;&lt;  三個數相加:   &lt;&lt; calc.add(3, 4, 5) &lt;&lt; endl;      return 0;  }  利用overloading的方法，透過輸入不同數量的數字，來進入不同的函式中進行相加，進而實現多載",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 傳入陣列A和整數S，寫出C++函數從A找三個數字加總為S的組合。  答案: struct Pair {  int idx;  int value;  };  Pair input[5005];  void twoPointer() {  int i, j, k;  for (i = 0; i &lt; n-2; i++) {  j = i+1;  k = n-1;  while (j&lt;k) {  if (input[i].value + input[j].value + input[k].value == S) {  cout &lt;&lt; input[i].idx &lt;&lt;     &lt;&lt; input[j].idx &lt;&lt;     &lt;&lt; input[k].idx &lt;&lt;     &lt;&lt; endl;  haveans = true;  break;  }  else if (input[i].value + input[j].value + input[k].value &gt; S) {  k--;  }  else if (input[i].value + input[j].value + input[k].value &lt; S) {  j++;  }  }  }  }  這題會用twopointer來解，輸入方面給定長度為n的陣列三個數字合為S,陣列以pair的型態輸入才不會排序後亂掉。  預處理部分先做排序，外層迴圈 i 會線性跑過已排序陣列，j, k為左指標和右指標，三數和&gt;x, k--, 反之j++直到結束  複雜度O(N^2)",
+        "output": "評論:fine, but not complete."
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: # include &lt;iostream&gt;  using namespace std ;  void math( int x ){      x = x + 1 ;      cout &lt;&lt;  math_x :   &lt;&lt; x &lt;&lt;  \\n  ; // 印出答案為 1  } // math( int x )  int main(){      int x = 0 ;      cout &lt;&lt;  firse_x :   &lt;&lt; x &lt;&lt;  \\n  ; // 印出答案為 0      math( x ) ;      cout &lt;&lt;  final_x :   &lt;&lt; x &lt;&lt;  \\n  ; // 印出答案仍為 0  } // main",
+        "output": "評論:OK"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: 可以通過改變函數參數的數量，類型來實現函數多載(overloading)。  以下是一個簡單的例子~  --- class MyClass { public:   // Method Overloading (Function Overloading) in C++   void display() {     std::cout &lt;&lt;  Hello &lt;&lt; std::endl;   }    void display(int x) {     std::cout &lt;&lt;  Hello, your number is:  &lt;&lt; x &lt;&lt; std::endl;   } };  int main() {   MyClass obj;    // Call without parameters   obj.display();      // Call with one integer parameter   obj.display(5);      return 0; } ---  在上述程式碼中，我定義了兩個名為 `display` 的method，但是它們接受的參數不同。一個不接受任何參數，另一個接受一個integer參數。根據調用函數時提供的參數，適當的方法將被調用。這就是overload的基本概念w",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明同類別兩個方法如何實現多載overloading。  答案: C++的 overloading 是指相同函數名稱但參數型態或數量不同。回傳的資料型態不會影響到Overloading，相同與否沒有關係。由於編譯器根據參數內容來辨別該用哪個函數，參數內容一定要不同，不然會發生ambiguity(編譯器不知道該用哪個函數)。  #include &lt;iostream&gt;  using namespace std;  class Addition {          public:                  int add(int a, int b) {                    // 如果傳入的兩個數是整數型態，編譯器會使用此函數              cout &lt;&lt;  Using int-type addition  &lt;&lt; endl;             return a + b;         }          double add(double a, double b) {  // 若傳入的兩數是雙倍浮點數型態，會使用此函數。              cout &lt;&lt;  Using double-type addition  &lt;&lt; endl;             return a + b;         } };  int main()  {      Addition obj;      cout &lt;&lt; obj.add(12, 13) &lt;&lt;  \\n ;                // 傳入整數     cout &lt;&lt; obj.add( 1.01, 3.0212 ) &lt;&lt;  \\n ;    // 傳入雙倍浮點數  }",
+        "output": "評論:參數內容一定要不同，不然會發生ambiguity   舉的例子正好就是會造成ambiguous： obj.add(12, 3.0212)要呼叫哪一個？"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 後序式轉中序式  從左邊開始尋找不在括號內的運算子，將找到的運算子移動到其左邊的兩個運算元(或者已被括號的子算式)中間，並加上括號，直到式子已看到最右邊了。  參考資料: https://magiclen.org/arithmetic/  原式 = a b + c * d e + f * + w z + *           = ( a + b ) c * d e + f * + w z + *           = ( ( a + b ) * c ) d e + f * + w z + *           = ( ( a + b ) * c ) ( d + e ) f * + w z + *           = ( ( a + b ) * c ) ( ( d + e ) * f ) + w z + *           = ( ( ( a + b ) * c ) + ( ( d + e ) * f ) ) w z + *           = ( ( ( a + b ) * c ) + ( ( d + e ) * f ) ) ( w + z ) *           = ( ( ( ( a + b ) * c ) + ( ( d + e ) * f ) ) * ( w + z ) )  簡化 = ( ( a + b ) * c + ( d + e ) * f ) * ( w + z )",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 將此後序式postfix轉中序式infix，並詳述步驟。a b + c * d e + f * + w z + *  答案: 題目 : 將後序式 a b + c * d e + f * + w z + * ，轉換為中序式 infix。  後序式 postfix ( 左 -&gt; 右 -&gt; 中 )   中序式 infix ( 左 -&gt; 中 -&gt; 右 )   我會先將後序式寫成樹狀圖(如下圖)，再對照此圖寫出中序式  =&gt; ( ( a + b ) * c + ( d + e ) * f ) * (w + z )",
+        "output": "評論:Good!  Binary expression tree"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明兩個類別間的繼承inheritance。  答案: #include &lt;iostream&gt;  using namespace std;  class People {          protected:                  int    pro = 0;          void dance() {                          cout &lt;&lt; pro &lt;&lt; endl;                      }          private:                  int pri = 1;         void sing() {                          cout &lt;&lt; pri &lt;&lt; endl;                      }              public:                  int pub = 2;         void cry() {                          cout &lt;&lt; pub &lt;&lt; endl;                      }           };  class Students : public People {               public:                  void write() {                          cout &lt;&lt; d &lt;&lt; endl;             cout &lt;&lt; pro &lt;&lt; endl;               cout &lt;&lt; pub &lt;&lt; endl;                          // cout &lt;&lt; pri &lt;&lt; endl; ( 父類別private中的變數、函式無法被其子類別使用 )                      }                       private:                  int d = -1;      };  int main() {          Students man;     man.write();  }   父類別為People，而其子類別為Students。  一個子類別( Students )的物件，可以使用/控制父類別( People )裡在public及protected中所宣告的變數及函式。",
+        "output": "評論:Good!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 寫出C++程式碼說明傳值呼叫call by value。  答案: #include &lt;iostream&gt;  using namespace std ;  void CallByValue( int i, int k ) {     i = i + 100 ;     k = k * k + 20 ;     i = i + k ;  // 希望回傳的值是處理過後的i加上k       }  int main() {     int i = 2 ;     int k = 4 ;     CallByValue( i, k ) ; // 因為是void 所以值不會回傳      cout &lt;&lt; i &lt;&lt; endl ;     return 0 ;      }",
+        "output": "評論:OK"
+    }
+]

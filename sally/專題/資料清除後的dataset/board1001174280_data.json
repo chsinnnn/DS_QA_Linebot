@@ -1,0 +1,12 @@
+[
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例解說快速排序quick sort是否穩定stable。  答案: 不是，現假設一陣列裡有數個相同值大於等於pivot，  如果pivot右側的數值小於了pivot且數值交換的位置又剛好是相同值的數值 就會導致相同值的順序錯亂  範例：",
+        "output": "評論:Excellent explanation and the example!"
+    },
+    {
+        "instruction": "請根據以下問題的回答作出評論，並判斷回答是否正確",
+        "input": "題目: 舉例區別完全full、完整complete及平衡balanced二元樹的差異。  答案: 完全樹：  1.在level小於樹高的節點，每個點都是被填滿的  2.點到每個最遠的點的傳遞時間都是一樣的  3.資料數易受限  完整樹：  1.當樹高是h時，h-1以上的層是個完全樹  2.h層由左至右或由右至左填滿  平衡樹：  1.每個點的左右子樹的高度差不超過1  2.不需受由左至右填滿的規則",
+        "output": "評論:2.h層由左至右或由右至左填滿  By definition of a complete binary tree, the nodes at the last level are filled from the left."
+    }
+]
