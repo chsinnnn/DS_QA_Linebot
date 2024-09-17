@@ -15,11 +15,26 @@ def create_new_data(db):
     try:
         collection = db.stack
         data = [
-            {"Question": "將此後序式postfix轉中序式infix。a b + c * d e + f * + w z + *"},
-            {"Question": "將後序式postfix轉前序式prefix。a b + c * d e + f * + w z + *"},
-            {"Question": "合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。"},
-            {"Question": "+ * 2 4 6 * - 7 5是前序式嗎？為什麼？"},
-            {"Question": "算出後序式2 4 6 * + 7 5 - *的正確答案"}
+            {"Question": "將此後序式postfix轉中序式infix。a b + c * d e + f * + w z + *",
+             "Answer": [
+                "中序式是(((a + b) * c) * ((d + e) * (f + (w + z))))"
+            ]},
+            {"Question": "將後序式postfix轉前序式prefix。a b + c * d e + f * + w z + *",
+             "Answer": [
+                "* + + a b * + c + d e * f + w z"
+            ]},
+            {"Question": "合法運算式若有三組括弧，可以有幾種不同的形式？例如()()()和(()())就是二種不同的形式。",
+             "Answer": [
+                "合法運算式有三組括號時，可以有5種不同的形式，分別是((()))、(()())、(())()、()(()) 和 ()()()"
+            ]},
+            {"Question": "+ * 2 4 6 * - 7 5是前序式嗎？為什麼？",
+             "Answer": [
+                "不是，因為運算元的數量不正確。前序式需要每個運算元都有對應的運算符，才能正確計算。"
+            ]},
+            {"Question": "算出後序式2 4 6 * + 7 5 - *的正確答案",
+             "Answer": [
+                "52"
+            ]}
         ]
         result = collection.insert_many(data)
         pprint(result.inserted_ids)
