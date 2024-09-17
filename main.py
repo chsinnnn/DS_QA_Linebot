@@ -9,8 +9,9 @@ import redis
 import requests
 import os
 import datetime
-from linebot.models import CarouselColumn, TemplateSendMessage, CarouselTemplate
-from linebot.exceptions import LineBotApiError
+from linebot.v3.messaging import ShowLoadingAnimationRequest
+from linebot import AsyncLineBotApi
+from linebot.models import FlexSendMessage, BubbleContainer, BoxComponent, TextComponent, ButtonComponent, SeparatorComponent, URIAction
 os.chdir('/home/hsin/DS_QA_Linebot')
 
 app = Flask(__name__)
@@ -25,6 +26,10 @@ secret = config['LINE_SECRET']
 line_bot_api = LineBotApi(access_token)
 handler = WebhookHandler(secret)
 
+# 使用 AsyncApiClient
+#async_api = AsyncLineBotApi(access_token=access_token)
+
+
 # 連MongoDB
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
@@ -38,7 +43,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ '11027149','11027104', '11027133' ]
+special_student_ids = [ '11027149', '11027104',  '11027133' ]
 
 # MongoDB設定
 unit_collections = {
@@ -74,17 +79,37 @@ def handle_student_id(user_id, user_name, msg):
 
 def handle_unit_selection(event):
     quick_reply = QuickReply(items=[
-        QuickReplyButton(action=MessageAction(label="其他", text="其他")),
+        
         QuickReplyButton(action=MessageAction(label="指標", text="指標")),
         QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
         QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
         QuickReplyButton(action=MessageAction(label="排序", text="排序")),
         QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
-        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹"))
+        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
+        QuickReplyButton(action=MessageAction(label="其他", text="其他"))
     ])
 
     message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
     line_bot_api.reply_message(event.reply_token, message)
+
+def handle_unit_selection_toinsert(event):
+    quick_reply = QuickReply(items=[
+        
+        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
+        QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
+        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
+        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
+        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
+        QuickReplyButton(action=MessageAction(label="其他", text="其他"))
+    ])
+
+    message = TextSendMessage(text="請選擇一個單元進行新增題目", quick_reply=quick_reply)
+    line_bot_api.reply_message(event.reply_token, message)
+
+def handle_question_insert(event, unit):
+    collection = unit_collections[unit]
+    collection.insert_one()
 
 def handle_question_display(event, unit):  # 多個題目挑選
     collection = unit_collections[unit]
@@ -135,7 +160,7 @@ def handle_question_display(event, unit):  # 多個題目挑選
                         "action": {
                             "type": "message",
                             "label": f"回答",
-                            "text": f"回答{question['Question']}"
+                            "text": f"我要回答:\n{question['Question']}"
                         }
                     }
                 ]
@@ -167,12 +192,27 @@ def handle_question_answer(event, question_title):  # 已選好題目
     if question:
         user_id = event.source.user_id
         redis_client.hset(user_id, "current_question", question_title)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以下問題：\n\n{question_title}"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題(回答50字以下)"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
 
-def handle_user_answer(event, user_answer):
+def handle_user_answer(event, user_answer, student_id):
     user_id = event.source.user_id
+
+    special_keywords = {
+        "我要作答": lambda event: handle_unit_selection(event),
+        "歡迎留下您寶貴的建議:D": lambda event: handle_awaiting_suggestion(event),
+        "顯示作答紀錄": lambda event: show_unit_answer_records(event, student_id),
+        "小提醒": lambda event: send_warning_message(event.reply_token)
+    }
+
+    # 檢查用戶輸入是否為特殊指令
+    if user_answer in special_keywords:
+        special_keywords[user_answer](event)
+        # 跳出回答題目模式
+        redis_client.hdel(user_id, 'current_question')
+        return
+
     question_title = redis_client.hget(user_id, "current_question")
 
     if question_title:
@@ -214,92 +254,380 @@ def handle_user_answer(event, user_answer):
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="未找到對應的問題，請重新選擇題目。"))
 
-def handle_suggestion(event):
+def handle_suggestion(event, student_id):
     user_id = event.source.user_id
     suggestion = event.message.text
 
-    if suggestion:
-        suggestion_data = {
-            "user_id": user_id,
-            "suggestion": suggestion
-        }
-        suggestion_collection.insert_one(suggestion_data)
-        redis_client.hdel(user_id, 'awaiting_suggestion')
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="謝謝您的建議！我們會努力改進。"))
+    special_keywords = {
+        "我要作答": handle_unit_selection,
+        "歡迎留下您寶貴的建議:D": handle_awaiting_suggestion,
+        "顯示作答紀錄": lambda event: show_unit_answer_records(event, student_id),
+        "小提醒": lambda event: send_warning_message(event.reply_token)
+    }
+
+    if suggestion in special_keywords:
+        special_keywords[suggestion](event)
+        # 如果是 "歡迎留下您寶貴的建議:D"，設置標誌表示進入意見回饋模式
+        if suggestion == "歡迎留下您寶貴的建議:D":
+            redis_client.hset(user_id, 'awaiting_suggestion', 'true')
+        else:
+            # 跳出意見回饋模式
+            redis_client.hdel(user_id, 'awaiting_suggestion')
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+        # 檢查是否在等待意見回饋
+        awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
+        if awaiting_suggestion:
+            # 儲存意見回饋數據
+            suggestion_data = {
+                "user_id": user_id,
+                "student_id": student_id,  # 儲存學號
+                "suggestion": suggestion
+            }
+            suggestion_collection.insert_one(suggestion_data)
+            redis_client.hdel(user_id, 'awaiting_suggestion')
+            
+            # 設定語言模型API的URL
+            model_api_url = "http://192.168.100.140:3000/generate"  # 替換為語言模型伺服器的IP地址和端口號
 
-def send_quick_ans_records_reply(reply_token):
-    quick_reply = QuickReply(
-        items=[
-        QuickReplyButton(action=MessageAction(label="全部", text="查看「全部」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="其他", text="查看單元「其他」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="指標", text="查看單元「指標」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="佇列", text="查看單元「佇列」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="遞迴", text="查看單元「遞迴」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="排序", text="查看單元「排序」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="堆疊", text="查看單元「堆疊」的作答紀錄")),
-        QuickReplyButton(action=MessageAction(label="二元樹", text="查看單元「二元樹」的作答紀錄"))
-        ]
-    )
-    line_bot_api.reply_message(
-        reply_token,
-        TextSendMessage(text="選擇要查看作答紀錄的單元", quick_reply=quick_reply)
+            # 準備發送到語言模型API的數據
+            payload = {
+                "input_text": suggestion  # 確認API接收的字段名為 'input_text'
+            }
+
+            try:
+                # 發送POST請求到語言模型API
+                response = requests.post(model_api_url, json=payload)
+                
+                # 檢查請求是否成功
+                if response.status_code == 200:
+                    # 解析API回覆的JSON數據
+                    data = response.json()
+                    model_reply = data.get("output", "模型未能生成回覆")
+                    # 發送回覆給使用者
+                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=model_reply))
+                else:
+                    print(f"Error: Received status code {response.status_code}")
+                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型回覆失敗，請稍後再試。"))
+            except requests.exceptions.RequestException as e:
+                print(f"Request error: {e}")
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無法連接到模型伺服器。"))
+
+        else:
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入有效的指令或意見回饋。"))
+
+def handle_admin_view_suggestions(event):
+    suggestions = list(suggestion_collection.find())
+    
+    if len(suggestions) == 0:
+        line_bot_api.reply_message(event.reply_token, [TextSendMessage(text="目前沒有任何意見回饋。")])
+        return
+    
+    # 排除重複內容
+    unique_suggestions = []
+    seen_suggestions = set()
+    for suggestion in suggestions:
+        student_id = suggestion.get("student_id", "未知")
+        suggestion_text = suggestion.get("suggestion", "無內容")
+        if suggestion_text not in seen_suggestions:
+            seen_suggestions.add(suggestion_text)
+            unique_suggestions.append({
+                "student_id": student_id,
+                "suggestion": suggestion_text
+            })
+    
+    # 分組，每5筆回饋組成一張卡片
+    grouped_suggestions = [unique_suggestions[i:i + 5] for i in range(0, len(unique_suggestions), 5)]
+
+    bubbles = []
+    
+    for group in grouped_suggestions:
+        body_contents = []
+        for item in group:
+            body_contents.append({
+                "type": "text",
+                "text": f"學號 : {item['student_id']}\n意見 : {item['suggestion']}",
+                "wrap": True,
+                "size": "md"
+            })
+            # 在每條意見之後添加一個 separator
+            body_contents.append({
+                "type": "separator",
+                "margin": "md"
+            })
+
+
+        bubble = {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "意見回饋",
+                        "weight": "bold",
+                        "size": "xl",
+                        "wrap": True,
+                        "align": "center",
+                        "gravity": "center",
+                        "color": "#FFFFFF"
+                    }
+                ]
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": body_contents
+            },
+            "styles": {
+                "header": {
+                    "backgroundColor": "#668166"  # header底色
+                }
+            }
+        }
+        bubbles.append(bubble)
+
+    # 只回應前 5 張卡片
+    if len(bubbles) > 5:
+        bubbles = bubbles[:5]
+
+    # 創建Flex訊息，組成carousel結構
+    flex_message = FlexSendMessage(
+        alt_text="意見回饋",
+        contents={
+            "type": "carousel",
+            "contents": bubbles
+        }
     )
 
-def show_unit_answer_records(event, student_id, selected_unit):
-    # 使用 keys 函數獲取所有與該 student_id 相關的答題時間的 keys
+    
+
+    line_bot_api.reply_message(event.reply_token, flex_message)
+
+def handle_awaiting_suggestion(event):
+    user_id = event.source.user_id
+    redis_client.hset(user_id, 'awaiting_suggestion', 'true')
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+
+
+def create_unit_bubble(unit_name, details):
+    times_and_num = "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
+    bubble = {
+      "type": "bubble",
+      "size": "micro",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": f"單元 : {unit_name}",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "md",
+            "gravity": "center"
+          },
+          {
+            "type": "text",
+            "text": f"{details['answer_percentage']}%",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "xs",
+            "gravity": "center",
+            "margin": "lg"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "filler"
+                  }
+                ],
+                "width": f"{details['answer_percentage']}%",
+                "backgroundColor": "#EBA281",
+                "height": "6px"
+              }
+            ],
+            "backgroundColor": "#FFFFFF",
+            "height": "6px",
+            "margin": "sm"
+          }
+        ],
+        "backgroundColor": "#668166",
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "答題時間及題數:",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": True,
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": times_and_num,
+                "margin": "none",
+                "size": "sm",
+                "wrap": True,
+              }
+            ],
+            "flex": 1
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "styles": {
+        "footer": {
+          "separator": False
+        }
+      }
+    }
+    return bubble
+
+def create_no_record_bubble():
+    return {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "md",
+            "gravity": "center",
+            "text": "❗❗❗"
+          },
+          {
+            "type": "text",
+            "text": "你還沒回答任何問題",
+            "size": "lg",
+            "color": "#F9F2DC",
+            "margin": "none",
+            "weight": "bold"
+          }
+        ],
+        "backgroundColor": "#668166",
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "我要作答",
+                  "text": "我要作答"
+                },
+                "color": "#668166",
+                "size": "lg",
+              }
+            ],
+            "backgroundColor": "#F9F2DC",
+            "borderWidth": "none",
+            "alignItems": "center",
+            "cornerRadius": "xxl"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "styles": {
+        "footer": {
+          "separator": True
+        }
+      }
+    }
+
+def show_unit_answer_records(event, student_id):
     pattern = f"{student_id}_answer_time:*"
     answer_time_keys = redis_client.keys(pattern)
     question_titles = [key.split(':')[1] for key in redis_client.keys(pattern)]
 
-    # 檢查是否獲取到 keys
     if not answer_time_keys:
-        line_bot_api.reply_message(event.reply_token, "沒有找到任何答題記錄。")
+        no_record_bubble = create_no_record_bubble()
+        flex_message = FlexSendMessage(alt_text="沒有答題記錄", contents={"type": "carousel", "contents": [no_record_bubble]})
+        line_bot_api.reply_message(event.reply_token, flex_message)
     else:
-    # 遍歷 keys，獲取並格式化答題時間
         unit_answer_counts = {}
-        for key in answer_time_keys:
-            answer_times = redis_client.lrange(key, 0, -1)
-            question_title = key.split("_answer_time:")[1]
+        unit_total_counts = {}
+        
+        # 計算每個單元的總題數
+        for unit, collection in unit_collections.items():
+            total_questions = collection.count_documents({})
+            unit_total_counts[unit] = total_questions
 
-            # 直接使用 question_title_key 查詢，避免不必要的內層循環
-            for unit, collection in unit_collections.items():
-                if collection.find_one({"Question": question_title}):
-                    unit_name = unit
-                    if unit_name not in unit_answer_counts:
-                        unit_answer_counts[unit_name] = {"count": 0, "times": {}}
-                    unit_answer_counts[unit_name]["count"] += len(answer_times)  # 直接增加回答次數
-                    for time in answer_times:
-                        if time not in unit_answer_counts[unit_name]["times"]:
-                            unit_answer_counts[unit_name]["times"][time] = 0
-                        unit_answer_counts[unit_name]["times"][time] += 1
-                    break  # 找到對應單元後跳出循環
+    # 用於追蹤已經計算過的問題
+    calculated_questions = set()
 
-        if selected_unit in unit_answer_counts:
-            details = unit_answer_counts[selected_unit]
-            units_reply_message = (
-                f"單元: {selected_unit} 回答次數: {details['count']} \n答題時間及題數:\n" +
-                "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
-            )
-        elif selected_unit == "全部":
-            all_units_reply_message = ""
-            for unit, details in unit_answer_counts.items():
-                times_and_num = "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
-                # 決定是否在新的單元信息前添加換行符
-                if all_units_reply_message == "":  # 如果不是第一個單元，添加換行符
-                    unit_message = f"單元: {unit} 回答次數: {details['count']} \n答題時間及題數:\n{times_and_num}"
-                else:  # 如果是第一個單元，不在開頭加換行符
-                    unit_message = f"\n\n單元: {unit} 回答次數: {details['count']} \n答題時間及題數:\n{times_and_num}"
-                
-                all_units_reply_message += unit_message
+    for key in answer_time_keys:
+        answer_times = redis_client.lrange(key, 0, -1)
+        question_title = key.split("_answer_time:")[1]
 
-            units_reply_message = all_units_reply_message
-        else:
-            units_reply_message = f"單元: {selected_unit}\n沒有找到任何答題記錄。"
+        # 如果問題已經計算過，跳過
+        if question_title in calculated_questions:
+            continue
 
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=units_reply_message))
+        for unit, collection in unit_collections.items():
+            if collection.find_one({"Question": question_title}):
+                unit_name = unit
+                if unit_name not in unit_answer_counts:
+                    unit_answer_counts[unit_name] = {"count": 0, "times": {}}
+                unit_answer_counts[unit_name]["count"] += 1  # 每個問題只計算一次
+                for time in answer_times:
+                    if time not in unit_answer_counts[unit_name]["times"]:
+                        unit_answer_counts[unit_name]["times"][time] = 0
+                    unit_answer_counts[unit_name]["times"][time] += 1
+                # 標記問題為已計算
+                calculated_questions.add(question_title)
+                break
 
+        # 計算每個單元的回答題數百分比
+        for unit, counts in unit_answer_counts.items():
+            total_questions = unit_total_counts.get(unit, 0)
+            answered_questions = counts["count"]
+            if total_questions > 0:
+                answer_percentage = (answered_questions / total_questions) * 100
+            else:
+                answer_percentage = 0
+            # 取到小數點後一位
+            unit_answer_counts[unit]["answer_percentage"] = round(answer_percentage, 1)
+
+        bubbles = []
+        for unit, details in unit_answer_counts.items():
+            details["total_questions"] = unit_total_counts.get(unit, 0)
+            bubbles.append(create_unit_bubble(unit, details))
+
+    flex_message = FlexSendMessage(alt_text="答題記錄", contents={"type": "carousel", "contents": bubbles})
+    line_bot_api.reply_message(event.reply_token, flex_message)
+        
 def send_question_to_mymodel(question):
     # 設定語言模型API的URL
     model_api_url = "http://192.168.100.140:5001/generate"  # 替換為語言模型伺服器的IP地址和端口號
@@ -334,40 +662,73 @@ def handle_message(event):
     student_id = None if user_document is None else user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-    
+    # 檢查 Redis 中是否有等待輸入題目的標誌
+    #awaiting_question = redis_client.hget(student_id, 'awaiting_question')
+    #awaiting_unit = redis_client.hget(student_id, 'awaiting_unit')
+
     if awaiting_suggestion:
-        handle_suggestion(event)
+        handle_suggestion(event, student_id)
     elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
-        if msg == "我要作答":
+        if msg == "我要作答" :  #學生
             handle_unit_selection(event)
+        
+        #elif msg == "我要作答" and student_id in special_student_ids:  #老師助教
+            #redis_client.hset(student_id, 'awaiting_unit', 'true')
+            #redis_client.hset(student_id, 'awaiting_question', 'true')
+            #handle_unit_selection_toinsert(event)
+        
         elif msg == "歡迎留下您寶貴的建議:D":
-            redis_client.hset(user_id, 'awaiting_suggestion', 'true')
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
-        elif msg in unit_collections:
+            if student_id in special_student_ids:
+                handle_admin_view_suggestions(event)
+            else:
+                redis_client.hset(user_id, 'awaiting_suggestion', 'true')
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+        elif msg in unit_collections:  #學生
             handle_question_display(event, msg)
-        elif msg.startswith("回答"):
-            question_title = msg[2:]
+        #elif awaiting_unit == 'true' and msg in unit_collections and student_id in special_student_ids :  #老師助教
+            #selected_unit = msg
+            #redis_client.hset(student_id, 'selected_unit', selected_unit)
+            #message = TextSendMessage(text="請輸入您的題目")
+            #line_bot_api.reply_message(event, message)
+            #redis_client.hset(student_id, 'awaiting_question', 'true')
+            #redis_client.hdel(student_id, 'awaiting_unit')
+        #elif awaiting_question == 'true':
+            # 接收並儲存題目
+            #selected_unit = redis_client.hget(student_id, 'selected_unit')
+            #collection = unit_collections[selected_unit]
+            #data = [{"Question": msg}]
+            #collection.insert_one(data)
+            #message = TextSendMessage(text="題目已成功新增到資料庫中")
+            #line_bot_api.reply_message(event, message)
+            # 清除標誌
+            #redis_client.hdel(student_id, 'awaiting_question')
+            #redis_client.hdel(student_id, 'selected_unit')
+        elif msg.startswith("我要回答:"):
+            question_title = msg[6:]
             handle_question_answer(event, question_title)
         elif redis_client.hget(user_id, "current_question"):
-            handle_user_answer(event, msg)
+            handle_user_answer(event, msg, student_id)
         elif msg == "顯示作答紀錄":
-            send_quick_ans_records_reply(event.reply_token)
-        elif msg.startswith("查看") and msg.endswith("的作答紀錄"):
-            # 從消息文本中提取單元名稱
-            selected_unit = msg.split("「")[1].split("」")[0]
-            # 調用函數顯示該單元的作答紀錄
-            show_unit_answer_records(event, student_id, selected_unit)
+            show_unit_answer_records(event, student_id)
         elif student_id in special_student_ids:
             if msg == "小提醒":
-                send_quick_reply(event.reply_token)
+                show_warning_messages(event.reply_token)
                 # 設置標誌以表示用戶現在可以輸入提醒訊息
                 redis_client.hset(user_id, 'awaiting_warning_message', 'true')
             elif msg.startswith("刪除提醒"):
                 show_warning_messages(event.reply_token)
+            elif msg.startswith("新增提醒"):
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入新的提醒"))
+                # 重新設置標誌以表示用戶現在可以輸入提醒訊息
+                redis_client.hset(user_id, 'awaiting_warning_message', 'true')
             elif msg.startswith("查看提醒"):
                 send_warning_message(event.reply_token)
+                redis_client.hdel(user_id, 'awaiting_warning_message')
+            elif msg.startswith("結束"):
+                send_warning_message(event.reply_token)
+                # 清除標誌
                 redis_client.hdel(user_id, 'awaiting_warning_message')  
-            elif msg.startswith("刪除:"):
+            elif msg.startswith("刪除 :"):
                 warning_message = msg.split(':')[1]
                 delete_warning_message(warning_message, event.reply_token)
             elif msg == "保留原有提醒":
@@ -394,18 +755,6 @@ def handle_message(event):
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入符合格式的學號（8位數字）。"))
 
-def send_quick_reply(reply_token):
-    quick_reply_buttons = QuickReply(
-        items=[
-            QuickReplyButton(action=MessageAction(label="是", text="刪除提醒")),
-            QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
-            QuickReplyButton(action=MessageAction(label="查看提醒", text="查看提醒"))
-        ]
-    )
-    line_bot_api.reply_message(
-        reply_token,
-        TextSendMessage(text="要刪除原有的提醒再加入新的提醒嗎？", quick_reply=quick_reply_buttons)
-    )
 
 def show_warning_messages(reply_token):
     warnings = list(warn_collection.find({}))
@@ -431,7 +780,7 @@ def show_warning_messages(reply_token):
                         "action": {
                             "type": "message",
                             "label": f"x",
-                            "text": f"刪除:{warning['message']}"
+                            "text": f"刪除 :{warning['message']}"  # 按下按鈕會發送此訊息
                         },
                     }
                 ]
@@ -465,6 +814,36 @@ def show_warning_messages(reply_token):
                 "layout": "vertical",
                 "contents": contents
             },
+            "footer": {
+                "type": "box",
+                "layout": "horizontal",  # 水平佈局
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "color": "#F9F2DC",
+                        "action": {
+                            "type": "message",
+                            "label": "新增提醒",
+                            "text": "新增提醒"  # 按下按鈕會發送此訊息
+                        },
+                        "flex": 1,
+                        "margin": "md"  # 增加按鈕的 margin 作為間距
+                    },
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "color": "#F9F2DC",
+                        "action": {
+                            "type": "message",
+                            "label": "結束",
+                            "text": "結束"  # 按下按鈕會發送此訊息
+                        },
+                        "flex": 1,
+                        "margin": "md"  # 同樣設置 margin
+                    }
+                ]
+            },
             "styles": {
                 "header": {
                     "backgroundColor": "#668166" #header底色
@@ -478,27 +857,17 @@ def show_warning_messages(reply_token):
         )
         line_bot_api.reply_message(reply_token, flex_message)
     else:
-        # 如果沒有提醒可以刪除，提示用戶輸入新的提醒
         line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。請輸入新的提醒"))
 
 def delete_warning_message(warning_message, reply_token):
     warn_collection.delete_one({'message': warning_message})
     remaining_warnings = list(warn_collection.find({}))
-    if remaining_warnings:
-        quick_reply_buttons = QuickReply(
-            items=[
-                QuickReplyButton(action=MessageAction(label="是", text="刪除提醒")),
-                QuickReplyButton(action=MessageAction(label="否", text="保留原有提醒")),
-                QuickReplyButton(action=MessageAction(label="查看提醒", text="查看提醒"))
-            ]
-        )
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。您還要刪除其他提醒嗎？如果不刪除，請輸入新的提醒", quick_reply=quick_reply_buttons))
-    else:
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒已刪除。請輸入新的提醒。"))
+    show_warning_messages(reply_token)
+    
 
 def save_warning_message(message, reply_token):
     warn_collection.insert_one({"message": message})
-    send_warning_message(reply_token)
+    show_warning_messages(reply_token)
     ##line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒訊息已儲存。"))
 
 def send_warning_message(reply_token):
@@ -578,3 +947,4 @@ def callback():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
+    

@@ -9,13 +9,14 @@ import redis
 import requests
 import os
 import datetime
-from linebot.models import CarouselColumn, TemplateSendMessage, CarouselTemplate
-
+from linebot.v3.messaging import ShowLoadingAnimationRequest
+from linebot import AsyncLineBotApi
+from linebot.models import FlexSendMessage, BubbleContainer, BoxComponent, TextComponent, ButtonComponent, SeparatorComponent, URIAction
 os.chdir('/home/hsin/DS_QA_Linebot')
 
 app = Flask(__name__)
 
-# Line Bot閮剖��
+# Line Bot設定
 with open('config.json') as config_file:
     config = json.load(config_file)
 
@@ -25,29 +26,34 @@ secret = config['LINE_SECRET']
 line_bot_api = LineBotApi(access_token)
 handler = WebhookHandler(secret)
 
-# ��ΚongoDB
+# 使用 AsyncApiClient
+#async_api = AsyncLineBotApi(access_token=access_token)
+
+
+# 連MongoDB
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
 mongo_collection = mongo_db["user_data"]
 suggestion_collection = mongo_db["suggestions"]
 warn_collection = mongo_db['WARN']
 
-# ��Οedis
+# 連Redis
 redis_host = 'localhost'
 redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ '11027149','11027104', '11027133' ]
+special_student_ids = [ '11027149', '11027104',  '11027133' ]
 
-# MongoDB閮剖��
+# MongoDB設定
 unit_collections = {
-    "��嗡��": mongo_db["other"],
-    "���璅�": mongo_db["pointer"],
-    "雿����": mongo_db["queue"],
-    "���餈�": mongo_db["recursion"],
-    "���摨�": mongo_db["sort"],
-    "������": mongo_db["stack"]
+    "其他": mongo_db["other"],
+    "指標": mongo_db["pointer"],
+    "佇列": mongo_db["queue"],
+    "遞迴": mongo_db["recursion"],
+    "排序": mongo_db["sort"],
+    "堆疊": mongo_db["stack"],
+    "二元樹": mongo_db["bst"]
 }
 
 def is_valid_student_id(student_id):
@@ -55,36 +61,57 @@ def is_valid_student_id(student_id):
 
 def handle_student_id(user_id, user_name, msg):
     if is_valid_student_id(msg):
-        # 摮貉����澆��甇�蝣綽��瑼Ｘ�亙飛�����臬�血歇蝬�摮���冽�� MongoDB 銝�
+        # 學號格式正確，檢查學號是否已經存在於 MongoDB 中
         db_existing = mongo_collection.find_one({"user_id": user_id})
         red_existing = redis_client.hexists(user_id, 'student_id')
         if db_existing and red_existing:
-            reply = f"{user_name}嚗���函��摮貉��撌脩����駁�����鈭����"
+            reply = f"{user_name}，您的學號已經登錄過了。"
         else:
-            # 撠�摮貉��摮���� Redis 銝�
+            # 將學號存入 Redis 中
             redis_client.hset(user_id, 'student_id', msg)
-            # ������撠�摮貉��摮���� MongoDB 銝�
+            # 同時將學號存入 MongoDB 中
             student_data = {"user_id": user_id, "name": user_name, "student_id": msg}
             mongo_collection.insert_one(student_data)
-            reply = f"{user_name}嚗�摮貉��撌脩�����������嚗�隢�暺���貉”��桃�����閬�雿�蝑�銝阡�賊�����!!"
+            reply = f"{user_name}，學號已紀錄成功！請點選表單的我要作答並選題目!!"
     else:
-        reply = "摮貉����澆��銝�甇�蝣綽��隢�頛詨��8雿���詨�����摮貉�����"
+        reply = "學號格式不正確，請輸入8位數字的學號。"
     return reply
 
 def handle_unit_selection(event):
     quick_reply = QuickReply(items=[
-        QuickReplyButton(action=MessageAction(label="��嗡��", text="��嗡��")),
-        QuickReplyButton(action=MessageAction(label="���璅�", text="���璅�")),
-        QuickReplyButton(action=MessageAction(label="雿����", text="雿����")),
-        QuickReplyButton(action=MessageAction(label="���餈�", text="���餈�")),
-        QuickReplyButton(action=MessageAction(label="���摨�", text="���摨�")),
-        QuickReplyButton(action=MessageAction(label="������", text="������"))
+        
+        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
+        QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
+        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
+        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
+        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
+        QuickReplyButton(action=MessageAction(label="其他", text="其他"))
     ])
 
-    message = TextSendMessage(text="隢���豢��銝������桀��", quick_reply=quick_reply)
+    message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
     line_bot_api.reply_message(event.reply_token, message)
 
-def handle_question_display(event, unit):  # 憭����憿���格�����
+def handle_unit_selection_toinsert(event):
+    quick_reply = QuickReply(items=[
+        
+        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
+        QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
+        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
+        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
+        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
+        QuickReplyButton(action=MessageAction(label="其他", text="其他"))
+    ])
+
+    message = TextSendMessage(text="請選擇一個單元進行新增題目", quick_reply=quick_reply)
+    line_bot_api.reply_message(event.reply_token, message)
+
+def handle_question_insert(event, unit):
+    collection = unit_collections[unit]
+    collection.insert_one()
+
+def handle_question_display(event, unit):  # 多個題目挑選
     collection = unit_collections[unit]
 
     questions = list(collection.find())
@@ -100,7 +127,7 @@ def handle_question_display(event, unit):  # 憭����憿���格��
                 "contents": [
                     {
                         "type": "text",
-                        "text": "憿����",
+                        "text": "題目",
                         "weight": "bold",
                         "size": "xl",
                         "wrap": True,
@@ -132,22 +159,22 @@ def handle_question_display(event, unit):  # 憭����憿���格��
                         "color": "#EBA281",
                         "action": {
                             "type": "message",
-                            "label": f"���蝑�",
-                            "text": f"���蝑�{question['Question']}"
+                            "label": f"回答",
+                            "text": f"我要回答:\n{question['Question']}"
                         }
                     }
                 ]
             },
             "styles": {
                 "header": {
-                    "backgroundColor": "#668166"  # header摨����
+                    "backgroundColor": "#668166"  # header底色
                 }
             }
         }
         bubbles.append(bubble)
 
     flex_message = FlexSendMessage(
-        alt_text="��豢��憿����",
+        alt_text="選擇題目",
         contents={
             "type": "carousel",
             "contents": bubbles
@@ -155,7 +182,7 @@ def handle_question_display(event, unit):  # 憭����憿���格��
     )
     line_bot_api.reply_message(event.reply_token, flex_message)
 
-def handle_question_answer(event, question_title):  # 撌脤�詨末憿����
+def handle_question_answer(event, question_title):  # 已選好題目
     question = None
     for unit, collection in unit_collections.items():
         question = collection.find_one({"Question": question_title})
@@ -165,233 +192,569 @@ def handle_question_answer(event, question_title):  # 撌脤�詨末憿���
     if question:
         user_id = event.source.user_id
         redis_client.hset(user_id, "current_question", question_title)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"隢����蝑�隞乩�����憿�嚗�\n\n{question_title}"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題(回答50字以下)"))
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="��曆����圈�����"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
 
-def handle_user_answer(event, user_answer):
+def handle_user_answer(event, user_answer, student_id):
     user_id = event.source.user_id
+
+    special_keywords = {
+        "我要作答": lambda event: handle_unit_selection(event),
+        "歡迎留下您寶貴的建議:D": lambda event: handle_awaiting_suggestion(event),
+        "顯示作答紀錄": lambda event: show_unit_answer_records(event, student_id),
+        "小提醒": lambda event: send_warning_message(event.reply_token)
+    }
+
+    # 檢查用戶輸入是否為特殊指令
+    if user_answer in special_keywords:
+        special_keywords[user_answer](event)
+        # 跳出回答題目模式
+        redis_client.hdel(user_id, 'current_question')
+        return
+
     question_title = redis_client.hget(user_id, "current_question")
 
     if question_title:
-        # 蝝�������蝑�憿���桃��������
+        # 紀錄回答題目的時間
         answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d")
 
-        # 摮���脩�冽�嗥��蝑�獢�
+        # 存儲用戶的答案
         redis_client.hset(user_id, "user_answer", user_answer)
 
-        # 敺� Redis 銝剛�����摮貉��
+        # 從 Redis 中讀取學號
         student_id = redis_client.hget(user_id, "student_id")
 
         if student_id:
-            # 蝣箔��憿���桀��蝑�獢������萄����冽�� Redis 銝�
+            # 確保題目和答案的鍵存在於 Redis 中
             qa_key = f"{student_id}_qa:{question_title}"
             answer_time_key = f"{student_id}_answer_time:{question_title}"
 
-            # 撠���冽�嗥��蝑�獢�摮���脣�典��銵其葉
+            # 將用戶的答案存儲在列表中
             redis_client.rpush(qa_key, user_answer)
             redis_client.rpush(answer_time_key, answer_submitted_time)
 
         else:
-            # 憒������⊥����曉�啣飛���嚗���������粹�航炊�����∪����嗡����拍�嗥����������孵��
-            print("��⊥����曉�啣飛���嚗���⊥��摮���脤����桀����冽�嗥��獢�")
+            # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
+            print("無法找到學號，無法存儲題目和用戶答案")
+        reply = f"題目：{question_title} 回答：{user_answer}"
+        # 將題目發送給 語言模型並回傳答案
+        answer = send_question_to_mymodel(reply)
 
-        # 撠�憿���桃�潮��蝯� Llama3 隡箸����其蒂�����喟��獢�
-        llama3_answer = send_question_to_llama3(question_title)
-
-        # 蝯����閬����閬�������摮�閮���荔�������祉�冽�嗥�����蝑���� Llama3 ������蝑�
-        reply_text = f"憿���殷��{question_title}\n\n��典��蝑�嚗�{user_answer}\n\nLlama3 ���蝑�嚗�{llama3_answer}"
-
-        # 雿輻�� TextSendMessage ���閬����摮�閮����
+        # 組合要回覆的文字訊息，包括用戶的回答和 語言模型評論
+        #reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\n評論：{answer}"
+        reply_text = f"{answer}"
+        
+        # 使用 TextSendMessage 回覆文字訊息
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
 
-        # 皜���斤�嗅��憿���桀����冽�嗅��蝑�
+        # 清除當前題目和用戶回答
         redis_client.hdel(user_id, "current_question")
         redis_client.hdel(user_id, "user_answer")
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="��芣�曉�啣�����������憿�嚗�隢������圈�豢��憿���柴��"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="未找到對應的問題，請重新選擇題目。"))
 
-def handle_suggestion(event):
+def handle_suggestion(event, student_id):
     user_id = event.source.user_id
     suggestion = event.message.text
 
-    if suggestion:
-        suggestion_data = {
-            "user_id": user_id,
-            "suggestion": suggestion
-        }
-        suggestion_collection.insert_one(suggestion_data)
-        redis_client.hdel(user_id, 'awaiting_suggestion')
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="雓�雓���函��撱箄降嚗������������芸����寥�脯��"))
+    special_keywords = {
+        "我要作答": handle_unit_selection,
+        "歡迎留下您寶貴的建議:D": handle_awaiting_suggestion,
+        "顯示作答紀錄": lambda event: show_unit_answer_records(event, student_id),
+        "小提醒": lambda event: send_warning_message(event.reply_token)
+    }
+
+    if suggestion in special_keywords:
+        special_keywords[suggestion](event)
+        # 如果是 "歡迎留下您寶貴的建議:D"，設置標誌表示進入意見回饋模式
+        if suggestion == "歡迎留下您寶貴的建議:D":
+            redis_client.hset(user_id, 'awaiting_suggestion', 'true')
+        else:
+            # 跳出意見回饋模式
+            redis_client.hdel(user_id, 'awaiting_suggestion')
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="隢�頛詨�交�函��撱箄降���"))
+        # 檢查是否在等待意見回饋
+        awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
+        if awaiting_suggestion:
+            # 儲存意見回饋數據
+            suggestion_data = {
+                "user_id": user_id,
+                "student_id": student_id,  # 儲存學號
+                "suggestion": suggestion
+            }
+            suggestion_collection.insert_one(suggestion_data)
+            redis_client.hdel(user_id, 'awaiting_suggestion')
+            
+            # 設定語言模型API的URL
+            model_api_url = "http://192.168.100.140:3000/generate"  # 替換為語言模型伺服器的IP地址和端口號
 
-def send_quick_ans_records_reply(reply_token):
-    quick_reply = QuickReply(
-        items=[
-        QuickReplyButton(action=MessageAction(label="��券��", text="��亦�������券�具�����雿�蝑�蝝����")),
-        QuickReplyButton(action=MessageAction(label="��嗡��", text="��亦����桀�������嗡��������雿�蝑�蝝����")),
-        QuickReplyButton(action=MessageAction(label="���璅�", text="��亦����桀��������璅�������雿�蝑�蝝����")),
-        QuickReplyButton(action=MessageAction(label="雿����", text="��亦����桀�����雿����������雿�蝑�蝝����")),
-        QuickReplyButton(action=MessageAction(label="���餈�", text="��亦����桀��������餈氬�����雿�蝑�蝝����")),
-        QuickReplyButton(action=MessageAction(label="���摨�", text="��亦����桀��������摨�������雿�蝑�蝝����")),
-        QuickReplyButton(action=MessageAction(label="������", text="��亦����桀�����������������雿�蝑�蝝����"))
-        ]
-    )
-    line_bot_api.reply_message(
-        reply_token,
-        TextSendMessage(text="��豢��閬���亦��雿�蝑�蝝���������桀��", quick_reply=quick_reply)
+            # 準備發送到語言模型API的數據
+            payload = {
+                "input_text": suggestion  # 確認API接收的字段名為 'input_text'
+            }
+
+            try:
+                # 發送POST請求到語言模型API
+                response = requests.post(model_api_url, json=payload)
+                
+                # 檢查請求是否成功
+                if response.status_code == 200:
+                    # 解析API回覆的JSON數據
+                    data = response.json()
+                    model_reply = data.get("output", "模型未能生成回覆")
+                    # 發送回覆給使用者
+                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=model_reply))
+                else:
+                    print(f"Error: Received status code {response.status_code}")
+                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型回覆失敗，請稍後再試。"))
+            except requests.exceptions.RequestException as e:
+                print(f"Request error: {e}")
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無法連接到模型伺服器。"))
+
+        else:
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入有效的指令或意見回饋。"))
+
+def handle_admin_view_suggestions(event):
+    suggestions = list(suggestion_collection.find())
+    
+    if len(suggestions) == 0:
+        line_bot_api.reply_message(event.reply_token, [TextSendMessage(text="目前沒有任何意見回饋。")])
+        return
+    
+    # 排除重複內容
+    unique_suggestions = []
+    seen_suggestions = set()
+    for suggestion in suggestions:
+        student_id = suggestion.get("student_id", "未知")
+        suggestion_text = suggestion.get("suggestion", "無內容")
+        if suggestion_text not in seen_suggestions:
+            seen_suggestions.add(suggestion_text)
+            unique_suggestions.append({
+                "student_id": student_id,
+                "suggestion": suggestion_text
+            })
+    
+    # 分組，每5筆回饋組成一張卡片
+    grouped_suggestions = [unique_suggestions[i:i + 5] for i in range(0, len(unique_suggestions), 5)]
+
+    bubbles = []
+    
+    for group in grouped_suggestions:
+        body_contents = []
+        for item in group:
+            body_contents.append({
+                "type": "text",
+                "text": f"學號 : {item['student_id']}\n意見 : {item['suggestion']}",
+                "wrap": True,
+                "size": "md"
+            })
+            # 在每條意見之後添加一個 separator
+            body_contents.append({
+                "type": "separator",
+                "margin": "md"
+            })
+
+
+        bubble = {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "意見回饋",
+                        "weight": "bold",
+                        "size": "xl",
+                        "wrap": True,
+                        "align": "center",
+                        "gravity": "center",
+                        "color": "#FFFFFF"
+                    }
+                ]
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": body_contents
+            },
+            "styles": {
+                "header": {
+                    "backgroundColor": "#668166"  # header底色
+                }
+            }
+        }
+        bubbles.append(bubble)
+
+    # 只回應前 5 張卡片
+    if len(bubbles) > 5:
+        bubbles = bubbles[:5]
+
+    # 創建Flex訊息，組成carousel結構
+    flex_message = FlexSendMessage(
+        alt_text="意見回饋",
+        contents={
+            "type": "carousel",
+            "contents": bubbles
+        }
     )
 
-def show_unit_answer_records(event, student_id, selected_unit):
-    # 雿輻�� keys ��賣�貊�脣�����������閰� student_id ��賊�����蝑�憿���������� keys
+    
+
+    line_bot_api.reply_message(event.reply_token, flex_message)
+
+def handle_awaiting_suggestion(event):
+    user_id = event.source.user_id
+    redis_client.hset(user_id, 'awaiting_suggestion', 'true')
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+
+
+def create_unit_bubble(unit_name, details):
+    times_and_num = "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
+    bubble = {
+      "type": "bubble",
+      "size": "micro",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": f"單元 : {unit_name}",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "md",
+            "gravity": "center"
+          },
+          {
+            "type": "text",
+            "text": f"{details['answer_percentage']}%",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "xs",
+            "gravity": "center",
+            "margin": "lg"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "filler"
+                  }
+                ],
+                "width": f"{details['answer_percentage']}%",
+                "backgroundColor": "#EBA281",
+                "height": "6px"
+              }
+            ],
+            "backgroundColor": "#FFFFFF",
+            "height": "6px",
+            "margin": "sm"
+          }
+        ],
+        "backgroundColor": "#668166",
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "答題時間及題數:",
+                "color": "#8C8C8C",
+                "size": "sm",
+                "wrap": True,
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": times_and_num,
+                "margin": "none",
+                "size": "sm",
+                "wrap": True,
+              }
+            ],
+            "flex": 1
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "styles": {
+        "footer": {
+          "separator": False
+        }
+      }
+    }
+    return bubble
+
+def create_no_record_bubble():
+    return {
+      "type": "bubble",
+      "size": "deca",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "color": "#ffffff",
+            "align": "start",
+            "size": "md",
+            "gravity": "center",
+            "text": "❗❗❗"
+          },
+          {
+            "type": "text",
+            "text": "你還沒回答任何問題",
+            "size": "lg",
+            "color": "#F9F2DC",
+            "margin": "none",
+            "weight": "bold"
+          }
+        ],
+        "backgroundColor": "#668166",
+        "paddingTop": "19px",
+        "paddingAll": "12px",
+        "paddingBottom": "16px"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "我要作答",
+                  "text": "我要作答"
+                },
+                "color": "#668166",
+                "size": "lg",
+              }
+            ],
+            "backgroundColor": "#F9F2DC",
+            "borderWidth": "none",
+            "alignItems": "center",
+            "cornerRadius": "xxl"
+          }
+        ],
+        "spacing": "md",
+        "paddingAll": "12px"
+      },
+      "styles": {
+        "footer": {
+          "separator": True
+        }
+      }
+    }
+
+def show_unit_answer_records(event, student_id):
     pattern = f"{student_id}_answer_time:*"
     answer_time_keys = redis_client.keys(pattern)
     question_titles = [key.split(':')[1] for key in redis_client.keys(pattern)]
 
-    # 瑼Ｘ�交�臬�衣�脣����� keys
     if not answer_time_keys:
-        line_bot_api.reply_message(event.reply_token, "瘝������曉�唬遙雿�蝑�憿�閮�������")
+        no_record_bubble = create_no_record_bubble()
+        flex_message = FlexSendMessage(alt_text="沒有答題記錄", contents={"type": "carousel", "contents": [no_record_bubble]})
+        line_bot_api.reply_message(event.reply_token, flex_message)
     else:
-    # ���甇� keys嚗���脣��銝行�澆�����蝑�憿�������
         unit_answer_counts = {}
-        for key in answer_time_keys:
-            answer_times = redis_client.lrange(key, 0, -1)
-            question_title = key.split("_answer_time:")[1]
+        unit_total_counts = {}
+        
+        # 計算每個單元的總題數
+        for unit, collection in unit_collections.items():
+            total_questions = collection.count_documents({})
+            unit_total_counts[unit] = total_questions
 
-            # ��湔�乩蝙��� question_title_key ��亥岷嚗���踹��銝�敹�閬������批惜敺芰��
-            for unit, collection in unit_collections.items():
-                if collection.find_one({"Question": question_title}):
-                    unit_name = unit
-                    if unit_name not in unit_answer_counts:
-                        unit_answer_counts[unit_name] = {"count": 0, "times": {}}
-                    unit_answer_counts[unit_name]["count"] += len(answer_times)  # ��湔�亙��������蝑�甈⊥��
-                    for time in answer_times:
-                        if time not in unit_answer_counts[unit_name]["times"]:
-                            unit_answer_counts[unit_name]["times"][time] = 0
-                        unit_answer_counts[unit_name]["times"][time] += 1
-                    break  # ��曉�啣�������桀��敺�頝喳�箏儐���
+    # 用於追蹤已經計算過的問題
+    calculated_questions = set()
 
-        if selected_unit in unit_answer_counts:
-            details = unit_answer_counts[selected_unit]
-            units_reply_message = (
-                f"��桀��: {selected_unit} ���蝑�甈⊥��: {details['count']} \n蝑�憿����������憿����:\n" +
-                "".join([f"{time}: {count}憿�\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}憿�" for i, (time, count) in enumerate(list(details['times'].items()))])
-            )
-        elif selected_unit == "��券��":
-            all_units_reply_message = ""
-            for unit, details in unit_answer_counts.items():
-                times_and_num = "".join([f"{time}: {count}憿�\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}憿�" for i, (time, count) in enumerate(list(details['times'].items()))])
-                # 瘙箏����臬�血�冽�啁����桀��靽⊥�臬��瘛餃�����銵�蝚�
-                if all_units_reply_message == "":  # 憒����銝���舐洵銝������桀��嚗�瘛餃�����銵�蝚�
-                    unit_message = f"��桀��: {unit} ���蝑�甈⊥��: {details['count']} \n蝑�憿����������憿����:\n{times_and_num}"
-                else:  # 憒������舐洵銝������桀��嚗�銝���券����剖�����銵�蝚�
-                    unit_message = f"\n\n��桀��: {unit} ���蝑�甈⊥��: {details['count']} \n蝑�憿����������憿����:\n{times_and_num}"
-                
-                all_units_reply_message += unit_message
+    for key in answer_time_keys:
+        answer_times = redis_client.lrange(key, 0, -1)
+        question_title = key.split("_answer_time:")[1]
 
-            units_reply_message = all_units_reply_message
-        else:
-            units_reply_message = f"��桀��: {selected_unit}\n瘝������曉�唬遙雿�蝑�憿�閮�������"
+        # 如果問題已經計算過，跳過
+        if question_title in calculated_questions:
+            continue
 
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=units_reply_message))
+        for unit, collection in unit_collections.items():
+            if collection.find_one({"Question": question_title}):
+                unit_name = unit
+                if unit_name not in unit_answer_counts:
+                    unit_answer_counts[unit_name] = {"count": 0, "times": {}}
+                unit_answer_counts[unit_name]["count"] += 1  # 每個問題只計算一次
+                for time in answer_times:
+                    if time not in unit_answer_counts[unit_name]["times"]:
+                        unit_answer_counts[unit_name]["times"][time] = 0
+                    unit_answer_counts[unit_name]["times"][time] += 1
+                # 標記問題為已計算
+                calculated_questions.add(question_title)
+                break
 
-def send_question_to_llama3(question):
-    llama3_server_url = 'http://192.168.100.137:5000/ask'
+        # 計算每個單元的回答題數百分比
+        for unit, counts in unit_answer_counts.items():
+            total_questions = unit_total_counts.get(unit, 0)
+            answered_questions = counts["count"]
+            if total_questions > 0:
+                answer_percentage = (answered_questions / total_questions) * 100
+            else:
+                answer_percentage = 0
+            # 取到小數點後一位
+            unit_answer_counts[unit]["answer_percentage"] = round(answer_percentage, 1)
+
+        bubbles = []
+        for unit, details in unit_answer_counts.items():
+            details["total_questions"] = unit_total_counts.get(unit, 0)
+            bubbles.append(create_unit_bubble(unit, details))
+
+    flex_message = FlexSendMessage(alt_text="答題記錄", contents={"type": "carousel", "contents": bubbles})
+    line_bot_api.reply_message(event.reply_token, flex_message)
+        
+def send_question_to_mymodel(question):
+    # 設定語言模型API的URL
+    model_api_url = "http://192.168.100.140:5001/generate"  # 替換為語言模型伺服器的IP地址和端口號
+
+    # 準備發送的數據
+    payload = {
+        "input_text": question  # 修改這裡的鍵名為 input_text，符合API預期的字段
+    }
 
     try:
-        print(f"Sending question to Llama3 server: {llama3_server_url}")
-        response = requests.post(llama3_server_url, json={'question': question})
-        response.raise_for_status()
-        answer = response.json().get('answer', '��⊥����脣�����蝑�')
-        print(f"Received answer from Llama3 server: {answer}")
-        return answer
+        # 發送POST請求到語言模型的API
+        response = requests.post(model_api_url, json=payload)
+        # 檢查請求是否成功
+        if response.status_code == 200:
+            # 解析回覆的JSON數據
+            data = response.json()
+            return data.get("output", "模型未能生成回覆")
+        else:
+            print(f"Error: Received status code {response.status_code}")
+            return "模型回覆失敗，請稍後再試。"
     except requests.exceptions.RequestException as e:
-        print(f"Error sending question to Llama3: {e}")
-        return '��⊥����脣�����蝑�'
+        print(f"Request error: {e}")
+        return "無法連接到模型伺服器。"
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+
     user_id = event.source.user_id
     user_profile = line_bot_api.get_profile(user_id)
     user_name = user_profile.display_name
     user_document = mongo_collection.find_one({"user_id": user_id})
-    student_id = user_document.get("student_id")
+    student_id = None if user_document is None else user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-    
+    # 檢查 Redis 中是否有等待輸入題目的標誌
+    #awaiting_question = redis_client.hget(student_id, 'awaiting_question')
+    #awaiting_unit = redis_client.hget(student_id, 'awaiting_unit')
 
     if awaiting_suggestion:
-        handle_suggestion(event)
+        handle_suggestion(event, student_id)
     elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
-        if msg == "���閬�雿�蝑�":
+        if msg == "我要作答" :  #學生
             handle_unit_selection(event)
-        elif msg == "甇∟�����銝���典窄鞎渡��撱箄降:D":
-            redis_client.hset(user_id, 'awaiting_suggestion', 'true')
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="隢�頛詨�交�函��撱箄降���"))
-        elif msg in unit_collections:
+        
+        #elif msg == "我要作答" and student_id in special_student_ids:  #老師助教
+            #redis_client.hset(student_id, 'awaiting_unit', 'true')
+            #redis_client.hset(student_id, 'awaiting_question', 'true')
+            #handle_unit_selection_toinsert(event)
+        
+        elif msg == "歡迎留下您寶貴的建議:D":
+            if student_id in special_student_ids:
+                handle_admin_view_suggestions(event)
+            else:
+                redis_client.hset(user_id, 'awaiting_suggestion', 'true')
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+        elif msg in unit_collections:  #學生
             handle_question_display(event, msg)
-        elif msg.startswith("���蝑�"):
-            question_title = msg[2:]
+        #elif awaiting_unit == 'true' and msg in unit_collections and student_id in special_student_ids :  #老師助教
+            #selected_unit = msg
+            #redis_client.hset(student_id, 'selected_unit', selected_unit)
+            #message = TextSendMessage(text="請輸入您的題目")
+            #line_bot_api.reply_message(event, message)
+            #redis_client.hset(student_id, 'awaiting_question', 'true')
+            #redis_client.hdel(student_id, 'awaiting_unit')
+        #elif awaiting_question == 'true':
+            # 接收並儲存題目
+            #selected_unit = redis_client.hget(student_id, 'selected_unit')
+            #collection = unit_collections[selected_unit]
+            #data = [{"Question": msg}]
+            #collection.insert_one(data)
+            #message = TextSendMessage(text="題目已成功新增到資料庫中")
+            #line_bot_api.reply_message(event, message)
+            # 清除標誌
+            #redis_client.hdel(student_id, 'awaiting_question')
+            #redis_client.hdel(student_id, 'selected_unit')
+        elif msg.startswith("我要回答:"):
+            question_title = msg[6:]
             handle_question_answer(event, question_title)
         elif redis_client.hget(user_id, "current_question"):
-            handle_user_answer(event, msg)
-        elif msg == "憿舐內雿�蝑�蝝����":
-            send_quick_ans_records_reply(event.reply_token)
-        elif msg.startswith("��亦��") and msg.endswith("���雿�蝑�蝝����"):
-            # 敺�瘨���舀����砌葉��������桀�����蝔�
-            selected_unit = msg.split("���")[1].split("���")[0]
-            # 隤輻�典�賣�賊＊蝷箄府��桀�����雿�蝑�蝝����
-            show_unit_answer_records(event, student_id, selected_unit)
+            handle_user_answer(event, msg, student_id)
+        elif msg == "顯示作答紀錄":
+            show_unit_answer_records(event, student_id)
         elif student_id in special_student_ids:
-            if msg == "撠�������":
-                send_quick_reply(event.reply_token)
-                # 閮剔蔭璅�隤�隞亥”蝷箇�冽�嗥�曉�典�臭誑頛詨�交�����閮����
-                redis_client.hset(user_id, 'awaiting_warning_message', 'true')
-            elif msg.startswith("��芷�斗�����"):
+            if msg == "小提醒":
                 show_warning_messages(event.reply_token)
-            elif msg.startswith("��亦��������"):
+                # 設置標誌以表示用戶現在可以輸入提醒訊息
+                redis_client.hset(user_id, 'awaiting_warning_message', 'true')
+            elif msg.startswith("刪除提醒"):
+                show_warning_messages(event.reply_token)
+            elif msg.startswith("新增提醒"):
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入新的提醒"))
+                # 重新設置標誌以表示用戶現在可以輸入提醒訊息
+                redis_client.hset(user_id, 'awaiting_warning_message', 'true')
+            elif msg.startswith("查看提醒"):
                 send_warning_message(event.reply_token)
+                redis_client.hdel(user_id, 'awaiting_warning_message')
+            elif msg.startswith("結束"):
+                send_warning_message(event.reply_token)
+                # 清除標誌
                 redis_client.hdel(user_id, 'awaiting_warning_message')  
-            elif msg.startswith("��芷��:"):
+            elif msg.startswith("刪除 :"):
                 warning_message = msg.split(':')[1]
                 delete_warning_message(warning_message, event.reply_token)
-            elif msg == "靽����������������":
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="隢�頛詨�交�啁��������"))
-                # �����啗身蝵格��隤�隞亥”蝷箇�冽�嗥�曉�典�臭誑頛詨�交�����閮����
+            elif msg == "保留原有提醒":
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入新的提醒"))
+                # 重新設置標誌以表示用戶現在可以輸入提醒訊息
                 redis_client.hset(user_id, 'awaiting_warning_message', 'true')
             else:
-                # ��典�脣��������閮���臭�����瑼Ｘ�交�臬�衣�������函��敺�������閮���舐��頛詨��
+                # 在儲存提醒訊息之前檢查是否真的在等待提醒訊息的輸入
                 if redis_client.hget(user_id, 'awaiting_warning_message') == 'true':
                     save_warning_message(msg, event.reply_token)
-                    # 皜���斗��隤�
+                    # 清除標誌
                     redis_client.hdel(user_id, 'awaiting_warning_message')
                 else:
-                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="��⊥�����隞歹��隢������啗撓��乓��"))
-        elif student_id not in special_student_ids and msg == "撠�������":
+                    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
+        elif student_id not in special_student_ids and msg == "小提醒":
             send_warning_message(event.reply_token)
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="��⊥�����隞歹��隢������啗撓��乓��"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
     
     else:
         if is_valid_student_id(msg):
             reply = handle_student_id(user_id, user_name, msg)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="隢����頛詨�亦泵�����澆�����摮貉��嚗�8雿���詨��嚗����"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入符合格式的學號（8位數字）。"))
 
-def send_quick_reply(reply_token):
-    quick_reply_buttons = QuickReply(
-        items=[
-            QuickReplyButton(action=MessageAction(label="���", text="��芷�斗�����")),
-            QuickReplyButton(action=MessageAction(label="���", text="靽����������������")),
-            QuickReplyButton(action=MessageAction(label="��亦��������", text="��亦��������"))
-        ]
-    )
-    line_bot_api.reply_message(
-        reply_token,
-        TextSendMessage(text="閬���芷�文����������������������交�啁�����������嚗�", quick_reply=quick_reply_buttons)
-    )
 
 def show_warning_messages(reply_token):
     warnings = list(warn_collection.find({}))
@@ -417,12 +780,12 @@ def show_warning_messages(reply_token):
                         "action": {
                             "type": "message",
                             "label": f"x",
-                            "text": f"��芷��:{warning['message']}"
+                            "text": f"刪除 :{warning['message']}"  # 按下按鈕會發送此訊息
                         },
                     }
                 ]
             })
-            # ���������
+            # 加間隔
             contents.append({
                 "type": "separator",
                 "margin": "md"
@@ -436,7 +799,7 @@ def show_warning_messages(reply_token):
                 "contents": [
                     {
                         "type": "text",
-                        "text": "撠�������",
+                        "text": "小提醒",
                         "weight": "bold",
                         "size": "xl",
                         "wrap": True,
@@ -451,41 +814,61 @@ def show_warning_messages(reply_token):
                 "layout": "vertical",
                 "contents": contents
             },
+            "footer": {
+                "type": "box",
+                "layout": "horizontal",  # 水平佈局
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "color": "#F9F2DC",
+                        "action": {
+                            "type": "message",
+                            "label": "新增提醒",
+                            "text": "新增提醒"  # 按下按鈕會發送此訊息
+                        },
+                        "flex": 1,
+                        "margin": "md"  # 增加按鈕的 margin 作為間距
+                    },
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "color": "#F9F2DC",
+                        "action": {
+                            "type": "message",
+                            "label": "結束",
+                            "text": "結束"  # 按下按鈕會發送此訊息
+                        },
+                        "flex": 1,
+                        "margin": "md"  # 同樣設置 margin
+                    }
+                ]
+            },
             "styles": {
                 "header": {
-                    "backgroundColor": "#668166" #header摨����
+                    "backgroundColor": "#668166" #header底色
                 }
             }
         }
 
         flex_message = FlexSendMessage(
-            alt_text="撠�������",
+            alt_text="小提醒",
             contents=bubble
         )
         line_bot_api.reply_message(reply_token, flex_message)
     else:
-        # 憒����瘝������������臭誑��芷�歹�����蝷箇�冽�嗉撓��交�啁��������
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="��桀��瘝����隞颱��������閮���胯��隢�頛詨�交�啁��������"))
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。請輸入新的提醒"))
 
 def delete_warning_message(warning_message, reply_token):
     warn_collection.delete_one({'message': warning_message})
     remaining_warnings = list(warn_collection.find({}))
-    if remaining_warnings:
-        quick_reply_buttons = QuickReply(
-            items=[
-                QuickReplyButton(action=MessageAction(label="���", text="��芷�斗�����")),
-                QuickReplyButton(action=MessageAction(label="���", text="靽����������������")),
-                QuickReplyButton(action=MessageAction(label="��亦��������", text="��亦��������"))
-            ]
-        )
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="������撌脣�芷�扎����券��閬���芷�文�嗡�����������嚗�憒����銝���芷�歹��隢�頛詨�交�啁��������", quick_reply=quick_reply_buttons))
-    else:
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="������撌脣�芷�扎��隢�頛詨�交�啁�����������"))
+    show_warning_messages(reply_token)
+    
 
 def save_warning_message(message, reply_token):
     warn_collection.insert_one({"message": message})
-    send_warning_message(reply_token)
-    ##line_bot_api.reply_message(reply_token, TextSendMessage(text="������閮���臬歇��脣�����"))
+    show_warning_messages(reply_token)
+    ##line_bot_api.reply_message(reply_token, TextSendMessage(text="提醒訊息已儲存。"))
 
 def send_warning_message(reply_token):
     all_warnings = list(warn_collection.find({}))
@@ -508,7 +891,7 @@ def send_warning_message(reply_token):
                     }
                 ]
             })
-            # ���������
+            # 加間隔
             contents.append({
                 "type": "separator",
                 "margin": "md"
@@ -522,7 +905,7 @@ def send_warning_message(reply_token):
                 "contents": [
                     {
                         "type": "text",
-                        "text": "撠�������",
+                        "text": "小提醒",
                         "weight": "bold",
                         "size": "xl",
                         "wrap": True,
@@ -539,18 +922,18 @@ def send_warning_message(reply_token):
             },
             "styles": {
                 "header": {
-                    "backgroundColor": "#668166" #header摨����
+                    "backgroundColor": "#668166" #header底色
                 }
             }
         }
 
         flex_message = FlexSendMessage(
-            alt_text="撠�������",
+            alt_text="小提醒",
             contents=bubble
         )
         line_bot_api.reply_message(reply_token, flex_message)
     else:
-        line_bot_api.reply_message(reply_token, TextSendMessage(text="��桀��瘝����隞颱��������閮���胯��"))
+        line_bot_api.reply_message(reply_token, TextSendMessage(text="目前沒有任何提醒訊息。"))
 
 @app.route("/", methods=['POST'])
 def callback():
@@ -564,3 +947,4 @@ def callback():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
+    
