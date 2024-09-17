@@ -237,7 +237,36 @@ def handle_user_answer(event, user_answer, student_id):
         else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
             print("無法找到學號，無法存儲題目和用戶答案")
-        reply = f"題目：{question_title} 回答：{user_answer}"
+
+        # 假設 Question 是一個字典，裡面有 "question_title"
+        Question = {
+            "question": question_title
+        }
+
+        # 取出題目的標題
+        questions = Question["question"]
+
+        # 遍歷每一個 collection
+        found = False
+        for category, collection in unit_collections.items():
+            # 從當前的 collection 中查詢符合題目標題的文件（改為查詢 "Question" 字段）
+            result = collection.find_one({"Question": questions})
+            
+            # 如果找到了結果，打印出對應的類別和答案
+            if result:
+                answers = result.get("Answer", ["未找到答案"])
+                formatted_answers = ',\n'.join([f'"{answer}"' for answer in answers])
+                
+                found = True
+                break  # 找到後跳出迴圈，或繼續尋找其他 collection 中的可能結果
+
+        if not found:
+            print("未在任何 collection 中找到對應的題目。")
+
+
+        #reply = f'"題目"："{question_title}",\n"回答"："{user_answer}",\n{reference_answers}'
+        reply = f'"題目"："{question_title}",\n"回答"："{user_answer}",\n"參考答案": [\n{formatted_answers}\n]'
+        print(reply)
         # 將題目發送給 語言模型並回傳答案
         answer = send_question_to_mymodel(reply)
 
@@ -512,15 +541,17 @@ def create_no_record_bubble():
           {
             "type": "text",
             "color": "#ffffff",
-            "align": "start",
+            "align": "center",
             "size": "md",
             "gravity": "center",
             "text": "❗❗❗"
           },
           {
             "type": "text",
+            "align": "center",
             "text": "你還沒回答任何問題",
             "size": "lg",
+            "gravity": "center",
             "color": "#F9F2DC",
             "margin": "none",
             "weight": "bold"
@@ -546,8 +577,9 @@ def create_no_record_bubble():
                   "label": "我要作答",
                   "text": "我要作答"
                 },
-                "color": "#668166",
+                "color": "#000000",
                 "size": "lg",
+
               }
             ],
             "backgroundColor": "#F9F2DC",
