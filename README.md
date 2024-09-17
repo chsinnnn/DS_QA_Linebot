@@ -1,6 +1,7 @@
 # DS_QA_Linebot
 [期末簡報](https://www.canva.com/design/DAGGh_7bI-k/K-OOOq3fkNiP_Xhdv0ubJQ/edit?utm_content=DAGGh_7bI-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 [期末報告](https://docs.google.com/document/d/1GlPOsFaN14ckfYAKRI2EYTl-JzOYzjSn8uyqkdF9pJ4/edit?usp=sharing)
+[9/18報告](https://www.canva.com/design/DAGQ1gK0wC4/Aodn-j5zLPmM5hRGYatBiw/edit?utm_content=DAGQ1gK0wC4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ## 暑假進度
 ## 6/26~7/2
      ① 使用者可以看到自己的作答紀錄

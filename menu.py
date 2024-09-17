@@ -43,7 +43,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ '11027149', '11027104',  '11027133' ]
+special_student_ids = [  '11027149', '11027104',  '11027133' ]
 
 # MongoDB設定
 unit_collections = {
@@ -310,8 +310,8 @@ def handle_suggestion(event, student_id):
                     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型回覆失敗，請稍後再試。"))
             except requests.exceptions.RequestException as e:
                 print(f"Request error: {e}")
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無法連接到模型伺服器。"))
-
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="謝謝您的回饋 ! "))
+                #本來是連不上模型伺服器的話，就回覆謝謝您的回饋
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入有效的指令或意見回饋。"))
 
