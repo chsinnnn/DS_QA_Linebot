@@ -122,6 +122,8 @@ def handle_question_insert(event):
                     "type": "button",
                     "style": "primary",
                     "color": "#EBA281",
+                    "height": "sm",  # 設置按鈕的高度為 "sm" 來縮小按鈕
+                    "size": "sm",    # 設置按鈕的大小為 "sm" 來縮小按鈕
                     "action": {
                         "type": "uri",
                         "label": "點我",
