@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題目管理系統</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/temp.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="centered-title">
+            <img src="/static/images/頭貼.png" alt="Logo" class="title-image">
+            題目管理系統
+        </h1>
+        
+        <h2>新增題目</h2>
+        <form id="add-question-form" class="form">
+            <label for="unit">單元名稱:</label>
+            <select id="unit" name="unit" required>
+                <!-- 這裡會用 JavaScript 填充單元名稱 -->
+            </select>
+            <br>
+            <label for="question">題目:</label>
+            <input type="text" id="question" name="question" required>
+            <br>
+            <label for="answer">答案:</label>
+            <input type="text" id="answer" name="answer" required>
+            <br>
+            <button type="submit" class="button">新增題目</button>
+        </form>
+        
+        <h2>刪除題目</h2>
+        <form id="delete-question-form" class="form">
+            <label for="del-unit">選擇單元名稱:</label>
+            <select id="del-unit" name="unit" required>
+                <!-- 這裡會用 JavaScript 填充單元名稱 -->
+            </select>
+            <br>
+            <label for="del-question">選擇題目:</label>
+            <select id="del-question" name="id" required>
+                <!-- 這裡會用 JavaScript 填充題目選項 -->
+            </select>
+            <br>
+            <button type="submit" class="button">刪除題目</button>
+        </form>
+    </div>
+</body>
+</html>

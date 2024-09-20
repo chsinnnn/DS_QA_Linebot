@@ -1,4 +1,5 @@
-from flask import Flask, request, abort
+from flask import Flask, request, abort, jsonify
+import yagmail
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, QuickReply, QuickReplyButton, MessageAction, FlexSendMessage
@@ -8,6 +9,7 @@ import json
 import redis
 import requests
 import os
+import ast
 import datetime
 from linebot.v3.messaging import ShowLoadingAnimationRequest
 from linebot import AsyncLineBotApi
@@ -43,7 +45,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [  '11027149', '11027104',  '11027133' ]
+special_student_ids = [ '11027149', '11027104',  '11027133' ]
 
 # MongoDB設定
 unit_collections = {
@@ -92,24 +94,55 @@ def handle_unit_selection(event):
     message = TextSendMessage(text="請選擇一個單元", quick_reply=quick_reply)
     line_bot_api.reply_message(event.reply_token, message)
 
-def handle_unit_selection_toinsert(event):
-    quick_reply = QuickReply(items=[
-        
-        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
-        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
-        QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
-        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
-        QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
-        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
-        QuickReplyButton(action=MessageAction(label="其他", text="其他"))
-    ])
 
-    message = TextSendMessage(text="請選擇一個單元進行新增題目", quick_reply=quick_reply)
-    line_bot_api.reply_message(event.reply_token, message)
+def handle_question_insert(event):
+    bubble = {
+        "type": "bubble",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "題目管理",
+                    "weight": "bold",
+                    "size": "xl",
+                    "wrap": True,
+                    "align": "center",
+                    "gravity": "center",
+                    "color": "#FFFFFF"
+                }
+            ]
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "button",
+                    "style": "primary",
+                    "color": "#EBA281",
+                    "action": {
+                        "type": "uri",
+                        "label": "點我",
+                        "uri": "https://question.lab214b.uk:5001/"  # 確保這個 URL 是公開可訪問的
+                    }
+                }
+            ]
+        },
+        "styles": {
+            "header": {
+                "backgroundColor": "#668166"
+            }
+        }
+    }
 
-def handle_question_insert(event, unit):
-    collection = unit_collections[unit]
-    collection.insert_one()
+    # 使用正確的內容格式創建 FlexSendMessage
+    flex_message = FlexSendMessage(
+        alt_text="題目管理",
+        contents=bubble  # 不需要將 bubble 包裝成列表
+    )
+    line_bot_api.reply_message(event.reply_token, flex_message)
 
 def handle_question_display(event, unit):  # 多個題目挑選
     collection = unit_collections[unit]
@@ -274,6 +307,16 @@ def handle_user_answer(event, user_answer, student_id):
         #reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\n評論：{answer}"
         reply_text = f"{answer}"
         
+        try:
+            answer_dict = ast.literal_eval(answer)
+            
+            # 格式化輸出為所需的格式
+            reply_text = f"'評分': '{answer_dict['評分']}'\n'評論': '{answer_dict['評論']}'"
+
+        except Exception as e:
+            reply_text = f"{answer}"
+            print(f"出現錯誤: {e}")
+            
         # 使用 TextSendMessage 回覆文字訊息
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
 
@@ -286,7 +329,7 @@ def handle_user_answer(event, user_answer, student_id):
 def handle_suggestion(event, student_id):
     user_id = event.source.user_id
     suggestion = event.message.text
-
+    yag = yagmail.SMTP(user='linechattt@gmail.com', password='synf wuxi bzwj qcqq')
     special_keywords = {
         "我要作答": handle_unit_selection,
         "歡迎留下您寶貴的建議:D": handle_awaiting_suggestion,
@@ -341,6 +384,14 @@ def handle_suggestion(event, student_id):
                 print(f"Request error: {e}")
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text="謝謝您的回饋 ! "))
                 #本來是連不上模型伺服器的話，就回覆謝謝您的回饋
+             # 發送意見到電子郵件
+            try:
+                subject = f"來自學生 {student_id} 的意見回饋"
+                body = f"學號: {student_id}\n意見回饋: {suggestion}"
+                yag.send(to='linechattt@gmail.com', subject=subject, contents=body)
+                print("Suggestion email sent successfully!")
+            except Exception as e:
+                print(f"Failed to send email: {e}")
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入有效的指令或意見回饋。"))
 
@@ -694,21 +745,15 @@ def handle_message(event):
     student_id = None if user_document is None else user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-    # 檢查 Redis 中是否有等待輸入題目的標誌
-    #awaiting_question = redis_client.hget(student_id, 'awaiting_question')
-    #awaiting_unit = redis_client.hget(student_id, 'awaiting_unit')
+
 
     if awaiting_suggestion:
         handle_suggestion(event, student_id)
     elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
-        if msg == "我要作答" :  #學生
+        if msg == "我要作答" and student_id not in special_student_ids :  #學生
             handle_unit_selection(event)
-        
-        #elif msg == "我要作答" and student_id in special_student_ids:  #老師助教
-            #redis_client.hset(student_id, 'awaiting_unit', 'true')
-            #redis_client.hset(student_id, 'awaiting_question', 'true')
-            #handle_unit_selection_toinsert(event)
-        
+        elif msg == "我要作答" and student_id in special_student_ids :  #老師助教
+            handle_question_insert(event)
         elif msg == "歡迎留下您寶貴的建議:D":
             if student_id in special_student_ids:
                 handle_admin_view_suggestions(event)
@@ -717,24 +762,6 @@ def handle_message(event):
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
         elif msg in unit_collections:  #學生
             handle_question_display(event, msg)
-        #elif awaiting_unit == 'true' and msg in unit_collections and student_id in special_student_ids :  #老師助教
-            #selected_unit = msg
-            #redis_client.hset(student_id, 'selected_unit', selected_unit)
-            #message = TextSendMessage(text="請輸入您的題目")
-            #line_bot_api.reply_message(event, message)
-            #redis_client.hset(student_id, 'awaiting_question', 'true')
-            #redis_client.hdel(student_id, 'awaiting_unit')
-        #elif awaiting_question == 'true':
-            # 接收並儲存題目
-            #selected_unit = redis_client.hget(student_id, 'selected_unit')
-            #collection = unit_collections[selected_unit]
-            #data = [{"Question": msg}]
-            #collection.insert_one(data)
-            #message = TextSendMessage(text="題目已成功新增到資料庫中")
-            #line_bot_api.reply_message(event, message)
-            # 清除標誌
-            #redis_client.hdel(student_id, 'awaiting_question')
-            #redis_client.hdel(student_id, 'selected_unit')
         elif msg.startswith("我要回答:"):
             question_title = msg[6:]
             handle_question_answer(event, question_title)

@@ -1,0 +1,76 @@
+/* 基本樣式重置：將 margin 和 padding 設為 0，並使用 box-sizing 讓寬高計算包括內邊距和邊框 */
+body, h1, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 背景和文字顏色設定：調整網頁背景顏色和文字顏色，並設定字體 */
+body {
+    font-family: Arial, sans-serif; /* 設定字體為 Arial */
+    background-color: #f4f4f4;      /* 背景顏色為淡灰色 */
+    color: #333;                    /* 文字顏色為深灰色 */
+    padding: 20px;                  /* 全局內邊距為 20px */
+}
+
+/* 容器樣式：限制容器最大寬度，並置中顯示，添加內邊距、圓角及陰影 */
+.container {
+    max-width: 800px;               /* 最大寬度 800px */
+    margin: 0 auto;                 /* 水平置中 */
+    background: #fff;               /* 背景顏色為白色 */
+    padding: 20px;                  /* 內邊距為 20px */
+    border-radius: 8px;             /* 邊角圓角化 8px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加淡淡的陰影效果 */
+}
+
+/* 只針對 h1 進行置中處理：置中 h1 的文字並調整字體大小及下方間距 */
+.centered-title {
+    text-align: center;   /* 文字置中 */
+    font-size: 2em;       /* 字體大小為 2 倍標準大小 */
+    margin-bottom: 20px;  /* 下方間距為 20px */
+}
+
+/* 表單樣式：設定每個表單的底部間距 */
+.form {
+    margin-bottom: 20px;  /* 每個表單下方的間距為 20px */
+}
+
+/* 標籤樣式：讓表單標籤塊狀顯示，並在標籤和輸入框之間留空間 */
+.form label {
+    display: block;       /* 塊狀顯示，讓每個標籤占一整行 */
+    margin-bottom: 5px;   /* 在標籤下方添加 5px 間距 */
+    font-weight: bold;    /* 加粗標籤文字 */
+}
+
+/* 表單的輸入框和下拉選單樣式：調整寬度、內邊距、邊框和圓角 */
+.form input, .form select {
+    width: 100%;              /* 寬度占滿父容器 */
+    padding: 10px;            /* 內邊距 10px */
+    margin-bottom: 10px;      /* 下方間距 10px */
+    border: 1px solid #ddd;   /* 邊框顏色為淺灰色 */
+    border-radius: 4px;       /* 邊角圓角化 4px */
+}
+
+/* 按鈕樣式：調整按鈕的大小、顏色、邊框及圓角 */
+.form button {
+    padding: 10px 20px;       /* 上下內邊距 10px，左右 20px */
+    border: none;             /* 移除邊框 */
+    border-radius: 4px;       /* 邊角圓角化 4px */
+    background-color: #EBA281; /* 按鈕背景顏色為淡橙色 */
+    color: #fff;              /* 按鈕文字顏色為白色 */
+    cursor: pointer;          /* 滑鼠指標變為指向手狀 */
+    font-size: 16px;          /* 字體大小為 16px */
+}
+
+/* 按鈕懸停樣式：當滑鼠懸停時，改變背景顏色 */
+.form button:hover {
+    background-color: #EBA281; /* 保持同樣的背景顏色 */
+}
+
+/* 標題圖片樣式：設定圖片大小及與文字的對齊方式 */
+.title-image {
+    width: 60px;               /* 圖片寬度設為 60px */
+    height: 60px;              /* 圖片高度設為 60px */
+    vertical-align: middle;    /* 與文字垂直對齊 */
+    margin-right: 10px;        /* 圖片和文字之間的右邊距設為 10px */
+}
