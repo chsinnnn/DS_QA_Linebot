@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('網路錯誤:', error));
 
     });
-y
+
     // 處理新增題目的表單提交
     document.getElementById('add-question-form').addEventListener('submit', function(event) {
         event.preventDefault();

@@ -67,10 +67,48 @@ body {
     background-color: #EBA281; /* 保持同樣的背景顏色 */
 }
 
+/* 按鈕通用樣式：可以應用到所有按鈕 */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #EBA281;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 按鈕懸停樣式 */
+.button:hover {
+    background-color: #EBA281; /* 保持相同背景顏色 */
+}
+
 /* 標題圖片樣式：設定圖片大小及與文字的對齊方式 */
 .title-image {
     width: 60px;               /* 圖片寬度設為 60px */
     height: 60px;              /* 圖片高度設為 60px */
     vertical-align: middle;    /* 與文字垂直對齊 */
     margin-right: 10px;        /* 圖片和文字之間的右邊距設為 10px */
+}
+
+/* 登出按鈕容器樣式：將登出按鈕右對齊，並設置底部外邊距 */
+.logout-section {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* 登出按鈕樣式 */
+#logout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #EBA281;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 登出按鈕懸停樣式 */
+#logout-button:hover {
+    background-color: #EBA281; /* 保持相同背景顏色 */
 }
