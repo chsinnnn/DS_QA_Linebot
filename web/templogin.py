@@ -22,8 +22,10 @@ unit_collections = {
 
 # 模擬的使用者資料
 users = {
-    "admin": "admin123",  # 帳號: 密碼
-    "11027149": "chsinn18"
+    "teacher": "teacher",  # 帳號: 密碼
+    "11027149": "chsinn18",
+    "11027104": "11027104",
+    "11027138": "11027384"
 }
 
 # 提供主頁面 (index.html)
@@ -64,7 +66,7 @@ def check_login():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-    print("收到登出請求")  # 添加這行來檢查是否收到請求
+  # 添加這行來檢查是否收到請求
     session.pop('username', None)  # 清除 session 中的 username
     return jsonify({"message": "已成功登出"}), 200
 

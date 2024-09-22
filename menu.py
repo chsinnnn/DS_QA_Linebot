@@ -45,7 +45,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ '11027149', '11027104',  '11027133' ]
+special_student_ids = [ ]
 
 # MongoDB設定
 unit_collections = {
@@ -227,7 +227,7 @@ def handle_question_answer(event, question_title):  # 已選好題目
     if question:
         user_id = event.source.user_id
         redis_client.hset(user_id, "current_question", question_title)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題(回答50字以下)"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題\n(回答50字以下)"))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
 
@@ -298,26 +298,25 @@ def handle_user_answer(event, user_answer, student_id):
         if not found:
             print("未在任何 collection 中找到對應的題目。")
 
-
+        print(formatted_answers)
         #reply = f'"題目"："{question_title}",\n"回答"："{user_answer}",\n{reference_answers}'
-        reply = f'"題目"："{question_title}",\n"回答"："{user_answer}",\n"參考答案": [\n{formatted_answers}\n]'
+        reply = f'"題目"："{question_title}",\n"同學回答"："{user_answer}",\n"參考答案": [\n{formatted_answers}\n]'
         print(reply)
         # 將題目發送給 語言模型並回傳答案
         answer = send_question_to_mymodel(reply)
 
         # 組合要回覆的文字訊息，包括用戶的回答和 語言模型評論
         #reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\n評論：{answer}"
-        reply_text = f"{answer}"
-        
-        try:
-            answer_dict = ast.literal_eval(answer)
-            
-            # 格式化輸出為所需的格式
-            reply_text = f"'評分': '{answer_dict['評分']}'\n'評論': '{answer_dict['評論']}'"
+        #reply_text = f"{answer}"
+        # 定義生成星星圖案的函數
+        def generate_star_rating(score):
+            return "★" * score + "☆" * (3 - score)  # 3 為滿分，根據分數生成星星
 
-        except Exception as e:
-            reply_text = f"{answer}"
-            print(f"出現錯誤: {e}")
+        # 根據評分生成星星圖案
+        star_rating = generate_star_rating(answer['評分'])
+
+        # 組合要回覆的文字訊息，包括用戶的回答和語言模型評論
+        reply_text = f"評分: {star_rating} ({answer['評分']})\n評論: {answer['評論']}"
             
         # 使用 TextSendMessage 回覆文字訊息
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
@@ -493,7 +492,18 @@ def handle_awaiting_suggestion(event):
 
 
 def create_unit_bubble(unit_name, details):
-    times_and_num = "".join([f"{time}: {count}題\n" if i < len(list(details['times'].items())) - 1 else f"{time}: {count}題" for i, (time, count) in enumerate(list(details['times'].items()))])
+    # 取得所有時間點，並按照時間排序（由最早到最晚）
+    sorted_times = sorted(details['times'].items(), key=lambda x: x[0])
+
+    # 取得最晚的三個時間點
+    last_three_times = sorted_times[-3:]
+
+    # 生成 times_and_num 字符串
+    times_and_num = "".join([
+        f"{time}: {count}題\n" if i < len(last_three_times) - 1 else f"{time}: {count}題"
+        for i, (time, count) in enumerate(last_three_times)
+    ])
+
     bubble = {
       "type": "bubble",
       "size": "micro",
@@ -729,7 +739,11 @@ def send_question_to_mymodel(question):
         if response.status_code == 200:
             # 解析回覆的JSON數據
             data = response.json()
-            return data.get("output", "模型未能生成回覆")
+            score = data.get("評分", "未提供評分")
+            comment = data.get("評論", "未提供評論")
+            
+            # 返回結果作為字典
+            return {"評分": score, "評論": comment}
         else:
             print(f"Error: Received status code {response.status_code}")
             return "模型回覆失敗，請稍後再試。"
