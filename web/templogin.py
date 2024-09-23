@@ -23,9 +23,8 @@ unit_collections = {
 # 模擬的使用者資料
 users = {
     "teacher": "teacher",  # 帳號: 密碼
-    "11027149": "chsinn18",
-    "11027104": "11027104",
-    "11027138": "11027384"
+    "11027149": "11027149",
+    "11027104": "11027104"
 }
 
 # 提供主頁面 (index.html)
@@ -33,7 +32,7 @@ users = {
 def index():
     if 'username' not in session:
         return redirect(url_for('login_page'))
-    return render_template('qqq.html')  # 確保 qqq.html 在 templates 資料夾中
+    return render_template('qqq.html')  
 
 # 登入頁面
 @app.route('/login')
@@ -66,7 +65,7 @@ def check_login():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-  # 添加這行來檢查是否收到請求
+  # 檢查是否收到請求
     session.pop('username', None)  # 清除 session 中的 username
     return jsonify({"message": "已成功登出"}), 200
 
