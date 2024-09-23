@@ -15,11 +15,11 @@ def create_new_data(db):
     try:
         collection = db.queue
         data = [
-            {"Question": "舉例說明單一佇列模擬如何計算平均等候時間waiting time。",
+            {"Question": "如何計算單一佇列的平均等候時間(waiting time)？",
             "Answer": [
                 "在單一佇列模擬中，計算平均等候時間是將每個客戶在佇列中等候的時間加總，再除以客戶總數。這樣能得到每位客戶的平均等候時間。"
             ]},
-            {"Question": "舉例說明單一佇列模擬如何計算平均佇列長度queue length。",
+            {"Question": "如何計算單一佇列的平均佇列長度(queue length)？",
              "Answer": [
                 "在單一佇列模擬中，平均佇列長度是計算所有時刻的佇列長度總和，然後除以總時間。這樣可以知道整體平均有多少個項目在佇列中。"
             ]},
