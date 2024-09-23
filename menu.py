@@ -300,18 +300,25 @@ def handle_user_answer(event, user_answer, student_id):
 
         print(formatted_answers)
         #reply = f'"題目"："{question_title}",\n"回答"："{user_answer}",\n{reference_answers}'
-        reply = f'"題目"："{question_title}",\n"同學回答"："{user_answer}",\n"參考答案": [\n{formatted_answers}\n]'
+        reply = f'"question"："{question_title}",\n"student_answer"："{user_answer}",\n"reference_answer": [\n{formatted_answers}\n]'
         print(reply)
         # 將題目發送給 語言模型並回傳答案
         answer = send_question_to_mymodel(reply)
+        print(answer)
 
         # 組合要回覆的文字訊息，包括用戶的回答和 語言模型評論
         #reply_text = f"題目：{question_title}\n\n您回答：{user_answer}\n\n評論：{answer}"
         #reply_text = f"{answer}"
         # 定義生成星星圖案的函數
         def generate_star_rating(score):
-            return "★" * score + "☆" * (3 - score)  # 3 為滿分，根據分數生成星星
-
+            # 確保 score 是整數
+            try:
+                score = int(score)  # 將 score 轉換為整數
+            except ValueError:
+                score = 0  # 如果轉換失敗，設置為 0（或其他預設值）
+            
+            # 根據分數生成星星
+            return "★" * score + "☆" * (3 - score)  # 3 為滿分
         # 根據評分生成星星圖案
         star_rating = generate_star_rating(answer['評分'])
 
@@ -739,11 +746,14 @@ def send_question_to_mymodel(question):
         if response.status_code == 200:
             # 解析回覆的JSON數據
             data = response.json()
-            score = data.get("評分", "未提供評分")
-            comment = data.get("評論", "未提供評論")
+            score = data.get("score", "未提供評分")
+            comment = data.get("comment", "未提供評論")
             
             # 返回結果作為字典
             return {"評分": score, "評論": comment}
+        elif response.status_code == 500:
+            print("模型格式錯誤")
+            return "模型格式錯誤"
         else:
             print(f"Error: Received status code {response.status_code}")
             return "模型回覆失敗，請稍後再試。"
