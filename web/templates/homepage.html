@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="centered-title">
+            <img src="/static/images/logo.png" alt="Logo" class="title-image">
+            首頁
+        </h1>
+
+        <!-- 登出按鈕 -->
+        <div class="logout-section" style="text-align: right; margin-bottom: 20px;">
+            <button id="logout-button" class="button">登出</button>
+        </div>
+
+        <!-- 跳轉到管理題目頁面的按鈕 -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button id="manage-questions-button" class="button">管理題目</button>
+        </div>
+
+        <!-- 只有 superuser 才能看到的管理使用者頁面按鈕 -->
+        {% if session['role'] == 'superuser' %}
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button id="manage-users-button" class="button">管理使用者</button>
+        </div>
+        {% endif %}
+
+        <!-- 跳轉到評分頁面的按鈕 (功能還沒做) -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button id="view-scores-button" class="button">察看評分</button>
+        </div>
+    </div>
+
+    <script>
+        const manageQuestionsButton = document.getElementById('manage-questions-button');
+        if (manageQuestionsButton) {
+            manageQuestionsButton.addEventListener('click', function() {
+                window.location.href = '/manage_question';  // 跳轉到管理題目的頁面
+            });
+        }
+
+        const manageUsersButton = document.getElementById('manage-users-button');
+        if (manageUsersButton) {
+            manageUsersButton.addEventListener('click', function() {
+                window.location.href = '/manage_users';  // 跳轉到管理使用者的頁面
+            });
+        }
+
+        const viewScoresButton = document.getElementById('view-scores-button');
+        if (viewScoresButton) {
+            viewScoresButton.addEventListener('click', function() {
+                alert("評分系統尚未開發");  // 可以提示使用者此功能尚未完成
+            });
+        }
+
+        const logoutButton = document.getElementById('logout-button');
+        if (logoutButton) {
+            logoutButton.addEventListener('click', function() {
+                fetch('/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        alert(data.message);
+                        window.location.href = '/login';  // 登出後跳轉到登入頁面
+                    }
+                });
+            });
+        }
+
+    </script>
+</body>
+</html>

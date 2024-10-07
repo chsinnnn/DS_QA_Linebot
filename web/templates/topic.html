@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>題目管理系統</title>
     <link rel="stylesheet" href="/static/css/style.css">
-    <script src="/static/js/temp.js" defer></script>
+    <script src="/static/js/topic.js" defer></script>
     <script src="/static/js/login.js" defer></script> 
 </head>
 <body>
@@ -15,12 +15,11 @@
             題目管理系統
         </h1>
 
-        <div class="logout-section" style="text-align: right; margin-bottom: 20px;">
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/'" class="button">返回首頁</button>
             <button id="logout-button" class="button">登出</button>
         </div>
-        <div class="superuser-section" style="text-align: left; margin-bottom: 20px;">
-            <button id="superuser-button" class="button">管理使用者</button>
-        </div>
+
         <h2>新增題目</h2>
         <form id="add-question-form" class="form">
             <label for="unit">單元名稱:</label>

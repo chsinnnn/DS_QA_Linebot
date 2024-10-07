@@ -6,10 +6,18 @@
     <title>管理使用者</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="/static/js/user.js" defer></script>
+    <script src="/static/js/login.js" defer></script> 
 </head>
 <body>
     <div class="container">
-        <h1 class="centered-title">使用者管理</h1>
+        <h1 class="centered-title">
+            <img src="/static/images/logo.png" alt="Logo" class="title-image">
+            使用者管理
+        </h1>
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/'" class="button">返回首頁</button>
+            <button id="logout-button" class="button">登出</button>
+        </div>
         <h2>新增使用者</h2>
         <form id="add-user-form" class="form">
             <label for="new-username">帳號 :</label>
@@ -37,5 +45,16 @@
             <button id="delete-user-button" class="button">刪除使用者</button>
         </form>
     </div>
+    <script>
+        document.getElementById('logout-button').addEventListener('click', function() {
+            fetch('/logout', {
+                method: 'POST'
+            }).then(response => response.json())
+              .then(data => {
+                  alert(data.message);
+                  window.location.href = '/login';
+              });
+        });
+    </script>
 </body>
 </html>

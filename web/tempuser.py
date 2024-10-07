@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, session, render_template, redirect, u
 from pymongo import MongoClient
 import json
 from bson.objectid import ObjectId
+import bcrypt
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # 用於 session 加密
@@ -10,6 +11,7 @@ app.secret_key = 'your_secret_key'  # 用於 session 加密
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
 collections = mongo_db["users"]
+
 unit_collections = {
     "其他": mongo_db["other"],
     "指標": mongo_db["pointer"],
@@ -20,20 +22,29 @@ unit_collections = {
     "二元樹": mongo_db["bst"]
 }
 
-# 模擬的使用者資料，增加 role 欄位 (normal 或 superuser)
-users = {
-    "superuser": {"password": "superuser", "role": "superuser"}
-    #"11027149": {"password": "11027149", "role": "normal"},
-    #"11027104": {"password": "11027104", "role": "normal"},
-    #"11027133": {"password": "11027133", "role": "normal"}
+'''
+username = "teacher"
+password = "teacher"
+role = "superuser"
+# 對密碼進行哈希處理
+hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
+# 將新使用者插入資料庫
+new_user = {
+    "username": username,
+    "password": hashed_password,  # 儲存加密後的密碼
+    "role": role
 }
+collections.insert_one(new_user)
+'''
 
 # 提供主頁面 (index.html)
 @app.route('/')
 def index():
     if 'username' not in session:
         return redirect(url_for('login_page'))
-    return render_template('qqq.html')
+    return render_template('homepage.html')  # 改為新的首頁模板
+
 
 # 登入頁面
 @app.route('/login')
@@ -50,16 +61,18 @@ def login():
     if not username or not password:
         return jsonify({"error": "帳號和密碼是必填的"}), 400
 
-    user = users.get(username)
+    # 從資料庫中查找使用者
+    user = collections.find_one({"username": username})
 
-    if user and user['password'] == password:
+    if user and bcrypt.checkpw(password.encode('utf-8'), user['password']):  # 驗證密碼
         session['username'] = username
-        session['role'] = user['role']  # 儲存 role 資訊到 session
+        session['role'] = user['role']  # 儲存角色資訊到 session
         return jsonify({"message": "登入成功！"}), 200
     else:
         return jsonify({"error": "帳號或密碼不正確"}), 401
-# 增加 superuser 權限檢查
-superuser = "superuser"  # 定義 superuser 的帳號
+
+
+
 # 確認使用者是否登入
 @app.route('/check_login')
 def check_login():
@@ -90,16 +103,18 @@ def add_user():
         password = data['password']
         role = data['role']
 
-        # 新增使用者到資料庫的邏輯
         # 檢查使用者是否已經存在
         existing_user = collections.find_one({"username": username})
         if existing_user:
             return jsonify({"error": "User already exists"}), 400
 
+        # 對密碼進行哈希處理
+        hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
         # 將新使用者插入資料庫
         new_user = {
             "username": username,
-            "password": password,
+            "password": hashed_password,  # 儲存加密後的密碼
             "role": role
         }
         collections.insert_one(new_user)
@@ -149,6 +164,10 @@ def logout():
     session.pop('username', None)  # 清除 session 中的 username
     session.pop('role', None)  # 清除 session 中的 role
     return jsonify({"message": "已成功登出"}), 200
+
+@app.route('/manage_question')
+def manage_question():
+    return render_template('topic.html')  # 渲染 topic.html 頁面
 
 # API 端點，處理前端的題目、答案與單元名稱
 @app.route('/add_question', methods=['POST'])
