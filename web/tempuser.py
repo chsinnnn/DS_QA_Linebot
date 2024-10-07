@@ -20,12 +20,12 @@ unit_collections = {
     "二元樹": mongo_db["bst"]
 }
 
-# 模擬的使用者資料
+# 模擬的使用者資料，增加 role 欄位 (normal 或 superuser)
 users = {
-    "teacher": "teacher",  # 帳號:密碼
-    "11027149": "11027149",
-    "11027104": "11027104",
-    "11027133": "11027133"
+    "superuser": {"password": "superuser", "role": "superuser"}
+    #"11027149": {"password": "11027149", "role": "normal"},
+    #"11027104": {"password": "11027104", "role": "normal"},
+    #"11027133": {"password": "11027133", "role": "normal"}
 }
 
 # 提供主頁面 (index.html)
@@ -33,7 +33,7 @@ users = {
 def index():
     if 'username' not in session:
         return redirect(url_for('login_page'))
-    return render_template('qqq.html')  
+    return render_template('qqq.html')
 
 # 登入頁面
 @app.route('/login')
@@ -50,24 +50,104 @@ def login():
     if not username or not password:
         return jsonify({"error": "帳號和密碼是必填的"}), 400
 
-    if username in users and users[username] == password:
+    user = users.get(username)
+
+    if user and user['password'] == password:
         session['username'] = username
+        session['role'] = user['role']  # 儲存 role 資訊到 session
         return jsonify({"message": "登入成功！"}), 200
     else:
         return jsonify({"error": "帳號或密碼不正確"}), 401
-
+# 增加 superuser 權限檢查
+superuser = "superuser"  # 定義 superuser 的帳號
 # 確認使用者是否登入
 @app.route('/check_login')
 def check_login():
     if 'username' in session:
-        return jsonify({"logged_in": True, "username": session['username']}), 200
+        return jsonify({"logged_in": True, "username": session['username'], "role": session['role']}), 200
     else:
         return jsonify({"logged_in": False}), 200
 
+# 增加管理使用者的頁面
+@app.route('/manage_users')
+def manage_users():
+    if 'username' not in session:
+        return redirect(url_for('login_page'))
+
+    if session['role'] != 'superuser':
+        return jsonify({"error": "你沒有權限訪問此頁面"}), 403
+
+    return render_template('user.html')  # 渲染 user.html 頁面
+
+
+# 新增使用者
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    try:
+        data = request.get_json()
+        print("Received data:", data)  # 檢查伺服器是否接收到資料
+        username = data['username']
+        password = data['password']
+        role = data['role']
+
+        # 新增使用者到資料庫的邏輯
+        # 檢查使用者是否已經存在
+        existing_user = collections.find_one({"username": username})
+        if existing_user:
+            return jsonify({"error": "User already exists"}), 400
+
+        # 將新使用者插入資料庫
+        new_user = {
+            "username": username,
+            "password": password,
+            "role": role
+        }
+        collections.insert_one(new_user)
+
+        return jsonify({"message": "新增使用者成功!"}), 201
+    except Exception as e:
+        print("Error adding user:", e)
+        return jsonify({"error": "新增使用者失敗!"}), 500
+
+# 刪除使用者
+@app.route('/get_users', methods=['GET'])
+def get_users():
+    if 'username' not in session or session['role'] != 'superuser':
+        return jsonify({"error": "你沒有權限執行此操作"}), 403
+
+    users_list = list(collections.find({}, {"_id": 1, "username": 1}))  # 獲取所有使用者資料
+    for user in users_list:
+        user['_id'] = str(user['_id'])  # 將 ObjectId 轉成字串
+
+    return jsonify({"users": users_list}), 200
+
+
+@app.route('/delete_user', methods=['DELETE'])
+def delete_user():
+    if 'username' not in session or session['role'] != 'superuser':
+        return jsonify({"error": "你沒有權限執行此操作"}), 403
+        
+    user_id = request.args.get('id')  # 只檢查 user_id
+
+    if not user_id:
+        return jsonify({"error": "ID 缺失"}), 400
+
+    try:
+        result = collections.delete_one({"_id": ObjectId(user_id)})
+        if result.deleted_count > 0:
+            return jsonify({"message": "使用者已成功刪除！"}), 200
+        else:
+            return jsonify({"error": "使用者刪除失敗或使用者不存在"}), 404
+    except Exception as e:
+        return jsonify({"error": f"刪除使用者時發生錯誤：{str(e)}"}), 500
+
+    
+
+
 @app.route('/logout', methods=['POST'])
 def logout():
-  # 檢查是否收到請求
     session.pop('username', None)  # 清除 session 中的 username
+    session.pop('role', None)  # 清除 session 中的 role
     return jsonify({"message": "已成功登出"}), 200
 
 # API 端點，處理前端的題目、答案與單元名稱
@@ -77,17 +157,17 @@ def add_question():
     unit = data.get('unit')
     question = data.get('question')
     answer = data.get('answer')
-    
+
     if not unit or not question or not answer:
         return jsonify({"error": "單元名稱、題目和答案是必填的"}), 400
 
     collection = unit_collections.get(unit)
     if not collection:
         return jsonify({"error": "單元名稱不正確"}), 400
-    
+
     formatted_answer = json.dumps([answer], ensure_ascii=False)
     collection.insert_one({"Question": question, "Answer": formatted_answer})
-    
+
     return jsonify({"message": "題目已成功新增！"}), 200
 
 # 獲取題目列表
@@ -99,10 +179,10 @@ def get_questions():
 
     collection = unit_collections[unit]
     questions = list(collection.find({}, {"_id": 1, "Question": 1}))
-    
+
     for question in questions:
         question['_id'] = str(question['_id'])
-    
+
     return jsonify({"questions": questions})
 
 # 刪除題目
@@ -110,13 +190,13 @@ def get_questions():
 def delete_question():
     unit = request.args.get('unit')
     question_id = request.args.get('id')
-    
+
     if not unit or not question_id:
         return jsonify({"error": "單元名稱或題目 ID 缺失"}), 400
-    
+
     if unit not in unit_collections:
         return jsonify({"error": "單元名稱不正確"}), 400
-    
+
     collection = unit_collections[unit]
     try:
         result = collection.delete_one({"_id": ObjectId(question_id)})
@@ -126,6 +206,7 @@ def delete_question():
             return jsonify({"error": "題目刪除失敗或題目不存在"}), 404
     except Exception as e:
         return jsonify({"error": f"刪除題目時發生錯誤：{str(e)}"}), 500
+
 
 # 獲取單元列表
 @app.route('/get_units', methods=['GET'])

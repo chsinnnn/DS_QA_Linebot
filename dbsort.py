@@ -63,7 +63,7 @@ def create_new_data(db):
             ]},
             {"Question": "為快速排序提出選擇基準pivot的方法，並簡短說明優點。",
              "Answer": [
-                "選擇基準pivot的方法：三數取中法（如選首、中、尾三數的中間值）。優點：減少最差情況概率，提供較均勻分區。"
+                "選擇基準(pivot)的方法：三數取中法（如選首、中、尾三數的中間值）。優點：減少最差情況概率，提供較均勻分區。"
             ]}
         ]
         result = collection.insert_many(data)

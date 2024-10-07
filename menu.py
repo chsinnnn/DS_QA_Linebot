@@ -11,10 +11,11 @@ import requests
 import os
 import ast
 import datetime
-from linebot.v3.messaging import ShowLoadingAnimationRequest
 from linebot import AsyncLineBotApi
 from linebot.models import FlexSendMessage, BubbleContainer, BoxComponent, TextComponent, ButtonComponent, SeparatorComponent, URIAction
 os.chdir('/home/hsin/DS_QA_Linebot')
+from chart_generator import generate_score_chart
+from linebot.models import ImageSendMessage
 
 app = Flask(__name__)
 
@@ -45,7 +46,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ ]
+special_student_ids = [ "11027104" ]
 
 # MongoDB設定
 unit_collections = {
@@ -150,7 +151,7 @@ def handle_question_display(event, unit):  # 多個題目挑選
     collection = unit_collections[unit]
 
     questions = list(collection.find())
-    random_questions = random.sample(questions, 5) if len(questions) >= 5 else questions
+    random_questions = random.sample(questions, 3) if len(questions) >= 3 else questions
 
     bubbles = []
     for question in random_questions:
@@ -234,6 +235,11 @@ def handle_question_answer(event, question_title):  # 已選好題目
 def handle_user_answer(event, user_answer, student_id):
     user_id = event.source.user_id
 
+    if len(user_answer) > 50:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="回答字數過多，請重新點選開始作答"))
+        redis_client.hdel(user_id, 'current_question')
+        return
+
     special_keywords = {
         "我要作答": lambda event: handle_unit_selection(event),
         "歡迎留下您寶貴的建議:D": lambda event: handle_awaiting_suggestion(event),
@@ -264,6 +270,7 @@ def handle_user_answer(event, user_answer, student_id):
             # 確保題目和答案的鍵存在於 Redis 中
             qa_key = f"{student_id}_qa:{question_title}"
             answer_time_key = f"{student_id}_answer_time:{question_title}"
+            score_key = f"{student_id}_score:{question_title}"
 
             # 將用戶的答案存儲在列表中
             redis_client.rpush(qa_key, user_answer)
@@ -327,6 +334,9 @@ def handle_user_answer(event, user_answer, student_id):
             
         # 使用 TextSendMessage 回覆文字訊息
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
+
+        # 儲存評分結果
+        redis_client.rpush(score_key, answer['評分'])
 
         # 清除當前題目和用戶回答
         redis_client.hdel(user_id, "current_question")
@@ -418,7 +428,7 @@ def handle_admin_view_suggestions(event):
         suggestion_text = suggestion.get("suggestion", "無內容")
         if suggestion_text not in seen_suggestions:
             seen_suggestions.add(suggestion_text)
-            unique_suggestions.append({
+            unique_suggestions.insert(0, {
                 "student_id": student_id,
                 "suggestion": suggestion_text
             })
@@ -499,17 +509,6 @@ def handle_awaiting_suggestion(event):
 
 
 def create_unit_bubble(unit_name, details):
-    # 取得所有時間點，並按照時間排序（由最早到最晚）
-    sorted_times = sorted(details['times'].items(), key=lambda x: x[0])
-
-    # 取得最晚的三個時間點
-    last_three_times = sorted_times[-3:]
-
-    # 生成 times_and_num 字符串
-    times_and_num = "".join([
-        f"{time}: {count}題\n" if i < len(last_three_times) - 1 else f"{time}: {count}題"
-        for i, (time, count) in enumerate(last_three_times)
-    ])
 
     bubble = {
       "type": "bubble",
@@ -572,21 +571,26 @@ def create_unit_bubble(unit_name, details):
             "contents": [
               {
                 "type": "text",
-                "text": "答題時間及題數:",
-                "color": "#8C8C8C",
-                "size": "sm",
-                "wrap": True,
-                "margin": "none"
-              },
-              {
-                "type": "text",
-                "text": times_and_num,
-                "margin": "none",
-                "size": "sm",
-                "wrap": True,
+                "text": f"總回答題數:{details['count']}",
+                "size": "sm"
               }
-            ],
-            "flex": 1
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "分數分布",
+                  "text": f"查看{unit_name}的分數分布"
+                },
+                "color": "#F9F2DC",
+                "style": "secondary"
+              }
+            ]
           }
         ],
         "spacing": "md",
@@ -729,6 +733,27 @@ def show_unit_answer_records(event, student_id):
 
     flex_message = FlexSendMessage(alt_text="答題記錄", contents={"type": "carousel", "contents": bubbles})
     line_bot_api.reply_message(event.reply_token, flex_message)
+
+def calculate_score_distribution(unit_name, student_id):
+    # 初始化分數分佈字典
+    score_distribution = {1: 0, 2: 0, 3: 0}
+    
+    # 建立 Redis 鍵模式
+    pattern = f"{student_id}_score:*"
+    
+    # 獲取所有符合模式的鍵
+    score_keys = redis_client.keys(pattern)
+    for key in score_keys:
+        score = redis_client.lrange(key, 0, -1)
+        question_title = key.split("_score:")[1]
+
+        for unit, collection in unit_collections.items():
+            if unit == unit_name and collection.find_one({"Question": question_title}):
+                for s in score:
+                    score_distribution[int(s)] += 1
+
+    # 返回分數分佈
+    return score_distribution
         
 def send_question_to_mymodel(question):
     # 設定語言模型API的URL
@@ -795,6 +820,12 @@ def handle_message(event):
             handle_user_answer(event, msg, student_id)
         elif msg == "顯示作答紀錄":
             show_unit_answer_records(event, student_id)
+        elif msg.startswith('查看') and msg.endswith('分數分布'):
+            unit_name = msg[2:-5]
+            score_distribution = calculate_score_distribution(unit_name, student_id)
+            score_distribution_str = str(score_distribution)
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=score_distribution_str))
+
         elif student_id in special_student_ids:
             if msg == "小提醒":
                 show_warning_messages(event.reply_token)

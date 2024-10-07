@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理使用者</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/user.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="centered-title">使用者管理</h1>
+        <h2>新增使用者</h2>
+        <form id="add-user-form" class="form">
+            <label for="new-username">帳號 :</label>
+            <input type="text" id="new-username" name="username" required>
+            <br>
+            <label for="new-password">密碼 :</label>
+            <input type="password" id="new-password" name="password" required>
+            <br>
+            <label for="new-role">權限 :</label>
+            <select id="new-role" name="role">
+                <option value="normal">一般管理者</option>
+                <option value="superuser">管理員</option>
+            </select>
+            <br>
+            <button type="submit" class="button">新增使用者</button>
+        </form>
+
+        <h2>刪除使用者</h2>
+        <form id="delete-user-form" class="form">
+            <label for="user-list">選擇使用者 :</label>
+            <select id="user-list" name="user_id" required>
+                <!-- 使用者列表將由 JavaScript 動態填充 -->
+            </select>
+            <br>
+            <button id="delete-user-button" class="button">刪除使用者</button>
+        </form>
+    </div>
+</body>
+</html>
