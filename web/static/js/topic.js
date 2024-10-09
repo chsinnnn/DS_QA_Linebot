@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = {
             unit: document.getElementById('unit').value,
             question: document.getElementById('question').value,
-            answer: document.getElementById('answer').value
+            answer: document.getElementById('answer').value,
+            type: document.getElementById('type').value
         };
 
         fetch('/add_question', {

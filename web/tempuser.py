@@ -180,8 +180,9 @@ def add_question():
         return jsonify({"error": "單元名稱、題目和答案是必填的"}), 400
 
     collection = unit_collections.get(unit)
-    if not collection:
+    if collection is None:
         return jsonify({"error": "單元名稱不正確"}), 400
+
 
     formatted_answer = json.dumps([answer], ensure_ascii=False)
     collection.insert_one({"Question": question, "Answer": formatted_answer, "Type": type})
