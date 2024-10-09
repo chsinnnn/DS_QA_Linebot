@@ -72,7 +72,6 @@ def login():
         return jsonify({"error": "帳號或密碼不正確"}), 401
 
 
-
 # 確認使用者是否登入
 @app.route('/check_login')
 def check_login():
@@ -176,7 +175,7 @@ def add_question():
     unit = data.get('unit')
     question = data.get('question')
     answer = data.get('answer')
-
+    type = data.get('type')
     if not unit or not question or not answer:
         return jsonify({"error": "單元名稱、題目和答案是必填的"}), 400
 
@@ -185,7 +184,7 @@ def add_question():
         return jsonify({"error": "單元名稱不正確"}), 400
 
     formatted_answer = json.dumps([answer], ensure_ascii=False)
-    collection.insert_one({"Question": question, "Answer": formatted_answer})
+    collection.insert_one({"Question": question, "Answer": formatted_answer, "Type": type})
 
     return jsonify({"message": "題目已成功新增！"}), 200
 

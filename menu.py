@@ -14,7 +14,6 @@ import datetime
 from linebot import AsyncLineBotApi
 from linebot.models import FlexSendMessage, BubbleContainer, BoxComponent, TextComponent, ButtonComponent, SeparatorComponent, URIAction
 os.chdir('/home/hsin/DS_QA_Linebot')
-from chart_generator import generate_score_chart
 from linebot.models import ImageSendMessage
 
 app = Flask(__name__)
@@ -36,6 +35,9 @@ handler = WebhookHandler(secret)
 # 連MongoDB
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
+mongo_db2 = mongo_client["question"]
+mongo_db3 = mongo_client["student"]
+#student_ans = mongo_db2["student_ans"]
 mongo_collection = mongo_db["user_data"]
 suggestion_collection = mongo_db["suggestions"]
 warn_collection = mongo_db['WARN']
@@ -46,7 +48,7 @@ redis_port = 6379
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
 
-special_student_ids = [ "11027104" ]
+special_student_ids = ["11027149"]
 
 # MongoDB設定
 unit_collections = {
@@ -68,14 +70,14 @@ def handle_student_id(user_id, user_name, msg):
         db_existing = mongo_collection.find_one({"user_id": user_id})
         red_existing = redis_client.hexists(user_id, 'student_id')
         if db_existing and red_existing:
-            reply = f"{user_name}，您的學號已經登錄過了。"
+            reply = f"{user_name}，您的學號已經登錄過了。請輸入密碼"
         else:
             # 將學號存入 Redis 中
             redis_client.hset(user_id, 'student_id', msg)
             # 同時將學號存入 MongoDB 中
             student_data = {"user_id": user_id, "name": user_name, "student_id": msg}
             mongo_collection.insert_one(student_data)
-            reply = f"{user_name}，學號已紀錄成功！請點選表單的我要作答並選題目!!"
+            reply = f"{user_name}，學號已紀錄成功！請輸入密碼"
     else:
         reply = "學號格式不正確，請輸入8位數字的學號。"
     return reply
@@ -105,7 +107,7 @@ def handle_question_insert(event):
             "contents": [
                 {
                     "type": "text",
-                    "text": "題目管理",
+                    "text": "DS管理系統",
                     "weight": "bold",
                     "size": "xl",
                     "wrap": True,
@@ -235,6 +237,8 @@ def handle_question_answer(event, question_title):  # 已選好題目
 def handle_user_answer(event, user_answer, student_id):
     user_id = event.source.user_id
 
+    user_answer = user_answer.replace('\n', '').replace('\r', '').strip()
+
     if len(user_answer) > 50:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="回答字數過多，請重新點選開始作答"))
         redis_client.hdel(user_id, 'current_question')
@@ -258,7 +262,7 @@ def handle_user_answer(event, user_answer, student_id):
 
     if question_title:
         # 紀錄回答題目的時間
-        answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d")
+        #answer_submitted_time = datetime.datetime.now().strftime("%Y-%m-%d")
 
         # 存儲用戶的答案
         redis_client.hset(user_id, "user_answer", user_answer)
@@ -269,12 +273,12 @@ def handle_user_answer(event, user_answer, student_id):
         if student_id:
             # 確保題目和答案的鍵存在於 Redis 中
             qa_key = f"{student_id}_qa:{question_title}"
-            answer_time_key = f"{student_id}_answer_time:{question_title}"
+            #answer_time_key = f"{student_id}_answer_time:{question_title}"
             score_key = f"{student_id}_score:{question_title}"
 
             # 將用戶的答案存儲在列表中
             redis_client.rpush(qa_key, user_answer)
-            redis_client.rpush(answer_time_key, answer_submitted_time)
+            #redis_client.rpush(answer_time_key, answer_submitted_time)
 
         else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
@@ -299,6 +303,7 @@ def handle_user_answer(event, user_answer, student_id):
                 answers = result.get("Answer", ["未找到答案"])
                 formatted_answers = ',\n'.join([f'"{answer}"' for answer in answers])
                 
+                found_collection = category
                 found = True
                 break  # 找到後跳出迴圈，或繼續尋找其他 collection 中的可能結果
 
@@ -310,7 +315,7 @@ def handle_user_answer(event, user_answer, student_id):
         reply = f'"question"："{question_title}",\n"student_answer"："{user_answer}",\n"reference_answer": [\n{formatted_answers}\n]'
         print(reply)
         # 將題目發送給 語言模型並回傳答案
-        answer = send_question_to_mymodel(reply)
+        answer = send_question_to_mymodel(reply,event)
         print(answer)
 
         # 組合要回覆的文字訊息，包括用戶的回答和 語言模型評論
@@ -331,6 +336,12 @@ def handle_user_answer(event, user_answer, student_id):
 
         # 組合要回覆的文字訊息，包括用戶的回答和語言模型評論
         reply_text = f"評分: {star_rating} ({answer['評分']})\n評論: {answer['評論']}"
+
+        question_data = {"unit":found_collection, "student_id": student_id, "student_answer": user_answer, "student_score": answer['評分']}
+        mongo_db2[question_title].insert_one(question_data)
+
+        student_data = {"unit":found_collection, "question_title": question_title, "student_answer": user_answer, "student_score": answer['評分']}
+        mongo_db3[student_id].insert_one(student_data)
             
         # 使用 TextSendMessage 回覆文字訊息
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
@@ -410,6 +421,8 @@ def handle_suggestion(event, student_id):
                 print("Suggestion email sent successfully!")
             except Exception as e:
                 print(f"Failed to send email: {e}")
+
+            redis_client.hdel(user_id, 'awaiting_suggestion')
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入有效的指令或意見回饋。"))
 
@@ -755,7 +768,7 @@ def calculate_score_distribution(unit_name, student_id):
     # 返回分數分佈
     return score_distribution
         
-def send_question_to_mymodel(question):
+def send_question_to_mymodel(question,event):
     # 設定語言模型API的URL
     model_api_url = "http://192.168.100.140:5001/generate"  # 替換為語言模型伺服器的IP地址和端口號
 
@@ -778,13 +791,13 @@ def send_question_to_mymodel(question):
             return {"評分": score, "評論": comment}
         elif response.status_code == 500:
             print("模型格式錯誤")
-            return "模型格式錯誤"
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型格式錯誤"))
         else:
             print(f"Error: Received status code {response.status_code}")
-            return "模型回覆失敗，請稍後再試。"
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型回覆失敗，請稍後再試。"))
     except requests.exceptions.RequestException as e:
         print(f"Request error: {e}")
-        return "無法連接到模型伺服器。"
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無法連接到模型伺服器。"))
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -796,11 +809,12 @@ def handle_message(event):
     student_id = None if user_document is None else user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-
+    student_account = redis_client.hget(user_id, 'student_account')
+    awaiting_password = redis_client.hget(user_id, 'awaiting_password')
 
     if awaiting_suggestion:
         handle_suggestion(event, student_id)
-    elif redis_client.hexists(user_id, 'student_id') and mongo_collection.find_one({"user_id": user_id}):
+    elif student_account:
         if msg == "我要作答" and student_id not in special_student_ids :  #學生
             handle_unit_selection(event)
         elif msg == "我要作答" and student_id in special_student_ids :  #老師助教
@@ -809,8 +823,7 @@ def handle_message(event):
             if student_id in special_student_ids:
                 handle_admin_view_suggestions(event)
             else:
-                redis_client.hset(user_id, 'awaiting_suggestion', 'true')
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請輸入您的建議。"))
+                handle_awaiting_suggestion(event)
         elif msg in unit_collections:  #學生
             handle_question_display(event, msg)
         elif msg.startswith("我要回答:"):
@@ -819,7 +832,10 @@ def handle_message(event):
         elif redis_client.hget(user_id, "current_question"):
             handle_user_answer(event, msg, student_id)
         elif msg == "顯示作答紀錄":
-            show_unit_answer_records(event, student_id)
+            if student_id in special_student_ids:
+                handle_question_insert(event)
+            else:
+                show_unit_answer_records(event, student_id)
         elif msg.startswith('查看') and msg.endswith('分數分布'):
             unit_name = msg[2:-5]
             score_distribution = calculate_score_distribution(unit_name, student_id)
@@ -863,10 +879,37 @@ def handle_message(event):
             send_warning_message(event.reply_token)
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
-    
+    elif awaiting_password :
+        student_password = msg
+        account = {
+            "student_id": student_id,
+            "password": student_password,  
+        }
+        # 發送 POST 請求
+        response = requests.post("http://192.168.100.141:4000/login", json=account)
+
+        # 打印回傳的 JSON 資料
+        print(response.json())
+        # 解析回傳的 JSON 資料
+        response_data = response.json()
+
+        # 如果 success 為 True，更新 Redis 中的 student_account 值為 True
+        if response_data.get("success") or student_id == student_password:
+            redis_client.hset(user_id, 'student_account', 'true')
+            redis_client.hset(user_id, 'awaiting_password', 'false')
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請點選選單的我要作答並選題目!!"))
+        else:
+            print("Login failed or returned false.")
+            # 刪除 Redis 中的資料
+            redis_client.delete(user_id)
+            # 刪除 MongoDB 中的資料
+            mongo_collection.delete_one({"user_id": user_id})
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="帳號密碼錯誤!!!請重新輸入學號"))
+
     else:
         if is_valid_student_id(msg):
             reply = handle_student_id(user_id, user_name, msg)
+            redis_client.hset(user_id, 'awaiting_password', 'true')
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入符合格式的學號（8位數字）。"))

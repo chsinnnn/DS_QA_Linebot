@@ -27,11 +27,17 @@
                 <!-- JavaScript 填充單元名稱 -->
             </select>
             <br>
-            <label for="question">題目:</label>
+            <label for="question">題目 :</label>
             <input type="text" id="question" name="question" required>
             <br>
-            <label for="answer">答案:</label>
+            <label for="answer">答案 :</label>
             <input type="text" id="answer" name="answer" required>
+            <br>
+            <label for="answer">題目類型 :</label>
+            <select id="type" name="type">
+                <option value="開放式問題">開放式問題</option>
+                <option value="封閉式問題">封閉式問題(有標準解答)</option>
+            </select>
             <br>
             <button type="submit" class="button">新增題目</button>
         </form>
