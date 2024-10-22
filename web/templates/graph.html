@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生作答圖表</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/login.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px;
+        }
+
+        #chartContainer {
+            display: none; /* 隱藏，選擇班級後顯示 */
+            align-items: flex-start;
+            width: 60%;
+            max-width: 800px;
+        }
+
+        #barChart,
+        #lineChart {
+            width: 300px;  
+            height: 200px; 
+            max-width: 60%; 
+        }
+
+        #questionList {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <h1 class="centered-title">
+            <img src="/static/images/logo.png" alt="Logo" class="title-image">
+            學生作答圖表
+        </h1>
+        
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/'" class="button">返回首頁</button>
+            <button id="logout-button" class="button">登出</button>
+        </div>
+        <!-- 班級選擇 -->
+        <div id="dbSelection" class="form">
+            <label for="dbChoice">選擇班級：</label>
+            <select id="dbChoice">
+                <option value="firstclass">甲班</option>
+                <option value="secondclass">乙班</option>
+            </select>
+            <button id="confirmDbChoice">確認</button>
+        </div>
+
+        <div id="chartContainer">
+            <canvas id="barChart"></canvas>
+            <canvas id="lineChart"></canvas>
+        </div>
+        <div id="questionList"></div> 
+        
+        <script>
+            const ctxBar = document.getElementById('barChart').getContext('2d');
+            const ctxLine = document.getElementById('lineChart').getContext('2d');
+    
+            let lineChart; 
+            let selectedDb;
+            
+            document.getElementById('confirmDbChoice').addEventListener('click', function() {
+                selectedDb = document.getElementById('dbChoice').value;
+                loadScoreDistribution(); // 載入分數分佈
+                document.getElementById('chartContainer').style.display = 'flex'; // 顯示圖表區域
+            });
+            let barChart; // 定義全局變數以管理長條圖
+            // 根據選擇的資料庫載入分數分佈
+            function loadScoreDistribution() {
+                if (!selectedDb) {
+                    alert('請先選擇資料庫');
+                    return;
+                }
+                $.ajax({
+                    url: `/get_score_distribution?db=${selectedDb}`, 
+                    method: 'GET',
+                    success: function(response) {
+                        const scoreRanges = response.map(item => item.average_score_range);
+                        const numQuestions = response.map(item => item.num_questions);
+                        // 如果已有長條圖存在，先刪掉它
+                        if (barChart) {
+                            barChart.destroy();
+                        }
+
+                        // 初始化長條圖
+                        barChart = new Chart(ctxBar, {
+                            type: 'bar',
+                            data: {
+                                labels: scoreRanges,
+                                datasets: [{
+                                    label: '題數',
+                                    data: numQuestions,
+                                    borderColor: 'rgba(102, 129, 102, 1)', // 線條顏色
+                                    backgroundColor: 'rgba(102, 129, 102, 0.2)', // 填充顏色
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                responsive: true, 
+                                maintainAspectRatio: false, 
+                                scales: {
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: '分數區間'
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '題數'
+                                        }
+                                    }
+                                },
+                                onClick: (e) => {
+                                    const activePoints = barChart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, false);
+                                    if (activePoints.length > 0) {
+                                        const clickedIndex = activePoints[0].index;
+                                        const clickedScoreRange = barChart.data.labels[clickedIndex];
+                                        const [minScore, maxScore] = clickedScoreRange.split('~').map(Number); // 取得區間的下限和上限
+                                        
+                                        // 發送請求到後端
+                                        fetch(`/get_question/${minScore}/${maxScore}?db=${selectedDb}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                const questionList = document.getElementById('questionList');
+                                                questionList.innerHTML = `<h3>平均分數在 ${clickedScoreRange} 的題目: (點擊題目顯示折線圖)</h3>`;
+                                                // 顯示題目列表
+                                                data.forEach((question, index) => {
+                                                    const questionItem = document.createElement('div');
+                                                    questionItem.innerHTML = `<p>題目 ${index + 1}: ${question.Question}</p>`;
+                                                    questionItem.addEventListener('click', () => loadLineChart(question._id)); // 點擊題目顯示折線圖
+                                                    questionList.appendChild(questionItem);
+                                                });
+                                            })
+                                            .catch(error => {
+                                                console.error('Error fetching questions:', error);
+                                            });
+                                    }
+                                }
+                            }
+                        });
+                    },
+                    error: function(error) {
+                        console.error('Error fetching score distribution:', error);
+                    }
+                });
+            }
+    
+            // 顯示對應題目的折線圖
+            function loadLineChart(questionId) {
+                $.ajax({
+                    url: `/get_score_distribution_by_question/${questionId}?db=${selectedDb}`,  // 請求特定題目的學生分數分佈
+                    method: 'GET',
+                    success: function(scores) {
+                        console.log('Scores data:', scores); 
+                        if (scores.length === 0) {
+                            console.warn('No scores found for this question.');
+                            return;
+                        }
+
+                        const labels = [0, 1, 2, 3];  // X 軸為分數
+                        const numStudents = scores.map(item => item.num_students); // Y 軸為人數
+
+                        if (lineChart) {
+                            lineChart.destroy(); 
+                        }
+
+                        lineChart = new Chart(ctxLine, {
+                            type: 'line',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: `人數`,
+                                    data: numStudents,
+                                    borderColor: '#668166', 
+                                    borderWidth: 2,
+                                    fill: false 
+                                }]
+                            },
+                            options: {
+                                responsive: true, 
+                                maintainAspectRatio: false, 
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '人數' // Y 軸標題
+                                        }
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: '分數' // X 軸標題
+                                        },
+                                        min: 0,  // 設定 X 軸最小值
+                                        max: 3,  // 設定 X 軸最大值
+                                        ticks: {
+                                            stepSize: 1  // 設置 X 軸的刻度間距
+                                        }
+                                    }
+                                },
+                                onClick: (e) => {
+                                    const activePoints = lineChart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, false);
+                                    if (activePoints.length > 0) {
+                                        const clickedIndex = activePoints[0].index;
+                                        const clickedScore = lineChart.data.labels[clickedIndex]; // 取得點擊的分數
+                                        console.log('Clicked score:', clickedScore); 
+
+                                        // 發送請求到後端，根據分數查詢學生回答
+                                        fetch(`/get_answers_by_score/${questionId}/${clickedScore}?db=${selectedDb}`)
+                                            .then(response => {
+                                                if (!response.ok) {
+                                                    throw new Error('Network response was not ok: ' + response.statusText);
+                                                }
+                                                return response.json();
+                                            })
+                                            .then(data => {
+                                                console.log('Fetched student answers:', data); 
+                                                if (data.error) {  
+                                                    console.error('Error from server:', data.error);
+                                                    return; 
+                                                }
+
+                                                if (!Array.isArray(data)) {
+                                                    console.error('Expected an array but got:', data);
+                                                    return;  
+                                                }
+
+                                                const questionList = document.getElementById('questionList');
+                                                questionList.innerHTML = `<h3>分數為 ${clickedScore} 的學生回答:</h3>`;
+                                                data.forEach((student) => {
+                                                    const studentItem = document.createElement('div');
+                                                    studentItem.innerHTML = `<p>學號: ${student["學號"]} | 回答: ${student["答案"]}</p>`;
+                                                    questionList.appendChild(studentItem);
+                                                });
+                                            })
+                                            .catch(error => {
+                                                console.error('Error fetching student answers:', error);
+                                            });
+                                    }
+                                }
+                            }
+                        });
+                    },
+                    error: function(error) {
+                        console.error('Error fetching score distribution by question:', error);
+                    }
+                });
+            }
+    
+            // 初始化時載入分數分佈
+            loadScoreDistribution();
+        </script>
+    </div>
+</body>
+</html>

@@ -16,11 +16,23 @@ body {
 /* 容器樣式：限制容器最大寬度，並置中顯示，添加內邊距、圓角及陰影 */
 .container {
     max-width: 800px;               /* 最大寬度 800px */
+    /*min-width: 800px;*/
     margin: 0 auto;                 /* 水平置中 */
     background: #fff;               /* 背景顏色為白色 */
     padding: 20px;                  /* 內邊距為 20px */
     border-radius: 8px;             /* 邊角圓角化 8px */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加淡淡的陰影效果 */
+    min-height: 800px;              /* 設定最小高度，確保容器不會變小 */
+}
+.container2 {
+    max-width: 800px;               /* 最大寬度 800px */
+    min-width: 800px;
+    margin: 0 auto;                 /* 水平置中 */
+    background: #fff;               /* 背景顏色為白色 */
+    padding: 20px;                  /* 內邊距為 20px */
+    border-radius: 8px;             /* 邊角圓角化 8px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加淡淡的陰影效果 */
+    min-height: 800px;              /* 設定最小高度，確保容器不會變小 */
 }
 
 /* 只針對 h1 進行置中處理：置中 h1 的文字並調整字體大小及下方間距 */
@@ -111,4 +123,19 @@ body {
 /* 登出按鈕懸停樣式 */
 #logout-button:hover {
     background-color: #EBA281; /* 保持相同背景顏色 */
+}
+/* 題目列表樣式，讓題目有點擊效果 */
+#questionList div {
+    border-radius: 4px;
+    padding: 3px;
+    border: 1px solid #ddd;   /* 邊框顏色為淺灰色 */
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* 當點擊題目時的按下效果 */
+#questionList div:active {
+    transform: scale(0.95);  /* 區塊會縮小 5%*/
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }

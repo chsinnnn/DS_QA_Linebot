@@ -21,6 +21,150 @@ unit_collections = {
     "堆疊": mongo_db["stack"],
     "二元樹": mongo_db["bst"]
 }
+db = mongo_client["teststudentdata"] 
+firstclass = db.firstclass 
+secondclass = db.secondclass
+@app.route('/graph')
+def graph():
+    return render_template('graph.html')
+
+# 獲取分數區間和對應的題數
+@app.route('/get_score_distribution', methods=['GET'])
+def get_score_distribution():
+    db_choice = request.args.get('db')  # 接收前端傳來的資料庫選擇
+    if db_choice == 'firstclass':
+        collectionn = firstclass
+    elif db_choice == 'secondclass':
+        collectionn = secondclass
+    else:
+        return jsonify({"error": "Invalid database selection"}), 400
+
+    pipeline = [
+        {"$bucket": {
+            "groupBy": "$平均分數",
+            "boundaries": [0, 1, 2, 3.01],
+            "default": "Other",
+            "output": {
+                "num_questions": {"$sum": 1}
+            }
+        }}
+    ]
+    data = list(collectionn.aggregate(pipeline))
+
+    response = []
+    for item in data:
+        score_range = f"{item['_id']}~{item['_id'] + 1}" if item['_id'] != "Other" else "Other"
+        response.append({
+            "average_score_range": score_range,
+            "num_questions": item["num_questions"]
+        })
+
+    return jsonify(response)
+
+# 根據分數區間取得該區間的題目
+@app.route('/get_question/<min_score>/<max_score>', methods=['GET'])
+def get_question(min_score, max_score):
+    db_choice = request.args.get('db')  # 選班級
+    if db_choice == 'firstclass':
+        collectionn = firstclass
+    elif db_choice == 'secondclass':
+        collectionn = secondclass
+    else:
+        return jsonify({"error": "Invalid database selection"}), 400
+
+    
+    min_score = float(min_score)
+    max_score = float(max_score)
+
+    
+    if(max_score == 3):
+        questions = list(collectionn.find({"平均分數": {"$gte": min_score, "$lt": max_score + 0.001}}, 
+                                          {"_id": 1, "Question": 1, "平均分數": 1}))
+    else:
+        questions = list(collectionn.find({"平均分數": {"$gte": min_score, "$lt": max_score}}, 
+                                          {"_id": 1, "Question": 1, "平均分數": 1}))
+
+    
+    for question in questions:
+        question['_id'] = str(question['_id'])
+        question['Question'] = f"{question['Question']} <br>( 平均分數 : {question['平均分數']:.2f} )"  # 將平均分數附加到題目後面
+
+
+    return jsonify(questions)
+
+
+# 根據題目ID獲取該題目的學生分數分布
+@app.route('/get_score_distribution_by_question/<string:question_id>', methods=['GET'])
+def get_score_distribution_by_question(question_id):
+    db_choice = request.args.get('db')  
+    if db_choice == 'firstclass':
+        collectionn = firstclass
+    elif db_choice == 'secondclass':
+        collectionn = secondclass
+    else:
+        return jsonify({"error": "Invalid database selection"}), 400
+
+    question = collectionn.find_one({"_id": ObjectId(question_id)})
+    if not question:
+        return jsonify({"error": "Question not found"}), 404
+
+    # 計算每個分數的學生人數
+    pipeline = [
+        {"$unwind": "$studentans_score"},
+        {"$match": {"_id": question["_id"]}},
+        {"$group": {"_id": "$studentans_score.評分", "num_students": {"$sum": 1}}}
+    ]
+    data = list(collectionn.aggregate(pipeline))
+
+    # 0 到 3 的完整分數範圍
+    score_range = {i: 0 for i in range(4)}  # 0, 1, 2, 3 分
+    for item in data:
+        score_range[item["_id"]] = item["num_students"]
+
+    
+    response = [{"score": score, "num_students": num_students} for score, num_students in score_range.items()]
+    
+    return jsonify(response)
+
+
+@app.route('/get_answers_by_score/<string:question_id>/<score>', methods=['GET'])
+def get_answers_by_score(question_id, score):
+    db_choice = request.args.get('db')
+
+    try:
+        score = int(score)
+    except ValueError:
+        return jsonify({"error": "Invalid score format"}), 400
+
+    if db_choice == 'firstclass':
+        collectionn = firstclass
+    elif db_choice == 'secondclass':
+        collectionn = secondclass
+    else:
+        return jsonify({"error": "Invalid database selection"}), 400
+
+    question_data = collectionn.find_one({"_id": ObjectId(question_id)})
+
+    if not question_data:
+        return jsonify({"error": "Question not found"}), 404
+
+    answers = []
+    for student_ans in question_data.get("studentans_score", []):
+        if student_ans["評分"] == score:
+            answers.append({
+                "學號": student_ans["學號"],
+                "答案": student_ans["答案"]
+            })
+    result = {
+        "Question": question_data["Question"],  # 題目內容
+        "Answers": answers  # 學生答案
+    }
+    print("Filtered answers:", answers)  # 
+    if not answers:
+        return jsonify([])  
+
+    return jsonify(answers)
+
 
 '''
 username = "teacher"
@@ -66,7 +210,7 @@ def login():
 
     if user and bcrypt.checkpw(password.encode('utf-8'), user['password']):  # 驗證密碼
         session['username'] = username
-        session['role'] = user['role']  # 儲存角色資訊到 session
+        session['role'] = user['role']  # 儲存到 session
         return jsonify({"message": "登入成功！"}), 200
     else:
         return jsonify({"error": "帳號或密碼不正確"}), 401
@@ -89,7 +233,7 @@ def manage_users():
     if session['role'] != 'superuser':
         return jsonify({"error": "你沒有權限訪問此頁面"}), 403
 
-    return render_template('user.html')  # 渲染 user.html 頁面
+    return render_template('user.html')  
 
 
 # 新增使用者
@@ -107,7 +251,7 @@ def add_user():
         if existing_user:
             return jsonify({"error": "User already exists"}), 400
 
-        # 對密碼進行哈希處理
+        # 對密碼進行hash處理
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
 
         # 將新使用者插入資料庫

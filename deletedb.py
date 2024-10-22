@@ -4,11 +4,11 @@ from pymongo import MongoClient
 client = MongoClient("mongodb://localhost:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.5")
 
 # 指定資料庫名稱
-db_name = 'testdb'
+db_name = 'teststudentdata'
 db = client[db_name]
 
 # 指定要刪除的 collection 名稱
-collection_name = 'other'
+collection_name = 'secondclass'
 
 # 刪除 collection
 try:

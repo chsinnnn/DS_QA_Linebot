@@ -32,7 +32,7 @@
 
         <!-- 跳轉到評分頁面的按鈕 (功能還沒做) -->
         <div style="text-align: center; margin-bottom: 20px;">
-            <button id="view-scores-button" class="button">察看評分</button>
+            <button id="view-scores-button" class="button">查看評分</button>
         </div>
     </div>
 
@@ -54,7 +54,7 @@
         const viewScoresButton = document.getElementById('view-scores-button');
         if (viewScoresButton) {
             viewScoresButton.addEventListener('click', function() {
-                alert("評分系統尚未開發");  // 此功能尚未完成
+                window.location.href = '/graph';
             });
         }
 

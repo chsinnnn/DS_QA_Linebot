@@ -68,32 +68,7 @@ def create_new_data(db):
                 "鏈結串列是一種資料結構，由一連串節點組成，每個節點包含資料和指向下一個節點的指標，用來動態管理資料，方便插入和刪除元素。"
               ],
               "Type": "開放式問題"
-            },            {"Question": "",
-             "Answer": [
-                ""
-              ],
-              "Type": "開放式問題"
-            },            {"Question": "",
-             "Answer": [
-                ""
-              ],
-              "Type": "開放式問題"
-            },            {"Question": "",
-             "Answer": [
-                ""
-              ],
-              "Type": "開放式問題"
-            },            {"Question": "",
-             "Answer": [
-                ""
-              ],
-              "Type": "開放式問題"
-            },            {"Question": "",
-             "Answer": [
-                ""
-              ],
-              "Type": "開放式問題"
-            },
+            }
 
         ]
         result = collection.insert_many(data)
