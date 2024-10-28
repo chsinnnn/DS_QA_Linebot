@@ -9,12 +9,17 @@ import json
 import redis
 import requests
 import os
-import ast
-import datetime
 from linebot import AsyncLineBotApi
 from linebot.models import FlexSendMessage, BubbleContainer, BoxComponent, TextComponent, ButtonComponent, SeparatorComponent, URIAction
 os.chdir('/home/hsin/DS_QA_Linebot')
 from linebot.models import ImageSendMessage
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+import glob
+import time
+from apscheduler.schedulers.background import BackgroundScheduler
+import pandas as pd
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -31,24 +36,28 @@ handler = WebhookHandler(secret)
 # 使用 AsyncApiClient
 #async_api = AsyncLineBotApi(access_token=access_token)
 
-
 # 連MongoDB
 mongo_client = MongoClient("mongodb://localhost:27017/")
 mongo_db = mongo_client["testdb"]
-mongo_db_class1 = mongo_client["question_class1"]
-mongo_db_class2 = mongo_client["question_class2"]
-mongo_db_other = mongo_client["question_other"]
+mongo_db_question = mongo_client["teststudentdata"]
+collection_class1 = mongo_db_question["firstclass"]# 各班級的集合
+collection_class2 = mongo_db_question["secondclass"]# 各班級的集合
+collection_other = mongo_db_question["other"]# 各班級的集合
 mongo_db_student = mongo_client["student"]
 #student_ans = mongo_db2["student_ans"]
 mongo_collection = mongo_db["user_data"]
 suggestion_collection = mongo_db["suggestions"]
 warn_collection = mongo_db['WARN']
+mongo_client.drop_database("question")
 
 # 連Redis
 redis_host = 'localhost'
-redis_port = 6379
+redis_port = 6379 
 redis_db = 0
 redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
+
+#redis_client.flushdb()
+#print("Redis 資料庫已成功清空。")
 
 special_student_ids = []
 
@@ -72,27 +81,61 @@ def handle_student_id(user_id, user_name, msg):
         db_existing = mongo_collection.find_one({"user_id": user_id})
         red_existing = redis_client.hexists(user_id, 'student_id')
         if db_existing and red_existing:
-            reply = f"{user_name}，您的學號已經登錄過了。請輸入密碼"
+            reply = "您的學號已經登錄過了。請輸入「密碼」"
         else:
             # 將學號存入 Redis 中
             redis_client.hset(user_id, 'student_id', msg)
             # 同時將學號存入 MongoDB 中
             student_data = {"user_id": user_id, "name": user_name, "student_id": msg}
             mongo_collection.insert_one(student_data)
-            reply = f"{user_name}，學號已紀錄成功！請輸入密碼"
+            reply = "學號已紀錄成功！請輸入「密碼」"
     else:
-        reply = "學號格式不正確，請輸入8位數字的學號。"
+        reply = "學號格式不正確，請輸入8位數字的「學號」"
     return reply
 
+def check_usage_time(student_id):
+    # 取得目前的日期和時間
+    current_datetime = datetime.now()
+    current_time = current_datetime.time()
+    current_date = current_datetime.date()
+
+    # 定義需要的日期（例如：10/29）
+    required_date = datetime.strptime("2024-10-29", "%Y-%m-%d").date()
+
+    # 定義班級的使用時間區段
+    class_times = {
+        "甲班": (datetime.strptime("10:00", "%H:%M").time(), datetime.strptime("12:00", "%H:%M").time()),
+        "乙班": (datetime.strptime("15:00", "%H:%M").time(), datetime.strptime("17:00", "%H:%M").time()),
+    }
+
+    # 從 mongo_collection 中查詢學生的班級
+    student_data = mongo_collection.find_one({"student_id": student_id})
+    class_name = student_data.get("class") if student_data else None
+    print(f"學生 {student_id} 的班級是 {class_name}")
+
+    # 判斷是否在允許的時間內
+    if class_name in class_times:
+        # 判斷日期是否符合
+        if current_date != required_date:
+            print("當前日期不符合要求")
+            return False
+        start_time, end_time = class_times[class_name]
+        if start_time <= current_time <= end_time:
+            return True
+    else:
+        return True
+    
+    return False
+    
 def handle_unit_selection(event):
     quick_reply = QuickReply(items=[
         
         QuickReplyButton(action=MessageAction(label="指標", text="指標")),
-        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
+        #QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
         QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
         QuickReplyButton(action=MessageAction(label="排序", text="排序")),
         QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
-        QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
+        #QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
         QuickReplyButton(action=MessageAction(label="其他", text="其他"))
     ])
 
@@ -161,7 +204,11 @@ def handle_question_display(event, unit, student_id):  # 多個題目挑選
     # 獲取所有題目並過濾掉已回答過的題目
     questions = list(collection.find({"Question": {"$nin": list(answered_questions)}}))
     random_questions = random.sample(questions, 3) if len(questions) >= 3 else questions
-
+    
+    '''
+    questions = list(collection.find())
+    random_questions = random.sample(questions, 3) if len(questions) >= 3 else questions
+    '''
     bubbles = []
     for question in random_questions:
         bubble = {
@@ -242,13 +289,15 @@ def handle_question_answer(event, student_id, question_title):  # 已選好題�
         user_id = event.source.user_id
         # 檢查用戶是否已經回答過該問題
         existing_answer = mongo_db_student[student_id].find_one({"question_title": question_title})
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題\n(回答100字以下)"))
         
         if existing_answer:
             # 回覆用戶已經回答過該問題
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="你已經回答過這題了！！！\n請繼續選擇其他題目作答哦"))
         else:
             redis_client.hset(user_id, "current_question", question_title)
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題\n(回答50字以下)"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題\n(回答100字以下)"))
+        
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
 
@@ -257,7 +306,7 @@ def handle_user_answer(event, user_answer, student_id):
 
     user_answer = user_answer.replace('\n', '').replace('\r', '').strip()
 
-    if len(user_answer) > 50:
+    if len(user_answer) > 100:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="回答字數過多，請重新點選開始作答"))
         redis_client.hdel(user_id, 'current_question')
         return
@@ -287,20 +336,21 @@ def handle_user_answer(event, user_answer, student_id):
 
         # 從 Redis 中讀取學號
         student_id = redis_client.hget(user_id, "student_id")
+        redis_key = f"{question_title}_answers"
 
-        if student_id:
+        #if student_id:
             # 確保題目和答案的鍵存在於 Redis 中
-            qa_key = f"{student_id}_qa:{question_title}"
+            #qa_key = f"{student_id}_qa:{question_title}"
             #answer_time_key = f"{student_id}_answer_time:{question_title}"
-            score_key = f"{student_id}_score:{question_title}"
+            #score_key = f"{student_id}_score:{question_title}"
 
             # 將用戶的答案存儲在列表中
-            redis_client.rpush(qa_key, user_answer)
+            #redis_client.rpush(qa_key, user_answer)
             #redis_client.rpush(answer_time_key, answer_submitted_time)
 
-        else:
+        #else:
             # 如果無法找到學號，則拋出錯誤或採取其他適當的處理方式
-            print("無法找到學號，無法存儲題目和用戶答案")
+            #print("無法找到學號，無法存儲題目和用戶答案")
 
         # 假設 Question 是一個字典，裡面有 "question_title"
         Question = {
@@ -325,6 +375,9 @@ def handle_user_answer(event, user_answer, student_id):
             found_collection = category
             found = True
 
+            qa_key = f"{question_title}"
+            redis_client.rpush(qa_key, user_answer)
+
         # 定義生成星星圖案的函數
             def generate_star_rating(score):
                 # 確保 score 是整數
@@ -336,85 +389,96 @@ def handle_user_answer(event, user_answer, student_id):
                 # 根據分數生成星星
                 return "★" * score + "☆" * (3 - score)  # 3 為滿分
             
+            # 使用 json.loads 轉換為 Python 列表
+            if isinstance(answers, str):
+                answers = json.loads(answers)
+
+            # 去除學生答案的前後空格
+            stripped_user_answer = user_answer.strip().replace(" ", "")
             # 檢查題目類型
             if question_type == "封閉式問題(有標準答案)":
-                # 去除學生答案的前後空格
-                stripped_user_answer = user_answer.strip().replace(" ", "")
                 # 直接比對學生回答與標準答案（也去除標準答案的前後空格並移除所有空格）
-                if any(stripped_user_answer == answer.strip().replace(" ", "") for answer in answers):
-                    score = 3
-                    comment = "答案正確"
+                if any(stripped_user_answer == ans.strip().replace(" ", "") for ans in answers):
+                    answer = {"score": 3, "comment": "答案正確"}
                 else:
-                    score = 0
-                    comment = "答案不正確"
-                
-                # 生成星星圖案
-                star_rating = generate_star_rating(score)
-                reply_text = f"評分: {star_rating} ({score})\n評論: {comment}"
-                
-                # 儲存結果至資料庫
-                question_data = {"unit":found_collection, "student_id": student_id, "student_answer": user_answer, "student_score": score}
-                student_data = {"unit":found_collection, "question_title": question_title, "student_answer": user_answer, "student_score": score}
+                    answer = {"score": 0, "comment": "答案不正確"}
+                print(stripped_user_answer)
+                print(answers)
 
-                # 儲存評分結果
-                redis_client.rpush(score_key, score)
             
             # 如果是開放式問題，則照原本處理
             else:
+                if len(stripped_user_answer) >= 20:
+                    previous_answers = redis_client.lrange(redis_key, 0, -1)
+                    if stripped_user_answer in previous_answers:
+                        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="此答案已經有人回答過!"))
+                        return  # 不存入資料庫，也不進行後續處理
+                    
+                    # 如果沒有重複答案，則將答案存入 Redis 中
+                    redis_client.rpush(redis_key, stripped_user_answer)
+
                 reply = f'"question"："{question_title}",\n"student_answer"："{user_answer}",\n"reference_answer": [\n{formatted_answers}\n]'
                 print(reply)
                 # 將題目發送給 語言模型並回傳答案 
                 answer = send_question_to_mymodel(reply, event)
                 print(answer)
 
-                # 根據評分生成星星圖案
-                star_rating = generate_star_rating(answer['score'])
+            # 根據評分生成星星圖案
+            star_rating = generate_star_rating(answer['score'])
 
-                # 組合要回覆的文字訊息，包括用戶的回答和語言模型評論
-                reply_text = f"評分: {star_rating} ({answer['score']})\n評論: {answer['comment']}"
+            # 組合要回覆的文字訊息，包括用戶的回答和語言模型評論
+            reply_text = f"評分: {star_rating} ({answer['score']})\n評論: {answer['comment']}"
                 
-                # 建立學生回答資料
-                student_answer_data = {
-                    "學號": student_id,
-                    "評分": answer['score'],
-                    "答案": user_answer,
-                    "評語": answer['comment']
+            # 建立學生回答資料
+            student_answer_data = {
+                "學號": student_id,
+                "評分": int(answer['score']),
+                "答案": user_answer,
+                "評語": answer['comment']
+            }
+
+            # 查詢學生班級
+            student_record = mongo_collection.find_one({"student_id": student_id})
+
+            # 根據查詢結果選擇集合
+            if student_record:
+                class_name = student_record.get("class")
+                if class_name == "甲班":
+                    collection = collection_class1
+                elif class_name == "乙班":
+                    collection = collection_class2
+                else:
+                    collection = collection_other
+            else:
+                # 若找不到該學生記錄，預設放入其他
+                collection = collection_other
+
+            # 查詢問題是否已存在於資料庫中
+            existing_question = collection.find_one({"Question": question_title})
+
+            if existing_question:
+                # 如果問題已存在，將學生回答新增到 `studentans_score`
+                existing_question["studentans_score"].append(student_answer_data)
+                    
+                # 更新平均分數
+                existing_question["平均分數"] = calculate_average_score(existing_question["studentans_score"])
+                    
+                # 更新資料庫中的問題資料
+                collection.update_one({"Question": question_title}, {"$set": existing_question})
+
+            else:
+                # 如果問題不存在，則建立一個新的問題資料
+                new_question = {
+                    "Question": question_title,
+                    "studentans_score": [student_answer_data],
+                    "平均分數": calculate_average_score([student_answer_data])
                 }
+                collection.insert_one(new_question)
 
-                # 根據學號決定要插入的集合
-                if student_id.startswith('112271'):
-                    collection = mongo_db_class1
-                elif student_id.startswith('112272'):
-                    collection = mongo_db_class2
-                else:
-                    collection = mongo_db_other
+            student_data = {"unit":found_collection, "question_title": question_title, "student_answer": user_answer, "student_score": answer['score']}
 
-                # 查詢問題是否已存在於資料庫中
-                existing_question = collection[question_title].find_one({"Question": question_title})
-
-                if existing_question:
-                    # 如果問題已存在，將學生回答新增到 `studentans_score`
-                    existing_question["studentans_score"].append(student_answer_data)
-                    
-                    # 更新平均分數
-                    existing_question["平均分數"] = calculate_average_score(existing_question["studentans_score"])
-                    
-                    # 更新資料庫中的問題資料
-                    collection[question_title].update_one({"Question": question_title}, {"$set": existing_question})
-
-                else:
-                    # 如果問題不存在，則建立一個新的問題資料
-                    new_question = {
-                        "Question": question_title,
-                        "studentans_score": [student_answer_data],
-                        "平均分數": calculate_average_score([student_answer_data])
-                    }
-                    collection[question_title].insert_one(new_question)
-
-                student_data = {"unit":found_collection, "question_title": question_title, "student_answer": user_answer, "student_score": answer['score']}
-
-                # 儲存評分結果
-                redis_client.rpush(score_key, answer['score'])
+            # 儲存評分結果
+            #redis_client.rpush(score_key, answer['score'])
 
             mongo_db_student[student_id].insert_one(student_data)
              
@@ -663,7 +727,7 @@ def create_unit_bubble(unit_name, details):
             "contents": [
               {
                 "type": "text",
-                "text": f"目前回答題數: {details['count']}/{details['total_questions']}",
+                "text": f"目前回答題數: {details['count']}",
                 "size": "sm"
               }
             ]
@@ -839,8 +903,93 @@ def calculate_score_distribution(unit_name, student_id):
 
     # 返回分數分佈
     return score_distribution
+
+def plot_score_distribution(unit_name, score_distribution, file_path):
+    scores = list(score_distribution.keys())
+    counts = list(score_distribution.values())
+    simhei_font = FontProperties(fname='/usr/share/fonts/SimHei.ttf')
+    # 繪製摺線圖
+    plt.plot(scores, counts, marker='o', linestyle='-', color='#668166', zorder=5, clip_on=False)
+
+    # 設定 X 軸和 Y 軸標籤
+    plt.xlabel('分數', fontproperties=simhei_font, fontsize=14)
+    plt.ylabel('作答題數', fontproperties=simhei_font, fontsize=14)
+    plt.title(f'{unit_name} 分數分布圖', fontproperties=simhei_font, fontsize=16)
+
+    # 設定 X 軸和 Y 軸刻度為整數
+    plt.xticks(scores)  # 使用分數作為 X 軸刻度
+    max_y = max(3, max(counts) + 1)  # 若 counts 最大值超過 3，則使用 max(counts) + 1 作為上限
+    plt.yticks(range(0, max_y + 1))  # Y 軸範圍基於最大值，取整數
+
+    # 移除圖表的上邊界和右邊界的線條，只保留 X 和 Y 軸
+    ax = plt.gca()
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    # 設定 X 軸和 Y 軸的線條顏色為黑色
+    ax.spines['bottom'].set_color('black')
+    ax.spines['left'].set_color('black')
+
+    # 設定 X 軸和 Y 軸的 0 點重合
+    ax.spines['left'].set_position(('data', 0))
+    ax.spines['bottom'].set_position(('data', 0))
+
+    # 設定 X 軸和 Y 軸的範圍
+    ax.set_xlim(0, max(scores) + 0.25)  # 增加邊界以容納虛線
+    ax.set_ylim(0, max_y)  # 根據 max_y 設定 Y 軸範圍
+
+    # 設定 X 軸和 Y 軸的網格線 (使用 #668166 色的虛線)
+    plt.grid(which='both', axis='both', color='#668166', linestyle='--', linewidth=0.5, zorder=1)
+
+    # 限制虛線不超出 XY 軸範圍
+    ax.set_axisbelow(True)
+
+    # 保存圖表
+    plt.savefig(file_path)
+    plt.close()
+
+def calculate_and_send_score_distribution(event, unit_name, student_id):
+    # 計算分數分佈
+    score_distribution = calculate_score_distribution(unit_name, student_id)
+    
+    # 圖片儲存路徑
+    image_path = f'/home/hsin/DS_QA_Linebot/web/static/{student_id}_score_distribution.jpg'
+    
+    # 生成分數分佈圖
+    plot_score_distribution(unit_name, score_distribution, image_path)
+    
+    # 將圖表傳送給使用者
+    image_url = f'https://question.lab214b.uk:5001/static/{student_id}_score_distribution.jpg'
+    
+    line_bot_api.reply_message(
+        event.reply_token,
+        ImageSendMessage(
+            original_content_url=image_url,
+            preview_image_url=image_url
+        )
+    )
+
+def delete_old_jpg_files():
+    # 圖片儲存路徑
+    path = '/home/hsin/DS_QA_Linebot/web/static/*.jpg'
+    files = glob.glob(path)
+    current_time = time.time()
+    
+    for f in files:
+        # 獲取圖片的最後修改時間
+        file_time = os.path.getmtime(f)
         
-def send_question_to_mymodel(question,event):
+        # 如果圖片超過 24 小時（1 天）未更新，則刪除
+        if (current_time - file_time) > 24 * 3600:  # 24 小時 = 1 天
+            os.remove(f)
+            print(f"Deleted: {f}")
+
+scheduler = BackgroundScheduler()
+# 每 3 小時檢查一次，將超過 24 小時未更新的圖片刪除
+scheduler.add_job(func=delete_old_jpg_files, trigger='interval', hours=3)
+scheduler.start()
+        
+def send_question_to_mymodel(question, event):
     # 設定語言模型API的URL
     model_api_url = "http://192.168.100.140:5001/generate"  # 替換為語言模型伺服器的IP地址和端口號
 
@@ -850,8 +999,8 @@ def send_question_to_mymodel(question,event):
     }
 
     try:
-        # 發送POST請求到語言模型的API
-        response = requests.post(model_api_url, json=payload)
+        # 發送POST請求到語言模型的API，設定超時為60秒
+        response = requests.post(model_api_url, json=payload, timeout=60)
         # 檢查請求是否成功
         if response.status_code == 200:
             # 解析回覆的JSON數據
@@ -867,6 +1016,9 @@ def send_question_to_mymodel(question,event):
         else:
             print(f"Error: Received status code {response.status_code}")
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型回覆失敗，請稍後再試。"))
+    except requests.exceptions.Timeout:
+        print("模型回應超時")
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="模型回應超時，請稍後再試。"))
     except requests.exceptions.RequestException as e:
         print(f"Request error: {e}")
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無法連接到模型伺服器。"))
@@ -887,8 +1039,12 @@ def handle_message(event):
     if awaiting_suggestion:
         handle_suggestion(event, student_id)
     elif student_account:
-        if msg == "我要作答" and student_id not in special_student_ids :  #學生
-            handle_unit_selection(event)
+        if msg == "我要作答" and student_id not in special_student_ids:
+            if check_usage_time(student_id): #檢查是否在使用時間
+                handle_unit_selection(event)
+            else:
+                message = TextSendMessage(text="目前不是使用時間，請在特定使用時間做使用")
+                line_bot_api.reply_message(event.reply_token, message)
         elif msg == "我要作答" and student_id in special_student_ids :  #老師助教
             handle_question_insert(event)
         elif msg == "歡迎留下您寶貴的建議:D":
@@ -900,7 +1056,11 @@ def handle_message(event):
             handle_question_display(event, msg, student_id)
         elif msg.startswith("我要回答:"):
             question_title = msg[6:]
-            handle_question_answer(event, student_id, question_title)
+            if check_usage_time(student_id): #檢查是否在使用時間
+                handle_question_answer(event, student_id, question_title)
+            else:
+                message = TextSendMessage(text="目前不是使用時間，請在特定使用時間做使用")
+                line_bot_api.reply_message(event.reply_token, message)
         elif redis_client.hget(user_id, "current_question"):
             handle_user_answer(event, msg, student_id)
         elif msg == "顯示作答紀錄":
@@ -910,10 +1070,7 @@ def handle_message(event):
                 show_unit_answer_records(event, student_id)
         elif msg.startswith('查看') and msg.endswith('分數分布'):
             unit_name = msg[2:-5]
-            score_distribution = calculate_score_distribution(unit_name, student_id)
-            score_distribution_str = str(score_distribution)
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=score_distribution_str))
-
+            calculate_and_send_score_distribution(event, unit_name, student_id)
         elif student_id in special_student_ids:
             if msg == "小提醒":
                 show_warning_messages(event.reply_token)
@@ -957,7 +1114,7 @@ def handle_message(event):
             "student_id": student_id,
             "password": student_password,  
         }
-        check_account(account, user_id, event)
+        check_account(account, user_name, user_id, event)
 
     else:
         if is_valid_student_id(msg):
@@ -965,9 +1122,36 @@ def handle_message(event):
             redis_client.hset(user_id, 'awaiting_password', 'true')
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請先輸入符合格式的學號（8位數字）。"))
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text="輸入符合格式的「學號」！\n（8位數）"))
 
-def check_account(account, user_id, event):
+# 使用 Tab 分隔符讀取文件，並清理欄位名稱的空白字符
+class_a_df = pd.read_csv('/home/hsin/DS_QA_Linebot/甲班.csv', encoding='utf-16', sep='\t')
+class_b_df = pd.read_csv('/home/hsin/DS_QA_Linebot/乙班.csv', encoding='utf-16', sep='\t')
+class_a_df.columns = class_a_df.columns.str.strip()
+class_b_df.columns = class_b_df.columns.str.strip()
+
+def add_class_info_to_db(user_id, user_name, student_id, mongo_collection):
+    # 檢查學生是否在甲班或乙班的學號列表中
+    if student_id in class_a_df['學號'].astype(str).values:
+        class_name = '甲班'
+    elif student_id in class_b_df['學號'].astype(str).values:
+        class_name = '乙班'
+    else:
+        class_name = '其他'
+    
+    # 更新資料庫中的資料
+    mongo_collection.update_one(
+        {"user_id": user_id}, 
+        {
+            "$set": {
+                "name": user_name,
+                "student_id": student_id,
+                "class": class_name
+            }
+        }
+    )
+
+def check_account(account, user_name, user_id, event):
     # 發送 POST 請求
     response = requests.post("http://192.168.100.141:4000/login", json=account)
 
@@ -980,14 +1164,15 @@ def check_account(account, user_id, event):
     if response_data.get("success") or account["student_id"] == account["password"]:
         redis_client.hset(user_id, 'student_account', 'true')
         redis_client.hset(user_id, 'awaiting_password', 'false')
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="請點選選單的「我要作答」並選擇題目！！！"))
+        add_class_info_to_db(user_id, user_name, account["student_id"], mongo_collection) # 確認學生班級並存入資料庫
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="登入成功！請點選選單的「我要作答」並選擇題目！！！"))
     else:
         print("Login failed or returned false.")
         # 刪除 Redis 中的資料
         redis_client.delete(user_id)
         # 刪除 MongoDB 中的資料
         mongo_collection.delete_one({"user_id": user_id})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="帳號密碼錯誤！！！請重新輸入學號"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="錯誤！！！請重新輸入「學號」"))
 
 def show_warning_messages(reply_token):
     warnings = list(warn_collection.find({}))

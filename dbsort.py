@@ -86,7 +86,7 @@ def create_new_data(db):
                 "快速排序選擇基準（pivot）的方法有：使用首尾元素、隨機選取或三數取中法。隨機選取能避免最壞情況，三數取中法則能更平衡分割數組，提升效率。"
               ],
               "Type": "開放式問題"
-            },
+            }
         ]
         result = collection.insert_many(data)
         pprint(result.inserted_ids)

@@ -56,7 +56,7 @@ def create_new_data(db):
                 "傳參考呼叫是指在函式中傳遞變數的地址，這樣在函式內部修改該變數時，原始變數也會被改變。這種方式可以節省記憶體和提高效能。"
              ],
              "Type": "開放式問題" 
-            },
+            }
         ]
         result = collection.insert_many(data)
         pprint(result.inserted_ids)
