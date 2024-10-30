@@ -42,6 +42,7 @@ mongo_collection = mongo_db["user_data"]
 suggestion_collection = mongo_db["suggestions"]
 warn_collection = mongo_db['WARN']
 
+
 # 連Redis
 redis_host = 'localhost'
 redis_port = 6379

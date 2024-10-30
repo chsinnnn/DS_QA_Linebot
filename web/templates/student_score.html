@@ -1,24 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>分數分佈圖</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .chart {
-            width: 100%;
-            height: 400px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生分數紀錄</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/topic.js" defer></script>
+    <script src="/static/js/login.js" defer></script> 
 </head>
 <body>
-    <h1>分數分佈圖</h1>
-    <div class="chart">
-        <p>分數 1: <span id="score_1">{{ score_1 }}</span> 次</p>
-        <p>分數 2: <span id="score_2">{{ score_2 }}</span> 次</p>
-        <p>分數 3: <span id="score_3">{{ score_3 }}</span> 次</p>
+    <div class="container">
+        <h1 class="centered-title">
+            <img src="/static/images/logo.png" alt="Logo" class="title-image">
+            學生分數紀錄
+        </h1>
+
+        <div class="navigation-buttons">
+            <button onclick="window.location.href='/'" class="button">返回首頁</button>
+            <button id="logout-button" class="button">登出</button>
+        </div>
+
+        <!-- 新增資料庫與 Collection 選單 -->
+        <div class="database-selection">
+            <label for="databaseSelect">選擇班級：</label>
+            <select id="databaseSelect">
+                <option value="" disabled selected>選擇班級</option>
+                <option value="teststudent1">甲班</option>
+                <option value="teststudent2">乙班</option>
+            </select>
+        </div>
+
+        <div class="collection-selection">
+            <label for="collectionSelect">選擇學生：</label>
+            <select id="collectionSelect">
+                <option value="" disabled selected>先選擇班級</option>
+            </select>
+        </div>
+
+        <!-- 顯示 collection 資料的區域 -->
+        <div id="collectionData">
+            <h2>學生作答紀錄</h2>
+            <div id="dataDisplay"></div>
+        </div>
     </div>
+
+
+    <script>
+        // 當選擇資料庫時，取得 collection 列表
+        document.getElementById("databaseSelect").addEventListener("change", async function() {
+            const database = this.value;
+            const collectionSelect = document.getElementById("collectionSelect");
+
+            // 取得 collections
+            const response = await fetch(`/collections?database=${database}`);
+            const collections = await response.json();
+
+            // 清空並填入新的 collection 選項
+            collectionSelect.innerHTML = '<option value="" disabled selected>選擇 Collection</option>';
+            collections.forEach(collection => {
+                const option = document.createElement("option");
+                option.value = collection;
+                option.textContent = collection;
+                collectionSelect.appendChild(option);
+            });
+        });
+
+        // 當選擇 collection 時，顯示資料
+        document.getElementById("collectionSelect").addEventListener("change", async function() {
+            const database = document.getElementById("databaseSelect").value;
+            const collection = this.value;
+            const dataDisplay = document.getElementById("dataDisplay");
+
+            // 取得 collection 資料
+            const response = await fetch(`/collectionData?database=${database}&collection=${collection}`);
+            const data = await response.json();
+
+            // 顯示資料
+            dataDisplay.innerHTML = "";
+            data.forEach(doc => {
+                const div = document.createElement("div");
+                div.textContent = JSON.stringify(doc, null, 2);
+                dataDisplay.appendChild(div);
+            });
+        });
+    </script>
 </body>
 </html>
