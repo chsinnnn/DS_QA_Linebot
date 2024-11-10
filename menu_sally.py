@@ -85,14 +85,16 @@ def handle_student_id(user_id, user_name, msg):
         db_existing = mongo_collection.find_one({"user_id": user_id})
         red_existing = redis_client.hexists(user_id, 'student_id')
         if db_existing and red_existing:
-            reply = "您的學號已經登錄過了。請輸入「密碼」"
+            #reply = "您的學號已經登錄過了。請輸入「密碼」"
+            reply = "您的學號已經登錄過了，請點選選單的「我要作答」進行回答！！！"
         else:
             # 將學號存入 Redis 中
             redis_client.hset(user_id, 'student_id', msg)
             # 同時將學號存入 MongoDB 中
             student_data = {"user_id": user_id, "name": user_name, "student_id": msg}
             mongo_collection.insert_one(student_data)
-            reply = "學號已紀錄成功！請輸入「密碼」"
+            #reply = "學號已紀錄成功！請輸入「密碼」"
+            reply = "學號已紀錄成功！請點選選單的「我要作答」進行回答！！！"
     else:
         reply = "學號格式不正確，請輸入8位數字的「學號」"
     return reply
@@ -134,11 +136,11 @@ def check_usage_time(student_id):
 def handle_unit_selection(event):
     quick_reply = QuickReply(items=[
         
-        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
-        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
         QuickReplyButton(action=MessageAction(label="遞迴", text="遞迴")),
-        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
+        QuickReplyButton(action=MessageAction(label="指標", text="指標")),
         QuickReplyButton(action=MessageAction(label="堆疊", text="堆疊")),
+        QuickReplyButton(action=MessageAction(label="佇列", text="佇列")),
+        QuickReplyButton(action=MessageAction(label="排序", text="排序")),
         QuickReplyButton(action=MessageAction(label="二元樹", text="二元樹")),
         QuickReplyButton(action=MessageAction(label="其他", text="其他"))
     ])
@@ -450,7 +452,7 @@ def handle_user_answer(event, user_answer, student_id):
                 # 如果沒有重複答案，則將答案存入 Redis 中
                 redis_client.rpush(qa_key, stripped_user_answer)
 
-                reply = f'"question"："{question_title}",\n"student_answer"："{user_answer}",\n"reference_answer": [\n{formatted_answers}\n]'
+                reply = f'"question"："{question_title}",\n"student_answer"："{user_answer}",\n"reference_answer": [\n{answers}\n]'
                 print(reply)
                 # 將題目發送給 語言模型並回傳答案 
                 answer = send_question_to_mymodel(reply, event)
@@ -496,7 +498,7 @@ def handle_user_answer(event, user_answer, student_id):
             if existing_question:
                 # 如果問題已存在，將學生回答新增到 `studentans_score`
                 existing_question["studentans_score"].append(student_answer_data)
-                    
+                existing_question["Unit"] = found_collection
                 # 更新平均分數
                 existing_question["平均分數"] = calculate_average_score(existing_question["studentans_score"])
                     
@@ -507,6 +509,7 @@ def handle_user_answer(event, user_answer, student_id):
                 # 如果問題不存在，則建立一個新的問題資料
                 new_question = {
                     "Question": question_title,
+                    "Unit": found_collection,
                     "studentans_score": [student_answer_data],
                     "平均分數": calculate_average_score([student_answer_data])
                 }
@@ -1121,12 +1124,13 @@ def handle_message(event):
     student_id = None if user_document is None else user_document.get("student_id")
     msg = event.message.text
     awaiting_suggestion = redis_client.hget(user_id, 'awaiting_suggestion')
-    student_account = redis_client.hget(user_id, 'student_account')
+    #student_account = redis_client.hget(user_id, 'student_account')
+    #student_account = True
     awaiting_password = redis_client.hget(user_id, 'awaiting_password')
 
     if awaiting_suggestion:
         handle_suggestion(event, student_id)
-    elif student_account:
+    elif mongo_collection.find_one({"user_id": user_id}):
         if msg == "我要作答" and student_id not in special_student_ids:
             if check_usage_time(student_id): #檢查是否在使用時間
                 handle_unit_selection(event)
@@ -1196,18 +1200,18 @@ def handle_message(event):
             send_warning_message(event.reply_token)
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="無效指令，請重新輸入。"))
-    elif awaiting_password :
+        '''elif awaiting_password :
         student_password = msg
         account = {
             "student_id": student_id,
             "password": student_password,  
         }
-        check_account(account, user_name, user_id, event)
-
+        check_account(account, user_name, user_id, event)'''
     else:
         if is_valid_student_id(msg):
             reply = handle_student_id(user_id, user_name, msg)
             redis_client.hset(user_id, 'awaiting_password', 'true')
+            add_class_info_to_db(user_id, user_name, msg, mongo_collection)
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text="輸入符合格式的「學號」！\n（8位數）"))
@@ -1260,19 +1264,25 @@ def add_class_info_to_db(user_id, user_name, student_id, mongo_collection):
     )
 
 def check_account(account, user_name, user_id, event):
+    # 檢查學號是否在甲班或乙班中
+    in_class_a_or_b = (
+        account["student_id"] in class_a_df['學號'].astype(str).values or 
+        account["student_id"] in class_b_df['學號'].astype(str).values
+    )
+    
     # 發送 POST 請求
     response = requests.post("http://192.168.100.141:4000/login", json=account)
-
+    
     # 打印回傳的 JSON 資料
     print(response.json())
     # 解析回傳的 JSON 資料
     response_data = response.json()
-
-    # 如果 success 為 True，更新 Redis 中的 student_account 值為 True
-    if response_data.get("success") or account["student_id"] == account["password"]:
+    
+    # 登入判斷條件
+    if response_data.get("success") or (account["student_id"] == account["password"] and not in_class_a_or_b):
         redis_client.hset(user_id, 'student_account', 'true')
         redis_client.hset(user_id, 'awaiting_password', 'false')
-        add_class_info_to_db(user_id, user_name, account["student_id"], mongo_collection) # 確認學生班級並存入資料庫
+        add_class_info_to_db(user_id, user_name, account["student_id"], mongo_collection)  # 確認學生班級並存入資料庫
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="登入成功！請點選選單的「我要作答」並選擇題目！！！"))
     else:
         print("Login failed or returned false.")

@@ -3,6 +3,8 @@ from pymongo import MongoClient
 import json
 from bson.objectid import ObjectId
 import bcrypt
+import csv
+import chardet
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # 用於 session 加密
@@ -24,6 +26,71 @@ unit_collections = {
 db = mongo_client["teststudentdata"] 
 firstclass = db.firstclass 
 secondclass = db.secondclass
+
+
+
+def detect_encoding(file_path):
+    with open(file_path, 'rb') as f:
+        result = chardet.detect(f.read(10000))  # 讀取前 10000 bytes 來檢測編碼
+        return result['encoding']
+
+def read_student_csv(file_path):
+    students = []
+    with open(file_path, newline='', encoding='utf-16') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter='\t')  # 使用 Tab 分隔符號
+        for row in reader:
+            students.append({
+                '系級': row['系級'],
+                '學號': row['學號'],
+                '姓名': row['姓名']
+            })
+    return students
+
+# API: 根據班級回傳學生列表
+@app.route('/students/<class_name>', methods=['GET'])
+def get_students(class_name):
+    if class_name == '甲班':
+        students = read_student_csv('/home/hsin/DS_QA_Linebot/甲班.csv')
+    elif class_name == '乙班':
+        students = read_student_csv('/home/hsin/DS_QA_Linebot/乙班.csv')
+    else:
+        return jsonify({'error': '班級不存在'}), 404
+
+    return jsonify(students)
+
+# API: 根據學生學號回傳作答資料
+@app.route('/student_answers/<class_name>/<student_id>', methods=['GET'])
+def get_student_answers(class_name, student_id):
+    if class_name == '甲班':
+        collection = firstclass
+    elif class_name == '乙班':
+        collection = secondclass
+    else:
+        return jsonify({'error': '班級不存在'}), 404
+
+    # 查詢學生作答資料
+    questions = collection.find({
+        'studentans_score.學號': student_id
+    })
+
+    result = []
+    for question in questions:
+        for ans in question['studentans_score']:
+            if ans['學號'] == student_id:
+                result.append({
+                    '單元': question['Unit'],
+                    '題目': question['Question'],
+                    '答案': ans['答案'],
+                    '評分': ans['評分'],
+                })
+                break
+
+    return jsonify(result)
+
+@app.route('/student_score')
+def student_score():
+    return render_template('student_score.html')
+
 @app.route('/graph')
 def graph():
     return render_template('graph.html')

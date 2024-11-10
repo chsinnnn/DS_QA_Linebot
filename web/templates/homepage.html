@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -32,7 +35,10 @@
 
         <!-- 跳轉到評分頁面的按鈕 (功能還沒做) -->
         <div style="text-align: center; margin-bottom: 20px;">
-            <button id="view-scores-button" class="button">查看評分</button>
+            <button id="view-scores-button" class="button">查看整體學生作答情況</button>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button id="scores-button" class="button">查看個別學生作答情況</button>
         </div>
     </div>
 
@@ -55,6 +61,12 @@
         if (viewScoresButton) {
             viewScoresButton.addEventListener('click', function() {
                 window.location.href = '/graph';
+            });
+        }
+        const ScoresButton = document.getElementById('scores-button');
+        if (ScoresButton) {
+            ScoresButton.addEventListener('click', function() {
+                window.location.href = '/student_score';
             });
         }
 

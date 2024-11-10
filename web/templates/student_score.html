@@ -3,86 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學生分數紀錄</title>
+    <title>學生作答資料查詢</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
-    <script src="/static/js/topic.js" defer></script>
-    <script src="/static/js/login.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/login.js" defer></script>
+    <style>
+        /* 學生列表與作答資料並排 */
+        #students, #answers {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            width: 45%;
+        }
+
+        /* 將學生列表與答案列表中的標題與內容分隔 */
+        #answer-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            list-style-type: none;
+        }
+        #student-list {
+            padding-left: 0; /* 移除左側內邊距 */
+        }
+
+        #student-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            list-style-type: none; /* 移除項目符號 */
+            margin-left: 0; /* 確保列表項目貼齊左邊 */
+        }
+
+        /* 提升列表項目點擊區的可見性 */
+        #student-list li a {
+            color: #007bff; /* 調整連結顏色 */
+            text-decoration: none; /* 移除下劃線 */
+        }
+
+        /* 滑鼠懸停時，強調連結 */
+        #student-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <!-- 標題區域 -->
         <h1 class="centered-title">
             <img src="/static/images/logo.png" alt="Logo" class="title-image">
-            學生分數紀錄
+            學生作答資料查詢
         </h1>
 
+        <!-- 導覽按鈕區域 -->
         <div class="navigation-buttons">
             <button onclick="window.location.href='/'" class="button">返回首頁</button>
-            <button id="logout-button" class="button">登出</button>
+            <button id="logout-button">登出</button>
         </div>
 
-        <!-- 新增資料庫與 Collection 選單 -->
-        <div class="database-selection">
-            <label for="databaseSelect">選擇班級：</label>
-            <select id="databaseSelect">
-                <option value="" disabled selected>選擇班級</option>
-                <option value="teststudent1">甲班</option>
-                <option value="teststudent2">乙班</option>
+        <!-- 班級選單區域 -->
+        <div class="form">
+            <label for="class">選擇班級:</label>
+            <select id="class" onchange="loadStudents()">
+                <option value="甲班">甲班</option>
+                <option value="乙班">乙班</option>
             </select>
         </div>
 
-        <div class="collection-selection">
-            <label for="collectionSelect">選擇學生：</label>
-            <select id="collectionSelect">
-                <option value="" disabled selected>先選擇班級</option>
-            </select>
+        <!-- 學生列表區域 -->
+        <div id="students">
+            <h2>學生列表</h2>
+            <ul id="student-list"></ul>
         </div>
 
-        <!-- 顯示 collection 資料的區域 -->
-        <div id="collectionData">
-            <h2>學生作答紀錄</h2>
-            <div id="dataDisplay"></div>
+        <!-- 學生作答資料區域 -->
+        <div id="answers">
+            <h2>學生作答資料</h2>
+            <ul id="answer-list"></ul>
         </div>
+
+        <script>
+            // 載入學生列表
+            function loadStudents() {
+                let className = document.getElementById('class').value;
+                fetch(`/students/${className}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        let studentList = document.getElementById('student-list');
+                        studentList.innerHTML = '';
+                        data.forEach(student => {
+                            let li = document.createElement('li');
+                            li.innerHTML = `${student.系級} ${student.學號} <a href="#" onclick="loadStudentAnswers('${className}', '${student.學號}', '${student.姓名}')">${student.姓名}</a>`;
+                            studentList.appendChild(li);
+                        });
+                    });
+            }
+
+
+            // 載入學生作答資料
+            function loadStudentAnswers(className, studentId, studentName) {
+                fetch(`/student_answers/${className}/${studentId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        let answerList = document.getElementById('answer-list');
+                        let answerTitle = document.querySelector('#answers h2');
+                        
+                        // 更新標題，顯示學生名字
+                        answerTitle.innerHTML = `${studentName} 的作答資料`;
+
+                        answerList.innerHTML = '';
+                        data.forEach(answer => {
+                            let li = document.createElement('li');
+                            li.innerHTML = `單元: ${answer.單元}<br>題目: ${answer.題目}<br>回答: ${answer.答案}<br>評分: ${answer.評分}`;
+                            answerList.appendChild(li);
+                        });
+                    });
+            }
+
+
+            // 預設載入甲班學生列表
+            window.onload = loadStudents;
+        </script>
     </div>
-
-
-    <script>
-        // 當選擇資料庫時，取得 collection 列表
-        document.getElementById("databaseSelect").addEventListener("change", async function() {
-            const database = this.value;
-            const collectionSelect = document.getElementById("collectionSelect");
-
-            // 取得 collections
-            const response = await fetch(`/collections?database=${database}`);
-            const collections = await response.json();
-
-            // 清空並填入新的 collection 選項
-            collectionSelect.innerHTML = '<option value="" disabled selected>選擇 Collection</option>';
-            collections.forEach(collection => {
-                const option = document.createElement("option");
-                option.value = collection;
-                option.textContent = collection;
-                collectionSelect.appendChild(option);
-            });
-        });
-
-        // 當選擇 collection 時，顯示資料
-        document.getElementById("collectionSelect").addEventListener("change", async function() {
-            const database = document.getElementById("databaseSelect").value;
-            const collection = this.value;
-            const dataDisplay = document.getElementById("dataDisplay");
-
-            // 取得 collection 資料
-            const response = await fetch(`/collectionData?database=${database}&collection=${collection}`);
-            const data = await response.json();
-
-            // 顯示資料
-            dataDisplay.innerHTML = "";
-            data.forEach(doc => {
-                const div = document.createElement("div");
-                div.textContent = JSON.stringify(doc, null, 2);
-                dataDisplay.appendChild(div);
-            });
-        });
-    </script>
 </body>
 </html>

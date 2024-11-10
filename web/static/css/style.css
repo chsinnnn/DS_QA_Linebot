@@ -1,3 +1,4 @@
+
 /* 基本樣式重置：將 margin 和 padding 設為 0，並使用 box-sizing 讓寬高計算包括內邊距和邊框 */
 body, h1, form, input, select, button {
     margin: 0;
@@ -7,12 +8,19 @@ body, h1, form, input, select, button {
 
 /* 背景和文字顏色設定：調整網頁背景顏色和文字顏色，並設定字體 */
 body {
-    font-family: Arial, sans-serif; /* 設定字體為 Arial */
-    background-color: #f4f4f4;      /* 背景顏色為淡灰色 */
-    color: #333;                    /* 文字顏色為深灰色 */
-    padding: 20px;                  /* 全局內邊距為 20px */
+    font-family: "Noto Sans TC", sans-serif; /* 設定字體為 Noto Sans TC */
+    background-color: #f4f4f4;               /* 背景顏色為淡灰色 */
+    color: #333;                             /* 文字顏色為深灰色 */
+    padding: 20px;                           /* 全局內邊距為 20px */
 }
 
+/* 可選的獨特字型樣式 */
+.noto-sans-tc-custom {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* 設定字重，依需求可更改為 100-900 */
+    font-style: normal;
+}
 /* 容器樣式：限制容器最大寬度，並置中顯示，添加內邊距、圓角及陰影 */
 .container {
     max-width: 800px;               /* 最大寬度 800px */
@@ -65,6 +73,7 @@ body {
 
 /* 按鈕樣式：調整按鈕的大小、顏色、邊框及圓角 */
 .form button {
+    font-family: "Noto Sans TC", sans-serif;
     padding: 10px 20px;       /* 上下內邊距 10px，左右 20px */
     border: none;             /* 移除邊框 */
     border-radius: 4px;       /* 邊角圓角化 4px */
@@ -81,6 +90,7 @@ body {
 
 /* 按鈕通用樣式：可以應用到所有按鈕 */
 .button {
+    font-family: "Noto Sans TC", sans-serif;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;

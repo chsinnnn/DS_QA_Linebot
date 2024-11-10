@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>學生作答圖表</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -19,8 +22,10 @@
         #chartContainer {
             display: none; /* 隱藏，選擇班級後顯示 */
             align-items: flex-start;
+            justify-content: space-between;
             width: 60%;
             max-width: 800px;
+            gap: 60px; /* 調整這個值來改變間距，越小距離越近 */
         }
 
         #barChart,
@@ -59,8 +64,11 @@
         </div>
 
         <div id="chartContainer">
+            
             <canvas id="barChart"></canvas>
+           
             <canvas id="lineChart"></canvas>
+           
         </div>
         <div id="questionList"></div> 
         
@@ -109,7 +117,21 @@
                             },
                             options: {
                                 responsive: true, 
-                                maintainAspectRatio: false, 
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: '各題平均分數長條圖',  // 替換為對應的標題
+                                        position: 'bottom',       // 將標題位置設置為底部
+                                        font: {
+                                            size: 14,
+                                            weight: 'normal'
+                                        }
+                                    },
+                                    legend: {
+                                        position: 'top', // 保持圖例位置
+                                    }
+                                }, 
                                 scales: {
                                     x: {
                                         title: {
@@ -147,7 +169,7 @@
                                                 data.forEach((question, index) => {
                                                     const questionItem = document.createElement('div');
                                                     questionItem.innerHTML = `<p>題目 ${index + 1}: ${question.Question}</p>`;
-                                                    questionItem.addEventListener('click', () => loadLineChart(question._id)); // 點擊題目顯示折線圖
+                                                    questionItem.addEventListener('click', () => loadLineChart(question._id, question.Question)); // 將題目文字傳入
                                                     questionList.appendChild(questionItem);
                                                 });
                                             })
@@ -166,7 +188,7 @@
             }
     
             // 顯示對應題目的折線圖
-            function loadLineChart(questionId) {
+            function loadLineChart(questionId, questionText) {
                 $.ajax({
                     url: `/get_score_distribution_by_question/${questionId}?db=${selectedDb}`,  // 請求特定題目的學生分數分佈
                     method: 'GET',
@@ -179,7 +201,11 @@
 
                         const labels = [0, 1, 2, 3];  // X 軸為分數
                         const numStudents = scores.map(item => item.num_students); // Y 軸為人數
+                        // 先將 `（平均分數：` 替換為分行顯示的字符串格式
+                        const formattedQuestionText = questionText.replace("（平均分數：", "\n平均分數：");
 
+                        // 將字符串分割為多行陣列，以便 Chart.js 正確換行
+                        const dynamicTitle = formattedQuestionText.split('<br>'); // 這裡會分割成兩行
                         if (lineChart) {
                             lineChart.destroy(); 
                         }
@@ -198,7 +224,25 @@
                             },
                             options: {
                                 responsive: true, 
-                                maintainAspectRatio: false, 
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: dynamicTitle,  // 替換為對應的標題
+                                        position: 'bottom',       // 將標題位置設置為底部
+                                        font: {
+                                            size: 14,
+                                            weight: 'normal'
+                                        },
+                                        padding: {
+                                            top: 5,  // 上方空間
+                                            bottom: 20  // 底部空間，可以調整使標題和圖表之間更遠
+                                        }
+                                    },
+                                    legend: {
+                                        position: 'top', // 保持圖例位置
+                                    }
+                                }, 
                                 scales: {
                                     y: {
                                         beginAtZero: true,
