@@ -80,8 +80,9 @@
 
         <!-- 學生作答資料區域 -->
         <div id="answers">
-            <h2>學生作答資料</h2>
-            <ul id="answer-list"></ul>
+            <h2 id="student-name"></h2> <!-- 顯示學生名字 -->
+            <div id="unit-buttons"></div> <!-- 單元按鈕 -->
+            <ul id="answer-list"></ul> <!-- 單元內的作答列表 -->
         </div>
 
         <script>
@@ -102,25 +103,54 @@
             }
 
 
-            // 載入學生作答資料
+            // 載入學生作答資料（按單元生成按鈕）
             function loadStudentAnswers(className, studentId, studentName) {
                 fetch(`/student_answers/${className}/${studentId}`)
                     .then(response => response.json())
                     .then(data => {
                         let answerList = document.getElementById('answer-list');
-                        let answerTitle = document.querySelector('#answers h2');
+                        let answerTitle = document.getElementById('student-name');
+                        let unitButtons = document.getElementById('unit-buttons');
                         
-                        // 更新標題，顯示學生名字
+                        // 清空單元按鈕和作答列表
+                        unitButtons.innerHTML = '';
+                        answerList.innerHTML = '';
+                        
+                        // 更新標題顯示學生名字
                         answerTitle.innerHTML = `${studentName} 的作答資料`;
 
-                        answerList.innerHTML = '';
+                        // 將作答資料按單元分類
+                        let units = {};
                         data.forEach(answer => {
-                            let li = document.createElement('li');
-                            li.innerHTML = `單元: ${answer.單元}<br>題目: ${answer.題目}<br>回答: ${answer.答案}<br>評分: ${answer.評分}`;
-                            answerList.appendChild(li);
+                            if (!units[answer.單元]) {
+                                units[answer.單元] = [];
+                            }
+                            units[answer.單元].push(answer);
                         });
+
+                        // 生成單元按鈕
+                        for (let unit in units) {
+                            let button = document.createElement('button');
+                            button.innerText = unit;
+                            button.classList.add('unit-button');  // 添加類別名稱
+                            button.onclick = () => displayAnswersByUnit(units[unit]);
+                            unitButtons.appendChild(button);
+                        }
                     });
             }
+
+            // 顯示選定單元的作答資料
+            function displayAnswersByUnit(unitAnswers) {
+                let answerList = document.getElementById('answer-list');
+                answerList.innerHTML = ''; // 清空之前的作答列表
+
+                unitAnswers.forEach(answer => {
+                    let li = document.createElement('li');
+                    li.innerHTML = `題目: ${answer.題目}<br>回答: ${answer.答案}<br>評分: ${answer.評分}`;
+                    answerList.appendChild(li);
+                });
+            }
+
 
 
             // 預設載入甲班學生列表

@@ -5,7 +5,27 @@ body, h1, form, input, select, button {
     padding: 0;
     box-sizing: border-box;
 }
+/* 單元按鈕樣式 */
+.unit-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #EBA281; /* 背景色 */
+    color: white; /* 文字顏色 */
+    border: none; /* 無邊框 */
+    border-radius: 5px; /* 圓角 */
+    cursor: pointer; /* 滑鼠指標 */
+    font-size: 14px; /* 字體大小 */
+}
 
+/* 單元按鈕在滑鼠懸停時的效果 */
+.unit-button:hover {
+    background-color: #e77b4a; /* 懸停時的顏色 */
+}
+
+/* 單元按鈕在點擊後的效果 */
+.unit-button:active {
+    background-color: #e2662d; /* 點擊時的顏色 */
+}
 /* 背景和文字顏色設定：調整網頁背景顏色和文字顏色，並設定字體 */
 body {
     font-family: "Noto Sans TC", sans-serif; /* 設定字體為 Noto Sans TC */
