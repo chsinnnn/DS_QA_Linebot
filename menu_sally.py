@@ -223,7 +223,8 @@ def handle_question_display(event, unit, student_id):  # 多個題目挑選
     answered_questions = {data["question_title"] for answer in student_answers for data in answer["student_data"]}
 
     # 獲取所有題目並過濾掉已回答過的題目
-    questions = list(collection.find({"Question": {"$nin": list(answered_questions)}}))
+    #questions = list(collection.find({"Question": {"$nin": list(answered_questions)}}))
+    questions = list(collection.find())
     random_questions = random.sample(questions, 3) if len(questions) >= 3 else questions
 
     bubbles = []
@@ -319,9 +320,18 @@ def handle_question_answer(event, student_id, question_title):  # 已選好題�
 
     if question:
         user_id = event.source.user_id
+        # 將選擇的問題存入 Redis，供後續使用
+        redis_client.hset(user_id, "current_question", question_title)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題\n(回答100字以下)"))
+    else:
+        # 若未找到問題，回覆錯誤訊息
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
+
+    """if question:
+        user_id = event.source.user_id
         # 檢查用戶是否已經回答過該問題
         existing_answer = student_collection[student_id].find_one(
-            {"unit": found_collection, "student_data.question_title": question_title}
+           {"unit": found_collection, "student_data.question_title": question_title}
         )
 
         if existing_answer:
@@ -333,7 +343,7 @@ def handle_question_answer(event, student_id, question_title):  # 已選好題�
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"請回答以上你所選的問題\n(回答100字以下)"))
     else:
         # 若未找到問題，回覆錯誤訊息
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="找不到題目"))"""
 
 
 def handle_user_answer(event, user_answer, student_id):
@@ -443,11 +453,11 @@ def handle_user_answer(event, user_answer, student_id):
             
             # 如果是開放式問題，則照原本處理
             else:
-                if len(stripped_user_answer) >= 10:
+                """if len(stripped_user_answer) >= 10:
                     previous_answers = redis_client.lrange(qa_key, 0, -1)
                     if stripped_user_answer in previous_answers:
                         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="此答案已經有人回答過!"))
-                        return  # 不存入資料庫，也不進行後續處理
+                        return  # 不存入資料庫，也不進行後續處理"""
                     
                 # 如果沒有重複答案，則將答案存入 Redis 中
                 redis_client.rpush(qa_key, stripped_user_answer)
